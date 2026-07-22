@@ -1,8 +1,25 @@
 ---
-layout: default
+layout: minimal
 title: EECS 245 Exams
 nav_order: 1
 ---
+
+<style>
+#main-header,
+.site-header,
+.aux-nav,
+.main-header {
+  display: none !important;
+}
+
+body {
+  padding-top: 0 !important;
+}
+
+.main-content-wrap {
+  margin-top: 0 !important;
+}
+</style>
 
 # EECS 245 Exams
 
@@ -333,5 +350,3 @@ try {
 
 renderTopic(initialTopicIndex);
 </script>
-
-

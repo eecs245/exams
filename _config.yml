@@ -3,7 +3,7 @@ tagline: Past exams for Mathematics for Machine Learning
 description: "Past exams and solutions for EECS 245: Mathematics for Machine Learning at the University of Michigan."
 author: EECS 245 course staff
 baseurl: '/exams'
-url: 'https://eecs245.github.io'
+url: 'https://eecs245.org'
 repository: eecs245/exams
 port: 4001
 
