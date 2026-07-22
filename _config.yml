@@ -1,0 +1,53 @@
+title: EECS 245 Exams
+tagline: Past exams for Mathematics for Machine Learning
+description: "Past exams and solutions for EECS 245: Mathematics for Machine Learning at the University of Michigan."
+author: EECS 245 course staff
+baseurl: '/exams'
+url: 'https://eecs245.github.io'
+repository: eecs245/exams
+port: 4001
+
+exclude:
+  - _site
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - node_modules
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
+
+theme: just-the-docs
+color_scheme: um
+search_enabled: true
+heading_anchors: true
+permalink: pretty
+
+sass:
+  quiet_deps: true
+
+aux_links_new_tab: true
+aux_links:
+  EECS 245:
+    - 'https://eecs245.org'
+  Course Notes:
+    - 'https://notes.eecs245.org'
+
+footer_content:
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
+liquid:
+  error_mode: strict
+  strict_filters: true
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-seo-tag
