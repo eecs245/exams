@@ -814,7 +814,7 @@ def run_pandoc(input_path: Path, output_path: Path) -> None:
         "pandoc",
         str(input_path),
         "--from=latex",
-        "--to=markdown+raw_html-simple_tables-multiline_tables-grid_tables",
+        "--to=markdown+raw_html+four_space_rule-simple_tables-multiline_tables-grid_tables",    # NOTE: 07/23/26 2:28PM fix four space pandoc issue
         "--shift-heading-level-by=1",
         "--wrap=none",
         "-o",
