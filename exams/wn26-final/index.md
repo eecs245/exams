@@ -109,8 +109,6 @@ mjx-container[jax="CHTML"][display="true"] {
 
 # Winter 2026 Final Exam
 
-**administered**
-
 <div class="assignment-actions">
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/wn26-final.pdf" target="_blank">View as PDF ✏️</a>
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/wn26-final-solutions.pdf" target="_blank">Solutions PDF ✅</a>
@@ -170,165 +168,163 @@ $$
 <div class="math-display">
 $$
 \begin{array}{l@{\hspace{1.75cm}}l}
-A = 3 & E = 7 \
-
-<div class="math-display">
-$$
-</div>
-
-1.5ex]
+A = 3 & E = 7 \\\\[1.5ex]
 B = \dfrac{4}{\frac{1}{3} + \frac{1}{6} + \frac{1}{6} + \frac{1}{13}} \approx 5.37 & F = \sqrt{\dfrac{3^2 + 6^2 + 6^2 + 13^2}{4}} \approx 7.90 \\\\[3ex]
 C = 6 & G = 8 \\\\[1.5ex]
-D = \left( 3 \cdot 6 \cdot 6 \cdot 13 \right)^{1/4} \approx 6.12 & H = 13 \\
-
+D = \left( 3 \cdot 6 \cdot 6 \cdot 13 \right)^{1/4} \approx 6.12 & H = 13 \\\\
 \end{array}
-
-<div class="math-display">
 $$
-1.  (3 pts) What value of $w^*$ minimizes $R(w) = \displaystyle \frac{1}{4} \sum_{i=1}^4 (y_i - w)^2$?\
+</div>
+
+1.  (3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 (y&#95;i - w)^2\\)</span>?
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
+
+    <details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
+
 ```python
-$\bigcirc$ $A$ $\bigcirc$ $B$ $\bigcirc$ $C$ $\bigcirc$ $D$ $\bigcirc$ $E$ $\bigcirc$ $F$ $\bigcirc$ $G$ $\bigcirc$ $H$\
-<details markdown="1"><summary>Solution</summary>
-
-$\bigcirc$ $A$ $\bigcirc$ $B$ $\bigcirc$ $C$ $\bigcirc$ $D$ $\eecsfilledcircle$ $E$ $\bigcirc$ $F$ $\bigcirc$ $G$ $\bigcirc$ $H$
-
 For (i), the minimizer of mean squared error is the mean, so
 ```
+<div class="math-display">
 $$
-</div>
-
 w^* = \frac{3+6+6+13}{4} = \boxed{7}
-
-<div class="math-display">
-$$
-</details>
-
-2.  (3 pts) What value of $w^*$ minimizes $R(w) = \displaystyle \lim_{p \to \infty} \displaystyle \frac{1}{4} \sum_{i=1}^4 |y_i - w|^p$?\
-```python
-$\bigcirc$ $A$ $\bigcirc$ $B$ $\bigcirc$ $C$ $\bigcirc$ $D$ $\bigcirc$ $E$ $\bigcirc$ $F$ $\bigcirc$ $G$ $\bigcirc$ $H$\
-<details markdown="1"><summary>Solution</summary>
-
-$\bigcirc$ $A$ $\bigcirc$ $B$ $\bigcirc$ $C$ $\bigcirc$ $D$ $\bigcirc$ $E$ $\bigcirc$ $F$ $\eecsfilledcircle$ $G$ $\bigcirc$ $H$
-
-For (ii), as $p \to \infty$, the largest value of $|y_i-w|$ dominates. So we should put $w$ halfway between the smallest and largest data values, as discussed in [Chapter 1.4](https://notes.eecs245.org/introduction-to-supervised-learning/comparing-loss-functions/#beyond-absolute-and-squared-loss).
-```
 $$
 </div>
-
-w^* = \frac{3+13}{2} = \boxed{8}
-
-<div class="math-display">
-$$
-</details>
-
-3.  (3 pts) What value of $w^*$ minimizes $R(w) = \displaystyle \frac{1}{4} \sum_{i=1}^4 (\log(y_i) - \log(w))^2$?\
-```python
-$\bigcirc$ $A$ $\bigcirc$ $B$ $\bigcirc$ $C$ $\bigcirc$ $D$ $\bigcirc$ $E$ $\bigcirc$ $F$ $\bigcirc$ $G$ $\bigcirc$ $H$\
-<details markdown="1"><summary>Solution</summary>
-
-$\bigcirc$ $A$ $\bigcirc$ $B$ $\bigcirc$ $C$ $\eecsfilledcircle$ $D$ $\bigcirc$ $E$ $\bigcirc$ $F$ $\bigcirc$ $G$ $\bigcirc$ $H$
-
-For (iii), let $u=\log(w)$. The problem is now asking for the best constant prediction for the transformed values $\log(y_i)$, so
-```
-$$
-</div>
-
-u^* = \frac{\log(3)+\log(6)+\log(6)+\log(13) = \log(3 \cdot 6 \cdot 6 \cdot 13)}{4}
-
-<div class="math-display">
-$$
-Exponentiating gives
-$$
-</div>
-
-w^* = e^{u^*} = \boxed{(3 \cdot 6 \cdot 6 \cdot 13)^{1/4}}
-
-<div class="math-display">
-$$
-This was also a homework problem.
 
     </details>
 
-4.  (3 pts) The slope of the graph of $R(w) = \displaystyle\frac{1}{4} \sum_{i = 1}^4 |y_i - w|$ at $w = \alpha$ is $-1/2$. Among the options above, which could be $\alpha$?\
-```python
-$\bigcirc$ $A$ $\bigcirc$ $B$ $\bigcirc$ $C$ $\bigcirc$ $D$ $\bigcirc$ $E$ $\bigcirc$ $F$ $\bigcirc$ $G$ $\bigcirc$ $H$\
+**(ii)** (3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \lim&#95;{p \to \infty} \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 |y&#95;i - w|^p\\)</span>?
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
+
 <details markdown="1"><summary>Solution</summary>
 
-$\bigcirc$ $A$ $\eecsfilledcircle$ $B$ $\bigcirc$ $C$ $\bigcirc$ $D$ $\bigcirc$ $E$ $\bigcirc$ $F$ $\bigcirc$ $G$ $\bigcirc$ $H$
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
-For (iv), the slope of mean absolute error at any $w$ that is not a data point is
+```python
+For (ii), as <span class="math-inline">\\(p \to \infty\\)</span>, the largest value of <span class="math-inline">\\(|y&#95;i-w|\\)</span> dominates. So we should put <span class="math-inline">\\(w\\)</span> halfway between the smallest and largest data values, as discussed in [Chapter 1.4](https://notes.eecs245.org/introduction-to-supervised-learning/comparing-loss-functions/#beyond-absolute-and-squared-loss).
 ```
+<div class="math-display">
+$$
+w^* = \frac{3+13}{2} = \boxed{8}
 $$
 </div>
 
+</details>
+
+**(iii)** (3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 (\log(y&#95;i) - \log(w))^2\\)</span>?
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
+
+```python
+For (iii), let <span class="math-inline">\\(u=\log(w)\\)</span>. The problem is now asking for the best constant prediction for the transformed values <span class="math-inline">\\(\log(y&#95;i)\\)</span>, so
+```
+<div class="math-display">
+$$
+u^* = \frac{\log(3)+\log(6)+\log(6)+\log(13) = \log(3 \cdot 6 \cdot 6 \cdot 13)}{4}
+$$
+</div>
+
+ Exponentiating gives
+
+<div class="math-display">
+$$
+w^* = e^{u^*} = \boxed{(3 \cdot 6 \cdot 6 \cdot 13)^{1/4}}
+$$
+</div>
+
+ This was also a homework problem.
+
+</details>
+
+**(iv)** (3 pts) The slope of the graph of <span class="math-inline">\\(R(w) = \displaystyle\frac{1}{4} \sum&#95;{i = 1}^4 |y&#95;i - w|\\)</span> at <span class="math-inline">\\(w = \alpha\\)</span> is <span class="math-inline">\\(-1/2\\)</span>. Among the options above, which could be <span class="math-inline">\\(\alpha\\)</span>?
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
+
+```python
+For (iv), the slope of mean absolute error at any <span class="math-inline">\\(w\\)</span> that is not a data point is
+```
+<div class="math-display">
+$$
 \frac{\text{\# left of } w - \text{\# right of } w}{n}
-
-<div class="math-display">
-$$
-Here, in order to achieve a slope of $-1/2$, we need to have 1 data point to the left of $w$ and 3 to the right, since $\frac{1-3}{4} = -1/2$. This means we need $w$ to be between $3$ and $6$, **exclusive**. The only value in this interval is $B$,
 $$
 </div>
 
-\boxed{\dfrac{4}{\frac{1}{3}+\frac{1}{6}+\frac{1}{6}+\frac{1}{13}} \approx 5.37}
+Here, in order to achieve a slope of <span class="math-inline">\\(-1/2\\)</span>, we need to have 1 data point to the left of <span class="math-inline">\\(w\\)</span> and 3 to the right, since <span class="math-inline">\\(\frac{1-3}{4} = -1/2\\)</span>. This means we need <span class="math-inline">\\(w\\)</span> to be between <span class="math-inline">\\(3\\)</span> and <span class="math-inline">\\(6\\)</span>, **exclusive**. The only value in this interval is <span class="math-inline">\\(B\\)</span>,
 
 <div class="math-display">
 $$
+\boxed{\dfrac{4}{\frac{1}{3}+\frac{1}{6}+\frac{1}{6}+\frac{1}{13}} \approx 5.37}
+$$
+</div>
+
 </details>
 
 ---
 
-## Problem 2: (13 pts) $\boxed{\text{Counts towards Midterm 1 redemption score}}$
+## Problem 2: (13 pts) <span class="math-inline">\\(\boxed{\text{Counts towards Midterm 1 redemption score}}\\)</span>
 
-Suppose a dataset of $n$ points, $(x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n)$, has the following properties:
+Suppose a dataset of <span class="math-inline">\\(n\\)</span> points, <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span>, has the following properties:
+
+<div class="math-display">
 $$
-</div>
-
 \text{mean of y-values} = \bar y = 11,
 \qquad
 \text{standard deviation of x-values} = \sigma_x = 2,
 \qquad
 \sigma_y = 6
-
-<div class="math-display">
-$$
-The simple linear regression line that minimizes mean squared error for predicting $y_i$ from $x_i$ is
 $$
 </div>
 
-h(x_i) = 15 - x_i
+ The simple linear regression line that minimizes mean squared error for predicting <span class="math-inline">\\(y&#95;i\\)</span> from <span class="math-inline">\\(x&#95;i\\)</span> is
 
 <div class="math-display">
 $$
+h(x_i) = 15 - x_i
+$$
+</div>
+
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> What is $\bar x$, the mean of the $x$-values? Give your answer as a number with no variables.\
-$\bar x = \minibox{3cm}{4}[1cm]$
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> What is <span class="math-inline">\\(\bar x\\)</span>, the mean of the <span class="math-inline">\\(x\\)</span>-values? Give your answer as a number with no variables.
+
+<span class="math-inline">\\(\bar x = \boxed{\textbf{4}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
-The regression line must pass through $(\bar x, \bar y)$, so
-$$
-</div>
+The regression line must pass through <span class="math-inline">\\((\bar x, \bar y)\\)</span>, so
 
+<div class="math-display">
+$$
 11 = 15 - \bar x
-
-<div class="math-display">
-$$
-This gives
 $$
 </div>
 
-\bar x = \boxed{4}
+ This gives
 
 <div class="math-display">
 $$
+\bar x = \boxed{4}
+$$
+</div>
+
 </details>
 
-Now, consider a new dataset, $(t_1, z_1), (t_2, z_2), \ldots, (t_n, z_n)$, defined by $t_i = 5 - x_i$ and $z_i = 2y_i - 1$.
+Now, consider a new dataset, <span class="math-inline">\\((t&#95;1, z&#95;1), (t&#95;2, z&#95;2), \ldots, (t&#95;n, z&#95;n)\\)</span>, defined by <span class="math-inline">\\(t&#95;i = 5 - x&#95;i\\)</span> and <span class="math-inline">\\(z&#95;i = 2y&#95;i - 1\\)</span>.
 
-Let $g(t_i) = \beta_0^* + \beta_1^* t_i$ be the best simple linear regression line for predicting $z_i$ from $t_i$.
+Let <span class="math-inline">\\(g(t&#95;i) = \beta&#95;0^{\ast} + \beta&#95;1^{\ast} t&#95;i\\)</span> be the best simple linear regression line for predicting <span class="math-inline">\\(z&#95;i\\)</span> from <span class="math-inline">\\(t&#95;i\\)</span>.
 
 </div>
 </div>
@@ -336,31 +332,12 @@ Let $g(t_i) = \beta_0^* + \beta_1^* t_i$ be the best simple linear regression li
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find $\beta_0^*$, the intercept of the best simple linear regression line for predicting $z_i$ from $t_i$. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables.\
-\[9cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find <span class="math-inline">\\(\beta&#95;0^{\ast}\\)</span>, the intercept of the best simple linear regression line for predicting <span class="math-inline">\\(z&#95;i\\)</span> from <span class="math-inline">\\(t&#95;i\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables.
 
 <div class="math-display">
 $$
-3cm
+\beta_0^* = \boxed{\textbf{19}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -442,11 +419,11 @@ Thus, <span class="math-inline">\\(\boxed{\beta&#95;0^{\ast} = 19}\\)</span>.
 
 What is the value of the fraction <span class="math-inline">\\(\frac{M}{M'}\\)</span>? *If it's not clear, <span class="math-inline">\\(M'\\)</span> is on the denominator.*
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/5\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible to tell</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/5\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible to tell</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/5\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible to tell</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/5\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible to tell</span></div>
 
 The intuitive answer is that since we've stretched out the <span class="math-inline">\\(y\\)</span>-values by a factor of <span class="math-inline">\\(2\\)</span>, the mean squared error is multiplied by a factor of <span class="math-inline">\\(4\\)</span>, so the fraction <span class="math-inline">\\(\frac{M}{M'}\\)</span> is <span class="math-inline">\\(\frac{1}{4}\\)</span>.
 
@@ -520,33 +497,9 @@ $$
 There are infinitely many possible vectors <span class="math-inline">\\(\vec b\\)</span> that satisfy the given conditions. State **one** of them. Show your work, and write your final answer in the box provided. Your answer should be a vector with no variables.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-11cm
+\text{one possible \vec b} = \boxed{\textbf{}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-2cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-4cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -614,11 +567,11 @@ Note that this is just <span class="math-inline">\\(-3\\)</span> times the vecto
 
 What is the value of <span class="math-inline">\\(\lVert \vec v \rVert\\)</span>?
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(9\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(9\\)</span></span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(9\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(9\\)</span></span></div>
 
 Since <span class="math-inline">\\(\vec u\\)</span> is a unit vector,
 
@@ -683,7 +636,7 @@ $$
 
 Find <span class="math-inline">\\(\dim(S)\\)</span>. Give your answer as an integer with no variables.
 
-<span class="math-inline">\\(\dim(S)=\minibox{3cm}{4}[1cm]\\)</span>
+<span class="math-inline">\\(\dim(S)=\boxed{\textbf{4}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -758,7 +711,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find <span class="math-inline">\\(\text{rank}(A)\\)</span> and <span class="math-inline">\\(\dim(\text{nullsp}(A^T))\\)</span>. Give your answers as integers with no variables.
 
-<span class="math-inline">\\(\text{rank}(A) = \minibox{3cm}{2}[1cm]  \dim(\text{nullsp}(A^T)) = \minibox{3cm}{4}[1cm]\\)</span>
+<span class="math-inline">\\(\text{rank}(A) = \boxed{\textbf{2}}  \dim(\text{nullsp}(A^T)) = \boxed{\textbf{4}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -797,11 +750,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Which of the following **could NOT** be the first row of <span class="math-inline">\\(A\\)</span>?
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 2 &amp; -2 &amp; 3 &amp; -3 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 1 &amp; 1 &amp; -1 &amp; 4 &amp; -4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 0 &amp; -2 &amp; 5 &amp; -5 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 3 &amp; 3 &amp; -3 &amp; -2 &amp; 2 \end{bmatrix}\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 2 &amp; -2 &amp; 3 &amp; -3 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 1 &amp; 1 &amp; -1 &amp; 4 &amp; -4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 0 &amp; -2 &amp; 5 &amp; -5 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 3 &amp; 3 &amp; -3 &amp; -2 &amp; 2 \end{bmatrix}\\)</span></span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 2 &amp; -2 &amp; 3 &amp; -3 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 1 &amp; 1 &amp; -1 &amp; 4 &amp; -4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 0 &amp; -2 &amp; 5 &amp; -5 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 3 &amp; 3 &amp; -3 &amp; -2 &amp; 2 \end{bmatrix}\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 2 &amp; -2 &amp; 3 &amp; -3 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 1 &amp; 1 &amp; -1 &amp; 4 &amp; -4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 0 &amp; -2 &amp; 5 &amp; -5 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 3 &amp; 3 &amp; -3 &amp; -2 &amp; 2 \end{bmatrix}\\)</span></span></div>
 
 A key fact is that the row space and null space of a matrix are orthogonal complements, as discussed in [Chapter 5.4](https://notes.eecs245.org/matrices/null-space-rank-nullity/#example-orthogonal-complements) (and the linked video). What this means is that every row of <span class="math-inline">\\(A\\)</span> is orthogonal to every vector in <span class="math-inline">\\(\text{nullsp}(A)\\)</span>.
 
@@ -993,7 +946,7 @@ Lastly, suppose <span class="math-inline">\\(\vec y \in \mathbb{R}^n\\)</span> a
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Let <span class="math-inline">\\(\vec p\\)</span> be the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>. Write <span class="math-inline">\\(\vec p\\)</span> as a linear combination of the columns of <span class="math-inline">\\(X\\)</span>. Fill in each box with a number with no variables. If there are multiple correct answers, you only need to provide one.
 
-<span class="math-inline">\\(\vec p = \minibox{2cm}{\\)</span>-1<span class="math-inline">\\(}[1cm]  \vec x^{(1)} + \minibox{2cm}{\\)</span>10<span class="math-inline">\\(}[1cm]  \vec x^{(2)} + \minibox{2cm}{\\)</span>0<span class="math-inline">\\(}[1cm]  \vec x^{(3)}\\)</span>
+<span class="math-inline">\\(\vec p = \boxed{\textbf{-1}}  \vec x^{(1)} + \boxed{\textbf{10}}  \vec x^{(2)} + \boxed{\textbf{0}}  \vec x^{(3)}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1061,7 +1014,7 @@ $$
 
  Fill in the blanks to describe the set of all possible values of <span class="math-inline">\\(\vec w^{\ast}\\)</span>. Each blank should contain a vector with no variables.
 
-<span class="math-inline">\\(\text{set of all possible } \vec w^{\ast} = \left\lbrace \minibox{4cm}{\\)</span>\begin{bmatrix}-1\\10\\0\end{bmatrix}<span class="math-inline">\\(}[3cm] + t  \minibox{4cm}{\\)</span>\begin{bmatrix}-1\\1\\1\end{bmatrix}<span class="math-inline">\\(}[3cm] : t \in \mathbb{R} \right\rbrace\\)</span>.
+<span class="math-inline">\\(\text{set of all possible } \vec w^{\ast} = \left\lbrace \boxed{\textbf{\begin{bmatrix}-1\\\\10\\\\0\end{bmatrix}}} + t  \boxed{\textbf{\begin{bmatrix}-1\\\\1\\\\1\end{bmatrix}}} : t \in \mathbb{R} \right\rbrace\\)</span>.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1252,33 +1205,9 @@ If <span class="math-inline">\\(\alpha = 1/2\\)</span>, then <span class="math-i
 Find <span class="math-inline">\\(\nabla g(\vec x^{(0)})\\)</span>, the gradient of <span class="math-inline">\\(g\\)</span> at <span class="math-inline">\\(\vec x^{(0)}\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a vector with no variables.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-9cm
+\nabla g(\vec x^{(0)}) = \boxed{\textbf{}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-2cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-4cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -1380,7 +1309,7 @@ $$
 
 for some <span class="math-inline">\\(2 \times 3\\)</span> matrix <span class="math-inline">\\(M\\)</span>. Which of the following matrices is <span class="math-inline">\\(M\\)</span>?
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 2 &amp; -6 \\\\ 2 &amp; 5 &amp; -12 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 2 &amp; -12 \\\\ 2 &amp; 10 &amp; -24 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 4 &amp; -12 \\\\ 4 &amp; 10 &amp; -24 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 4 &amp; 12 \\\\ 4 &amp; 10 &amp; 24 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 4 &amp; -12 \\\\ 2 &amp; 6 &amp; -12 \end{bmatrix}\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 2 &amp; -6 \\\\ 2 &amp; 5 &amp; -12 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 2 &amp; -12 \\\\ 2 &amp; 10 &amp; -24 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 4 &amp; -12 \\\\ 4 &amp; 10 &amp; -24 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 4 &amp; 12 \\\\ 4 &amp; 10 &amp; 24 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 4 &amp; -12 \\\\ 2 &amp; 6 &amp; -12 \end{bmatrix}\\)</span></span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1484,7 +1413,7 @@ Consider the matrix <span class="math-inline">\\(A = \begin{bmatrix} 2 &amp; 3 \
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose <span class="math-inline">\\(\lambda&#95;1 = 0\\)</span> is an eigenvalue of <span class="math-inline">\\(A\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span>. Give your answer as a number with no variables.
 
-<span class="math-inline">\\(k = \minibox{3cm}{\\)</span>-6<span class="math-inline">\\(}[1cm]\\)</span>
+<span class="math-inline">\\(k = \boxed{\textbf{-6}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1515,33 +1444,9 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ 1 \end{bmatrix}\\)</span> is an eigenvector of <span class="math-inline">\\(A\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span>. Give your answer as a number with no variables.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-5cm
+k = \boxed{\textbf{9}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-2cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -1583,33 +1488,9 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Suppose <span class="math-inline">\\(\lambda&#95;1 = 3\\)</span> is an eigenvalue of <span class="math-inline">\\(A\\)</span>. Find <span class="math-inline">\\(\lambda&#95;2\\)</span>, the **other eigenvalue** of <span class="math-inline">\\(A\\)</span>. Show your work, and write your final answer in the box provided. Give your answer as a number with no variables.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-8cm
+\lambda_2 = \boxed{\textbf{14}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-2cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -1669,16 +1550,6 @@ The state diagram below describes a Markov chain with four states.
 
 <span class="math-inline">\\(A =\\)</span>
 
-<div class="math-display">
-
-<div class="math-display">
-$$
-6cm
-$$
-</div>
-
-</div>
-
 <details markdown="1"><summary>Solution</summary>
 
 Column <span class="math-inline">\\(j\\)</span> contains the probabilities of transitioning from state <span class="math-inline">\\(j\\)</span> to all other states; columns must sum to <span class="math-inline">\\(1\\)</span>. Reading from the diagram, the first two columns come from the left "connected component" (made up of states <span class="math-inline">\\(1\\)</span> and <span class="math-inline">\\(2\\)</span>), and the last two columns come from the right connected component. So
@@ -1706,53 +1577,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose the chain starts in **state <span class="math-inline">\\(\mathbf{1}\\)</span>**. Fill each box with the **long-run fraction** of time spent in each state. Your answers should be numbers with no variables, and should sum to <span class="math-inline">\\(1\\)</span>.
 
-State 1:
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1.5cm
-$$
-</div>
-
-</div>
-
- State 2:
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1.5cm
-$$
-</div>
-
-</div>
-
- State 3:
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1.5cm
-$$
-</div>
-
-</div>
-
- State 4:
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1.5cm
-$$
-</div>
-
-</div>
+State 1: State 2: State 3: State 4:
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1830,11 +1655,11 @@ Now, consider a **modified** version of the Markov chain. Changes have been emph
 
 Which of the following could be placed in the blank to make the statement true? **Select all** that apply.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> state 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> state 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> state 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> state 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> none of these are valid</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> state 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> state 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> state 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> state 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> none of these are valid</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> state 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> state 2</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> state 3</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> state 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> none of these are valid</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> state 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> state 2</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> state 3</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> state 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> none of these are valid</span></div>
 
 In the modified chain, starting in state <span class="math-inline">\\(1\\)</span> or state <span class="math-inline">\\(2\\)</span> eventually leads to the right connected component, because there is now a positive-probability path from state <span class="math-inline">\\(2\\)</span> to state <span class="math-inline">\\(3\\)</span>. This changes the long-run fractions compared to the original chain. The long-run fraction of time spent in states <span class="math-inline">\\(1\\)</span> and <span class="math-inline">\\(2\\)</span> now will be <span class="math-inline">\\(0\\)</span>.
 
@@ -1875,7 +1700,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Write <span class="math-inline">\\(S^2 \vec x\\)</span> as a linear combination of <span class="math-inline">\\(\vec v&#95;1\\)</span>, <span class="math-inline">\\(\vec v&#95;2\\)</span>, and <span class="math-inline">\\(\vec v&#95;3\\)</span>. Fill in each box with a number with no variables.
 
-<span class="math-inline">\\(S^2 \vec x = \minibox{2cm}{\\)</span>75<span class="math-inline">\\(}[1cm]  \vec v&#95;1 + \minibox{2cm}{\\)</span>-16<span class="math-inline">\\(}[1cm]  \vec v&#95;2 + \minibox{2cm}{\\)</span>1<span class="math-inline">\\(}[1cm]  \vec v&#95;3\\)</span>
+<span class="math-inline">\\(S^2 \vec x = \boxed{\textbf{75}}  \vec v&#95;1 + \boxed{\textbf{-16}}  \vec v&#95;2 + \boxed{\textbf{1}}  \vec v&#95;3\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1902,11 +1727,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> What is the value of <span class="math-inline">\\(\lVert S\vec x \rVert^2\\)</span>?
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(24\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(26\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(218\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(290\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5882\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Not enough information</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(24\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(26\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(218\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(290\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5882\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Not enough information</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(24\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(26\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(218\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(290\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5882\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Not enough information</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(24\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(26\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(218\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(290\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5882\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Not enough information</span></div>
 
 Applying <span class="math-inline">\\(S\\)</span> once gives
 
@@ -1989,7 +1814,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> What is <span class="math-inline">\\(\vec v&#95;1\\)</span>? Give your answer as a vector with no variables. If there are multiple correct answers, you only need to provide one.
 
-<span class="math-inline">\\(\vec v&#95;1 = \minibox{3cm}{\\)</span>\frac{1}{\sqrt 5}\begin{bmatrix}1\\2\end{bmatrix}<span class="math-inline">\\(}[4cm]\\)</span>
+<span class="math-inline">\\(\vec v&#95;1 = \boxed{\textbf{\frac{1}{\sqrt 5}\begin{bmatrix}1\\\\2\end{bmatrix}}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -2040,7 +1865,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose the variance of the **second** principal component is <span class="math-inline">\\(1/15\\)</span>. What is <span class="math-inline">\\(n\\)</span>, the number of rows in <span class="math-inline">\\(\tilde X\\)</span>? Give your answer as a number with no variables.
 
-<span class="math-inline">\\(n = \minibox{3cm}{\\)</span>30<span class="math-inline">\\(}[1cm]\\)</span>
+<span class="math-inline">\\(n = \boxed{\textbf{30}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 

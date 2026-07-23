@@ -109,8 +109,6 @@ mjx-container[jax="CHTML"][display="true"] {
 
 # Spring 2026 Final Exam
 
-**administered**
-
 <div class="assignment-actions">
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/sp26-final.pdf" target="_blank">View as PDF ✏️</a>
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/sp26-final-solutions.pdf" target="_blank">Solutions PDF ✅</a>
@@ -176,33 +174,9 @@ $$
 <span class="math-inline">\\(\displaystyle R(w) = \frac{1}{5} \sum&#95;{i=1}^5 (y&#95;i - w)^2\\)</span>
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-3.5cm
+w^* = \boxed{\textbf{8}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -227,33 +201,9 @@ $$
 <span class="math-inline">\\(\displaystyle R(w) = \frac{1}{5} \sum&#95;{i=1}^5 (\sqrt{y&#95;i} - w)^2\\)</span>
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-3.5cm
+w^* = \boxed{\textbf{12/5}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -286,33 +236,9 @@ $$
 <span class="math-inline">\\(\displaystyle R(w) = \frac{1}{5} \sum&#95;{i=1}^5 (y&#95;i - \sqrt{w})^2\\)</span>
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-3.5cm
+w^* = \boxed{\textbf{64}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -351,11 +277,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Which answer from above is also the minimizer of <span class="math-inline">\\(\displaystyle R(w) = \sqrt{\frac{1}{5} \sum&#95;{i=1}^5 (y&#95;i - w)^2}\\)</span>?
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Answer from part (a)</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Answer from part (b)</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Answer from part (c)</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Answer from part (a)</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Answer from part (b)</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Answer from part (c)</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> Answer from part (a)</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Answer from part (b)</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Answer from part (c)</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> Answer from part (a)</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Answer from part (b)</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Answer from part (c)</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None</span></div>
 
 The square root function is strictly increasing, so minimizing
 
@@ -538,33 +464,9 @@ the projection of <span class="math-inline">\\(\vec x\\)</span> onto <span class
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find the projection of <span class="math-inline">\\(\vec z\\)</span> onto <span class="math-inline">\\(\vec x\\)</span>. Show your work, and write your final answer in the box provided. Give your answer as a vector with no variables.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-6cm
+\text{projection of \vec z onto \vec x} = \boxed{\textbf{\begin{bmatrix}6\\\\3\\\\3\end{bmatrix}}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-2.5cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-4cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -681,16 +583,6 @@ Suppose <span class="math-inline">\\(S = \left\lbrace \begin{bmatrix} x&#95;1 \\
 
 <span class="math-inline">\\(\text{one basis for } S =\\)</span>
 
-<div class="math-display">
-
-<div class="math-display">
-$$
-4cm
-$$
-</div>
-
-</div>
-
 <details markdown="1"><summary>Solution</summary>
 
 The condition <span class="math-inline">\\(x&#95;3=x&#95;4\\)</span> means we can write <span class="math-inline">\\(x&#95;3=x&#95;4=b\\)</span>. The other condition gives
@@ -748,27 +640,7 @@ Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">
 
 1.  (2 pts) What is the minimum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>?
 
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
-</div>
-
 2.  (2 pts) What is the maximum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>?
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
-</div>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -798,33 +670,9 @@ $$
 Find the area enclosed by the polygon with vertices <span class="math-inline">\\((0, 0)\\)</span>, <span class="math-inline">\\((4, 6)\\)</span>, <span class="math-inline">\\((1, 8)\\)</span>, and <span class="math-inline">\\((-3, 2)\\)</span>. Show your work, and write your answer in the box provided.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-6.5cm
+\text{area} = \boxed{\textbf{26}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -893,14 +741,14 @@ Finally, let <span class="math-inline">\\(Q\\)</span> be an <span class="math-in
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
 1.  (2 pts) What is <span class="math-inline">\\(\text{det}(P)\\)</span>?
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
 2.  (2 pts) What is <span class="math-inline">\\(\text{det}(Q)\\)</span>?
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
 **(i)** Since <span class="math-inline">\\(P\\)</span> projects onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> and <span class="math-inline">\\(d&lt;n\\)</span>, multiple vectors in <span class="math-inline">\\(\mathbb{R}^n\\)</span> will have the same projection onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>. So <span class="math-inline">\\(P\\)</span> is not invertible, and therefore <span class="math-inline">\\(\det(P)=0\\)</span>.
 
@@ -931,11 +779,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Which of the following vectors is orthogonal to <span class="math-inline">\\(\text{colsp}(X)\\)</span>?
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(P \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(Q \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\((I - P) \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\((I - Q) \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(P \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(Q \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\((I - P) \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\((I - Q) \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(P \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(Q \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\((I - P) \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\((I - Q) \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(P \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(Q \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\((I - P) \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\((I - Q) \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
 The vector <span class="math-inline">\\(P\vec{y}\\)</span> is the projection of <span class="math-inline">\\(\vec{y}\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>, so the error vector
 
@@ -1038,16 +886,6 @@ $$
 
 <span class="math-inline">\\(X =\\)</span>
 
-<div class="math-display">
-
-<div class="math-display">
-$$
-5cm
-$$
-</div>
-
-</div>
-
 <details markdown="1"><summary>Solution</summary>
 
 Each row is the transpose of the augmented feature vector
@@ -1099,11 +937,11 @@ The coefficient <span class="math-inline">\\(w&#95;2\\)</span> is the change in 
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Once again, suppose the dataset has four rows. In each of the following subparts, we provide the number of hours parked in the dataset. Find the rank of the design matrix <span class="math-inline">\\(X\\)</span> in each case. Fill in each blank with an integer with no variables.
 
-1.  (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \minibox{3cm}{\\)</span>3<span class="math-inline">\\(}[1cm]\\)</span>
+1.  (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \boxed{\textbf{3}}\\)</span>
 
-2.  (2 pts) <span class="math-inline">\\(2\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(2\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \minibox{3cm}{\\)</span>2<span class="math-inline">\\(}[1cm]\\)</span>
+2.  (2 pts) <span class="math-inline">\\(2\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(2\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \boxed{\textbf{2}}\\)</span>
 
-3.  (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(4\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(6\\)</span> <span class="math-inline">\\(\text{rank}(X) = \minibox{3cm}{\\)</span>2<span class="math-inline">\\(}[1cm]\\)</span>
+3.  (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(4\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(6\\)</span> <span class="math-inline">\\(\text{rank}(X) = \boxed{\textbf{2}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1191,7 +1029,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Which of the following could be <span class="math-inline">\\(\vec a\\)</span>? **Select all** that apply.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}3\\\\1\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}1\\\\3\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}-1\\\\-3\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}1\\\\2\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}5\\\\3\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}2\\\\6\end{bmatrix}\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}3\\\\1\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}1\\\\3\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}-1\\\\-3\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}1\\\\2\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}5\\\\3\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}2\\\\6\end{bmatrix}\\)</span></span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1297,33 +1135,9 @@ Both equations say the same thing: <span class="math-inline">\\(a&#95;2 = 3a&#95
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose we use gradient descent to minimize <span class="math-inline">\\(f(\vec x)\\)</span> using an initial guess of <span class="math-inline">\\(\vec x^{(0)} = \begin{bmatrix} 2 \\\\ 1 \end{bmatrix}\\)</span> and a learning rate of <span class="math-inline">\\(\alpha = 1/2\\)</span>. Find <span class="math-inline">\\(\vec x^{(1)}\\)</span>. Show your work, and write your answer in the box provided. Your answer should be a vector with no variables.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-8cm
+\vec x^{(1)} = \boxed{\textbf{\begin{bmatrix}19/10\\\\7/10\end{bmatrix}}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-4cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -1368,11 +1182,11 @@ $$
 
 Suppose <span class="math-inline">\\(g: \mathbb{R} \to \mathbb{R}\\)</span>. True or false: if <span class="math-inline">\\(g\\)</span> has a global minimum and no local maxima, it must be convex.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
 
 This is false. For instance, consider
 
@@ -1541,11 +1355,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> True or false: for all integer values of <span class="math-inline">\\(k\\)</span>, the matrix <span class="math-inline">\\(B=\begin{bmatrix}2&amp;4&amp;0\\\\4&amp;2&amp;0\\\\0&amp;0&amp;k\end{bmatrix}\\)</span> is diagonalizable.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 This is true. Since <span class="math-inline">\\(B\\)</span> is block diagonal (see [Chapter 9.4](https://notes.eecs245.org/eigenvalues-and-eigenvectors/multiplicities-diagonalization/#example-another-diagonalizable-matrix)), we can read off eigenvalues and eigenvectors from its individual blocks.
 
@@ -1712,7 +1526,7 @@ $$
 
 <div class="math-display">
 $$
-\Lambda = \minibox{5cm}{$\begin{bmatrix}9&0&0\\\\0&9&0\\\\0&0&0\end{bmatrix}$}[3cm]
+\Lambda = \boxed{\textbf{\begin{bmatrix}9&0&0\\\\0&9&0\\\\0&0&0\end{bmatrix}}}
 $$
 </div>
 
@@ -1757,33 +1571,9 @@ $$
  Find <span class="math-inline">\\(A\vec v\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a vector with no variables. <em>Hint: What does the spectral theorem tell us?</em>
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-11cm
+A\vec v = \boxed{\textbf{\begin{bmatrix}36\\\\72\\\\0\end{bmatrix}}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -1846,11 +1636,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> How many possible vectors are there for <span class="math-inline">\\(\vec v&#95;2\\)</span>, the second column of <span class="math-inline">\\(V\\)</span>?
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> infinitely many <span class="math-inline">\\(\vec v&#95;2\\)</span>'s are possible</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> infinitely many <span class="math-inline">\\(\vec v&#95;2\\)</span>'s are possible</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> infinitely many <span class="math-inline">\\(\vec v&#95;2\\)</span>'s are possible</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> infinitely many <span class="math-inline">\\(\vec v&#95;2\\)</span>'s are possible</span></div>
 
 Since <span class="math-inline">\\(V\\)</span> is an orthogonal matrix, its columns must be unit vectors that are orthogonal to each other. In <span class="math-inline">\\(\mathbb{R}^2\\)</span>, there are exactly two unit vectors orthogonal to <span class="math-inline">\\(\begin{bmatrix}3/5\\\\4/5\end{bmatrix}\\)</span>, namely <span class="math-inline">\\(\begin{bmatrix}-4/5\\\\3/5\end{bmatrix}\\)</span> and <span class="math-inline">\\(\begin{bmatrix}4/5\\\\-3/5\end{bmatrix}\\)</span>. So there are two possible vectors for <span class="math-inline">\\(\vec{v}&#95;2\\)</span>.
 </details>
@@ -1916,16 +1706,6 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Given the information above, what is the maximum possible variance of principal component <span class="math-inline">\\(2\\)</span>? Give your answer as a number with no variables.
 
 maximum possible variance of principal component <span class="math-inline">\\(2\\)</span> =
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1.5cm
-$$
-</div>
-
-</div>
 
 <details markdown="1"><summary>Solution</summary>
 

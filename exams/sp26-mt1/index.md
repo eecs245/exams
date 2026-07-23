@@ -109,8 +109,6 @@ mjx-container[jax="CHTML"][display="true"] {
 
 # Spring 2026 Midterm 1
 
-**administered**
-
 <div class="assignment-actions">
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/sp26-mt1.pdf" target="_blank">View as PDF ✏️</a>
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/sp26-mt1-solutions.pdf" target="_blank">Solutions PDF ✅</a>
@@ -167,7 +165,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> First, suppose we find the optimal parameter by minimizing mean squared error, <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span>. Which value of <span class="math-inline">\\(w\\)</span> minimizes <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span>? Give your answer as a number with no variables.
 
-<span class="math-inline">\\(\text{minimizer of } R&#95;\text{sq}(w) = \minibox{3cm}{13/2 = 6.5}[1cm]\\)</span>
+<span class="math-inline">\\(\text{minimizer of } R&#95;\text{sq}(w) = \boxed{\textbf{13/2 = 6.5}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -203,16 +201,6 @@ Let <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span> be the average c
 
 <span class="math-inline">\\(\text{one value of } w \text{ where the derivative of } R&#95;\text{clip}(w) \text{ is not defined} =\\)</span>
 
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
-</div>
-
 <details markdown="1"><summary>Solution</summary>
 
 The clipped loss changes formulas whenever
@@ -240,7 +228,7 @@ For context, here's what average clipped loss looks like for this dataset:
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose we restrict <span class="math-inline">\\(w\\)</span> to the interval <span class="math-inline">\\(1 \leq w \leq 3\\)</span>. Among all values of <span class="math-inline">\\(w\\)</span> in this interval, which value minimizes <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span>? Give your answer as a number with no variables.
 
-<span class="math-inline">\\(\text{minimizer of } R&#95;\text{clip}(w) \text{ within the interval } [1, 3] = \minibox{3cm}{2}[1cm]\\)</span>
+<span class="math-inline">\\(\text{minimizer of } R&#95;\text{clip}(w) \text{ within the interval } [1, 3] = \boxed{\textbf{2}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -279,7 +267,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Now suppose there are no restrictions on <span class="math-inline">\\(w\\)</span>. Among all possible values of <span class="math-inline">\\(w\\)</span>, which value minimizes <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span>? Give your answer as a number with no variables.
 
-<span class="math-inline">\\(\text{minimizer of } R&#95;\text{clip}(w) = \minibox{3cm}{2}[1cm]\\)</span>
+<span class="math-inline">\\(\text{minimizer of } R&#95;\text{clip}(w) = \boxed{\textbf{2}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -371,33 +359,9 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(\beta = 1\\)</span>. Which value of <span class="math-inline">\\(w\\)</span> minimizes <span class="math-inline">\\(R&#95;\text{WA}(w)\\)</span>? Show your work, and write your final answer in the box provided. Your answer should be a number with no variables. If there are multiple possible answers, state just one.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-3cm
+\text{minimizer of } R_\text{WA}(w) = \boxed{\textbf{3}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -416,33 +380,9 @@ This dataset has an even number of values, so any <span class="math-inline">\\(w
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Now suppose <span class="math-inline">\\(\beta = 2\\)</span>. Which value of <span class="math-inline">\\(w\\)</span> minimizes <span class="math-inline">\\(R&#95;\text{WA}(w)\\)</span>? Show your work, and write your final answer in the box provided. Your answer should be a number with no variables. If there are multiple possible answers, state just one.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-7cm
+\text{minimizer of } R_\text{WA}(w) = \boxed{\textbf{4}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -482,33 +422,9 @@ Suppose we fit a simple linear regression model **with** an intercept term, <spa
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find <span class="math-inline">\\(\bar x\\)</span>, the mean of <span class="math-inline">\\(x&#95;1, x&#95;2, \ldots, x&#95;n\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables. <em>Hint: What property does the line <span class="math-inline">\\(h(x&#95;i)\\)</span> satisfy?</em>
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-12cm
+\text{\bar x} = \boxed{\textbf{-8}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -560,11 +476,11 @@ $$
 
  What is the value of <span class="math-inline">\\(c\\)</span>?
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4/9\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(9/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4/9\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(9/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4/9\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3/4\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(9/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4/9\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3/4\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(9/4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span></div>
 
 For simple linear regression, one (of the many equivalent) formula for the slope <span class="math-inline">\\(w&#95;1^{\ast}\\)</span> is
 
@@ -593,11 +509,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Let <span class="math-inline">\\(e&#95;i=y&#95;i-h(x&#95;i)\\)</span> be the fit model's error for the <span class="math-inline">\\(i\\)</span>th point. Note that <span class="math-inline">\\(e&#95;i\\)</span> may either be positive or negative. Which of the following statements are **guaranteed** to be true? **Select all** that apply.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n x&#95;i e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n y&#95;i e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n e&#95;i (x&#95;i - \bar x)=0\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n x&#95;i e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n y&#95;i e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n e&#95;i (x&#95;i - \bar x)=0\\)</span></span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n x&#95;i e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n y&#95;i e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n e&#95;i (x&#95;i - \bar x)=0\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n x&#95;i e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n y&#95;i e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n e&#95;i (x&#95;i - \bar x)=0\\)</span></span></div>
 
 How did we find <span class="math-inline">\\(w&#95;0^{\ast}\\)</span> and <span class="math-inline">\\(w&#95;1^{\ast}\\)</span>? By minimizing mean squared error:
 
@@ -714,33 +630,9 @@ $$
 Find <span class="math-inline">\\(\lVert \vec u \rVert^2\\)</span> (**not** <span class="math-inline">\\(\lVert \vec u \rVert\\)</span>). Show your work, and write your final answer in the box provided. Your answer should be a number with no variables.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-14.5cm
+\text{\lVert \vec u \rVert^2} = \boxed{\textbf{43}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -800,33 +692,9 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> In this part only, suppose <span class="math-inline">\\(C=0\\)</span>, <span class="math-inline">\\(\vec u = \begin{bmatrix} 1 \\\\ 2 \end{bmatrix}\\)</span>, and <span class="math-inline">\\(\vec v = \begin{bmatrix} 3 \\\\ 1 \end{bmatrix}\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span> that minimizes <span class="math-inline">\\(f(k)\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-4cm
+\text{minimizer of } f(k) = \boxed{\textbf{1/2}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -895,14 +763,14 @@ $$
 Select values of <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> so that <span class="math-inline">\\(f(k) = \lVert \vec U - k \vec V \rVert^2\\)</span>, for all possible non-negative values of <span class="math-inline">\\(C\\)</span>.
 
 1.  What is the value of <span class="math-inline">\\(a\\)</span>?
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
 
 2.  What is the value of <span class="math-inline">\\(b\\)</span>?
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
 
 First, let's try and get a better sense of how <span class="math-inline">\\(\lVert \vec U - k \vec V \rVert^2\\)</span> works.
 
@@ -1036,29 +904,7 @@ $$
 
 For all values of <span class="math-inline">\\(c\\)</span>, <span class="math-inline">\\(\text{span}(\lbrace\vec u,\vec v\rbrace)\\)</span> is a \_\_(i)\_\_-dimensional subspace of \_\_(ii)\_\_.
 
-(i):
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
-</div>
-
- (ii):
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
-</div>
+(i): (ii):
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1084,33 +930,9 @@ $$
  where <span class="math-inline">\\(a\\)</span> is also a constant. Find the value of <span class="math-inline">\\(c\\)</span>. Show your work in the space provided, and write your final answer in the box provided. Your answer should be a number with no variables.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-13cm
+c = \boxed{\textbf{3}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -1185,13 +1007,13 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">7 pts</span> Are <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> linearly independent?
 
 1.  Select an answer:
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Yes</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> No</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Yes</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> No</span></div>
 
 2.  Prove your answer using the formal definition of linear independence. <em>Hint: You did something similar in Homework 4, Problem 6.</em>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Yes</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> No</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Yes</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> No</span></div>
 
 If <span class="math-inline">\\(\vec p,\vec q,\vec r,\vec s\\)</span> are linearly independent, then the only solution to the equation <span class="math-inline">\\(a \vec p + b \vec q + c \vec r + d \vec s = \vec 0\\)</span> is <span class="math-inline">\\(a = b = c = d = 0\\)</span>.
 
@@ -1222,7 +1044,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> What is the dimension of <span class="math-inline">\\(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)\\)</span>? Give your answer as a number with no variables.
 
-<span class="math-inline">\\(\dim(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)) = \minibox{3cm}{3}[1cm]\\)</span>
+<span class="math-inline">\\(\dim(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)) = \boxed{\textbf{3}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 

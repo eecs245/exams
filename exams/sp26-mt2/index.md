@@ -109,8 +109,6 @@ mjx-container[jax="CHTML"][display="true"] {
 
 # Spring 2026 Midterm 2
 
-**administered**
-
 <div class="assignment-actions">
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/sp26-mt2.pdf" target="_blank">View as PDF ✏️</a>
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/sp26-mt2-solutions.pdf" target="_blank">Solutions PDF ✅</a>
@@ -173,33 +171,9 @@ In each part, you are provided with information about <span class="math-inline">
 <span class="math-inline">\\(\det(A) = 14\\)</span>.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-4cm
+k = \boxed{\textbf{12}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -238,33 +212,9 @@ $$
 <span class="math-inline">\\(A\\)</span> is not invertible.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-4cm
+k = \boxed{\textbf{-2}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -299,33 +249,9 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> The bottom-right entry of <span class="math-inline">\\(A^{-1}\\)</span> is <span class="math-inline">\\(1/4\\)</span>.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-5cm
+k = \boxed{\textbf{2}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -400,29 +326,7 @@ In other words, <span class="math-inline">\\(\text{nullsp}(A) = \left\lbrace \be
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Determine the following values. Give your answers as integers with no variables.
 
-<span class="math-inline">\\(\text{rank}(A) =\\)</span>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1.5cm
-$$
-</div>
-
-</div>
-
- <span class="math-inline">\\(\text{dim}(\text{nullsp}(A)) =\\)</span>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1.5cm
-$$
-</div>
-
-</div>
+<span class="math-inline">\\(\text{rank}(A) =\\)</span> <span class="math-inline">\\(\text{dim}(\text{nullsp}(A)) =\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -458,16 +362,6 @@ $$
 
 <span class="math-inline">\\(\text{one basis for }\text{nullsp}(A) =\\)</span>
 
-<div class="math-display">
-
-<div class="math-display">
-$$
-5cm
-$$
-</div>
-
-</div>
-
 <details markdown="1"><summary>Solution</summary>
 
 The null space consists of all vectors satisfying
@@ -499,16 +393,6 @@ though there are infinitely many possible answers.
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> State one basis for <span class="math-inline">\\(\text{colsp}(A^T)\\)</span>, the row space of <span class="math-inline">\\(A\\)</span>. Your answer should be a list of vectors with no variables.
 
 <span class="math-inline">\\(\text{one basis for }\text{colsp}(A^T) =\\)</span>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-5cm
-$$
-</div>
-
-</div>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -638,11 +522,11 @@ For each statement below, determine whether it is true or false. If true, prove 
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> If <span class="math-inline">\\(A\\)</span> is symmetric, then <span class="math-inline">\\(A^2\\)</span> must be symmetric.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 This is true. Since <span class="math-inline">\\(A\\)</span> is symmetric, <span class="math-inline">\\(A^T = A\\)</span>. So,
 
@@ -663,11 +547,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> If <span class="math-inline">\\(A^2\\)</span> is symmetric, then <span class="math-inline">\\(A\\)</span> must be symmetric.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
 
 This is false. For example, let
 
@@ -704,11 +588,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> If <span class="math-inline">\\(\vec x \in \text{nullsp}(A^T)\\)</span> and <span class="math-inline">\\(\vec y \in \text{colsp}(A)\\)</span>, then <span class="math-inline">\\(\vec x\\)</span> and <span class="math-inline">\\(\vec y\\)</span> are orthogonal.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 This is true. If <span class="math-inline">\\(\vec y \in \text{colsp}(A)\\)</span>, then <span class="math-inline">\\(\vec y = A\vec v\\)</span> for some vector <span class="math-inline">\\(\vec v\\)</span>. Since <span class="math-inline">\\(\vec x \in \text{nullsp}(A^T)\\)</span>, we know <span class="math-inline">\\(A^T \vec x = \vec 0\\)</span>. So,
 
@@ -764,43 +648,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in each blank with an integer with no variables.
 
-X has
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-2cm
-$$
-</div>
-
-</div>
-
- rows,
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-2cm
-$$
-</div>
-
-</div>
-
- columns, and <span class="math-inline">\\(\text{rank}(X) =\\)</span>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-2cm
-$$
-</div>
-
-</div>
-
-.
+X has rows, columns, and <span class="math-inline">\\(\text{rank}(X) =\\)</span> .
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -821,15 +669,15 @@ Also, recall that <span class="math-inline">\\(\text{rank}(X) = \text{rank}(X^T 
 
 1.  The columns of <span class="math-inline">\\(X\\)</span> are all orthogonal to each other.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 2.  The columns of <span class="math-inline">\\(X\\)</span> are orthonormal.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
 
 **(i)** This is true. The entries of <span class="math-inline">\\(X^TX\\)</span> are the dot products of the columns of <span class="math-inline">\\(X\\)</span> with each other. Since the off-diagonal entries are 0, the columns of <span class="math-inline">\\(X\\)</span> are orthogonal to each other.
 
@@ -924,16 +772,6 @@ $$
 
 one possible vector <span class="math-inline">\\(\vec y =\\)</span>
 
-<div class="math-display">
-
-<div class="math-display">
-$$
-5cm
-$$
-</div>
-
-</div>
-
 <details markdown="1"><summary>Solution</summary>
 
 For any vector <span class="math-inline">\\(\vec y\\)</span>, multiplying by <span class="math-inline">\\(P\\)</span> averages the first four components of <span class="math-inline">\\(\vec y\\)</span> and leaves the fifth component unchanged:
@@ -979,11 +817,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Let <span class="math-inline">\\(\vec y\\)</span> and <span class="math-inline">\\(\vec p \\)</span> be as defined in part (a). True or false: <span class="math-inline">\\(X^T (\vec p - \vec y) = \vec 0\\)</span>.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 This is true. If <span class="math-inline">\\(\vec p\\)</span> is the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>, then the error vector <span class="math-inline">\\(\vec y - \vec p\\)</span> is orthogonal to every vector in <span class="math-inline">\\(\text{colsp}(X)\\)</span>. This is how we arrived at the normal equations, <span class="math-inline">\\(X^TX \vec w = X^T \vec y\\)</span>. Here, this means
 
@@ -1013,7 +851,7 @@ For the rest of the problem, suppose that both <span class="math-inline">\\(\vec
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Which of these vectors are in <span class="math-inline">\\(\text{nullsp}(X)\\)</span>? **Select all** that apply.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 \\\\ 3 \\\\ 1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ 4 \\\\ 1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 \\\\ 6 \\\\ 2 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -2 \\\\ 4 \\\\ 2 \end{bmatrix}\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 \\\\ 3 \\\\ 1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ 4 \\\\ 1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 \\\\ 6 \\\\ 2 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -2 \\\\ 4 \\\\ 2 \end{bmatrix}\\)</span></span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1199,11 +1037,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: <span class="math-inline">\\(f(\vec x)\\)</span> is a linear transformation.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
 
 This is false. Recall, a linear transformation must satisfy <span class="math-inline">\\(f(c \vec x) = c f(\vec x)\\)</span> for any scalar <span class="math-inline">\\(c\\)</span>. But, suppose we pick <span class="math-inline">\\(n = d = 1\\)</span>, and let <span class="math-inline">\\(A = [1]\\)</span> (here we're thinking of a <span class="math-inline">\\(1 \times 1\\)</span> matrix as a scalar). Then, <span class="math-inline">\\(f(x)\\)</span> is just the absolute value of the scalar <span class="math-inline">\\(x\\)</span>.
 
@@ -1235,33 +1073,9 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span> Find <span class="math-inline">\\(\nabla f(\vec x)\\)</span>. Assume that <span class="math-inline">\\(A \vec x \neq \vec 0\\)</span>. Show your work, and write your final answer in the bottom-right corner of the box. Your answer should be an expression in terms of <span class="math-inline">\\(A\\)</span>, <span class="math-inline">\\(\vec x\\)</span>, and/or constants. <em>Hint: Start by taking the gradient of <span class="math-inline">\\(\lVert A \vec x \rVert^2\\)</span>, then apply the chain rule.</em>
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-17cm
+\nabla f(\vec x) = \boxed{\textbf{\displaystyle \frac{A^TA\vec x}{\left\|A\vec x\right\|}}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-7cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-4cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -1345,33 +1159,9 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Find the value of <span class="math-inline">\\(\alpha\\)</span>. Show your work, and write your final answer in the bottom-right corner of the box. Your answer should be a number with no variables.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-6.5cm
+\alpha = \boxed{\textbf{1/5}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -1422,33 +1212,9 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Find the value of <span class="math-inline">\\(d\\)</span> (**not** <span class="math-inline">\\(c\\)</span>). Show your work, and write your final answer in the bottom-right corner of the boxes. Your answer should be a number with no variables.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-6.5cm
+d = \boxed{\textbf{-1}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>

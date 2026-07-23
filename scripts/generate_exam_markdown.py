@@ -154,7 +154,7 @@ def parse_args() -> argparse.Namespace:
     # >=== --exam flag ===< #
     # Added: 07/23/26 1:14PM
     # Effects:
-    #   - transform_assignment_text() signature
+    #   - transform_assignment_tex() signature
     #   - main()
     # Renders problems only, omits honor code block
     # and blank filler pages, no pattern-matching on text.
@@ -444,6 +444,7 @@ def transform_assignment_tex(
     text = strip_false_blocks(text)
     text = strip_latex_comments(text)
     text = strip_layout_commands(text)
+    text = replace_answerbox_markers(text)  # NOTE: 07/23/26 3:18PM fix to \minibox and \labeledanswerbox rendering
     text = replace_youtube_embed_markers(text)
     text = expand_labcodelinks(text)
     text = replace_fbox_markers(text)
@@ -458,6 +459,90 @@ def transform_assignment_tex(
     text = re.sub(r"\\emptybox\{[^}]*\}", "", text)
     text = text.replace("\\newpage", "")
     text = text.replace("\\makemytitle", "% stripped makemytitle")
+    return text
+
+
+# ===> replace_answerbox_markers <=== #
+# Added: 07/23/26 3:16PM
+# Effects: transform_assignment_tex()
+# Read docstring below for info.
+def replace_answerbox_markers(text: str) -> str:
+    r"""Convert eecs245.sty answer-box macros to MathJax-renderable \boxed answers.
+ 
+    \minibox{width}{answer}[height] renders (with solutions) as an \fbox with the
+    bold answer; pandoc doesn't know it, so in math it leaks verbatim and inner $..$
+    splits the math span. \labeledanswerbox{label}{answer}[h][w][h] expands to a
+    tikzpicture, which pandoc mangles -- silently dropping the answer. Both are
+    print-layout constructs; the faithful web equivalent is boxed bold math.
+    """
+ 
+    def strip_math_dollars(content: str) -> str:
+        return content.replace("$", "").strip()
+ 
+    def consume_optional_brackets(source: str, index: int, max_count: int) -> int:
+        for _ in range(max_count):
+            probe = index
+            while probe < len(source) and source[probe] in " \t":
+                probe += 1
+            if probe < len(source) and source[probe] == "[":
+                close = source.find("]", probe)
+                if close == -1:
+                    break
+                index = close + 1
+            else:
+                break
+        return index
+ 
+    def rewrite(source: str, command: str, arg_count: int, bracket_count: int, template) -> str:
+        result: list[str] = []
+        cursor = 0
+        pattern = re.compile(rf"\\{command}(?![A-Za-z])")
+        while True:
+            match = pattern.search(source, cursor)
+            if match is None:
+                result.append(source[cursor:])
+                break
+            result.append(source[cursor : match.start()])
+            index = match.end()
+            args: list[str] = []
+            try:
+                for _ in range(arg_count):
+                    while index < len(source) and source[index] in " \t\n":
+                        index += 1
+                    if index >= len(source) or source[index] != "{":
+                        raise ValueError
+                    content, index = extract_braced(source, index)
+                    args.append(content)
+            except ValueError:
+                # Malformed call: leave untouched rather than corrupt content.
+                result.append(source[match.start() : match.end()])
+                cursor = match.end()
+                continue
+            index = consume_optional_brackets(source, index, bracket_count)
+            result.append(template(args))
+            cursor = index
+        return "".join(result)
+ 
+    text = rewrite(
+        text,
+        "labeledanswerbox",
+        2,
+        3,
+        lambda args: (
+            "\n\n$$"
+            + strip_math_dollars(args[0])
+            + " = \\boxed{\\textbf{"
+            + strip_math_dollars(args[1])
+            + "}}$$\n\n"
+        ),
+    )
+    text = rewrite(
+        text,
+        "minibox",
+        2,
+        1,
+        lambda args: "\\boxed{\\textbf{" + strip_math_dollars(args[1]) + "}}",
+    )
     return text
 
 
@@ -889,9 +974,11 @@ def build_homework_page(
         "",
         f"# {display_title}",
         "",
-        f"**{'administered' if exam else 'due'}** {metadata.due_date}",     # Cleaner distinction between exams and assignments
-        "",
     ]
+    if metadata.due_date.strip():
+        parts.extend(
+            [f"**{'administered' if exam else 'due'}** {metadata.due_date}", ""]
+        )
     if actions:
         parts.extend([actions, ""])
     parts.extend(
@@ -1493,7 +1580,9 @@ def format_multiple_choice_rows(text: str) -> str:
             rendered_options.append(f'<span class="mc-option">{marker_html} {option_html}</span>')
         if prompt:
             converted.append(prompt)
-        converted.append(f'<div class="mc-options">{"".join(rendered_options)}</div>')
+        converted.append(
+            f'<div class="mc-options" markdown="span">{"".join(rendered_options)}</div>'
+        )
 
     return "\n".join(converted)
 

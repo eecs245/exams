@@ -109,8 +109,6 @@ mjx-container[jax="CHTML"][display="true"] {
 
 # Fall 2025 Midterm 2
 
-**administered**
-
 <div class="assignment-actions">
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/fa25-mt2.pdf" target="_blank">View as PDF ✏️</a>
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/fa25-mt2-solutions.pdf" target="_blank">Solutions PDF ✅</a>
@@ -157,7 +155,7 @@ mjx-container[jax="CHTML"][display="true"] {
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Let <span class="math-inline">\\(A = \begin{bmatrix} 2 &amp; 4 \\\\ -3 &amp; -7 \end{bmatrix}\\)</span>. Find <span class="math-inline">\\(\text{det}(A)\\)</span>, the determinant of <span class="math-inline">\\(A\\)</span>. Give your answer as an integer.
 
-<span class="math-inline">\\(\text{det}(A) = \minibox{3cm}{\\)</span>-2<span class="math-inline">\\(}\\)</span>
+<span class="math-inline">\\(\text{det}(A) = \boxed{\textbf{-2}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -179,7 +177,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Using <span class="math-inline">\\(A\\)</span> from part **a)**, find <span class="math-inline">\\(A^{-1}\\)</span>, the inverse of <span class="math-inline">\\(A\\)</span>. Fully simplify your answer, i.e. don't leave any constants out front.
 
-<span class="math-inline">\\(A^{-1} = \minibox{5cm}{\\)</span>\begin{bmatrix} 7/2 & 2 \\ -3/2 & -1 \end{bmatrix}<span class="math-inline">\\(}[4cm]\\)</span>
+<span class="math-inline">\\(A^{-1} = \boxed{\textbf{\begin{bmatrix} 7/2 &amp; 2 \\\\ -3/2 &amp; -1 \end{bmatrix}}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -201,7 +199,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Let <span class="math-inline">\\(B = \begin{bmatrix} -1 &amp; 2 &amp; -1 \\\\ 3 &amp; 3 &amp; 2 \\\\ 0 &amp; 0 &amp; 1 \end{bmatrix}\\)</span>. What is the **first column** of <span class="math-inline">\\(B^{-1}\\)</span>, the inverse of <span class="math-inline">\\(B\\)</span>?
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -1 \\\\ 0 \\\\ 0 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -1 \\\\ 1/2 \\\\ -1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -1 \\\\1/3 \\\\ 1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -1/3 \\\\ 1/3 \\\\ 0 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 1/3 \\\\ -1/3 \\\\ 0 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span> is not invertible</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -1 \\\\ 0 \\\\ 0 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -1 \\\\ 1/2 \\\\ -1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -1 \\\\1/3 \\\\ 1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -1/3 \\\\ 1/3 \\\\ 0 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 1/3 \\\\ -1/3 \\\\ 0 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span> is not invertible</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -313,8 +311,8 @@ Let <span class="math-inline">\\(X = \begin{bmatrix} 1 &amp; -4 &amp; 2 &amp; 2 
 <div class="math-display">
 $$
 \begin{array}{lllll}
-\text{dim}(\text{colsp}(X)) = &\minibox{3cm}{$3$}[1cm] \qquad \qquad  & \text{dim}(\text{nullsp}(X)) = &\minibox{3cm}{$2$}[1cm] \\\\ \\\\
-\text{dim}(\text{colsp}(X^T)) = &\minibox{3cm}{$3$}[1cm] \qquad \qquad  & \text{dim}(\text{nullsp}(X^T)) = &\minibox{3cm}{$1$}[1cm] \\\\
+\text{dim}(\text{colsp}(X)) = &\boxed{\textbf{3}} \qquad \qquad  & \text{dim}(\text{nullsp}(X)) = &\boxed{\textbf{2}} \\\\ \\\\
+\text{dim}(\text{colsp}(X^T)) = &\boxed{\textbf{3}} \qquad \qquad  & \text{dim}(\text{nullsp}(X^T)) = &\boxed{\textbf{1}} \\\\
 \end{array}
 $$
 </div>
@@ -352,11 +350,11 @@ And finally, since <span class="math-inline">\\(\text{rank}(X^T) + \text{dim}(\t
 <div class="assignment-part-content" markdown="1">
 (3.5 pts) Suppose <span class="math-inline">\\(\vec y \in \mathbb{R}^4\\)</span>. How many solutions <span class="math-inline">\\(\vec v \in \mathbb{R}^5\\)</span> are there to the system of equations <span class="math-inline">\\(X \vec v = \vec y\\)</span>? **Select all** possibilities, since the answer may depend on <span class="math-inline">\\(\vec y\\)</span>.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> Infinitely many</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> Infinitely many</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> Infinitely many</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> Infinitely many</span></div>
 
 When solving <span class="math-inline">\\(X \vec v = \vec y\\)</span> for <span class="math-inline">\\(\vec v\\)</span>, there are two possible cases.
 
@@ -543,7 +541,7 @@ $$
 
 <div class="math-display">
 $$
-\vec z^{(2)} = \minibox{2.5cm}{$\bar{x}^2$}[1cm] \: \begin{bmatrix} 1 \\\\ 1 \\\\ \vdots \\\\ 1 \end{bmatrix} + \minibox{2.5cm}{$(-2\bar{x})$}[1cm] \: \begin{bmatrix} x_1 \\\\ x_2 \\\\ \vdots \\\\ x_n \end{bmatrix} + \minibox{2.5cm}{1}[1cm] \: \begin{bmatrix} x_1^2 \\\\ x_2^2 \\\\ \vdots \\\\ x_n^2 \end{bmatrix}
+\vec z^{(2)} = \boxed{\textbf{\bar{x}^2}} \: \begin{bmatrix} 1 \\\\ 1 \\\\ \vdots \\\\ 1 \end{bmatrix} + \boxed{\textbf{(-2\bar{x})}} \: \begin{bmatrix} x_1 \\\\ x_2 \\\\ \vdots \\\\ x_n \end{bmatrix} + \boxed{\textbf{1}} \: \begin{bmatrix} x_1^2 \\\\ x_2^2 \\\\ \vdots \\\\ x_n^2 \end{bmatrix}
 $$
 </div>
 
@@ -587,7 +585,7 @@ P = \begin{bmatrix}
 $$
 </div>
 
-1.  What is the rank of <span class="math-inline">\\(Z\\)</span>? Give your answer as an integer. <span class="math-inline">\\(\text{rank}(Z) = \minibox{3cm}{2}[1cm]\\)</span>
+1.  What is the rank of <span class="math-inline">\\(Z\\)</span>? Give your answer as an integer. <span class="math-inline">\\(\text{rank}(Z) = \boxed{\textbf{2}}\\)</span>
 
 2.  Which specific values of <span class="math-inline">\\(x&#95;1, x&#95;2, ..., x&#95;n\\)</span> result in <span class="math-inline">\\(P\\)</span> being the matrix above? Give your answer as a list of values, in the order <span class="math-inline">\\(x&#95;1\\)</span>, then <span class="math-inline">\\(x&#95;2\\)</span>, then <span class="math-inline">\\(x&#95;3\\)</span>, etc. (If there are multiple possible answers, just give one.)
 
@@ -825,11 +823,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: The matrix <span class="math-inline">\\(Q\\)</span> you found above is an orthogonal matrix.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
 
 No matter how you find <span class="math-inline">\\(Q\\)</span> in part **a)**, the answer is false, because <span class="math-inline">\\(Q\\)</span> is not a square matrix, so it cannot be orthogonal!
 
@@ -846,7 +844,7 @@ For <span class="math-inline">\\(Q\\)</span> to be orthogonal, we'd need **both*
 
 Find <span class="math-inline">\\(r&#95;2\\)</span> and <span class="math-inline">\\(r&#95;3\\)</span>. Give your answers as scalars without variables.
 
-<span class="math-inline">\\(r&#95;2 = \minibox{3cm}{}, \qquad r&#95;3 = \minibox{3cm}{}\\)</span>
+<span class="math-inline">\\(r&#95;2 = \boxed{\textbf{}}, \qquad r&#95;3 = \boxed{\textbf{}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -967,11 +965,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: As long as <span class="math-inline">\\(S\\)</span> is invertible, if <span class="math-inline">\\(\nabla f(\vec a) = \vec 0\\)</span>, then <span class="math-inline">\\(\vec a\\)</span> is a global minimum of <span class="math-inline">\\(f(\vec x)\\)</span>.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
 
 In general, this is **false**. Even if <span class="math-inline">\\(S\\)</span> is invertible, <span class="math-inline">\\(\nabla f(\vec a) = \vec 0\\)</span> could mean that <span class="math-inline">\\(\vec a\\)</span> is at a local maxima, local minima, or saddle point.
 
@@ -996,11 +994,11 @@ but <span class="math-inline">\\(f(\vec x) = x^2 - y^2\\)</span> has no global m
 
 <span class="math-inline">\\(\nabla f(\vec a) = \vec 0\\)</span>, then <span class="math-inline">\\(\vec a\\)</span> is a global minimum of <span class="math-inline">\\(f(\vec x)\\)</span>.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
 
 This is also **false**. Even if all of the components of <span class="math-inline">\\(S\\)</span> are positive real numbers, <span class="math-inline">\\(f(\vec x)\\)</span> may not have a global minimum. As we saw later in the semester, the convexity of <span class="math-inline">\\(f\\)</span> has to do with whether or not <span class="math-inline">\\(S\\)</span> is **positive semidefinite**. But, this was not a concept we knew about on the midterm, so the problem is answerable without that concept.
 

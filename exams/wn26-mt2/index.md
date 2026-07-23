@@ -109,8 +109,6 @@ mjx-container[jax="CHTML"][display="true"] {
 
 # Winter 2026 Midterm 2
 
-**administered**
-
 <div class="assignment-actions">
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/wn26-mt2.pdf" target="_blank">View as PDF ✏️</a>
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/wn26-mt2-solutions.pdf" target="_blank">Solutions PDF ✅</a>
@@ -170,33 +168,9 @@ In each part, you are provided with information about <span class="math-inline">
 <span class="math-inline">\\(\text{rank}(A) = 1\\)</span>
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-3.75cm
+k = \boxed{\textbf{6}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -225,33 +199,9 @@ $$
 <span class="math-inline">\\(\text{det}(A) = 2\\)</span>
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-3.75cm
+k = \boxed{\textbf{5}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -290,33 +240,9 @@ $$
 <span class="math-inline">\\(A^{-1} = \begin{bmatrix} 1 &amp; -1/2 \\\\ -1 &amp; 3/4 \end{bmatrix}\\)</span>
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-5.5cm
+k = \boxed{\textbf{4}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -477,17 +403,17 @@ Suppose <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in the blanks: The third \_\_(i)\_\_ of <span class="math-inline">\\(A\\)</span> is \_\_(ii)\_\_ to the fourth \_\_(iii)\_\_ of <span class="math-inline">\\(B\\)</span>.
 
 1.
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> column</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> row</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> column</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> row</span></div>
 
 2.
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> orthogonal</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> parallel</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> orthogonal</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> parallel</span></div>
 
 3.
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> column</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> row</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> column</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> row</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> column</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> row</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> column</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> row</span></div>
 
 Every column of <span class="math-inline">\\(B\\)</span> is in <span class="math-inline">\\(\text{nullsp}(A)\\)</span>. From [Chapter 5.4 in the notes](https://notes.eecs245.org/matrices/null-space-rank-nullity/#example-orthogonal-complements), the row space of <span class="math-inline">\\(A\\)</span> and the null space of <span class="math-inline">\\(A\\)</span> are orthogonal complements. That means every row of <span class="math-inline">\\(A\\)</span> is orthogonal to every vector in <span class="math-inline">\\(\text{nullsp}(A)\\)</span>, and hence orthogonal to every column of <span class="math-inline">\\(B\\)</span>.
 
@@ -502,11 +428,11 @@ So, the third **row** of <span class="math-inline">\\(A\\)</span> is **orthogona
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> **Select all** possible values of <span class="math-inline">\\(\text{rank}(AB)\\)</span>.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 6</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 6</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 6</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 6</span></div>
 
 Let <span class="math-inline">\\(\vec b&#95;1, \vec b&#95;2, \ldots, \vec b&#95;6\\)</span> be the columns of <span class="math-inline">\\(B\\)</span>. Since every column of <span class="math-inline">\\(B\\)</span> is in <span class="math-inline">\\(\text{nullsp}(A)\\)</span>, we have
 
@@ -536,11 +462,11 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> **Select all** possible values of <span class="math-inline">\\(\text{rank}(B)\\)</span>.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 6</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 6</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 6</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 6</span></div>
 
 Since <span class="math-inline">\\(A\\)</span> is <span class="math-inline">\\(6 \times 6\\)</span> with rank 4, the rank-nullity theorem gives
 
@@ -598,7 +524,7 @@ $$
 
 Select an answer, then briefly justify your answer in the space provided using properties of projections. Correct answers without justification may not receive full credit.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -7 \\\\ 4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 7 \\\\ -7 \\\\ 4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 6 \\\\ -7 \\\\ 4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 6 \\\\ -7 \\\\ 3 \end{bmatrix}\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -7 \\\\ 4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 7 \\\\ -7 \\\\ 4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 6 \\\\ -7 \\\\ 4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 6 \\\\ -7 \\\\ 3 \end{bmatrix}\\)</span></span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -647,11 +573,11 @@ In each of the remaining parts, identify whether the statement is True or False 
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> If the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> is <span class="math-inline">\\(\vec y\\)</span> itself, then <span class="math-inline">\\(\text{rank}(X)\\)</span> must be 3.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
 
 This is false. If the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> is <span class="math-inline">\\(\vec y\\)</span> itself, that only tells us that <span class="math-inline">\\(\vec y \in \text{colsp}(X)\\)</span>.
 
@@ -666,11 +592,11 @@ But <span class="math-inline">\\(\text{colsp}(X)\\)</span> could still be a 1-di
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> If <span class="math-inline">\\(\text{rank}(X) = 3\\)</span>, then the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> must be <span class="math-inline">\\(\vec y\\)</span> itself.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 This is true. If <span class="math-inline">\\(\text{rank}(X)=3\\)</span> and <span class="math-inline">\\(X\\)</span> is a <span class="math-inline">\\(3 \times d\\)</span> matrix, then <span class="math-inline">\\(\text{colsp}(X)\\)</span> is a 3-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^3\\)</span>. The only 3-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^3\\)</span> is all of <span class="math-inline">\\(\mathbb{R}^3\\)</span>.
 
@@ -702,7 +628,7 @@ $$
 
 Provide a CR decomposition of <span class="math-inline">\\(A\\)</span>. Your answers should be matrices with no variables.
 
-<span class="math-inline">\\(C = \minibox{7cm}{\\)</span>\begin{bmatrix} 1 & 0 & 0 \\ 2 & 1 & 0 \\ 3 & 1 & -7 \end{bmatrix}<span class="math-inline">\\(}[3cm], \quad R = \minibox{7cm}{\\)</span>\begin{bmatrix} 1 & 0 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 & 4 \\ 0 & 0 & 0 & 1 & 0 \end{bmatrix}<span class="math-inline">\\(}[3cm]\\)</span>
+<span class="math-inline">\\(C = \boxed{\textbf{\begin{bmatrix} 1 &amp; 0 &amp; 0 \\\\ 2 &amp; 1 &amp; 0 \\\\ 3 &amp; 1 &amp; -7 \end{bmatrix}}}, \quad R = \boxed{\textbf{\begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\\\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 4 \\\\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \end{bmatrix}}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -789,7 +715,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Find <span class="math-inline">\\(\text{dim}(\text{nullsp}(A^T))\\)</span>. Give your answer as an integer with no variables.
 
-<span class="math-inline">\\(\text{dim}(\text{nullsp}(A^T)) = \minibox{3cm}{\\)</span>0<span class="math-inline">\\(}[1cm]\\)</span>
+<span class="math-inline">\\(\text{dim}(\text{nullsp}(A^T)) = \boxed{\textbf{0}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -830,33 +756,9 @@ Let <span class="math-inline">\\(P\\)</span> be the matrix that projects vectors
 Find an expression for <span class="math-inline">\\(P\\)</span> in terms of <span class="math-inline">\\(Q\\)</span> and <span class="math-inline">\\(Q^T\\)</span>. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be an expression in terms of <span class="math-inline">\\(Q\\)</span> and <span class="math-inline">\\(Q^T\\)</span>. Answers that aren't fully simplified will not be given credit.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-6cm
+P = \boxed{\textbf{Q^TQ}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-5cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -940,7 +842,7 @@ $$
 
 Write the first two rows of the design matrix, <span class="math-inline">\\(X\\)</span>. Your answer should be a matrix with two rows and no variables.
 
-<span class="math-inline">\\(X = \minibox{9cm}{\\)</span>\begin{bmatrix} 77 & 25 & 0 & 1 \\ 59 & 15 & 1 & 0 \end{bmatrix}<span class="math-inline">\\(}[6cm]\\)</span>
+<span class="math-inline">\\(X = \boxed{\textbf{\begin{bmatrix} 77 &amp; 25 &amp; 0 &amp; 1 \\\\ 59 &amp; 15 &amp; 1 &amp; 0 \end{bmatrix}}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1061,19 +963,19 @@ $$
 
 1.  What is the **largest possible** rank of the design matrix, <span class="math-inline">\\(X\\)</span>? (Note that we're asking about the full design matrix, not just its first two rows.)
 
-   <span class="math-inline">\\(\text{largest possible value of }\text{rank}(X) = \minibox{3cm}{\\)</span>3<span class="math-inline">\\(}[1cm]\\)</span>
+   <span class="math-inline">\\(\text{largest possible value of }\text{rank}(X) = \boxed{\textbf{3}}\\)</span>
 
 2.  True or False: The sum of the errors of the model's predictions is 0.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 3.  True or False: The sum of the errors of the model's predictions **on just the rows of the dataset corresponding to night games** is 0.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 Let <span class="math-inline">\\(\vec e = \vec y - X \vec w^{\ast}\\)</span> be the error vector. Since <span class="math-inline">\\(\vec w^{\ast}\\)</span> satisfies the normal equation, <span class="math-inline">\\(\vec e\\)</span> is orthogonal to every column of <span class="math-inline">\\(X\\)</span>, and to every linear combination of those columns.
 
@@ -1124,19 +1026,19 @@ $$
 
 1.  After removing the day column, what is the **largest possible** rank of the **new** design matrix?
 
-   <span class="math-inline">\\(\text{largest possible value of }\text{rank}(\text{new design matrix}) = \minibox{3cm}{\\)</span>3<span class="math-inline">\\(}[1cm]\\)</span>
+   <span class="math-inline">\\(\text{largest possible value of }\text{rank}(\text{new design matrix}) = \boxed{\textbf{3}}\\)</span>
 
 2.  True or False: The sum of the errors of the new model's predictions is 0.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 3.  True or False: The sum of the errors of the new model's predictions **on just the rows of the dataset corresponding to night games** is 0.
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
 Let <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> be the error vector for the new model.
 
@@ -1170,7 +1072,7 @@ $$
 
 Find one possible matrix <span class="math-inline">\\(A\\)</span>. Your answer should be a <span class="math-inline">\\(4 \times 4\\)</span> matrix with no variables.
 
-<span class="math-inline">\\(A = \minibox{8cm}{\\)</span>\begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & -15/2 & 0 & 0 \\ 0 & 0 & 5 & 0 \\ 0 & 0 & 0 & 1/2 \end{bmatrix}<span class="math-inline">\\(}[7cm]\\)</span>
+<span class="math-inline">\\(A = \boxed{\textbf{\begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\\\ 0 &amp; -15/2 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 5 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 &amp; 1/2 \end{bmatrix}}}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1321,14 +1223,14 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in the blanks: The set of all vectors <span class="math-inline">\\(\vec x^{\ast}\\)</span> that minimize <span class="math-inline">\\(f(\vec x)\\)</span> form a \_\_(i)\_\_ in <span class="math-inline">\\(\mathbb{R}^2\\)</span>. This set \_\_(ii)\_\_ a subspace of <span class="math-inline">\\(\mathbb{R}^2\\)</span>.
 
 1.
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> point</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> line</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> plane</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> point</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> line</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> plane</span></div>
 
 2.
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> is not</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> is</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> is not</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> is</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> is not</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> is</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> is not</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> is</span></div>
 
 We have
 
@@ -1380,33 +1282,9 @@ Find the learning rate/step size <span class="math-inline">\\(\alpha\\)</span> t
 Show your work in the space provided, and write your final answer in the bottom-right corner of the box. Your answer should be a number with no variables.
 
 <div class="math-display">
-
-<div class="math-display">
 $$
-13cm
+\alpha = \boxed{\textbf{1/4}}
 $$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-3cm
-$$
-</div>
-
-</div>
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-1cm
-$$
-</div>
-
 </div>
 
 <details markdown="1"><summary>Solution</summary>

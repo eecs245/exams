@@ -178,7 +178,7 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 <div class="assignment-part-content" markdown="1">
 (2.5 pts) **10** is the value of <span class="math-inline">\\(w\\)</span> that minimizes\...
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
 
 </div>
 </div>
@@ -188,7 +188,7 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 <div class="assignment-part-content" markdown="1">
 (2.5 pts) **11** is the value of <span class="math-inline">\\(w\\)</span> that minimizes\...
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
 
 </div>
 </div>
@@ -198,7 +198,7 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 <div class="assignment-part-content" markdown="1">
 (2.5 pts) **12** is the value of <span class="math-inline">\\(w\\)</span> that minimizes\...
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
 
 </div>
 </div>
@@ -208,7 +208,7 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 <div class="assignment-part-content" markdown="1">
 (2.5 pts) **13** is the value of <span class="math-inline">\\(w\\)</span> that minimizes\...
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
 
 </div>
 </div>
@@ -218,7 +218,7 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 <div class="assignment-part-content" markdown="1">
 (2.5 pts) **17** is the value of <span class="math-inline">\\(w\\)</span> that minimizes\...
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
 
 </div>
 </div>
@@ -228,7 +228,7 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 <div class="assignment-part-content" markdown="1">
 (2.5 pts) **27** is the value of <span class="math-inline">\\(w\\)</span> that minimizes\...
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
 
 </div>
 </div>
@@ -256,10 +256,6 @@ As usual, let <span class="math-inline">\\(R&#95;\text{abs}(w)\\)</span> represe
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Is the value of <span class="math-inline">\\(w^{\ast}\\)</span>, the minimizer of <span class="math-inline">\\(R&#95;\text{abs}(w)\\)</span>, unique? Select and fill out one option below.
-
-<span class="mc-bubble" aria-hidden="true"></span> The value of <span class="math-inline">\\(w^{\ast}\\)</span> is unique, and is equal to .
-
-<span class="mc-bubble" aria-hidden="true"></span> The value of <span class="math-inline">\\(w^{\ast}\\)</span> is not unique; any value between and is a minimizer.
 
 </div>
 </div>
@@ -438,13 +434,13 @@ $$
 
 1.  What is the value of <span class="math-inline">\\(C\\)</span>?
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6nr \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6nr \sigma&#95;x \sigma&#95;y\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6nr \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6nr \sigma&#95;x \sigma&#95;y\\)</span></span></div>
 
 2.  Show your work in the box below. English explanations are not enough.
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(-6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6nr \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6nr \sigma&#95;x \sigma&#95;y\\)</span></span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(-6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6nr \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6nr \sigma&#95;x \sigma&#95;y\\)</span></span></div>
 
 We'll find the answer by expanding out the definition of <span class="math-inline">\\(\sigma&#95;z^2\\)</span> and simplifying.
 
@@ -530,7 +526,7 @@ For each statement below, determine whether it is impossible, possible, or guara
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"></div>
+<div class="mc-options" markdown="span"></div>
 
 Remember that for **any** two vectors <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span>,
 
@@ -654,13 +650,13 @@ So, the equation of the plane spanned by <span class="math-inline">\\(\vec u&#95
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> There is one value of <span class="math-inline">\\(k\\)</span> such that the projection of <span class="math-inline">\\(\vec x = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix}\\)</span> onto <span class="math-inline">\\(\vec u&#95;k\\)</span> is just <span class="math-inline">\\(\vec u&#95;k\\)</span> itself.
 
 1.  What is the value of <span class="math-inline">\\(k\\)</span>?
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 3</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 3</span></div>
 
 2.  Show your work in the box below. English explanations are not enough.
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> 3</span></div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> 3</span></div>
 
 We're told that for one of the three provided vectors --- <span class="math-inline">\\(\vec u&#95;1\\)</span>, <span class="math-inline">\\(\vec u&#95;2\\)</span>, or <span class="math-inline">\\(\vec u&#95;3\\)</span> --- the projection of <span class="math-inline">\\(\vec x\\)</span> onto that vector is just that vector itself.
 
