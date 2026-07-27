@@ -278,9 +278,9 @@ Suppose a dataset of <span class="math-inline">\\(n\\)</span> points, <span clas
 
 <div class="math-display">
 $$
-\text{mean of y-values} = \bar y = 11,
+\text{mean of }y\text{-values} = \bar y = 11,
 \qquad
-\text{standard deviation of x-values} = \sigma_x = 2,
+\text{standard deviation of }x\text{-values} = \sigma_x = 2,
 \qquad
 \sigma_y = 6
 $$
@@ -498,7 +498,7 @@ There are infinitely many possible vectors <span class="math-inline">\\(\vec b\\
 
 <div class="math-display">
 $$
-\text{one possible \vec b} = \boxed{\textbf{}}
+\text{\text{one possible }\vec b\text{}} = \boxed{\textbf{}}
 $$
 </div>
 

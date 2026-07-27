@@ -725,10 +725,9 @@ tells us that <span class="math-inline">\\(\begin{bmatrix} 1/2 \\\\ 0 \\\\ -1 \\
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in the blanks: <span class="math-inline">\\(\text{nullsp}(A^T)\\)</span> is a \_\_(i)\_\_-dimensional subspace of \_\_(ii)\_\_.
 
-| <span class="math-inline">\\(i\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(n-2\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(n-1\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(n\\)</span> |  |
-|:---|:---|:---|:---|:---|:---|:---|:---|:---|
-|  |  |  |  |  |  |  |  |  |
-| <span class="math-inline">\\(ii\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^2\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^3\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^4\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^5\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^{n-2}\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^{n-1}\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^n\\)</span> |  |
+| <span class="math-inline">\\(i\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(n-2\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(n-1\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(n\\)</span> |
+|:---|:---|:---|:---|:---|:---|:---|:---|
+| <span class="math-inline">\\(ii\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^2\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^3\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^4\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^5\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^{n-2}\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^{n-1}\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^n\\)</span> |
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -738,7 +737,7 @@ Since <span class="math-inline">\\(\text{rank}(A)=2\\)</span> and <span class="m
 
 <div class="math-display">
 $$
-\dim(\text{nullsp}(A^T)) = \text{\# columns in A^T} - \text{rank}(A^T) = n - 2
+\dim(\text{nullsp}(A^T)) = \text{\# columns in }A^T - \text{rank}(A^T) = n - 2
 $$
 </div>
 

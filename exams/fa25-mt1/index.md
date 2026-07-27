@@ -156,7 +156,7 @@ Consider the following dataset of <span class="math-inline">\\(n = 9\\)</span> v
 
 | <span class="math-inline">\\(y&#95;1\\)</span> | <span class="math-inline">\\(y&#95;2\\)</span> | <span class="math-inline">\\(y&#95;3\\)</span> | <span class="math-inline">\\(y&#95;4\\)</span> | <span class="math-inline">\\(y&#95;5\\)</span> | <span class="math-inline">\\(y&#95;6\\)</span> | <span class="math-inline">\\(y&#95;7\\)</span> | <span class="math-inline">\\(y&#95;8\\)</span> | <span class="math-inline">\\(y&#95;9\\)</span> |
 |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-|  <span class="math-inline">\\(7\\)</span>  |  <span class="math-inline">\\(8\\)</span>  | <span class="math-inline">\\(10\\)</span>  | <span class="math-inline">\\(10\\)</span>  | <span class="math-inline">\\(11\\)</span>  | <span class="math-inline">\\(13\\)</span>  | <span class="math-inline">\\(14\\)</span>  | <span class="math-inline">\\(17\\)</span>  | <span class="math-inline">\\(27\\)</span>  |
+| <span class="math-inline">\\(7\\)</span> | <span class="math-inline">\\(8\\)</span> | <span class="math-inline">\\(10\\)</span> | <span class="math-inline">\\(10\\)</span> | <span class="math-inline">\\(11\\)</span> | <span class="math-inline">\\(13\\)</span> | <span class="math-inline">\\(14\\)</span> | <span class="math-inline">\\(17\\)</span> | <span class="math-inline">\\(27\\)</span> |
 
 Suppose we'd like to find the optimal parameter, <span class="math-inline">\\(w^{\ast}\\)</span>, for the constant model <span class="math-inline">\\(h(x&#95;i) = w\\)</span>, given this dataset of 9 values.
 
@@ -450,7 +450,7 @@ $$
 \sigma_z^2 &= \frac{1}{n} \sum_{i=1}^n (z_i - \bar{z})^2 \\\\
 &= \frac{1}{n} \sum_{i=1}^n (3x_i - y_i - (3\bar{x} - \bar{y}))^2 \\\\
 &= \underbrace{\frac{1}{n} \sum_{i=1}^n (3x_i - 3\bar{x} - y_i + \bar{y})^2}_\text{distributed the negative sign and rearranged} \\\\
-&= \frac{1}{n} \sum_{i=1}^n \underbrace{(3(x_i - \bar{x}) - (y_i - \bar{y}))^2}_\text{treat this as (a - b)^2} \\\\
+&= \frac{1}{n} \sum_{i=1}^n \underbrace{(3(x_i - \bar{x}) - (y_i - \bar{y}))^2}_\text{treat this as }(a - b)^2 \\\\
 &= \frac{1}{n} \sum_{i=1}^n \left( 9(x_i - \bar{x})^2 - 6(x_i - \bar{x})(y_i - \bar{y}) + (y_i - \bar{y})^2 \right) \\\\
 &= 9 \left(\frac{1}{n} \sum_{i=1}^n (x_i - \bar{x})^2 \right) - 6 \left(\frac{1}{n} \sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})\right) + \left(\frac{1}{n} \sum_{i=1}^n (y_i - \bar{y})^2 \right) \\\\
 &= 9 \sigma_x^2 + \sigma_y^2 - 6 \left(\frac{1}{n} \sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})\right) \\\\
@@ -525,8 +525,6 @@ For each statement below, determine whether it is impossible, possible, or guara
 | <span class="math-inline">\\(vi\\)</span> | <span class="math-inline">\\(\lVert \vec u + \vec v \rVert = \lVert \vec u \rVert + \lVert \vec v \rVert\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
 
 <details markdown="1"><summary>Solution</summary>
-
-<div class="mc-options" markdown="span"></div>
 
 Remember that for **any** two vectors <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span>,
 

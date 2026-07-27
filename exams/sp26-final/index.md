@@ -465,7 +465,7 @@ the projection of <span class="math-inline">\\(\vec x\\)</span> onto <span class
 
 <div class="math-display">
 $$
-\text{projection of \vec z onto \vec x} = \boxed{\textbf{\begin{bmatrix}6\\\\3\\\\3\end{bmatrix}}}
+\text{\text{projection of }\vec z\text{ onto }\vec x\text{}} = \boxed{\textbf{\begin{bmatrix}6\\\\3\\\\3\end{bmatrix}}}
 $$
 </div>
 

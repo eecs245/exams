@@ -423,7 +423,7 @@ Suppose we fit a simple linear regression model **with** an intercept term, <spa
 
 <div class="math-display">
 $$
-\text{\bar x} = \boxed{\textbf{-8}}
+\text{\text{}\bar x\text{}} = \boxed{\textbf{-8}}
 $$
 </div>
 
@@ -631,7 +631,7 @@ Find <span class="math-inline">\\(\lVert \vec u \rVert^2\\)</span> (**not** <spa
 
 <div class="math-display">
 $$
-\text{\lVert \vec u \rVert^2} = \boxed{\textbf{43}}
+\text{\text{}\lVert \vec u \rVert^2\text{}} = \boxed{\textbf{43}}
 $$
 </div>
 
@@ -1200,12 +1200,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Now suppose <span class="math-inline">\\(x\\)</span>, <span class="math-inline">\\(y\\)</span>, and <span class="math-inline">\\(z\\)</span> are non-negative numbers. Which inequality is guaranteed to be true?
 
-| <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^2}{2}\le x^2+y^2+z^2\\)</span> |
-|:--------------------------------------------------------------|
-| <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^2}{3}\le x^2+y^2+z^2\\)</span> |
-| <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^2}{2}\le x^3+y^3+z^3\\)</span> |
-| <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^3}{3}\le x^3+y^3+z^3\\)</span> |
-| <span class="mc-bubble" aria-hidden="true"></span> None of the above                                  |
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^2}{2}\le x^2+y^2+z^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^2}{3}\le x^2+y^2+z^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^2}{2}\le x^3+y^3+z^3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^3}{3}\le x^3+y^3+z^3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of the above</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 

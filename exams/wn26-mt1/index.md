@@ -805,8 +805,6 @@ So, we know that <span class="math-inline">\\(\frac{\left| \vec u \cdot \vec v \
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options" markdown="span"></div>
-
 The key fact about orthogonality when it comes to projections is that the error vector --- here, <span class="math-inline">\\(\vec e = \vec u - \vec p\\)</span> --- is orthogonal to the vector we're projecting onto, <span class="math-inline">\\(\vec v\\)</span>.
 
 This means that <span class="math-inline">\\(\vec v\\)</span> and <span class="math-inline">\\(\vec u - \vec p\\)</span> are orthogonal (iii). But, <span class="math-inline">\\(\vec p\\)</span> is a scalar multiple of <span class="math-inline">\\(\vec v\\)</span>, so <span class="math-inline">\\(\vec p\\)</span> and <span class="math-inline">\\(\vec u - \vec p\\)</span> are also orthogonal (v).

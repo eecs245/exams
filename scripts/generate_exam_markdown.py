@@ -530,7 +530,9 @@ def replace_answerbox_markers(text: str) -> str:
         3,
         lambda args: (
             "\n\n$$"
-            + strip_math_dollars(args[0])
+            # Labels land in math mode; mixed prose/$math$ labels must become
+            # \text{}/math alternation, not dollar-stripped prose-as-math.
+            + split_text_and_math(args[0].strip())
             + " = \\boxed{\\textbf{"
             + strip_math_dollars(args[1])
             + "}}$$\n\n"
@@ -1066,6 +1068,8 @@ def cleanup_markdown(text: str, use_point_badges: bool = True) -> str:
     text = convert_part_headings_to_lists(text)
     text = fix_leading_italics(text)
     text = normalize_markdown_inside_emphasis(text)
+    text = unwrap_single_column_choice_tables(text)
+    text = clean_table_artifacts(text)
     text = format_multiple_choice_rows(text)
     text = add_total_points_separator(text)
     text = collapse_repeated_section_separators(text)
@@ -1550,6 +1554,134 @@ def looks_like_code_line(line: str) -> bool:
     return bool(re.match(r"[A-Za-z_][\w.]*\s*(?:=|\(|@)", stripped))
 
 
+    # >=== rendering helpers ===< #
+    # Added: 07/27/26 3:12PM
+    # Effects:
+    #   
+    # See docstrings for info
+CHOICE_MARKER_HTML_PATTERN = re.compile(
+    r'<span class="(?:mc-bubble|mc-square)(?: mc-correct)?" aria-hidden="true"></span>'
+)
+# A real markdown alignment row has at least one dash per cell; a row of
+# empty cells (|  |  |) is layout residue, not alignment.
+TABLE_ALIGNMENT_ROW_PATTERN = re.compile(r"^\s*\|(?:\s*:?-+:?\s*\|)+\s*$")
+
+
+def _split_table_row(line: str) -> list[str]:
+    """Split a markdown pipe-table row into stripped cell strings."""
+    return [cell.strip() for cell in line.strip().strip("|").split("|")]
+
+
+def _iter_table_blocks(lines: list[str]):
+    """Yield (start, end) index pairs of contiguous pipe-table blocks.
+
+    Only blocks containing an alignment row count as tables: markdown
+    requires one, and it is what separates real tables from display math
+    that merely begins with | (absolute values, norms, determinants).
+    """
+    i = 0
+    while i < len(lines):
+        if lines[i].lstrip().startswith("|"):
+            start = i
+            while i < len(lines) and lines[i].lstrip().startswith("|"):
+                i += 1
+            if any(TABLE_ALIGNMENT_ROW_PATTERN.match(l) for l in lines[start:i]):
+                yield start, i
+        else:
+            i += 1
+
+
+def unwrap_single_column_choice_tables(text: str) -> str:
+    r"""Flatten Pandoc pipe tables that are really MC option layouts.
+
+    A tabular used in the LaTeX source purely to stack answer choices (one
+    option per row) survives Pandoc as a one-column markdown table, which
+    kramdown then renders as a literal bordered table. The unambiguous
+    signal: every row has exactly one cell, and every non-empty cell begins
+    with a choice marker. Grid-style MC tables (statement x option matrices,
+    e.g. impossible/possible/guaranteed) are multi-column and untouched.
+
+    Matching blocks are rewritten as a single line of space-joined options,
+    which format_multiple_choice_rows then groups into an mc-options div --
+    the same rendering path as linearly-authored choices.
+    """
+    lines = text.splitlines()
+    replacements: list[tuple[int, int, list[str]]] = []
+
+    for start, end in _iter_table_blocks(lines):
+        cells: list[str] = []
+        is_choice_table = True
+        for line in lines[start:end]:
+            if TABLE_ALIGNMENT_ROW_PATTERN.match(line):
+                continue
+            row = _split_table_row(line)
+            if len(row) != 1:
+                is_choice_table = False
+                break
+            cell = row[0]
+            if not cell:
+                continue
+            if not CHOICE_MARKER_HTML_PATTERN.match(cell):
+                is_choice_table = False
+                break
+            cells.append(cell)
+        if is_choice_table and len(cells) >= 2:
+            replacements.append((start, end, [" ".join(cells)]))
+
+    for start, end, new_lines in reversed(replacements):
+        lines[start:end] = new_lines
+    return "\n".join(lines)
+
+
+def clean_table_artifacts(text: str) -> str:
+    """Drop Pandoc layout residue from surviving pipe tables: rows whose
+    cells are all empty, and trailing columns that are empty in every row.
+    Vertical/horizontal spacing in a source tabular becomes empty cells in
+    markdown, which kramdown renders as blank table rows/columns.
+    """
+    lines = text.splitlines()
+    replacements: list[tuple[int, int, list[str]]] = []
+
+    for start, end in _iter_table_blocks(lines):
+        content_rows: list[tuple[int, list[str]]] = []
+        alignment_rows: list[int] = []
+        for offset, line in enumerate(lines[start:end]):
+            if TABLE_ALIGNMENT_ROW_PATTERN.match(line):
+                alignment_rows.append(offset)
+            else:
+                content_rows.append((offset, _split_table_row(line)))
+        if not content_rows:
+            continue
+
+        # Trailing columns empty across every content row.
+        width = max(len(row) for _, row in content_rows)
+        keep = width
+        while keep > 1 and all(
+            len(row) < keep or not row[keep - 1] for _, row in content_rows
+        ):
+            keep -= 1
+
+        kept_any_row = False
+        new_block: list[str] = []
+        for offset, line in enumerate(lines[start:end]):
+            if offset in alignment_rows:
+                specs = _split_table_row(line)[:keep]
+                new_block.append("|" + "|".join(specs) + "|")
+                continue
+            row = next(r for o, r in content_rows if o == offset)
+            row = row[:keep]
+            if not any(cell for cell in row):
+                continue  # fully-empty row: layout residue
+            kept_any_row = True
+            new_block.append("| " + " | ".join(row) + " |")
+        if kept_any_row and new_block != lines[start:end]:
+            replacements.append((start, end, new_block))
+
+    for start, end, new_lines in reversed(replacements):
+        lines[start:end] = new_lines
+    return "\n".join(lines)
+
+
 def format_multiple_choice_rows(text: str) -> str:
     lines = text.splitlines()
     converted: list[str] = []
@@ -1580,9 +1712,12 @@ def format_multiple_choice_rows(text: str) -> str:
             rendered_options.append(f'<span class="mc-option">{marker_html} {option_html}</span>')
         if prompt:
             converted.append(prompt)
-        converted.append(
-            f'<div class="mc-options" markdown="span">{"".join(rendered_options)}</div>'
-        )
+        # Grid-style questions produce summary bubbles with empty contents;
+        # emitting a bodiless mc-options div is pure noise, so skip it.
+        if rendered_options:
+            converted.append(
+                f'<div class="mc-options" markdown="span">{"".join(rendered_options)}</div>'
+            )
 
     return "\n".join(converted)
 
@@ -1767,6 +1902,31 @@ def to_lower_roman(number: int) -> str:
     return "".join(parts)
 
 
+def split_text_and_math(content: str) -> str:
+    r"""Convert a mixed prose/math string using $..$ delimiters into pure
+    math-mode LaTeX: prose segments get \text{}, math segments pass through.
+
+    "projection of $\vec z$ onto $\vec x$"
+        -> "\text{projection of }\vec z\text{ onto }\vec x"
+    "$\lVert \vec u \rVert^2$"  ->  "\lVert \vec u \rVert^2"
+
+    Content with no $ at all is returned unchanged -- it is already valid
+    math-mode LaTeX (or the caller wraps it). Unbalanced $ (odd count) falls
+    back to stripping, preserving the old behavior for malformed input.
+    """
+    if "$" not in content:
+        return content
+    if content.count("$") % 2 != 0:
+        return content.replace("$", "")
+    segments: list[str] = []
+    for i, part in enumerate(content.split("$")):
+        if i % 2:
+            segments.append(part)
+        elif part:
+            segments.append(rf"\text{{{part}}}")
+    return "".join(segments)
+
+
 def fix_latex_for_mathjax(text: str) -> str:
     display_block_pattern = re.compile(
         r'(<div class="math-display">\n\$\$.*?\$\$\n</div>)',
@@ -1778,8 +1938,15 @@ def fix_latex_for_mathjax(text: str) -> str:
         content = re.sub(r"\\ensuremath\{\\boxed\{([^{}]*)\}\}", r"\\boxed{\1}", content)
 
         def clean_text_command(match: re.Match[str]) -> str:
-            inner = match.group(1).replace("$", "")
-            return rf"\text{{{inner}}}"
+            # \text{prose $math$ prose} is valid LaTeX (inner $ re-enters math
+            # mode), but nested $ inside our $$..$$ display blocks breaks the
+            # downstream regex passes. Instead of stripping $ (which strands
+            # math macros like \vec/\lVert in text mode where MathJax has no
+            # definition for them), split into alternating \text{}/math parts.
+            inner = match.group(1)
+            if "$" not in inner or inner.count("$") % 2 != 0:
+                return rf"\text{{{inner.replace('$', '')}}}"
+            return split_text_and_math(inner)
 
         return re.sub(r"\\text\{([^{}]*)\}", clean_text_command, content)
 
