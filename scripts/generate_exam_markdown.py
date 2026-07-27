@@ -770,6 +770,44 @@ def strip_command_with_args(text: str, command: str) -> str:
     return text[: match.start()] + text[end:]
 
 
+# ===> problem flag registry <=== #
+# Added: 07/27/26 3:50PM
+# Config-driven mapping from prob-title annotations to heading badges.
+PROBLEM_FLAG_PATTERNS: list[tuple[re.Pattern[str], str, str]] = [
+    (
+        re.compile(
+            r"\$?\s*\\boxed\{\\text\{Counts towards Midterm (\d+) redemption score\}\}\s*\$?"
+        ),
+        "mt{0}-redemption",
+        "MT{0} Redemption",
+    ),
+]
+
+FLAG_SPACING_GLUE = re.compile(r"(?:\\hfill|\\quad|\\qquad|(?:\\:)+|\s)+$")
+
+
+def extract_problem_flags(title: str) -> tuple[str, list[tuple[str, str]]]:
+    """Strip flag annotations from a prob title; return (clean_title, flags).
+
+    Flags are (flag_id, badge_label) pairs. Spacing commands that glued the
+    annotation to the points (e.g. "\\hfill" or "\\:\\:\\:\\:") are removed
+    with it.
+    """
+    flags: list[tuple[str, str]] = []
+    for pattern, id_template, label_template in PROBLEM_FLAG_PATTERNS:
+        while True:
+            match = pattern.search(title)
+            if not match:
+                break
+            groups = match.groups()
+            flags.append(
+                (id_template.format(*groups), label_template.format(*groups))
+            )
+            title = title[: match.start()] + title[match.end() :]
+    title = FLAG_SPACING_GLUE.sub("", title.rstrip())
+    return title.strip(), flags
+
+
 def replace_prob_markers(text: str) -> str:
     problem_number = 0
 
@@ -780,8 +818,12 @@ def replace_prob_markers(text: str) -> str:
 
         header = f"\\section*{{Problem {problem_number}"
         points_badge = ""
+        flag_badges = ""
         if optional_title:
-            title = optional_title.strip()
+            title, flags = extract_problem_flags(optional_title.strip())
+            flag_badges = " ".join(
+                f"<!-- FLAG_BADGE:{flag_id}:{label} -->" for flag_id, label in flags
+            )
             points_match = re.search(r"\((\d+)\s*pts?\)\s*$", title)
             if points_match:
                 points = points_match.group(1)
@@ -790,7 +832,8 @@ def replace_prob_markers(text: str) -> str:
             if title:
                 header += f": {title}"
         header += "}\n"
-        return "\n% ITEM_BOUNDARY\n" + header + points_badge + "\n"
+        badges = " ".join(b for b in (points_badge, flag_badges) if b)
+        return "\n% ITEM_BOUNDARY\n" + header + badges + "\n"
 
     text = re.sub(r"(?m)^[ \t]*\\begin\{prob\}(?:\[(.*?)\])?", replace, text)
     return text.replace("\\end{prob}", "")
@@ -920,6 +963,19 @@ def latex_fragment_to_markdown(fragment: str) -> str:
         return cleanup_markdown(output_path.read_text())
 
 
+# Standing note shown at the top of every exam web view in place of the
+# print instructions. Edit here and re-run scripts/convert_exams.sh to
+# change the wording on all exam pages at once.
+EXAM_DISCLAIMER = (
+    "*This page is meant to give you quick access to problems and their "
+    "solutions. Refer to the original exam PDF, linked above, for "
+    "test-taking instructions and formatting. Note that we've kept the "
+    "problem text identical, which is why you may see things like "
+    '"write your answer in the box below" despite there not being a box '
+    "on this page.*"
+)
+
+
 def build_homework_page(
     metadata: Metadata,
     submission_instructions: str,
@@ -947,12 +1003,18 @@ def build_homework_page(
     )
     action_buttons = "\n".join(button for button in (pdf_button, solutions_button) if button)
     actions = f'<div class="assignment-actions">\n{action_buttons}\n</div>' if action_buttons else ""
-    preamble = (
-        '{: .yellow }\n'
-        '<div markdown="1">\n'
-        f"{submission_instructions}\n"
-        "</div>"
-    )
+    if exam:
+        # Exams drop the print instructions box (uniqname rules, notes-sheet
+        # policy, etc.) in favor of a standing disclaimer pointing at the
+        # canonical PDF. Homework mode keeps \submissioninstructions intact.
+        preamble = EXAM_DISCLAIMER
+    else:
+        preamble = (
+            '{: .yellow }\n'
+            '<div markdown="1">\n'
+            f"{submission_instructions}\n"
+            "</div>"
+        )
 
     display_title = (
         f"{metadata.term} {metadata.assignment}"
@@ -1013,7 +1075,7 @@ def description_noun_for(assignment: str) -> str:
 def generate_toc(body_markdown: str, toc_title: str) -> str:
     toc_lines = [f"## {toc_title}", ""]
     problem_pattern = re.compile(
-        r"^## ((?:Problem|Activity) \d+(?::\s*(.+?))?)(?:\s+(?:<span class=\"badge\"[^<]*</span>|\(\d+\s+pts?\)))?$",
+        r"^## ((?:Problem|Activity) \d+(?::\s*(.+?))?)(?:\s+(?:<span class=\"badge\"[^<]*</span>|\(\d+\s+pts?\)))*$",
         re.M,
     )
 
@@ -1264,8 +1326,27 @@ def convert_points_badges(text: str, use_badges: bool = True) -> str:
             return f"({points} {unit})"
         return f'<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">{points} {unit}</span>'
 
+    def replace_flag_label(match: re.Match[str]) -> str:
+        flag_id, label = match.group(1), match.group(2)
+        if not use_badges:
+            return ""
+        # data-flag carries machine-readable identity for downstream
+        # consumers (e.g. the topic-worksheet builder) without re-parsing
+        # the visible label.
+        return (
+            f'<span class="badge" data-flag="{flag_id}" style="background-color: '
+            f"#9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; "
+            f'font-size: 14px; font-weight: 500; margin-left: 8px;">{label}</span>'
+        )
+
     text = re.sub(r"<!-- POINTS_BADGE:(\d+) -->", replace_point_label, text)
-    point_label_pattern = r"(<span class=\"badge\"[^<]*</span>|\(\d+\s+pts?\))"
+    text = re.sub(r"<!-- FLAG_BADGE:([\w-]+):([^>]*?) -->", replace_flag_label, text)
+    # A "badge run": a points badge (or plain pts) optionally followed by any
+    # number of flag badges. Attached to the heading as one unit.
+    single_badge = r"<span class=\"badge\"[^<]*</span>"
+    point_label_pattern = (
+        rf"((?:{single_badge}|\(\d+\s+pts?\))(?:[ \t]*{single_badge})*)"
+    )
 
     def add_point_label_standalone(match: re.Match[str]) -> str:
         heading = match.group(1)
@@ -2151,7 +2232,8 @@ def extract_source_items(source_tex: str) -> list[AssignmentItem]:
     for index, match in enumerate(matches):
         body_start = match.end()
         body_end = matches[index + 1].start() if index + 1 < len(matches) else len(source_tex)
-        title = normalize_item_title(match.group(1) or "")
+        title_raw, _flags = extract_problem_flags((match.group(1) or "").strip())
+        title = normalize_item_title(title_raw)
         items.append(AssignmentItem(index + 1, title, source_tex[body_start:body_end]))
     return items
 
@@ -2159,7 +2241,7 @@ def extract_source_items(source_tex: str) -> list[AssignmentItem]:
 def extract_generated_items(markdown: str, item_kind: str) -> list[AssignmentItem]:
     items: list[AssignmentItem] = []
     pattern = re.compile(
-        rf"^## {item_kind} (\d+)(?::\s*(.*?))?(?:\s+(?:<span class=\"badge\"[^<]*</span>|\(\d+\s+pts?\)))?$",
+        rf"^## {item_kind} (\d+)(?::\s*(.*?))?(?:\s+(?:<span class=\"badge\"[^<]*</span>|\(\d+\s+pts?\)))*$",
         re.M,
     )
     matches = list(pattern.finditer(markdown))

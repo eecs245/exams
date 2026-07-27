@@ -114,37 +114,20 @@ mjx-container[jax="CHTML"][display="true"] {
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/fa25-final-solutions.pdf" target="_blank">Solutions PDF ✅</a>
 </div>
 
-{: .yellow }
-<div markdown="1">
-**Instructions**
-
--   This exam consists of 13 problems, worth a total of 130 points, spread across 14 pages (7 sheets of paper). **All problems count towards your Final Exam score; certain problems also count towards your Midterm 1 or Midterm 2 redemption scores.**
-
--   You have 120 minutes to complete this exam, unless you have extended-time accommodations through SSD.
-
--   Write your uniqname in the top right corner of every page in the space provided.
-
--   For free response problems, you must show all of your work (unless otherwise specified), and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer. We will not grade work that appears elsewhere, and you may lose points if your work is not shown.
-
--   For multiple choice problems, completely fill in bubbles and square boxes; if we cannot tell which option(s) you selected, you may lose points.
-
-
-
--   You may refer to **3** two-sided handwritten notes sheet. Other than that, you may not refer to any other resources or technology during the exam (no phones, watches, or calculators).
-</div>
+*This page is meant to give you quick access to problems and their solutions. Refer to the original exam PDF, linked above, for test-taking instructions and formatting. Note that we've kept the problem text identical, which is why you may see things like "write your answer in the box below" despite there not being a box on this page.*
 
 ---
 
 ## Problems
 
-- [Problem 1: (10 pts) $\boxed{\text{Counts towards Midterm 1 redemption score}}$](#problem-1-10-pts-boxedtextcounts-towards-midterm-1-redemption-score)
-- [Problem 2: (10 pts) $\boxed{\text{Counts towards Midterm 1 redemption score}}$](#problem-2-10-pts-boxedtextcounts-towards-midterm-1-redemption-score)
-- [Problem 3: (16 pts) $\boxed{\text{Counts towards Midterm 1 redemption score}}$](#problem-3-16-pts-boxedtextcounts-towards-midterm-1-redemption-score)
-- [Problem 4: (8 pts) $\boxed{\text{Counts towards Midterm 2 redemption score}}$](#problem-4-8-pts-boxedtextcounts-towards-midterm-2-redemption-score)
-- [Problem 5: (12 pts) $\boxed{\text{Counts towards Midterm 2 redemption score}}$](#problem-5-12-pts-boxedtextcounts-towards-midterm-2-redemption-score)
-- [Problem 6: (4 pts) $\boxed{\text{Counts towards Midterm 2 redemption score}}$](#problem-6-4-pts-boxedtextcounts-towards-midterm-2-redemption-score)
-- [Problem 7: (6 pts) $\boxed{\text{Counts towards Midterm 2 redemption score}}$](#problem-7-6-pts-boxedtextcounts-towards-midterm-2-redemption-score)
-- [Problem 8: (6 pts) $\boxed{\text{Counts towards Midterm 2 redemption score}}$](#problem-8-6-pts-boxedtextcounts-towards-midterm-2-redemption-score)
+- [Problem 1](#problem-1-10-pts-mt1-redemption)
+- [Problem 2](#problem-2-10-pts-mt1-redemption)
+- [Problem 3](#problem-3-16-pts-mt1-redemption)
+- [Problem 4](#problem-4-8-pts-mt2-redemption)
+- [Problem 5](#problem-5-12-pts-mt2-redemption)
+- [Problem 6](#problem-6-4-pts-mt2-redemption)
+- [Problem 7](#problem-7-6-pts-mt2-redemption)
+- [Problem 8](#problem-8-6-pts-mt2-redemption)
 - [Problem 9](#problem-9-18-pts)
 - [Problem 10](#problem-10-12-pts)
 - [Problem 11](#problem-11-12-pts)
@@ -153,7 +136,7 @@ mjx-container[jax="CHTML"][display="true"] {
 
 ---
 
-## Problem 1: (10 pts) <span class="math-inline">\\(\boxed{\text{Counts towards Midterm 1 redemption score}}\\)</span>
+## Problem 1 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -242,7 +225,7 @@ The minimizer of mean absolute error is the median of the dataset. When the numb
 
 ---
 
-## Problem 2: (10 pts) <span class="math-inline">\\(\boxed{\text{Counts towards Midterm 1 redemption score}}\\)</span>
+## Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
 Let <span class="math-inline">\\(k\\)</span> be a positive integer and let <span class="math-inline">\\(\alpha\\)</span> be a positive real number. Consider the dataset of <span class="math-inline">\\(n = 2k+1\\)</span> points, <span class="math-inline">\\(\underbrace{(-k, -\alpha), (-k+1, 0), (-k+2, 0), \ldots, (-1, 0)}&#95;{k \text{ points}}, (0, 0), \underbrace{(1, 0), \ldots, (k-2, 0), (k-1, 0), (k, \alpha)}&#95;{k \text{ points}}\\)</span>.
 
@@ -336,7 +319,7 @@ Therefore, <span class="math-inline">\\(v = \boxed{2k\alpha}\\)</span>.
 
 ---
 
-## Problem 3: (16 pts) <span class="math-inline">\\(\boxed{\text{Counts towards Midterm 1 redemption score}}\\)</span>
+## Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">16 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
 Consider the vectors <span class="math-inline">\\(\vec u = \begin{bmatrix} 3 \\\\ 3 \\\\ 6 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\vec v = \begin{bmatrix} 1 \\\\ 0 \\\\ c \end{bmatrix}\\)</span>, where <span class="math-inline">\\(c \in \mathbb{R}\\)</span> is some constant.
 
@@ -532,7 +515,7 @@ $$
 
 ---
 
-## Problem 4: (8 pts) <span class="math-inline">\\(\boxed{\text{Counts towards Midterm 2 redemption score}}\\)</span>
+## Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
 Let <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> be as in the previous problem.
 
@@ -591,7 +574,7 @@ For <span class="math-inline">\\(e&#95;1 + e&#95;2 + e&#95;3\\)</span> to always
 
 ---
 
-## Problem 5: (12 pts) <span class="math-inline">\\(\boxed{\text{Counts towards Midterm 2 redemption score}}\\)</span>
+## Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
 Consider the <span class="math-inline">\\(n \times 5\\)</span> matrix <span class="math-inline">\\(A\\)</span>, along with a CR decomposition of it, given below.
 
@@ -751,7 +734,7 @@ $$
 
 ---
 
-## Problem 6: (4 pts) <span class="math-inline">\\(\boxed{\text{Counts towards Midterm 2 redemption score}}\\)</span>
+## Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
 Suppose <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both (not necessarily symmetric!) <span class="math-inline">\\(n \times n\\)</span> matrices. Which of the following is <span class="math-inline">\\(\nabla f(\vec x)\\)</span>, the gradient of
 
@@ -795,7 +778,7 @@ $$
 
 ---
 
-## Problem 7: (6 pts) <span class="math-inline">\\(\boxed{\text{Counts towards Midterm 2 redemption score}}\\)</span>
+## Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
 Consider the function <span class="math-inline">\\(f: \mathbb{R} \to \mathbb{R}\\)</span> graphed below.
 
@@ -870,7 +853,7 @@ Therefore, the correct choice is <span class="math-inline">\\(\boxed{1.6}\\)</sp
 
 ---
 
-## Problem 8: (6 pts) <span class="math-inline">\\(\boxed{\text{Counts towards Midterm 2 redemption score}}\\)</span>
+## Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
 Suppose we fit a multiple linear regression model **with** an intercept term that predicts the `height` of a wolverine given its `weight` and `color`. The model is fit by minimizing mean squared error.
 

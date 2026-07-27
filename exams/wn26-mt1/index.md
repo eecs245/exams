@@ -114,24 +114,7 @@ mjx-container[jax="CHTML"][display="true"] {
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/wn26-mt1-solutions.pdf" target="_blank">Solutions PDF ✅</a>
 </div>
 
-{: .yellow }
-<div markdown="1">
-**Instructions**
-
--   This exam consists of 7 problems, worth a total of 100 points, spread across 12 pages (6 sheets of paper).
-
--   You have 120 minutes to complete this exam, unless you have extended-time accommodations through SSD.
-
--   Write your uniqname in the top right corner of each page.
-
--   For free response problems, **you must show all of your work**, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer. We will not grade work that appears elsewhere, and you may lose points if your work is not shown.
-
--   For multiple choice problems, completely fill in bubbles and square boxes; if we cannot tell which option(s) you selected, you may lose points.
-
-
-
--   You may refer to **one double-sided 8.5x11" handwritten notes sheet**. Other than that, you may not refer to any other resources or technology during the exam (no phones, watches, or calculators).
-</div>
+*This page is meant to give you quick access to problems and their solutions. Refer to the original exam PDF, linked above, for test-taking instructions and formatting. Note that we've kept the problem text identical, which is why you may see things like "write your answer in the box below" despite there not being a box on this page.*
 
 ---
 
