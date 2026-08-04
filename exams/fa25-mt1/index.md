@@ -107,6 +107,25 @@ mjx-container[jax="CHTML"][display="true"] {
 }
 </style>
 
+<style>
+#main-header,
+.site-header,
+.aux-nav,
+.main-header,
+.side-bar {
+  display: none !important;
+}
+body { padding-top: 0 !important; }
+.main-content-wrap { margin-top: 0 !important; }
+.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
+.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
+.exam-breadcrumb a:hover { text-decoration: underline; }
+.exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
+</style>
+<nav class="exam-breadcrumb" aria-label="Breadcrumb">
+<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+</nav>
+
 # Fall 2025 Midterm 1
 
 **administered** by 3:50PM on Friday, September 27th, 2025
@@ -114,6 +133,7 @@ mjx-container[jax="CHTML"][display="true"] {
 <div class="assignment-actions">
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/fa25-mt1.pdf" target="_blank">View as PDF ✏️</a>
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/fa25-mt1-solutions.pdf" target="_blank">Solutions PDF ✅</a>
+<a class="btn btn-info assignment-pdf-button" href="https://www.youtube.com/playlist?list=PLEFTQpsm47qRjWWjsENcWsxgtgJ2bJAl4" target="_blank">Video Walkthroughs 🎥</a>
 </div>
 
 *This page is meant to give you quick access to problems and their solutions. Refer to the original exam PDF, linked above, for test-taking instructions and formatting. Note that we've kept the problem text identical, which is why you may see things like "write your answer in the box below" despite there not being a box on this page.*
@@ -239,6 +259,10 @@ As usual, let <span class="math-inline">\\(R&#95;\text{abs}(w)\\)</span> represe
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Is the value of <span class="math-inline">\\(w^{\ast}\\)</span>, the minimizer of <span class="math-inline">\\(R&#95;\text{abs}(w)\\)</span>, unique? Select and fill out one option below.
+
+<span class="mc-bubble" aria-hidden="true"></span> The value of <span class="math-inline">\\(w^{\ast}\\)</span> is unique, and is equal to \_\_\_\_\_\_.
+
+<span class="mc-bubble" aria-hidden="true"></span> The value of <span class="math-inline">\\(w^{\ast}\\)</span> is not unique; any value between \_\_\_\_\_\_ and \_\_\_\_\_\_ is a minimizer.
 
 </div>
 </div>
@@ -380,7 +404,7 @@ $$
 
 What is the value of <span class="math-inline">\\(h(15)\\)</span>? Your answer should be a number with no variables.
 
-<span class="math-inline">\\(h(15) =\\)</span>
+<span class="math-inline">\\(h(15) =\\)</span> \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -499,7 +523,7 @@ $$
 For each statement below, determine whether it is impossible, possible, or guaranteed to be true, given the above assumptions. **Select exactly one option from each row**. The first statement has been done for you as an example.
 
 |  | **statement** | **impossible?** | **possible?** | **guaranteed?** |
-|:--:|:---|:--:|:--:|:--:|
+|:-------:|:------------------------------------------------------------------------------|:---------------:|:-------------:|:---------------:|
 | <span class="math-inline">\\(i\\)</span> | <span class="math-inline">\\(\lVert \vec u \rVert = 5\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
 | <span class="math-inline">\\(ii\\)</span> | <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> are orthogonal | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
 | <span class="math-inline">\\(iii\\)</span> | <span class="math-inline">\\(\lVert \vec u - \vec v \rVert = 0\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
@@ -740,7 +764,7 @@ This equation has three solutions for <span class="math-inline">\\(c\\)</span>: 
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Provide one **other** value of <span class="math-inline">\\(c\\)</span> (that is, not your answer from the previous part) such that <span class="math-inline">\\(\vec x\\)</span>, <span class="math-inline">\\(\vec y\\)</span>, and <span class="math-inline">\\(\vec z\\)</span> are linearly **dependent**. Your answer should be a number with no variables.
 
-other value of <span class="math-inline">\\(c =\\)</span>
+other value of <span class="math-inline">\\(c =\\)</span> \_\_\_\_\_\_
 
 </div>
 </div>
@@ -769,7 +793,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Let <span class="math-inline">\\(r\\)</span> be the dimension of the subspace of <span class="math-inline">\\(\mathbb{R}^{7}\\)</span> spanned by <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \ldots \vec x&#95;{12}\\)</span>. What are the smallest and largest possible values of <span class="math-inline">\\(r\\)</span>? Your answers should be integers with no variables.
 
-smallest possible value of <span class="math-inline">\\(r =\\)</span> largest possible value of <span class="math-inline">\\(r =\\)</span>
+smallest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_\_ largest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_\_
 
 </div>
 </div>
@@ -888,9 +912,5 @@ $$
 
 This means that for any positive values of <span class="math-inline">\\(a, b, c, d, e\\)</span>, it's impossible for <span class="math-inline">\\((a + b + c + d + e) \left( \frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d} + \frac{1}{e} \right)\\)</span> to be less than 25. Finding a value equal to 25 is doable if we set <span class="math-inline">\\(a = b = c = d = e = 1\\)</span>. So, <span class="math-inline">\\(T = 25\\)</span> is the largest possible value of <span class="math-inline">\\(T\\)</span> that guarantees the inequality holds.
 </details>
-
-(1 pt) Congrats on finishing Midterm 1! Here's a free point.
-
-Feel free to draw us a picture about EECS 245 in the box below.
 
 {% endraw %}

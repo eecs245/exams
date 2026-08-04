@@ -107,6 +107,25 @@ mjx-container[jax="CHTML"][display="true"] {
 }
 </style>
 
+<style>
+#main-header,
+.site-header,
+.aux-nav,
+.main-header,
+.side-bar {
+  display: none !important;
+}
+body { padding-top: 0 !important; }
+.main-content-wrap { margin-top: 0 !important; }
+.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
+.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
+.exam-breadcrumb a:hover { text-decoration: underline; }
+.exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
+</style>
+<nav class="exam-breadcrumb" aria-label="Breadcrumb">
+<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+</nav>
+
 # Winter 2026 Final Exam
 
 <div class="assignment-actions">
@@ -283,7 +302,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> What is <span class="math-inline">\\(\bar x\\)</span>, the mean of the <span class="math-inline">\\(x\\)</span>-values? Give your answer as a number with no variables.
 
-<span class="math-inline">\\(\bar x = \boxed{\textbf{4}}\\)</span>
+<span class="math-inline">\\(\bar x = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -319,7 +338,7 @@ Let <span class="math-inline">\\(g(t&#95;i) = \beta&#95;0^{\ast} + \beta&#95;1^{
 
 <div class="math-display">
 $$
-\beta_0^* = \boxed{\textbf{19}}
+\beta_0^* = \_\_\_\_\_\_
 $$
 </div>
 
@@ -481,7 +500,7 @@ There are infinitely many possible vectors <span class="math-inline">\\(\vec b\\
 
 <div class="math-display">
 $$
-\text{\text{one possible }\vec b\text{}} = \boxed{\textbf{}}
+\text{\text{one possible }\vec b\text{}} = \_\_\_\_\_\_
 $$
 </div>
 
@@ -619,7 +638,7 @@ $$
 
 Find <span class="math-inline">\\(\dim(S)\\)</span>. Give your answer as an integer with no variables.
 
-<span class="math-inline">\\(\dim(S)=\boxed{\textbf{4}}\\)</span>
+<span class="math-inline">\\(\dim(S)=\&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -694,7 +713,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find <span class="math-inline">\\(\text{rank}(A)\\)</span> and <span class="math-inline">\\(\dim(\text{nullsp}(A^T))\\)</span>. Give your answers as integers with no variables.
 
-<span class="math-inline">\\(\text{rank}(A) = \boxed{\textbf{2}}  \dim(\text{nullsp}(A^T)) = \boxed{\textbf{4}}\\)</span>
+<span class="math-inline">\\(\text{rank}(A) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \dim(\text{nullsp}(A^T)) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -929,7 +948,7 @@ Lastly, suppose <span class="math-inline">\\(\vec y \in \mathbb{R}^n\\)</span> a
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Let <span class="math-inline">\\(\vec p\\)</span> be the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>. Write <span class="math-inline">\\(\vec p\\)</span> as a linear combination of the columns of <span class="math-inline">\\(X\\)</span>. Fill in each box with a number with no variables. If there are multiple correct answers, you only need to provide one.
 
-<span class="math-inline">\\(\vec p = \boxed{\textbf{-1}}  \vec x^{(1)} + \boxed{\textbf{10}}  \vec x^{(2)} + \boxed{\textbf{0}}  \vec x^{(3)}\\)</span>
+<span class="math-inline">\\(\vec p = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec x^{(1)} + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec x^{(2)} + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec x^{(3)}\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -997,7 +1016,7 @@ $$
 
  Fill in the blanks to describe the set of all possible values of <span class="math-inline">\\(\vec w^{\ast}\\)</span>. Each blank should contain a vector with no variables.
 
-<span class="math-inline">\\(\text{set of all possible } \vec w^{\ast} = \left\lbrace \boxed{\textbf{\begin{bmatrix}-1\\\\10\\\\0\end{bmatrix}}} + t  \boxed{\textbf{\begin{bmatrix}-1\\\\1\\\\1\end{bmatrix}}} : t \in \mathbb{R} \right\rbrace\\)</span>.
+<span class="math-inline">\\(\text{set of all possible } \vec w^{\ast} = \left\lbrace \&#95;\&#95;\&#95;\&#95;\&#95;\&#95; + t  \&#95;\&#95;\&#95;\&#95;\&#95;\&#95; : t \in \mathbb{R} \right\rbrace\\)</span>.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1189,7 +1208,7 @@ Find <span class="math-inline">\\(\nabla g(\vec x^{(0)})\\)</span>, the gradient
 
 <div class="math-display">
 $$
-\nabla g(\vec x^{(0)}) = \boxed{\textbf{}}
+\nabla g(\vec x^{(0)}) = \_\_\_\_\_\_
 $$
 </div>
 
@@ -1396,7 +1415,7 @@ Consider the matrix <span class="math-inline">\\(A = \begin{bmatrix} 2 &amp; 3 \
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose <span class="math-inline">\\(\lambda&#95;1 = 0\\)</span> is an eigenvalue of <span class="math-inline">\\(A\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span>. Give your answer as a number with no variables.
 
-<span class="math-inline">\\(k = \boxed{\textbf{-6}}\\)</span>
+<span class="math-inline">\\(k = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1428,7 +1447,7 @@ $$
 
 <div class="math-display">
 $$
-k = \boxed{\textbf{9}}
+k = \_\_\_\_\_\_
 $$
 </div>
 
@@ -1472,7 +1491,7 @@ $$
 
 <div class="math-display">
 $$
-\lambda_2 = \boxed{\textbf{14}}
+\lambda_2 = \_\_\_\_\_\_
 $$
 </div>
 
@@ -1531,7 +1550,7 @@ The state diagram below describes a Markov chain with four states.
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find the adjacency matrix <span class="math-inline">\\(A\\)</span> for this Markov chain.
 
-<span class="math-inline">\\(A =\\)</span>
+<span class="math-inline">\\(A =\\)</span> \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1560,7 +1579,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose the chain starts in **state <span class="math-inline">\\(\mathbf{1}\\)</span>**. Fill each box with the **long-run fraction** of time spent in each state. Your answers should be numbers with no variables, and should sum to <span class="math-inline">\\(1\\)</span>.
 
-State 1: State 2: State 3: State 4:
+State 1: \_\_\_\_\_\_ State 2: \_\_\_\_\_\_ State 3: \_\_\_\_\_\_ State 4: \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1683,7 +1702,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Write <span class="math-inline">\\(S^2 \vec x\\)</span> as a linear combination of <span class="math-inline">\\(\vec v&#95;1\\)</span>, <span class="math-inline">\\(\vec v&#95;2\\)</span>, and <span class="math-inline">\\(\vec v&#95;3\\)</span>. Fill in each box with a number with no variables.
 
-<span class="math-inline">\\(S^2 \vec x = \boxed{\textbf{75}}  \vec v&#95;1 + \boxed{\textbf{-16}}  \vec v&#95;2 + \boxed{\textbf{1}}  \vec v&#95;3\\)</span>
+<span class="math-inline">\\(S^2 \vec x = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec v&#95;1 + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec v&#95;2 + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec v&#95;3\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1797,7 +1816,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> What is <span class="math-inline">\\(\vec v&#95;1\\)</span>? Give your answer as a vector with no variables. If there are multiple correct answers, you only need to provide one.
 
-<span class="math-inline">\\(\vec v&#95;1 = \boxed{\textbf{\frac{1}{\sqrt 5}\begin{bmatrix}1\\\\2\end{bmatrix}}}\\)</span>
+<span class="math-inline">\\(\vec v&#95;1 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1848,7 +1867,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose the variance of the **second** principal component is <span class="math-inline">\\(1/15\\)</span>. What is <span class="math-inline">\\(n\\)</span>, the number of rows in <span class="math-inline">\\(\tilde X\\)</span>? Give your answer as a number with no variables.
 
-<span class="math-inline">\\(n = \boxed{\textbf{30}}\\)</span>
+<span class="math-inline">\\(n = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1936,11 +1955,5 @@ What is one topic you studied a lot for that wasn't on the Final Exam? **Blank a
 
 One topic that didn't appear was convexity --- there was originally going to be a question about convexity but we cut it to prevent the exam from being too long.
 </details>
-
-Congrats on completing the Final Exam for EECS 245! We'll really miss you; please stay in touch.
-
-Feel free to draw us a picture about EECS 245 in the box below.
-
-Did you notice any violations of the Honor Code during the exam? If so, share details with us here. We will keep your identity anonymous when investigating any cases.
 
 {% endraw %}

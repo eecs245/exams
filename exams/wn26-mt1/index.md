@@ -107,11 +107,31 @@ mjx-container[jax="CHTML"][display="true"] {
 }
 </style>
 
+<style>
+#main-header,
+.site-header,
+.aux-nav,
+.main-header,
+.side-bar {
+  display: none !important;
+}
+body { padding-top: 0 !important; }
+.main-content-wrap { margin-top: 0 !important; }
+.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
+.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
+.exam-breadcrumb a:hover { text-decoration: underline; }
+.exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
+</style>
+<nav class="exam-breadcrumb" aria-label="Breadcrumb">
+<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+</nav>
+
 # Winter 2026 Midterm 1
 
 <div class="assignment-actions">
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/wn26-mt1.pdf" target="_blank">View as PDF ✏️</a>
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/wn26-mt1-solutions.pdf" target="_blank">Solutions PDF ✅</a>
+<a class="btn btn-info assignment-pdf-button" href="https://www.youtube.com/playlist?list=PLEFTQpsm47qQWmh2Js1moAv8MqQCMEjWx" target="_blank">Video Walkthroughs 🎥</a>
 </div>
 
 *This page is meant to give you quick access to problems and their solutions. Refer to the original exam PDF, linked above, for test-taking instructions and formatting. Note that we've kept the problem text identical, which is why you may see things like "write your answer in the box below" despite there not being a box on this page.*
@@ -778,7 +798,7 @@ So, we know that <span class="math-inline">\\(\frac{\left| \vec u \cdot \vec v \
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> For each pair of vectors, determine whether they are orthogonal, linearly dependent, or neither. Make sure to select **one bubble per row**.
 
 |  | pair of vectors | orthogonal | linearly dependent | neither |
-|:--:|:---|:--:|:--:|:--:|
+|:-------:|:-------------------------------|:----------:|:------------------:|:----------:|
 | <span class="math-inline">\\(i\\)</span> | <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec u - \vec p\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
 | <span class="math-inline">\\(ii\\)</span> | <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v - \vec p\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
 | <span class="math-inline">\\(iii\\)</span> | <span class="math-inline">\\(\vec v\\)</span> and <span class="math-inline">\\(\vec u - \vec p\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
@@ -904,7 +924,7 @@ $$
 
 State **one** other linear combination of <span class="math-inline">\\(\vec x&#95;1, \ldots, \vec x&#95;6\\)</span> that is equal to <span class="math-inline">\\(\vec b\\)</span>. Fill in each box with a number with no variables.
 
-<span class="math-inline">\\(\vec b = \boxed{\textbf{7/2}}  \vec x&#95;1 + \boxed{\textbf{-1}}  \vec x&#95;2 + \boxed{\textbf{9/2}}  \vec x&#95;3 + \boxed{\textbf{0}}  \vec x&#95;4 + \boxed{\textbf{-1/2}}  \vec x&#95;5 + \boxed{\textbf{0}}  \vec x&#95;6\\)</span>
+<span class="math-inline">\\(\vec b = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec x&#95;1 + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec x&#95;2 + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec x&#95;3 + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec x&#95;4 + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec x&#95;5 + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec x&#95;6\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -981,7 +1001,7 @@ $$
 
 What are the smallest and largest possible values of <span class="math-inline">\\(\text{dim}(W)\\)</span>, the dimension of <span class="math-inline">\\(W\\)</span>? Give your answers as integers.
 
-<span class="math-inline">\\(=\\)</span> <span class="math-inline">\\(=\\)</span>
+<span class="math-inline">\\(=\\)</span> \_\_\_\_\_\_ <span class="math-inline">\\(=\\)</span> \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1245,10 +1265,6 @@ $$
 
 Notice how this relates to parts **a)** and **b)** --- those could have been solved the same way, if you wrote <span class="math-inline">\\(\sqrt{x}\\)</span> as <span class="math-inline">\\(x^{1/2}\\)</span>.
 </details>
-
-Congrats on finishing Midterm 1!
-
-Feel free to draw us a picture about EECS 245 in the box below (or use it for scratch work).
 </div>
 </div>
 

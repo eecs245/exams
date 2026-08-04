@@ -107,6 +107,25 @@ mjx-container[jax="CHTML"][display="true"] {
 }
 </style>
 
+<style>
+#main-header,
+.site-header,
+.aux-nav,
+.main-header,
+.side-bar {
+  display: none !important;
+}
+body { padding-top: 0 !important; }
+.main-content-wrap { margin-top: 0 !important; }
+.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
+.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
+.exam-breadcrumb a:hover { text-decoration: underline; }
+.exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
+</style>
+<nav class="exam-breadcrumb" aria-label="Breadcrumb">
+<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+</nav>
+
 # Spring 2026 Midterm 1
 
 <div class="assignment-actions">
@@ -148,7 +167,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> First, suppose we find the optimal parameter by minimizing mean squared error, <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span>. Which value of <span class="math-inline">\\(w\\)</span> minimizes <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span>? Give your answer as a number with no variables.
 
-<span class="math-inline">\\(\text{minimizer of } R&#95;\text{sq}(w) = \boxed{\textbf{13/2 = 6.5}}\\)</span>
+<span class="math-inline">\\(\text{minimizer of } R&#95;\text{sq}(w) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -182,7 +201,7 @@ Let <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span> be the average c
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> State one value of <span class="math-inline">\\(w\\)</span> where the derivative of <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span> is not defined.
 
-<span class="math-inline">\\(\text{one value of } w \text{ where the derivative of } R&#95;\text{clip}(w) \text{ is not defined} =\\)</span>
+<span class="math-inline">\\(\text{one value of } w \text{ where the derivative of } R&#95;\text{clip}(w) \text{ is not defined} =\\)</span> \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -211,7 +230,7 @@ For context, here's what average clipped loss looks like for this dataset:
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose we restrict <span class="math-inline">\\(w\\)</span> to the interval <span class="math-inline">\\(1 \leq w \leq 3\\)</span>. Among all values of <span class="math-inline">\\(w\\)</span> in this interval, which value minimizes <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span>? Give your answer as a number with no variables.
 
-<span class="math-inline">\\(\text{minimizer of } R&#95;\text{clip}(w) \text{ within the interval } [1, 3] = \boxed{\textbf{2}}\\)</span>
+<span class="math-inline">\\(\text{minimizer of } R&#95;\text{clip}(w) \text{ within the interval } [1, 3] = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -250,7 +269,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Now suppose there are no restrictions on <span class="math-inline">\\(w\\)</span>. Among all possible values of <span class="math-inline">\\(w\\)</span>, which value minimizes <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span>? Give your answer as a number with no variables.
 
-<span class="math-inline">\\(\text{minimizer of } R&#95;\text{clip}(w) = \boxed{\textbf{2}}\\)</span>
+<span class="math-inline">\\(\text{minimizer of } R&#95;\text{clip}(w) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -343,7 +362,7 @@ $$
 
 <div class="math-display">
 $$
-\text{minimizer of } R_\text{WA}(w) = \boxed{\textbf{3}}
+\text{minimizer of } R_\text{WA}(w) = \_\_\_\_\_\_
 $$
 </div>
 
@@ -364,7 +383,7 @@ This dataset has an even number of values, so any <span class="math-inline">\\(w
 
 <div class="math-display">
 $$
-\text{minimizer of } R_\text{WA}(w) = \boxed{\textbf{4}}
+\text{minimizer of } R_\text{WA}(w) = \_\_\_\_\_\_
 $$
 </div>
 
@@ -406,7 +425,7 @@ Suppose we fit a simple linear regression model **with** an intercept term, <spa
 
 <div class="math-display">
 $$
-\text{\text{}\bar x\text{}} = \boxed{\textbf{-8}}
+\text{\text{}\bar x\text{}} = \_\_\_\_\_\_
 $$
 </div>
 
@@ -614,7 +633,7 @@ Find <span class="math-inline">\\(\lVert \vec u \rVert^2\\)</span> (**not** <spa
 
 <div class="math-display">
 $$
-\text{\text{}\lVert \vec u \rVert^2\text{}} = \boxed{\textbf{43}}
+\text{\text{}\lVert \vec u \rVert^2\text{}} = \_\_\_\_\_\_
 $$
 </div>
 
@@ -676,7 +695,7 @@ $$
 
 <div class="math-display">
 $$
-\text{minimizer of } f(k) = \boxed{\textbf{1/2}}
+\text{minimizer of } f(k) = \_\_\_\_\_\_
 $$
 </div>
 
@@ -887,7 +906,7 @@ $$
 
 For all values of <span class="math-inline">\\(c\\)</span>, <span class="math-inline">\\(\text{span}(\lbrace\vec u,\vec v\rbrace)\\)</span> is a \_\_(i)\_\_-dimensional subspace of \_\_(ii)\_\_.
 
-(i): (ii):
+(i): \_\_\_\_\_\_ (ii): \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -914,7 +933,7 @@ $$
 
 <div class="math-display">
 $$
-c = \boxed{\textbf{3}}
+c = \_\_\_\_\_\_
 $$
 </div>
 
@@ -1027,7 +1046,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> What is the dimension of <span class="math-inline">\\(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)\\)</span>? Give your answer as a number with no variables.
 
-<span class="math-inline">\\(\dim(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)) = \boxed{\textbf{3}}\\)</span>
+<span class="math-inline">\\(\dim(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1207,8 +1226,6 @@ $$
 
  which is the second option.
 </details>
-
-Congrats on finishing Midterm 1! Feel free to draw us a picture about EECS 245 in the box below.
 </div>
 </div>
 

@@ -107,6 +107,25 @@ mjx-container[jax="CHTML"][display="true"] {
 }
 </style>
 
+<style>
+#main-header,
+.site-header,
+.aux-nav,
+.main-header,
+.side-bar {
+  display: none !important;
+}
+body { padding-top: 0 !important; }
+.main-content-wrap { margin-top: 0 !important; }
+.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
+.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
+.exam-breadcrumb a:hover { text-decoration: underline; }
+.exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
+</style>
+<nav class="exam-breadcrumb" aria-label="Breadcrumb">
+<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+</nav>
+
 # Spring 2026 Midterm 2
 
 <div class="assignment-actions">
@@ -155,7 +174,7 @@ In each part, you are provided with information about <span class="math-inline">
 
 <div class="math-display">
 $$
-k = \boxed{\textbf{12}}
+k = \_\_\_\_\_\_
 $$
 </div>
 
@@ -196,7 +215,7 @@ $$
 
 <div class="math-display">
 $$
-k = \boxed{\textbf{-2}}
+k = \_\_\_\_\_\_
 $$
 </div>
 
@@ -233,7 +252,7 @@ $$
 
 <div class="math-display">
 $$
-k = \boxed{\textbf{2}}
+k = \_\_\_\_\_\_
 $$
 </div>
 
@@ -309,7 +328,7 @@ In other words, <span class="math-inline">\\(\text{nullsp}(A) = \left\lbrace \be
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Determine the following values. Give your answers as integers with no variables.
 
-<span class="math-inline">\\(\text{rank}(A) =\\)</span> <span class="math-inline">\\(\text{dim}(\text{nullsp}(A)) =\\)</span>
+<span class="math-inline">\\(\text{rank}(A) =\\)</span> \_\_\_\_\_\_ <span class="math-inline">\\(\text{dim}(\text{nullsp}(A)) =\\)</span> \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -343,7 +362,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> State one basis for <span class="math-inline">\\(\text{nullsp}(A)\\)</span>. Your answer should be a list of vectors with no variables.
 
-<span class="math-inline">\\(\text{one basis for }\text{nullsp}(A) =\\)</span>
+<span class="math-inline">\\(\text{one basis for }\text{nullsp}(A) =\\)</span> \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -375,7 +394,7 @@ though there are infinitely many possible answers.
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> State one basis for <span class="math-inline">\\(\text{colsp}(A^T)\\)</span>, the row space of <span class="math-inline">\\(A\\)</span>. Your answer should be a list of vectors with no variables.
 
-<span class="math-inline">\\(\text{one basis for }\text{colsp}(A^T) =\\)</span>
+<span class="math-inline">\\(\text{one basis for }\text{colsp}(A^T) =\\)</span> \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -631,7 +650,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in each blank with an integer with no variables.
 
-X has rows, columns, and <span class="math-inline">\\(\text{rank}(X) =\\)</span> .
+X has \_\_\_\_\_\_ rows, \_\_\_\_\_\_ columns, and <span class="math-inline">\\(\text{rank}(X) =\\)</span> \_\_\_\_\_\_.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -753,7 +772,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> **In parts a) and b) only**, suppose the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> is <span class="math-inline">\\(\vec p = \begin{bmatrix} 3 \\\\ 3 \\\\ 3 \\\\ 3 \\\\ 3 \end{bmatrix}\\)</span>. There are infinitely many such vectors <span class="math-inline">\\(\vec y\\)</span>. State one possible vector <span class="math-inline">\\(\vec y\\)</span> **whose five components are all different**. Give your answer as a vector with no variables.
 
-one possible vector <span class="math-inline">\\(\vec y =\\)</span>
+one possible vector <span class="math-inline">\\(\vec y =\\)</span> \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1057,7 +1076,7 @@ $$
 
 <div class="math-display">
 $$
-\nabla f(\vec x) = \boxed{\textbf{\displaystyle \frac{A^TA\vec x}{\left\|A\vec x\right\|}}}
+\nabla f(\vec x) = \_\_\_\_\_\_
 $$
 </div>
 
@@ -1143,7 +1162,7 @@ $$
 
 <div class="math-display">
 $$
-\alpha = \boxed{\textbf{1/5}}
+\alpha = \_\_\_\_\_\_
 $$
 </div>
 
@@ -1196,7 +1215,7 @@ $$
 
 <div class="math-display">
 $$
-d = \boxed{\textbf{-1}}
+d = \_\_\_\_\_\_
 $$
 </div>
 
@@ -1266,12 +1285,6 @@ $$
 
  This function does not have a minimum, because we can make <span class="math-inline">\\(f(\vec x)\\)</span> arbitrarily negative by making <span class="math-inline">\\(|x&#95;2|\\)</span> arbitrarily large. So, in this problem, gradient descent cannot converge to a minimum.
 </details>
-
-This page has been intentionally left blank. Feel free to use it for scratch work.
-
-Congrats on finishing Midterm 2!
-
-Feel free to draw us a picture about EECS 245 in the box below.
 </div>
 </div>
 

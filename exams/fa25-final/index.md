@@ -107,11 +107,31 @@ mjx-container[jax="CHTML"][display="true"] {
 }
 </style>
 
+<style>
+#main-header,
+.site-header,
+.aux-nav,
+.main-header,
+.side-bar {
+  display: none !important;
+}
+body { padding-top: 0 !important; }
+.main-content-wrap { margin-top: 0 !important; }
+.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
+.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
+.exam-breadcrumb a:hover { text-decoration: underline; }
+.exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
+</style>
+<nav class="exam-breadcrumb" aria-label="Breadcrumb">
+<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+</nav>
+
 # Fall 2025 Final Exam
 
 <div class="assignment-actions">
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/fa25-final.pdf" target="_blank">View as PDF ✏️</a>
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/fa25-final-solutions.pdf" target="_blank">Solutions PDF ✅</a>
+<a class="btn btn-info assignment-pdf-button" href="https://www.youtube.com/playlist?list=PLEFTQpsm47qS-QgZ2hY-FJkqClfbGu7ds" target="_blank">Video Walkthroughs 🎥</a>
 </div>
 
 *This page is meant to give you quick access to problems and their solutions. Refer to the original exam PDF, linked above, for test-taking instructions and formatting. Note that we've kept the problem text identical, which is why you may see things like "write your answer in the box below" despite there not being a box on this page.*
@@ -211,7 +231,7 @@ $$
 
 Consider the dataset of 4 values, <span class="math-inline">\\(1, 3, 5, 9\\)</span>. Among all integers **not in this dataset**, which **integer** minimizes <span class="math-inline">\\(R&#95;{\text{abs}}(w)\\)</span> for this dataset?
 
-<span class="math-inline">\\(\text{minimizer} = \boxed{\textbf{4}}\\)</span>
+<span class="math-inline">\\(\text{minimizer} = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -241,7 +261,7 @@ Note that the <span class="math-inline">\\(x\\)</span>-values are equally spaced
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find <span class="math-inline">\\(\bar{x}\\)</span> and <span class="math-inline">\\(\bar{y}\\)</span>, the means of the <span class="math-inline">\\(x\\)</span>- and <span class="math-inline">\\(y\\)</span>-values, respectively. Give your answers as expressions involving <span class="math-inline">\\(k\\)</span>, <span class="math-inline">\\(\alpha\\)</span>, and/or other constants.
 
-<span class="math-inline">\\(\bar{x} = \boxed{\textbf{0}}, \qquad \bar{y} = \boxed{\textbf{0}}\\)</span>
+<span class="math-inline">\\(\bar{x} = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \bar{y} = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -331,19 +351,7 @@ In parts **a)** and **b)**, if there are multiple possible values of <span class
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> are orthogonal. Find <span class="math-inline">\\(c\\)</span>. Give your answer as a number with no variables.
 
-$c = \boxed{\textbf{
-
-<div class="math-display">
-
-<div class="math-display">
-$$
--1/2
-$$
-</div>
-
-</div>
-
-}}$
+<span class="math-inline">\\(c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -389,19 +397,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose <span class="math-inline">\\(\lVert \vec v \rVert = 4\\)</span>. Find <span class="math-inline">\\(c\\)</span>. Give your answer as a number with no variables.
 
-$c = \boxed{\textbf{
-
-<div class="math-display">
-
-<div class="math-display">
-$$
-\sqrt{15}
-$$
-</div>
-
-</div>
-
-}}$
+<span class="math-inline">\\(c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -599,7 +595,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Find <span class="math-inline">\\(\text{rank}(A)\\)</span>. Give your answer as an integer with no variables.
 
-<span class="math-inline">\\(\text{rank}(A) = \boxed{\textbf{2}}\\)</span>
+<span class="math-inline">\\(\text{rank}(A) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -621,7 +617,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span>. Give your answers as numbers with no variables.
 
-<span class="math-inline">\\(a = \boxed{\textbf{1/2}}, \qquad b = \boxed{\textbf{1/2}}\\)</span>
+<span class="math-inline">\\(a = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad b = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -672,7 +668,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> State **one** vector in <span class="math-inline">\\(\text{nullsp}(A)\\)</span>. Give your answer as a vector with no variables. <em>Hint: It is possible to find a vector in <span class="math-inline">\\(\text{nullsp}(A)\\)</span> without using your answer from part <strong>b)</strong>. Try not to rely heavily on your answer from part <strong>b)</strong> in case it's incorrect.</em>
 
-<span class="math-inline">\\(\text{One vector in } \text{nullsp}(A) \text{ is:   } \boxed{\textbf{\begin{bmatrix} 1 \\\\ -2 \\\\ 1 \\\\ 0 \\\\ 0 \end{bmatrix}}}\\)</span>
+<span class="math-inline">\\(\text{One vector in } \text{nullsp}(A) \text{ is:   } \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -709,7 +705,7 @@ tells us that <span class="math-inline">\\(\begin{bmatrix} 1/2 \\\\ 0 \\\\ -1 \\
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in the blanks: <span class="math-inline">\\(\text{nullsp}(A^T)\\)</span> is a \_\_(i)\_\_-dimensional subspace of \_\_(ii)\_\_.
 
 | <span class="math-inline">\\(i\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(n-2\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(n-1\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(n\\)</span> |
-|:---|:---|:---|:---|:---|:---|:---|:---|
+|:-------|:--------------------------|:--------------------------|:--------------------------|:--------------------------|:------------------------------|:------------------------------|:--------------------------|
 | <span class="math-inline">\\(ii\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^2\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^3\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^4\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^5\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^{n-2}\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^{n-1}\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\mathbb{R}^n\\)</span> |
 
 <details markdown="1"><summary>Solution</summary>
@@ -865,7 +861,7 @@ Suppose we fit a multiple linear regression model **with** an intercept term tha
 
 How many unique `color`s are there? Give your answer as an integer with no variables.
 
-There are <span class="math-inline">\\(\boxed{\textbf{4}}\\)</span> unique `color`s.
+There are <span class="math-inline">\\(\&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span> unique `color`s.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -954,7 +950,7 @@ If <span class="math-inline">\\(A\\)</span> only has one unique eigenvalue, put 
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span>
 <span class="math-inline">\\(A\\)</span> is **not** invertible.
 
-<span class="math-inline">\\(c = \boxed{\textbf{12}}, \qquad \lambda&#95;1 = \boxed{\textbf{8}}, \qquad \lambda&#95;2 = \boxed{\textbf{0}}\\)</span>
+<span class="math-inline">\\(c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \lambda&#95;1 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \lambda&#95;2 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1001,7 +997,7 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span>
 <span class="math-inline">\\(A\\)</span>'s characteristic polynomial is <span class="math-inline">\\(p(\lambda) = \lambda^2 - 8\lambda + 7\\)</span>.
 
-<span class="math-inline">\\(c = \boxed{\textbf{5}}, \qquad \lambda&#95;1 = \boxed{\textbf{7}}, \qquad \lambda&#95;2 = \boxed{\textbf{1}}\\)</span>
+<span class="math-inline">\\(c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \lambda&#95;1 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \lambda&#95;2 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1056,7 +1052,7 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span>
 <span class="math-inline">\\(A\\)</span> is **not** diagonalizable.
 
-<span class="math-inline">\\(c = \boxed{\textbf{-4}}, \qquad \lambda&#95;1 = \boxed{\textbf{4}}, \qquad \lambda&#95;2 = \boxed{\textbf{4}}\\)</span>
+<span class="math-inline">\\(c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \lambda&#95;1 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \lambda&#95;2 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1114,7 +1110,7 @@ Consider the adjacency matrix <span class="math-inline">\\(A = \begin{bmatrix} 0
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find <span class="math-inline">\\(a\\)</span>, <span class="math-inline">\\(b\\)</span>, and <span class="math-inline">\\(c\\)</span> such that <span class="math-inline">\\(A\\)</span> is a valid adjacency matrix. Give your answers as numbers with no variables.
 
-<span class="math-inline">\\(a = \boxed{\textbf{0.2}}, \qquad b = \boxed{\textbf{1}}, \qquad c = \boxed{\textbf{0}}\\)</span>
+<span class="math-inline">\\(a = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad b = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1356,7 +1352,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Find <span class="math-inline">\\(\text{rank}(\tilde X)\\)</span>. Give your answer as an integer with no variables.
 
-<span class="math-inline">\\(\text{rank}(\tilde X) = \boxed{\textbf{2}}\\)</span>
+<span class="math-inline">\\(\text{rank}(\tilde X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1450,9 +1446,5 @@ What is one topic you studied a lot for that wasn't on the Final Exam? **Blank a
 <details markdown="1"><summary>Solution</summary>
 
 </details>
-
-Congrats on completing the Final Exam for EECS 245! We'll really miss you; please stay in touch.
-
-Feel free to draw us a picture about EECS 245 in the box below.
 
 {% endraw %}

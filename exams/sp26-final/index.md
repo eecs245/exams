@@ -107,6 +107,25 @@ mjx-container[jax="CHTML"][display="true"] {
 }
 </style>
 
+<style>
+#main-header,
+.site-header,
+.aux-nav,
+.main-header,
+.side-bar {
+  display: none !important;
+}
+body { padding-top: 0 !important; }
+.main-content-wrap { margin-top: 0 !important; }
+.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
+.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
+.exam-breadcrumb a:hover { text-decoration: underline; }
+.exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
+</style>
+<nav class="exam-breadcrumb" aria-label="Breadcrumb">
+<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+</nav>
+
 # Spring 2026 Final Exam
 
 <div class="assignment-actions">
@@ -158,7 +177,7 @@ $$
 
 <div class="math-display">
 $$
-w^* = \boxed{\textbf{8}}
+w^* = \_\_\_\_\_\_
 $$
 </div>
 
@@ -185,7 +204,7 @@ $$
 
 <div class="math-display">
 $$
-w^* = \boxed{\textbf{12/5}}
+w^* = \_\_\_\_\_\_
 $$
 </div>
 
@@ -220,7 +239,7 @@ $$
 
 <div class="math-display">
 $$
-w^* = \boxed{\textbf{64}}
+w^* = \_\_\_\_\_\_
 $$
 </div>
 
@@ -448,7 +467,7 @@ the projection of <span class="math-inline">\\(\vec x\\)</span> onto <span class
 
 <div class="math-display">
 $$
-\text{\text{projection of }\vec z\text{ onto }\vec x\text{}} = \boxed{\textbf{\begin{bmatrix}6\\\\3\\\\3\end{bmatrix}}}
+\text{\text{projection of }\vec z\text{ onto }\vec x\text{}} = \_\_\_\_\_\_
 $$
 </div>
 
@@ -564,7 +583,7 @@ $$
 
 Suppose <span class="math-inline">\\(S = \left\lbrace \begin{bmatrix} x&#95;1 \\\\ x&#95;2 \\\\ x&#95;3 \\\\ x&#95;4 \end{bmatrix} : x&#95;1 + x&#95;2 + 2x&#95;3 = 0 \text{ and } x&#95;3 = x&#95;4 \right\rbrace\\)</span>. State one basis for <span class="math-inline">\\(S\\)</span>. Your answer should be a list of vectors with no variables.
 
-<span class="math-inline">\\(\text{one basis for } S =\\)</span>
+<span class="math-inline">\\(\text{one basis for } S =\\)</span> \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -621,9 +640,9 @@ $$
 
 Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(7 \times 12\\)</span> matrix. Fill in each blank with an integer with no variables.
 
-1.  (2 pts) What is the minimum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>?
+1.  (2 pts) What is the minimum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>? \_\_\_\_\_\_
 
-2.  (2 pts) What is the maximum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>?
+2.  (2 pts) What is the maximum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>? \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -654,7 +673,7 @@ Find the area enclosed by the polygon with vertices <span class="math-inline">\\
 
 <div class="math-display">
 $$
-\text{area} = \boxed{\textbf{26}}
+\text{area} = \_\_\_\_\_\_
 $$
 </div>
 
@@ -867,7 +886,7 @@ $$
 
 <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(1\\)</span>, respectively. Write the first four rows of the design matrix <span class="math-inline">\\(X\\)</span>. Your answer should be a matrix with four rows and no variables.
 
-<span class="math-inline">\\(X =\\)</span>
+<span class="math-inline">\\(X =\\)</span> \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -920,11 +939,11 @@ The coefficient <span class="math-inline">\\(w&#95;2\\)</span> is the change in 
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Once again, suppose the dataset has four rows. In each of the following subparts, we provide the number of hours parked in the dataset. Find the rank of the design matrix <span class="math-inline">\\(X\\)</span> in each case. Fill in each blank with an integer with no variables.
 
-1.  (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \boxed{\textbf{3}}\\)</span>
+1.  (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
-2.  (2 pts) <span class="math-inline">\\(2\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(2\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \boxed{\textbf{2}}\\)</span>
+2.  (2 pts) <span class="math-inline">\\(2\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(2\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
-3.  (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(4\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(6\\)</span> <span class="math-inline">\\(\text{rank}(X) = \boxed{\textbf{2}}\\)</span>
+3.  (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(4\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(6\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1119,7 +1138,7 @@ Both equations say the same thing: <span class="math-inline">\\(a&#95;2 = 3a&#95
 
 <div class="math-display">
 $$
-\vec x^{(1)} = \boxed{\textbf{\begin{bmatrix}19/10\\\\7/10\end{bmatrix}}}
+\vec x^{(1)} = \_\_\_\_\_\_
 $$
 </div>
 
@@ -1509,7 +1528,7 @@ $$
 
 <div class="math-display">
 $$
-\Lambda = \boxed{\textbf{\begin{bmatrix}9&0&0\\\\0&9&0\\\\0&0&0\end{bmatrix}}}
+\Lambda = \_\_\_\_\_\_
 $$
 </div>
 
@@ -1555,7 +1574,7 @@ $$
 
 <div class="math-display">
 $$
-A\vec v = \boxed{\textbf{\begin{bmatrix}36\\\\72\\\\0\end{bmatrix}}}
+A\vec v = \_\_\_\_\_\_
 $$
 </div>
 
@@ -1688,7 +1707,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Given the information above, what is the maximum possible variance of principal component <span class="math-inline">\\(2\\)</span>? Give your answer as a number with no variables.
 
-maximum possible variance of principal component <span class="math-inline">\\(2\\)</span> =
+maximum possible variance of principal component <span class="math-inline">\\(2\\)</span> = \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1722,9 +1741,5 @@ $$
 ## Problem 14 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
 
 What is one topic you studied a lot for that was not on the Final Exam? **Blank answers will receive no credit!**
-
-Congrats on completing the Final Exam for EECS 245! We'll really miss you; please stay in touch.
-
-Feel free to draw us a picture about EECS 245 in the box below.
 
 {% endraw %}

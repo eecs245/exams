@@ -107,6 +107,25 @@ mjx-container[jax="CHTML"][display="true"] {
 }
 </style>
 
+<style>
+#main-header,
+.site-header,
+.aux-nav,
+.main-header,
+.side-bar {
+  display: none !important;
+}
+body { padding-top: 0 !important; }
+.main-content-wrap { margin-top: 0 !important; }
+.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
+.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
+.exam-breadcrumb a:hover { text-decoration: underline; }
+.exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
+</style>
+<nav class="exam-breadcrumb" aria-label="Breadcrumb">
+<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+</nav>
+
 # Fall 2025 Midterm 2
 
 <div class="assignment-actions">
@@ -138,7 +157,7 @@ mjx-container[jax="CHTML"][display="true"] {
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Let <span class="math-inline">\\(A = \begin{bmatrix} 2 &amp; 4 \\\\ -3 &amp; -7 \end{bmatrix}\\)</span>. Find <span class="math-inline">\\(\text{det}(A)\\)</span>, the determinant of <span class="math-inline">\\(A\\)</span>. Give your answer as an integer.
 
-<span class="math-inline">\\(\text{det}(A) = \boxed{\textbf{-2}}\\)</span>
+<span class="math-inline">\\(\text{det}(A) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -160,7 +179,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Using <span class="math-inline">\\(A\\)</span> from part **a)**, find <span class="math-inline">\\(A^{-1}\\)</span>, the inverse of <span class="math-inline">\\(A\\)</span>. Fully simplify your answer, i.e. don't leave any constants out front.
 
-<span class="math-inline">\\(A^{-1} = \boxed{\textbf{\begin{bmatrix} 7/2 &amp; 2 \\\\ -3/2 &amp; -1 \end{bmatrix}}}\\)</span>
+<span class="math-inline">\\(A^{-1} = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -294,8 +313,8 @@ Let <span class="math-inline">\\(X = \begin{bmatrix} 1 &amp; -4 &amp; 2 &amp; 2 
 <div class="math-display">
 $$
 \begin{array}{lllll}
-\text{dim}(\text{colsp}(X)) = &\boxed{\textbf{3}} \qquad \qquad  & \text{dim}(\text{nullsp}(X)) = &\boxed{\textbf{2}} \\\\ \\\\
-\text{dim}(\text{colsp}(X^T)) = &\boxed{\textbf{3}} \qquad \qquad  & \text{dim}(\text{nullsp}(X^T)) = &\boxed{\textbf{1}} \\\\
+\text{dim}(\text{colsp}(X)) = &\_\_\_\_\_\_ \qquad \qquad  & \text{dim}(\text{nullsp}(X)) = &\_\_\_\_\_\_ \\\\ \\\\
+\text{dim}(\text{colsp}(X^T)) = &\_\_\_\_\_\_ \qquad \qquad  & \text{dim}(\text{nullsp}(X^T)) = &\_\_\_\_\_\_ \\\\
 \end{array}
 $$
 </div>
@@ -524,7 +543,7 @@ $$
 
 <div class="math-display">
 $$
-\vec z^{(2)} = \boxed{\textbf{\bar{x}^2}} \: \begin{bmatrix} 1 \\\\ 1 \\\\ \vdots \\\\ 1 \end{bmatrix} + \boxed{\textbf{(-2\bar{x})}} \: \begin{bmatrix} x_1 \\\\ x_2 \\\\ \vdots \\\\ x_n \end{bmatrix} + \boxed{\textbf{1}} \: \begin{bmatrix} x_1^2 \\\\ x_2^2 \\\\ \vdots \\\\ x_n^2 \end{bmatrix}
+\vec z^{(2)} = \_\_\_\_\_\_ \: \begin{bmatrix} 1 \\\\ 1 \\\\ \vdots \\\\ 1 \end{bmatrix} + \_\_\_\_\_\_ \: \begin{bmatrix} x_1 \\\\ x_2 \\\\ \vdots \\\\ x_n \end{bmatrix} + \_\_\_\_\_\_ \: \begin{bmatrix} x_1^2 \\\\ x_2^2 \\\\ \vdots \\\\ x_n^2 \end{bmatrix}
 $$
 </div>
 
@@ -568,7 +587,7 @@ P = \begin{bmatrix}
 $$
 </div>
 
-1.  What is the rank of <span class="math-inline">\\(Z\\)</span>? Give your answer as an integer. <span class="math-inline">\\(\text{rank}(Z) = \boxed{\textbf{2}}\\)</span>
+1.  What is the rank of <span class="math-inline">\\(Z\\)</span>? Give your answer as an integer. <span class="math-inline">\\(\text{rank}(Z) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 2.  Which specific values of <span class="math-inline">\\(x&#95;1, x&#95;2, ..., x&#95;n\\)</span> result in <span class="math-inline">\\(P\\)</span> being the matrix above? Give your answer as a list of values, in the order <span class="math-inline">\\(x&#95;1\\)</span>, then <span class="math-inline">\\(x&#95;2\\)</span>, then <span class="math-inline">\\(x&#95;3\\)</span>, etc. (If there are multiple possible answers, just give one.)
 
@@ -827,7 +846,7 @@ For <span class="math-inline">\\(Q\\)</span> to be orthogonal, we'd need **both*
 
 Find <span class="math-inline">\\(r&#95;2\\)</span> and <span class="math-inline">\\(r&#95;3\\)</span>. Give your answers as scalars without variables.
 
-<span class="math-inline">\\(r&#95;2 = \boxed{\textbf{}}, \qquad r&#95;3 = \boxed{\textbf{}}\\)</span>
+<span class="math-inline">\\(r&#95;2 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad r&#95;3 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1141,10 +1160,6 @@ $$
 
 as required!
 </details>
-
-(2 pts) Congrats on finishing Midterm 2! Here are two free points.
-
-Feel free to draw us a picture about EECS 245 in the box below.
 </div>
 </div>
 

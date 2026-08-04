@@ -107,6 +107,25 @@ mjx-container[jax="CHTML"][display="true"] {
 }
 </style>
 
+<style>
+#main-header,
+.site-header,
+.aux-nav,
+.main-header,
+.side-bar {
+  display: none !important;
+}
+body { padding-top: 0 !important; }
+.main-content-wrap { margin-top: 0 !important; }
+.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
+.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
+.exam-breadcrumb a:hover { text-decoration: underline; }
+.exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
+</style>
+<nav class="exam-breadcrumb" aria-label="Breadcrumb">
+<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+</nav>
+
 # Winter 2026 Midterm 2
 
 <div class="assignment-actions">
@@ -152,7 +171,7 @@ In each part, you are provided with information about <span class="math-inline">
 
 <div class="math-display">
 $$
-k = \boxed{\textbf{6}}
+k = \_\_\_\_\_\_
 $$
 </div>
 
@@ -183,7 +202,7 @@ $$
 
 <div class="math-display">
 $$
-k = \boxed{\textbf{5}}
+k = \_\_\_\_\_\_
 $$
 </div>
 
@@ -224,7 +243,7 @@ $$
 
 <div class="math-display">
 $$
-k = \boxed{\textbf{4}}
+k = \_\_\_\_\_\_
 $$
 </div>
 
@@ -611,7 +630,7 @@ $$
 
 Provide a CR decomposition of <span class="math-inline">\\(A\\)</span>. Your answers should be matrices with no variables.
 
-<span class="math-inline">\\(C = \boxed{\textbf{\begin{bmatrix} 1 &amp; 0 &amp; 0 \\\\ 2 &amp; 1 &amp; 0 \\\\ 3 &amp; 1 &amp; -7 \end{bmatrix}}}, \quad R = \boxed{\textbf{\begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\\\ 0 &amp; 1 &amp; 0 &amp; 0 &amp; 4 \\\\ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \end{bmatrix}}}\\)</span>
+<span class="math-inline">\\(C = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \quad R = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -698,7 +717,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Find <span class="math-inline">\\(\text{dim}(\text{nullsp}(A^T))\\)</span>. Give your answer as an integer with no variables.
 
-<span class="math-inline">\\(\text{dim}(\text{nullsp}(A^T)) = \boxed{\textbf{0}}\\)</span>
+<span class="math-inline">\\(\text{dim}(\text{nullsp}(A^T)) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -740,7 +759,7 @@ Find an expression for <span class="math-inline">\\(P\\)</span> in terms of <spa
 
 <div class="math-display">
 $$
-P = \boxed{\textbf{Q^TQ}}
+P = \_\_\_\_\_\_
 $$
 </div>
 
@@ -825,7 +844,7 @@ $$
 
 Write the first two rows of the design matrix, <span class="math-inline">\\(X\\)</span>. Your answer should be a matrix with two rows and no variables.
 
-<span class="math-inline">\\(X = \boxed{\textbf{\begin{bmatrix} 77 &amp; 25 &amp; 0 &amp; 1 \\\\ 59 &amp; 15 &amp; 1 &amp; 0 \end{bmatrix}}}\\)</span>
+<span class="math-inline">\\(X = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -946,7 +965,7 @@ $$
 
 1.  What is the **largest possible** rank of the design matrix, <span class="math-inline">\\(X\\)</span>? (Note that we're asking about the full design matrix, not just its first two rows.)
 
-   <span class="math-inline">\\(\text{largest possible value of }\text{rank}(X) = \boxed{\textbf{3}}\\)</span>
+   <span class="math-inline">\\(\text{largest possible value of }\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 2.  True or False: The sum of the errors of the model's predictions is 0.
 
@@ -1009,7 +1028,7 @@ $$
 
 1.  After removing the day column, what is the **largest possible** rank of the **new** design matrix?
 
-   <span class="math-inline">\\(\text{largest possible value of }\text{rank}(\text{new design matrix}) = \boxed{\textbf{3}}\\)</span>
+   <span class="math-inline">\\(\text{largest possible value of }\text{rank}(\text{new design matrix}) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 2.  True or False: The sum of the errors of the new model's predictions is 0.
 
@@ -1055,7 +1074,7 @@ $$
 
 Find one possible matrix <span class="math-inline">\\(A\\)</span>. Your answer should be a <span class="math-inline">\\(4 \times 4\\)</span> matrix with no variables.
 
-<span class="math-inline">\\(A = \boxed{\textbf{\begin{bmatrix} 1 &amp; 0 &amp; 0 &amp; 0 \\\\ 0 &amp; -15/2 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 5 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 &amp; 1/2 \end{bmatrix}}}\\)</span>
+<span class="math-inline">\\(A = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1266,7 +1285,7 @@ Show your work in the space provided, and write your final answer in the bottom-
 
 <div class="math-display">
 $$
-\alpha = \boxed{\textbf{1/4}}
+\alpha = \_\_\_\_\_\_
 $$
 </div>
 
@@ -1343,12 +1362,6 @@ $$
 </div>
 
 </details>
-
-Congrats on finishing Midterm 2!
-
-Feel free to draw us a picture about EECS 245 in the box below (or use it for scratch work).
-
-Did you notice any violations of the Honor Code during the exam? If so, share details with us here. We will keep your identity anonymous when investigating any cases.
 </div>
 </div>
 
