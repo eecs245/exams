@@ -139,12 +139,12 @@ body { padding-top: 0 !important; }
 
 ## Problems
 
-- [FA25 MT2 · Problem 4](#fa25-mt2-problem-4-poly-wants-a-cracker-18-pts)
-- [FA25 Final · Problem 8](#fa25-final-problem-8-6-pts-mt2-redemption)
-- [WN26 MT2 · Problem 6](#wn26-mt2-problem-6-20-pts)
-- [WN26 Final · Problem 7](#wn26-final-problem-7-8-pts-mt2-redemption)
-- [SP26 MT2 · Problem 5](#sp26-mt2-problem-5-19-pts)
-- [SP26 Final · Problem 8](#sp26-final-problem-8-12-pts-mt2-redemption)
+- [FA25 MT2 · Problem 4](#fa25-mt2--problem-4-poly-wants-a-cracker-18-pts)
+- [FA25 Final · Problem 8](#fa25-final--problem-8-6-pts-mt2-redemption)
+- [WN26 MT2 · Problem 6](#wn26-mt2--problem-6-20-pts)
+- [WN26 Final · Problem 7](#wn26-final--problem-7-8-pts-mt2-redemption)
+- [SP26 MT2 · Problem 5](#sp26-mt2--problem-5-19-pts)
+- [SP26 Final · Problem 8](#sp26-final--problem-8-12-pts-mt2-redemption)
 
 ---
 

@@ -139,16 +139,16 @@ body { padding-top: 0 !important; }
 
 ## Problems
 
-- [FA25 Final · Problem 9](#fa25-final-problem-9-18-pts)
-- [FA25 Final · Problem 10](#fa25-final-problem-10-12-pts)
-- [FA25 Final · Problem 11](#fa25-final-problem-11-12-pts)
-- [WN26 MT2 · Problem 1](#wn26-mt2-problem-1-12-pts)
-- [WN26 Final · Problem 9](#wn26-final-problem-9-12-pts)
-- [WN26 Final · Problem 10](#wn26-final-problem-10-14-pts)
-- [WN26 Final · Problem 11](#wn26-final-problem-11-10-pts)
-- [SP26 Final · Problem 10](#sp26-final-problem-10-12-pts)
-- [SP26 Final · Problem 11](#sp26-final-problem-11-10-pts)
-- [SP26 Final · Problem 12](#sp26-final-problem-12-11-pts)
+- [FA25 Final · Problem 9](#fa25-final--problem-9-18-pts)
+- [FA25 Final · Problem 10](#fa25-final--problem-10-12-pts)
+- [FA25 Final · Problem 11](#fa25-final--problem-11-12-pts)
+- [WN26 MT2 · Problem 1](#wn26-mt2--problem-1-12-pts)
+- [WN26 Final · Problem 9](#wn26-final--problem-9-12-pts)
+- [WN26 Final · Problem 10](#wn26-final--problem-10-14-pts)
+- [WN26 Final · Problem 11](#wn26-final--problem-11-10-pts)
+- [SP26 Final · Problem 10](#sp26-final--problem-10-12-pts)
+- [SP26 Final · Problem 11](#sp26-final--problem-11-10-pts)
+- [SP26 Final · Problem 12](#sp26-final--problem-12-11-pts)
 
 ---
 

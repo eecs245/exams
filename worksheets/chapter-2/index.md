@@ -139,12 +139,12 @@ body { padding-top: 0 !important; }
 
 ## Problems
 
-- [FA25 MT1 · Problem 3](#fa25-mt1-problem-3-spreading-your-wings-12-pts)
-- [FA25 Final · Problem 2](#fa25-final-problem-2-10-pts-mt1-redemption)
-- [WN26 MT1 · Problem 2](#wn26-mt1-problem-2-14-pts)
-- [WN26 Final · Problem 2](#wn26-final-problem-2-13-pts-mt1-redemption)
-- [SP26 MT1 · Problem 3](#sp26-mt1-problem-3-14-pts)
-- [SP26 Final · Problem 2](#sp26-final-problem-2-9-pts-mt1-redemption)
+- [FA25 MT1 · Problem 3](#fa25-mt1--problem-3-spreading-your-wings-12-pts)
+- [FA25 Final · Problem 2](#fa25-final--problem-2-10-pts-mt1-redemption)
+- [WN26 MT1 · Problem 2](#wn26-mt1--problem-2-14-pts)
+- [WN26 Final · Problem 2](#wn26-final--problem-2-13-pts-mt1-redemption)
+- [SP26 MT1 · Problem 3](#sp26-mt1--problem-3-14-pts)
+- [SP26 Final · Problem 2](#sp26-final--problem-2-9-pts-mt1-redemption)
 
 ---
 

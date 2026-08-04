@@ -139,15 +139,15 @@ body { padding-top: 0 !important; }
 
 ## Problems
 
-- [FA25 MT1 · Problem 1](#fa25-mt1-problem-1-consider-the-following-15-pts)
-- [FA25 MT1 · Problem 2](#fa25-mt1-problem-2-absolute-madness-17-pts)
-- [FA25 Final · Problem 1](#fa25-final-problem-1-10-pts-mt1-redemption)
-- [WN26 MT1 · Problem 1](#wn26-mt1-problem-1-16-pts)
-- [WN26 MT1 · Problem 7](#wn26-mt1-problem-7-20-pts)
-- [WN26 Final · Problem 1](#wn26-final-problem-1-12-pts-mt1-redemption)
-- [SP26 MT1 · Problem 1](#sp26-mt1-problem-1-16-pts)
-- [SP26 MT1 · Problem 2](#sp26-mt1-problem-2-10-pts)
-- [SP26 Final · Problem 1](#sp26-final-problem-1-14-pts-mt1-redemption)
+- [FA25 MT1 · Problem 1](#fa25-mt1--problem-1-consider-the-following-15-pts)
+- [FA25 MT1 · Problem 2](#fa25-mt1--problem-2-absolute-madness-17-pts)
+- [FA25 Final · Problem 1](#fa25-final--problem-1-10-pts-mt1-redemption)
+- [WN26 MT1 · Problem 1](#wn26-mt1--problem-1-16-pts)
+- [WN26 MT1 · Problem 7](#wn26-mt1--problem-7-20-pts)
+- [WN26 Final · Problem 1](#wn26-final--problem-1-12-pts-mt1-redemption)
+- [SP26 MT1 · Problem 1](#sp26-mt1--problem-1-16-pts)
+- [SP26 MT1 · Problem 2](#sp26-mt1--problem-2-10-pts)
+- [SP26 Final · Problem 1](#sp26-final--problem-1-14-pts-mt1-redemption)
 
 ---
 

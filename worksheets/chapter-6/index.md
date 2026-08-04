@@ -139,16 +139,16 @@ body { padding-top: 0 !important; }
 
 ## Problems
 
-- [FA25 MT1 · Problem 5](#fa25-mt1-problem-5-back-to-normal-12-pts)
-- [FA25 MT2 · Problem 5](#fa25-mt2-problem-5-orthodontist-12-pts)
-- [WN26 MT1 · Problem 3](#wn26-mt1-problem-3-12-pts)
-- [WN26 MT1 · Problem 5](#wn26-mt1-problem-5-12-pts)
-- [WN26 MT2 · Problem 4](#wn26-mt2-problem-4-13-pts)
-- [WN26 Final · Problem 6](#wn26-final-problem-6-12-pts-mt2-redemption)
-- [WN26 Final · Problem 5](#wn26-final-problem-5-11-pts-mt2-redemption)
-- [SP26 MT2 · Problem 4](#sp26-mt2-problem-4-14-pts)
-- [SP26 Final · Problem 6](#sp26-final-problem-6-6-pts-mt2-redemption)
-- [SP26 Final · Problem 7](#sp26-final-problem-7-12-pts-mt2-redemption)
+- [FA25 MT1 · Problem 5](#fa25-mt1--problem-5-back-to-normal-12-pts)
+- [FA25 MT2 · Problem 5](#fa25-mt2--problem-5-orthodontist-12-pts)
+- [WN26 MT1 · Problem 3](#wn26-mt1--problem-3-12-pts)
+- [WN26 MT1 · Problem 5](#wn26-mt1--problem-5-12-pts)
+- [WN26 MT2 · Problem 4](#wn26-mt2--problem-4-13-pts)
+- [WN26 Final · Problem 6](#wn26-final--problem-6-12-pts-mt2-redemption)
+- [WN26 Final · Problem 5](#wn26-final--problem-5-11-pts-mt2-redemption)
+- [SP26 MT2 · Problem 4](#sp26-mt2--problem-4-14-pts)
+- [SP26 Final · Problem 6](#sp26-final--problem-6-6-pts-mt2-redemption)
+- [SP26 Final · Problem 7](#sp26-final--problem-7-12-pts-mt2-redemption)
 
 ---
 

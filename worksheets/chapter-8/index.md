@@ -139,16 +139,16 @@ body { padding-top: 0 !important; }
 
 ## Problems
 
-- [FA25 MT2 · Problem 6](#fa25-mt2-problem-6-quadratus-formulus-14-pts)
-- [FA25 MT2 · Problem 7](#fa25-mt2-problem-7-complexity-10-pts)
-- [FA25 Final · Problem 6](#fa25-final-problem-6-4-pts-mt2-redemption)
-- [FA25 Final · Problem 7](#fa25-final-problem-7-6-pts-mt2-redemption)
-- [WN26 MT2 · Problem 7](#wn26-mt2-problem-7-10-pts)
-- [WN26 MT2 · Problem 8](#wn26-mt2-problem-8-11-pts)
-- [WN26 Final · Problem 8](#wn26-final-problem-8-9-pts-mt2-redemption)
-- [SP26 MT2 · Problem 6](#sp26-mt2-problem-6-12-pts)
-- [SP26 MT2 · Problem 7](#sp26-mt2-problem-7-15-pts)
-- [SP26 Final · Problem 9](#sp26-final-problem-9-9-pts-mt2-redemption)
+- [FA25 MT2 · Problem 6](#fa25-mt2--problem-6-quadratus-formulus-14-pts)
+- [FA25 MT2 · Problem 7](#fa25-mt2--problem-7-complexity-10-pts)
+- [FA25 Final · Problem 6](#fa25-final--problem-6-4-pts-mt2-redemption)
+- [FA25 Final · Problem 7](#fa25-final--problem-7-6-pts-mt2-redemption)
+- [WN26 MT2 · Problem 7](#wn26-mt2--problem-7-10-pts)
+- [WN26 MT2 · Problem 8](#wn26-mt2--problem-8-11-pts)
+- [WN26 Final · Problem 8](#wn26-final--problem-8-9-pts-mt2-redemption)
+- [SP26 MT2 · Problem 6](#sp26-mt2--problem-6-12-pts)
+- [SP26 MT2 · Problem 7](#sp26-mt2--problem-7-15-pts)
+- [SP26 Final · Problem 9](#sp26-final--problem-9-9-pts-mt2-redemption)
 
 ---
 

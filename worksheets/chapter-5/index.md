@@ -139,18 +139,18 @@ body { padding-top: 0 !important; }
 
 ## Problems
 
-- [FA25 MT2 · Problem 1](#fa25-mt2-problem-1-getting-started-12-pts)
-- [FA25 MT2 · Problem 2](#fa25-mt2-problem-2-space-jam-20-pts)
-- [FA25 MT2 · Problem 3](#fa25-mt2-problem-3-nilpotence-12-pts)
-- [FA25 Final · Problem 5](#fa25-final-problem-5-12-pts-mt2-redemption)
-- [WN26 MT2 · Problem 2](#wn26-mt2-problem-2-10-pts)
-- [WN26 MT2 · Problem 3](#wn26-mt2-problem-3-11-pts)
-- [WN26 MT2 · Problem 5](#wn26-mt2-problem-5-13-pts)
-- [WN26 Final · Problem 5](#wn26-final-problem-5-11-pts-mt2-redemption)
-- [SP26 MT2 · Problem 1](#sp26-mt2-problem-1-12-pts)
-- [SP26 MT2 · Problem 2](#sp26-mt2-problem-2-16-pts)
-- [SP26 MT2 · Problem 3](#sp26-mt2-problem-3-12-pts)
-- [SP26 Final · Problem 5](#sp26-final-problem-5-4-pts-mt2-redemption)
+- [FA25 MT2 · Problem 1](#fa25-mt2--problem-1-getting-started-12-pts)
+- [FA25 MT2 · Problem 2](#fa25-mt2--problem-2-space-jam-20-pts)
+- [FA25 MT2 · Problem 3](#fa25-mt2--problem-3-nilpotence-12-pts)
+- [FA25 Final · Problem 5](#fa25-final--problem-5-12-pts-mt2-redemption)
+- [WN26 MT2 · Problem 2](#wn26-mt2--problem-2-10-pts)
+- [WN26 MT2 · Problem 3](#wn26-mt2--problem-3-11-pts)
+- [WN26 MT2 · Problem 5](#wn26-mt2--problem-5-13-pts)
+- [WN26 Final · Problem 5](#wn26-final--problem-5-11-pts-mt2-redemption)
+- [SP26 MT2 · Problem 1](#sp26-mt2--problem-1-12-pts)
+- [SP26 MT2 · Problem 2](#sp26-mt2--problem-2-16-pts)
+- [SP26 MT2 · Problem 3](#sp26-mt2--problem-3-12-pts)
+- [SP26 Final · Problem 5](#sp26-final--problem-5-4-pts-mt2-redemption)
 
 ---
 

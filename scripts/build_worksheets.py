@@ -147,12 +147,17 @@ def rewrite_asset_paths(body: str, exam_dir: str) -> str:
 # ===> Page assembly <=== #
 
 def heading_anchor(heading_text: str) -> str:
-    """Kramdown-compatible ID for a rendered heading line."""
+    """Kramdown-compatible ID for a rendered heading line.
+
+    Kramdown maps each whitespace character to a dash WITHOUT collapsing
+    runs, so "FA25 MT1 · Problem 4" (middle dot removed, leaving two
+    spaces) becomes fa25-mt1--problem-4 with a double dash.
+    """
     text = replace_inline_math_spans_with_dollars(heading_text)
     text = re.sub(r"<[^>]+>", "", text)
     text = html.unescape(text)
     anchor = re.sub(r"[^\w\s-]", "", text.lower())
-    return re.sub(r"\s+", "-", anchor.strip())
+    return re.sub(r"\s", "-", anchor.strip())
 
 
 def build_chapter_page(chapter: dict) -> str:

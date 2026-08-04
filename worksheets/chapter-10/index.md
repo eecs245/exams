@@ -139,9 +139,9 @@ body { padding-top: 0 !important; }
 
 ## Problems
 
-- [FA25 Final · Problem 12](#fa25-final-problem-12-12-pts)
-- [WN26 Final · Problem 12](#wn26-final-problem-12-12-pts)
-- [SP26 Final · Problem 13](#sp26-final-problem-13-12-pts)
+- [FA25 Final · Problem 12](#fa25-final--problem-12-12-pts)
+- [WN26 Final · Problem 12](#wn26-final--problem-12-12-pts)
+- [SP26 Final · Problem 13](#sp26-final--problem-13-12-pts)
 
 ---
 

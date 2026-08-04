@@ -139,15 +139,15 @@ body { padding-top: 0 !important; }
 
 ## Problems
 
-- [FA25 MT1 · Problem 6](#fa25-mt1-problem-6-needed-me-11-pts)
-- [FA25 MT1 · Problem 7](#fa25-mt1-problem-7-high-definition-12-pts)
-- [FA25 Final · Problem 4](#fa25-final-problem-4-8-pts-mt2-redemption)
-- [WN26 MT1 · Problem 6](#wn26-mt1-problem-6-14-pts)
-- [WN26 Final · Problem 4](#wn26-final-problem-4-4-pts-mt1-redemption)
-- [SP26 MT1 · Problem 6](#sp26-mt1-problem-6-11-pts)
-- [SP26 MT1 · Problem 7](#sp26-mt1-problem-7-10-pts)
-- [SP26 MT1 · Problem 8](#sp26-mt1-problem-8-8-pts)
-- [SP26 Final · Problem 4](#sp26-final-problem-4-5-pts-mt1-redemption)
+- [FA25 MT1 · Problem 6](#fa25-mt1--problem-6-needed-me-11-pts)
+- [FA25 MT1 · Problem 7](#fa25-mt1--problem-7-high-definition-12-pts)
+- [FA25 Final · Problem 4](#fa25-final--problem-4-8-pts-mt2-redemption)
+- [WN26 MT1 · Problem 6](#wn26-mt1--problem-6-14-pts)
+- [WN26 Final · Problem 4](#wn26-final--problem-4-4-pts-mt1-redemption)
+- [SP26 MT1 · Problem 6](#sp26-mt1--problem-6-11-pts)
+- [SP26 MT1 · Problem 7](#sp26-mt1--problem-7-10-pts)
+- [SP26 MT1 · Problem 8](#sp26-mt1--problem-8-8-pts)
+- [SP26 Final · Problem 4](#sp26-final--problem-4-5-pts-mt1-redemption)
 
 ---
 
