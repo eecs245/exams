@@ -717,7 +717,7 @@ Suppose we fit a simple linear regression model **with** an intercept term, <spa
 
 <div class="math-display">
 $$
-\text{\text{}\bar x\text{}} = \_\_\_\_\_\_
+\bar x = \_\_\_\_\_\_
 $$
 </div>
 

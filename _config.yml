@@ -17,6 +17,8 @@ exclude:
   - vendor/cache
   - vendor/gems
   - vendor/ruby
+  - scripts
+  - exams-old
 
 theme: just-the-docs
 color_scheme: um
@@ -26,6 +28,7 @@ permalink: pretty
 
 sass:
   quiet_deps: true
+  silence_deprecations: ["import"]
 
 aux_links_new_tab: true
 aux_links:

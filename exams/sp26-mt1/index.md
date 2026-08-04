@@ -425,7 +425,7 @@ Suppose we fit a simple linear regression model **with** an intercept term, <spa
 
 <div class="math-display">
 $$
-\text{\text{}\bar x\text{}} = \_\_\_\_\_\_
+\bar x = \_\_\_\_\_\_
 $$
 </div>
 
@@ -633,7 +633,7 @@ Find <span class="math-inline">\\(\lVert \vec u \rVert^2\\)</span> (**not** <spa
 
 <div class="math-display">
 $$
-\text{\text{}\lVert \vec u \rVert^2\text{}} = \_\_\_\_\_\_
+\lVert \vec u \rVert^2 = \_\_\_\_\_\_
 $$
 </div>
 

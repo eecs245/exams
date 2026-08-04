@@ -682,7 +682,7 @@ So, we know that <span class="math-inline">\\(\frac{\left| \vec u \cdot \vec v \
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> For each pair of vectors, determine whether they are orthogonal, linearly dependent, or neither. Make sure to select **one bubble per row**.
 
 |  | pair of vectors | orthogonal | linearly dependent | neither |
-|:-------:|:-------------------------------|:----------:|:------------------:|:----------:|
+|:--:|:---|:--:|:--:|:--:|
 | <span class="math-inline">\\(i\\)</span> | <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec u - \vec p\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
 | <span class="math-inline">\\(ii\\)</span> | <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v - \vec p\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
 | <span class="math-inline">\\(iii\\)</span> | <span class="math-inline">\\(\vec v\\)</span> and <span class="math-inline">\\(\vec u - \vec p\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
@@ -1123,11 +1123,11 @@ Below, select **one possible set** of columns of <span class="math-inline">\\(A\
 $$
 \begin{array}{c|c}
 \text{Column} & \text{Include in your basis?} \\\\ \hline
-\vec a^{(1)} & $\square$  \quad  \\\\
-\vec a^{(2)} & $\square$  \quad  \\\\
-\vec a^{(3)} & $\square$  \quad  \\\\
-\vec a^{(4)} & $\square$  \quad  \\\\
-\vec a^{(5)} & $\square$  \quad
+\vec a^{(1)} & \square  \quad  \\\\
+\vec a^{(2)} & \square  \quad  \\\\
+\vec a^{(3)} & \square  \quad  \\\\
+\vec a^{(4)} & \square  \quad  \\\\
+\vec a^{(5)} & \square  \quad
 \end{array}
 $$
 </div>

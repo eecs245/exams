@@ -419,7 +419,7 @@ def expand_inputs_from_text(text: str, base_dir: Path) -> str:
 
 
 def strip_latex_comments(text: str) -> str:
-    """Remove TeX comments while preserving escaped percent signs like \%."""
+    r"""Remove TeX comments while preserving escaped percent signs like \%."""
     stripped_lines: list[str] = []
     for line in text.splitlines(keepends=True):
         body = line[:-1] if line.endswith("\n") else line
@@ -482,13 +482,6 @@ def render_tikz_figures(text: str, assets_dir: Path, source_dir: Path) -> str:
     ]
     if not blocks:
         return text
-    if shutil.which("pdflatex") is None or shutil.which("pdftocairo") is None:
-        raise SystemExit(
-            f"{len(blocks)} TikZ figure(s) need rendering but pdflatex/pdftocairo "
-            "were not found. Install a TeX distribution (e.g. MacTeX/BasicTeX plus "
-            "poppler for pdftocairo), or these figures will be missing from the "
-            "web view."
-        )
     assets_dir.mkdir(parents=True, exist_ok=True)
     result: list[str] = []
     cursor = 0
@@ -498,6 +491,16 @@ def render_tikz_figures(text: str, assets_dir: Path, source_dir: Path) -> str:
         svg_name = f"tikz-{digest}.svg"
         svg_path = assets_dir / svg_name
         if not svg_path.exists():
+            # Only a cache miss needs the toolchain. Checking earlier would
+            # refuse to run on machines without TeX even when every figure
+            # was already rendered and committed.
+            if shutil.which("pdflatex") is None or shutil.which("pdftocairo") is None:
+                raise SystemExit(
+                    f"TikZ figure {svg_name} is not present in {assets_dir} and "
+                    "needs rendering, but pdflatex/pdftocairo were not found. "
+                    "Install a TeX distribution (e.g. MacTeX/BasicTeX) plus "
+                    "poppler for pdftocairo, or restore the cached SVG."
+                )
             compile_tikz_to_svg(body, svg_path, source_dir)
         result.append(text[cursor : match.start()])
         result.append(
@@ -670,9 +673,12 @@ def replace_answerbox_markers(text: str) -> str:
         3,
         lambda args: (
             "\n\n$$"
-            # Labels land in math mode; mixed prose/$math$ labels must become
-            # \text{}/math alternation, not dollar-stripped prose-as-math.
-            + split_text_and_math(args[0].strip())
+            # The label is already math-mode LaTeX (it lands inside $...$ in
+            # the print macro), so it passes through verbatim. Any \text{...}
+            # containing inline $math$ is split later by clean_text_command;
+            # wrapping here instead would nest \text inside \text, which
+            # MathJax renders as literal source.
+            + args[0].strip()
             + " = " + ANSWER_BLANK
             + "$$\n\n"
         ),
@@ -1321,6 +1327,7 @@ def cleanup_markdown(text: str, use_point_badges: bool = True) -> str:
     text = collapse_repeated_section_separators(text)
     text = fix_accidental_indented_prose(text)
     text = fence_indented_code_blocks(text)
+    text = dedent_block_html_markers(text)
     text = flatten_solution_ordered_lists(text)
     text = keep_ordered_list_display_math_items(text)
     text = remove_pandoc_layout_fences(text)
@@ -1759,6 +1766,22 @@ def unindent_accidental_list_code_blocks(text: str) -> str:
     return re.sub(r"(?m)^ {4}(-\s+)", r"\1", text)
 
 
+def dedent_block_html_markers(text: str) -> str:
+    r"""Move <details>/</details> markers to column 0.
+
+    Pandoc keeps list-item indentation on solution blocks, but the
+    surrounding generated HTML (mc-options divs, math-display divs) sits at
+    column 0. The mixed indentation breaks the list context, so kramdown
+    reads the 4-space-indented <details> as an indented code block and
+    prints the tag literally instead of rendering the dropdown.
+    """
+    return re.sub(
+        r"(?m)^[ \t]+(</?details\b[^>]*>.*)$",
+        r"\1",
+        text,
+    )
+
+
 def fence_indented_code_blocks(text: str) -> str:
     """Convert real Pandoc-indented code blocks to fenced blocks for Kramdown.
 
@@ -1816,7 +1839,10 @@ def looks_like_code_line(line: str) -> bool:
         return True
     if stripped.startswith(("[", "]")) and re.search(r"[\[\],]", stripped):
         return True
-    return bool(re.match(r"[A-Za-z_][\w.]*\s*(?:=|\(|@)", stripped))
+    # Assignment or call. The paren form must have no space before "(" --
+    # otherwise ordinary prose ("For (i), the minimizer ...") reads as a
+    # function call and gets fenced as code.
+    return bool(re.match(r"[A-Za-z_][\w.]*(?:\s*=(?!=)|\(|\s*@)", stripped))
 
 
 CHOICE_MARKER_HTML_PATTERN = re.compile(
@@ -2208,7 +2234,13 @@ def fix_latex_for_mathjax(text: str) -> str:
                 return rf"\text{{{inner.replace('$', '')}}}"
             return split_text_and_math(inner)
 
-        return re.sub(r"\\text\{([^{}]*)\}", clean_text_command, content)
+        content = re.sub(r"\\text\{([^{}]*)\}", clean_text_command, content)
+        # Any $...$ still standing inside a display block came from source
+        # that mixed inline math into a tabular/array cell (e.g. "$\square$"
+        # in a checkbox column). We are already in math mode, so the inner
+        # delimiters are meaningless -- MathJax renders them as literal "$".
+        # \text{} spans were handled above, so what remains is safe to unwrap.
+        return re.sub(r"\$([^$]*)\$", r"\1", content)
 
     def fix_backslashes_in_math(content: str) -> str:
         return content.replace("\\\\", "\\\\\\\\")

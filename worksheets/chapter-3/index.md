@@ -171,7 +171,7 @@ $$
 For each statement below, determine whether it is impossible, possible, or guaranteed to be true, given the above assumptions. **Select exactly one option from each row**. The first statement has been done for you as an example.
 
 |  | **statement** | **impossible?** | **possible?** | **guaranteed?** |
-|:-------:|:------------------------------------------------------------------------------|:---------------:|:-------------:|:---------------:|
+|:--:|:---|:--:|:--:|:--:|
 | <span class="math-inline">\\(i\\)</span> | <span class="math-inline">\\(\lVert \vec u \rVert = 5\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
 | <span class="math-inline">\\(ii\\)</span> | <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> are orthogonal | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
 | <span class="math-inline">\\(iii\\)</span> | <span class="math-inline">\\(\lVert \vec u - \vec v \rVert = 0\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> | <span class="mc-bubble" aria-hidden="true"></span> |
@@ -653,7 +653,7 @@ There are infinitely many possible vectors <span class="math-inline">\\(\vec b\\
 
 <div class="math-display">
 $$
-\text{\text{one possible }\vec b\text{}} = \_\_\_\_\_\_
+\text{one possible }\vec b = \_\_\_\_\_\_
 $$
 </div>
 
@@ -787,7 +787,7 @@ Find <span class="math-inline">\\(\lVert \vec u \rVert^2\\)</span> (**not** <spa
 
 <div class="math-display">
 $$
-\text{\text{}\lVert \vec u \rVert^2\text{}} = \_\_\_\_\_\_
+\lVert \vec u \rVert^2 = \_\_\_\_\_\_
 $$
 </div>
 
@@ -1157,7 +1157,7 @@ the projection of <span class="math-inline">\\(\vec x\\)</span> onto <span class
 
 <div class="math-display">
 $$
-\text{\text{projection of }\vec z\text{ onto }\vec x\text{}} = \_\_\_\_\_\_
+\text{projection of }\vec z\text{ onto }\vec x = \_\_\_\_\_\_
 $$
 </div>
 

@@ -467,7 +467,7 @@ the projection of <span class="math-inline">\\(\vec x\\)</span> onto <span class
 
 <div class="math-display">
 $$
-\text{\text{projection of }\vec z\text{ onto }\vec x\text{}} = \_\_\_\_\_\_
+\text{projection of }\vec z\text{ onto }\vec x = \_\_\_\_\_\_
 $$
 </div>
 

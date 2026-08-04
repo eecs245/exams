@@ -182,22 +182,21 @@ $$
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
-    <details markdown="1"><summary>Solution</summary>
+<details markdown="1"><summary>Solution</summary>
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
-```python
-For (i), the minimizer of mean squared error is the mean, so
-```
+   For (i), the minimizer of mean squared error is the mean, so
+
 <div class="math-display">
 $$
 w^* = \frac{3+6+6+13}{4} = \boxed{7}
 $$
 </div>
 
-    </details>
+</details>
 
-**(ii)** (3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \lim&#95;{p \to \infty} \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 |y&#95;i - w|^p\\)</span>?
+2.  (3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \lim&#95;{p \to \infty} \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 |y&#95;i - w|^p\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
@@ -205,9 +204,8 @@ $$
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
-```python
-For (ii), as <span class="math-inline">\\(p \to \infty\\)</span>, the largest value of <span class="math-inline">\\(|y&#95;i-w|\\)</span> dominates. So we should put <span class="math-inline">\\(w\\)</span> halfway between the smallest and largest data values, as discussed in [Chapter 1.4](https://notes.eecs245.org/introduction-to-supervised-learning/comparing-loss-functions/#beyond-absolute-and-squared-loss).
-```
+   For (ii), as <span class="math-inline">\\(p \to \infty\\)</span>, the largest value of <span class="math-inline">\\(|y&#95;i-w|\\)</span> dominates. So we should put <span class="math-inline">\\(w\\)</span> halfway between the smallest and largest data values, as discussed in [Chapter 1.4](https://notes.eecs245.org/introduction-to-supervised-learning/comparing-loss-functions/#beyond-absolute-and-squared-loss).
+
 <div class="math-display">
 $$
 w^* = \frac{3+13}{2} = \boxed{8}
@@ -216,7 +214,7 @@ $$
 
 </details>
 
-**(iii)** (3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 (\log(y&#95;i) - \log(w))^2\\)</span>?
+3.  (3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 (\log(y&#95;i) - \log(w))^2\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
@@ -224,9 +222,8 @@ $$
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
-```python
-For (iii), let <span class="math-inline">\\(u=\log(w)\\)</span>. The problem is now asking for the best constant prediction for the transformed values <span class="math-inline">\\(\log(y&#95;i)\\)</span>, so
-```
+   For (iii), let <span class="math-inline">\\(u=\log(w)\\)</span>. The problem is now asking for the best constant prediction for the transformed values <span class="math-inline">\\(\log(y&#95;i)\\)</span>, so
+
 <div class="math-display">
 $$
 u^* = \frac{\log(3)+\log(6)+\log(6)+\log(13) = \log(3 \cdot 6 \cdot 6 \cdot 13)}{4}
@@ -242,10 +239,9 @@ $$
 </div>
 
  This was also a homework problem.
-
 </details>
 
-**(iv)** (3 pts) The slope of the graph of <span class="math-inline">\\(R(w) = \displaystyle\frac{1}{4} \sum&#95;{i = 1}^4 |y&#95;i - w|\\)</span> at <span class="math-inline">\\(w = \alpha\\)</span> is <span class="math-inline">\\(-1/2\\)</span>. Among the options above, which could be <span class="math-inline">\\(\alpha\\)</span>?
+4.  (3 pts) The slope of the graph of <span class="math-inline">\\(R(w) = \displaystyle\frac{1}{4} \sum&#95;{i = 1}^4 |y&#95;i - w|\\)</span> at <span class="math-inline">\\(w = \alpha\\)</span> is <span class="math-inline">\\(-1/2\\)</span>. Among the options above, which could be <span class="math-inline">\\(\alpha\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
@@ -253,16 +249,19 @@ $$
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
-```python
-For (iv), the slope of mean absolute error at any <span class="math-inline">\\(w\\)</span> that is not a data point is
-```
+   For (iv), the slope of mean absolute error at any <span class="math-inline">\\(w\\)</span> that is not a data point is
+
+
+
 <div class="math-display">
 $$
 \frac{\text{\# left of } w - \text{\# right of } w}{n}
 $$
 </div>
 
-Here, in order to achieve a slope of <span class="math-inline">\\(-1/2\\)</span>, we need to have 1 data point to the left of <span class="math-inline">\\(w\\)</span> and 3 to the right, since <span class="math-inline">\\(\frac{1-3}{4} = -1/2\\)</span>. This means we need <span class="math-inline">\\(w\\)</span> to be between <span class="math-inline">\\(3\\)</span> and <span class="math-inline">\\(6\\)</span>, **exclusive**. The only value in this interval is <span class="math-inline">\\(B\\)</span>,
+   Here, in order to achieve a slope of <span class="math-inline">\\(-1/2\\)</span>, we need to have 1 data point to the left of <span class="math-inline">\\(w\\)</span> and 3 to the right, since <span class="math-inline">\\(\frac{1-3}{4} = -1/2\\)</span>. This means we need <span class="math-inline">\\(w\\)</span> to be between <span class="math-inline">\\(3\\)</span> and <span class="math-inline">\\(6\\)</span>, **exclusive**. The only value in this interval is <span class="math-inline">\\(B\\)</span>,
+
+
 
 <div class="math-display">
 $$
@@ -500,7 +499,7 @@ There are infinitely many possible vectors <span class="math-inline">\\(\vec b\\
 
 <div class="math-display">
 $$
-\text{\text{one possible }\vec b\text{}} = \_\_\_\_\_\_
+\text{one possible }\vec b = \_\_\_\_\_\_
 $$
 </div>
 
@@ -832,11 +831,11 @@ Below, select **one possible set** of columns of <span class="math-inline">\\(A\
 $$
 \begin{array}{c|c}
 \text{Column} & \text{Include in your basis?} \\\\ \hline
-\vec a^{(1)} & $\square$  \quad  \\\\
-\vec a^{(2)} & $\square$  \quad  \\\\
-\vec a^{(3)} & $\square$  \quad  \\\\
-\vec a^{(4)} & $\square$  \quad  \\\\
-\vec a^{(5)} & $\square$  \quad
+\vec a^{(1)} & \square  \quad  \\\\
+\vec a^{(2)} & \square  \quad  \\\\
+\vec a^{(3)} & \square  \quad  \\\\
+\vec a^{(4)} & \square  \quad  \\\\
+\vec a^{(5)} & \square  \quad
 \end{array}
 $$
 </div>
