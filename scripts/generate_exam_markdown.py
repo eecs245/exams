@@ -183,6 +183,16 @@ def parse_args() -> argparse.Namespace:
         "--solutions-pdf-link",
         help="Explicit URL for the 'Solutions PDF' button, overriding filesystem detection.",
     )
+    # >=== --videos-link flag ===< #
+    # Added: 08/04/26
+    # Effects:
+    #   - build_homework_page() signature
+    #   - main()
+    # Walkthrough-video button rendered next to the Solutions PDF button.
+    parser.add_argument(
+        "--videos-link",
+        help="URL for a 'Video Walkthroughs' button next to the Solutions PDF button.",
+    )
     # >=== --layout flag ===< #
     # Added: 07/23/26 1:44PM
     # Effects:
@@ -251,6 +261,7 @@ def main() -> int:
             body_markdown=body_markdown,
             pdf_link=pdf_link,
             solutions_pdf_link=solutions_pdf_link,
+            videos_link=args.videos_link,
             output_md=output_md,
         layout=args.layout,
         exam=args.exam,
@@ -434,14 +445,24 @@ def transform_assignment_tex(
     text: str, include_solutions: bool = False, exam: bool = False
 ) -> str:
     text = strip_document_wrapper(text)
+    text = strip_false_blocks(text)
     if exam:
         # Exam web views show problems only: honor-code signature blocks,
         # room bubbles, and blank filler pages are print-exam apparatus.
         # Instructions still render from \submissioninstructions metadata.
+        # These trims must run AFTER strip_false_blocks: draft problems in
+        # \iffalse..\fi can hold the file's last \end{prob}, and trimming
+        # first would amputate the \fi and resurrect the draft.
         first_prob = re.search(r"(?m)^[ \t]*\\begin\{prob\}", text)
         if first_prob:
             text = text[first_prob.start():]
-    text = strip_false_blocks(text)
+        # Symmetric tail trim: everything after the final \end{prob} is
+        # print-exam apparatus (congrats note, draw-us-a-picture \emptybox,
+        # "intentionally left blank" filler pages) with no web equivalent.
+        last_prob_end = text.rfind("\\end{prob}")
+        if last_prob_end != -1:
+            text = text[: last_prob_end + len("\\end{prob}")] + "\n"
+    text = strip_latex_comments(text)
     text = strip_latex_comments(text)
     text = strip_layout_commands(text)
     text = replace_answerbox_markers(text)  # NOTE: 07/23/26 3:18PM fix to \minibox and \labeledanswerbox rendering
@@ -466,6 +487,11 @@ def transform_assignment_tex(
 # Added: 07/23/26 3:16PM
 # Effects: transform_assignment_tex()
 # Read docstring below for info.
+# Fill-in blank shown where a print answer box stood. Escaped underscores
+# survive both pandoc text mode (literal _) and MathJax math mode.
+ANSWER_BLANK = r"\_\_\_\_\_\_"
+
+
 def replace_answerbox_markers(text: str) -> str:
     r"""Convert eecs245.sty answer-box macros to MathJax-renderable \boxed answers.
  
@@ -473,7 +499,8 @@ def replace_answerbox_markers(text: str) -> str:
     bold answer; pandoc doesn't know it, so in math it leaks verbatim and inner $..$
     splits the math span. \labeledanswerbox{label}{answer}[h][w][h] expands to a
     tikzpicture, which pandoc mangles -- silently dropping the answer. Both are
-    print-layout constructs; the faithful web equivalent is boxed bold math.
+    print-layout constructs; the web equivalent is a fill-in blank, with the
+    answer available only via the solution dropdown / solutions PDF.
     """
  
     def strip_math_dollars(content: str) -> str:
@@ -533,9 +560,8 @@ def replace_answerbox_markers(text: str) -> str:
             # Labels land in math mode; mixed prose/$math$ labels must become
             # \text{}/math alternation, not dollar-stripped prose-as-math.
             + split_text_and_math(args[0].strip())
-            + " = \\boxed{\\textbf{"
-            + strip_math_dollars(args[1])
-            + "}}$$\n\n"
+            + " = " + ANSWER_BLANK
+            + "$$\n\n"
         ),
     )
     text = rewrite(
@@ -543,7 +569,12 @@ def replace_answerbox_markers(text: str) -> str:
         "minibox",
         2,
         1,
-        lambda args: "\\boxed{\\textbf{" + strip_math_dollars(args[1]) + "}}",
+        # args[1] (the correct answer) is deliberately discarded: in print
+        # these boxes are \ifshowsolutions-gated, and rendering the answer
+        # in the web question body leaks solutions outside the dropdown.
+        # Every box's answer is also covered by an adjacent solution env
+        # (or the solutions PDF), so the web question shows a blank.
+        lambda args: ANSWER_BLANK,
     )
     return text
 
@@ -770,9 +801,13 @@ def strip_command_with_args(text: str, command: str) -> str:
     return text[: match.start()] + text[end:]
 
 
-# ===> problem flag registry <=== #
-# Added: 07/27/26 3:50PM
+# ===> Problem flag registry <=== #
 # Config-driven mapping from prob-title annotations to heading badges.
+# Each entry: (pattern with optional capture groups, flag-id template,
+# badge-label template). Adding a new annotation next term is one tuple,
+# not a new regex hunt. The full matched chunk (plus any \hfill / \: / \quad
+# spacing glue preceding it) is stripped from the title, so downstream
+# points extraction sees "(N pts)" back at the end where it expects it.
 PROBLEM_FLAG_PATTERNS: list[tuple[re.Pattern[str], str, str]] = [
     (
         re.compile(
@@ -975,6 +1010,28 @@ EXAM_DISCLAIMER = (
     "on this page.*"
 )
 
+# Breadcrumb + theme top-bar suppression for exam web views. The site
+# header duplicates navigation the breadcrumb provides, and crowds the
+# exam content on mobile.
+EXAM_NAV_SNIPPET = """<style>
+#main-header,
+.site-header,
+.aux-nav,
+.main-header,
+.side-bar {
+  display: none !important;
+}
+body { padding-top: 0 !important; }
+.main-content-wrap { margin-top: 0 !important; }
+.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
+.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
+.exam-breadcrumb a:hover { text-decoration: underline; }
+.exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
+</style>
+<nav class="exam-breadcrumb" aria-label="Breadcrumb">
+<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+</nav>"""
+
 
 def build_homework_page(
     metadata: Metadata,
@@ -985,6 +1042,7 @@ def build_homework_page(
     output_md: Path,
     layout: str = "page",
     exam: bool = False,
+    videos_link: str | None = None,
 ) -> str:
     cleaned_body = cleanup_markdown(
         body_markdown,
@@ -1001,7 +1059,14 @@ def build_homework_page(
         if solutions_pdf_link
         else ""
     )
-    action_buttons = "\n".join(button for button in (pdf_button, solutions_button) if button)
+    videos_button = (
+        f'<a class="btn btn-info assignment-pdf-button" href="{videos_link}" target="_blank">Video Walkthroughs 🎥</a>'
+        if videos_link
+        else ""
+    )
+    action_buttons = "\n".join(
+        button for button in (pdf_button, solutions_button, videos_button) if button
+    )
     actions = f'<div class="assignment-actions">\n{action_buttons}\n</div>' if action_buttons else ""
     if exam:
         # Exams drop the print instructions box (uniqname rules, notes-sheet
@@ -1043,6 +1108,12 @@ def build_homework_page(
         parts.extend(
             [f"**{'administered' if exam else 'due'}** {metadata.due_date}", ""]
         )
+    if exam:
+        # Web-view exams are reached from the exams homepage; the theme's
+        # top bar duplicates that navigation, so hide it and provide a
+        # breadcrumb instead (exams index + course home).
+        parts.insert(parts.index(f"# {display_title}"), EXAM_NAV_SNIPPET)
+        parts.insert(parts.index(f"# {display_title}"), "")
     if actions:
         parts.extend([actions, ""])
     parts.extend(
@@ -1635,11 +1706,6 @@ def looks_like_code_line(line: str) -> bool:
     return bool(re.match(r"[A-Za-z_][\w.]*\s*(?:=|\(|@)", stripped))
 
 
-    # >=== rendering helpers ===< #
-    # Added: 07/27/26 3:12PM
-    # Effects:
-    #   
-    # See docstrings for info
 CHOICE_MARKER_HTML_PATTERN = re.compile(
     r'<span class="(?:mc-bubble|mc-square)(?: mc-correct)?" aria-hidden="true"></span>'
 )

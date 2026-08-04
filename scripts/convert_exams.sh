@@ -18,8 +18,15 @@ for tex in "$SRC_ROOT"/*/*.tex; do
   if [ -f "$REPO_ROOT/resources/exams/${name}-solutions.pdf" ]; then
     args+=(--solutions-pdf-link "/resources/exams/${name}-solutions.pdf")
   fi
+  # Walkthrough videos: looked up from scripts/exam_videos.conf (name=url lines).
+  videos_url="$(grep -E "^${name}=" "$SCRIPT_DIR/exam_videos.conf" 2>/dev/null | head -1 | cut -d= -f2- || true)"
+  if [ -n "$videos_url" ]; then
+    args+=(--videos-link "$videos_url")
+  fi
   if python3 "$SCRIPT_DIR/generate_exam_markdown.py" \
       "$tex" "$REPO_ROOT/exams/${name}/index.md" "${args[@]}"; then
+    # Keep the LaTeX source of truth alongside its generated page.
+    cp "$tex" "$REPO_ROOT/exams/${name}/${name}.tex"
     echo "PASS  $name"
   else
     echo "FAIL  $name"; fail=1
