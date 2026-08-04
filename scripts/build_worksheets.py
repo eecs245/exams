@@ -25,7 +25,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-from exams.scripts.generate_exam_markdown import (  # noqa: E402
+from generate_exam_markdown import (  # noqa: E402
     EXAM_NAV_SNIPPET,
     HOMEWORK_STYLE_SNIPPET,
     MATHJAX_SNIPPET,
