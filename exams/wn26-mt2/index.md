@@ -123,7 +123,7 @@ body { padding-top: 0 !important; }
 .exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
 </style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
-<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+<a href="/">← Back</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
 </nav>
 
 # Winter 2026 Midterm 2

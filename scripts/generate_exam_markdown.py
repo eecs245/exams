@@ -2,7 +2,9 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import html
+import os
 import re
 import shutil
 import subprocess
@@ -233,6 +235,8 @@ def main() -> int:
         expanded_tex,
         include_solutions=args.include_solutions,
         exam=args.exam, # show solutions flag
+        figure_assets_dir=output_md.parent / "imgs",
+        source_dir=source_tex.parent,
     )
     pdf_link = args.pdf_link or compute_pdf_link(repo_root, output_md)
     solutions_pdf_link = (
@@ -441,8 +445,112 @@ def find_unescaped_percent(line: str) -> int | None:
     return None
 
 
+# ===> TikZ figure rendering <=== #
+# Pandoc silently drops tikzpicture environments, so figures drawn in TikZ
+# (Markov chains, geometry diagrams) vanish from the web view with no
+# warning. Each real figure is compiled standalone to SVG and swapped for an
+# \includegraphics reference before pandoc runs.
+#
+# Preamble packages mirror what the exam sources rely on. If a future figure
+# needs a library that is not here, rendering fails loudly (see
+# render_tikz_figures) rather than dropping the figure silently.
+TIKZ_STANDALONE_PREAMBLE = r"""\documentclass[border=4pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows,arrows.meta,positioning,calc,shapes,patterns,decorations.pathreplacing}
+\usepackage{amsmath,amssymb,amsfonts}
+\begin{document}
+"""
+
+TIKZ_BLOCK_PATTERN = re.compile(
+    r"(?s)\\begin\{tikzpicture\}.*?\\end\{tikzpicture\}"
+)
+
+
+def render_tikz_figures(text: str, assets_dir: Path, source_dir: Path) -> str:
+    r"""Compile content-bearing tikzpicture blocks to SVG; return rewritten TeX.
+
+    Blocks containing a "workbox" node are the blank answer areas from the
+    print exam, not figures -- those are dropped (consistent with removing
+    answer boxes from the web view). Everything else is a real figure.
+
+    Output files are content-addressed (tikz-<hash>.svg), so unchanged
+    figures are not recompiled and regeneration is deterministic.
+    """
+    blocks = [
+        match for match in TIKZ_BLOCK_PATTERN.finditer(text)
+        if "workbox" not in match.group(0)
+    ]
+    if not blocks:
+        return text
+    if shutil.which("pdflatex") is None or shutil.which("pdftocairo") is None:
+        raise SystemExit(
+            f"{len(blocks)} TikZ figure(s) need rendering but pdflatex/pdftocairo "
+            "were not found. Install a TeX distribution (e.g. MacTeX/BasicTeX plus "
+            "poppler for pdftocairo), or these figures will be missing from the "
+            "web view."
+        )
+    assets_dir.mkdir(parents=True, exist_ok=True)
+    result: list[str] = []
+    cursor = 0
+    for match in blocks:
+        body = match.group(0)
+        digest = hashlib.sha256(body.encode()).hexdigest()[:12]
+        svg_name = f"tikz-{digest}.svg"
+        svg_path = assets_dir / svg_name
+        if not svg_path.exists():
+            compile_tikz_to_svg(body, svg_path, source_dir)
+        result.append(text[cursor : match.start()])
+        result.append(
+            f"\\includegraphics{{{assets_dir.name}/{svg_name}}}"
+        )
+        cursor = match.end()
+    result.append(text[cursor:])
+    return "".join(result)
+
+
+def compile_tikz_to_svg(figure_tex: str, svg_path: Path, source_dir: Path) -> None:
+    """Compile one tikzpicture to SVG via pdflatex + pdftocairo."""
+    with tempfile.TemporaryDirectory() as tmp_dir_str:
+        tmp_dir = Path(tmp_dir_str)
+        (tmp_dir / "fig.tex").write_text(
+            TIKZ_STANDALONE_PREAMBLE + figure_tex + "\n\\end{document}\n"
+        )
+        # TEXINPUTS lets figures use macros from the exam's own .sty files.
+        env = dict(os.environ)
+        env["TEXINPUTS"] = f"{source_dir}:{source_dir.parent}:"
+        compile_result = subprocess.run(
+            ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", "fig.tex"],
+            cwd=tmp_dir,
+            env=env,
+            capture_output=True,
+            text=True,
+        )
+        if compile_result.returncode != 0 or not (tmp_dir / "fig.pdf").exists():
+            log = (tmp_dir / "fig.log").read_text() if (tmp_dir / "fig.log").exists() else ""
+            errors = "\n".join(
+                line for line in log.splitlines() if line.startswith("!")
+            )
+            raise SystemExit(
+                f"Failed to render a TikZ figure to {svg_path.name}.\n"
+                f"{errors or compile_result.stdout[-800:]}\n"
+                "If the figure needs an extra TikZ library, add it to "
+                "TIKZ_STANDALONE_PREAMBLE in scripts/generate_exam_markdown.py."
+            )
+        subprocess.run(
+            ["pdftocairo", "-svg", "fig.pdf", "fig.svg"],
+            cwd=tmp_dir,
+            check=True,
+            capture_output=True,
+        )
+        svg_path.write_bytes((tmp_dir / "fig.svg").read_bytes())
+
+
 def transform_assignment_tex(
-    text: str, include_solutions: bool = False, exam: bool = False
+    text: str,
+    include_solutions: bool = False,
+    exam: bool = False,
+    figure_assets_dir: Path | None = None,
+    source_dir: Path | None = None,
 ) -> str:
     text = strip_document_wrapper(text)
     text = strip_false_blocks(text)
@@ -464,6 +572,11 @@ def transform_assignment_tex(
             text = text[: last_prob_end + len("\\end{prob}")] + "\n"
     text = strip_latex_comments(text)
     text = strip_latex_comments(text)
+    # Render TikZ figures before any other rewriting: the blocks must still be
+    # verbatim LaTeX to compile, and comments are already stripped so
+    # commented-out figures are not rendered.
+    if figure_assets_dir is not None and source_dir is not None:
+        text = render_tikz_figures(text, figure_assets_dir, source_dir)
     text = strip_layout_commands(text)
     text = replace_answerbox_markers(text)  # NOTE: 07/23/26 3:18PM fix to \minibox and \labeledanswerbox rendering
     text = replace_youtube_embed_markers(text)
@@ -1029,7 +1142,7 @@ body { padding-top: 0 !important; }
 .exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
 </style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
-<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+<a href="/">← Back</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
 </nav>"""
 
 

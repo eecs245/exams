@@ -123,7 +123,7 @@ body { padding-top: 0 !important; }
 .exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
 </style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
-<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+<a href="/">← Back</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
 </nav>
 
 # Winter 2026 Final Exam
@@ -1544,6 +1544,8 @@ $$
 
 The state diagram below describes a Markov chain with four states.
 
+![image](imgs/tikz-4049c66dfd05.svg)
+
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
@@ -1646,6 +1648,8 @@ There's a section in [Chapter 9.4](https://notes.eecs245.org/eigenvalues-and-eig
 </details>
 
 Now, consider a **modified** version of the Markov chain. Changes have been emphasized in **bold**.
+
+![image](imgs/tikz-d6c2facf0597.svg)
 
 </div>
 </div>

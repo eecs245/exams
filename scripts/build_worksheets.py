@@ -134,14 +134,29 @@ def extract_problem(exam_dir: str, number: int) -> tuple[str, str]:
 
 
 def rewrite_asset_paths(body: str, exam_dir: str) -> str:
-    """Point relative src/href references back at the exam's own directory."""
-    def rewrite(match: re.Match[str]) -> str:
-        attr, quote, url = match.group(1), match.group(2), match.group(3)
-        if url.startswith(("http://", "https://", "/", "#", "mailto:")):
-            return match.group(0)
-        return f"{attr}={quote}/exams/{exam_dir}/{url}{quote}"
+    """Point relative asset references back at the exam's own directory.
 
-    return re.sub(r"\b(src|href)=([\"'])([^\"']+)\2", rewrite, body)
+    Covers both HTML attributes (src=/href=) and markdown image syntax
+    ![alt](path) -- pandoc emits the latter for images with no width
+    attribute, e.g. rendered TikZ figures.
+    """
+    def absolutize(url: str) -> str | None:
+        if url.startswith(("http://", "https://", "/", "#", "mailto:")):
+            return None
+        return f"/exams/{exam_dir}/{url}"
+
+    def rewrite_attr(match: re.Match[str]) -> str:
+        attr, quote, url = match.group(1), match.group(2), match.group(3)
+        new = absolutize(url)
+        return match.group(0) if new is None else f"{attr}={quote}{new}{quote}"
+
+    def rewrite_md_image(match: re.Match[str]) -> str:
+        alt, url = match.group(1), match.group(2)
+        new = absolutize(url)
+        return match.group(0) if new is None else f"![{alt}]({new})"
+
+    body = re.sub(r"\b(src|href)=([\"'])([^\"']+)\2", rewrite_attr, body)
+    return re.sub(r"!\[([^\]]*)\]\(([^)\s]+)\)", rewrite_md_image, body)
 
 
 # ===> Page assembly <=== #

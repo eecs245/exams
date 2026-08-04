@@ -123,7 +123,7 @@ body { padding-top: 0 !important; }
 .exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
 </style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
-<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+<a href="/">← Back</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
 </nav>
 
 # Spring 2026 Final Exam
@@ -1405,6 +1405,8 @@ Another way to think about this is that for any <span class="math-inline">\\(k\\
 ## Problem 11 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
 
 The state diagram below describes a Markov chain with three states. <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> are both constants between 0 and 1.
+
+![image](imgs/tikz-c9b7fae1abbb.svg)
 
 Suppose that in the long run, <span class="math-inline">\\(\displaystyle\frac{25}{60}\\)</span> of the time is spent in state 1, <span class="math-inline">\\(\displaystyle\frac{21}{60}\\)</span> of the time is spent in state 2, and <span class="math-inline">\\(\displaystyle\frac{14}{60}\\)</span> of the time is spent in state 3.
 

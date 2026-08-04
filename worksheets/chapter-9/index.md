@@ -128,7 +128,7 @@ body { padding-top: 0 !important; }
 .exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
 </style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
-<a href="/">← All exams</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+<a href="/">← Back</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
 </nav>
 
 # Chapter 9: Eigenvalues and Eigenvectors
@@ -857,6 +857,8 @@ $$
 
 The state diagram below describes a Markov chain with four states.
 
+![image](/exams/wn26-final/imgs/tikz-4049c66dfd05.svg)
+
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
@@ -959,6 +961,8 @@ There's a section in [Chapter 9.4](https://notes.eecs245.org/eigenvalues-and-eig
 </details>
 
 Now, consider a **modified** version of the Markov chain. Changes have been emphasized in **bold**.
+
+![image](/exams/wn26-final/imgs/tikz-d6c2facf0597.svg)
 
 </div>
 </div>
@@ -1300,6 +1304,8 @@ Another way to think about this is that for any <span class="math-inline">\\(k\\
 
 
 The state diagram below describes a Markov chain with three states. <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> are both constants between 0 and 1.
+
+![image](/exams/sp26-final/imgs/tikz-c9b7fae1abbb.svg)
 
 Suppose that in the long run, <span class="math-inline">\\(\displaystyle\frac{25}{60}\\)</span> of the time is spent in state 1, <span class="math-inline">\\(\displaystyle\frac{21}{60}\\)</span> of the time is spent in state 2, and <span class="math-inline">\\(\displaystyle\frac{14}{60}\\)</span> of the time is spent in state 3.
 
