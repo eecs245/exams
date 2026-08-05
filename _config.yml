@@ -18,7 +18,6 @@ exclude:
   - vendor/gems
   - vendor/ruby
   - scripts
-  - exams-old
 
 theme: just-the-docs
 color_scheme: um
