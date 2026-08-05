@@ -1,4 +1,8 @@
 **/.DS_Store
+# iCloud conflict copies ("index 2.md", "w_r_axes 3.png"). This repo lives under
+# ~/Documents, and regenerating the question tree rewrites every file at once,
+# which reliably makes iCloud fork duplicates. No real file here has a space.
+* [0-9].*
 _site/
 .jekyll-cache/
 CURSOR.md
