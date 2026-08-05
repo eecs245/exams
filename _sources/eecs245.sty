@@ -1,0 +1,405 @@
+% EECS 245: Mathematics for Machine Learning — Homework style
+% University of Michigan
+% Usage: \usepackage{eecs245}
+
+% FONT CONFIGURATION - Change this line to switch fonts
+\newcommand{\EECSfontchoice}{palatino} % Options: palatino, avenir, helvetica
+
+% SOLUTION DISPLAY FLAG - Set to true to show solutions, false to hide them
+\newif\ifshowsolutions
+\showsolutionsfalse % Default: hide solutions
+
+% Command to enable solution display (call this in your document preamble)
+\newcommand{\enablesolutions}{\showsolutionstrue}
+
+% STUDENT INFO SECTION FLAG - Set to true to include name/uniqname section, false to hide it
+\newif\ifshowstudentinfo
+\showstudentinfofalse % Default: hide student info section
+
+% Command to enable student info section (call this in your document preamble)
+\newcommand{\enablestudentinfo}{\showstudentinfotrue}
+
+% EXAM FLAG - Set to true to include UMID and room options in student info section
+\newif\ifisexam
+\isexamfalse % Default: not an exam
+
+% Command to enable exam mode (call this in your document preamble)
+\newcommand{\enableexam}{\isexamtrue}
+
+% LAB FLAG - Set to true to label problems as "Lab" instead of "Problem"
+\newif\ifislab
+\islabfalse % Default: not a lab
+
+% Command to enable lab mode (call this in your document preamble)
+\newcommand{\enablelab}{\islabtrue}
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{eecs245}[2025/08/20 EECS 245 MML homework style]
+
+% Font setup based on user choice
+\RequirePackage{iftex}
+\RequirePackage{xstring}
+
+\newcommand{\EECSfontnote}{}
+
+\IfStrEqCase{\EECSfontchoice}{
+  {palatino}{%
+    \ifPDFTeX
+      \RequirePackage{mathpazo} % Palatino for pdfLaTeX
+      \renewcommand{\familydefault}{\rmdefault}
+    \else
+      \RequirePackage{fontspec}
+      \setmainfont{Palatino}
+      \renewcommand{\familydefault}{\rmdefault}
+    \fi
+  }
+  {avenir}{%
+    \ifPDFTeX
+      \RequirePackage[scaled=0.95]{helvet}
+      \renewcommand{\familydefault}{\sfdefault}
+    \else
+      \RequirePackage{fontspec}
+      \defaultfontfeatures{Ligatures=TeX, Scale=MatchLowercase}
+      \IfFontExistsTF{Avenir}{%
+        \setsansfont{Avenir}[
+          UprightFont = *,
+          ItalicFont  = * Italic,
+          BoldFont    = * Demi Bold,
+          BoldItalicFont = * Demi Bold Italic
+        ]
+      }{%
+        \setsansfont{Helvetica Neue}
+      }
+      \renewcommand{\familydefault}{\sfdefault}
+    \fi
+  }
+  {helvetica}{%
+    \ifPDFTeX
+      \RequirePackage[scaled=0.95]{helvet}
+      \renewcommand{\familydefault}{\sfdefault}
+    \else
+      \RequirePackage{fontspec}
+      \setsansfont{Helvetica Neue}
+      \renewcommand{\familydefault}{\sfdefault}
+    \fi
+  }
+}[\PackageError{eecs245}{Unknown font choice: \EECSfontchoice}{Valid options are: palatino, avenir, helvetica}]
+
+% Core packages
+% Paper size and margins (US Letter)
+\RequirePackage[letterpaper,margin=1in]{geometry}
+
+% No paragraph indentation and increased paragraph spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\RequirePackage{amsmath, amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{enumitem}
+\RequirePackage{xcolor}
+
+\RequirePackage[breakable]{tcolorbox}
+\tcbuselibrary{skins}
+\RequirePackage{hyperref}
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\RequirePackage{graphicx}
+\RequirePackage{comment}
+\RequirePackage{xparse}
+\RequirePackage{tikz}
+
+% Colors
+\definecolor{umblue}{HTML}{3D81F6}
+\definecolor{ummaize}{HTML}{FFCB05}
+\definecolor{lightgray}{gray}{0.92}
+
+% Hyperref setup
+\hypersetup{
+  colorlinks=true,
+  linkcolor={umblue},
+  urlcolor={umblue},
+  citecolor={umblue},
+  pdfauthor={EECS 245 — Mathematics for Machine Learning},
+  pdftitle={EECS 245 Homework}
+}
+
+% Make all links bold
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\textbf{#2}}}
+\let\oldurl\url
+\renewcommand{\url}[1]{\oldurl{\textbf{#1}}}
+
+% Header/footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\small\small \thepage}
+
+% Exam mode: Add uniqname box to top-right corner of odd pages starting from page 3
+% Define a command that checks page number (evaluated at typeset time)
+\newcommand{\examuniqnameheader}{%
+  \ifnum\c@page>2\relax
+    \ifodd\c@page%
+      \begin{flushright}
+        \hspace{20em} \textbf{uniqname:} \hrulefill
+      \end{flushright}
+    \fi
+  \fi
+}
+
+% Use AtBeginDocument to ensure this runs after \enableexam is called
+\AtBeginDocument{%
+  \ifisexam
+    \fancyhead[RO]{\examuniqnameheader}
+    \fancyhead[RE]{} % Clear even page headers
+    \fancyhead[LO]{} % Clear left odd page headers
+    \fancyhead[LE]{} % Clear left even page headers
+  \fi
+}
+
+% Problem and activity environments
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem{activitythm}{Activity}
+
+% Subproblem counter (resets with each problem)
+\newcounter{subproblem}[problem]
+\renewcommand{\thesubproblem}{\alph{subproblem}}
+
+% Subactivity counter (resets with each activity)
+\newcounter{subactivity}[activitythm]
+\renewcommand{\thesubactivity}{\alph{subactivity}}
+
+% Helper: format Problem/Lab header. Exam headers never use a colon after
+% the problem number; non-exam titles keep the old named-title colon behavior.
+\ExplSyntaxOn
+\tl_new:N \l__eecs_probheader_title_tl
+\cs_new:Npn \__eecs_probheader_label:
+  {
+    \ifislab
+      Lab~\theproblem
+    \else
+      Problem~\theproblem
+    \fi
+  }
+\cs_new_protected:Npn \eecs_probheader:n #1
+  {
+    \tl_if_eq:nnTF {#1} {\@empty}
+      { \__eecs_probheader_label: }
+      {
+        \ifisexam
+          \__eecs_probheader_label: \ #1
+        \else
+          \tl_set:Nx \l__eecs_probheader_title_tl { \tl_to_str:n {#1} }
+          \regex_match:nVTF { \A \( .* \s+ pts? \) \Z } \l__eecs_probheader_title_tl
+            { \__eecs_probheader_label: \ #1 }
+            { \__eecs_probheader_label: :\ #1 }
+        \fi
+      }
+  }
+\cs_new_protected:Npn \eecsprobheader #1 { \eecs_probheader:n {#1} }
+\ExplSyntaxOff
+\newcommand{\@probheader}[1]{\eecsprobheader{#1}}
+
+% User-facing shorthands
+\newenvironment{prob}[1][\@empty]{% optional title
+  \refstepcounter{problem}%
+  {\noindent\large\textbf{\@probheader{#1}}}\\[0.4em]%
+}{\vspace{1.5em}} % Slightly increase spacing after each problem
+
+\newenvironment{activity}[1][\@empty]{% optional title
+  \refstepcounter{activitythm}{\noindent\large\textbf{Activity~\theactivitythm\ifx#1\@empty\else:\ #1\fi}}\\[0.4em]
+}{\vspace{1.5em}} % Slightly increase spacing after each activity
+
+\newenvironment{subprob}{%
+  \refstepcounter{subproblem}%
+  \begin{list}{}{\leftmargin=1.5em\rightmargin=0pt\parsep=0pt\itemsep=0pt\topsep=0pt}%
+  \item[\textbf{\thesubproblem)}]%
+}{\end{list}\vspace{0.2em}}
+
+\newenvironment{subactivity}{%
+  \refstepcounter{subactivity}%
+  \begin{list}{}{\leftmargin=1.5em\rightmargin=0pt\parsep=0pt\itemsep=0pt\topsep=0pt}%
+  \item[\textbf{\thesubactivity)}]%
+}{\end{list}}
+
+% Boxed submission header macro
+\newtcolorbox{eecsheaderbox}{colback=white, colframe=black, boxrule=0.6pt, arc=0pt, left=10pt, right=10pt, top=8pt, bottom=8pt}
+
+\newcommand{\eecsSubmissionHeader}[6]{%
+  % #1 course, #2 term, #3 assignment, #4 due, #5 submission instructions (can be multiline), #6 room options (for exam mode)
+  {\Large\bfseries #3\ifshowsolutions\ \textcolor{red}{Solutions}\fi}\\[0.4em]
+  \IfStrEq{#2}{}{%
+    {\large #1}\\[0.4em]
+  }{%
+    {\large #1, #2}\\[0.4em]
+  }%
+  \ifx\relax#4\relax
+  \else
+    {\textbf{due} #4}\\
+  \fi
+  % \noindent\rule{\linewidth}{0.4pt}
+  \ifshowstudentinfo
+    \begin{tcolorbox}[colback=white, colframe=black, boxrule=0.6pt, arc=0pt, left=10pt, right=10pt, top=8pt, bottom=8pt]
+      \vspace{1em}
+      \textbf{Name:} \hrulefill \\ \\ \\
+      \textbf{uniqname:} \hrulefill \\
+      \ifisexam
+        \\ \\
+        \textbf{UMID:} \hrulefill \\ \\
+        \textbf{Room:} #6 \\
+      \fi
+    \end{tcolorbox}
+  \fi
+  \begin{tcolorbox}[colback=lightgray, colframe=black, boxrule=0.6pt, arc=0pt]
+    #5
+  \end{tcolorbox}
+}
+
+% Convenience macros
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+\newcommand{\1}{\mathbf{1}}
+
+% Better spacing and lists
+\setlist[itemize]{topsep=0.25em, itemsep=0.25em}
+\setlist[enumerate]{topsep=0.25em, itemsep=0.25em}
+
+% Solution environment (conditionally displayed based on flag)
+\newenvironment{solution}{
+  \ifshowsolutions
+    \begin{tcolorbox}[
+      colback=lightgray, 
+      colframe=black, 
+      boxrule=0.6pt, 
+      arc=0pt, 
+      left=10pt, 
+      right=10pt, 
+      top=8pt, 
+      bottom=8pt,
+      breakable,
+      enhanced,
+      break at=\textheight,
+      pad at break*=0pt,
+      lefttitle=0pt,
+      righttitle=0pt,
+      toptitle=0pt,
+      bottomtitle=0pt
+    ]
+    \textbf{Solution: }
+  \else
+    \setbox0=\vbox\bgroup
+  \fi
+}{
+  \ifshowsolutions
+    \end{tcolorbox}
+  \else
+    \egroup
+  \fi
+}
+
+% Empty box command for creating outlined boxes
+\NewDocumentCommand{\emptybox}{O{\linewidth} m}{%
+  % #1 width (optional, defaults to \linewidth to match solution boxes), #2 height (required)
+  \ifshowsolutions
+    % If solutions are shown, don't render empty boxes, but absorb trailing \\ and whitespace
+    \ignorespaces
+  \else
+    \fbox{%
+      \begin{minipage}[c][#2][c]{#1}%
+        \phantom{.}%
+      \end{minipage}%
+    }%
+  \fi
+}
+
+% Bubble commands for multiple choice problems
+% Improved bubble commands for better alignment, larger bubbles, and more whitespace after text
+
+% Bubble with argument for text, better vertical alignment, larger size, and more trailing space
+\newcommand{\bubble}[1]{%
+  \raisebox{-0.2ex}{\tikz[baseline={(0,-0.7ex)}]\draw[line width=1pt] (0,0) circle (0.55em);}%
+  \hspace{0.5em}#1\hspace{1.2em}%
+}
+
+\newcommand{\squarebubble}[1]{%
+  \raisebox{-1.2ex}{\tikz[baseline={(0,-0.7ex)}]\draw[line width=1pt] (0,0) rectangle (1.1em,1.1em);}%
+  \hspace{0.5em}#1\hspace{1.2em}%
+}
+
+\newcommand{\correctbubble}[1]{%
+  \ifshowsolutions
+    \raisebox{-0.2ex}{\tikz[baseline={(0,-0.7ex)}]\draw[line width=1pt,fill=black] (0,0) circle (0.55em);}%
+    \hspace{0.5em}#1\hspace{1.2em}%
+  \else
+    \raisebox{-0.2ex}{\tikz[baseline={(0,-0.7ex)}]\draw[line width=1pt] (0,0) circle (0.55em);}%
+    \hspace{0.5em}#1\hspace{1.2em}%
+  \fi
+}
+
+\newcommand{\correctsquarebubble}[1]{%
+  \ifshowsolutions
+    \raisebox{-1.2ex}{\tikz[baseline={(0,-0.7ex)}]\draw[line width=1pt,fill=black] (0,0) rectangle (1.1em,1.1em);}%
+    \hspace{0.5em}#1\hspace{1.2em}%
+  \else
+    \raisebox{-1.2ex}{\tikz[baseline={(0,-0.7ex)}]\draw[line width=1pt] (0,0) rectangle (1.1em,1.1em);}%
+    \hspace{0.5em}#1\hspace{1.2em}%
+  \fi
+}
+
+% Filled bubble command - always shows filled bubble regardless of solutions visibility
+\newcommand{\filledbubble}[1]{%
+  \raisebox{-0.2ex}{\tikz[baseline={(0,-0.7ex)}]\draw[line width=1pt,fill=black] (0,0) circle (0.55em);}%
+  \hspace{0.5em}#1\hspace{1.2em}%
+}
+
+% Minibox command for exam blanks with conditional answers and optional height
+\NewDocumentCommand{\minibox}{m m O{4em}}{%
+  % #1 = width, #2 = correct answer, #3 = height (optional, defaults to 4em)
+  \ifshowsolutions
+    \fbox{%
+      \begin{minipage}[c][#3][c]{#1}%
+        \centering\textbf{#2}%
+      \end{minipage}%
+    }%
+  \else
+    \fbox{%
+      \begin{minipage}[c][#3][c]{#1}%
+        \phantom{.}%
+      \end{minipage}%
+    }%
+  \fi
+}
+
+% Large answer area with a bottom-right "<label> = minibox"
+\NewDocumentCommand{\labeledanswerbox}{m m O{2.2cm} O{3cm} O{4em}}{%
+  % #1 = label before "=" (e.g., k), #2 = correct answer,
+  % #3 = large box height, #4 = minibox width, #5 = minibox height
+  \noindent
+  % baseline=(ansbox.south): default TikZ baseline is y=0 (top of box here), which can
+  % confuse TeX's vertical list and leave spurious glue below the picture.
+  \begin{tikzpicture}[baseline=(ansbox.south)]
+    \node[draw, inner sep=0pt, minimum width=\dimexpr\linewidth-0.8pt\relax, minimum height=#3, anchor=north west] (ansbox) at (0,0) {};
+    \node[anchor=south east, xshift=-6pt, yshift=6pt] at (ansbox.south east) {$#1 = \minibox{#4}{#2}[#5]$};
+  \end{tikzpicture}%
+}
+
+% Backwards-compatible wrapper for legacy usage
+\NewDocumentCommand{\kanswerbox}{m O{2.2cm} O{3cm} O{4em}}{%
+  \labeledanswerbox{k}{#1}[#2][#3][#4]
+}
+
+% Title block convenience
+\newcommand{\makemytitle}[6]{%
+  % #1 course, #2 term, #3 assignment, #4 due, #5 submission instructions, #6 room options (for exam mode)
+  \eecsSubmissionHeader{#1}{#2}{#3}{#4}{#5}{#6}
+}
+
+\newcommand{\labcodelinks}[2]{%
+There are two ways to access the supplemental Jupyter Notebook:
+\begin{itemize}
+  \item \textbf{Option 1 (preferred)}: Set up a Jupyter Notebook environment locally, use \texttt{git} to clone our \href{https://github.com/eecs245/sp26-code/tree/main/labs/#1/#2.ipynb}{course repository}, and open \texttt{labs/#1/#2.ipynb}. For instructions on how to do this, see the \href{https://eecs245.org/env-setup}{Environment Setup} page of the course website.
+  \item \textbf{Option 2}: Click \href{https://datahub.eecs245.org/hub/user-redirect/git-pull?repo=https\%3A\%2F\%2Fgithub.com\%2Feecs245\%2Fsp26-code\&urlpath=tree\%2Fsp26-code\%2Flabs\%2F#1\%2F#2.ipynb\&branch=main}{here} to open \texttt{#2.ipynb} on DataHub. Before doing so, read the instructions on the \href{https://eecs245.org/env-setup/\#option-2-using-the-eecs-245-datahub}{Environment Setup} page on how to use the DataHub.
+\end{itemize}
+}

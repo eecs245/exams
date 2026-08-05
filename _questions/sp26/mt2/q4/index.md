@@ -1,0 +1,131 @@
+---
+number: 4
+title: 
+heading_suffix:  <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
+points: 14
+flags: []
+has_solution: true
+images: []
+---
+
+Suppose <span class="math-inline">\\(X\\)</span> is a matrix such that
+
+<div class="math-display">
+$$
+X^TX =
+\begin{bmatrix}
+4 & 0\\\\
+0 & 4
+\end{bmatrix}
+\qquad
+XX^T =
+\begin{bmatrix}
+1 & \sqrt{3} & 0 & 0 \\\\
+\sqrt{3} & 3 & 0 & 0 \\\\
+0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 4
+\end{bmatrix}
+$$
+</div>
+
+<div class="assignment-parts" markdown="1">
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">a)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in each blank with an integer with no variables.
+
+X has \_\_\_\_\_\_ rows, \_\_\_\_\_\_ columns, and <span class="math-inline">\\(\text{rank}(X) =\\)</span> \_\_\_\_\_\_.
+
+<details markdown="1"><summary>Solution</summary>
+
+Recall that if <span class="math-inline">\\(X\\)</span> is an <span class="math-inline">\\(n \times d\\)</span> matrix, then <span class="math-inline">\\(X^T X\\)</span> is an <span class="math-inline">\\(d \times d\\)</span> matrix containing the dot products of all pairs of <span class="math-inline">\\(X\\)</span>'s columns, and <span class="math-inline">\\(XX^T\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix containing the dot products of all pairs of <span class="math-inline">\\(X\\)</span>'s rows.
+
+Here, since <span class="math-inline">\\(X^T X\\)</span> is <span class="math-inline">\\(2 \times 2\\)</span>, <span class="math-inline">\\(X\\)</span> must have 2 columns and since <span class="math-inline">\\(XX^T\\)</span> is <span class="math-inline">\\(4 \times 4\\)</span>, <span class="math-inline">\\(X\\)</span> must have 4 rows. So <span class="math-inline">\\(X\\)</span> is <span class="math-inline">\\(4 \times 2\\)</span>.
+
+Also, recall that <span class="math-inline">\\(\text{rank}(X) = \text{rank}(X^T X) = \text{rank}(XX^T)\\)</span>, as proven [here](https://notes.eecs245.org/matrices/null-space-rank-nullity/#example-rank-of-x-tx). Since <span class="math-inline">\\(\text{rank}(X^T X) = 2\\)</span> (as it is a diagonal matrix with 2 non-zero entries), we have that <span class="math-inline">\\(\text{rank}(X)=2\\)</span>.
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">b)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> For each statement below, determine whether it is true or false.
+
+1.  The columns of <span class="math-inline">\\(X\\)</span> are all orthogonal to each other.
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+2.  The columns of <span class="math-inline">\\(X\\)</span> are orthonormal.
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
+
+**(i)** This is true. The entries of <span class="math-inline">\\(X^TX\\)</span> are the dot products of the columns of <span class="math-inline">\\(X\\)</span> with each other. Since the off-diagonal entries are 0, the columns of <span class="math-inline">\\(X\\)</span> are orthogonal to each other.
+
+**(ii)** This is false. The diagonal entries of <span class="math-inline">\\(X^TX\\)</span> are the squared lengths of the columns of <span class="math-inline">\\(X\\)</span>. Since both diagonal entries are 4, both columns have length 2, not 1.
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">c)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">7 pts</span> Suppose <span class="math-inline">\\(P\\)</span> is the matrix that projects onto the column space of <span class="math-inline">\\(X\\)</span>. In other words, for any <span class="math-inline">\\(\vec y\\)</span> of the appropriate shape, <span class="math-inline">\\(P \vec y\\)</span> is the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>. **Find <span class="math-inline">\\(P\\)</span>**. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a matrix with no variables.
+
+<details markdown="1"><summary>Solution</summary>
+
+Since <span class="math-inline">\\(X\\)</span> has linearly independent columns, the projection matrix onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> is
+
+<div class="math-display">
+$$
+P = X(X^T X)^{-1}X^T
+$$
+</div>
+
+ Here,
+
+<div class="math-display">
+$$
+X^TX = 4I
+\qquad \Longrightarrow \qquad
+(X^TX)^{-1} = \frac{1}{4}I
+$$
+</div>
+
+ So,
+
+<div class="math-display">
+$$
+P = X\left(\frac{1}{4}I\right)X^T
+=
+\frac{1}{4}XX^T
+$$
+</div>
+
+ Using the given value of <span class="math-inline">\\(XX^T\\)</span>,
+
+<div class="math-display">
+$$
+P =
+\begin{bmatrix}
+1/4 & \sqrt{3}/4 & 0 & 0 \\\\
+\sqrt{3}/4 & 3/4 & 0 & 0 \\\\
+0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+</div>
+
+Note that we're only able to answer this problem because <span class="math-inline">\\(X^TX\\)</span> is a multiple of the identity matrix, so its inverse is just a multiple of the identity matrix. If <span class="math-inline">\\(X^TX\\)</span> was not a multiple of the identity matrix, even if it was diagonal, we wouldn't be able to find <span class="math-inline">\\(P\\)</span> using just the information in this problem.
+</details>
+
+</div>
+</div>
+
+</div>

@@ -1,0 +1,263 @@
+---
+number: 6
+title: 
+heading_suffix:  <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">20 pts</span>
+points: 20
+flags: []
+has_solution: true
+images: []
+---
+
+Suppose we'd like to fit a multiple linear regression model **without** an intercept term to **predict the number of fans in attendance at a Michigan football home game** given various features.
+
+For each row in the dataset, the corresponding feature vector is <span class="math-inline">\\(\vec x&#95;i = \begin{bmatrix} \text{tempF}&#95;i \\\\ \text{tempC}&#95;i \\\\ \text{night}&#95;i \\\\ \text{day}&#95;i \end{bmatrix}\\)</span>, where:
+
+-   <span class="math-inline">\\(\text{tempF}&#95;i\\)</span> is the temperature, in degrees **Fahrenheit**, at kickoff for game <span class="math-inline">\\(i\\)</span>
+
+-   <span class="math-inline">\\(\text{tempC}&#95;i\\)</span> is the temperature, in degrees **Celsius**, at kickoff for game <span class="math-inline">\\(i\\)</span>
+
+-   <span class="math-inline">\\(\text{night}&#95;i\\)</span> is 1 if game <span class="math-inline">\\(i\\)</span> is a night game and 0 otherwise
+
+-   <span class="math-inline">\\(\text{day}&#95;i\\)</span> is 0 if game <span class="math-inline">\\(i\\)</span> is a night game and 1 otherwise
+
+**Important**: Note that
+
+<div class="math-display">
+$$
+\text{tempC}_i = \frac{5}{9} (\text{tempF}_i - 32)
+$$
+</div>
+
+So, our model is of the form
+
+<div class="math-display">
+$$
+h(\vec x_i) = w_1 \cdot \text{tempF}_i + w_2 \cdot \text{tempC}_i + w_3 \cdot \text{night}_i + w_4 \cdot \text{day}_i
+$$
+</div>
+
+ We find optimal model parameters, <span class="math-inline">\\(\vec w^{\ast} = \begin{bmatrix} w&#95;1^{\ast} \\\\ w&#95;2^{\ast} \\\\ w&#95;3^{\ast} \\\\ w&#95;4^{\ast} \end{bmatrix}\\)</span>, by solving the normal equation.
+
+<div class="assignment-parts" markdown="1">
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">a)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> The first two rows of the dataset have the following information:
+
+-   Game 1: 77 degrees Fahrenheit, 25 degrees Celsius, not night game, 102,111 fans
+
+-   Game 2: 59 degrees Fahrenheit, 15 degrees Celsius, night game, 101,982 fans
+
+Write the first two rows of the design matrix, <span class="math-inline">\\(X\\)</span>. Your answer should be a matrix with two rows and no variables.
+
+<span class="math-inline">\\(X = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+
+<details markdown="1"><summary>Solution</summary>
+
+Each row of the design matrix is just the feature vector for that game:
+
+<div class="math-display">
+$$
+\vec x_i = \begin{bmatrix} \text{tempF}_i \\\\ \text{tempC}_i \\\\ \text{night}_i \\\\ \text{day}_i \end{bmatrix}
+$$
+</div>
+
+So,
+
+<div class="math-display">
+$$
+\text{Game 1}: \begin{bmatrix} 77 & 25 & 0 & 1 \end{bmatrix}
+\qquad
+\text{Game 2}: \begin{bmatrix} 59 & 15 & 1 & 0 \end{bmatrix}
+$$
+</div>
+
+Therefore, the first two rows of <span class="math-inline">\\(X\\)</span> are
+
+<div class="math-display">
+$$
+X = \begin{bmatrix}
+77 & 25 & 0 & 1 \\\\
+59 & 15 & 1 & 0
+\end{bmatrix}
+$$
+</div>
+
+</details>
+
+Recall, our model is of the form
+
+<div class="math-display">
+$$
+h(\vec x_i) = w_1 \cdot \text{tempF}_i + w_2 \cdot \text{tempC}_i + w_3 \cdot \text{night}_i + w_4 \cdot \text{day}_i
+$$
+</div>
+
+where <span class="math-inline">\\(\text{tempC}&#95;i = \frac{5}{9} (\text{tempF}&#95;i - 32)\\)</span>.
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">b)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(\vec w'\\)</span> is one solution to the normal equation for this model. Which option describes the **complete set** of solutions to the normal equation?
+
+|     |     |
+|:----|:----|
+|     |     |
+
+<details markdown="1"><summary>Solution</summary>
+
+If we add any vector in <span class="math-inline">\\(\text{nullsp}(X)\\)</span> to one solution of the normal equation, we get another solution. So we just need to find a non-zero vector in <span class="math-inline">\\(\text{nullsp}(X)\\)</span>.
+
+For any row of <span class="math-inline">\\(X\\)</span>, the following two statements must be true:
+
+<div class="math-display">
+$$
+\begin{align*}
+\text{tempC}_i &= \frac{5}{9}(\text{tempF}_i - 32) \\\\
+\text{night}_i + \text{day}_i &= 1
+\end{align*}
+$$
+</div>
+
+The idea is to use this information to find a linear combination of <span class="math-inline">\\(X\\)</span>'s columns that equals the zero vector.
+
+Using the first equation, we have
+
+<div class="math-display">
+$$
+\text{tempF}_i - \frac{9}{5}\text{tempC}_i - 32 = 0
+$$
+</div>
+
+In order to write this as a linear combination of <span class="math-inline">\\(X\\)</span>'s columns, the 32 needs to come from a vector that is "constant" across all rows. Fortunately, that's true of the sum of the night and day columns, since <span class="math-inline">\\(\text{night}&#95;i + \text{day}&#95;i = 1\\)</span> for all rows. So, this means
+
+<div class="math-display">
+$$
+\begin{align*}
+\text{tempF}_i - \frac{9}{5}\text{tempC}_i - 32(\text{night}_i + \text{day}_i) &= 0 \\\\
+\text{tempF}_i - \frac{9}{5}\text{tempC}_i - 32 \text{night}_i - 32 \text{day}_i &= 0 \\\\
+\end{align*}
+$$
+</div>
+
+Meaning that
+
+<div class="math-display">
+$$
+\begin{bmatrix} 1 \\\\ -9/5 \\\\ -32 \\\\ -32 \end{bmatrix} \in \text{nullsp}(X)
+$$
+</div>
+
+Therefore, if <span class="math-inline">\\(\vec w'\\)</span> is one solution, the complete set of solutions is
+
+<div class="math-display">
+$$
+\left \{ \vec w' + t\begin{bmatrix} 1 \\\\ -9/5 \\\\ -32 \\\\ -32 \end{bmatrix} \: , \: t \in \mathbb{R} \right \}
+$$
+</div>
+
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">c)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> First, assume <span class="math-inline">\\(h(\vec x&#95;i)\\)</span> is the model at the top of the page.
+
+1.  What is the **largest possible** rank of the design matrix, <span class="math-inline">\\(X\\)</span>? (Note that we're asking about the full design matrix, not just its first two rows.)
+
+   <span class="math-inline">\\(\text{largest possible value of }\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+
+2.  True or False: The sum of the errors of the model's predictions is 0.
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+3.  True or False: The sum of the errors of the model's predictions **on just the rows of the dataset corresponding to night games** is 0.
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+Let <span class="math-inline">\\(\vec e = \vec y - X \vec w^{\ast}\\)</span> be the error vector. Since <span class="math-inline">\\(\vec w^{\ast}\\)</span> satisfies the normal equation, <span class="math-inline">\\(\vec e\\)</span> is orthogonal to every column of <span class="math-inline">\\(X\\)</span>, and to every linear combination of those columns.
+
+**(i)** The largest possible rank of <span class="math-inline">\\(X\\)</span> is 3, which happens when the tempF, tempC, and night columns are linearly independent. When the day column is added, the columns become linearly dependent. (Equivalently, the tempF, night, and day columns are linearly independent, but linearly dependent with the tempC column.)
+
+**(ii)** This is true. Even though there is no explicit intercept term (and thus, no column of all ones), the all-ones vector is still in <span class="math-inline">\\(\text{colsp}(X)\\)</span>, because the night and day columns add up to 1 for each row.
+
+<div class="math-display">
+$$
+\vec 1 = \text{night column} + \text{day column}
+$$
+</div>
+
+ Since <span class="math-inline">\\(\vec e\\)</span> is orthogonal to every vector in <span class="math-inline">\\(\text{colsp}(X)\\)</span>, it is orthogonal to <span class="math-inline">\\(\vec 1\\)</span>, so
+
+<div class="math-display">
+$$
+\begin{align*}
+\vec 1^T \vec e &= \sum_{i=1}^n e_i = 0
+\end{align*}
+$$
+</div>
+
+**(iii)** This is also true. The night indicator is itself a column of <span class="math-inline">\\(X\\)</span>, so
+
+<div class="math-display">
+$$
+\vec e \cdot (\text{night column}) = \vec e \cdot \begin{bmatrix} 0 \\\\ 1 \\\\ \vdots \end{bmatrix} = e_2 + ... = 0
+$$
+</div>
+
+ But this dot product is exactly the sum of the errors for just the night games, because the night column has 1s on night rows and 0s elsewhere.
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">d)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Now, suppose we remove the <span class="math-inline">\\(\textbf{day}&#95;i\\)</span> feature from our model, meaning our model is
+
+<div class="math-display">
+$$
+h(\vec x_i) = w_1 \cdot \text{tempF}_i + w_2 \cdot \text{tempC}_i + w_3 \cdot \text{night}_i
+$$
+</div>
+
+1.  After removing the day column, what is the **largest possible** rank of the **new** design matrix?
+
+   <span class="math-inline">\\(\text{largest possible value of }\text{rank}(\text{new design matrix}) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+
+2.  True or False: The sum of the errors of the new model's predictions is 0.
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+3.  True or False: The sum of the errors of the new model's predictions **on just the rows of the dataset corresponding to night games** is 0.
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+Let <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> be the error vector for the new model.
+
+**(i)** After removing the day column, the new design matrix has 3 columns, and there is no longer a forced linear dependence among them. So the largest possible rank is still 3. What's new now is that <span class="math-inline">\\(X\\)</span>'s columns are all linearly independent, meaning there is a unique solution to the normal equation.
+
+**(ii)** This is false. The normal equations still tell us that <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to each column of the new design matrix, but there is no guarantee that the all-ones vector is in the column space anymore. So the errors are not guaranteed to sum to 0.
+
+**(iii)** This is true. The night indicator column is still present in the new design matrix, so <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to that column. Therefore, the sum of the errors over the night-game rows is still 0.
+</details>
+
+</div>
+</div>
+
+</div>

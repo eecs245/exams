@@ -1,0 +1,137 @@
+---
+number: 11
+title: 
+heading_suffix:  <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+points: 12
+flags: []
+has_solution: true
+images: []
+---
+
+Let <span class="math-inline">\\(A\\)</span> be a <span class="math-inline">\\(4 \times 4\\)</span> **symmetric** matrix with eigenvalue decomposition <span class="math-inline">\\(A = V \Lambda V^{-1}\\)</span>. Suppose the columns of <span class="math-inline">\\(V\\)</span> are <span class="math-inline">\\(\vec v&#95;1\\)</span>, <span class="math-inline">\\(\vec v&#95;2\\)</span>, <span class="math-inline">\\(\vec v&#95;3\\)</span>, and <span class="math-inline">\\(\vec v&#95;4\\)</span>, in that order, and that the columns of <span class="math-inline">\\(V\\)</span> are unit vectors.
+
+<div class="assignment-parts" markdown="1">
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">a)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Suppose <span class="math-inline">\\(\Lambda = \begin{bmatrix} 4 &amp; 0 &amp; 0 &amp; 0 \\\\ 0 &amp; 3 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 2 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}\\)</span>.
+
+True or False: <span class="math-inline">\\(V\\)</span> is guaranteed to be an orthogonal matrix.
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+This is true. Since <span class="math-inline">\\(A\\)</span> is symmetric, the spectral theorem states that eigenvectors corresponding to different eigenvalues are automatically orthogonal. Additionally, <span class="math-inline">\\(A\\)</span> has four unique eigenvalues. This means that the columns of <span class="math-inline">\\(V\\)</span> are guaranteed to be orthogonal. Since we're told that the columns of <span class="math-inline">\\(V\\)</span> are unit vectors, they are orthonormal, so <span class="math-inline">\\(V\\)</span> is orthogonal.
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">b)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Suppose <span class="math-inline">\\(\Lambda = \begin{bmatrix} 4 &amp; 0 &amp; 0 &amp; 0 \\\\ 0 &amp; 2 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 2 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}\\)</span>.
+
+True or False: <span class="math-inline">\\(V\\)</span> is guaranteed to be an orthogonal matrix.
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
+
+This is false. A symmetric matrix always has an orthonormal eigenbasis, but when an eigenvalue is repeated, the problem does not guarantee that the particular unit eigenvectors in <span class="math-inline">\\(V\\)</span> were chosen to be orthogonal within that eigenspace. The two eigenvectors corresponding to <span class="math-inline">\\(\lambda = 2\\)</span> are guaranteed to be orthogonal to the eigenvectors for <span class="math-inline">\\(\lambda = 1\\)</span> and <span class="math-inline">\\(\lambda = 4\\)</span>, but not necessarily orthogonal to each other.
+</details>
+
+The rest of this problem does not use any of the information from parts **a)** and **b)**. Suppose <span class="math-inline">\\(k\\)</span> is some positive integer greater than 1, and that
+
+<div class="math-display">
+$$
+\vec x = 5 \vec v_1 - 3 \vec v_2 - 5 \vec v_3 + \vec v_4
+$$
+</div>
+
+ and
+
+<div class="math-display">
+$$
+A^k \vec x = 40 \vec v_1 - 81 \vec v_2 + 64 \vec v_4
+$$
+</div>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">c)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> What is the value of <span class="math-inline">\\(k\\)</span>? Select one of the answers below, then justify your answer in the box provided. <em>Hint: If <span class="math-inline">\\(A = V \Lambda V^{-1}\\)</span>, what is <span class="math-inline">\\(A^k\\)</span>?</em>
+
+1.  Answer:
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5\\)</span></span></div>
+
+2.  Justify your answer in the box below.
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5\\)</span></span></div>
+
+If <span class="math-inline">\\(A = V\Lambda V^{-1}\\)</span>, then
+
+<div class="math-display">
+$$
+A^k \vec x = 5\lambda_1^k \vec v_1 - 3\lambda_2^k \vec v_2 - 5\lambda_3^k \vec v_3 + \lambda_4^k \vec v_4.
+$$
+</div>
+
+ Matching this with
+
+<div class="math-display">
+$$
+A^k \vec x = 40 \vec v_1 - 81 \vec v_2 + 64 \vec v_4
+$$
+</div>
+
+ gives
+
+<div class="math-display">
+$$
+\lambda_1^k = 8 \qquad \lambda_2^k = 27 \qquad \lambda_4^k = 64
+$$
+</div>
+
+ Among the answer choices, the only value of <span class="math-inline">\\(k\\)</span> for which all three numbers are perfect <span class="math-inline">\\(k\\)</span>th powers is <span class="math-inline">\\(k=3\\)</span>:
+
+<div class="math-display">
+$$
+8 = 2^3 \qquad 27 = 3^3 \qquad 64 = 4^3
+$$
+</div>
+
+ Therefore, <span class="math-inline">\\(\boxed{k = 3}\\)</span>.
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">d)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Fill in the blank: as <span class="math-inline">\\(k \to \infty\\)</span>, the direction of <span class="math-inline">\\(A^k \vec x\\)</span> approaches the direction of\...
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec v&#95;1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec v&#95;2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec v&#95;3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec v&#95;4\\)</span></span></div>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec v&#95;1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec v&#95;2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec v&#95;3\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\vec v&#95;4\\)</span></span></div>
+
+From part **c)**, the relevant eigenvalues have magnitudes 2, 3, 0, and 4. As <span class="math-inline">\\(k \to \infty\\)</span>, the component corresponding to the largest eigenvalue magnitude dominates, so the direction of <span class="math-inline">\\(A^k \vec x\\)</span> approaches the direction of <span class="math-inline">\\(\boxed{\vec v&#95;4}\\)</span>.
+</details>
+
+</div>
+</div>
+
+</div>

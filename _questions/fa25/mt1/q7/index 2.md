@@ -1,0 +1,82 @@
+---
+number: 7
+title: High Definition
+heading_suffix: : High Definition <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+points: 12
+flags: []
+has_solution: true
+images: []
+---
+
+Suppose <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \ldots \vec x&#95;{12}\\)</span> are 12 non-zero vectors in <span class="math-inline">\\(\mathbb{R}^{7}\\)</span>. Furthermore, suppose:
+
+-   <span class="math-inline">\\(\vec x&#95;1\\)</span>, <span class="math-inline">\\(\vec x&#95;2\\)</span>, and <span class="math-inline">\\(\vec x&#95;3\\)</span> span a 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^{7}\\)</span>.
+
+-   <span class="math-inline">\\(\vec x&#95;4\\)</span>, <span class="math-inline">\\(\vec x&#95;5\\)</span>, and <span class="math-inline">\\(\vec x&#95;6\\)</span> span **the same** 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^{7}\\)</span> as <span class="math-inline">\\(\vec x&#95;1\\)</span>, <span class="math-inline">\\(\vec x&#95;2\\)</span>, and <span class="math-inline">\\(\vec x&#95;3\\)</span>, i.e. 
+
+<div class="math-display">
+$$
+\text{span}(\{\vec x_4, \vec x_5, \vec x_6\}) = \text{span}(\{\vec x_1, \vec x_2, \vec x_3\})
+$$
+</div>
+
+<div class="assignment-parts" markdown="1">
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">a)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Let <span class="math-inline">\\(r\\)</span> be the dimension of the subspace of <span class="math-inline">\\(\mathbb{R}^{7}\\)</span> spanned by <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \ldots \vec x&#95;{12}\\)</span>. What are the smallest and largest possible values of <span class="math-inline">\\(r\\)</span>? Your answers should be integers with no variables.
+
+smallest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_\_ largest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_\_
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">b)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Which of the following **could** form a basis for <span class="math-inline">\\(\mathbb{R}^{7}\\)</span>? Select all that apply. Blank answers will receive no credit.
+
+<details markdown="1"><summary>Solution</summary>
+
+The first choice only includes 6 vectors, but since the span of <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \ldots \vec x&#95;{12}\\)</span> is 7-dimensional, it must include at least 7 vectors. So, the first choice is not a valid basis.
+
+The fourth choice includes 7 vectors, but we know that <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \vec x&#95;5\\)</span> are a linearly **dependent** set since they all lie on the same 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^7\\)</span> (and you only need 2 vectors to uniquely define a 2-dimensional subspace), so the fourth choice is not a valid basis.
+
+The other options all include 7 vectors that *could* be linearly independent, and so they could form a basis for <span class="math-inline">\\(\mathbb{R}^7\\)</span>.
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">c)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose the intersection of <span class="math-inline">\\(\text{span}(\lbrace\vec x&#95;1, \vec x&#95;2\rbrace)\\)</span> and <span class="math-inline">\\(\text{span}(\lbrace \vec x&#95;4, \vec x&#95;5 \rbrace)\\)</span> is a line (i.e. a 1-dimensional subspace) in <span class="math-inline">\\(\mathbb{R}^{7}\\)</span>. Which of the following **must** be true? Select all that apply. Blank answers will receive no credit.
+
+<em>Hint: Don't forget the assumptions introduced at the start of the problem.</em>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\vec x&#95;2\\)</span>, <span class="math-inline">\\(\vec x&#95;4\\)</span>, and <span class="math-inline">\\(\vec x&#95;5\\)</span> can all be written as scalar multiples of <span class="math-inline">\\(\vec x&#95;1\\)</span>.
+
+<span class="mc-square" aria-hidden="true"></span> The set <span class="math-inline">\\(\lbrace \vec x&#95;2, \vec x&#95;4 \rbrace\\)</span> is linearly independent.
+
+<span class="mc-square" aria-hidden="true"></span> The set <span class="math-inline">\\(\lbrace \vec x&#95;3, \vec x&#95;4 \rbrace\\)</span> is linearly independent.
+
+<span class="mc-square" aria-hidden="true"></span> The set <span class="math-inline">\\(\lbrace \vec x&#95;3, \vec x&#95;6 \rbrace\\)</span> is linearly independent.
+
+<span class="mc-square" aria-hidden="true"></span> None of the above.
+
+<details markdown="1"><summary>Solution</summary>
+
+<span class="mc-square" aria-hidden="true"></span> None of the above.
+
+The intended answer to the problem was options 1 and 3. The scenario we had in mind was that <span class="math-inline">\\(\operatorname{span}(\lbrace\vec x&#95;1, \vec x&#95;2\rbrace) = \operatorname{span}(\lbrace\vec x&#95;4, \vec x&#95;5\rbrace) = \text{the same line}\\)</span>. The two spans can't both be different planes that happen to intersect in a line, since we're told that <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \vec x&#95;3\\)</span> span a 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^7\\)</span> and <span class="math-inline">\\(\vec x&#95;4, \vec x&#95;5, \vec x&#95;6\\)</span> span the same 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^7\\)</span>. So, if the two spans are planes, they're the same plane, and they would intersect at a plane. Since the two spans intersect at a line, **we thought** they'd both have to be lines. If that was the case, then <span class="math-inline">\\(\vec x&#95;2\\)</span>, <span class="math-inline">\\(\vec x&#95;4\\)</span>, and <span class="math-inline">\\(\vec x&#95;5\\)</span> would all be scalar multiples of <span class="math-inline">\\(\vec x&#95;1\\)</span>, and so <span class="math-inline">\\(\vec x&#95;3\\)</span> would have to not be on that line (for <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \vec x&#95;3\\)</span> to span a 2-dimensional subspace), which is why Options 1 and 3 were our originally intended answers.
+
+But after releasing exam scores, a student brought up a possibility we hadn't considered: it's possible that <span class="math-inline">\\(\operatorname{span}(\lbrace\vec x&#95;1, \vec x&#95;2\rbrace)\\)</span> is a plane, and <span class="math-inline">\\(\operatorname{span}(\lbrace\vec x&#95;4, \vec x&#95;5\rbrace)\\)</span> is a line that is contained on that plane. That setup would satisfy all of the assumptions provided in the problem statement, but it would imply that none of the options are true.
+
+So, retroactively, we gave full credit to everyone for this part.
+</details>
+
+</div>
+</div>
+
+</div>

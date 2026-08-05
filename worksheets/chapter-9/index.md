@@ -154,8 +154,7 @@ body { padding-top: 0 !important; }
 
 ## FA25 Final · Problem 9 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">18 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/final/">FA25 Final</a></p>
 
 Consider the matrix <span class="math-inline">\\(A = \begin{bmatrix} 2 &amp; 1 \\\\ c &amp; 6 \end{bmatrix}\\)</span>, where <span class="math-inline">\\(c \in \mathbb{R}\\)</span> is some constant.
 
@@ -322,12 +321,9 @@ $$
 {: .yellow }
 > **Make sure to place the larger eigenvalue in <span class="math-inline">\\(\lambda&#95;1\\)</span> and the smaller eigenvalue in <span class="math-inline">\\(\lambda&#95;2\\)</span>!**
 
----
-
 ## FA25 Final · Problem 10 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/final/">FA25 Final</a></p>
 
 Consider the adjacency matrix <span class="math-inline">\\(A = \begin{bmatrix} 0.4 &amp; 0 &amp; 0.5 \\\\ 0.4 &amp; 0 &amp; 0.5 \\\\ a &amp; b &amp; c \end{bmatrix}\\)</span> for a Markov chain with three states, where <span class="math-inline">\\(a, b, c \in \mathbb{R}\\)</span> are some constants.
 
@@ -429,13 +425,11 @@ $$
 
 </div>
 
-
 ---
 
 ## FA25 Final · Problem 11 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/final/">FA25 Final</a></p>
 
 Let <span class="math-inline">\\(A\\)</span> be a <span class="math-inline">\\(4 \times 4\\)</span> **symmetric** matrix with eigenvalue decomposition <span class="math-inline">\\(A = V \Lambda V^{-1}\\)</span>. Suppose the columns of <span class="math-inline">\\(V\\)</span> are <span class="math-inline">\\(\vec v&#95;1\\)</span>, <span class="math-inline">\\(\vec v&#95;2\\)</span>, <span class="math-inline">\\(\vec v&#95;3\\)</span>, and <span class="math-inline">\\(\vec v&#95;4\\)</span>, in that order, and that the columns of <span class="math-inline">\\(V\\)</span> are unit vectors.
 
@@ -565,13 +559,11 @@ From part **c)**, the relevant eigenvalues have magnitudes 2, 3, 0, and 4. As <s
 
 </div>
 
-
 ---
 
 ## WN26 MT2 · Problem 1 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/mt2/">WN26 MT2</a></p>
 
 Suppose <span class="math-inline">\\(k\\)</span> is a real number. Let
 
@@ -708,13 +700,11 @@ $$
 
 </div>
 
-
 ---
 
 ## WN26 Final · Problem 9 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/final/">WN26 Final</a></p>
 
 Consider the matrix <span class="math-inline">\\(A = \begin{bmatrix} 2 &amp; 3 \\\\ -4 &amp; k \end{bmatrix}\\)</span> where <span class="math-inline">\\(k \in \mathbb{R}\\)</span> is some unknown constant.
 
@@ -847,17 +837,15 @@ $$
 
 </div>
 
-
 ---
 
 ## WN26 Final · Problem 10 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/final/">WN26 Final</a></p>
 
 The state diagram below describes a Markov chain with four states.
 
-![image](/exams/wn26-final/imgs/tikz-4049c66dfd05.svg)
+![image](imgs/wn26-final-q10/tikz-4049c66dfd05.svg)
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -962,7 +950,7 @@ There's a section in [Chapter 9.4](https://notes.eecs245.org/eigenvalues-and-eig
 
 Now, consider a **modified** version of the Markov chain. Changes have been emphasized in **bold**.
 
-![image](/exams/wn26-final/imgs/tikz-d6c2facf0597.svg)
+![image](imgs/wn26-final-q10/tikz-d6c2facf0597.svg)
 
 </div>
 </div>
@@ -999,13 +987,11 @@ $$
 
 </div>
 
-
 ---
 
 ## WN26 Final · Problem 11 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/final/">WN26 Final</a></p>
 
 Let <span class="math-inline">\\(S\\)</span> be a <span class="math-inline">\\(3 \times 3\\)</span> **symmetric** matrix with eigenvectors <span class="math-inline">\\(\vec v&#95;1\\)</span>, <span class="math-inline">\\(\vec v&#95;2\\)</span>, and <span class="math-inline">\\(\vec v&#95;3\\)</span> corresponding to eigenvalues <span class="math-inline">\\(5\\)</span>, <span class="math-inline">\\(2\\)</span>, and <span class="math-inline">\\(-1\\)</span>, respectively. Assume that each <span class="math-inline">\\(\vec v&#95;i\\)</span> is a unit vector.
 
@@ -1117,13 +1103,11 @@ In this solution, we used the fact that <span class="math-inline">\\(\vec x = 3 
 
 </div>
 
-
 ---
 
 ## SP26 Final · Problem 10 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/final/">SP26 Final</a></p>
 
 Let <span class="math-inline">\\(A=\begin{bmatrix}2&amp;4\\\\4&amp;2\end{bmatrix}\\)</span>.
 
@@ -1295,17 +1279,15 @@ Another way to think about this is that for any <span class="math-inline">\\(k\\
 
 </div>
 
-
 ---
 
 ## SP26 Final · Problem 11 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/final/">SP26 Final</a></p>
 
 The state diagram below describes a Markov chain with three states. <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> are both constants between 0 and 1.
 
-![image](/exams/sp26-final/imgs/tikz-c9b7fae1abbb.svg)
+![image](imgs/sp26-final-q11/tikz-c9b7fae1abbb.svg)
 
 Suppose that in the long run, <span class="math-inline">\\(\displaystyle\frac{25}{60}\\)</span> of the time is spent in state 1, <span class="math-inline">\\(\displaystyle\frac{21}{60}\\)</span> of the time is spent in state 2, and <span class="math-inline">\\(\displaystyle\frac{14}{60}\\)</span> of the time is spent in state 3.
 
@@ -1407,13 +1389,11 @@ $$
 
 </details>
 
-
 ---
 
 ## SP26 Final · Problem 12 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/final/">SP26 Final</a></p>
 
 Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(3 \times 3\\)</span> symmetric matrix with rank <span class="math-inline">\\(2\\)</span>. The eigenspace corresponding to <span class="math-inline">\\(\lambda=9\\)</span> is the plane
 
@@ -1522,7 +1502,6 @@ $$
 </div>
 
 </div>
-
 
 ---
 

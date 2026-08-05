@@ -150,8 +150,7 @@ body { padding-top: 0 !important; }
 
 ## FA25 MT1 · Problem 3: Spreading Your Wings <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/mt1/">FA25 MT1</a></p>
 
 Consider a dataset of <span class="math-inline">\\(n\\)</span> points, <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span>, where
 
@@ -277,20 +276,18 @@ $$
 
 </div>
 
-
 ---
 
 ## FA25 Final · Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/final/">FA25 Final</a></p>
 
 Let <span class="math-inline">\\(k\\)</span> be a positive integer and let <span class="math-inline">\\(\alpha\\)</span> be a positive real number. Consider the dataset of <span class="math-inline">\\(n = 2k+1\\)</span> points, <span class="math-inline">\\(\underbrace{(-k, -\alpha), (-k+1, 0), (-k+2, 0), \ldots, (-1, 0)}&#95;{k \text{ points}}, (0, 0), \underbrace{(1, 0), \ldots, (k-2, 0), (k-1, 0), (k, \alpha)}&#95;{k \text{ points}}\\)</span>.
 
 Note that the <span class="math-inline">\\(x\\)</span>-values are equally spaced, starting from <span class="math-inline">\\(-k\\)</span> and ending at <span class="math-inline">\\(k\\)</span>. The <span class="math-inline">\\(y\\)</span>-values are all 0, except for the first and last points, which have <span class="math-inline">\\(y\\)</span>-value <span class="math-inline">\\(-\alpha\\)</span> and <span class="math-inline">\\(\alpha\\)</span>, respectively. For example, if <span class="math-inline">\\(k = 4\\)</span> and <span class="math-inline">\\(\alpha = 2\\)</span>, the dataset looks like
 
 <div style="text-align: center;">
-<img src="/exams/fa25-final/imgs/outliers.png" alt="image" style="width: 50%; max-width: 100%;">
+<img src="imgs/fa25-final-q2/outliers.png" alt="image" style="width: 50%; max-width: 100%;">
 </div>
 
 <div class="assignment-parts" markdown="1">
@@ -375,13 +372,11 @@ Therefore, <span class="math-inline">\\(v = \boxed{2k\alpha}\\)</span>.
 
 </div>
 
-
 ---
 
 ## WN26 MT1 · Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/mt1/">WN26 MT1</a></p>
 
 Suppose we'd like to fit a simple linear regression model to a dataset of <span class="math-inline">\\(n\\)</span> points,
 
@@ -487,13 +482,11 @@ So, yes, it is possible for there to be multiple pairs of <span class="math-inli
 
 </div>
 
-
 ---
 
 ## WN26 Final · Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">13 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/final/">WN26 Final</a></p>
 
 Suppose a dataset of <span class="math-inline">\\(n\\)</span> points, <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span>, has the following properties:
 
@@ -695,13 +688,11 @@ $$
 
 </div>
 
-
 ---
 
 ## SP26 MT1 · Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/mt1/">SP26 MT1</a></p>
 
 Suppose we fit a simple linear regression model **with** an intercept term, <span class="math-inline">\\(h(x&#95;i)=w&#95;0+w&#95;1x&#95;i\\)</span>, to a dataset of <span class="math-inline">\\(n\\)</span> points <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span> by minimizing mean squared error. You are given the following information:
 
@@ -909,13 +900,11 @@ Intentionally, I haven't provided the proof of this! I want you to piece the pro
 
 </div>
 
-
 ---
 
 ## SP26 Final · Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">9 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/final/">SP26 Final</a></p>
 
 Suppose we fit a simple linear regression model to a dataset of <span class="math-inline">\\(n\\)</span> points, <span class="math-inline">\\((x&#95;1,y&#95;1),(x&#95;2,y&#95;2),\ldots,(x&#95;n,y&#95;n)\\)</span>, by minimizing mean squared error. Let <span class="math-inline">\\(\bar x\\)</span> and <span class="math-inline">\\(\bar y\\)</span> be the means of the <span class="math-inline">\\(x\\)</span>-values and <span class="math-inline">\\(y\\)</span>-values, respectively, and suppose the standard deviations <span class="math-inline">\\(\sigma&#95;x\\)</span> and <span class="math-inline">\\(\sigma&#95;y\\)</span> are both positive. Let
 
@@ -1054,7 +1043,6 @@ $$
 </div>
 
 </div>
-
 
 ---
 

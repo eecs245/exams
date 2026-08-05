@@ -1,0 +1,87 @@
+---
+number: 5
+title: Back to Normal
+heading_suffix: : Back to Normal <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+points: 12
+flags: []
+has_solution: true
+images: []
+---
+
+Consider the orthogonal vectors <span class="math-inline">\\(\vec u&#95;1 = \begin{bmatrix} 13 \\\\ -3 \\\\ 2 \end{bmatrix}\\)</span>, <span class="math-inline">\\(\vec u&#95;2 = \begin{bmatrix} 0 \\\\ 4 \\\\ 6 \end{bmatrix}\\)</span>, and <span class="math-inline">\\(\vec u&#95;3 = \begin{bmatrix} 1 \\\\ 3 \\\\ -2 \end{bmatrix}\\)</span>.
+
+<div class="assignment-parts" markdown="1">
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">a)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find the equation of the plane spanned by <span class="math-inline">\\(\vec u&#95;2\\)</span> and <span class="math-inline">\\(\vec u&#95;3\\)</span> in standard form, i.e. <span class="math-inline">\\(ax + by + cz + d = 0\\)</span>. <span class="math-inline">\\(\boxed{\text{Circle}}\\)</span> your final answer.
+
+<details markdown="1"><summary>Solution</summary>
+
+Plane: <span class="math-inline">\\(13x - 3y + 2z = 0\\)</span> (or any scalar multiple of this equation).
+
+Most students took the cross product of <span class="math-inline">\\(\vec u&#95;2\\)</span> and <span class="math-inline">\\(\vec u&#95;3\\)</span> to find a vector that is orthogonal to the plane spanned by <span class="math-inline">\\(\vec u&#95;2\\)</span> and <span class="math-inline">\\(\vec u&#95;3\\)</span>, and then used that vector to define the plane.
+
+But, we were already told that all three vectors are orthogonal to each other, which means that the vector orthogonal to the plane spanned by <span class="math-inline">\\(\vec u&#95;2\\)</span> and <span class="math-inline">\\(\vec u&#95;3\\)</span> is <span class="math-inline">\\(\vec u&#95;1\\)</span>. So, we can use <span class="math-inline">\\(\vec u&#95;1\\)</span> to define the plane.
+
+<div class="math-display">
+$$
+\vec u_1 \cdot (x, y, z) = 0 \implies 13x - 3y + 2z = 0
+$$
+</div>
+
+So, the equation of the plane spanned by <span class="math-inline">\\(\vec u&#95;2\\)</span> and <span class="math-inline">\\(\vec u&#95;3\\)</span> is <span class="math-inline">\\(13x - 3y + 2z = 0\\)</span> (or any scalar multiple of this equation).
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">b)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> There is one value of <span class="math-inline">\\(k\\)</span> such that the projection of <span class="math-inline">\\(\vec x = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix}\\)</span> onto <span class="math-inline">\\(\vec u&#95;k\\)</span> is just <span class="math-inline">\\(\vec u&#95;k\\)</span> itself.
+
+1.  What is the value of <span class="math-inline">\\(k\\)</span>?
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 3</span></div>
+
+2.  Show your work in the box below. English explanations are not enough.
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> 3</span></div>
+
+We're told that for one of the three provided vectors --- <span class="math-inline">\\(\vec u&#95;1\\)</span>, <span class="math-inline">\\(\vec u&#95;2\\)</span>, or <span class="math-inline">\\(\vec u&#95;3\\)</span> --- the projection of <span class="math-inline">\\(\vec x\\)</span> onto that vector is just that vector itself.
+
+Remember that the projection of <span class="math-inline">\\(\vec x\\)</span> onto <span class="math-inline">\\(\vec u&#95;k\\)</span> is given by
+
+<div class="math-display">
+$$
+\text{proj}_{\vec u_k} \vec x = \frac{\vec x \cdot \vec u_k}{\vec u_k \cdot \vec u_k} \vec u_k
+$$
+</div>
+
+So, we need to find the vector <span class="math-inline">\\(\vec u&#95;k\\)</span> such that the scalar <span class="math-inline">\\(\frac{\vec x \cdot \vec u&#95;k}{\vec u&#95;k \cdot \vec u&#95;k}\\)</span> is equal to 1, or equivalently, <span class="math-inline">\\(\vec x \cdot \vec u&#95;k = \vec u&#95;k \cdot \vec u&#95;k\\)</span>. We can check this equality for each of the three provided vectors.
+
+**(i)** <span class="math-inline">\\(x \cdot \vec u&#95;1 = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix} \cdot \begin{bmatrix} 13 \\\\ -3 \\\\ 2 \end{bmatrix} = 7 \cdot 13 + 3 \cdot (-3) + 1 \cdot 2 = 84\\)</span>
+
+<span class="math-inline">\\(\vec u&#95;1 \cdot \vec u&#95;1 = 13^2 + (-3)^2 + 2^2 = 180\\)</span>
+
+<span class="math-inline">\\(84 \neq 180\\)</span>, so <span class="math-inline">\\(\vec u&#95;1\\)</span> is not the vector we're looking for.
+
+**(ii)** <span class="math-inline">\\(x \cdot \vec u&#95;2 = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix} \cdot \begin{bmatrix} 0 \\\\ 4 \\\\ 6 \end{bmatrix} = 7 \cdot 0 + 3 \cdot 4 + 1 \cdot 6 = 18\\)</span>
+
+<span class="math-inline">\\(\vec u&#95;2 \cdot \vec u&#95;2 = 0^2 + 4^2 + 6^2 = 52\\)</span>
+
+<span class="math-inline">\\(18 \neq 52\\)</span>, so <span class="math-inline">\\(\vec u&#95;2\\)</span> is not the vector we're looking for.
+
+**(iii)** <span class="math-inline">\\(x \cdot \vec u&#95;3 = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix} \cdot \begin{bmatrix} 1 \\\\ 3 \\\\ -2 \end{bmatrix} = 7 \cdot 1 + 3 \cdot 3 + 1 \cdot (-2) = 14\\)</span>
+
+<span class="math-inline">\\(\vec u&#95;3 \cdot \vec u&#95;3 = 1^2 + 3^2 + (-2)^2 = 14\\)</span>
+
+<span class="math-inline">\\(14 = 14\\)</span>, so <span class="math-inline">\\(\vec u&#95;3\\)</span> **is** the vector we're looking for.
+</details>
+
+</div>
+</div>
+
+</div>

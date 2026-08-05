@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""Build topic-specific worksheet pages from generated exam web views.
+"""Build topic-specific worksheet pages from the question tree.
 
 Reads _data/worksheet_topics.yml and, for each chapter, assembles
-worksheets/chapter-<n>/index.md by extracting the referenced problems from
-the already-generated exams/<name>/index.md pages. Problems are extracted
-from generated output -- NOT re-converted from LaTeX -- so any improvement
-to the LaTeX->HTML pipeline flows into worksheets on the next build with
-no second conversion path to maintain.
+worksheets/chapter-<n>/index.md from the questions it lists. Questions come
+straight out of _questions/ via scripts/compose.py -- the same route
+scripts/build_exam_pages.py takes -- so a worksheet and an exam page render an
+identical question identically, and no generated page is ever parsed to recover
+its contents.
 
-Problem IDs: <term>/<exam>/q<number>, e.g. sp26/mt1/q2 -> exams/sp26-mt1
-Problem 2. Entries may instead be mappings {id, pdf} for exams that have no
-web view (mocks); those render as PDF links in a trailing section.
+Problem IDs are <term>/<exam>/q<number>, e.g. sp26/mt1/q2, which is also that
+question's path: _questions/sp26/mt1/q2/. Entries may instead be mappings
+{id, pdf} for exams that have no web view (mocks); those render as PDF links in
+a trailing section.
 
 No third-party dependencies: the YAML subset used by worksheet_topics.yml
 is parsed directly, so CI needs nothing but Python.
@@ -25,6 +26,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
+import compose  # noqa: E402
 from generate_exam_markdown import (  # noqa: E402
     EXAM_NAV_SNIPPET,
     HOMEWORK_STYLE_SNIPPET,
@@ -33,11 +35,7 @@ from generate_exam_markdown import (  # noqa: E402
 )
 
 TOPICS_YML = REPO_ROOT / "_data" / "worksheet_topics.yml"
-EXAMS_DIR = REPO_ROOT / "exams"
 WORKSHEETS_DIR = REPO_ROOT / "worksheets"
-
-PROBLEM_ID_PATTERN = re.compile(r"^(\w+)/(\w+)/q(\d+)$")
-HEADING_PATTERN = re.compile(r"(?m)^## Problem (\d+)\b([^\n]*)$")
 
 
 # ===> Minimal YAML parsing (only the shape worksheet_topics.yml uses) <=== #
@@ -79,84 +77,11 @@ def parse_topics_yaml(text: str) -> list[dict]:
     return chapters
 
 
-# ===> Problem extraction from generated exam pages <=== #
+# ===> Labels <=== #
 
-def exam_dir_for(problem_id: str) -> tuple[str, int]:
-    match = PROBLEM_ID_PATTERN.match(problem_id)
-    if not match:
-        raise SystemExit(f"Bad problem id {problem_id!r} (expected term/exam/qN)")
-    term, exam, num = match.groups()
-    return f"{term}-{exam}", int(num)
-
-
-def exam_label_for(exam_dir: str) -> str:
-    term, _, exam = exam_dir.partition("-")
+def exam_label_for(term: str, exam: str) -> str:
     exam_display = {"mt1": "MT1", "mt2": "MT2", "final": "Final"}.get(exam, exam.upper())
     return f"{term.upper()} {exam_display}"
-
-
-_EXAM_PAGE_CACHE: dict[str, str] = {}
-
-
-def load_exam_page(exam_dir: str) -> str:
-    if exam_dir not in _EXAM_PAGE_CACHE:
-        path = EXAMS_DIR / exam_dir / "index.md"
-        if not path.exists():
-            raise SystemExit(f"No generated web view at {path} (run convert_exams.sh first)")
-        _EXAM_PAGE_CACHE[exam_dir] = path.read_text()
-    return _EXAM_PAGE_CACHE[exam_dir]
-
-
-def extract_problem(exam_dir: str, number: int) -> tuple[str, str]:
-    """Return (heading_suffix, body) for one problem from a generated page.
-
-    heading_suffix is everything after "## Problem N" on the heading line
-    (badges); body runs until the next problem heading or the end of the
-    raw content block.
-    """
-    page = load_exam_page(exam_dir)
-    headings = list(HEADING_PATTERN.finditer(page))
-    for index, match in enumerate(headings):
-        if int(match.group(1)) != number:
-            continue
-        start = match.end()
-        if index + 1 < len(headings):
-            end = headings[index + 1].start()
-        else:
-            end = page.find("{% endraw %}", start)
-            if end == -1:
-                end = len(page)
-        body = page[start:end].rstrip()
-        # Trim a trailing horizontal-rule separator left before endraw.
-        body = re.sub(r"\n-{3,}\s*$", "", body)
-        return match.group(2), rewrite_asset_paths(body, exam_dir)
-    raise SystemExit(f"Problem {number} not found in exams/{exam_dir}/index.md")
-
-
-def rewrite_asset_paths(body: str, exam_dir: str) -> str:
-    """Point relative asset references back at the exam's own directory.
-
-    Covers both HTML attributes (src=/href=) and markdown image syntax
-    ![alt](path) -- pandoc emits the latter for images with no width
-    attribute, e.g. rendered TikZ figures.
-    """
-    def absolutize(url: str) -> str | None:
-        if url.startswith(("http://", "https://", "/", "#", "mailto:")):
-            return None
-        return f"/exams/{exam_dir}/{url}"
-
-    def rewrite_attr(match: re.Match[str]) -> str:
-        attr, quote, url = match.group(1), match.group(2), match.group(3)
-        new = absolutize(url)
-        return match.group(0) if new is None else f"{attr}={quote}{new}{quote}"
-
-    def rewrite_md_image(match: re.Match[str]) -> str:
-        alt, url = match.group(1), match.group(2)
-        new = absolutize(url)
-        return match.group(0) if new is None else f"![{alt}]({new})"
-
-    body = re.sub(r"\b(src|href)=([\"'])([^\"']+)\2", rewrite_attr, body)
-    return re.sub(r"!\[([^\]]*)\]\(([^)\s]+)\)", rewrite_md_image, body)
 
 
 # ===> Page assembly <=== #
@@ -180,22 +105,25 @@ def build_chapter_page(chapter: dict) -> str:
     sections: list[str] = []
     toc_lines: list[str] = ["## Problems", ""]
     pdf_only: list[dict] = []
+    page_dir = WORKSHEETS_DIR / f"chapter-{chapter['chapter']}"
+    compose.clear_generated_images(page_dir)
 
     for entry in chapter["problems"]:
         if isinstance(entry, dict):
             pdf_only.append(entry)
             continue
-        exam_dir, number = exam_dir_for(entry)
-        suffix, body = extract_problem(exam_dir, number)
-        label = exam_label_for(exam_dir)
-        heading_line = f"## {label} · Problem {number}{suffix}"
+        question = compose.read_question(entry)
+        label = exam_label_for(question.term, question.exam)
+        number = question.number
+        heading_line = f"## {label} · Problem {number}{question.heading_suffix}"
         anchor = heading_anchor(heading_line[3:])
         toc_lines.append(f"- [{label} · Problem {number}](#{anchor})")
         source_note = (
-            f'<p class="worksheet-source">From <a href="/exams/{exam_dir}/">'
-            f"{label}</a></p>"
+            f'<p class="worksheet-source">From '
+            f'<a href="/exams/{question.term}/{question.exam}/">{label}</a></p>'
         )
-        sections.append(f"{heading_line}\n\n{source_note}\n{body}\n\n---\n")
+        rendered = compose.emit_question(question, page_dir, heading_line, note=source_note)
+        sections.append(f"{rendered.rstrip()}\n\n---\n")
 
     parts = [
         "---",
@@ -236,8 +164,8 @@ def build_chapter_page(chapter: dict) -> str:
     if pdf_only:
         parts.append("## More practice (PDF only)\n")
         for entry in pdf_only:
-            exam_dir, number = exam_dir_for(entry["id"])
-            label = exam_label_for(exam_dir)
+            term, exam, number = compose.question_id_parts(entry["id"])
+            label = exam_label_for(term, exam)
             parts.append(f"- [{label} Problem {number}](/{entry['pdf']})")
         parts.append("")
     parts.extend(["{% endraw %}", ""])

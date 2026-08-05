@@ -1,0 +1,99 @@
+---
+number: 2
+title: 
+heading_suffix:  <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
+points: 10
+flags: [mt1-redemption]
+has_solution: true
+images: [outliers.png]
+---
+
+Let <span class="math-inline">\\(k\\)</span> be a positive integer and let <span class="math-inline">\\(\alpha\\)</span> be a positive real number. Consider the dataset of <span class="math-inline">\\(n = 2k+1\\)</span> points, <span class="math-inline">\\(\underbrace{(-k, -\alpha), (-k+1, 0), (-k+2, 0), \ldots, (-1, 0)}&#95;{k \text{ points}}, (0, 0), \underbrace{(1, 0), \ldots, (k-2, 0), (k-1, 0), (k, \alpha)}&#95;{k \text{ points}}\\)</span>.
+
+Note that the <span class="math-inline">\\(x\\)</span>-values are equally spaced, starting from <span class="math-inline">\\(-k\\)</span> and ending at <span class="math-inline">\\(k\\)</span>. The <span class="math-inline">\\(y\\)</span>-values are all 0, except for the first and last points, which have <span class="math-inline">\\(y\\)</span>-value <span class="math-inline">\\(-\alpha\\)</span> and <span class="math-inline">\\(\alpha\\)</span>, respectively. For example, if <span class="math-inline">\\(k = 4\\)</span> and <span class="math-inline">\\(\alpha = 2\\)</span>, the dataset looks like
+
+<div style="text-align: center;">
+<img src="imgs/outliers.png" alt="image" style="width: 50%; max-width: 100%;">
+</div>
+
+<div class="assignment-parts" markdown="1">
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">a)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find <span class="math-inline">\\(\bar{x}\\)</span> and <span class="math-inline">\\(\bar{y}\\)</span>, the means of the <span class="math-inline">\\(x\\)</span>- and <span class="math-inline">\\(y\\)</span>-values, respectively. Give your answers as expressions involving <span class="math-inline">\\(k\\)</span>, <span class="math-inline">\\(\alpha\\)</span>, and/or other constants.
+
+<span class="math-inline">\\(\bar{x} = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \bar{y} = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+
+<details markdown="1"><summary>Solution</summary>
+
+Both sets of values average to 0: <span class="math-inline">\\(\bar{x} = 0\\)</span> and <span class="math-inline">\\(\bar{y} = 0\\)</span>.
+
+-   The <span class="math-inline">\\(x\\)</span>-values are evenly spaced and centered around 0. If you were to add them up, the <span class="math-inline">\\(-k\\)</span> would cancel out with the <span class="math-inline">\\(k\\)</span>, the <span class="math-inline">\\(k-1\\)</span> would cancel out with the <span class="math-inline">\\(-k+1\\)</span>, and so on, making the sum 0, and hence the average 0.
+
+-   The <span class="math-inline">\\(y\\)</span>-values are all 0, except for the first and last points, which have <span class="math-inline">\\(y\\)</span>-value <span class="math-inline">\\(-\alpha\\)</span> and <span class="math-inline">\\(\alpha\\)</span>, respectively. The average of the <span class="math-inline">\\(y\\)</span>-values is therefore <span class="math-inline">\\(\frac{-\alpha + \alpha}{2k+1} = 0\\)</span>.
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">b)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose we fit a simple linear regression model to the dataset by minimizing mean squared error. <span class="math-inline">\\(w&#95;1^{\ast}\\)</span>, the slope of the regression line, is of the form
+
+<div class="math-display">
+$$
+w_1^* = \frac{A}{\sum_{i=1}^n (x_i - \bar{x})^2}
+$$
+</div>
+
+What is the value of <span class="math-inline">\\(A\\)</span>? Select one of the answers below, then justify your answer in the box provided.
+
+1.  Answer:
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle 2 \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle 2 k \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle 2 k^2 \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{2 \alpha}{k}\\)</span></span></div>
+
+2.  Justify your answer in the box below.
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle 2 \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle 2 k \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle 2 k^2 \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{2 \alpha}{k}\\)</span></span></div>
+
+There are several equivalent formulas for the slope of the regression line, <span class="math-inline">\\(w&#95;1^{\ast}\\)</span>, and any of them would allow us to answer the question quickly. Let's start with
+
+<div class="math-display">
+$$
+w_1^* = \frac{\sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^n (x_i - \bar{x})^2}
+$$
+</div>
+
+The denominator of this formula is the same as the one given to us, so let's focus on the numerator, which is <span class="math-inline">\\(v\\)</span> in the formula provided.
+
+<div class="math-display">
+$$
+v = \sum_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})
+$$
+</div>
+
+From the previous part, we know that <span class="math-inline">\\(\bar{x} = 0\\)</span> and <span class="math-inline">\\(\bar{y} = 0\\)</span>, so we can simplify the expression to
+
+<div class="math-display">
+$$
+v = \sum_{i=1}^n (x_i - 0)(y_i - 0) = \sum_{i=1}^n x_i y_i
+$$
+</div>
+
+But, we know that for all data points other than <span class="math-inline">\\(i=1\\)</span> (the point <span class="math-inline">\\((-k, -\alpha)\\)</span>) and <span class="math-inline">\\(i=n\\)</span> (the point <span class="math-inline">\\((k, \alpha)\\)</span>), <span class="math-inline">\\(x&#95;i = 0\\)</span>. Therefore,
+
+<div class="math-display">
+$$
+v = \sum_{i = 1}^n x_iy_i = -k(-\alpha) + \underbrace{\sum_{i = 2}^{n-1} x_i (0)}_{0} + k(\alpha) = 2k\alpha
+$$
+</div>
+
+Therefore, <span class="math-inline">\\(v = \boxed{2k\alpha}\\)</span>.
+</details>
+
+</div>
+</div>
+
+</div>

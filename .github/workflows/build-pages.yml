@@ -1,0 +1,63 @@
+name: Build exam pages and worksheets
+
+# Recomposes exams/ and worksheets/ whenever their inputs change. Both are pure
+# output of the question tree in _questions/, which is the repo's only content
+# tree -- so a change to a question, or to the topic mapping, flows into every
+# page that uses it on the next push.
+#
+# Workflow for a new exam:
+#   1. Drop its folder into _sources/exams/ (the .tex plus its images).
+#   2. Run scripts/convert_exams.sh locally (needs pandoc; also pdflatex and
+#      pdftocairo if the exam has TikZ figures not already rendered) and commit
+#      the generated _questions/<term>/<exam>/ tree.
+#   3. Append the new problems to _data/worksheet_topics.yml under their
+#      chapters and push. This workflow recomposes every affected page.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "_questions/**"
+      - "_data/worksheet_topics.yml"
+      - "scripts/compose.py"
+      - "scripts/build_exam_pages.py"
+      - "scripts/build_worksheets.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Skip the loop: the bot's own commit also touches paths above.
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # No TeX or Pandoc here -- composing pages only reads _questions/.
+      - name: Compose exam pages
+        run: python3 scripts/build_exam_pages.py
+
+      - name: Compose topic worksheets
+        run: python3 scripts/build_worksheets.py
+
+      - name: Commit regenerated pages
+        run: |
+          if git diff --quiet -- exams/ worksheets/; then
+            echo "Pages already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add exams/ worksheets/
+          git commit -m "Recompose exam pages and worksheets from questions"
+          git push

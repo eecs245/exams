@@ -10,8 +10,12 @@ import shutil
 import subprocess
 import sys
 import tempfile
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import compose  # noqa: E402
 
 
 MATHJAX_SNIPPET = """<script>
@@ -219,9 +223,13 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
 
+    # parents[2] is the homework repo's layout (website/scripts/...). Exam mode
+    # lives in this repo, whose root is one level up from scripts/, so relative
+    # paths resolve against the tree the caller actually means.
     repo_root = Path(__file__).resolve().parents[2]
-    source_tex = resolve_source_tex(repo_root, Path(args.source_tex))
-    output_md = resolve_repo_path(repo_root, Path(args.output_md))
+    exam_root = compose.REPO_ROOT
+    source_tex = resolve_source_tex(exam_root if args.exam else repo_root, Path(args.source_tex))
+    output_md = resolve_repo_path(exam_root if args.exam else repo_root, Path(args.output_md))
 
     if (args.week_file is None) ^ (args.event_title is None):
         raise SystemExit("--week-file and --event-title must be provided together.")
@@ -231,6 +239,18 @@ def main() -> int:
     expanded_tex = expand_inputs_from_text(strip_latex_comments(source_text), source_tex.parent)
     if not args.include_solutions:
         assert_solutions_disabled(expanded_tex, source_tex)
+
+    if args.exam:
+        # Exam mode writes a question tree, not a page. output_md names the
+        # exam's questions directory, e.g. _questions/wn26/mt1.
+        return generate_question_tree(
+            args=args,
+            metadata=metadata,
+            expanded_tex=expanded_tex,
+            source_tex=source_tex,
+            questions_dir=output_md,
+        )
+
     transformed_tex = transform_assignment_tex(
         expanded_tex,
         include_solutions=args.include_solutions,
@@ -299,6 +319,86 @@ def main() -> int:
         )
 
     return 0
+
+
+def generate_question_tree(
+    args: argparse.Namespace,
+    metadata: Metadata,
+    expanded_tex: str,
+    source_tex: Path,
+    questions_dir: Path,
+) -> int:
+    """Convert one exam into _questions/<term>/<exam>/{exam.yml,q*/}."""
+    with tempfile.TemporaryDirectory() as tmp_dir_str:
+        tmp_dir = Path(tmp_dir_str)
+        # render_tikz_figures derives the reference it writes from this
+        # directory's name, so it has to be "imgs" for the paths in the body to
+        # match what relocate_assets then normalizes.
+        staging_imgs = tmp_dir / "imgs"
+        seed_tikz_cache(questions_dir, staging_imgs)
+
+        transformed_tex = transform_assignment_tex(
+            expanded_tex,
+            include_solutions=args.include_solutions,
+            exam=True,
+            figure_assets_dir=staging_imgs,
+            source_dir=source_tex.parent,
+        )
+
+        body_tex = tmp_dir / "body.tex"
+        body_md = tmp_dir / "body.md"
+        body_tex.write_text(transformed_tex)
+        run_pandoc(body_tex, body_md)
+
+        cleaned_body = cleanup_markdown(body_md.read_text().strip())
+        questions = split_body_into_questions(cleaned_body)
+
+        # The validators were written against a whole page; give them one.
+        assembled = assemble_for_validation(questions)
+        validate_visible_items_match_source(
+            assignment=metadata.assignment,
+            source_tex=expanded_tex,
+            generated_markdown=assembled,
+            source_path=source_tex,
+        )
+        validate_generated_markdown_structure(assembled, questions_dir)
+
+        # Figures live beside their question, so assets are resolved against the
+        # TikZ staging directory first and the exam's own source tree second.
+        write_question_tree(questions, questions_dir, [tmp_dir, source_tex.parent])
+
+    write_exam_metadata(
+        questions_dir,
+        {
+            "title": (
+                f"{metadata.term} {metadata.assignment}"
+                if metadata.term
+                else metadata.assignment
+            ),
+            "administered": metadata.due_date,
+            "layout": args.layout,
+            "pdf": args.pdf_link or "",
+            "solutions_pdf": (args.solutions_pdf_link or "") if args.include_solutions else "",
+            "videos": args.videos_link or "",
+            # Exam pages used to live at /exams/<stem>/; build_exam_pages.py
+            # turns this into a redirect_from so those URLs keep working.
+            "legacy_path": source_tex.stem,
+        },
+    )
+    print(f"{source_tex.stem}: wrote {len(questions)} questions", file=sys.stderr)
+    return 0
+
+
+def seed_tikz_cache(questions_dir: Path, staging_imgs: Path) -> None:
+    """Prime the TikZ staging directory from already-rendered figures.
+
+    render_tikz_figures only shells out to pdflatex on a cache miss. Copying the
+    committed SVGs forward means a regeneration on a machine with no TeX
+    installation still succeeds as long as no figure actually changed.
+    """
+    staging_imgs.mkdir(parents=True, exist_ok=True)
+    for cached in questions_dir.glob("q*/imgs/tikz-*.svg"):
+        shutil.copy2(cached, staging_imgs / cached.name)
 
 
 def resolve_repo_path(repo_root: Path, path: Path) -> Path:
@@ -2360,6 +2460,169 @@ def escape_underscores(match: re.Match[str]) -> str:
     return "\\_" * len(match.group(0))
 
 
+# ===> Splitting a converted exam into per-question source files <=== #
+# The question, not the page, is this repo's unit of source. Exam mode writes
+# _questions/<term>/<exam>/q<N>/ and every page is composed from those; see
+# scripts/compose.py.
+#
+# The split runs on the CLEANED markdown, not on the LaTeX and not on the
+# transformed TeX, because several cleanup passes are document-scoped
+# (add_item_separators, promote_interstitial_callouts,
+# collapse_repeated_section_separators). They need the whole body in hand, so
+# the body has to survive intact until after cleanup_markdown.
+
+QUESTION_HEADING_PATTERN = re.compile(r"(?m)^## Problem (\d+)([^\n]*)$")
+
+POINTS_BADGE_PATTERN = re.compile(r">(\d+)\s*pts?</span>")
+FLAG_ATTRIBUTE_PATTERN = re.compile(r'data-flag="([\w-]+)"')
+HEADING_TITLE_PATTERN = re.compile(r"^:\s*(.*?)\s*(?=<span|$)")
+
+
+@dataclass
+class ExamQuestion:
+    number: int
+    heading_suffix: str
+    body: str
+    # Interstitial note introducing this question, rendered ABOVE its heading.
+    # Kept out of the body so it stays with the right question without moving
+    # on the page; see split_body_into_questions.
+    preamble: str = ""
+    images: list[str] = field(default_factory=list)
+
+    @property
+    def title(self) -> str:
+        match = HEADING_TITLE_PATTERN.match(self.heading_suffix)
+        return match.group(1) if match else ""
+
+    @property
+    def points(self) -> str:
+        match = POINTS_BADGE_PATTERN.search(self.heading_suffix)
+        return match.group(1) if match else ""
+
+    @property
+    def flags(self) -> list[str]:
+        return FLAG_ATTRIBUTE_PATTERN.findall(self.heading_suffix)
+
+
+def split_body_into_questions(cleaned_body: str) -> list[ExamQuestion]:
+    """Cut a converted exam body into one ExamQuestion per problem.
+
+    Slices run heading-to-heading, except that an interstitial callout sitting
+    between the separator and the next heading is carried FORWARD to the
+    question it introduces, as its preamble. promote_interstitial_callouts
+    deliberately places such notes immediately before the heading they belong
+    to (fa25-final has one telling you which eigenvalue goes in lambda_1, ahead
+    of Problem 10); slicing naively would file each one at the tail of the
+    preceding question, which is where it ends up in a worksheet that includes
+    that question but not the one the note is about.
+
+    Holding it separately rather than prepending it to the body keeps it
+    rendering above the heading exactly as it does today.
+    """
+    headings = list(QUESTION_HEADING_PATTERN.finditer(cleaned_body))
+    if not headings:
+        raise SystemExit("No '## Problem N' headings found in the converted body.")
+
+    questions: list[ExamQuestion] = []
+    _, carried = split_trailing_interstitial(cleaned_body[: headings[0].start()])
+
+    for index, heading in enumerate(headings):
+        end = headings[index + 1].start() if index + 1 < len(headings) else len(cleaned_body)
+        body, next_carried = split_trailing_interstitial(cleaned_body[heading.end() : end])
+        questions.append(
+            ExamQuestion(
+                number=int(heading.group(1)),
+                heading_suffix=heading.group(2),
+                body=body.strip(),
+                preamble=carried,
+            )
+        )
+        carried = next_carried
+
+    return questions
+
+
+def split_trailing_interstitial(region: str) -> tuple[str, str]:
+    """Split a slice into (its own body, content belonging to the next question).
+
+    Only a trailing separator, optionally followed by a Kramdown block-attribute
+    callout, is carried forward -- anything else after the last separator is
+    ordinary content and stays put.
+    """
+    lines = region.splitlines()
+    last_separator = None
+    for index, line in enumerate(lines):
+        if line.strip() == SECTION_SEPARATOR:
+            last_separator = index
+    if last_separator is None:
+        return region.rstrip(), ""
+
+    tail = "\n".join(lines[last_separator + 1 :]).strip()
+    if tail and not tail.startswith("{:"):
+        return region.rstrip(), ""
+    return "\n".join(lines[:last_separator]).rstrip(), tail
+
+
+def assemble_for_validation(questions: list[ExamQuestion]) -> str:
+    """Rebuild a page-shaped string so the existing validators still apply."""
+    return "\n\n".join(
+        f"## Problem {question.number}{question.heading_suffix}\n\n{question.body}"
+        for question in questions
+    )
+
+
+def write_question_tree(
+    questions: list[ExamQuestion],
+    questions_dir: Path,
+    asset_search_dirs: list[Path],
+) -> None:
+    # Clear every existing question first: an exam that loses or renumbers a
+    # problem must not leave a stale folder behind for the composers to find.
+    for stale in questions_dir.glob("q*"):
+        if stale.is_dir():
+            shutil.rmtree(stale)
+
+    for question in questions:
+        question_dir = questions_dir / f"q{question.number}"
+        question_dir.mkdir(parents=True)
+        body, images = relocate_assets(question.body, asset_search_dirs, question_dir)
+        preamble = ""
+        if question.preamble:
+            preamble, preamble_images = relocate_assets(
+                question.preamble, asset_search_dirs, question_dir
+            )
+            images = sorted(set(images) | set(preamble_images))
+        question.images = images
+        header = compose.format_header(
+            {
+                "number": question.number,
+                "title": question.title,
+                "heading_suffix": question.heading_suffix,
+                "points": question.points,
+                "flags": question.flags,
+                "has_solution": "<summary>Solution</summary>" in body,
+                "images": images,
+            }
+        )
+        # Trailing whitespace is stripped here, at the source, so every consumer
+        # gets the same clean text. Pages used to strip it on write, which meant
+        # worksheets only inherited clean content by way of the exam page.
+        (question_dir / "index.md").write_text(f"{header}\n\n{strip_line_endings(body)}\n")
+        if preamble:
+            (question_dir / compose.PREAMBLE_FILE).write_text(
+                strip_line_endings(preamble) + "\n"
+            )
+
+
+def strip_line_endings(text: str) -> str:
+    return "\n".join(line.rstrip() for line in text.strip().splitlines())
+
+
+def write_exam_metadata(questions_dir: Path, fields: dict[str, object]) -> None:
+    questions_dir.mkdir(parents=True, exist_ok=True)
+    (questions_dir / "exam.yml").write_text(compose.format_header(fields) + "\n")
+
+
 @dataclass
 class AssignmentItem:
     number: int
@@ -2768,49 +3031,79 @@ def plain_title_value(value: str) -> str:
     return f"{quote}{stripped}{quote}" if quote else stripped
 
 
-def copy_referenced_assets(output_md: Path, source_base_dir: Path, website_root: Path) -> None:
-    markdown = output_md.read_text()
-    relative_paths = find_relative_paths(markdown)
-    path_updates: dict[str, str] = {}
+def resolve_asset(relative_path: Path, search_dirs: list[Path]) -> Path | None:
+    """Find a referenced asset, by exact relative path or failing that by name.
 
-    for relative_path in relative_paths:
-        source_path = (source_base_dir / relative_path).resolve()
-        if not source_path.exists() or not source_path.is_file():
+    Exam sources disagree about what the figure directory is called -- imgs/,
+    figs/ and images/ are all in use -- and a source that has been reorganized
+    since it was written still names the old directory. Falling back to a
+    basename search under each search directory means dropping an exam in and
+    converting it does not depend on the .tex and the folder agreeing, which is
+    the failure that made two of the nine exams unconvertible from their own
+    committed copies.
+    """
+    for base in search_dirs:
+        candidate = (base / relative_path).resolve()
+        if candidate.exists() and candidate.is_file():
+            return candidate
+
+    name = relative_path.name
+    for base in search_dirs:
+        matches = sorted(path for path in base.rglob(name) if path.is_file())
+        if len(matches) == 1:
+            return matches[0]
+        if matches:
+            # Ambiguous: several files share the name, so no choice is safe.
+            raise SystemExit(
+                f"Asset {relative_path} is ambiguous under {base}: "
+                + ", ".join(str(match) for match in matches)
+            )
+    return None
+
+
+def relocate_assets(
+    markdown: str,
+    search_dirs: list[Path],
+    dest_dir: Path,
+) -> tuple[str, list[str]]:
+    """Copy every referenced local asset into dest_dir/imgs and normalize refs.
+
+    Sources spell figure directories inconsistently (imgs/, images/, figs/), and
+    rendered TikZ SVGs come from a staging directory rather than the source
+    tree, so search_dirs is a list. Everything lands in a flat imgs/ named by
+    basename, which is the shape the rest of the pipeline expects.
+
+    Returns the rewritten markdown and the basenames that were copied.
+    """
+    path_updates: dict[str, str] = {}
+    copied: list[str] = []
+
+    for relative_path in find_relative_paths(markdown):
+        source_path = resolve_asset(relative_path, search_dirs)
+        if source_path is None:
             continue
 
-        dest_filename = source_path.name
-        dest_relative, destination_path = asset_destination(
-            output_md=output_md,
-            website_root=website_root,
-            dest_filename=dest_filename,
-        )
-
+        destination_path = dest_dir / "imgs" / source_path.name
         destination_path.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(source_path, destination_path)
+        copied.append(source_path.name)
 
-        new_path = markdown_asset_path(output_md, website_root, dest_relative)
+        new_path = f"imgs/{source_path.name}"
         if str(relative_path) != new_path:
             path_updates[str(relative_path)] = new_path
 
-    if path_updates:
-        updated_markdown = markdown
-        for old_path, new_path in path_updates.items():
-            updated_markdown = updated_markdown.replace(f"]({old_path})", f"]({new_path})")
-            updated_markdown = updated_markdown.replace(f'src="{old_path}"', f'src="{new_path}"')
-        output_md.write_text(updated_markdown)
+    for old_path, new_path in path_updates.items():
+        markdown = markdown.replace(f"]({old_path})", f"]({new_path})")
+        markdown = markdown.replace(f'src="{old_path}"', f'src="{new_path}"')
+
+    return markdown, sorted(set(copied))
 
 
-def asset_destination(
-    output_md: Path,
-    website_root: Path,
-    dest_filename: str,
-) -> tuple[Path, Path]:
-    dest_relative = Path("imgs") / dest_filename
-    return dest_relative, output_md.parent / dest_relative
-
-
-def markdown_asset_path(output_md: Path, website_root: Path, dest_relative: Path) -> str:
-    return dest_relative.as_posix()
+def copy_referenced_assets(output_md: Path, source_base_dir: Path, website_root: Path) -> None:
+    markdown, _ = relocate_assets(
+        output_md.read_text(), [source_base_dir], output_md.parent
+    )
+    output_md.write_text(markdown)
 
 
 def find_relative_paths(markdown: str) -> set[Path]:

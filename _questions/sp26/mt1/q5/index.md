@@ -1,0 +1,216 @@
+---
+number: 5
+title: 
+heading_suffix:  <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">13 pts</span>
+points: 13
+flags: []
+has_solution: true
+images: []
+---
+
+Suppose <span class="math-inline">\\(\vec u,\vec v\in\mathbb R^n\\)</span> are non-zero vectors and <span class="math-inline">\\(k\\)</span> is a scalar. Let
+
+<div class="math-display">
+$$
+f(k) = \lVert \vec u - k \vec v \rVert^2 + C k^2
+$$
+</div>
+
+ where <span class="math-inline">\\(C \geq 0\\)</span> is a non-negative constant.
+
+<div class="assignment-parts" markdown="1">
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">a)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> In this part only, suppose <span class="math-inline">\\(C=0\\)</span>, <span class="math-inline">\\(\vec u = \begin{bmatrix} 1 \\\\ 2 \end{bmatrix}\\)</span>, and <span class="math-inline">\\(\vec v = \begin{bmatrix} 3 \\\\ 1 \end{bmatrix}\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span> that minimizes <span class="math-inline">\\(f(k)\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables.
+
+<div class="math-display">
+$$
+\text{minimizer of } f(k) = \_\_\_\_\_\_
+$$
+</div>
+
+<details markdown="1"><summary>Solution</summary>
+
+There are several ways to think about this problem. What I expected most students to see is that when <span class="math-inline">\\(C = 0\\)</span>, this is really asking for the orthogonal projection of <span class="math-inline">\\(\vec u\\)</span> onto <span class="math-inline">\\(\vec v\\)</span>; the minimizer of <span class="math-inline">\\(f(k)\\)</span> is the value of <span class="math-inline">\\(k\\)</span> that makes <span class="math-inline">\\(\vec u - k \vec v\\)</span> orthogonal to <span class="math-inline">\\(\vec v\\)</span>.
+
+Using that logic, we know from [Chapter 3.4](https://notes.eecs245.org/vectors/orthogonal-projection/) that the orthogonal projection of <span class="math-inline">\\(\vec u\\)</span> onto <span class="math-inline">\\(\vec v\\)</span> is given by
+
+<div class="math-display">
+$$
+\vec p = k^* \vec v = \left( \frac{\vec u \cdot \vec v}{\vec v \cdot \vec v} \right) \vec v
+$$
+</div>
+
+So,
+
+<div class="math-display">
+$$
+k^* = \frac{\vec u \cdot \vec v}{\vec v \cdot \vec v} = \frac{1 \cdot 3 + 2 \cdot 1}{3^2 + 1^2} = \frac{5}{10} = \boxed{\frac{1}{2}}
+$$
+</div>
+
+There's another way to approach this problem, which is to simplify <span class="math-inline">\\(f(k)\\)</span> and treat this like a calculus problem.
+
+<div class="math-display">
+$$
+f(k)=\left\|\begin{bmatrix}1\\\\2\end{bmatrix}-k\begin{bmatrix}3\\\\1\end{bmatrix}\right\|^2=(1-3k)^2+(2-k)^2
+$$
+</div>
+
+ Expanding,
+
+<div class="math-display">
+$$
+f(k)=10k^2-10k+5
+$$
+</div>
+
+ so
+
+<div class="math-display">
+$$
+f'(k)=20k-10
+$$
+</div>
+
+ Setting <span class="math-inline">\\(f'(k)=0\\)</span> gives <span class="math-inline">\\(k^{\ast} = \frac{1}{2}\\)</span> as well.
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">b)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Note that <span class="math-inline">\\(f(k)\\)</span> *almost* looks like the squared norm of the vector <span class="math-inline">\\(\vec u - k \vec v\\)</span>, but with an extra term <span class="math-inline">\\(C k^2\\)</span>. Let's try and rewrite <span class="math-inline">\\(f(k)\\)</span> so that it *is* the squared norm of another related vector.
+
+Define two new vectors, <span class="math-inline">\\(\vec U, \vec V \in \mathbb R^{n+1}\\)</span> by appending the scalar <span class="math-inline">\\(a\\)</span> to the end of <span class="math-inline">\\(\vec u\\)</span> and the scalar <span class="math-inline">\\(b\\)</span> to the end of <span class="math-inline">\\(\vec v\\)</span>.
+
+<div class="math-display">
+$$
+\vec U = \begin{bmatrix} u_1 \\\\ u_2 \\\\ \vdots \\\\ u_n \\\\ a\end{bmatrix}, \quad \vec V = \begin{bmatrix} v_1 \\\\ v_2 \\\\ \vdots \\\\ v_n \\\\ b\end{bmatrix}
+$$
+</div>
+
+Select values of <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> so that <span class="math-inline">\\(f(k) = \lVert \vec U - k \vec V \rVert^2\\)</span>, for all possible non-negative values of <span class="math-inline">\\(C\\)</span>.
+
+1.  What is the value of <span class="math-inline">\\(a\\)</span>?
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
+
+2.  What is the value of <span class="math-inline">\\(b\\)</span>?
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
+
+First, let's try and get a better sense of how <span class="math-inline">\\(\lVert \vec U - k \vec V \rVert^2\\)</span> works.
+
+<div class="math-display">
+$$
+\begin{align*}
+\lVert \vec U - k \vec V \rVert^2 &= \left\lVert \begin{bmatrix} u_1 \\\\ u_2 \\\\ \vdots \\\\ u_n \\\\ a\end{bmatrix} - k \begin{bmatrix} v_1 \\\\ v_2 \\\\ \vdots \\\\ v_n \\\\ b\end{bmatrix} \right\rVert^2 \\\\
+&= \left\lVert \begin{bmatrix} u_1 - kv_1 \\\\ u_2 - kv_2 \\\\ \vdots \\\\ u_n - kv_n \\\\ a - kb\end{bmatrix} \right\rVert^2 \\\\
+&= \sum_{i=1}^n (u_i - kv_i)^2 + (a - kb)^2 \\\\
+&= \lVert \vec u - k \vec v \rVert^2 + (a - kb)^2 \\\\
+\end{align*}
+$$
+</div>
+
+Our job is to find <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> so that <span class="math-inline">\\(f(k)\\)</span>, which we were told is defined as
+
+<div class="math-display">
+$$
+f(k) =\lVert \vec u - k \vec v \rVert^2 + C k^2
+$$
+</div>
+
+ is **also** equal to
+
+<div class="math-display">
+$$
+\lVert \vec U - k \vec V \rVert^2 = \lVert \vec u - k \vec v \rVert^2 + (a - kb)^2
+$$
+</div>
+
+If we set <span class="math-inline">\\(f(k) = \lVert \vec U - k \vec V \rVert^2\\)</span>, we see that this boils down to finding <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> such that
+
+<div class="math-display">
+$$
+(a - kb)^2 = C k^2
+$$
+</div>
+
+Notice the right-hand side of the expression above is just <span class="math-inline">\\(Ck^2\\)</span>, not <span class="math-inline">\\(Ck^2 + \text{some constant} \cdot k + \text{some other constant}\\)</span>. This means that <span class="math-inline">\\(a = 0\\)</span>, and that forces <span class="math-inline">\\(b = \sqrt{C}\\)</span>:
+
+<div class="math-display">
+$$
+(0 - k\sqrt{C})^2 = Ck^2
+$$
+</div>
+
+So, the correct answers are <span class="math-inline">\\(\boxed{a=0}\\)</span> and <span class="math-inline">\\(\boxed{b=\sqrt{C}}\\)</span>.
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">c)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> As <span class="math-inline">\\(C\\)</span> increases, what happens to the value of <span class="math-inline">\\(k\\)</span> that minimizes <span class="math-inline">\\(f(k)\\)</span>? Explain your reasoning.
+
+<details markdown="1"><summary>Solution</summary>
+
+There are a couple of ways to think about this. First, if we use the interpretation provided in part **b)**, the vectors <span class="math-inline">\\(\vec U\\)</span> and <span class="math-inline">\\(\vec V\\)</span> "bake in" the value of <span class="math-inline">\\(C\\)</span>:
+
+<div class="math-display">
+$$
+\vec U = \begin{bmatrix} u_1 \\\\ u_2 \\\\ \vdots \\\\ u_n \\\\ 0\end{bmatrix}, \quad \vec V = \begin{bmatrix} v_1 \\\\ v_2 \\\\ \vdots \\\\ v_n \\\\ \sqrt{C}\end{bmatrix}
+$$
+</div>
+
+Increasing <span class="math-inline">\\(C\\)</span> keeps the dot product of <span class="math-inline">\\(\vec U\\)</span> and <span class="math-inline">\\(\vec V\\)</span> fixed, but increases the norm of <span class="math-inline">\\(\vec V\\)</span>. Why is this relevant? Since <span class="math-inline">\\(f(k) = \lVert \vec U - k \vec V \rVert^2\\)</span>, the minimizer <span class="math-inline">\\(k^{\ast}\\)</span> of <span class="math-inline">\\(f(k)\\)</span> is equal to
+
+<div class="math-display">
+$$
+k^* = \frac{\vec U \cdot \vec V}{\vec V \cdot \vec V}
+$$
+</div>
+
+So, as <span class="math-inline">\\(C\\)</span> increases, the denominator of <span class="math-inline">\\(k^{\ast}\\)</span> increases, so <span class="math-inline">\\(k^{\ast}\\)</span> moves toward <span class="math-inline">\\(0\\)</span>, though this may happen either from the left or the right, since <span class="math-inline">\\(\vec U \cdot \vec V\\)</span> may be positive or negative.
+
+If you'd prefer, you *could* just expand the original definition of <span class="math-inline">\\(f(k)\\)</span>, take the derivative to find the closed-form expression for the minimizing <span class="math-inline">\\(k^{\ast}\\)</span> for an arbitrary <span class="math-inline">\\(C\\)</span>, and look at what happens to <span class="math-inline">\\(k^{\ast}\\)</span> as <span class="math-inline">\\(C\\)</span> increases.
+
+Recall, the original definition of <span class="math-inline">\\(f(k)\\)</span> is <span class="math-inline">\\(f(k)=\lVert \vec u - k \vec v \rVert^2 + C k^2\\)</span>, so
+
+<div class="math-display">
+$$
+f(k)=\vec u \cdot \vec u - 2k(\vec u\cdot\vec v)+k^2\vec v \cdot \vec v+Ck^2
+$$
+</div>
+
+ Therefore,
+
+<div class="math-display">
+$$
+f'(k)=-2(\vec u\cdot\vec v)+2k(\vec v \cdot \vec v+C)
+$$
+</div>
+
+ so the minimizer is
+
+<div class="math-display">
+$$
+k^*=\frac{\vec u\cdot\vec v}{\vec v \cdot \vec v+C}
+$$
+</div>
+
+ As <span class="math-inline">\\(C\\)</span> increases, the denominator increases (but <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> are fixed --- notice these are the original <span class="math-inline">\\(\vec u, \vec v\\)</span>, not the new <span class="math-inline">\\(\vec U, \vec V\\)</span>), so <span class="math-inline">\\(k^{\ast}\\)</span> moves toward <span class="math-inline">\\(0\\)</span>.
+</details>
+
+</div>
+</div>
+
+</div>

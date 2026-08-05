@@ -1,0 +1,111 @@
+---
+number: 7
+title: 
+heading_suffix:  <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+points: 10
+flags: []
+has_solution: true
+images: []
+---
+
+Suppose <span class="math-inline">\\(\vec v&#95;1,\vec v&#95;2,\vec v&#95;3,\vec v&#95;4\in\mathbb R^n\\)</span> are a **linearly independent** collection of vectors. Define
+
+<div class="math-display">
+$$
+\vec p=\vec v_1+\vec v_2,\qquad
+\vec q=\vec v_2+\vec v_3,\qquad
+\vec r=\vec v_3+\vec v_4,\qquad
+\vec s=\vec v_4+\vec v_1
+$$
+</div>
+
+<div class="assignment-parts" markdown="1">
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">a)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">7 pts</span> Are <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> linearly independent?
+
+1.  Select an answer:
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Yes</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> No</span></div>
+
+2.  Prove your answer using the formal definition of linear independence. <em>Hint: You did something similar in Homework 4, Problem 6.</em>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Yes</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> No</span></div>
+
+If <span class="math-inline">\\(\vec p,\vec q,\vec r,\vec s\\)</span> are linearly independent, then the only solution to the equation <span class="math-inline">\\(a \vec p + b \vec q + c \vec r + d \vec s = \vec 0\\)</span> is <span class="math-inline">\\(a = b = c = d = 0\\)</span>.
+
+That's not the case here! Consider the linear combination
+
+<div class="math-display">
+$$
+\vec p-\vec q+\vec r-\vec s
+$$
+</div>
+
+ How did I think of this? I noticed that if I start with <span class="math-inline">\\(\vec p\\)</span>, subtracting <span class="math-inline">\\(\vec q\\)</span> gets rid of all <span class="math-inline">\\(\vec v&#95;2\\)</span>'s, but makes <span class="math-inline">\\(\vec v&#95;3\\)</span> negative, so I need a positive <span class="math-inline">\\(\vec r\\)</span> to cancel that out. Then, <span class="math-inline">\\(\vec p - \vec q + \vec r = \vec v&#95;1 + \vec v&#95;4\\)</span>; subtracting <span class="math-inline">\\(\vec s\\)</span> then gets rid of both <span class="math-inline">\\(\vec v&#95;1\\)</span> and <span class="math-inline">\\(\vec v&#95;4\\)</span>, leaving me with <span class="math-inline">\\(\vec 0\\)</span>.
+
+<div class="math-display">
+$$
+\vec p - \vec q + \vec r - \vec s = (\vec v_1+\vec v_2)-(\vec v_2+\vec v_3)+(\vec v_3+\vec v_4)-(\vec v_4+\vec v_1)=\vec 0
+$$
+</div>
+
+ The coefficients <span class="math-inline">\\(1,-1,1,-1\\)</span> are not all zero, so this proves that <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> is linearly dependent.
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">b)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> What is the dimension of <span class="math-inline">\\(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)\\)</span>? Give your answer as a number with no variables.
+
+<span class="math-inline">\\(\dim(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+
+<details markdown="1"><summary>Solution</summary>
+
+Part **a)** shows that the four vectors are linearly **dependent**, so the dimension of <span class="math-inline">\\(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)\\)</span> is **at most** <span class="math-inline">\\(3\\)</span>. (For the dimension to be 4, which is the number of vectors in question, they would need to be linearly independent. There's no way to have a span of 5 or more dimensions using just 4 vectors.)
+
+But just because the dimension of <span class="math-inline">\\(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)\\)</span> is at most <span class="math-inline">\\(3\\)</span> doesn't mean that the dimension is actually <span class="math-inline">\\(3\\)</span> --- for this span to be 3-dimensional, it needs to be the span of 3 linearly independent vectors.
+
+Fortunately, <span class="math-inline">\\(\vec p,\vec q,\vec r\\)</span> are linearly independent. If
+
+<div class="math-display">
+$$
+a\vec p+b\vec q+c\vec r=\vec 0
+$$
+</div>
+
+ then
+
+<div class="math-display">
+$$
+a\vec v_1+(a+b)\vec v_2+(b+c)\vec v_3+c\vec v_4=\vec 0
+$$
+</div>
+
+ Since <span class="math-inline">\\(\vec v&#95;1,\vec v&#95;2,\vec v&#95;3,\vec v&#95;4\\)</span> are linearly independent, we must have
+
+<div class="math-display">
+$$
+a=0,\qquad a+b=0,\qquad b+c=0,\qquad c=0
+$$
+</div>
+
+ This gives <span class="math-inline">\\(a=b=c=0\\)</span>, so <span class="math-inline">\\(\vec p,\vec q,\vec r\\)</span> are linearly independent. Therefore, among <span class="math-inline">\\(\left\lbrace \vec p,\vec q,\vec r,\vec s \right\rbrace\\)</span>, there are 3 linearly independent vectors, and thus
+
+<div class="math-display">
+$$
+\boxed{\dim(\text{span}(\{\vec p,\vec q,\vec r,\vec s\}))=3}
+$$
+</div>
+
+</details>
+
+</div>
+</div>
+
+</div>

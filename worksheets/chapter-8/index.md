@@ -154,8 +154,7 @@ body { padding-top: 0 !important; }
 
 ## FA25 MT2 · Problem 6: Quadratus Formulus <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/mt2/">FA25 MT2</a></p>
 
 Let <span class="math-inline">\\(\displaystyle f(\vec x) = \frac{1}{2} \vec x^T S \vec x - \vec b^T \vec x\\)</span>, where <span class="math-inline">\\(S\\)</span> is a symmetric <span class="math-inline">\\(n \times n\\)</span> matrix and <span class="math-inline">\\(\vec b \in \mathbb{R}^n\\)</span>.
 
@@ -292,13 +291,11 @@ $$
 
 </div>
 
-
 ---
 
 ## FA25 MT2 · Problem 7: Complexity <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/mt2/">FA25 MT2</a></p>
 
 Suppose <span class="math-inline">\\(f: \mathbb{R} \to \mathbb{R}\\)</span> is a convex function.
 
@@ -393,8 +390,7 @@ as required!
 
 ## FA25 Final · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/final/">FA25 Final</a></p>
 
 Suppose <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both (not necessarily symmetric!) <span class="math-inline">\\(n \times n\\)</span> matrices. Which of the following is <span class="math-inline">\\(\nabla f(\vec x)\\)</span>, the gradient of
 
@@ -436,18 +432,16 @@ $$
 
 </details>
 
-
 ---
 
 ## FA25 Final · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/final/">FA25 Final</a></p>
 
 Consider the function <span class="math-inline">\\(f: \mathbb{R} \to \mathbb{R}\\)</span> graphed below.
 
 <div style="text-align: center;">
-<img src="/exams/fa25-final/imgs/convexity-scale.png" alt="image" style="width: 60%; max-width: 100%;">
+<img src="imgs/fa25-final-q7/convexity-scale.png" alt="image" style="width: 60%; max-width: 100%;">
 </div>
 
 Note that <span class="math-inline">\\(f\\)</span> is a piecewise linear function, with slopes of <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(4\\)</span>, and <span class="math-inline">\\(-4\\)</span>. The slope changes at the following values of <span class="math-inline">\\(x\\)</span>: <span class="math-inline">\\(-6, -5, -2, -1, 1, 2, 5, 6\\)</span>.
@@ -515,13 +509,11 @@ Therefore, the correct choice is <span class="math-inline">\\(\boxed{1.6}\\)</sp
 
 </div>
 
-
 ---
 
 ## WN26 MT2 · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/mt2/">WN26 MT2</a></p>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -669,13 +661,11 @@ $$
 
 </div>
 
-
 ---
 
 ## WN26 MT2 · Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/mt2/">WN26 MT2</a></p>
 
 Let <span class="math-inline">\\(\vec x = \begin{bmatrix} x&#95;1 \\\\ x&#95;2 \end{bmatrix}\\)</span>. Consider the function
 
@@ -838,8 +828,7 @@ $$
 
 ## WN26 Final · Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">9 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/final/">WN26 Final</a></p>
 
 Consider the function <span class="math-inline">\\(g: \mathbb{R}^3 \to \mathbb{R}\\)</span>. We'd like to minimize <span class="math-inline">\\(g\\)</span> using gradient descent.
 
@@ -1050,13 +1039,11 @@ $$
 
 </div>
 
-
 ---
 
 ## SP26 MT2 · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/mt2/">SP26 MT2</a></p>
 
 Suppose <span class="math-inline">\\(A\\)</span> is an <span class="math-inline">\\(n \times d\\)</span> matrix and <span class="math-inline">\\(\vec x \in \mathbb{R}^d\\)</span>. Consider the function <span class="math-inline">\\(f: \mathbb{R}^d \to \mathbb{R}\\)</span> given by
 
@@ -1167,13 +1154,11 @@ $$
 
 </div>
 
-
 ---
 
 ## SP26 MT2 · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">15 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/mt2/">SP26 MT2</a></p>
 
 Let <span class="math-inline">\\(\vec x = \begin{bmatrix} x&#95;1 \\\\ x&#95;2 \end{bmatrix}\\)</span>. Consider the function <span class="math-inline">\\(f: \mathbb{R}^2 \to \mathbb{R}\\)</span> given by
 
@@ -1331,8 +1316,7 @@ $$
 
 ## SP26 Final · Problem 9 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">9 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/final/">SP26 Final</a></p>
 
 Let <span class="math-inline">\\(\vec a \in \mathbb{R}^2\\)</span> and let
 
@@ -1544,7 +1528,7 @@ $$
  which is negative for some <span class="math-inline">\\(x\\)</span> values, for instance <span class="math-inline">\\(x=-1/4\\)</span>. So <span class="math-inline">\\(g\\)</span> is not convex. See [Chapter 8.5](https://notes.eecs245.org/gradients/convexity/) for the convexity condition.
 
 <div style="text-align: center;">
-<img src="/exams/sp26-final/imgs/convexity-counterexample.png" alt="image" style="width: 82%; max-width: 100%;">
+<img src="imgs/sp26-final-q9/convexity-counterexample.png" alt="image" style="width: 82%; max-width: 100%;">
 </div>
 </details>
 
@@ -1552,7 +1536,6 @@ $$
 </div>
 
 </div>
-
 
 ---
 

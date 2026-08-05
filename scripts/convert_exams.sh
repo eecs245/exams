@@ -1,18 +1,58 @@
 #!/usr/bin/env bash
-# Generate web-view pages for all exams with LaTeX sources.
-# Usage: scripts/convert_exams.sh <exam-sources-root>
-# Expects: <exam-sources-root>/<name>/<name>.tex  (eecs245.sty at sources root)
-# Outputs: <repo>/exams/<name>/index.md (+ copied image assets)
+# Convert exam LaTeX sources into the question tree, then compose every page.
+#
+#   scripts/convert_exams.sh              convert whatever changed, rebuild pages
+#   scripts/convert_exams.sh fa26-mt1     force one exam, rebuild pages
+#   scripts/convert_exams.sh --all        force every exam, rebuild pages
+#
+# Adding an exam is: drop its folder into _sources/exams/ (the .tex plus its
+# image directory, whatever that directory is called) and run this. Nothing
+# else needs editing -- the term/exam split, the question ids and the image
+# paths are all derived from the folder name and the source itself.
+#
+#   _sources/exams/<term>-<exam>/<term>-<exam>.tex   source you drop in
+#   _questions/<term>/<exam>/{exam.yml,q*/}          the only content tree
+#   exams/<term>/<exam>/, worksheets/chapter-*/      composed from it
+#
 # PDF buttons link to the repo's existing resources/exams/<name>[-solutions].pdf
 set -euo pipefail
 
-SRC_ROOT="$(cd "${1:?usage: convert_exams.sh <exam-sources-root>}" && pwd)"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"
+SRC_ROOT="${EXAM_SOURCES:-$REPO_ROOT/_sources/exams}"
+
+[ -d "$SRC_ROOT" ] || { echo "No exam sources at $SRC_ROOT" >&2; exit 1; }
+
+only=""
+force=0
+case "${1:-}" in
+  --all) force=1 ;;
+  "") ;;
+  *) only="$1"; force=1 ;;
+esac
 
 fail=0
+converted=0
 for tex in "$SRC_ROOT"/*/*.tex; do
   name="$(basename "$tex" .tex)"
+  [ -n "$only" ] && [ "$name" != "$only" ] && continue
+
+  # sp26-mt1 -> sp26/mt1, matching the problem ids in _data/worksheet_topics.yml.
+  term="${name%%-*}"
+  exam="${name#*-}"
+  questions_dir="$REPO_ROOT/_questions/${term}/${exam}"
+  stamp="$questions_dir/exam.yml"
+
+  # Incremental: skip an exam whose source (and the scripts that convert it) are
+  # all older than its questions. Touch the source, or pass --all, to force.
+  if [ "$force" -eq 0 ] && [ -f "$stamp" ]; then
+    newest="$(find "$(dirname "$tex")" "$SCRIPT_DIR" -type f -newer "$stamp" -print -quit)"
+    if [ -z "$newest" ]; then
+      echo "SKIP  $name (up to date)"
+      continue
+    fi
+  fi
+
   args=(--include-solutions --exam --layout minimal
         --pdf-link "/resources/exams/${name}.pdf")
   if [ -f "$REPO_ROOT/resources/exams/${name}-solutions.pdf" ]; then
@@ -23,13 +63,28 @@ for tex in "$SRC_ROOT"/*/*.tex; do
   if [ -n "$videos_url" ]; then
     args+=(--videos-link "$videos_url")
   fi
+
   if python3 "$SCRIPT_DIR/generate_exam_markdown.py" \
-      "$tex" "$REPO_ROOT/exams/${name}/index.md" "${args[@]}"; then
-    # Keep the LaTeX source of truth alongside its generated page.
-    cp "$tex" "$REPO_ROOT/exams/${name}/${name}.tex"
+      "$tex" "$questions_dir" "${args[@]}"; then
     echo "PASS  $name"
+    converted=$((converted + 1))
   else
     echo "FAIL  $name"; fail=1
   fi
 done
-exit "$fail"
+
+if [ -n "$only" ] && [ "$converted" -eq 0 ] && [ "$fail" -eq 0 ]; then
+  echo "No exam named '$only' in $SRC_ROOT" >&2
+  exit 1
+fi
+
+if [ "$fail" -ne 0 ]; then
+  echo "Conversion failed; not composing pages." >&2
+  exit "$fail"
+fi
+
+# Both page trees are pure output of the question tree above, so they are
+# recomposed in full every run -- cheap, and it keeps a partial conversion from
+# leaving the site half-updated.
+python3 "$SCRIPT_DIR/build_exam_pages.py"
+python3 "$SCRIPT_DIR/build_worksheets.py"

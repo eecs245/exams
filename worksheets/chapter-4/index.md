@@ -153,8 +153,7 @@ body { padding-top: 0 !important; }
 
 ## FA25 MT1 · Problem 6: Needed Me <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/mt1/">FA25 MT1</a></p>
 
 Suppose <span class="math-inline">\\(\vec x = \begin{bmatrix} c \\\\ 1 \\\\ 0 \end{bmatrix}\\)</span>, <span class="math-inline">\\(\vec y = \begin{bmatrix} 1 \\\\ c \\\\ 1 \end{bmatrix}\\)</span>, and <span class="math-inline">\\(\vec z = \begin{bmatrix} 0 \\\\ 1 \\\\ c \end{bmatrix}\\)</span>, where <span class="math-inline">\\(c \in \mathbb{R}\\)</span> is a constant.
 
@@ -224,13 +223,11 @@ other value of <span class="math-inline">\\(c =\\)</span> \_\_\_\_\_\_
 
 </div>
 
-
 ---
 
 ## FA25 MT1 · Problem 7: High Definition <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/mt1/">FA25 MT1</a></p>
 
 Suppose <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \ldots \vec x&#95;{12}\\)</span> are 12 non-zero vectors in <span class="math-inline">\\(\mathbb{R}^{7}\\)</span>. Furthermore, suppose:
 
@@ -305,13 +302,11 @@ So, retroactively, we gave full credit to everyone for this part.
 
 </div>
 
-
 ---
 
 ## FA25 Final · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/final/">FA25 Final</a></p>
 
 Let <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> be as in the previous problem.
 
@@ -368,13 +363,11 @@ For <span class="math-inline">\\(e&#95;1 + e&#95;2 + e&#95;3\\)</span> to always
 
 </div>
 
-
 ---
 
 ## WN26 MT1 · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/mt1/">WN26 MT1</a></p>
 
 Suppose <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \vec x&#95;3, \vec x&#95;4, \vec x&#95;5, \vec x&#95;6\\)</span> are 6 vectors in <span class="math-inline">\\(\mathbb{R}^9\\)</span> such that
 
@@ -583,13 +576,11 @@ So, the smallest possible value of <span class="math-inline">\\(\text{dim}(W)\\)
 
 </div>
 
-
 ---
 
 ## WN26 Final · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/final/">WN26 Final</a></p>
 
 Let
 
@@ -660,13 +651,11 @@ $$
 So, <span class="math-inline">\\(S = \text{span}\left(\left\lbrace \begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\\ 1 \\\\ -1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\\\ 1 \\\\ 1 \\\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\\\ 0 \\\\ 0 \\\\ 1 \end{bmatrix} \right\rbrace\right)\\)</span>. This is a 4-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^6\\)</span>, so <span class="math-inline">\\(\dim(S) = 4\\)</span>.
 </details>
 
-
 ---
 
 ## SP26 MT1 · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/mt1/">SP26 MT1</a></p>
 
 Suppose <span class="math-inline">\\(c \in \mathbb R\\)</span> is a constant and
 
@@ -767,13 +756,11 @@ But, notice that <span class="math-inline">\\(6c + 6 = 24 \implies c = 3\\)</spa
 
 </div>
 
-
 ---
 
 ## SP26 MT1 · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/mt1/">SP26 MT1</a></p>
 
 Suppose <span class="math-inline">\\(\vec v&#95;1,\vec v&#95;2,\vec v&#95;3,\vec v&#95;4\in\mathbb R^n\\)</span> are a **linearly independent** collection of vectors. Define
 
@@ -877,13 +864,11 @@ $$
 
 </div>
 
-
 ---
 
 ## SP26 MT1 · Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/mt1/">SP26 MT1</a></p>
 
 Suppose <span class="math-inline">\\(S\\)</span> is the subspace of <span class="math-inline">\\(\mathbb R^4\\)</span> defined by
 
@@ -927,13 +912,11 @@ $$
 So, only the first and third choices are bases for <span class="math-inline">\\(S\\)</span>.
 </details>
 
-
 ---
 
 ## SP26 Final · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/final/">SP26 Final</a></p>
 
 Suppose <span class="math-inline">\\(S = \left\lbrace \begin{bmatrix} x&#95;1 \\\\ x&#95;2 \\\\ x&#95;3 \\\\ x&#95;4 \end{bmatrix} : x&#95;1 + x&#95;2 + 2x&#95;3 = 0 \text{ and } x&#95;3 = x&#95;4 \right\rbrace\\)</span>. State one basis for <span class="math-inline">\\(S\\)</span>. Your answer should be a list of vectors with no variables.
 
@@ -987,7 +970,6 @@ $$
 
  is also a valid basis.
 </details>
-
 
 ---
 

@@ -1,0 +1,177 @@
+---
+number: 3
+title: 
+heading_suffix:  <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">16 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
+points: 16
+flags: [mt1-redemption]
+has_solution: true
+images: []
+---
+
+Consider the vectors <span class="math-inline">\\(\vec u = \begin{bmatrix} 3 \\\\ 3 \\\\ 6 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\vec v = \begin{bmatrix} 1 \\\\ 0 \\\\ c \end{bmatrix}\\)</span>, where <span class="math-inline">\\(c \in \mathbb{R}\\)</span> is some constant.
+
+In parts **a)** and **b)**, if there are multiple possible values of <span class="math-inline">\\(c\\)</span>, give just one.
+
+<div class="assignment-parts" markdown="1">
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">a)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> are orthogonal. Find <span class="math-inline">\\(c\\)</span>. Give your answer as a number with no variables.
+
+<span class="math-inline">\\(c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+
+<details markdown="1"><summary>Solution</summary>
+
+Since <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> are orthogonal, their dot product is 0.
+
+<div class="math-display">
+$$
+\begin{bmatrix} 3 \\\\ 3 \\\\ 6 \end{bmatrix} \cdot \begin{bmatrix} 1 \\\\ 0 \\\\ c \end{bmatrix} = 0
+$$
+</div>
+
+
+
+<div class="math-display">
+$$
+3 + 0 + 6c = 0
+$$
+</div>
+
+
+
+<div class="math-display">
+$$
+6c = -3
+$$
+</div>
+
+
+
+<div class="math-display">
+$$
+c = -1/2
+$$
+</div>
+
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">b)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose <span class="math-inline">\\(\lVert \vec v \rVert = 4\\)</span>. Find <span class="math-inline">\\(c\\)</span>. Give your answer as a number with no variables.
+
+<span class="math-inline">\\(c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+
+<details markdown="1"><summary>Solution</summary>
+
+Since <span class="math-inline">\\(\lVert \vec v \rVert = 4\\)</span>, we have
+
+<div class="math-display">
+$$
+\sqrt{1^2 + 0^2 + c^2} = 4
+$$
+</div>
+
+
+
+<div class="math-display">
+$$
+1 + c^2 = 16
+$$
+</div>
+
+
+
+<div class="math-display">
+$$
+c^2 = 15
+$$
+</div>
+
+
+
+<div class="math-display">
+$$
+c = \sqrt{15}
+$$
+</div>
+
+</details>
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">c)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose the projection of <span class="math-inline">\\(\vec v\\)</span> onto <span class="math-inline">\\(\vec u\\)</span> is <span class="math-inline">\\(\begin{bmatrix} 1.5 \\\\ 1.5 \\\\ 3 \end{bmatrix}\\)</span>. What is the value of <span class="math-inline">\\(c\\)</span>? Select one of the answers below, then justify your answer in the box provided.
+
+1.  Answer:
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3/2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6 + \sqrt{41}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(27\\)</span></span></div>
+
+2.  Justify your answer in the box below.
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3/2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6 + \sqrt{41}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(27\\)</span></span></div>
+
+The projection of <span class="math-inline">\\(\vec v\\)</span> onto <span class="math-inline">\\(\vec u\\)</span> is given by
+
+<div class="math-display">
+$$
+\vec p = \frac{\vec v \cdot \vec u}{\vec u \cdot \vec u} \vec u
+$$
+</div>
+
+Since we're told that <span class="math-inline">\\(\vec p = \begin{bmatrix} 1.5 \\\\ 1.5 \\\\ 3 \end{bmatrix}\\)</span>, this means that <span class="math-inline">\\(p = \frac{1}{2} \begin{bmatrix} 3 \\\\ 3 \\\\ 6 \end{bmatrix} = \frac{1}{2} \vec u\\)</span>. So,
+
+<div class="math-display">
+$$
+\frac{\vec v \cdot \vec u}{\vec u \cdot \vec u} = \frac{1}{2}
+$$
+</div>
+
+Substituting in <span class="math-inline">\\(\vec v = \begin{bmatrix} 1 \\\\ 0 \\\\ c \end{bmatrix}\\)</span> and <span class="math-inline">\\(\vec u = \begin{bmatrix} 3 \\\\ 3 \\\\ 6 \end{bmatrix}\\)</span> gives us
+
+<div class="math-display">
+$$
+\frac{1 \cdot 3 + 0 \cdot 3 + c \cdot 6}{3^2 + 3^2 + 6^2} = \frac{1}{2} \implies \frac{3 + 6c}{54} = \frac{1}{2} \implies 3 + 6c = 27 \implies \boxed{c = 4}
+$$
+</div>
+
+</details>
+
+Recall from the previous page that <span class="math-inline">\\(\vec u = \begin{bmatrix} 3 \\\\ 3 \\\\ 6 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\vec v = \begin{bmatrix} 1 \\\\ 0 \\\\ c \end{bmatrix}\\)</span>, where <span class="math-inline">\\(c \in \mathbb{R}\\)</span> is some constant.
+
+</div>
+</div>
+
+<div class="assignment-part" markdown="1">
+<div class="assignment-part-label">d)</div>
+<div class="assignment-part-content" markdown="1">
+<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(\text{span}(\lbrace\vec u, \vec v\rbrace)\\)</span> is the plane <span class="math-inline">\\(2x + 4y - 3z = 0\\)</span>. Find <span class="math-inline">\\(c\\)</span>. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a number with no variables. <em>Hint: While you could compute the cross product, there is no need to --- there is a much quicker solution.</em>
+
+<details markdown="1"><summary>Solution</summary>
+
+One way to find the equation of the plane <span class="math-inline">\\(ax + by + cz = 0\\)</span> spanned by <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> in <span class="math-inline">\\(\mathbb{R}^3\\)</span> is to take the cross product of the two vectors, and setting <span class="math-inline">\\(a\\)</span> to the first component of the cross product, <span class="math-inline">\\(b\\)</span> to the second component, and <span class="math-inline">\\(c\\)</span> to the third component. We could compute the cross product in terms of <span class="math-inline">\\(c\\)</span>, and solve for where it is equal to <span class="math-inline">\\(\begin{bmatrix} 2 \\\\ 4 \\\\ -3 \end{bmatrix}\\)</span>.
+
+But this is overly complicated, and there's an easier solution: if this plane is spanned by <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span>, then <span class="math-inline">\\(\vec v\\)</span> needs to satisfy the equation of the plane, which is <span class="math-inline">\\(2x + 4y - 3z = 0\\)</span>.
+
+Substituting in <span class="math-inline">\\(\vec v = \begin{bmatrix} 1 \\\\ 0 \\\\ c \end{bmatrix}\\)</span> gives us
+
+<div class="math-display">
+$$
+2 \cdot 1 + 4 \cdot 0 - 3 \cdot c = 0 \implies 2 - 3c = 0 \implies \boxed{c = 2/3}
+$$
+</div>
+
+</details>
+
+</div>
+</div>
+
+</div>

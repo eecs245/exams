@@ -153,8 +153,7 @@ body { padding-top: 0 !important; }
 
 ## FA25 MT1 · Problem 1: Consider the Following\... <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">15 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/mt1/">FA25 MT1</a></p>
 
 Consider the following dataset of <span class="math-inline">\\(n = 9\\)</span> values.
 
@@ -239,13 +238,11 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 
 </div>
 
-
 ---
 
 ## FA25 MT1 · Problem 2: Absolute Madness <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">17 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/mt1/">FA25 MT1</a></p>
 
 Consider a dataset of <span class="math-inline">\\(n = 8\\)</span> values, where
 
@@ -381,13 +378,11 @@ $$
 
 </div>
 
-
 ---
 
 ## FA25 Final · Problem 1 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/fa25/final/">FA25 Final</a></p>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -474,13 +469,11 @@ The minimizer of mean absolute error is the median of the dataset. When the numb
 
 </div>
 
-
 ---
 
 ## WN26 MT1 · Problem 1 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">16 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/mt1/">WN26 MT1</a></p>
 
 Consider a dataset of <span class="math-inline">\\(n\\)</span> values, <span class="math-inline">\\(y&#95;1, y&#95;2, \ldots, y&#95;n\\)</span>, with:
 
@@ -501,13 +494,13 @@ Consider a dataset of <span class="math-inline">\\(n\\)</span> values, <span cla
 -   You must clearly label the coordinates of the **minimum point** on the graph.
 
 <div style="text-align: center;">
-<img src="/exams/wn26-mt1/imgs/w_r_axes.png" alt="image" style="width: 70%; max-width: 100%;">
+<img src="imgs/wn26-mt1-q1/w_r_axes.png" alt="image" style="width: 70%; max-width: 100%;">
 </div>
 
 <details markdown="1"><summary>Solution</summary>
 
 <div style="text-align: center;">
-<img src="/exams/wn26-mt1/imgs/w_r_axes_solution.png" alt="image" style="width: 90%; max-width: 100%;">
+<img src="imgs/wn26-mt1-q1/w_r_axes_solution.png" alt="image" style="width: 90%; max-width: 100%;">
 </div>
 
 Recall that
@@ -597,7 +590,7 @@ With this in mind, let's look at the options:
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Recall that <span class="math-inline">\\(R&#95;\text{abs}(w)\\)</span> is the mean absolute error of a constant prediction <span class="math-inline">\\(w\\)</span> on the dataset. A snippet of the graph of <span class="math-inline">\\(R&#95;\text{abs}(w)\\)</span> is shown below.
 
 <div style="text-align: center;">
-<img src="/exams/wn26-mt1/imgs/line_graph_gray.png" alt="image" style="width: 50%; max-width: 100%;">
+<img src="imgs/wn26-mt1-q1/line_graph_gray.png" alt="image" style="width: 50%; max-width: 100%;">
 </div>
 
 For clarity, the circles at <span class="math-inline">\\((15, 4)\\)</span>, <span class="math-inline">\\((18, 5)\\)</span>, and <span class="math-inline">\\((22, 7)\\)</span> indicate the points at which the slope of <span class="math-inline">\\(R&#95;\text{abs}(w)\\)</span> changes.
@@ -698,13 +691,11 @@ Therefore, there are 6 values in the dataset that are equal to 18.
 
 </div>
 
-
 ---
 
 ## WN26 MT1 · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">20 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/mt1/">WN26 MT1</a></p>
 
 Suppose we'd like to find the optimal constant parameter, <span class="math-inline">\\(w^{\ast}\\)</span>, for the constant model <span class="math-inline">\\(h(x&#95;i) = w\\)</span>, given a dataset of <span class="math-inline">\\(n\\)</span> points <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span>. To do so, we use the **sub-squared** loss function, <span class="math-inline">\\(L&#95;\text{ss}\\)</span>, defined below.
 
@@ -941,8 +932,7 @@ Notice how this relates to parts **a)** and **b)** --- those could have been sol
 
 ## WN26 Final · Problem 1 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/wn26/final/">WN26 Final</a></p>
 
 Suppose we'd like to find the optimal constant prediction, <span class="math-inline">\\(w^{\ast}\\)</span>, for the constant model <span class="math-inline">\\(h(x&#95;i) = w\\)</span>, given the following dataset of <span class="math-inline">\\(n = 4\\)</span> values.
 
@@ -1058,13 +1048,11 @@ $$
 
 </details>
 
-
 ---
 
 ## SP26 MT1 · Problem 1 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">16 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/mt1/">SP26 MT1</a></p>
 
 Suppose we'd like to find the optimal parameter, <span class="math-inline">\\(w^{\ast}\\)</span>, for the constant model <span class="math-inline">\\(h(x&#95;i)=w\\)</span>, using the following dataset of <span class="math-inline">\\(n = 4\\)</span> values, <span class="math-inline">\\(y&#95;1, y&#95;2, y&#95;3, y&#95;4\\)</span>:
 
@@ -1131,7 +1119,7 @@ $$
 For context, here's what average clipped loss looks like for this dataset:
 
 <div style="text-align: center;">
-<img src="/exams/sp26-mt1/imgs/p1-sol.png" alt="image" style="width: 90%; max-width: 100%;">
+<img src="imgs/sp26-mt1-q1/p1-sol.png" alt="image" style="width: 90%; max-width: 100%;">
 </div>
 </details>
 
@@ -1189,7 +1177,7 @@ $$
 The best <span class="math-inline">\\(w\\)</span> is still <span class="math-inline">\\(w = 2\\)</span>. As a refresher, let's look at the graph of <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span> again:
 
 <div style="text-align: center;">
-<img src="/exams/sp26-mt1/imgs/p1-sol.png" alt="image" style="width: 90%; max-width: 100%;">
+<img src="imgs/sp26-mt1-q1/p1-sol.png" alt="image" style="width: 90%; max-width: 100%;">
 </div>
 
 First, note that <span class="math-inline">\\(w = 20\\)</span> is a local minimizer of <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span>: if we zoom in to the graph of <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span> around <span class="math-inline">\\(w = 20\\)</span>, it looks like a parabola that opens up, centered at <span class="math-inline">\\(w = 20\\)</span>. But, when we zoom out, we see that the graph falls even lower near <span class="math-inline">\\(w = 2\\)</span> than it does near <span class="math-inline">\\(w = 20\\)</span>.
@@ -1233,13 +1221,11 @@ One pro is that clipped loss is less sensitive to outliers, since very large err
 
 </div>
 
-
 ---
 
 ## SP26 MT1 · Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/mt1/">SP26 MT1</a></p>
 
 We will continue to use the constant model, <span class="math-inline">\\(h(x&#95;i)=w\\)</span>, and the same dataset of <span class="math-inline">\\(n=4\\)</span> values as in Problem 1:
 
@@ -1324,13 +1310,11 @@ Conceptually, the fact that the errors in the case where <span class="math-inlin
 
 </div>
 
-
 ---
 
 ## SP26 Final · Problem 1 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
-
+<p class="worksheet-source">From <a href="/exams/sp26/final/">SP26 Final</a></p>
 
 Suppose we'd like to find the optimal constant parameter, <span class="math-inline">\\(w^{\ast}\\)</span>, for the constant model <span class="math-inline">\\(h(x&#95;i)=w\\)</span>, using the following dataset of <span class="math-inline">\\(n=5\\)</span> values:
 
@@ -1482,7 +1466,6 @@ That is exactly the objective from part **a)**, so the answer is the answer from
 </div>
 
 </div>
-
 
 ---
 
