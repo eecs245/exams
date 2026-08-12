@@ -24,8 +24,6 @@ exclude:
   # parsing it as front matter. Only index.md and imgs/ are served from exams/.
   - "exams/*/q*.md"
   - "exams/*/exam.yml"
-  # Pre-refactor generated pages, kept for reference.
-  - legacy-exams
   # iCloud conflict copies ("w_r_axes 2.png"). .gitignore keeps them out of git,
   # but Jekyll does not read .gitignore, so they would otherwise be served.
   - "exams/*/imgs/* [0-9].*"
