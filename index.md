@@ -36,7 +36,7 @@ Note that the midterm exams in Fall 2025 were 80 minutes long and administered i
 | Fall 2025   | [Exam](exams/fa25-mt1/), [Videos 🎥](https://www.youtube.com/playlist?list=PLEFTQpsm47qRjWWjsENcWsxgtgJ2bJAl4) | [Exam](exams/fa25-mt2/)              | [Exam](exams/fa25-final/), [Videos 🎥](https://www.youtube.com/playlist?list=PLEFTQpsm47qS-QgZ2hY-FJkqClfbGu7ds) |
 | Mock Exams  | [Exam](resources/exams/mock-mt1.pdf), [Solutions](resources/exams/mock-mt1-solutions.pdf)                                                                           | [Exam](resources/exams/mock-mt2.pdf), [Solutions](resources/exams/mock-mt2-solutions.pdf) | In lieu of a mock Final Exam, we provided these [Post-Midterm 2 practice problems](https://eecs245.org/post-mt2-practice/)                                              |
 
-### Problems by Topic
+## Problems by Topic
 
 Worksheets of past exam problems organized by chapter of the [course notes](https://notes.eecs245.org), with solutions included as dropdowns.
 
