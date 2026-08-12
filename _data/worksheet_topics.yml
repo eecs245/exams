@@ -1,6 +1,6 @@
 # Topic-specific worksheet definitions.
 # Each chapter lists the exam problems belonging to it. Problem IDs are
-#   <term>/<exam>/q<number>   e.g. sp26/mt1/q2  ->  exams/sp26-mt1, Problem 2.
+#   <term>-<exam>/q<NN>   e.g. sp26-mt1/q02  ->  exams/sp26-mt1/q02.md
 # Exams without a web view (mocks) use {id, pdf} and render as PDF links.
 # To add a new exam: append its problem IDs under the matching chapters,
 # then run scripts/build_worksheets.py (or push -- CI rebuilds automatically).
@@ -9,153 +9,153 @@
   name: "Introduction to Supervised Learning"
   summary: "squared loss and the constant model, absolute loss, comparing loss functions"
   problems:
-    - fa25/mt1/q1
-    - fa25/mt1/q2
-    - fa25/final/q1
-    - id: mock/mt1/q1
+    - fa25-mt1/q01
+    - fa25-mt1/q02
+    - fa25-final/q01
+    - id: mock-mt1/q01
       pdf: "resources/exams/mock-mt1.pdf#page=3"
-    - id: mock/mt1/q2
+    - id: mock-mt1/q02
       pdf: "resources/exams/mock-mt1.pdf#page=4"
-    - wn26/mt1/q1
-    - wn26/mt1/q7
-    - wn26/final/q1
-    - sp26/mt1/q1
-    - sp26/mt1/q2
-    - sp26/final/q1
+    - wn26-mt1/q01
+    - wn26-mt1/q07
+    - wn26-final/q01
+    - sp26-mt1/q01
+    - sp26-mt1/q02
+    - sp26-final/q01
 - chapter: 2
   name: "Simple Linear Regression"
   summary: "partial derivatives, finding optimal parameters, correlation"
   problems:
-    - fa25/mt1/q3
-    - fa25/final/q2
-    - id: mock/mt1/q3
+    - fa25-mt1/q03
+    - fa25-final/q02
+    - id: mock-mt1/q03
       pdf: "resources/exams/mock-mt1.pdf#page=6"
-    - wn26/mt1/q2
-    - wn26/final/q2
-    - sp26/mt1/q3
-    - sp26/final/q2
+    - wn26-mt1/q02
+    - wn26-final/q02
+    - sp26-mt1/q03
+    - sp26-final/q02
 - chapter: 3
   name: "Vectors"
   summary: "vectors and linear combinations, norms, dot product, projecting onto a single vector"
   problems:
-    - fa25/mt1/q4
-    - fa25/mt1/q8
-    - fa25/final/q3
-    - id: mock/mt1/q4
+    - fa25-mt1/q04
+    - fa25-mt1/q08
+    - fa25-final/q03
+    - id: mock-mt1/q04
       pdf: "resources/exams/mock-mt1.pdf#page=7"
-    - id: mock/mt1/q7
+    - id: mock-mt1/q07
       pdf: "resources/exams/mock-mt1.pdf#page=11"
-    - wn26/mt1/q4
-    - wn26/final/q3
-    - sp26/mt1/q4
-    - sp26/mt1/q5
-    - sp26/mt1/q9
-    - sp26/final/q3
+    - wn26-mt1/q04
+    - wn26-final/q03
+    - sp26-mt1/q04
+    - sp26-mt1/q05
+    - sp26-mt1/q09
+    - sp26-final/q03
 - chapter: 4
   name: "Linear Independence"
   summary: "span, linear independence, lines/planes/hyperplanes, vector spaces/basis/dimension"
   problems:
-    - fa25/mt1/q6
-    - fa25/mt1/q7
-    - fa25/final/q4
-    - id: mock/mt1/q5
+    - fa25-mt1/q06
+    - fa25-mt1/q07
+    - fa25-final/q04
+    - id: mock-mt1/q05
       pdf: "resources/exams/mock-mt1.pdf#page=9"
-    - id: mock/mt1/q6
+    - id: mock-mt1/q06
       pdf: "resources/exams/mock-mt1.pdf#page=10"
-    - wn26/mt1/q6
-    - wn26/final/q4
-    - sp26/mt1/q6
-    - sp26/mt1/q7
-    - sp26/mt1/q8
-    - sp26/final/q4
+    - wn26-mt1/q06
+    - wn26-final/q04
+    - sp26-mt1/q06
+    - sp26-mt1/q07
+    - sp26-mt1/q08
+    - sp26-final/q04
 - chapter: 5
   name: "Matrices"
   summary: "matrix operations, special matrices, rank and column space, null space and rank-nullity"
   problems:
-    - fa25/mt2/q1
-    - fa25/mt2/q2
-    - fa25/mt2/q3
-    - fa25/final/q5
-    - id: mock/mt2/q1
+    - fa25-mt2/q01
+    - fa25-mt2/q02
+    - fa25-mt2/q03
+    - fa25-final/q05
+    - id: mock-mt2/q01
       pdf: "resources/exams/mock-mt2.pdf#page=3"
-    - id: mock/mt2/q2
+    - id: mock-mt2/q02
       pdf: "resources/exams/mock-mt2.pdf#page=4"
-    - id: mock/mt2/q4
+    - id: mock-mt2/q04
       pdf: "resources/exams/mock-mt2.pdf#page=8"
-    - wn26/mt2/q2
-    - wn26/mt2/q3
-    - wn26/mt2/q5
-    - wn26/final/q5
-    - sp26/mt2/q1
-    - sp26/mt2/q2
-    - sp26/mt2/q3
-    - sp26/final/q5
+    - wn26-mt2/q02
+    - wn26-mt2/q03
+    - wn26-mt2/q05
+    - wn26-final/q05
+    - sp26-mt2/q01
+    - sp26-mt2/q02
+    - sp26-mt2/q03
+    - sp26-final/q05
 - chapter: 6
   name: "Linear Transformations and Projections"
   summary: "linear transformations, inverses, projecting onto column space, complete solution to the normal equations"
   problems:
-    - fa25/mt1/q5
-    - fa25/mt2/q5
-    - id: mock/mt2/q3
+    - fa25-mt1/q05
+    - fa25-mt2/q05
+    - id: mock-mt2/q03
       pdf: "resources/exams/mock-mt2.pdf#page=5"
-    - wn26/mt1/q3
-    - wn26/mt1/q5
-    - wn26/mt2/q4
-    - wn26/final/q6
-    - wn26/final/q5
-    - sp26/mt2/q4
-    - sp26/final/q6
-    - sp26/final/q7
+    - wn26-mt1/q03
+    - wn26-mt1/q05
+    - wn26-mt2/q04
+    - wn26-final/q06
+    - wn26-final/q05
+    - sp26-mt2/q04
+    - sp26-final/q06
+    - sp26-final/q07
 - chapter: 7
   name: "Regression Using Linear Algebra"
   summary: "regression using linear algebra, design matrices"
   problems:
-    - fa25/mt2/q4
-    - fa25/final/q8
-    - id: mock/mt2/q5
+    - fa25-mt2/q04
+    - fa25-final/q08
+    - id: mock-mt2/q05
       pdf: "resources/exams/mock-mt2.pdf#page=9"
-    - wn26/mt2/q6
-    - wn26/final/q7
-    - sp26/mt2/q5
-    - sp26/final/q8
+    - wn26-mt2/q06
+    - wn26-final/q07
+    - sp26-mt2/q05
+    - sp26-final/q08
 - chapter: 8
   name: "Gradients"
   summary: "gradient vector, gradients + matrix/vector operations, gradient descent, convexity, positive definite matrices"
   problems:
-    - fa25/mt2/q6
-    - fa25/mt2/q7
-    - fa25/final/q6
-    - fa25/final/q7
-    - id: mock/mt2/q6
+    - fa25-mt2/q06
+    - fa25-mt2/q07
+    - fa25-final/q06
+    - fa25-final/q07
+    - id: mock-mt2/q06
       pdf: "resources/exams/mock-mt2.pdf#page=11"
-    - id: mock/mt2/q7
+    - id: mock-mt2/q07
       pdf: "resources/exams/mock-mt2.pdf#page=12"
-    - id: mock/mt2/q8
+    - id: mock-mt2/q08
       pdf: "resources/exams/mock-mt2.pdf#page=13"
-    - wn26/mt2/q7
-    - wn26/mt2/q8
-    - wn26/final/q8
-    - sp26/mt2/q6
-    - sp26/mt2/q7
-    - sp26/final/q9
+    - wn26-mt2/q07
+    - wn26-mt2/q08
+    - wn26-final/q08
+    - sp26-mt2/q06
+    - sp26-mt2/q07
+    - sp26-final/q09
 - chapter: 9
   name: "Eigenvalues and Eigenvectors"
   summary: "eigenvalues and eigenvectors, characteristic polynomial, markov chains + adjacency matrices, multiplicities + diagonalization"
   problems:
-    - fa25/final/q9
-    - fa25/final/q10
-    - fa25/final/q11
-    - wn26/mt2/q1
-    - wn26/final/q9
-    - wn26/final/q10
-    - wn26/final/q11
-    - sp26/final/q10
-    - sp26/final/q11
-    - sp26/final/q12
+    - fa25-final/q09
+    - fa25-final/q10
+    - fa25-final/q11
+    - wn26-mt2/q01
+    - wn26-final/q09
+    - wn26-final/q10
+    - wn26-final/q11
+    - sp26-final/q10
+    - sp26-final/q11
+    - sp26-final/q12
 - chapter: 10
   name: "Singular Value Decomposition"
   summary: "computing SVD, low-rank approximation, best direction, principal components analysis"
   problems:
-    - fa25/final/q12
-    - wn26/final/q12
-    - sp26/final/q13
+    - fa25-final/q12
+    - wn26-final/q12
+    - sp26-final/q13

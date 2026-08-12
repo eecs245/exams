@@ -1,23 +1,26 @@
 #!/usr/bin/env python3
-"""Read questions from _questions/ and render them into composed pages.
+"""Read questions from exams/ and render them into composed pages.
 
-_questions/ is the only content tree in this repo. One question is one folder:
+One exam is one folder. It holds that exam's questions, their images, its
+metadata, and -- once composed -- its own generated page:
 
-    _questions/<term>/<exam>/q<N>/index.md    metadata header + body
-    _questions/<term>/<exam>/q<N>/imgs/*      images that question references
-    _questions/<term>/<exam>/exam.yml         exam-level metadata
+    exams/<term>-<exam>/q<NN>.md            question: metadata header + body
+    exams/<term>-<exam>/q<NN>-preamble.md   optional note above that heading
+    exams/<term>-<exam>/imgs/*              images the questions reference
+    exams/<term>-<exam>/exam.yml            exam-level metadata
+    exams/<term>-<exam>/index.md            GENERATED -- never hand-edited
 
 Both consumers -- scripts/build_exam_pages.py and scripts/build_worksheets.py --
 go through this module, so an exam page and a topic worksheet render the same
 question identically. Nothing here parses a generated page; pages are output
 only.
 
-Neither Jekyll nor any third-party library reads these files: _questions/ is
-underscore-prefixed so Jekyll skips it, and CI runs bare Python with no PyYAML.
-The header is therefore a deliberately small key/value format, parsed by
-read_header() below -- values are taken verbatim from the first ": " onward, so
-heading_suffix can hold raw badge HTML (full of colons and quotes) without any
-escaping.
+Question sources sit in a published directory but are not themselves served:
+_config.yml excludes exams/*/q*.md and exams/*/exam.yml from the Jekyll build.
+That exclusion is load-bearing -- the header below is NOT valid YAML (values are
+taken verbatim from the first ": " onward so heading_suffix can hold raw badge
+HTML full of colons and quotes), so Jekyll would fail parsing it as front
+matter. CI also runs bare Python with no PyYAML, hence the hand-rolled parser.
 """
 from __future__ import annotations
 
@@ -27,13 +30,14 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-QUESTIONS_DIR = REPO_ROOT / "_questions"
+EXAMS_DIR = REPO_ROOT / "exams"
 
 HEADER_DELIMITER = "---"
 
-# Optional per-question file holding an interstitial note that renders above the
-# question's heading (see split_body_into_questions in generate_exam_markdown).
-PREAMBLE_FILE = "preamble.md"
+
+def question_filename(number: int) -> str:
+    """q1 -> q01. Zero-padded so a directory listing sorts in exam order."""
+    return f"q{number:02d}"
 
 
 # ===> Header format <=== #
@@ -83,7 +87,6 @@ def parse_list(value: str) -> list[str]:
 
 @dataclass
 class Question:
-    term: str
     exam: str
     number: int
     heading_suffix: str
@@ -96,38 +99,39 @@ class Question:
 
     @property
     def id(self) -> str:
-        return f"{self.term}/{self.exam}/q{self.number}"
+        return f"{self.exam}/{question_filename(self.number)}"
 
     @property
     def slug(self) -> str:
-        """Directory-safe form of the id, used to namespace copied images."""
-        return f"{self.term}-{self.exam}-q{self.number}"
+        """Filesystem-safe form of the id, used to namespace copied images."""
+        return f"{self.exam}-{question_filename(self.number)}"
 
     @property
     def directory(self) -> Path:
-        return QUESTIONS_DIR / self.term / self.exam / f"q{self.number}"
+        return EXAMS_DIR / self.exam
 
 
-def question_id_parts(question_id: str) -> tuple[str, str, int]:
-    match = re.fullmatch(r"(\w+)/(\w+)/q(\d+)", question_id)
+def question_id_parts(question_id: str) -> tuple[str, int]:
+    match = re.fullmatch(r"([\w-]+)/q(\d+)", question_id)
     if not match:
-        raise SystemExit(f"Bad question id {question_id!r} (expected term/exam/qN)")
-    term, exam, number = match.groups()
-    return term, exam, int(number)
+        raise SystemExit(
+            f"Bad question id {question_id!r} (expected <term>-<exam>/qNN)"
+        )
+    exam, number = match.groups()
+    return exam, int(number)
 
 
 def read_question(question_id: str) -> Question:
-    term, exam, number = question_id_parts(question_id)
-    path = QUESTIONS_DIR / term / exam / f"q{number}" / "index.md"
+    exam, number = question_id_parts(question_id)
+    path = EXAMS_DIR / exam / f"{question_filename(number)}.md"
     if not path.exists():
         raise SystemExit(
             f"No question at {path.relative_to(REPO_ROOT)} "
             "(run scripts/convert_exams.sh first)"
         )
     fields, body = read_header(path.read_text(), path)
-    preamble_path = path.parent / PREAMBLE_FILE
+    preamble_path = path.with_name(f"{path.stem}-preamble.md")
     return Question(
-        term=term,
         exam=exam,
         number=number,
         heading_suffix=fields.get("heading_suffix", ""),
@@ -140,29 +144,28 @@ def read_question(question_id: str) -> Question:
     )
 
 
-def read_exam_questions(term: str, exam: str) -> list[Question]:
-    exam_dir = QUESTIONS_DIR / term / exam
+QUESTION_FILE_PATTERN = re.compile(r"^q(\d+)\.md$")
+
+
+def read_exam_questions(exam: str) -> list[Question]:
     numbers = sorted(
-        int(path.name[1:])
-        for path in exam_dir.glob("q*")
-        if path.is_dir() and path.name[1:].isdigit()
+        int(match.group(1))
+        for path in (EXAMS_DIR / exam).glob("q*.md")
+        if (match := QUESTION_FILE_PATTERN.match(path.name))
     )
-    return [read_question(f"{term}/{exam}/q{number}") for number in numbers]
+    return [read_question(f"{exam}/{question_filename(n)}") for n in numbers]
 
 
-def read_exam_meta(term: str, exam: str) -> dict[str, str]:
-    path = QUESTIONS_DIR / term / exam / "exam.yml"
+def read_exam_meta(exam: str) -> dict[str, str]:
+    path = EXAMS_DIR / exam / "exam.yml"
     if not path.exists():
         raise SystemExit(f"No exam metadata at {path.relative_to(REPO_ROOT)}")
     fields, _ = read_header(path.read_text(), path)
     return fields
 
 
-def iter_exams() -> list[tuple[str, str]]:
-    exams: list[tuple[str, str]] = []
-    for meta_path in sorted(QUESTIONS_DIR.glob("*/*/exam.yml")):
-        exams.append((meta_path.parent.parent.name, meta_path.parent.name))
-    return exams
+def iter_exams() -> list[str]:
+    return [path.parent.name for path in sorted(EXAMS_DIR.glob("*/exam.yml"))]
 
 
 # ===> Rendering into a page <=== #
@@ -181,7 +184,10 @@ def emit_question(question: Question, page_dir: Path, heading: str, note: str = 
     """
     body = question.body
     preamble = question.preamble
-    if question.images:
+    # An exam page is composed into the very folder its questions live in, so
+    # its imgs/ references already resolve -- only a page somewhere else (a
+    # worksheet) needs its own copy.
+    if question.images and page_dir.resolve() != question.directory.resolve():
         destination = page_dir / "imgs" / question.slug
         destination.mkdir(parents=True, exist_ok=True)
         for image in question.images:
@@ -213,7 +219,13 @@ def rewrite_image_paths(body: str, slug: str) -> str:
 
 
 def clear_generated_images(page_dir: Path) -> None:
-    """Drop a page's imgs/ so removed questions do not leave orphans behind."""
+    """Drop a composed page's imgs/ so dropped questions leave no orphans.
+
+    Only for pages that own copies (worksheets). Never call this on an exam
+    folder -- that imgs/ holds the source images, not copies of them.
+    """
+    if (page_dir / "exam.yml").exists():
+        raise SystemExit(f"Refusing to clear source images in {page_dir}")
     images = page_dir / "imgs"
     if images.exists():
         shutil.rmtree(images)

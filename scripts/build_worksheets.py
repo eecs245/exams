@@ -3,13 +3,13 @@
 
 Reads _data/worksheet_topics.yml and, for each chapter, assembles
 worksheets/chapter-<n>/index.md from the questions it lists. Questions come
-straight out of _questions/ via scripts/compose.py -- the same route
+straight out of exams/ via scripts/compose.py -- the same route
 scripts/build_exam_pages.py takes -- so a worksheet and an exam page render an
 identical question identically, and no generated page is ever parsed to recover
 its contents.
 
-Problem IDs are <term>/<exam>/q<number>, e.g. sp26/mt1/q2, which is also that
-question's path: _questions/sp26/mt1/q2/. Entries may instead be mappings
+Problem IDs are <term>-<exam>/q<NN>, e.g. sp26-mt1/q02, which is also that
+question's path: exams/sp26-mt1/q02.md. Entries may instead be mappings
 {id, pdf} for exams that have no web view (mocks); those render as PDF links in
 a trailing section.
 
@@ -79,7 +79,8 @@ def parse_topics_yaml(text: str) -> list[dict]:
 
 # ===> Labels <=== #
 
-def exam_label_for(term: str, exam: str) -> str:
+def exam_label_for(exam_dir: str) -> str:
+    term, _, exam = exam_dir.partition("-")
     exam_display = {"mt1": "MT1", "mt2": "MT2", "final": "Final"}.get(exam, exam.upper())
     return f"{term.upper()} {exam_display}"
 
@@ -113,14 +114,14 @@ def build_chapter_page(chapter: dict) -> str:
             pdf_only.append(entry)
             continue
         question = compose.read_question(entry)
-        label = exam_label_for(question.term, question.exam)
+        label = exam_label_for(question.exam)
         number = question.number
         heading_line = f"## {label} · Problem {number}{question.heading_suffix}"
         anchor = heading_anchor(heading_line[3:])
         toc_lines.append(f"- [{label} · Problem {number}](#{anchor})")
         source_note = (
             f'<p class="worksheet-source">From '
-            f'<a href="/exams/{question.term}/{question.exam}/">{label}</a></p>'
+            f'<a href="/exams/{question.exam}/">{label}</a></p>'
         )
         rendered = compose.emit_question(question, page_dir, heading_line, note=source_note)
         sections.append(f"{rendered.rstrip()}\n\n---\n")
@@ -164,8 +165,8 @@ def build_chapter_page(chapter: dict) -> str:
     if pdf_only:
         parts.append("## More practice (PDF only)\n")
         for entry in pdf_only:
-            term, exam, number = compose.question_id_parts(entry["id"])
-            label = exam_label_for(term, exam)
+            exam, number = compose.question_id_parts(entry["id"])
+            label = exam_label_for(exam)
             parts.append(f"- [{label} Problem {number}](/{entry['pdf']})")
         parts.append("")
     parts.extend(["{% endraw %}", ""])

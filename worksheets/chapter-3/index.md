@@ -153,7 +153,7 @@ body { padding-top: 0 !important; }
 
 ## FA25 MT1 · Problem 4: Mission Impossible <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25/mt1/">FA25 MT1</a></p>
+<p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -268,7 +268,7 @@ $$
 
 ## FA25 MT1 · Problem 8: Worst-Case Scenario <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25/mt1/">FA25 MT1</a></p>
+<p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
 Suppose <span class="math-inline">\\(a, b, c, d, e\\)</span> are positive real numbers. Find the **largest** real number <span class="math-inline">\\(T\\)</span> such that it's guaranteed that
 
@@ -335,7 +335,7 @@ This means that for any positive values of <span class="math-inline">\\(a, b, c,
 
 ## FA25 Final · Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">16 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25/final/">FA25 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
 Consider the vectors <span class="math-inline">\\(\vec u = \begin{bmatrix} 3 \\\\ 3 \\\\ 6 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\vec v = \begin{bmatrix} 1 \\\\ 0 \\\\ c \end{bmatrix}\\)</span>, where <span class="math-inline">\\(c \in \mathbb{R}\\)</span> is some constant.
 
@@ -509,7 +509,7 @@ $$
 
 ## WN26 MT1 · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/mt1/">WN26 MT1</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
 Suppose <span class="math-inline">\\(\vec u = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\vec u + \vec v + \vec w = \begin{bmatrix} 4 \\\\ 0 \\\\ 0 \end{bmatrix}\\)</span>. Assume that none of <span class="math-inline">\\(\vec u\\)</span>, <span class="math-inline">\\(\vec v\\)</span>, or <span class="math-inline">\\(\vec w\\)</span> are the zero vector, <span class="math-inline">\\(\vec 0\\)</span>.
 
@@ -623,7 +623,7 @@ This is a contradiction, so it is impossible for both <span class="math-inline">
 
 ## WN26 Final · Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">9 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/final/">WN26 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -763,7 +763,7 @@ So, <span class="math-inline">\\(\boxed{\lVert \vec v \rVert = 9}\\)</span>.
 
 ## SP26 MT1 · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/mt1/">SP26 MT1</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
 Let <span class="math-inline">\\(\vec u,\vec v\in\mathbb R^n\\)</span> be vectors satisfying
 
@@ -821,7 +821,7 @@ $$
 
 ## SP26 MT1 · Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">13 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/mt1/">SP26 MT1</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
 Suppose <span class="math-inline">\\(\vec u,\vec v\in\mathbb R^n\\)</span> are non-zero vectors and <span class="math-inline">\\(k\\)</span> is a scalar. Let
 
@@ -1034,7 +1034,7 @@ $$
 
 ## SP26 MT1 · Problem 9 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/mt1/">SP26 MT1</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -1128,7 +1128,7 @@ $$
 
 ## SP26 Final · Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/final/">SP26 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
 Let <span class="math-inline">\\(\vec x = \begin{bmatrix} 2 \\\\ 1 \\\\ 1 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\vec z = \begin{bmatrix} 3 \\\\ 9 \\\\ 3 \end{bmatrix}\\)</span>, and suppose <span class="math-inline">\\(\vec y \in \mathbb{R}^3\\)</span> is such that
 

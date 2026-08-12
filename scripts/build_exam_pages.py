@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Compose exam web views from the question tree.
 
-Reads _questions/<term>/<exam>/ and writes exams/<term>/<exam>/index.md. The
-page is nothing but its questions plus chrome -- it is never the source of
+Writes exams/<term>-<exam>/index.md from the questions in that same folder.
+The page is nothing but its questions plus chrome -- it is never the source of
 anything, and nothing reads it back. scripts/build_worksheets.py assembles the
 topic worksheets from the same questions by the same route.
 
@@ -29,7 +29,6 @@ from generate_exam_markdown import (  # noqa: E402
     generate_toc,
 )
 
-EXAMS_DIR = REPO_ROOT / "exams"
 
 
 def action_buttons(meta: dict[str, str]) -> str:
@@ -48,14 +47,15 @@ def action_buttons(meta: dict[str, str]) -> str:
     return '<div class="assignment-actions">\n' + "\n".join(rendered) + "\n</div>"
 
 
-def build_exam_page(term: str, exam: str) -> tuple[str, int]:
-    meta = compose.read_exam_meta(term, exam)
-    questions = compose.read_exam_questions(term, exam)
+def build_exam_page(exam: str) -> tuple[str, int]:
+    meta = compose.read_exam_meta(exam)
+    questions = compose.read_exam_questions(exam)
     if not questions:
-        raise SystemExit(f"_questions/{term}/{exam} contains no questions")
+        raise SystemExit(f"exams/{exam} contains no questions")
 
-    page_dir = EXAMS_DIR / term / exam
-    compose.clear_generated_images(page_dir)
+    # The page is composed into the folder its questions already live in, so
+    # their imgs/ references need no copying or rewriting.
+    page_dir = compose.EXAMS_DIR / exam
 
     body = f"\n\n{SECTION_SEPARATOR}\n\n".join(
         compose.emit_question(
@@ -66,7 +66,7 @@ def build_exam_page(term: str, exam: str) -> tuple[str, int]:
         for question in questions
     )
 
-    title = meta.get("title", f"{term.upper()} {exam.upper()}")
+    title = meta.get("title", exam.upper())
     parts = [
         "---",
         f"layout: {meta.get('layout') or 'minimal'}",
@@ -75,10 +75,6 @@ def build_exam_page(term: str, exam: str) -> tuple[str, int]:
         "nav_exclude: true",
         "hide_footer_hr: true",
     ]
-    if meta.get("legacy_path"):
-        # Exams used to be published at /exams/<term>-<exam>/; keep those URLs
-        # alive for anything already linking to them.
-        parts.append(f"redirect_from: /exams/{meta['legacy_path']}/")
     parts.extend(
         [
             "---",
@@ -123,14 +119,12 @@ def build_exam_page(term: str, exam: str) -> tuple[str, int]:
 def main() -> int:
     exams = compose.iter_exams()
     if not exams:
-        raise SystemExit(f"No exams found under {compose.QUESTIONS_DIR.name}/")
-    for term, exam in exams:
-        page, count = build_exam_page(term, exam)
-        out = EXAMS_DIR / term / exam / "index.md"
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(page)
-        print(f"{term}/{exam}: {count} problems")
-    print(f"Wrote {len(exams)} exam pages to {EXAMS_DIR.relative_to(REPO_ROOT)}/")
+        raise SystemExit(f"No exams found under {compose.EXAMS_DIR.name}/")
+    for exam in exams:
+        page, count = build_exam_page(exam)
+        (compose.EXAMS_DIR / exam / "index.md").write_text(page)
+        print(f"{exam}: {count} problems")
+    print(f"Wrote {len(exams)} exam pages to {compose.EXAMS_DIR.relative_to(REPO_ROOT)}/")
     return 0
 
 

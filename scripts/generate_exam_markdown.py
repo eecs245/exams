@@ -397,7 +397,7 @@ def seed_tikz_cache(questions_dir: Path, staging_imgs: Path) -> None:
     installation still succeeds as long as no figure actually changed.
     """
     staging_imgs.mkdir(parents=True, exist_ok=True)
-    for cached in questions_dir.glob("q*/imgs/tikz-*.svg"):
+    for cached in questions_dir.glob("imgs/tikz-*.svg"):
         shutil.copy2(cached, staging_imgs / cached.name)
 
 
@@ -2462,7 +2462,7 @@ def escape_underscores(match: re.Match[str]) -> str:
 
 # ===> Splitting a converted exam into per-question source files <=== #
 # The question, not the page, is this repo's unit of source. Exam mode writes
-# _questions/<term>/<exam>/q<N>/ and every page is composed from those; see
+# exams/<term>-<exam>/q<NN>.md and every page is composed from those; see
 # scripts/compose.py.
 #
 # The split runs on the CLEANED markdown, not on the LaTeX and not on the
@@ -2576,23 +2576,25 @@ def write_question_tree(
     questions_dir: Path,
     asset_search_dirs: list[Path],
 ) -> None:
-    # Clear every existing question first: an exam that loses or renumbers a
-    # problem must not leave a stale folder behind for the composers to find.
-    for stale in questions_dir.glob("q*"):
-        if stale.is_dir():
-            shutil.rmtree(stale)
+    # Clear existing questions and their images first: an exam that loses or
+    # renumbers a problem must not leave stale files for the composers to find.
+    # index.md is generated output and is rewritten by build_exam_pages.py.
+    questions_dir.mkdir(parents=True, exist_ok=True)
+    for stale in list(questions_dir.glob("q*.md")):
+        stale.unlink()
+    if (questions_dir / "imgs").exists():
+        shutil.rmtree(questions_dir / "imgs")
 
     for question in questions:
-        question_dir = questions_dir / f"q{question.number}"
-        question_dir.mkdir(parents=True)
-        body, images = relocate_assets(question.body, asset_search_dirs, question_dir)
+        body, images = relocate_assets(question.body, asset_search_dirs, questions_dir)
         preamble = ""
         if question.preamble:
             preamble, preamble_images = relocate_assets(
-                question.preamble, asset_search_dirs, question_dir
+                question.preamble, asset_search_dirs, questions_dir
             )
             images = sorted(set(images) | set(preamble_images))
         question.images = images
+        stem = compose.question_filename(question.number)
         header = compose.format_header(
             {
                 "number": question.number,
@@ -2607,9 +2609,11 @@ def write_question_tree(
         # Trailing whitespace is stripped here, at the source, so every consumer
         # gets the same clean text. Pages used to strip it on write, which meant
         # worksheets only inherited clean content by way of the exam page.
-        (question_dir / "index.md").write_text(f"{header}\n\n{strip_line_endings(body)}\n")
+        (questions_dir / f"{stem}.md").write_text(
+            f"{header}\n\n{strip_line_endings(body)}\n"
+        )
         if preamble:
-            (question_dir / compose.PREAMBLE_FILE).write_text(
+            (questions_dir / f"{stem}-preamble.md").write_text(
                 strip_line_endings(preamble) + "\n"
             )
 

@@ -1,15 +1,15 @@
 name: Build exam pages and worksheets
 
-# Recomposes exams/ and worksheets/ whenever their inputs change. Both are pure
-# output of the question tree in _questions/, which is the repo's only content
-# tree -- so a change to a question, or to the topic mapping, flows into every
-# page that uses it on the next push.
+# Recomposes each exam's index.md and the topic worksheets whenever their
+# inputs change. Both are pure output of the questions in exams/<term>-<exam>/,
+# the repo's only content tree -- so a change to a question, or to the topic
+# mapping, flows into every page that uses it on the next push.
 #
 # Workflow for a new exam:
 #   1. Drop its folder into _sources/exams/ (the .tex plus its images).
 #   2. Run scripts/convert_exams.sh locally (needs pandoc; also pdflatex and
 #      pdftocairo if the exam has TikZ figures not already rendered) and commit
-#      the generated _questions/<term>/<exam>/ tree.
+#      the generated exams/<term>-<exam>/ folder.
 #   3. Append the new problems to _data/worksheet_topics.yml under their
 #      chapters and push. This workflow recomposes every affected page.
 
@@ -17,7 +17,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "_questions/**"
+      - "exams/*/q*.md"
+      - "exams/*/exam.yml"
       - "_data/worksheet_topics.yml"
       - "scripts/compose.py"
       - "scripts/build_exam_pages.py"

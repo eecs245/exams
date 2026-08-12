@@ -156,7 +156,7 @@ body { padding-top: 0 !important; }
 
 ## FA25 MT2 · Problem 1: Getting Started <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25/mt2/">FA25 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -309,7 +309,7 @@ $$
 
 ## FA25 MT2 · Problem 2: Space Jam <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">20 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25/mt2/">FA25 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
 Let <span class="math-inline">\\(X = \begin{bmatrix} 1 &amp; -4 &amp; 2 &amp; 2 &amp; 0 \\\\ 0 &amp; 0 &amp; -3 &amp; 3 &amp; 0 \\\\ 1 &amp; -4 &amp; 4 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}\\)</span>.
 
@@ -459,7 +459,7 @@ $$
 
 ## FA25 MT2 · Problem 3: Nilpotence <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25/mt2/">FA25 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
 Suppose <span class="math-inline">\\(A\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix such that <span class="math-inline">\\(A^2 = 0&#95;{n \times n}\\)</span>, where <span class="math-inline">\\(0&#95;{n \times n}\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix of all zeros.
 
@@ -530,7 +530,7 @@ This tells us that <span class="math-inline">\\(2\text{rank}(A) \leq n\\)</span>
 
 ## FA25 Final · Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25/final/">FA25 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
 Consider the <span class="math-inline">\\(n \times 5\\)</span> matrix <span class="math-inline">\\(A\\)</span>, along with a CR decomposition of it, given below.
 
@@ -692,7 +692,7 @@ $$
 
 ## WN26 MT2 · Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/mt2/">WN26 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
 Suppose <span class="math-inline">\\(A\\)</span> is a matrix such that <span class="math-inline">\\(A \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 6 \\\\ 0 \\\\ 1 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\left\lbrace \begin{bmatrix} 1 \\\\ 4 \\\\ -2 \\\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\\ 1 \\\\ 1 \\\\ 0\end{bmatrix} \right\rbrace\\)</span> is a basis for <span class="math-inline">\\(\text{nullsp}(A)\\)</span>.
 
@@ -799,7 +799,7 @@ $$
 
 ## WN26 MT2 · Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/mt2/">WN26 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
 Suppose <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both **non-zero** <span class="math-inline">\\(6 \times 6\\)</span> matrices, such that <span class="math-inline">\\(\text{rank}(A) = 4\\)</span> and that every column of <span class="math-inline">\\(B\\)</span> is in <span class="math-inline">\\(\text{nullsp}(A)\\)</span>.
 
@@ -915,7 +915,7 @@ Both are achievable: all columns of <span class="math-inline">\\(B\\)</span> cou
 
 ## WN26 MT2 · Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">13 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/mt2/">WN26 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
 Let
 
@@ -1105,7 +1105,7 @@ $$
 
 ## WN26 Final · Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/final/">WN26 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
 Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(6 \times 5\\)</span> matrix such that
 
@@ -1331,7 +1331,7 @@ $$
 
 ## SP26 MT2 · Problem 1 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/mt2/">SP26 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
 Suppose <span class="math-inline">\\(k\\)</span> is a real number. Let
 
@@ -1494,7 +1494,7 @@ $$
 
 ## SP26 MT2 · Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">16 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/mt2/">SP26 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
 Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(3 \times 3\\)</span> matrix whose null space is the plane
 
@@ -1698,7 +1698,7 @@ $$
 
 ## SP26 MT2 · Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/mt2/">SP26 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
 Suppose <span class="math-inline">\\(A\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix.
 
@@ -1810,7 +1810,7 @@ $$
 
 ## SP26 Final · Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/final/">SP26 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
 Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(7 \times 12\\)</span> matrix. Fill in each blank with an integer with no variables.
 

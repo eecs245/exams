@@ -150,7 +150,7 @@ body { padding-top: 0 !important; }
 
 ## FA25 MT2 · Problem 4: Poly Wants a Cracker <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">18 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25/mt2/">FA25 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
 Suppose we'd like to fit the model <span class="math-inline">\\(\boxed{h(x&#95;i) = w&#95;0 + w&#95;1 x&#95;i + w&#95;2 x&#95;i^2}\\)</span> by minimizing mean squared error. We use an observation vector <span class="math-inline">\\(\vec y \in \mathbb{R}^n\\)</span>, but instead of using the regular design matrix <span class="math-inline">\\(X\\)</span>,
 
@@ -345,7 +345,7 @@ $$
 
 ## FA25 Final · Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25/final/">FA25 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
 Suppose we fit a multiple linear regression model **with** an intercept term that predicts the `height` of a wolverine given its `weight` and `color`. The model is fit by minimizing mean squared error.
 
@@ -431,7 +431,7 @@ With that in mind, let's look at the options:
 
 ## WN26 MT2 · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">20 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/mt2/">WN26 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
 Suppose we'd like to fit a multiple linear regression model **without** an intercept term to **predict the number of fans in attendance at a Michigan football home game** given various features.
 
@@ -691,7 +691,7 @@ Let <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> be the error 
 
 ## WN26 Final · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/final/">WN26 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
 Suppose we'd like to fit a multiple linear regression model **without an intercept term** to predict an apartment's monthly rent (in hundreds of dollars) using various features.
 
@@ -818,7 +818,7 @@ $$
 
 ## SP26 MT2 · Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">19 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/mt2/">SP26 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
 Suppose we're given a dataset with <span class="math-inline">\\(n = 5\\)</span> rows, and we use it to fit a multiple linear regression model with two features and an intercept term.
 
@@ -1095,7 +1095,7 @@ $$
 
 ## SP26 Final · Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/final/">SP26 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
 Suppose we'd like to fit a multiple linear regression model to predict <span class="math-inline">\\(\texttt{cost}&#95;i\\)</span>, the cost in dollars of parking in an Ann Arbor parking garage, using <span class="math-inline">\\(\texttt{hours}&#95;i\\)</span>, the number of hours parked.
 

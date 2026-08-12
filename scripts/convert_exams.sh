@@ -11,8 +11,9 @@
 # paths are all derived from the folder name and the source itself.
 #
 #   _sources/exams/<term>-<exam>/<term>-<exam>.tex   source you drop in
-#   _questions/<term>/<exam>/{exam.yml,q*/}          the only content tree
-#   exams/<term>/<exam>/, worksheets/chapter-*/      composed from it
+#   exams/<term>-<exam>/{exam.yml,q*.md,imgs/}       the only content tree
+#   exams/<term>-<exam>/index.md                     composed from it
+#   worksheets/chapter-*/index.md                    composed from it
 #
 # PDF buttons link to the repo's existing resources/exams/<name>[-solutions].pdf
 set -euo pipefail
@@ -37,10 +38,8 @@ for tex in "$SRC_ROOT"/*/*.tex; do
   name="$(basename "$tex" .tex)"
   [ -n "$only" ] && [ "$name" != "$only" ] && continue
 
-  # sp26-mt1 -> sp26/mt1, matching the problem ids in _data/worksheet_topics.yml.
-  term="${name%%-*}"
-  exam="${name#*-}"
-  questions_dir="$REPO_ROOT/_questions/${term}/${exam}"
+  # The folder name is the exam id, matching _data/worksheet_topics.yml.
+  questions_dir="$REPO_ROOT/exams/${name}"
   stamp="$questions_dir/exam.yml"
 
   # Incremental: skip an exam whose source (and the scripts that convert it) are

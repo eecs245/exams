@@ -18,10 +18,18 @@ exclude:
   - vendor/gems
   - vendor/ruby
   - scripts
-  # Source and question trees are build inputs, never served. Jekyll already
-  # skips _-prefixed directories; listed explicitly so the intent is visible.
   - _sources
-  - _questions
+  # Question sources sit beside the exam page they compose into. Excluding them
+  # is load-bearing: their header is not valid YAML, so Jekyll would fail
+  # parsing it as front matter. Only index.md and imgs/ are served from exams/.
+  - "exams/*/q*.md"
+  - "exams/*/exam.yml"
+  # Pre-refactor generated pages, kept for reference.
+  - legacy-exams
+  # iCloud conflict copies ("w_r_axes 2.png"). .gitignore keeps them out of git,
+  # but Jekyll does not read .gitignore, so they would otherwise be served.
+  - "exams/*/imgs/* [0-9].*"
+  - "worksheets/*/imgs/*/* [0-9].*"
 
 theme: just-the-docs
 color_scheme: um

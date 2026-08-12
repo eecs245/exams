@@ -154,7 +154,7 @@ body { padding-top: 0 !important; }
 
 ## FA25 MT1 · Problem 5: Back to Normal <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25/mt1/">FA25 MT1</a></p>
+<p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
 Consider the orthogonal vectors <span class="math-inline">\\(\vec u&#95;1 = \begin{bmatrix} 13 \\\\ -3 \\\\ 2 \end{bmatrix}\\)</span>, <span class="math-inline">\\(\vec u&#95;2 = \begin{bmatrix} 0 \\\\ 4 \\\\ 6 \end{bmatrix}\\)</span>, and <span class="math-inline">\\(\vec u&#95;3 = \begin{bmatrix} 1 \\\\ 3 \\\\ -2 \end{bmatrix}\\)</span>.
 
@@ -238,7 +238,7 @@ So, we need to find the vector <span class="math-inline">\\(\vec u&#95;k\\)</spa
 
 ## FA25 MT2 · Problem 5: Ortho\...dontist? <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/fa25/mt2/">FA25 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
 Let <span class="math-inline">\\(A = \begin{bmatrix} 1 &amp; 0 \\\\ 1 &amp; 4 \\\\ 1 &amp; 4 \\\\ 1 &amp; 4 \end{bmatrix}\\)</span>.
 
@@ -465,7 +465,7 @@ $$
 
 ## WN26 MT1 · Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/mt1/">WN26 MT1</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
 Consider the following two planes, <span class="math-inline">\\(P&#95;1\\)</span> and <span class="math-inline">\\(P&#95;2\\)</span>, in <span class="math-inline">\\(\mathbb{R}^3\\)</span>.
 
@@ -625,7 +625,7 @@ So, once again, we find that <span class="math-inline">\\(\begin{bmatrix} 1 \\\\
 
 ## WN26 MT1 · Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/mt1/">WN26 MT1</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
 Suppose <span class="math-inline">\\(\vec u, \vec v \in \mathbb{R}^n\\)</span>. Let <span class="math-inline">\\(\vec p\\)</span> be the projection of <span class="math-inline">\\(\vec u\\)</span> onto <span class="math-inline">\\(\vec v\\)</span>. Furthermore, we know that:
 
@@ -705,7 +705,7 @@ The only possible "edge case" here is when <span class="math-inline">\\(\vec u\\
 
 ## WN26 MT2 · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">13 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/mt2/">WN26 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
 Suppose <span class="math-inline">\\(X\\)</span> is some <span class="math-inline">\\(3 \times d\\)</span> matrix, for some integer <span class="math-inline">\\(d\\)</span>. Let
 
@@ -811,7 +811,7 @@ But, this means every vector in <span class="math-inline">\\(\mathbb{R}^3\\)</sp
 
 ## WN26 Final · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/final/">WN26 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
 Suppose <span class="math-inline">\\(X\\)</span> is an <span class="math-inline">\\(n \times 3\\)</span> matrix, where <span class="math-inline">\\(n &gt; 2\\)</span>, with columns <span class="math-inline">\\(\vec x^{(1)}\\)</span>, <span class="math-inline">\\(\vec x^{(2)}\\)</span>, and <span class="math-inline">\\(\vec x^{(3)}\\)</span>. Furthermore, suppose that <span class="math-inline">\\(X = QR\\)</span>, where
 
@@ -967,7 +967,7 @@ $$
 
 ## WN26 Final · Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/wn26/final/">WN26 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
 Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(6 \times 5\\)</span> matrix such that
 
@@ -1193,7 +1193,7 @@ $$
 
 ## SP26 MT2 · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/mt2/">SP26 MT2</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
 Suppose <span class="math-inline">\\(X\\)</span> is a matrix such that
 
@@ -1321,7 +1321,7 @@ Note that we're only able to answer this problem because <span class="math-inlin
 
 ## SP26 Final · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/final/">SP26 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
 Find the area enclosed by the polygon with vertices <span class="math-inline">\\((0, 0)\\)</span>, <span class="math-inline">\\((4, 6)\\)</span>, <span class="math-inline">\\((1, 8)\\)</span>, and <span class="math-inline">\\((-3, 2)\\)</span>. Show your work, and write your answer in the box provided.
 
@@ -1356,7 +1356,7 @@ $$
  so the four vertices are the coordinates of <span class="math-inline">\\(\vec{0}\\)</span>, <span class="math-inline">\\(\vec{u}\\)</span>, <span class="math-inline">\\(\vec{u}+\vec{v}\\)</span>, and <span class="math-inline">\\(\vec{v}\\)</span>. This means the polygon is a parallelogram. The area of the parallelogram is the absolute value of the determinant of the matrix whose columns are the two side vectors, as in [Chapter 6.1](https://notes.eecs245.org/linear-transformations-and-projections/linear-transformations/#the-determinant). We picked <span class="math-inline">\\(\vec{u}\\)</span> and <span class="math-inline">\\(\vec{v}\\)</span> because they are the side vectors from the origin, but using any two of the three nonzero vertices as the columns would give the same answer after taking the absolute value: adding one column to another does not change the determinant.
 
 <div style="text-align: center;">
-<img src="imgs/sp26-final-q6/polygon-determinant-area.png" alt="image" style="width: 75%; max-width: 100%;">
+<img src="imgs/sp26-final-q06/polygon-determinant-area.png" alt="image" style="width: 75%; max-width: 100%;">
 </div>
 
 So,
@@ -1385,7 +1385,7 @@ $$
 
 ## SP26 Final · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
 
-<p class="worksheet-source">From <a href="/exams/sp26/final/">SP26 Final</a></p>
+<p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
 Suppose <span class="math-inline">\\(X\\)</span> is an <span class="math-inline">\\(n \times d\\)</span> matrix with linearly independent columns, <span class="math-inline">\\(d&lt;n\\)</span>, and <span class="math-inline">\\(\vec y \in \mathbb{R}^n\\)</span>.
 
