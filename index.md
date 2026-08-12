@@ -38,7 +38,7 @@ Note that the midterm exams in Fall 2025 were 80 minutes long and administered i
 
 ### Problems by Topic
 
-Worksheets of past exam problems organized by chapter of the [course notes](https://notes.eecs245.org), with solutions included as dropdowns. Browse all of them on the [Problems by Topic](/worksheets/) page, or jump straight to a chapter:
+Worksheets of past exam problems organized by chapter of the [course notes](https://notes.eecs245.org), with solutions included as dropdowns.
 
 1. [Introduction to Supervised Learning](/worksheets/chapter-1/)
 2. [Simple Linear Regression](/worksheets/chapter-2/)
