@@ -127,8 +127,6 @@ body { padding-top: 0 !important; }
 
 # Fall 2025 Midterm 1
 
-**administered** by 3:50PM on Friday, September 27th, 2025
-
 <div class="assignment-actions">
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/fa25-mt1.pdf" target="_blank">View as PDF ✏️</a>
 <a class="btn btn-info assignment-pdf-button" href="/resources/exams/fa25-mt1-solutions.pdf" target="_blank">Solutions PDF ✅</a>

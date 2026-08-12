@@ -328,7 +328,8 @@ def generate_question_tree(
     source_tex: Path,
     questions_dir: Path,
 ) -> int:
-    """Convert one exam into _questions/<term>/<exam>/{exam.yml,q*/}."""
+    """Convert one exam into exams/<term>-<exam>/{exam.yml,q*.md,imgs/}."""
+    warn_on_homework_metadata(metadata, source_tex)
     with tempfile.TemporaryDirectory() as tmp_dir_str:
         tmp_dir = Path(tmp_dir_str)
         # render_tikz_figures derives the reference it writes from this
@@ -375,7 +376,11 @@ def generate_question_tree(
                 if metadata.term
                 else metadata.assignment
             ),
-            "administered": metadata.due_date,
+            # No due/administered date: \duedate is a homework field. Exam
+            # sources inherit it from the homework template and mostly leave it
+            # empty, but fa25-mt1 kept a submission deadline, which the web view
+            # then printed as "administered by 3:50PM on ..." for an exam sat in
+            # lecture. warn_on_homework_metadata flags any that carry a value.
             "layout": args.layout,
             "pdf": args.pdf_link or "",
             "solutions_pdf": (args.solutions_pdf_link or "") if args.include_solutions else "",
@@ -387,6 +392,23 @@ def generate_question_tree(
     )
     print(f"{source_tex.stem}: wrote {len(questions)} questions", file=sys.stderr)
     return 0
+
+
+def warn_on_homework_metadata(metadata: Metadata, source_tex: Path) -> None:
+    """Report homework-only metadata carried by an exam source.
+
+    This generator started out as the homework generator, so an exam source
+    still defines the homework fields. Exam pages ignore them, but a value left
+    in one is a sign the source was copied from a homework and not fully
+    adapted -- worth seeing rather than silently discarding.
+    """
+    if metadata.due_date.strip():
+        print(
+            f"WARNING: {source_tex.name} sets \\duedate to "
+            f"{metadata.due_date.strip()!r}. Exams have no due date; the value "
+            "is ignored. Clear \\duedate in the source to silence this.",
+            file=sys.stderr,
+        )
 
 
 def seed_tikz_cache(questions_dir: Path, staging_imgs: Path) -> None:

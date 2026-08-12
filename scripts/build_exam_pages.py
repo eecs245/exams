@@ -91,8 +91,6 @@ def build_exam_page(exam: str) -> tuple[str, int]:
             "",
         ]
     )
-    if meta.get("administered", "").strip():
-        parts.extend([f"**administered** {meta['administered']}", ""])
     buttons = action_buttons(meta)
     if buttons:
         parts.extend([buttons, ""])
