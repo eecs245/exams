@@ -125,10 +125,9 @@ body { padding-top: 0 !important; }
 .exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
 .exam-breadcrumb a { color: #0066cc; text-decoration: none; }
 .exam-breadcrumb a:hover { text-decoration: underline; }
-.exam-breadcrumb .crumb-sep { color: #57606a; margin: 0 0.35rem; }
 </style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
-<a href="/">← Back</a><span class="crumb-sep">·</span><a href="https://eecs245.org">Course home</a>
+<a href="/">← Back</a>
 </nav>
 
 # Chapter 7: Regression Using Linear Algebra

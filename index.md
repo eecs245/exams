@@ -25,6 +25,8 @@ body {
 
 A repository of past exams and solutions for EECS 245: Mathematics for Machine Learning at the University of Michigan.
 
+<p class="course-site-link"><a class="btn btn-info" href="https://eecs245.org">Go to course website →</a></p>
+
 ## Past Exams
 
 Note that the midterm exams in Fall 2025 were 80 minutes long and administered in lecture, while the midterm exams in Winter 2026 will be 120 minutes (2 hours) long and administered in the evenings. This change was made to give students more time to complete the exam; we plan on making the midterms roughly the same length as they were in Fall 2025.
