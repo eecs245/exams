@@ -134,7 +134,7 @@ body { padding-top: 0 !important; }
 
 *Topics: span, linear independence, lines/planes/hyperplanes, vector spaces/basis/dimension*
 
-*Problems below are collected from past exams; each links back to its full exam. Solutions are in the dropdowns.*
+Problems below are collected from past exams; each links back to its full exam. Solutions are in the dropdowns.
 
 ## Problems
 

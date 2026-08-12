@@ -134,7 +134,7 @@ body { padding-top: 0 !important; }
 
 *Topics: squared loss and the constant model, absolute loss, comparing loss functions*
 
-*Problems below are collected from past exams; each links back to its full exam. Solutions are in the dropdowns.*
+Problems below are collected from past exams; each links back to its full exam. Solutions are in the dropdowns.
 
 ## Problems
 

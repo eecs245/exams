@@ -134,7 +134,7 @@ body { padding-top: 0 !important; }
 
 *Topics: linear transformations, inverses, projecting onto column space, complete solution to the normal equations*
 
-*Problems below are collected from past exams; each links back to its full exam. Solutions are in the dropdowns.*
+Problems below are collected from past exams; each links back to its full exam. Solutions are in the dropdowns.
 
 ## Problems
 

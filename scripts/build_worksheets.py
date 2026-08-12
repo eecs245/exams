@@ -154,8 +154,8 @@ def build_chapter_page(chapter: dict) -> str:
         parts.extend([f"*Topics: {chapter['summary']}*", ""])
     parts.extend(
         [
-            "*Problems below are collected from past exams; each links back to its "
-            "full exam. Solutions are in the dropdowns.*",
+            "Problems below are collected from past exams; each links back to its "
+            "full exam. Solutions are in the dropdowns.",
             "",
             "\n".join(toc_lines),
             "",
