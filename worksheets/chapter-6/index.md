@@ -1518,8 +1518,4 @@ we end up with the same vector in either case.
 
 ---
 
-## More practice (PDF only)
-
-- [MOCK MT2 Problem 3](/resources/exams/mock-mt2.pdf#page=5)
-
 {% endraw %}

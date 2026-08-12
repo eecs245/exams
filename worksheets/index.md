@@ -29,13 +29,13 @@ body { padding-top: 0 !important; }
 
 Worksheets of past exam problems, organized by chapter of the [course notes](https://notes.eecs245.org). Solutions included as dropdowns.
 
-- **[Chapter 1: Introduction to Supervised Learning](/worksheets/chapter-1/)** — 11 problems. *squared loss and the constant model, absolute loss, comparing loss functions*
-- **[Chapter 2: Simple Linear Regression](/worksheets/chapter-2/)** — 7 problems. *partial derivatives, finding optimal parameters, correlation*
-- **[Chapter 3: Vectors](/worksheets/chapter-3/)** — 11 problems. *vectors and linear combinations, norms, dot product, projecting onto a single vector*
-- **[Chapter 4: Linear Independence](/worksheets/chapter-4/)** — 11 problems. *span, linear independence, lines/planes/hyperplanes, vector spaces/basis/dimension*
-- **[Chapter 5: Matrices](/worksheets/chapter-5/)** — 15 problems. *matrix operations, special matrices, rank and column space, null space and rank-nullity*
-- **[Chapter 6: Linear Transformations and Projections](/worksheets/chapter-6/)** — 11 problems. *linear transformations, inverses, projecting onto column space, complete solution to the normal equations*
-- **[Chapter 7: Regression Using Linear Algebra](/worksheets/chapter-7/)** — 7 problems. *regression using linear algebra, design matrices*
-- **[Chapter 8: Gradients](/worksheets/chapter-8/)** — 13 problems. *gradient vector, gradients + matrix/vector operations, gradient descent, convexity, positive definite matrices*
+- **[Chapter 1: Introduction to Supervised Learning](/worksheets/chapter-1/)** — 9 problems. *squared loss and the constant model, absolute loss, comparing loss functions*
+- **[Chapter 2: Simple Linear Regression](/worksheets/chapter-2/)** — 6 problems. *partial derivatives, finding optimal parameters, correlation*
+- **[Chapter 3: Vectors](/worksheets/chapter-3/)** — 9 problems. *vectors and linear combinations, norms, dot product, projecting onto a single vector*
+- **[Chapter 4: Linear Independence](/worksheets/chapter-4/)** — 9 problems. *span, linear independence, lines/planes/hyperplanes, vector spaces/basis/dimension*
+- **[Chapter 5: Matrices](/worksheets/chapter-5/)** — 12 problems. *matrix operations, special matrices, rank and column space, null space and rank-nullity*
+- **[Chapter 6: Linear Transformations and Projections](/worksheets/chapter-6/)** — 10 problems. *linear transformations, inverses, projecting onto column space, complete solution to the normal equations*
+- **[Chapter 7: Regression Using Linear Algebra](/worksheets/chapter-7/)** — 6 problems. *regression using linear algebra, design matrices*
+- **[Chapter 8: Gradients](/worksheets/chapter-8/)** — 10 problems. *gradient vector, gradients + matrix/vector operations, gradient descent, convexity, positive definite matrices*
 - **[Chapter 9: Eigenvalues and Eigenvectors](/worksheets/chapter-9/)** — 10 problems. *eigenvalues and eigenvectors, characteristic polynomial, markov chains + adjacency matrices, multiplicities + diagonalization*
 - **[Chapter 10: Singular Value Decomposition](/worksheets/chapter-10/)** — 3 problems. *computing SVD, low-rank approximation, best direction, principal components analysis*

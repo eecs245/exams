@@ -1046,8 +1046,4 @@ $$
 
 ---
 
-## More practice (PDF only)
-
-- [MOCK MT1 Problem 3](/resources/exams/mock-mt1.pdf#page=6)
-
 {% endraw %}

@@ -105,13 +105,14 @@ def build_chapter_page(chapter: dict) -> str:
     title = f"Chapter {chapter['chapter']}: {chapter['name']}"
     sections: list[str] = []
     toc_lines: list[str] = ["## Problems", ""]
-    pdf_only: list[dict] = []
     page_dir = WORKSHEETS_DIR / f"chapter-{chapter['chapter']}"
     compose.clear_generated_images(page_dir)
 
     for entry in chapter["problems"]:
         if isinstance(entry, dict):
-            pdf_only.append(entry)
+            # {id, pdf} entries name problems from exams with no web view (the
+            # mocks). They are still parsed so the topic file stays valid, but
+            # nothing is rendered for them.
             continue
         question = compose.read_question(entry)
         label = exam_label_for(question.exam)
@@ -162,13 +163,6 @@ def build_chapter_page(chapter: dict) -> str:
         ]
     )
     parts.extend(sections)
-    if pdf_only:
-        parts.append("## More practice (PDF only)\n")
-        for entry in pdf_only:
-            exam, number = compose.question_id_parts(entry["id"])
-            label = exam_label_for(exam)
-            parts.append(f"- [{label} Problem {number}](/{entry['pdf']})")
-        parts.append("")
     parts.extend(["{% endraw %}", ""])
     return "\n".join(parts)
 
@@ -198,7 +192,9 @@ def build_index_page(chapters: list[dict]) -> str:
         "",
     ]
     for chapter in chapters:
-        count = len(chapter["problems"])
+        # Only embedded questions are rendered, so only those are counted --
+        # otherwise the index advertises problems the page does not contain.
+        count = sum(1 for entry in chapter["problems"] if isinstance(entry, str))
         lines.append(
             f"- **[Chapter {chapter['chapter']}: {chapter['name']}]"
             f"(/worksheets/chapter-{chapter['chapter']}/)** — "

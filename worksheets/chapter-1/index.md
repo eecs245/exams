@@ -1469,9 +1469,4 @@ That is exactly the objective from part **a)**, so the answer is the answer from
 
 ---
 
-## More practice (PDF only)
-
-- [MOCK MT1 Problem 1](/resources/exams/mock-mt1.pdf#page=3)
-- [MOCK MT1 Problem 2](/resources/exams/mock-mt1.pdf#page=4)
-
 {% endraw %}

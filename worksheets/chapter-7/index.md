@@ -1238,8 +1238,4 @@ $$
 
 ---
 
-## More practice (PDF only)
-
-- [MOCK MT2 Problem 5](/resources/exams/mock-mt2.pdf#page=9)
-
 {% endraw %}

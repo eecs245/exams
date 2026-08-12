@@ -973,9 +973,4 @@ $$
 
 ---
 
-## More practice (PDF only)
-
-- [MOCK MT1 Problem 5](/resources/exams/mock-mt1.pdf#page=9)
-- [MOCK MT1 Problem 6](/resources/exams/mock-mt1.pdf#page=10)
-
 {% endraw %}

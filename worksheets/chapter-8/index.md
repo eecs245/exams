@@ -1539,10 +1539,4 @@ $$
 
 ---
 
-## More practice (PDF only)
-
-- [MOCK MT2 Problem 6](/resources/exams/mock-mt2.pdf#page=11)
-- [MOCK MT2 Problem 7](/resources/exams/mock-mt2.pdf#page=12)
-- [MOCK MT2 Problem 8](/resources/exams/mock-mt2.pdf#page=13)
-
 {% endraw %}
