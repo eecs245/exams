@@ -369,6 +369,7 @@ $$
 1.  <span class="math-inline">\\(\vec x^{\ast}\\)</span> is
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \begin{bmatrix} 1/3 \\\\ 1/3 \\\\ 1/3 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \begin{bmatrix} 4/9 \\\\ 0 \\\\ 5/9 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \begin{bmatrix} 5/16 \\\\ 5/16 \\\\ 6/16 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \begin{bmatrix} 5/16 \\\\ 6/16 \\\\ 5/16 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \begin{bmatrix} 3/16 \\\\ 3/16 \\\\ 10/16 \end{bmatrix}\\)</span></span></div>
 
+{: start="2"}
 2.  because <span class="math-inline">\\(\vec x^{\ast}\\)</span> is the eigenvector of <span class="math-inline">\\(A\\)</span> corresponding to the eigenvalue
 
 
@@ -495,6 +496,7 @@ $$
 1.  Answer:
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5\\)</span></span></div>
 
+{: start="2"}
 2.  Justify your answer in the box below.
 
 <details markdown="1"><summary>Solution</summary>

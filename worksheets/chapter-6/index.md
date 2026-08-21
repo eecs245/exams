@@ -191,6 +191,7 @@ So, the equation of the plane spanned by <span class="math-inline">\\(\vec u&#95
 1.  What is the value of <span class="math-inline">\\(k\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 3</span></div>
 
+{: start="2"}
 2.  Show your work in the box below. English explanations are not enough.
 
 <details markdown="1"><summary>Solution</summary>
@@ -1243,6 +1244,7 @@ Also, recall that <span class="math-inline">\\(\text{rank}(X) = \text{rank}(X^T 
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
+{: start="2"}
 2.  The columns of <span class="math-inline">\\(X\\)</span> are orthonormal.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
@@ -1400,6 +1402,7 @@ Finally, let <span class="math-inline">\\(Q\\)</span> be an <span class="math-in
 1.  (2 pts) What is <span class="math-inline">\\(\text{det}(P)\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
+{: start="2"}
 2.  (2 pts) What is <span class="math-inline">\\(\text{det}(Q)\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 

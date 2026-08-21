@@ -860,31 +860,52 @@ def replace_fbox_markers(text: str) -> str:
     return re.sub(r"\\fbox\{([^{}]*)\}", r"\\ensuremath{\\boxed{\1}}", text)
 
 
+ANY_BUBBLE_PATTERN = re.compile(r"\\(\w*bubble)(?![A-Za-z])\s*\{")
+
+
 def replace_choice_markers(text: str, include_solutions: bool = False) -> str:
-    def replace_circle(match: re.Match[str]) -> str:
-        command = match.group(1)
-        content = match.group(2).strip()
-        if command == "solutioncorrectbubble":
-            return rf"$\eecsfilledcircle$ {content} \quad "
-        return rf"$\bigcirc$ {content} \quad "
+    r"""Turn every \...bubble{...} answer choice into a rendered marker.
 
-    def replace_square(match: re.Match[str]) -> str:
-        command = match.group(1)
-        content = match.group(2).strip()
-        if command == "solutioncorrectsquarebubble":
-            return rf"$\eecsfilledsquare$ {content} \quad "
-        return rf"$\square$ {content} \quad "
+    The argument is matched by counting braces rather than by regex. Options
+    routinely nest braces several deep -- \left\{ \begin{bmatrix}...\end{bmatrix}
+    \right\} is an ordinary answer in a linear algebra exam -- and a pattern
+    that only tolerates one level silently fails to match. An unmatched
+    \correctsquarebubble is not an error pandoc reports; it is an unknown
+    command, so pandoc drops it AND its argument, and the option disappears
+    from the page with nothing in the logs. That is how sp26-mt1 Problem 8
+    came to render with no choices at all.
 
-    text = re.sub(
-        r"\\((?:correct|filled)?bubble|solution(?:correct)?bubble)\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}",
-        replace_circle,
-        text,
-    )
-    return re.sub(
-        r"\\((?:correct|filled)?squarebubble|solution(?:correct)?squarebubble)\{([^{}]*(?:\{[^{}]*\}[^{}]*)*)\}",
-        replace_square,
-        text,
-    )
+    Correctness is never revealed outside a solution: only the \solution*
+    variants render a filled marker, so the question body always shows empty
+    ones regardless of which option is flagged in the source.
+    """
+    result: list[str] = []
+    cursor = 0
+
+    while (match := ANY_BUBBLE_PATTERN.search(text, cursor)) is not None:
+        name = match.group(1)
+        try:
+            content, end = extract_braced(text, match.end() - 1)
+        except ValueError:
+            # Unbalanced braces: leave the source alone rather than corrupt it.
+            result.append(text[cursor : match.end()])
+            cursor = match.end()
+            continue
+
+        is_square = "square" in name
+        is_correct = "correct" in name or name.startswith("filled")
+        filled = is_correct and name.startswith("solution")
+        if is_square:
+            marker = r"\eecsfilledsquare" if filled else r"\square"
+        else:
+            marker = r"\eecsfilledcircle" if filled else r"\bigcirc"
+
+        result.append(text[cursor : match.start()])
+        result.append(rf"${marker}$ {content.strip()} \quad ")
+        cursor = end
+
+    result.append(text[cursor:])
+    return "".join(result)
 
 
 CHOICE_COMMAND_PATTERN = re.compile(
@@ -1451,6 +1472,8 @@ def cleanup_markdown(text: str, use_point_badges: bool = True) -> str:
     text = dedent_block_html_markers(text)
     text = flatten_solution_ordered_lists(text)
     text = keep_ordered_list_display_math_items(text)
+    # After every block-HTML pass, so it sees where the raw divs finally sit.
+    text = restart_broken_ordered_lists(text)
     text = remove_pandoc_layout_fences(text)
     text = render_youtube_embeds(text)
     text = re.sub(r"(</div>)\n---", r"\1\n\n---", text)
@@ -1615,6 +1638,62 @@ def indent_ordered_list_display_math(text: str) -> str:
         fixed.append(lines[index])
         index += 1
     return "\n".join(fixed)
+
+
+ORDERED_ITEM_PATTERN = re.compile(r"^(\d+)\.\s")
+
+
+def restart_broken_ordered_lists(text: str) -> str:
+    r"""Carry numbering across ordered-list items split apart by block HTML.
+
+    A numbered question whose parts each carry answer bubbles or a solution
+    dropdown ends up as:
+
+        1.  part one
+        <div class="mc-options">...</div>
+        2.  part two
+
+    The raw div sits at column 0, which terminates the list, so Kramdown emits
+    a fresh <ol> per item and every one renders as "1." -- four parts numbered
+    1, 1, 1, 1. Kramdown honours a start attribute set through an inline
+    attribute list, so each restarted fragment is told where to resume.
+
+    Only items that genuinely begin a new list are annotated: an item whose
+    previous non-blank line is indented is still inside the original list and
+    numbers itself correctly.
+    """
+    lines = text.splitlines()
+    output: list[str] = []
+
+    for index, line in enumerate(lines):
+        match = ORDERED_ITEM_PATTERN.match(line)
+        if match and int(match.group(1)) > 1 and starts_new_list(lines, index):
+            output.append(f'{{: start="{match.group(1)}"}}')
+        output.append(line)
+
+    return "\n".join(output)
+
+
+# Continuation content under a "N.  " marker sits at column 4. Anything less
+# deep -- three spaces, say, which fix_accidental_indented_prose emits -- does
+# not read as continuation, so the list ends there even though it looks nested.
+LIST_CONTINUATION_INDENT = 4
+
+
+def starts_new_list(lines: list[str], index: int) -> bool:
+    """True when the ordered item at `index` was cut off from its list."""
+    for previous in reversed(lines[:index]):
+        if not previous.strip():
+            continue
+        indent = len(previous) - len(previous.lstrip(" \t"))
+        if indent >= LIST_CONTINUATION_INDENT:
+            # Deep enough to belong to the preceding item: the list survived.
+            return False
+        if indent == 0 and ORDERED_ITEM_PATTERN.match(previous):
+            # Another item at column 0 means the list is intact.
+            return False
+        return True
+    return False
 
 
 def keep_ordered_list_display_math_items(text: str) -> str:

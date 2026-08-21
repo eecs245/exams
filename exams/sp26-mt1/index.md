@@ -766,6 +766,7 @@ Select values of <span class="math-inline">\\(a\\)</span> and <span class="math-
 1.  What is the value of <span class="math-inline">\\(a\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
 
+{: start="2"}
 2.  What is the value of <span class="math-inline">\\(b\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
 
@@ -1010,6 +1011,7 @@ $$
 1.  Select an answer:
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Yes</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> No</span></div>
 
+{: start="2"}
 2.  Prove your answer using the formal definition of linear independence. <em>Hint: You did something similar in Homework 4, Problem 6.</em>
 
 <details markdown="1"><summary>Solution</summary>
@@ -1109,7 +1111,17 @@ $$
 
 Which of the following sets is a basis for <span class="math-inline">\\(S\\)</span>? **Select all** that apply.
 
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\left\lbrace \begin{bmatrix}1\\\\1\\\\0\\\\0\end{bmatrix}, \begin{bmatrix}0\\\\1\\\\1\\\\0\end{bmatrix}, \begin{bmatrix}0\\\\0\\\\1\\\\1\end{bmatrix} \right\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\left\lbrace \begin{bmatrix}1\\\\1\\\\0\\\\0\end{bmatrix}, \begin{bmatrix}0\\\\1\\\\1\\\\0\end{bmatrix}, \begin{bmatrix}0\\\\0\\\\1\\\\1\end{bmatrix}, \begin{bmatrix}1\\\\0\\\\0\\\\1\end{bmatrix} \right\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\left\lbrace \begin{bmatrix}1\\\\0\\\\0\\\\1\end{bmatrix}, \begin{bmatrix}0\\\\1\\\\0\\\\-1\end{bmatrix}, \begin{bmatrix}0\\\\0\\\\1\\\\1\end{bmatrix} \right\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\left\lbrace \begin{bmatrix}1\\\\0\\\\0\\\\1\end{bmatrix}, \begin{bmatrix}0\\\\1\\\\0\\\\-1\end{bmatrix}, \begin{bmatrix}1\\\\1\\\\0\\\\0\end{bmatrix} \right\rbrace\\)</span>
+
 <details markdown="1"><summary>Solution</summary>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\left\lbrace \begin{bmatrix}1\\\\0\\\\0\\\\1\end{bmatrix}, \begin{bmatrix}0\\\\1\\\\0\\\\-1\end{bmatrix}, \begin{bmatrix}1\\\\1\\\\0\\\\0\end{bmatrix} \right\rbrace\\)</span>
 
 The subspace <span class="math-inline">\\(S\\)</span> has dimension <span class="math-inline">\\(3\\)</span> because the single constraint lets us solve
 

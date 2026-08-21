@@ -214,6 +214,7 @@ $$
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6nr \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6nr \sigma&#95;x \sigma&#95;y\\)</span></span></div>
 
+{: start="2"}
 2.  Show your work in the box below. English explanations are not enough.
 
 <details markdown="1"><summary>Solution</summary>
@@ -325,6 +326,7 @@ What is the value of <span class="math-inline">\\(A\\)</span>? Select one of the
 1.  Answer:
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle 2 \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle 2 k \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle 2 k^2 \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{2 \alpha}{k}\\)</span></span></div>
 
+{: start="2"}
 2.  Justify your answer in the box below.
 
 <details markdown="1"><summary>Solution</summary>
@@ -999,11 +1001,11 @@ So the numerator and denominator in this formula are both unchanged, meaning <sp
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Which of the following expressions is equal to <span class="math-inline">\\(w&#95;0' - w&#95;0^{\ast}\\)</span>, the difference between the new intercept and the old intercept?
 
-<span class="mc-bubble" aria-hidden="true"></span> None of these
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{\bar{y} - c}{n}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{\bar{y} - c}{n+1}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{c - \bar{y}}{n}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{c - \bar{y}}{n+1}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<span class="mc-bubble" aria-hidden="true"></span> None of these
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{\bar{y} - c}{n}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{\bar{y} - c}{n+1}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{c - \bar{y}}{n}\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{c - \bar{y}}{n+1}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
 The intercept of the optimal simple linear regression line is
 

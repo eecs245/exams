@@ -23,19 +23,16 @@ body {
 
 # EECS 245 Exams
 
-A repository of past exams and solutions for EECS 245: Mathematics for Machine Learning at the University of Michigan.
-
-<p class="course-site-link"><a class="btn btn-info" href="https://eecs245.org">Go to course website →</a></p>
+A repository of past exams and solutions for EECS 245: Mathematics for Machine Learning at the University of Michigan. See the course website [here](https://eecs245.org).
 
 ## Past Exams
 
 Note that the midterm exams in Fall 2025 were 80 minutes long and administered in lecture, while the midterm exams in Winter 2026 will be 120 minutes (2 hours) long and administered in the evenings. This change was made to give students more time to complete the exam; we plan on making the midterms roughly the same length as they were in Fall 2025.
 
-| Semester    | Midterm 1                                                                                                                                                           | Midterm 2                                                                                 | Final Exam                                                                                                                                                              |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Spring 2026 | [Exam](exams/sp26-mt1/)                                                                                        | [Exam](exams/sp26-mt2/)              | [Exam](exams/sp26-final/)                                                                                        |
-| Winter 2026 | [Exam](exams/wn26-mt1/) | [Exam](exams/wn26-mt2/)              | [Exam](exams/wn26-final/)                                                                                        |
-| Fall 2025   | [Exam](exams/fa25-mt1/) | [Exam](exams/fa25-mt2/)              | [Exam](exams/fa25-final/) |
+| ----------- | ---------------------------- | ---------------------------- | ------------------------- |
+| Spring 2026 | [Midterm 1](exams/sp26-mt1/) | [Midterm 2](exams/sp26-mt2/) | [Final](exams/sp26-final/) |
+| Winter 2026 | [Midterm 1](exams/wn26-mt1/) | [Midterm 2](exams/wn26-mt2/) | [Final](exams/wn26-final/) |
+| Fall 2025   | [Midterm 1](exams/fa25-mt1/) | [Midterm 2](exams/fa25-mt2/) | [Final](exams/fa25-final/) |
 
 ## Problems by Topic
 

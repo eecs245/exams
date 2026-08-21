@@ -440,6 +440,7 @@ $$
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6nr \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6nr \sigma&#95;x \sigma&#95;y\\)</span></span></div>
 
+{: start="2"}
 2.  Show your work in the box below. English explanations are not enough.
 
 <details markdown="1"><summary>Solution</summary>
@@ -654,6 +655,7 @@ So, the equation of the plane spanned by <span class="math-inline">\\(\vec u&#95
 1.  What is the value of <span class="math-inline">\\(k\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 3</span></div>
 
+{: start="2"}
 2.  Show your work in the box below. English explanations are not enough.
 
 <details markdown="1"><summary>Solution</summary>
@@ -800,7 +802,19 @@ smallest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Which of the following **could** form a basis for <span class="math-inline">\\(\mathbb{R}^{7}\\)</span>? Select all that apply. Blank answers will receive no credit.
 
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;7, \vec x&#95;8, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;6, \vec x&#95;7, \vec x&#95;8, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;5, \vec x&#95;8, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;2, \vec x&#95;5, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;2, \vec x&#95;8, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
+
 <details markdown="1"><summary>Solution</summary>
+
+<span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;2, \vec x&#95;8, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
 
 The first choice only includes 6 vectors, but since the span of <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \ldots \vec x&#95;{12}\\)</span> is 7-dimensional, it must include at least 7 vectors. So, the first choice is not a valid basis.
 

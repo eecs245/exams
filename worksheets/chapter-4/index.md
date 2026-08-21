@@ -256,7 +256,19 @@ smallest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Which of the following **could** form a basis for <span class="math-inline">\\(\mathbb{R}^{7}\\)</span>? Select all that apply. Blank answers will receive no credit.
 
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;7, \vec x&#95;8, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;6, \vec x&#95;7, \vec x&#95;8, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;5, \vec x&#95;8, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;2, \vec x&#95;5, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;2, \vec x&#95;8, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
+
 <details markdown="1"><summary>Solution</summary>
+
+<span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;2, \vec x&#95;8, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
 
 The first choice only includes 6 vectors, but since the span of <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \ldots \vec x&#95;{12}\\)</span> is 7-dimensional, it must include at least 7 vectors. So, the first choice is not a valid basis.
 
@@ -411,14 +423,17 @@ In each part below, a possible way to fill in the blank is given. Determine whet
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
+{: start="2"}
 2.  exactly one
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
+{: start="3"}
 3.  exactly two
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
+{: start="4"}
 4.  infinite
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
@@ -781,6 +796,7 @@ $$
 1.  Select an answer:
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Yes</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> No</span></div>
 
+{: start="2"}
 2.  Prove your answer using the formal definition of linear independence. <em>Hint: You did something similar in Homework 4, Problem 6.</em>
 
 <details markdown="1"><summary>Solution</summary>
@@ -882,7 +898,17 @@ $$
 
 Which of the following sets is a basis for <span class="math-inline">\\(S\\)</span>? **Select all** that apply.
 
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\left\lbrace \begin{bmatrix}1\\\\1\\\\0\\\\0\end{bmatrix}, \begin{bmatrix}0\\\\1\\\\1\\\\0\end{bmatrix}, \begin{bmatrix}0\\\\0\\\\1\\\\1\end{bmatrix} \right\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\left\lbrace \begin{bmatrix}1\\\\1\\\\0\\\\0\end{bmatrix}, \begin{bmatrix}0\\\\1\\\\1\\\\0\end{bmatrix}, \begin{bmatrix}0\\\\0\\\\1\\\\1\end{bmatrix}, \begin{bmatrix}1\\\\0\\\\0\\\\1\end{bmatrix} \right\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\left\lbrace \begin{bmatrix}1\\\\0\\\\0\\\\1\end{bmatrix}, \begin{bmatrix}0\\\\1\\\\0\\\\-1\end{bmatrix}, \begin{bmatrix}0\\\\0\\\\1\\\\1\end{bmatrix} \right\rbrace\\)</span>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\left\lbrace \begin{bmatrix}1\\\\0\\\\0\\\\1\end{bmatrix}, \begin{bmatrix}0\\\\1\\\\0\\\\-1\end{bmatrix}, \begin{bmatrix}1\\\\1\\\\0\\\\0\end{bmatrix} \right\rbrace\\)</span>
+
 <details markdown="1"><summary>Solution</summary>
+
+<span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\left\lbrace \begin{bmatrix}1\\\\0\\\\0\\\\1\end{bmatrix}, \begin{bmatrix}0\\\\1\\\\0\\\\-1\end{bmatrix}, \begin{bmatrix}1\\\\1\\\\0\\\\0\end{bmatrix} \right\rbrace\\)</span>
 
 The subspace <span class="math-inline">\\(S\\)</span> has dimension <span class="math-inline">\\(3\\)</span> because the single constraint lets us solve
 

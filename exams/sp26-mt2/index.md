@@ -672,6 +672,7 @@ Also, recall that <span class="math-inline">\\(\text{rank}(X) = \text{rank}(X^T 
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
+{: start="2"}
 2.  The columns of <span class="math-inline">\\(X\\)</span> are orthonormal.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
