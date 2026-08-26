@@ -48,3 +48,7 @@ Worksheets of past exam problems organized by chapter of the [course notes](http
 8. [Gradients](/worksheets/chapter-8/)
 9. [Eigenvalues and Eigenvectors](/worksheets/chapter-9/)
 10. [Singular Value Decomposition](/worksheets/chapter-10/)
+
+---
+
+<small>Thanks to former student Jack Taylor for working on this site!</small>
