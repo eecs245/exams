@@ -25,6 +25,9 @@ body {
 
 A repository of past exams and solutions for EECS 245: Mathematics for Machine Learning at the University of Michigan. See the course website [here](https://eecs245.org).
 
+{: .yellow }
+> If there are formatting issues or ambiguities with any of the questions, please let Suraj know at rampure@umich.edu!
+
 ## Past Exams
 
 All exams in EECS 245 are designed to be completed in 2 hours.
