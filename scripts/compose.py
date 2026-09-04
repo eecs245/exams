@@ -59,6 +59,31 @@ def question_filename(number: int) -> str:
     return f"q{number:02d}"
 
 
+def write_if_changed(path: Path, text: str) -> bool:
+    """Write only when the content differs. Returns True if it wrote.
+
+    Every generated file lands inside the Jekyll source tree, so an
+    unconditional write would bump its mtime, `jekyll serve --watch` would see
+    a change, rebuild, run the hook, write again... Comparing first is what
+    keeps that loop from running forever, and it keeps `git status` quiet
+    after a no-op build.
+    """
+    if path.exists() and path.read_text() == text:
+        return False
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text)
+    return True
+
+
+def copy_if_changed(source: Path, destination: Path) -> bool:
+    """copy2 that leaves an identical destination untouched. See write_if_changed."""
+    if destination.exists() and destination.read_bytes() == source.read_bytes():
+        return False
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(source, destination)
+    return True
+
+
 # ===> Header format <=== #
 
 def format_header(fields: dict[str, object]) -> str:
@@ -146,7 +171,7 @@ def read_question(question_id: str) -> Question:
     if not path.exists():
         raise SystemExit(
             f"No question at {path.relative_to(REPO_ROOT)} "
-            "(run scripts/convert_exams.sh first)"
+            "(run scripts/build.sh first)"
         )
     fields, body = read_header(path.read_text(), path)
     preamble_path = path.with_name(f"{path.stem}-preamble.md")
@@ -269,11 +294,19 @@ def read_extracted_fingerprint(exam: str) -> str | None:
 
 # ===> Rendering into a page <=== #
 
-def emit_question(question: Question, page_dir: Path, heading: str, note: str = "") -> str:
+def emit_question(
+    question: Question,
+    page_dir: Path,
+    heading: str,
+    note: str = "",
+    copied_to: set[Path] | None = None,
+) -> str:
     """Render one question for a page, copying the images it needs.
 
     `note` is page-specific text placed directly under the heading (the
-    worksheets use it to credit the exam a question came from).
+    worksheets use it to credit the exam a question came from). `copied_to`,
+    if given, collects the image paths written under page_dir so the caller
+    can prune whatever else is left there (see prune_images).
 
     Images are copied into <page_dir>/imgs/<slug>/ rather than a flat imgs/.
     Within a single exam a flat directory would be safe -- those images already
@@ -288,12 +321,13 @@ def emit_question(question: Question, page_dir: Path, heading: str, note: str = 
     # worksheet) needs its own copy.
     if question.images and page_dir.resolve() != question.directory.resolve():
         destination = page_dir / "imgs" / question.slug
-        destination.mkdir(parents=True, exist_ok=True)
         for image in question.images:
             source = question.directory / "imgs" / image
             if not source.exists():
                 raise SystemExit(f"{question.id}: missing image {source}")
-            shutil.copy2(source, destination / image)
+            copy_if_changed(source, destination / image)
+            if copied_to is not None:
+                copied_to.add((destination / image).resolve())
         body = rewrite_image_paths(body, question.slug)
         preamble = rewrite_image_paths(preamble, question.slug)
 
@@ -317,14 +351,23 @@ def rewrite_image_paths(body: str, slug: str) -> str:
     return re.sub(r"\]\(imgs/(?![^)]*/)", f"](imgs/{slug}/", body)
 
 
-def clear_generated_images(page_dir: Path) -> None:
-    """Drop a composed page's imgs/ so dropped questions leave no orphans.
+def prune_images(page_dir: Path, keep: set[Path]) -> None:
+    """Remove copied images under page_dir/imgs that this build did not write.
 
-    Only for pages that own copies (worksheets). Never call this on an exam
-    folder -- that imgs/ holds the source images, not copies of them.
+    Replaces wiping imgs/ before every build: a wipe-and-recopy rewrites every
+    image each run, which is exactly the kind of write `jekyll serve --watch`
+    would rebuild on. Only for pages that own copies (worksheets); an exam
+    folder's imgs/ holds the source images, never copies, so refuse it.
     """
     if EXAMS_DIR in page_dir.resolve().parents or page_dir.resolve() == EXAMS_DIR:
-        raise SystemExit(f"Refusing to clear source images in {page_dir}")
+        raise SystemExit(f"Refusing to prune source images in {page_dir}")
     images = page_dir / "imgs"
-    if images.exists():
-        shutil.rmtree(images)
+    if not images.exists():
+        return
+    for path in sorted(images.rglob("*"), reverse=True):
+        if path.is_file() and path.resolve() not in keep:
+            path.unlink()
+        elif path.is_dir() and not any(path.iterdir()):
+            path.rmdir()
+    if not any(images.iterdir()):
+        images.rmdir()
