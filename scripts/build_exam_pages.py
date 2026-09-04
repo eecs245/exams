@@ -125,7 +125,7 @@ def main() -> int:
         raise SystemExit(f"No exams found under {compose.EXAMS_DIR.name}/")
     for exam in exams:
         page, count = build_exam_page(exam)
-        (compose.EXAMS_DIR / exam / "index.md").write_text(page)
+        compose.write_if_changed(compose.EXAMS_DIR / exam / "index.md", page)
         print(f"{exam}: {count} problems")
     print(f"Wrote {len(exams)} exam pages to {compose.EXAMS_DIR.relative_to(REPO_ROOT)}/")
     return 0
