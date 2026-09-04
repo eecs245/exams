@@ -18,7 +18,7 @@ on:
     branches: [main]
     paths:
       - "exams/*/q*.md"
-      - "exams/*/exam.yml"
+      - "_data/exams.yml"
       - "_data/worksheet_topics.yml"
       - "scripts/compose.py"
       - "scripts/build_exam_pages.py"
