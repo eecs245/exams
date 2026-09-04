@@ -211,6 +211,16 @@ def parse_args() -> argparse.Namespace:
         help="Jekyll layout for the generated page (default: page).",
     )
     parser.add_argument(
+        "--check-extracted",
+        action="store_true",
+        help=(
+            "Exam mode only. Do nothing; exit 0 if the questions directory was "
+            "extracted from the current source (content hash matches its "
+            ".extracted stamp), 1 if it is stale or missing. scripts/build.sh "
+            "uses this to decide what to re-extract."
+        ),
+    )
+    parser.add_argument(
         "--solutions-link",
         help=(
             "Deprecated. Solutions releases set the week-file release state to solutions: true; "
@@ -228,11 +238,17 @@ def main() -> int:
     # paths resolve against the tree the caller actually means.
     repo_root = Path(__file__).resolve().parents[2]
     exam_root = compose.REPO_ROOT
-    source_tex = resolve_source_tex(exam_root if args.exam else repo_root, Path(args.source_tex))
-    output_md = resolve_repo_path(exam_root if args.exam else repo_root, Path(args.output_md))
+    exam_paths = args.exam or args.check_extracted   # --check-extracted is exam-mode only
+    source_tex = resolve_source_tex(exam_root if exam_paths else repo_root, Path(args.source_tex))
+    output_md = resolve_repo_path(exam_root if exam_paths else repo_root, Path(args.output_md))
 
     if (args.week_file is None) ^ (args.event_title is None):
         raise SystemExit("--week-file and --event-title must be provided together.")
+
+    if args.check_extracted:
+        current = compose.source_fingerprint(source_tex.parent)
+        recorded = compose.read_extracted_fingerprint(output_md.name)
+        return 0 if recorded == current else 1
 
     source_text = source_tex.read_text()
     metadata = extract_metadata(source_text)
@@ -374,8 +390,9 @@ def generate_question_tree(
     # tell whether they are current. (\duedate is deliberately not carried
     # either -- it is a homework field; see warn_on_homework_metadata.)
     warn_on_registry_mismatch(metadata, source_tex.stem)
-    (questions_dir / compose.EXTRACTED_STAMP).write_text(
-        compose.source_fingerprint(source_tex.parent) + "\n"
+    compose.write_if_changed(
+        questions_dir / compose.EXTRACTED_STAMP,
+        compose.source_fingerprint(source_tex.parent) + "\n",
     )
     print(f"{source_tex.stem}: wrote {len(questions)} questions", file=sys.stderr)
     return 0
@@ -1271,7 +1288,7 @@ def latex_fragment_to_markdown(fragment: str) -> str:
 
 
 # Standing note shown at the top of every exam web view in place of the
-# print instructions. Edit here and re-run scripts/convert_exams.sh to
+# print instructions. Edit here and re-run scripts/build.sh --all to
 # change the wording on all exam pages at once.
 EXAM_DISCLAIMER = (
     "*This page is meant to give you quick access to problems and their "
