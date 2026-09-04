@@ -1,0 +1,76 @@
+# The exam registry: one entry per exam, in the order the front page lists them.
+#
+#   id         the exam's folder name -- _sources/exams/<id>/<id>.tex, exams/<id>/,
+#              worksheet ids <id>/qNN, resources/exams/<id>.pdf, and /exams/<id>/
+#              are all this same string. Dropping a folder in fixes the id.
+#   term       display term, e.g. "Fall 2025"   } page title is "<term> <exam>"; the
+#   exam       display name, e.g. "Midterm 1"   } build warns if the .tex disagrees
+#   label      link text on the front page when shorter than `exam` (optional)
+#   pdf        exam PDF, relative to the site root
+#   solutions  solutions PDF, relative to the site root (optional)
+#   playlist   YouTube playlist of walkthroughs (optional). Per-question video
+#              links are NOT kept here: they go in the header of the question's
+#              own exams/<id>/qNN.md, by hand.
+#
+# Every entry must have an exams/<id>/ folder and every folder an entry; the
+# build fails naming whichever is missing.
+
+- id: sp26-mt1
+  term: Spring 2026
+  exam: Midterm 1
+  pdf: resources/exams/sp26-mt1.pdf
+  solutions: resources/exams/sp26-mt1-solutions.pdf
+
+- id: sp26-mt2
+  term: Spring 2026
+  exam: Midterm 2
+  pdf: resources/exams/sp26-mt2.pdf
+  solutions: resources/exams/sp26-mt2-solutions.pdf
+
+- id: sp26-final
+  term: Spring 2026
+  exam: Final Exam
+  label: Final
+  pdf: resources/exams/sp26-final.pdf
+  solutions: resources/exams/sp26-final-solutions.pdf
+
+- id: wn26-mt1
+  term: Winter 2026
+  exam: Midterm 1
+  pdf: resources/exams/wn26-mt1.pdf
+  solutions: resources/exams/wn26-mt1-solutions.pdf
+  playlist: https://www.youtube.com/playlist?list=PLEFTQpsm47qQWmh2Js1moAv8MqQCMEjWx
+
+- id: wn26-mt2
+  term: Winter 2026
+  exam: Midterm 2
+  pdf: resources/exams/wn26-mt2.pdf
+  solutions: resources/exams/wn26-mt2-solutions.pdf
+
+- id: wn26-final
+  term: Winter 2026
+  exam: Final Exam
+  label: Final
+  pdf: resources/exams/wn26-final.pdf
+  solutions: resources/exams/wn26-final-solutions.pdf
+
+- id: fa25-mt1
+  term: Fall 2025
+  exam: Midterm 1
+  pdf: resources/exams/fa25-mt1.pdf
+  solutions: resources/exams/fa25-mt1-solutions.pdf
+  playlist: https://www.youtube.com/playlist?list=PLEFTQpsm47qRjWWjsENcWsxgtgJ2bJAl4
+
+- id: fa25-mt2
+  term: Fall 2025
+  exam: Midterm 2
+  pdf: resources/exams/fa25-mt2.pdf
+  solutions: resources/exams/fa25-mt2-solutions.pdf
+
+- id: fa25-final
+  term: Fall 2025
+  exam: Final Exam
+  label: Final
+  pdf: resources/exams/fa25-final.pdf
+  solutions: resources/exams/fa25-final-solutions.pdf
+  playlist: https://www.youtube.com/playlist?list=PLEFTQpsm47qS-QgZ2hY-FJkqClfbGu7ds
