@@ -1,17 +1,21 @@
 name: Build exam pages and worksheets
 
-# Recomposes each exam's index.md and the topic worksheets whenever their
-# inputs change. Both are pure output of the questions in exams/<term>-<exam>/,
-# the repo's only content tree -- so a change to a question, or to the topic
-# mapping, flows into every page that uses it on the next push.
+# Keeps the COMMITTED exam pages and worksheets in sync with the questions.
+# The live site does not depend on this: build-site.yml composes the same pages
+# itself before deploying. This workflow only stops the checked-in index.md
+# files drifting from what the site shows, so a diff of the repo is a diff of
+# the site. (Its commit is made with GITHUB_TOKEN, so it cannot trigger
+# build-site.yml -- and does not need to.)
 #
 # Workflow for a new exam:
-#   1. Drop its folder into _sources/exams/ (the .tex plus its images).
-#   2. Run scripts/convert_exams.sh locally (needs pandoc; also pdflatex and
-#      pdftocairo if the exam has TikZ figures not already rendered) and commit
-#      the generated exams/<term>-<exam>/ folder.
+#   1. Add its entry to _data/exams.yml and drop its folder (the .tex plus its
+#      images) into _sources/exams/.
+#   2. Preview locally with `jekyll serve` -- the _plugins/ hook runs
+#      scripts/build.sh, which extracts the questions (needs pandoc; also
+#      pdflatex and pdftocairo for a TikZ figure not already rendered).
+#      Commit the new exams/<id>/ folder.
 #   3. Append the new problems to _data/worksheet_topics.yml under their
-#      chapters and push. This workflow recomposes every affected page.
+#      chapters and push.
 
 on:
   push:
@@ -20,7 +24,9 @@ on:
       - "exams/*/q*.md"
       - "_data/exams.yml"
       - "_data/worksheet_topics.yml"
+      - "scripts/build.sh"
       - "scripts/compose.py"
+      - "scripts/miniyaml.py"
       - "scripts/build_exam_pages.py"
       - "scripts/build_worksheets.py"
   workflow_dispatch:
@@ -44,12 +50,9 @@ jobs:
         with:
           python-version: "3.12"
 
-      # No TeX or Pandoc here -- composing pages only reads _questions/.
-      - name: Compose exam pages
-        run: python3 scripts/build_exam_pages.py
-
-      - name: Compose topic worksheets
-        run: python3 scripts/build_worksheets.py
+      # --compose-only: never re-extract in CI (see build-site.yml). Pure Python.
+      - name: Compose exam pages and worksheets
+        run: bash scripts/build.sh --compose-only
 
       - name: Commit regenerated pages
         run: |
