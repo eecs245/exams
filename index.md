@@ -32,10 +32,17 @@ A repository of past exams and solutions for EECS 245: Mathematics for Machine L
 
 All exams in EECS 245 are designed to be completed in 2 hours.
 
-| ----------- | ---------------------------- | ---------------------------- | ------------------------- |
-| Spring 2026 | [Midterm 1](exams/sp26-mt1/) | [Midterm 2](exams/sp26-mt2/) | [Final](exams/sp26-final/) |
-| Winter 2026 | [Midterm 1](exams/wn26-mt1/) | [Midterm 2](exams/wn26-mt2/) | [Final](exams/wn26-final/) |
-| Fall 2025   | [Midterm 1](exams/fa25-mt1/) | [Midterm 2](exams/fa25-mt2/) | [Final](exams/fa25-final/) |
+{% comment %}
+One row per term, one cell per exam, straight from _data/exams.yml -- adding an
+exam there adds it here. The leading separator makes a header-less table. No
+whitespace-trimming tags here: the blank line above the table is what makes
+kramdown start a table instead of continuing the paragraph.
+{% endcomment %}
+{% assign terms = site.data.exams | group_by: "term" %}
+| --- | --- | --- | --- |
+{% for term in terms -%}
+| {{ term.name }} |{% for exam in term.items %} [{{ exam.label | default: exam.exam }}](exams/{{ exam.id }}/) |{% endfor %}
+{% endfor %}
 
 ## Problems by Topic
 
