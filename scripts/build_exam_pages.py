@@ -31,14 +31,19 @@ from generate_exam_markdown import (  # noqa: E402
 
 
 
-def action_buttons(meta: dict[str, str]) -> str:
+def site_url(path: str) -> str:
+    """Registry paths are site-relative (resources/exams/x.pdf); URLs are absolute."""
+    return path if path.startswith(("http://", "https://", "/")) else f"/{path}"
+
+
+def action_buttons(meta: dict) -> str:
     buttons = [
         (meta.get("pdf"), "View as PDF ✏️"),
-        (meta.get("solutions_pdf"), "Solutions PDF ✅"),
-        (meta.get("videos"), "Video Walkthroughs 🎥"),
+        (meta.get("solutions"), "Solutions PDF ✅"),
+        (meta.get("playlist"), "Video Walkthroughs 🎥"),
     ]
     rendered = [
-        f'<a class="btn btn-info assignment-pdf-button" href="{link}" target="_blank">{label}</a>'
+        f'<a class="btn btn-info assignment-pdf-button" href="{site_url(link)}" target="_blank">{label}</a>'
         for link, label in buttons
         if link
     ]
@@ -48,7 +53,7 @@ def action_buttons(meta: dict[str, str]) -> str:
 
 
 def build_exam_page(exam: str) -> tuple[str, int]:
-    meta = compose.read_exam_meta(exam)
+    meta = compose.registry_entry(exam)
     questions = compose.read_exam_questions(exam)
     if not questions:
         raise SystemExit(f"exams/{exam} contains no questions")
@@ -66,10 +71,10 @@ def build_exam_page(exam: str) -> tuple[str, int]:
         for question in questions
     )
 
-    title = meta.get("title", exam.upper())
+    title = compose.exam_title(meta)
     parts = [
         "---",
-        f"layout: {meta.get('layout') or 'minimal'}",
+        "layout: minimal",
         f'title: "{escape_frontmatter(title)}"',
         f'description: "{escape_frontmatter(title)} problems."',
         "nav_exclude: true",
