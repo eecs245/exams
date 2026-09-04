@@ -31,10 +31,21 @@ jobs:
           ruby-version: "3.3"
           bundler-cache: true
 
+      # Compose the exam pages and worksheets from the committed questions.
+      # --compose-only: CI must never re-extract from LaTeX, because question
+      # headers carry hand-typed data (video links) a fresh extraction would
+      # drop. Pure Python; no pandoc needed. This step is why a push that
+      # changes only a question file still updates the live site.
+      - name: Compose exam pages and worksheets
+        run: bash scripts/build.sh --compose-only
+
+      # SKIP_CONTENT_BUILD: the _plugins/ hook that runs build.sh for local
+      # `jekyll serve` is inert here -- the step above already did its job.
       - name: Build site with Jekyll
         run: bundle exec jekyll build --source . --destination ./_site
         env:
           JEKYLL_ENV: production
+          SKIP_CONTENT_BUILD: "1"
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5
