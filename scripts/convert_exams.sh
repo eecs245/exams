@@ -11,11 +11,12 @@
 # paths are all derived from the folder name and the source itself.
 #
 #   _sources/exams/<term>-<exam>/<term>-<exam>.tex   source you drop in
-#   exams/<term>-<exam>/{exam.yml,q*.md,imgs/}       the only content tree
+#   exams/<term>-<exam>/{q*.md,imgs/,.extracted}     the only content tree
+#   _data/exams.yml                                  registry: title, PDFs, videos
 #   exams/<term>-<exam>/index.md                     composed from it
 #   worksheets/chapter-*/index.md                    composed from it
 #
-# PDF buttons link to the repo's existing resources/exams/<name>[-solutions].pdf
+# PDF and video links come from _data/exams.yml.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -38,9 +39,10 @@ for tex in "$SRC_ROOT"/*/*.tex; do
   name="$(basename "$tex" .tex)"
   [ -n "$only" ] && [ "$name" != "$only" ] && continue
 
-  # The folder name is the exam id, matching _data/worksheet_topics.yml.
+  # The folder name is the exam id: the key in _data/exams.yml and the prefix
+  # of every problem id in _data/worksheet_topics.yml.
   questions_dir="$REPO_ROOT/exams/${name}"
-  stamp="$questions_dir/exam.yml"
+  stamp="$questions_dir/.extracted"
 
   # Incremental: skip an exam whose source (and the scripts that convert it) are
   # all older than its questions. Touch the source, or pass --all, to force.
@@ -52,19 +54,10 @@ for tex in "$SRC_ROOT"/*/*.tex; do
     fi
   fi
 
-  args=(--include-solutions --exam --layout minimal
-        --pdf-link "/resources/exams/${name}.pdf")
-  if [ -f "$REPO_ROOT/resources/exams/${name}-solutions.pdf" ]; then
-    args+=(--solutions-pdf-link "/resources/exams/${name}-solutions.pdf")
-  fi
-  # Walkthrough videos: looked up from scripts/exam_videos.conf (name=url lines).
-  videos_url="$(grep -E "^${name}=" "$SCRIPT_DIR/exam_videos.conf" 2>/dev/null | head -1 | cut -d= -f2- || true)"
-  if [ -n "$videos_url" ]; then
-    args+=(--videos-link "$videos_url")
-  fi
-
+  # Page metadata (PDF links, playlist) comes from _data/exams.yml at compose
+  # time; extraction needs nothing but the source.
   if python3 "$SCRIPT_DIR/generate_exam_markdown.py" \
-      "$tex" "$questions_dir" "${args[@]}"; then
+      "$tex" "$questions_dir" --include-solutions --exam; then
     echo "PASS  $name"
     converted=$((converted + 1))
   else
