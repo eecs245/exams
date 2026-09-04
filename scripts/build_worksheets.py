@@ -28,6 +28,7 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
 import compose  # noqa: E402
+import miniyaml  # noqa: E402
 from generate_exam_markdown import (  # noqa: E402
     EXAM_NAV_SNIPPET,
     HOMEWORK_STYLE_SNIPPET,
@@ -39,42 +40,22 @@ TOPICS_YML = REPO_ROOT / "_data" / "worksheet_topics.yml"
 WORKSHEETS_DIR = REPO_ROOT / "worksheets"
 
 
-# ===> Minimal YAML parsing (only the shape worksheet_topics.yml uses) <=== #
+# ===> Topic file <=== #
 
-def parse_topics_yaml(text: str) -> list[dict]:
-    chapters: list[dict] = []
-    current: dict | None = None
-    pending_mapping: dict | None = None
-    for raw in text.splitlines():
-        line = raw.rstrip()
-        stripped = line.strip()
-        if not stripped or stripped.startswith("#"):
-            continue
-        if match := re.match(r"^- chapter:\s*(\d+)$", line):
-            current = {"chapter": int(match.group(1)), "name": "", "summary": "", "problems": []}
-            chapters.append(current)
-            pending_mapping = None
-        elif current is None:
-            raise SystemExit(f"worksheet_topics.yml: entry before first chapter: {line!r}")
-        elif match := re.match(r'^\s+name:\s*"(.*)"$', line):
-            current["name"] = match.group(1)
-        elif match := re.match(r'^\s+summary:\s*"(.*)"$', line):
-            current["summary"] = match.group(1)
-        elif re.match(r"^\s+problems:\s*$", line):
-            pass
-        elif match := re.match(r"^\s+- id:\s*(\S+)$", line):
-            pending_mapping = {"id": match.group(1)}
-            current["problems"].append(pending_mapping)
-        elif match := re.match(r'^\s+pdf:\s*"(.*)"$', line):
-            if pending_mapping is None:
-                raise SystemExit(f"worksheet_topics.yml: pdf without id: {line!r}")
-            pending_mapping["pdf"] = match.group(1)
-            pending_mapping = None
-        elif match := re.match(r"^\s+-\s*(\S+)$", line):
-            current["problems"].append(match.group(1))
-            pending_mapping = None
-        else:
-            raise SystemExit(f"worksheet_topics.yml: unrecognized line: {line!r}")
+def load_topics() -> list[dict]:
+    """Chapters from _data/worksheet_topics.yml, shape-checked."""
+    chapters = miniyaml.load_file(TOPICS_YML)
+    if not isinstance(chapters, list):
+        raise SystemExit(f"{TOPICS_YML.name}: expected a list of chapters")
+    for chapter in chapters:
+        if not isinstance(chapter, dict) or not isinstance(chapter.get("chapter"), int):
+            raise SystemExit(f"{TOPICS_YML.name}: every entry needs a numeric 'chapter', got {chapter!r}")
+        chapter.setdefault("name", "")
+        chapter.setdefault("summary", "")
+        problems = chapter.get("problems") or []
+        if not isinstance(problems, list):
+            raise SystemExit(f"{TOPICS_YML.name}: chapter {chapter['chapter']}: 'problems' must be a list")
+        chapter["problems"] = problems
     return chapters
 
 
@@ -176,7 +157,7 @@ WORKSHEET_STYLE_SNIPPET = """<style>
 
 
 def main() -> int:
-    chapters = parse_topics_yaml(TOPICS_YML.read_text())
+    chapters = load_topics()
     if not chapters:
         raise SystemExit("worksheet_topics.yml defines no chapters")
     for chapter in chapters:
