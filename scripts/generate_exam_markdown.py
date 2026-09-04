@@ -328,7 +328,7 @@ def generate_question_tree(
     source_tex: Path,
     questions_dir: Path,
 ) -> int:
-    """Convert one exam into exams/<term>-<exam>/{exam.yml,q*.md,imgs/}."""
+    """Convert one exam into exams/<term>-<exam>/{q*.md,imgs/,.extracted}."""
     warn_on_homework_metadata(metadata, source_tex)
     with tempfile.TemporaryDirectory() as tmp_dir_str:
         tmp_dir = Path(tmp_dir_str)
@@ -368,30 +368,40 @@ def generate_question_tree(
         # TikZ staging directory first and the exam's own source tree second.
         write_question_tree(questions, questions_dir, [tmp_dir, source_tex.parent])
 
-    write_exam_metadata(
-        questions_dir,
-        {
-            "title": (
-                f"{metadata.term} {metadata.assignment}"
-                if metadata.term
-                else metadata.assignment
-            ),
-            # No due/administered date: \duedate is a homework field. Exam
-            # sources inherit it from the homework template and mostly leave it
-            # empty, but fa25-mt1 kept a submission deadline, which the web view
-            # then printed as "administered by 3:50PM on ..." for an exam sat in
-            # lecture. warn_on_homework_metadata flags any that carry a value.
-            "layout": args.layout,
-            "pdf": args.pdf_link or "",
-            "solutions_pdf": (args.solutions_pdf_link or "") if args.include_solutions else "",
-            "videos": args.videos_link or "",
-            # Exam pages used to live at /exams/<stem>/; build_exam_pages.py
-            # turns this into a redirect_from so those URLs keep working.
-            "legacy_path": source_tex.stem,
-        },
+    # Page metadata (title, PDFs, playlist) is not extracted: it lives in
+    # _data/exams.yml, keyed by this folder's name. The only state written
+    # here is what the questions were extracted from, so the next build can
+    # tell whether they are current. (\duedate is deliberately not carried
+    # either -- it is a homework field; see warn_on_homework_metadata.)
+    warn_on_registry_mismatch(metadata, source_tex.stem)
+    (questions_dir / compose.EXTRACTED_STAMP).write_text(
+        compose.source_fingerprint(source_tex.parent) + "\n"
     )
     print(f"{source_tex.stem}: wrote {len(questions)} questions", file=sys.stderr)
     return 0
+
+
+def warn_on_registry_mismatch(metadata: Metadata, exam_id: str) -> None:
+    """Flag a registry entry whose display strings disagree with the .tex.
+
+    The registry is hand-written (Liquid on the front page cannot read LaTeX),
+    so the same term and exam name exist twice. The .tex is the one that was
+    printed and sat, so it is the reference; a mismatch is reported, not fixed.
+    """
+    try:
+        entry = compose.registry_entry(exam_id)
+    except SystemExit as exc:
+        # Missing entry is reported by the composer, with the fix spelled out.
+        print(f"WARNING: {exc}", file=sys.stderr)
+        return
+    expected = f"{metadata.term} {metadata.assignment}".strip()
+    actual = compose.exam_title(entry)
+    if expected and expected != actual:
+        print(
+            f"WARNING: _data/exams.yml titles {exam_id} {actual!r} but its source says "
+            f"{expected!r} (\\term / \\assignment). Fix whichever is wrong.",
+            file=sys.stderr,
+        )
 
 
 def warn_on_homework_metadata(metadata: Metadata, source_tex: Path) -> None:
@@ -2720,11 +2730,6 @@ def write_question_tree(
 
 def strip_line_endings(text: str) -> str:
     return "\n".join(line.rstrip() for line in text.strip().splitlines())
-
-
-def write_exam_metadata(questions_dir: Path, fields: dict[str, object]) -> None:
-    questions_dir.mkdir(parents=True, exist_ok=True)
-    (questions_dir / "exam.yml").write_text(compose.format_header(fields) + "\n")
 
 
 @dataclass
