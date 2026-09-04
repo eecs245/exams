@@ -88,7 +88,7 @@ def build_chapter_page(chapter: dict) -> str:
     sections: list[str] = []
     toc_lines: list[str] = ["## Problems", ""]
     page_dir = WORKSHEETS_DIR / f"chapter-{chapter['chapter']}"
-    compose.clear_generated_images(page_dir)
+    copied: set[Path] = set()
 
     for entry in chapter["problems"]:
         if isinstance(entry, dict):
@@ -106,8 +106,11 @@ def build_chapter_page(chapter: dict) -> str:
             f'<p class="worksheet-source">From '
             f'<a href="/exams/{question.exam}/">{label}</a></p>'
         )
-        rendered = compose.emit_question(question, page_dir, heading_line, note=source_note)
+        rendered = compose.emit_question(
+            question, page_dir, heading_line, note=source_note, copied_to=copied
+        )
         sections.append(f"{rendered.rstrip()}\n\n---\n")
+    compose.prune_images(page_dir, copied)
 
     parts = [
         "---",
@@ -162,8 +165,7 @@ def main() -> int:
         raise SystemExit("worksheet_topics.yml defines no chapters")
     for chapter in chapters:
         out = WORKSHEETS_DIR / f"chapter-{chapter['chapter']}" / "index.md"
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(build_chapter_page(chapter))
+        compose.write_if_changed(out, build_chapter_page(chapter))
         embedded = sum(1 for p in chapter["problems"] if isinstance(p, str))
         pdf = len(chapter["problems"]) - embedded
         print(f"chapter-{chapter['chapter']}: {embedded} embedded, {pdf} pdf-only")
