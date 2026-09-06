@@ -10,9 +10,9 @@ identical question identically, and no generated page is ever parsed to recover
 its contents.
 
 Problem IDs are <term>-<exam>/q<NN>, e.g. sp26-mt1/q02, which is also that
-question's path: exams/sp26-mt1/q02.md. Entries may instead be mappings
-{id, pdf} for exams that have no web view (mocks); those are parsed so the
-topic file stays valid, but nothing is rendered for them.
+question's path: exams/sp26-mt1/q02.md. Every entry must be such an id; the
+old {id, pdf} form for PDF-only mock problems is gone, and is rejected rather
+than silently skipped.
 
 No third-party dependencies: the YAML subset used by worksheet_topics.yml
 is parsed directly, so CI needs nothing but Python.
@@ -55,6 +55,12 @@ def load_topics() -> list[dict]:
         problems = chapter.get("problems") or []
         if not isinstance(problems, list):
             raise SystemExit(f"{TOPICS_YML.name}: chapter {chapter['chapter']}: 'problems' must be a list")
+        for entry in problems:
+            if not isinstance(entry, str):
+                raise SystemExit(
+                    f"{TOPICS_YML.name}: chapter {chapter['chapter']}: every problem must be "
+                    f"a question id like sp26-mt1/q02, got {entry!r}"
+                )
         chapter["problems"] = problems
     return chapters
 
@@ -91,11 +97,6 @@ def build_chapter_page(chapter: dict) -> str:
     copied: set[Path] = set()
 
     for entry in chapter["problems"]:
-        if isinstance(entry, dict):
-            # {id, pdf} entries name problems from exams with no web view (the
-            # mocks). They are still parsed so the topic file stays valid, but
-            # nothing is rendered for them.
-            continue
         question = compose.read_question(entry)
         label = exam_label_for(question.exam)
         number = question.number
@@ -166,9 +167,7 @@ def main() -> int:
     for chapter in chapters:
         out = WORKSHEETS_DIR / f"chapter-{chapter['chapter']}" / "index.md"
         compose.write_if_changed(out, build_chapter_page(chapter))
-        embedded = sum(1 for p in chapter["problems"] if isinstance(p, str))
-        pdf = len(chapter["problems"]) - embedded
-        print(f"chapter-{chapter['chapter']}: {embedded} embedded, {pdf} pdf-only")
+        print(f"chapter-{chapter['chapter']}: {len(chapter['problems'])} problems")
     print(f"Wrote {len(chapters)} worksheets to {WORKSHEETS_DIR.relative_to(REPO_ROOT)}/")
     return 0
 
