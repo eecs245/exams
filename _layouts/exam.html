@@ -1,0 +1,12 @@
+---
+layout: minimal
+---
+{%- comment -%}
+Wraps a composed exam page or topic worksheet so the exam-specific rules in
+_sass/custom/custom.scss (.exam-content ...) apply to it and not to the front
+page. The wrapper is added after Kramdown has rendered the content, so it
+cannot change how the Markdown is parsed.
+{%- endcomment -%}
+<div class="exam-content">
+{{ content }}
+</div>
