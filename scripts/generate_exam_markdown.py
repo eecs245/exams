@@ -1322,21 +1322,7 @@ EXAM_DISCLAIMER = (
 # Breadcrumb + theme top-bar suppression for exam web views. The site
 # header duplicates navigation the breadcrumb provides, and crowds the
 # exam content on mobile.
-EXAM_NAV_SNIPPET = """<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
-<nav class="exam-breadcrumb" aria-label="Breadcrumb">
+EXAM_NAV_HTML = """<nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>"""
 
@@ -1420,7 +1406,7 @@ def build_homework_page(
         # Web-view exams are reached from the exams homepage; the theme's
         # top bar duplicates that navigation, so hide it and provide a
         # breadcrumb instead (exams index + course home).
-        parts.insert(parts.index(f"# {display_title}"), EXAM_NAV_SNIPPET)
+        parts.insert(parts.index(f"# {display_title}"), EXAM_NAV_HTML)
         parts.insert(parts.index(f"# {display_title}"), "")
     if actions:
         parts.extend([actions, ""])
@@ -1454,7 +1440,7 @@ def description_noun_for(assignment: str) -> str:
 def generate_toc(body_markdown: str, toc_title: str) -> str:
     toc_lines = [f"## {toc_title}", ""]
     problem_pattern = re.compile(
-        r"^## ((?:Problem|Activity) \d+(?::\s*(.+?))?)(?:\s+(?:<span class=\"badge\"[^<]*</span>|\(\d+\s+pts?\)))*$",
+        r"^## ((?:Problem|Activity) \d+(?::\s*(.+?))?)(?:\s+(?:<span class=\"badge[^\"]*\"[^<]*</span>|\(\d+\s+pts?\)))*$",
         re.M,
     )
 
@@ -1880,7 +1866,7 @@ def convert_points_badges(text: str, use_badges: bool = True) -> str:
         unit = "pt" if points == "1" else "pts"
         if not use_badges:
             return f"({points} {unit})"
-        return f'<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">{points} {unit}</span>'
+        return f'<span class="badge badge-points">{points} {unit}</span>'
 
     def replace_flag_label(match: re.Match[str]) -> str:
         flag_id, label = match.group(1), match.group(2)
@@ -1889,17 +1875,13 @@ def convert_points_badges(text: str, use_badges: bool = True) -> str:
         # data-flag carries machine-readable identity for downstream
         # consumers (e.g. the topic-worksheet builder) without re-parsing
         # the visible label.
-        return (
-            f'<span class="badge" data-flag="{flag_id}" style="background-color: '
-            f"#9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; "
-            f'font-size: 14px; font-weight: 500; margin-left: 8px;">{label}</span>'
-        )
+        return f'<span class="badge badge-flag" data-flag="{flag_id}">{label}</span>'
 
     text = re.sub(r"<!-- POINTS_BADGE:(\d+) -->", replace_point_label, text)
     text = re.sub(r"<!-- FLAG_BADGE:([\w-]+):([^>]*?) -->", replace_flag_label, text)
     # A "badge run": a points badge (or plain pts) optionally followed by any
     # number of flag badges. Attached to the heading as one unit.
-    single_badge = r"<span class=\"badge\"[^<]*</span>"
+    single_badge = r"<span class=\"badge[^\"]*\"[^<]*</span>"
     point_label_pattern = (
         rf"((?:{single_badge}|\(\d+\s+pts?\))(?:[ \t]*{single_badge})*)"
     )
@@ -2893,7 +2875,7 @@ def extract_source_items(source_tex: str) -> list[AssignmentItem]:
 def extract_generated_items(markdown: str, item_kind: str) -> list[AssignmentItem]:
     items: list[AssignmentItem] = []
     pattern = re.compile(
-        rf"^## {item_kind} (\d+)(?::\s*(.*?))?(?:\s+(?:<span class=\"badge\"[^<]*</span>|\(\d+\s+pts?\)))*$",
+        rf"^## {item_kind} (\d+)(?::\s*(.*?))?(?:\s+(?:<span class=\"badge[^\"]*\"[^<]*</span>|\(\d+\s+pts?\)))*$",
         re.M,
     )
     matches = list(pattern.finditer(markdown))
