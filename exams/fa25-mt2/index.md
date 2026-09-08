@@ -259,15 +259,18 @@ $$
 
 Only Option 3 is true. Let's look at each statement one by one.
 
-**(i)** **If <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both matrices such that <span class="math-inline">\\(AB = I\\)</span>, then <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both invertible.** This is <span class="math-inline">\\(\boxed{\text{False}}\\)</span>, because it's possible for <span class="math-inline">\\(AB = I\\)</span> to be true for two non-square matrices <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span>, meaning they can't be invertible. For example, suppose <span class="math-inline">\\(B = \begin{bmatrix} 1 &amp; 0 \\\\ 0 &amp; 1 \\\\ 0 &amp; 0\end{bmatrix}\\)</span> and <span class="math-inline">\\(A = B^T = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\\\ 0 &amp; 1 &amp; 0 \end{bmatrix}\\)</span>. Then,
+<ol>
+<li markdown="1">
+**If <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both matrices such that <span class="math-inline">\\(AB = I\\)</span>, then <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both invertible.** This is <span class="math-inline">\\(\boxed{\text{False}}\\)</span>, because it's possible for <span class="math-inline">\\(AB = I\\)</span> to be true for two non-square matrices <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span>, meaning they can't be invertible. For example, suppose <span class="math-inline">\\(B = \begin{bmatrix} 1 &amp; 0 \\\\ 0 &amp; 1 \\\\ 0 &amp; 0\end{bmatrix}\\)</span> and <span class="math-inline">\\(A = B^T = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\\\ 0 &amp; 1 &amp; 0 \end{bmatrix}\\)</span>. Then,
 
 <div class="math-display">
 $$
 AB = B^TB = \begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\\\ 0 & 0 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\\\ 0 & 1  \end{bmatrix} = I
 $$
 </div>
-
-**(ii)** **If <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both invertible matrices, then <span class="math-inline">\\((A^TB)^{-1} = \left( (B^{-1})^T A^{-1} \right)^T\\)</span>.** This is <span class="math-inline">\\(\boxed{\text{False}}\\)</span>:
+</li>
+<li markdown="1">
+**If <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both invertible matrices, then <span class="math-inline">\\((A^TB)^{-1} = \left( (B^{-1})^T A^{-1} \right)^T\\)</span>.** This is <span class="math-inline">\\(\boxed{\text{False}}\\)</span>:
 
 -   If we expand the right-hand side, we get
 
@@ -278,10 +281,12 @@ $$
 </div>
 
 -   This is not the same as <span class="math-inline">\\((A^TB)^{-1}\\)</span>, which is <span class="math-inline">\\((A^TB)^{-1} = B^{-1}(A^T)^{-1}\\)</span>. Note that <span class="math-inline">\\((A^{-1})^T = (A^T)^{-1}\\)</span>, but the reason these two expressions aren't the same is because order matters for matrix multiplication --- it's not commutative.
-
-**(iii)** **If <span class="math-inline">\\(A\\)</span> is an invertible matrix, then <span class="math-inline">\\(\text{rank}(A) = \text{rank}(A^{-1})\\)</span>.** This is <span class="math-inline">\\(\boxed{\text{True}}\\)</span>. If <span class="math-inline">\\(A\\)</span> is invertible, then <span class="math-inline">\\(\text{rank}(A) = n\\)</span>. Then, <span class="math-inline">\\(A^{-1}\\)</span> is also invertible (its inverse is <span class="math-inline">\\(A\\)</span>), so it must have a rank of <span class="math-inline">\\(n\\)</span> as well.
-
-**(iv)** **If <span class="math-inline">\\(A\\)</span>, <span class="math-inline">\\(B\\)</span>, and <span class="math-inline">\\(C\\)</span> are all symmetric matrices, then <span class="math-inline">\\(AB + C\\)</span> is also symmetric.** This is <span class="math-inline">\\(\boxed{\text{False}}\\)</span>. Recall, what makes a matrix <span class="math-inline">\\(A\\)</span> symmetric is that <span class="math-inline">\\(A = A^T\\)</span>. Let's take the transpose of <span class="math-inline">\\(AB + C\\)</span> and see if we end up getting back <span class="math-inline">\\(AB + C\\)</span>:
+</li>
+<li markdown="1">
+**If <span class="math-inline">\\(A\\)</span> is an invertible matrix, then <span class="math-inline">\\(\text{rank}(A) = \text{rank}(A^{-1})\\)</span>.** This is <span class="math-inline">\\(\boxed{\text{True}}\\)</span>. If <span class="math-inline">\\(A\\)</span> is invertible, then <span class="math-inline">\\(\text{rank}(A) = n\\)</span>. Then, <span class="math-inline">\\(A^{-1}\\)</span> is also invertible (its inverse is <span class="math-inline">\\(A\\)</span>), so it must have a rank of <span class="math-inline">\\(n\\)</span> as well.
+</li>
+<li markdown="1">
+**If <span class="math-inline">\\(A\\)</span>, <span class="math-inline">\\(B\\)</span>, and <span class="math-inline">\\(C\\)</span> are all symmetric matrices, then <span class="math-inline">\\(AB + C\\)</span> is also symmetric.** This is <span class="math-inline">\\(\boxed{\text{False}}\\)</span>. Recall, what makes a matrix <span class="math-inline">\\(A\\)</span> symmetric is that <span class="math-inline">\\(A = A^T\\)</span>. Let's take the transpose of <span class="math-inline">\\(AB + C\\)</span> and see if we end up getting back <span class="math-inline">\\(AB + C\\)</span>:
 
 <div class="math-display">
 $$
@@ -289,7 +294,10 @@ $$
 $$
 </div>
 
-<span class="math-inline">\\(AB + C\\)</span> is only symmetric if <span class="math-inline">\\(AB + C = BA + C\\)</span>, i.e. if <span class="math-inline">\\(AB = BA\\)</span>, which is not true in general, even if <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both symmetric.
+   <span class="math-inline">\\(AB + C\\)</span> is only symmetric if <span class="math-inline">\\(AB + C = BA + C\\)</span>, i.e. if <span class="math-inline">\\(AB = BA\\)</span>, which is not true in general, even if <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both symmetric.
+</li>
+</ol>
+
 </details>
 
 </div>
@@ -586,9 +594,12 @@ P = \begin{bmatrix}
 $$
 </div>
 
-1.  What is the rank of <span class="math-inline">\\(Z\\)</span>? Give your answer as an integer. <span class="math-inline">\\(\text{rank}(Z) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
-
-2.  Which specific values of <span class="math-inline">\\(x&#95;1, x&#95;2, ..., x&#95;n\\)</span> result in <span class="math-inline">\\(P\\)</span> being the matrix above? Give your answer as a list of values, in the order <span class="math-inline">\\(x&#95;1\\)</span>, then <span class="math-inline">\\(x&#95;2\\)</span>, then <span class="math-inline">\\(x&#95;3\\)</span>, etc. (If there are multiple possible answers, just give one.)
+<ol class="roman">
+<li markdown="1">
+What is the rank of <span class="math-inline">\\(Z\\)</span>? Give your answer as an integer. <span class="math-inline">\\(\text{rank}(Z) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+</li>
+<li markdown="1">
+Which specific values of <span class="math-inline">\\(x&#95;1, x&#95;2, ..., x&#95;n\\)</span> result in <span class="math-inline">\\(P\\)</span> being the matrix above? Give your answer as a list of values, in the order <span class="math-inline">\\(x&#95;1\\)</span>, then <span class="math-inline">\\(x&#95;2\\)</span>, then <span class="math-inline">\\(x&#95;3\\)</span>, etc. (If there are multiple possible answers, just give one.)
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -645,6 +656,8 @@ This hypothesis function only returns one of two values:
 
 So, <span class="math-inline">\\(w&#95;0^{\ast}\\)</span> is the mean of the <span class="math-inline">\\(y\\)</span>'s when <span class="math-inline">\\(x&#95;i = 0\\)</span>, and <span class="math-inline">\\(w&#95;0^{\ast} + w&#95;1^{\ast}\\)</span> is the mean of the <span class="math-inline">\\(y\\)</span>'s when <span class="math-inline">\\(x&#95;i = 1\\)</span>. This is exactly what we see in the matrix <span class="math-inline">\\(P\\)</span>.
 </details>
+</li>
+</ol>
 
 Recall, <span class="math-inline">\\(Z = \begin{bmatrix} 1 &amp; x&#95;1 - \bar{x} &amp; (x&#95;1 - \bar{x})^2 \\\\ 1 &amp; x&#95;2 - \bar{x} &amp; (x&#95;2 - \bar{x})^2 \\\\ \vdots &amp; \vdots &amp; \vdots \\\\ 1 &amp; x&#95;n - \bar{x} &amp; (x&#95;n - \bar{x})^2 \end{bmatrix} = \begin{bmatrix} | &amp; | &amp; | \\\\ \vec z^{(0)} &amp; \vec z^{(1)} &amp; \vec z^{(2)} \\\\ | &amp; | &amp; | \end{bmatrix}\\)</span>.
 

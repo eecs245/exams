@@ -403,13 +403,17 @@ Suppose <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in the blanks: The third \_\_(i)\_\_ of <span class="math-inline">\\(A\\)</span> is \_\_(ii)\_\_ to the fourth \_\_(iii)\_\_ of <span class="math-inline">\\(B\\)</span>.
 
-1.
+<ol class="roman">
+<li markdown="1">
+
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> column</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> row</span></div>
+</li>
+<li markdown="1">
 
-2.
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> orthogonal</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> parallel</span></div>
+</li>
+<li markdown="1">
 
-3.
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> column</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> row</span></div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -420,6 +424,8 @@ Every column of <span class="math-inline">\\(B\\)</span> is in <span class="math
 
 So, the third **row** of <span class="math-inline">\\(A\\)</span> is **orthogonal** to the fourth **column** of <span class="math-inline">\\(B\\)</span>.
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -964,17 +970,19 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> First, assume <span class="math-inline">\\(h(\vec x&#95;i)\\)</span> is the model at the top of the page.
 
-1.  What is the **largest possible** rank of the design matrix, <span class="math-inline">\\(X\\)</span>? (Note that we're asking about the full design matrix, not just its first two rows.)
+<ol class="roman">
+<li markdown="1">
+What is the **largest possible** rank of the design matrix, <span class="math-inline">\\(X\\)</span>? (Note that we're asking about the full design matrix, not just its first two rows.)
 
    <span class="math-inline">\\(\text{largest possible value of }\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
-
-{: start="2"}
-2.  True or False: The sum of the errors of the model's predictions is 0.
+</li>
+<li markdown="1">
+True or False: The sum of the errors of the model's predictions is 0.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
-
-{: start="3"}
-3.  True or False: The sum of the errors of the model's predictions **on just the rows of the dataset corresponding to night games** is 0.
+</li>
+<li markdown="1">
+True or False: The sum of the errors of the model's predictions **on just the rows of the dataset corresponding to night games** is 0.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -984,9 +992,12 @@ $$
 
 Let <span class="math-inline">\\(\vec e = \vec y - X \vec w^{\ast}\\)</span> be the error vector. Since <span class="math-inline">\\(\vec w^{\ast}\\)</span> satisfies the normal equation, <span class="math-inline">\\(\vec e\\)</span> is orthogonal to every column of <span class="math-inline">\\(X\\)</span>, and to every linear combination of those columns.
 
-**(i)** The largest possible rank of <span class="math-inline">\\(X\\)</span> is 3, which happens when the tempF, tempC, and night columns are linearly independent. When the day column is added, the columns become linearly dependent. (Equivalently, the tempF, night, and day columns are linearly independent, but linearly dependent with the tempC column.)
-
-**(ii)** This is true. Even though there is no explicit intercept term (and thus, no column of all ones), the all-ones vector is still in <span class="math-inline">\\(\text{colsp}(X)\\)</span>, because the night and day columns add up to 1 for each row.
+<ol class="roman">
+<li markdown="1">
+The largest possible rank of <span class="math-inline">\\(X\\)</span> is 3, which happens when the tempF, tempC, and night columns are linearly independent. When the day column is added, the columns become linearly dependent. (Equivalently, the tempF, night, and day columns are linearly independent, but linearly dependent with the tempC column.)
+</li>
+<li markdown="1">
+This is true. Even though there is no explicit intercept term (and thus, no column of all ones), the all-ones vector is still in <span class="math-inline">\\(\text{colsp}(X)\\)</span>, because the night and day columns add up to 1 for each row.
 
 <div class="math-display">
 $$
@@ -999,12 +1010,13 @@ $$
 <div class="math-display">
 $$
 \begin{align*}
-\vec 1^T \vec e &= \sum_{i=1}^n e_i = 0
-\end{align*}
+    \vec 1^T \vec e &= \sum_{i=1}^n e_i = 0
+    \end{align*}
 $$
 </div>
-
-**(iii)** This is also true. The night indicator is itself a column of <span class="math-inline">\\(X\\)</span>, so
+</li>
+<li markdown="1">
+This is also true. The night indicator is itself a column of <span class="math-inline">\\(X\\)</span>, so
 
 <div class="math-display">
 $$
@@ -1013,7 +1025,12 @@ $$
 </div>
 
  But this dot product is exactly the sum of the errors for just the night games, because the night column has 1s on night rows and 0s elsewhere.
+</li>
+</ol>
+
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -1029,17 +1046,19 @@ h(\vec x_i) = w_1 \cdot \text{tempF}_i + w_2 \cdot \text{tempC}_i + w_3 \cdot \t
 $$
 </div>
 
-1.  After removing the day column, what is the **largest possible** rank of the **new** design matrix?
+<ol class="roman">
+<li markdown="1">
+After removing the day column, what is the **largest possible** rank of the **new** design matrix?
 
    <span class="math-inline">\\(\text{largest possible value of }\text{rank}(\text{new design matrix}) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
-
-{: start="2"}
-2.  True or False: The sum of the errors of the new model's predictions is 0.
+</li>
+<li markdown="1">
+True or False: The sum of the errors of the new model's predictions is 0.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
-
-{: start="3"}
-3.  True or False: The sum of the errors of the new model's predictions **on just the rows of the dataset corresponding to night games** is 0.
+</li>
+<li markdown="1">
+True or False: The sum of the errors of the new model's predictions **on just the rows of the dataset corresponding to night games** is 0.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -1049,12 +1068,21 @@ $$
 
 Let <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> be the error vector for the new model.
 
-**(i)** After removing the day column, the new design matrix has 3 columns, and there is no longer a forced linear dependence among them. So the largest possible rank is still 3. What's new now is that <span class="math-inline">\\(X\\)</span>'s columns are all linearly independent, meaning there is a unique solution to the normal equation.
+<ol class="roman">
+<li markdown="1">
+After removing the day column, the new design matrix has 3 columns, and there is no longer a forced linear dependence among them. So the largest possible rank is still 3. What's new now is that <span class="math-inline">\\(X\\)</span>'s columns are all linearly independent, meaning there is a unique solution to the normal equation.
+</li>
+<li markdown="1">
+This is false. The normal equations still tell us that <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to each column of the new design matrix, but there is no guarantee that the all-ones vector is in the column space anymore. So the errors are not guaranteed to sum to 0.
+</li>
+<li markdown="1">
+This is true. The night indicator column is still present in the new design matrix, so <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to that column. Therefore, the sum of the errors over the night-game rows is still 0.
+</li>
+</ol>
 
-**(ii)** This is false. The normal equations still tell us that <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to each column of the new design matrix, but there is no guarantee that the all-ones vector is in the column space anymore. So the errors are not guaranteed to sum to 0.
-
-**(iii)** This is true. The night indicator column is still present in the new design matrix, so <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to that column. Therefore, the sum of the errors over the night-game rows is still 0.
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -1229,10 +1257,13 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in the blanks: The set of all vectors <span class="math-inline">\\(\vec x^{\ast}\\)</span> that minimize <span class="math-inline">\\(f(\vec x)\\)</span> form a \_\_(i)\_\_ in <span class="math-inline">\\(\mathbb{R}^2\\)</span>. This set \_\_(ii)\_\_ a subspace of <span class="math-inline">\\(\mathbb{R}^2\\)</span>.
 
-1.
-<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> point</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> line</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> plane</span></div>
+<ol class="roman">
+<li markdown="1">
 
-2.
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> point</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> line</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> plane</span></div>
+</li>
+<li markdown="1">
+
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> is not</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> is</span></div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -1275,6 +1306,8 @@ $$
 
  is not a minimizer. Therefore, this set **is not** a subspace.
 </details>
+</li>
+</ol>
 
 </div>
 </div>

@@ -763,11 +763,13 @@ $$
 
 Select values of <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> so that <span class="math-inline">\\(f(k) = \lVert \vec U - k \vec V \rVert^2\\)</span>, for all possible non-negative values of <span class="math-inline">\\(C\\)</span>.
 
-1.  What is the value of <span class="math-inline">\\(a\\)</span>?
+<ol class="roman">
+<li markdown="1">
+What is the value of <span class="math-inline">\\(a\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
-
-{: start="2"}
-2.  What is the value of <span class="math-inline">\\(b\\)</span>?
+</li>
+<li markdown="1">
+What is the value of <span class="math-inline">\\(b\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -821,6 +823,8 @@ $$
 
 So, the correct answers are <span class="math-inline">\\(\boxed{a=0}\\)</span> and <span class="math-inline">\\(\boxed{b=\sqrt{C}}\\)</span>.
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -1008,11 +1012,13 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">7 pts</span> Are <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> linearly independent?
 
-1.  Select an answer:
+<ol class="roman">
+<li markdown="1">
+Select an answer:
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Yes</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> No</span></div>
-
-{: start="2"}
-2.  Prove your answer using the formal definition of linear independence. <em>Hint: You did something similar in Homework 4, Problem 6.</em>
+</li>
+<li markdown="1">
+Prove your answer using the formal definition of linear independence. <em>Hint: You did something similar in Homework 4, Problem 6.</em>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1038,6 +1044,8 @@ $$
 
  The coefficients <span class="math-inline">\\(1,-1,1,-1\\)</span> are not all zero, so this proves that <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> is linearly dependent.
 </details>
+</li>
+</ol>
 
 </div>
 </div>

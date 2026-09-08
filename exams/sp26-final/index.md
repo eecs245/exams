@@ -639,9 +639,12 @@ $$
 
 Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(7 \times 12\\)</span> matrix. Fill in each blank with an integer with no variables.
 
-1.  (2 pts) What is the minimum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>? \_\_\_\_\_\_
-
-2.  (2 pts) What is the maximum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>? \_\_\_\_\_\_
+<ol class="roman">
+<li markdown="1">
+(2 pts) What is the minimum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>? \_\_\_\_\_\_
+</li>
+<li markdown="1">
+(2 pts) What is the maximum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>? \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -663,6 +666,8 @@ $$
 
  This is as small as possible when <span class="math-inline">\\(\text{rank}(A)=7\\)</span>, giving minimum <span class="math-inline">\\(\text{dim}(\text{nullsp}(A)) = 5\\)</span>, and as large as possible when <span class="math-inline">\\(\text{rank}(A)=0\\)</span>, giving maximum <span class="math-inline">\\(\text{dim}(\text{nullsp}(A)) = 12\\)</span>.
 </details>
+</li>
+</ol>
 
 ---
 
@@ -741,20 +746,25 @@ Finally, let <span class="math-inline">\\(Q\\)</span> be an <span class="math-in
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
-1.  (2 pts) What is <span class="math-inline">\\(\text{det}(P)\\)</span>?
+<ol class="roman">
+<li markdown="1">
+(2 pts) What is <span class="math-inline">\\(\text{det}(P)\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
-
-{: start="2"}
-2.  (2 pts) What is <span class="math-inline">\\(\text{det}(Q)\\)</span>?
+</li>
+<li markdown="1">
+(2 pts) What is <span class="math-inline">\\(\text{det}(Q)\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
-**(i)** Since <span class="math-inline">\\(P\\)</span> projects onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> and <span class="math-inline">\\(d&lt;n\\)</span>, multiple vectors in <span class="math-inline">\\(\mathbb{R}^n\\)</span> will have the same projection onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>. So <span class="math-inline">\\(P\\)</span> is not invertible, and therefore <span class="math-inline">\\(\det(P)=0\\)</span>.
-
-**(ii)** Since <span class="math-inline">\\(Q\\)</span> is orthogonal, <span class="math-inline">\\(Q^TQ=I\\)</span>. Taking determinants gives
+<ol class="roman">
+<li markdown="1">
+Since <span class="math-inline">\\(P\\)</span> projects onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> and <span class="math-inline">\\(d&lt;n\\)</span>, multiple vectors in <span class="math-inline">\\(\mathbb{R}^n\\)</span> will have the same projection onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>. So <span class="math-inline">\\(P\\)</span> is not invertible, and therefore <span class="math-inline">\\(\det(P)=0\\)</span>.
+</li>
+<li markdown="1">
+Since <span class="math-inline">\\(Q\\)</span> is orthogonal, <span class="math-inline">\\(Q^TQ=I\\)</span>. Taking determinants gives
 
 <div class="math-display">
 $$
@@ -771,7 +781,12 @@ $$
 </div>
 
  and therefore <span class="math-inline">\\(\det(Q)\\)</span> is either <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span>.
+</li>
+</ol>
+
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -848,9 +863,14 @@ $$
 
 Why does this happen? Think of <span class="math-inline">\\(Q\\)</span> as a rotation matrix. This is saying that if we:
 
-**(i)** Rotate <span class="math-inline">\\(\vec y\\)</span> and rotate <span class="math-inline">\\(\text{colsp}(X)\\)</span>, and project the rotated <span class="math-inline">\\(\vec y\\)</span> onto the rotated <span class="math-inline">\\(\text{colsp}(X)\\)</span>, OR
-
-**(ii)** Project the original <span class="math-inline">\\(\vec y\\)</span> onto the original <span class="math-inline">\\(\text{colsp}(X)\\)</span>, and then rotate the projected vector,
+<ol>
+<li markdown="1">
+Rotate <span class="math-inline">\\(\vec y\\)</span> and rotate <span class="math-inline">\\(\text{colsp}(X)\\)</span>, and project the rotated <span class="math-inline">\\(\vec y\\)</span> onto the rotated <span class="math-inline">\\(\text{colsp}(X)\\)</span>, OR
+</li>
+<li markdown="1">
+Project the original <span class="math-inline">\\(\vec y\\)</span> onto the original <span class="math-inline">\\(\text{colsp}(X)\\)</span>, and then rotate the projected vector,
+</li>
+</ol>
 
 we end up with the same vector in either case.
 </details>
@@ -939,47 +959,55 @@ The coefficient <span class="math-inline">\\(w&#95;2\\)</span> is the change in 
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Once again, suppose the dataset has four rows. In each of the following subparts, we provide the number of hours parked in the dataset. Find the rank of the design matrix <span class="math-inline">\\(X\\)</span> in each case. Fill in each blank with an integer with no variables.
 
-1.  (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
-
-2.  (2 pts) <span class="math-inline">\\(2\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(2\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
-
-3.  (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(4\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(6\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+<ol class="roman">
+<li markdown="1">
+(2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+</li>
+<li markdown="1">
+(2 pts) <span class="math-inline">\\(2\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(2\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+</li>
+<li markdown="1">
+(2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(4\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(6\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
 This feature engineering setup is an example of the multiple linear regression design matrices from [Chapter 7.2](https://notes.eecs245.org/regression-using-linear-algebra/multiple-linear-regression/).
 
-**(i)** The design matrix is
+<ol class="roman">
+<li markdown="1">
+The design matrix is
 
 <div class="math-display">
 $$
 \begin{bmatrix}
-    1&3&1\\\\
-    1&0&0\\\\
-    1&5&3\\\\
-    1&1&0
-    \end{bmatrix}
+        1&3&1\\\\
+        1&0&0\\\\
+        1&5&3\\\\
+        1&1&0
+        \end{bmatrix}
 $$
 </div>
 
  The three columns are linearly independent, so <span class="math-inline">\\(\text{rank}(X)=3\\)</span>.
-
-**(ii)** The design matrix is
+</li>
+<li markdown="1">
+The design matrix is
 
 <div class="math-display">
 $$
 \begin{bmatrix}
-    1&2&0\\\\
-    1&0&0\\\\
-    1&2&0\\\\
-    1&1&0
-    \end{bmatrix}
+        1&2&0\\\\
+        1&0&0\\\\
+        1&2&0\\\\
+        1&1&0
+        \end{bmatrix}
 $$
 </div>
 
  The third column is all zero, while the first two columns are linearly independent. So <span class="math-inline">\\(\text{rank}(X)=2\\)</span>.
-
-**(iii)** If all hour values are greater than <span class="math-inline">\\(2\\)</span>, then
+</li>
+<li markdown="1">
+If all hour values are greater than <span class="math-inline">\\(2\\)</span>, then
 
 <div class="math-display">
 $$
@@ -996,7 +1024,12 @@ $$
 </div>
 
  So the rank is at most <span class="math-inline">\\(2\\)</span>. Since the hour values are not all the same, columns 1 and 3 are linearly independent, and <span class="math-inline">\\(\text{rank}(X)=2\\)</span>.
+</li>
+</ol>
+
 </details>
+</li>
+</ol>
 
 </div>
 </div>

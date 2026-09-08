@@ -244,17 +244,27 @@ $$
 
 With this in mind, let's look at the options:
 
-**(i)** (**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n} \sum&#95;{i=1}^n (y&#95;i - 15)\\)</span>: This is the average of the deviations from the median, which is not 0. This is only true for the mean.
+<ol>
+<li markdown="1">
+(**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n} \sum&#95;{i=1}^n (y&#95;i - 15)\\)</span>: This is the average of the deviations from the median, which is not 0. This is only true for the mean.
+</li>
+<li markdown="1">
+(**True**) <span class="math-inline">\\(\displaystyle \frac{1}{n} \sum&#95;{i=1}^n (y&#95;i - 18)\\)</span>: This is the average of the deviations from the mean, which is 0. This is only true for the mean.
+</li>
+<li markdown="1">
+(**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 15)^2\\)</span>: This is the function <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> when <span class="math-inline">\\(w = 15\\)</span>. As we see in the solution to part **a)**, this is not 0.
+</li>
+<li markdown="1">
+(**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 18)^2\\)</span>: This is the function <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> when <span class="math-inline">\\(w = 18\\)</span>, i.e. it is the variance of the dataset. As we see in the solution to part **a)**, this is also not zero --- here, it is <span class="math-inline">\\(\sigma&#95;y^2 = 7^2 = 49\\)</span>. One point of confusion may be that <span class="math-inline">\\(w = \bar{y}\\)</span> is the point at which <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> is minimized and <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> has a **derivative** of 0, but <span class="math-inline">\\(R&#95;\text{sq}(\bar y) \neq 0\\)</span> in general.
+</li>
+<li markdown="1">
+(**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 15)^2 - 7^2\\)</span>: This would be true if the 15 were replaced with the mean, 18, but it is not.
+</li>
+<li markdown="1">
+(**True**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 18)^2 - 7^2\\)</span>: This is the variance of the dataset minus the variance of the dataset, which indeed is 0.
+</li>
+</ol>
 
-**(ii)** (**True**) <span class="math-inline">\\(\displaystyle \frac{1}{n} \sum&#95;{i=1}^n (y&#95;i - 18)\\)</span>: This is the average of the deviations from the mean, which is 0. This is only true for the mean.
-
-**(iii)** (**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 15)^2\\)</span>: This is the function <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> when <span class="math-inline">\\(w = 15\\)</span>. As we see in the solution to part **a)**, this is not 0.
-
-**(iv)** (**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 18)^2\\)</span>: This is the function <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> when <span class="math-inline">\\(w = 18\\)</span>, i.e. it is the variance of the dataset. As we see in the solution to part **a)**, this is also not zero --- here, it is <span class="math-inline">\\(\sigma&#95;y^2 = 7^2 = 49\\)</span>. One point of confusion may be that <span class="math-inline">\\(w = \bar{y}\\)</span> is the point at which <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> is minimized and <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> has a **derivative** of 0, but <span class="math-inline">\\(R&#95;\text{sq}(\bar y) \neq 0\\)</span> in general.
-
-**(v)** (**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 15)^2 - 7^2\\)</span>: This would be true if the 15 were replaced with the mean, 18, but it is not.
-
-**(vi)** (**True**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 18)^2 - 7^2\\)</span>: This is the variance of the dataset minus the variance of the dataset, which indeed is 0.
 </details>
 
 </div>
@@ -533,18 +543,20 @@ $$
 
 There are a few possible techniques here.
 
-**(i)** We can find the intersection of the two planes by solving the system of equations:
+<ol>
+<li markdown="1">
+We can find the intersection of the two planes by solving the system of equations:
 
 <div class="math-display">
 $$
 \begin{align*}
-5x + 3y - z   &= 0 \\\\
-2x - 3y + 8z &= 0
-\end{align*}
+    5x + 3y - z   &= 0 \\\\
+    2x - 3y + 8z &= 0
+    \end{align*}
 $$
 </div>
 
-Adding both equations gives
+   Adding both equations gives
 
 <div class="math-display">
 $$
@@ -552,7 +564,7 @@ $$
 $$
 </div>
 
-We know that the system will have infinitely many solutions, so we can let our "parameter" be <span class="math-inline">\\(x\\)</span>. So far, we know two of the three components of the line: <span class="math-inline">\\(x\\)</span> is the free variable, and <span class="math-inline">\\(z = -x\\)</span>. Finally, let's solve for <span class="math-inline">\\(y\\)</span> in terms of <span class="math-inline">\\(x\\)</span>.
+   We know that the system will have infinitely many solutions, so we can let our "parameter" be <span class="math-inline">\\(x\\)</span>. So far, we know two of the three components of the line: <span class="math-inline">\\(x\\)</span> is the free variable, and <span class="math-inline">\\(z = -x\\)</span>. Finally, let's solve for <span class="math-inline">\\(y\\)</span> in terms of <span class="math-inline">\\(x\\)</span>.
 
 <div class="math-display">
 $$
@@ -560,15 +572,16 @@ $$
 $$
 </div>
 
-Therefore, the parametric equation of the line is
+   Therefore, the parametric equation of the line is
 
 <div class="math-display">
 $$
 L = \begin{bmatrix} x \\\\ -2x \\\\ -x \end{bmatrix} = x \begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}, \quad x \in \mathbb{R}
 $$
 </div>
-
-**(ii)** Another solution is to recognize that any point on the first plane can be written as a linear combination of the two vectors that span the plane, i.e.
+</li>
+<li markdown="1">
+Another solution is to recognize that any point on the first plane can be written as a linear combination of the two vectors that span the plane, i.e.
 
 <div class="math-display">
 $$
@@ -576,20 +589,20 @@ s \begin{bmatrix} 3 \\\\ 2 \\\\ 0 \end{bmatrix} + t \begin{bmatrix} 6 \\\\ -4 \\
 $$
 </div>
 
-Any vector on the first plane can be written in the form above. For a vector to be in both planes (i.e. in the intersection), it must be able to be written in the form above **and** satisfy the equation of the second plane, <span class="math-inline">\\(5x + 3y - z = 0\\)</span>.
+   Any vector on the first plane can be written in the form above. For a vector to be in both planes (i.e. in the intersection), it must be able to be written in the form above **and** satisfy the equation of the second plane, <span class="math-inline">\\(5x + 3y - z = 0\\)</span>.
 
 <div class="math-display">
 $$
 \begin{align*}
-5(3s + 6t) + 3(2s - 4t) - (-3t) &= 0 \\\\
-15s + 30t + 6s - 12t + 3t &= 0 \\\\
-21s + 21t &= 0 \\\\
-t &= -s
-\end{align*}
+    5(3s + 6t) + 3(2s - 4t) - (-3t) &= 0 \\\\
+    15s + 30t + 6s - 12t + 3t &= 0 \\\\
+    21s + 21t &= 0 \\\\
+    t &= -s
+    \end{align*}
 $$
 </div>
 
-So, as long as we pick <span class="math-inline">\\(s\\)</span> and <span class="math-inline">\\(t\\)</span> such that <span class="math-inline">\\(t = -s\\)</span>, the resulting vector, <span class="math-inline">\\(\begin{bmatrix} 3s + 6t \\\\ 2s - 4t \\\\ -3t \end{bmatrix}\\)</span>, will be in both planes. There are infinitely many pairs of such <span class="math-inline">\\(s\\)</span> and <span class="math-inline">\\(t\\)</span> -- <span class="math-inline">\\(1\\)</span> and <span class="math-inline">\\(-1\\)</span>, <span class="math-inline">\\(2\\)</span> and <span class="math-inline">\\(-2\\)</span>, etc. -- and these fill out the line of intersection. To find one of them, let <span class="math-inline">\\(s = 1\\)</span> and <span class="math-inline">\\(t = -1\\)</span>:
+   So, as long as we pick <span class="math-inline">\\(s\\)</span> and <span class="math-inline">\\(t\\)</span> such that <span class="math-inline">\\(t = -s\\)</span>, the resulting vector, <span class="math-inline">\\(\begin{bmatrix} 3s + 6t \\\\ 2s - 4t \\\\ -3t \end{bmatrix}\\)</span>, will be in both planes. There are infinitely many pairs of such <span class="math-inline">\\(s\\)</span> and <span class="math-inline">\\(t\\)</span> -- <span class="math-inline">\\(1\\)</span> and <span class="math-inline">\\(-1\\)</span>, <span class="math-inline">\\(2\\)</span> and <span class="math-inline">\\(-2\\)</span>, etc. -- and these fill out the line of intersection. To find one of them, let <span class="math-inline">\\(s = 1\\)</span> and <span class="math-inline">\\(t = -1\\)</span>:
 
 <div class="math-display">
 $$
@@ -597,7 +610,7 @@ $$
 $$
 </div>
 
-Therefore, the parametric equation of the line is
+   Therefore, the parametric equation of the line is
 
 <div class="math-display">
 $$
@@ -613,19 +626,23 @@ L = t \begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}, \quad t \in \mathbb{R}
 $$
 </div>
 
-This is the same line we found earlier, just with a scaled direction vector, which doesn't change the line.
-
-**(iii)** A final solution is to (1) find a vector that is perpendicular to each plane (i.e. a normal vector), and (2) take the cross product of those two vectors. This will give us a vector that is in both planes, and therefore spans the intersecting line, which we know must also pass through the origin.
+   This is the same line we found earlier, just with a scaled direction vector, which doesn't change the line.
+</li>
+<li markdown="1">
+A final solution is to (1) find a vector that is perpendicular to each plane (i.e. a normal vector), and (2) take the cross product of those two vectors. This will give us a vector that is in both planes, and therefore spans the intersecting line, which we know must also pass through the origin.
 
 <div class="math-display">
 $$
 \begin{align*}
-\begin{bmatrix} 5 \\\\ 3 \\\\ -1 \end{bmatrix} \times \begin{bmatrix} 2 \\\\ -3 \\\\ 8 \end{bmatrix} = \begin{bmatrix} 3 \cdot 8 - (-1) \cdot (-3) \\\\ (-1) \cdot 2 - 5 \cdot 8 \\\\ 5 \cdot (-3) - 3 \cdot 2 \end{bmatrix} = \begin{bmatrix} 21 \\\\ -42 \\\\ -21 \end{bmatrix} = 21 \begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}
-\end{align*}
+    \begin{bmatrix} 5 \\\\ 3 \\\\ -1 \end{bmatrix} \times \begin{bmatrix} 2 \\\\ -3 \\\\ 8 \end{bmatrix} = \begin{bmatrix} 3 \cdot 8 - (-1) \cdot (-3) \\\\ (-1) \cdot 2 - 5 \cdot 8 \\\\ 5 \cdot (-3) - 3 \cdot 2 \end{bmatrix} = \begin{bmatrix} 21 \\\\ -42 \\\\ -21 \end{bmatrix} = 21 \begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}
+    \end{align*}
 $$
 </div>
 
-So, once again, we find that <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}\\)</span> is a direction vector for the line of intersection.
+   So, once again, we find that <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}\\)</span> is a direction vector for the line of intersection.
+</li>
+</ol>
+
 </details>
 
 </div>
@@ -866,22 +883,24 @@ If these vectors were linearly independent, they would span a 6-dimensional subs
 
 In each part below, a possible way to fill in the blank is given. Determine whether the statement that results from filling in the blank is **True** or **False**.
 
-1.  zero
+<ol class="roman">
+<li markdown="1">
+zero
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
-
-{: start="2"}
-2.  exactly one
-
-<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
-
-{: start="3"}
-3.  exactly two
+</li>
+<li markdown="1">
+exactly one
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+</li>
+<li markdown="1">
+exactly two
 
-{: start="4"}
-4.  infinite
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+</li>
+<li markdown="1">
+infinite
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -897,6 +916,8 @@ In each part below, a possible way to fill in the blank is given. Determine whet
 
 -   **(True) infinite ways**: For any vector <span class="math-inline">\\(\vec b \in S\\)</span>, there are infinitely many ways to write <span class="math-inline">\\(\vec b\\)</span> as a linear combination of <span class="math-inline">\\(\vec x&#95;1, \ldots, \vec x&#95;6\\)</span>.
 </details>
+</li>
+</ol>
 
 </div>
 </div>
