@@ -4,23 +4,6 @@ title: EECS 245 Exams
 nav_order: 1
 ---
 
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header {
-  display: none !important;
-}
-
-body {
-  padding-top: 0 !important;
-}
-
-.main-content-wrap {
-  margin-top: 0 !important;
-}
-</style>
-
 # EECS 245 Exams
 
 A repository of past exams and solutions for EECS 245: Mathematics for Machine Learning at the University of Michigan. See the course website [here](https://eecs245.org).
