@@ -210,12 +210,14 @@ $$
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span>
 <span class="math-inline">\\(\sigma&#95;z^2\\)</span>, the variance of <span class="math-inline">\\(z&#95;1, z&#95;2, \ldots, z&#95;n\\)</span>, can be written in the form <span class="math-inline">\\(\sigma&#95;z^2 = 9 \sigma&#95;x^2 + \sigma&#95;y^2 + C\\)</span>.
 
-1.  What is the value of <span class="math-inline">\\(C\\)</span>?
+<ol class="roman">
+<li markdown="1">
+What is the value of <span class="math-inline">\\(C\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6nr \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6nr \sigma&#95;x \sigma&#95;y\\)</span></span></div>
-
-{: start="2"}
-2.  Show your work in the box below. English explanations are not enough.
+</li>
+<li markdown="1">
+Show your work in the box below. English explanations are not enough.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -270,6 +272,8 @@ $$
 </div>
 
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -323,11 +327,13 @@ $$
 
 What is the value of <span class="math-inline">\\(A\\)</span>? Select one of the answers below, then justify your answer in the box provided.
 
-1.  Answer:
+<ol>
+<li markdown="1">
+Answer:
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle 2 \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle 2 k \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle 2 k^2 \alpha\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{2 \alpha}{k}\\)</span></span></div>
-
-{: start="2"}
-2.  Justify your answer in the box below.
+</li>
+<li markdown="1">
+Justify your answer in the box below.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -367,6 +373,8 @@ $$
 
 Therefore, <span class="math-inline">\\(v = \boxed{2k\alpha}\\)</span>.
 </details>
+</li>
+</ol>
 
 </div>
 </div>

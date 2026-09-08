@@ -366,13 +366,13 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose <span class="math-inline">\\(\vec x^{\ast} \in \mathbb{R}^3\\)</span> is a vector containing the long-run fraction of time spent in each state. Which of the following vectors is <span class="math-inline">\\(\vec x^{\ast}\\)</span> and why?
 
-1.  <span class="math-inline">\\(\vec x^{\ast}\\)</span> is
+<ol>
+<li markdown="1">
+<span class="math-inline">\\(\vec x^{\ast}\\)</span> is
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \begin{bmatrix} 1/3 \\\\ 1/3 \\\\ 1/3 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \begin{bmatrix} 4/9 \\\\ 0 \\\\ 5/9 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \begin{bmatrix} 5/16 \\\\ 5/16 \\\\ 6/16 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \begin{bmatrix} 5/16 \\\\ 6/16 \\\\ 5/16 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \begin{bmatrix} 3/16 \\\\ 3/16 \\\\ 10/16 \end{bmatrix}\\)</span></span></div>
-
-{: start="2"}
-2.  because <span class="math-inline">\\(\vec x^{\ast}\\)</span> is the eigenvector of <span class="math-inline">\\(A\\)</span> corresponding to the eigenvalue
-
-
+</li>
+<li markdown="1">
+because <span class="math-inline">\\(\vec x^{\ast}\\)</span> is the eigenvector of <span class="math-inline">\\(A\\)</span> corresponding to the eigenvalue
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0.4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1.8\\)</span></span></div>
 
@@ -419,6 +419,8 @@ $$
 </div>
 
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -493,11 +495,13 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> What is the value of <span class="math-inline">\\(k\\)</span>? Select one of the answers below, then justify your answer in the box provided. <em>Hint: If <span class="math-inline">\\(A = V \Lambda V^{-1}\\)</span>, what is <span class="math-inline">\\(A^k\\)</span>?</em>
 
-1.  Answer:
+<ol>
+<li markdown="1">
+Answer:
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5\\)</span></span></div>
-
-{: start="2"}
-2.  Justify your answer in the box below.
+</li>
+<li markdown="1">
+Justify your answer in the box below.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -537,6 +541,8 @@ $$
 
  Therefore, <span class="math-inline">\\(\boxed{k = 3}\\)</span>.
 </details>
+</li>
+</ol>
 
 </div>
 </div>

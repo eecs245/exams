@@ -401,11 +401,13 @@ Which value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span c
 
 Hint: Look very closely at the definition of <span class="math-inline">\\(R&#95;{\text{B}}(w)\\)</span>. You do not need to re-prove any results from class; you can fully find and explain your answer without using calculus.
 
-1.  Answer:
+<ol>
+<li markdown="1">
+Answer:
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(10\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(15\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(20\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(30\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(40\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(60\\)</span></span></div>
-
-{: start="2"}
-2.  Justify your answer in the box below.
+</li>
+<li markdown="1">
+Justify your answer in the box below.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -438,6 +440,8 @@ $$
 </div>
 
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -568,17 +572,27 @@ $$
 
 With this in mind, let's look at the options:
 
-**(i)** (**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n} \sum&#95;{i=1}^n (y&#95;i - 15)\\)</span>: This is the average of the deviations from the median, which is not 0. This is only true for the mean.
+<ol>
+<li markdown="1">
+(**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n} \sum&#95;{i=1}^n (y&#95;i - 15)\\)</span>: This is the average of the deviations from the median, which is not 0. This is only true for the mean.
+</li>
+<li markdown="1">
+(**True**) <span class="math-inline">\\(\displaystyle \frac{1}{n} \sum&#95;{i=1}^n (y&#95;i - 18)\\)</span>: This is the average of the deviations from the mean, which is 0. This is only true for the mean.
+</li>
+<li markdown="1">
+(**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 15)^2\\)</span>: This is the function <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> when <span class="math-inline">\\(w = 15\\)</span>. As we see in the solution to part **a)**, this is not 0.
+</li>
+<li markdown="1">
+(**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 18)^2\\)</span>: This is the function <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> when <span class="math-inline">\\(w = 18\\)</span>, i.e. it is the variance of the dataset. As we see in the solution to part **a)**, this is also not zero --- here, it is <span class="math-inline">\\(\sigma&#95;y^2 = 7^2 = 49\\)</span>. One point of confusion may be that <span class="math-inline">\\(w = \bar{y}\\)</span> is the point at which <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> is minimized and <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> has a **derivative** of 0, but <span class="math-inline">\\(R&#95;\text{sq}(\bar y) \neq 0\\)</span> in general.
+</li>
+<li markdown="1">
+(**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 15)^2 - 7^2\\)</span>: This would be true if the 15 were replaced with the mean, 18, but it is not.
+</li>
+<li markdown="1">
+(**True**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 18)^2 - 7^2\\)</span>: This is the variance of the dataset minus the variance of the dataset, which indeed is 0.
+</li>
+</ol>
 
-**(ii)** (**True**) <span class="math-inline">\\(\displaystyle \frac{1}{n} \sum&#95;{i=1}^n (y&#95;i - 18)\\)</span>: This is the average of the deviations from the mean, which is 0. This is only true for the mean.
-
-**(iii)** (**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 15)^2\\)</span>: This is the function <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> when <span class="math-inline">\\(w = 15\\)</span>. As we see in the solution to part **a)**, this is not 0.
-
-**(iv)** (**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 18)^2\\)</span>: This is the function <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> when <span class="math-inline">\\(w = 18\\)</span>, i.e. it is the variance of the dataset. As we see in the solution to part **a)**, this is also not zero --- here, it is <span class="math-inline">\\(\sigma&#95;y^2 = 7^2 = 49\\)</span>. One point of confusion may be that <span class="math-inline">\\(w = \bar{y}\\)</span> is the point at which <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> is minimized and <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span> has a **derivative** of 0, but <span class="math-inline">\\(R&#95;\text{sq}(\bar y) \neq 0\\)</span> in general.
-
-**(v)** (**False**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 15)^2 - 7^2\\)</span>: This would be true if the 15 were replaced with the mean, 18, but it is not.
-
-**(vi)** (**True**) <span class="math-inline">\\(\displaystyle \frac{1}{n}\sum&#95;{i=1}^n (y&#95;i - 18)^2 - 7^2\\)</span>: This is the variance of the dataset minus the variance of the dataset, which indeed is 0.
 </details>
 
 </div>
@@ -955,7 +969,9 @@ D = \left( 3 \cdot 6 \cdot 6 \cdot 13 \right)^{1/4} \approx 6.12 & H = 13 \\\\
 $$
 </div>
 
-1.  (3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 (y&#95;i - w)^2\\)</span>?
+<ol class="roman">
+<li markdown="1">
+(3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 (y&#95;i - w)^2\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
@@ -972,9 +988,9 @@ $$
 </div>
 
 </details>
-
-{: start="2"}
-2.  (3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \lim&#95;{p \to \infty} \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 |y&#95;i - w|^p\\)</span>?
+</li>
+<li markdown="1">
+(3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \lim&#95;{p \to \infty} \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 |y&#95;i - w|^p\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
@@ -991,9 +1007,9 @@ $$
 </div>
 
 </details>
-
-{: start="3"}
-3.  (3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 (\log(y&#95;i) - \log(w))^2\\)</span>?
+</li>
+<li markdown="1">
+(3 pts) What value of <span class="math-inline">\\(w^{\ast}\\)</span> minimizes <span class="math-inline">\\(R(w) = \displaystyle \frac{1}{4} \sum&#95;{i=1}^4 (\log(y&#95;i) - \log(w))^2\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
@@ -1019,9 +1035,9 @@ $$
 
  This was also a homework problem.
 </details>
-
-{: start="4"}
-4.  (3 pts) The slope of the graph of <span class="math-inline">\\(R(w) = \displaystyle\frac{1}{4} \sum&#95;{i = 1}^4 |y&#95;i - w|\\)</span> at <span class="math-inline">\\(w = \alpha\\)</span> is <span class="math-inline">\\(-1/2\\)</span>. Among the options above, which could be <span class="math-inline">\\(\alpha\\)</span>?
+</li>
+<li markdown="1">
+(3 pts) The slope of the graph of <span class="math-inline">\\(R(w) = \displaystyle\frac{1}{4} \sum&#95;{i = 1}^4 |y&#95;i - w|\\)</span> at <span class="math-inline">\\(w = \alpha\\)</span> is <span class="math-inline">\\(-1/2\\)</span>. Among the options above, which could be <span class="math-inline">\\(\alpha\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(A\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(D\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(E\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(F\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(G\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(H\\)</span></span></div>
 
@@ -1031,8 +1047,6 @@ $$
 
    For (iv), the slope of mean absolute error at any <span class="math-inline">\\(w\\)</span> that is not a data point is
 
-
-
 <div class="math-display">
 $$
 \frac{\text{\# left of } w - \text{\# right of } w}{n}
@@ -1041,8 +1055,6 @@ $$
 
    Here, in order to achieve a slope of <span class="math-inline">\\(-1/2\\)</span>, we need to have 1 data point to the left of <span class="math-inline">\\(w\\)</span> and 3 to the right, since <span class="math-inline">\\(\frac{1-3}{4} = -1/2\\)</span>. This means we need <span class="math-inline">\\(w\\)</span> to be between <span class="math-inline">\\(3\\)</span> and <span class="math-inline">\\(6\\)</span>, **exclusive**. The only value in this interval is <span class="math-inline">\\(B\\)</span>,
 
-
-
 <div class="math-display">
 $$
 \boxed{\dfrac{4}{\frac{1}{3}+\frac{1}{6}+\frac{1}{6}+\frac{1}{13}} \approx 5.37}
@@ -1050,6 +1062,8 @@ $$
 </div>
 
 </details>
+</li>
+</ol>
 
 ---
 

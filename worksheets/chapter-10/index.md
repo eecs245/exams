@@ -214,11 +214,13 @@ This is **False**. The eigenvalues of <span class="math-inline">\\(\tilde X \til
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> What is the largest possible variance of the components of <span class="math-inline">\\(\tilde X \vec w\\)</span>, where <span class="math-inline">\\(\vec w \in \mathbb{R}^3\\)</span> is a unit vector? Select one of the answers below, then justify your answer in the box provided.
 
-1.  Answer:
+<ol>
+<li markdown="1">
+Answer:
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(12\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(24\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(144\\)</span></span></div>
-
-{: start="2"}
-2.  Justify your answer in the box below.
+</li>
+<li markdown="1">
+Justify your answer in the box below.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -242,6 +244,8 @@ $$
 
  So the largest possible variance is <span class="math-inline">\\(\boxed{6}\\)</span>.
 </details>
+</li>
+</ol>
 
 </div>
 </div>

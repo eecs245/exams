@@ -266,15 +266,18 @@ $$
 
 Only Option 3 is true. Let's look at each statement one by one.
 
-**(i)** **If <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both matrices such that <span class="math-inline">\\(AB = I\\)</span>, then <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both invertible.** This is <span class="math-inline">\\(\boxed{\text{False}}\\)</span>, because it's possible for <span class="math-inline">\\(AB = I\\)</span> to be true for two non-square matrices <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span>, meaning they can't be invertible. For example, suppose <span class="math-inline">\\(B = \begin{bmatrix} 1 &amp; 0 \\\\ 0 &amp; 1 \\\\ 0 &amp; 0\end{bmatrix}\\)</span> and <span class="math-inline">\\(A = B^T = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\\\ 0 &amp; 1 &amp; 0 \end{bmatrix}\\)</span>. Then,
+<ol>
+<li markdown="1">
+**If <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both matrices such that <span class="math-inline">\\(AB = I\\)</span>, then <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both invertible.** This is <span class="math-inline">\\(\boxed{\text{False}}\\)</span>, because it's possible for <span class="math-inline">\\(AB = I\\)</span> to be true for two non-square matrices <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span>, meaning they can't be invertible. For example, suppose <span class="math-inline">\\(B = \begin{bmatrix} 1 &amp; 0 \\\\ 0 &amp; 1 \\\\ 0 &amp; 0\end{bmatrix}\\)</span> and <span class="math-inline">\\(A = B^T = \begin{bmatrix} 1 &amp; 0 &amp; 0 \\\\ 0 &amp; 1 &amp; 0 \end{bmatrix}\\)</span>. Then,
 
 <div class="math-display">
 $$
 AB = B^TB = \begin{bmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \end{bmatrix} \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\\\ 0 & 0 \end{bmatrix} = \begin{bmatrix} 1 & 0 \\\\ 0 & 1  \end{bmatrix} = I
 $$
 </div>
-
-**(ii)** **If <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both invertible matrices, then <span class="math-inline">\\((A^TB)^{-1} = \left( (B^{-1})^T A^{-1} \right)^T\\)</span>.** This is <span class="math-inline">\\(\boxed{\text{False}}\\)</span>:
+</li>
+<li markdown="1">
+**If <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both invertible matrices, then <span class="math-inline">\\((A^TB)^{-1} = \left( (B^{-1})^T A^{-1} \right)^T\\)</span>.** This is <span class="math-inline">\\(\boxed{\text{False}}\\)</span>:
 
 -   If we expand the right-hand side, we get
 
@@ -285,10 +288,12 @@ $$
 </div>
 
 -   This is not the same as <span class="math-inline">\\((A^TB)^{-1}\\)</span>, which is <span class="math-inline">\\((A^TB)^{-1} = B^{-1}(A^T)^{-1}\\)</span>. Note that <span class="math-inline">\\((A^{-1})^T = (A^T)^{-1}\\)</span>, but the reason these two expressions aren't the same is because order matters for matrix multiplication --- it's not commutative.
-
-**(iii)** **If <span class="math-inline">\\(A\\)</span> is an invertible matrix, then <span class="math-inline">\\(\text{rank}(A) = \text{rank}(A^{-1})\\)</span>.** This is <span class="math-inline">\\(\boxed{\text{True}}\\)</span>. If <span class="math-inline">\\(A\\)</span> is invertible, then <span class="math-inline">\\(\text{rank}(A) = n\\)</span>. Then, <span class="math-inline">\\(A^{-1}\\)</span> is also invertible (its inverse is <span class="math-inline">\\(A\\)</span>), so it must have a rank of <span class="math-inline">\\(n\\)</span> as well.
-
-**(iv)** **If <span class="math-inline">\\(A\\)</span>, <span class="math-inline">\\(B\\)</span>, and <span class="math-inline">\\(C\\)</span> are all symmetric matrices, then <span class="math-inline">\\(AB + C\\)</span> is also symmetric.** This is <span class="math-inline">\\(\boxed{\text{False}}\\)</span>. Recall, what makes a matrix <span class="math-inline">\\(A\\)</span> symmetric is that <span class="math-inline">\\(A = A^T\\)</span>. Let's take the transpose of <span class="math-inline">\\(AB + C\\)</span> and see if we end up getting back <span class="math-inline">\\(AB + C\\)</span>:
+</li>
+<li markdown="1">
+**If <span class="math-inline">\\(A\\)</span> is an invertible matrix, then <span class="math-inline">\\(\text{rank}(A) = \text{rank}(A^{-1})\\)</span>.** This is <span class="math-inline">\\(\boxed{\text{True}}\\)</span>. If <span class="math-inline">\\(A\\)</span> is invertible, then <span class="math-inline">\\(\text{rank}(A) = n\\)</span>. Then, <span class="math-inline">\\(A^{-1}\\)</span> is also invertible (its inverse is <span class="math-inline">\\(A\\)</span>), so it must have a rank of <span class="math-inline">\\(n\\)</span> as well.
+</li>
+<li markdown="1">
+**If <span class="math-inline">\\(A\\)</span>, <span class="math-inline">\\(B\\)</span>, and <span class="math-inline">\\(C\\)</span> are all symmetric matrices, then <span class="math-inline">\\(AB + C\\)</span> is also symmetric.** This is <span class="math-inline">\\(\boxed{\text{False}}\\)</span>. Recall, what makes a matrix <span class="math-inline">\\(A\\)</span> symmetric is that <span class="math-inline">\\(A = A^T\\)</span>. Let's take the transpose of <span class="math-inline">\\(AB + C\\)</span> and see if we end up getting back <span class="math-inline">\\(AB + C\\)</span>:
 
 <div class="math-display">
 $$
@@ -296,7 +301,10 @@ $$
 $$
 </div>
 
-<span class="math-inline">\\(AB + C\\)</span> is only symmetric if <span class="math-inline">\\(AB + C = BA + C\\)</span>, i.e. if <span class="math-inline">\\(AB = BA\\)</span>, which is not true in general, even if <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both symmetric.
+   <span class="math-inline">\\(AB + C\\)</span> is only symmetric if <span class="math-inline">\\(AB + C = BA + C\\)</span>, i.e. if <span class="math-inline">\\(AB = BA\\)</span>, which is not true in general, even if <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both symmetric.
+</li>
+</ol>
+
 </details>
 
 </div>
@@ -808,13 +816,17 @@ Suppose <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in the blanks: The third \_\_(i)\_\_ of <span class="math-inline">\\(A\\)</span> is \_\_(ii)\_\_ to the fourth \_\_(iii)\_\_ of <span class="math-inline">\\(B\\)</span>.
 
-1.
+<ol class="roman">
+<li markdown="1">
+
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> column</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> row</span></div>
+</li>
+<li markdown="1">
 
-2.
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> orthogonal</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> parallel</span></div>
+</li>
+<li markdown="1">
 
-3.
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> column</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> row</span></div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -825,6 +837,8 @@ Every column of <span class="math-inline">\\(B\\)</span> is in <span class="math
 
 So, the third **row** of <span class="math-inline">\\(A\\)</span> is **orthogonal** to the fourth **column** of <span class="math-inline">\\(B\\)</span>.
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -1813,9 +1827,12 @@ $$
 
 Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(7 \times 12\\)</span> matrix. Fill in each blank with an integer with no variables.
 
-1.  (2 pts) What is the minimum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>? \_\_\_\_\_\_
-
-2.  (2 pts) What is the maximum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>? \_\_\_\_\_\_
+<ol class="roman">
+<li markdown="1">
+(2 pts) What is the minimum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>? \_\_\_\_\_\_
+</li>
+<li markdown="1">
+(2 pts) What is the maximum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>? \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1837,6 +1854,8 @@ $$
 
  This is as small as possible when <span class="math-inline">\\(\text{rank}(A)=7\\)</span>, giving minimum <span class="math-inline">\\(\text{dim}(\text{nullsp}(A)) = 5\\)</span>, and as large as possible when <span class="math-inline">\\(\text{rank}(A)=0\\)</span>, giving maximum <span class="math-inline">\\(\text{dim}(\text{nullsp}(A)) = 12\\)</span>.
 </details>
+</li>
+</ol>
 
 ---
 

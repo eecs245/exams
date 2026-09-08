@@ -438,11 +438,13 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose the projection of <span class="math-inline">\\(\vec v\\)</span> onto <span class="math-inline">\\(\vec u\\)</span> is <span class="math-inline">\\(\begin{bmatrix} 1.5 \\\\ 1.5 \\\\ 3 \end{bmatrix}\\)</span>. What is the value of <span class="math-inline">\\(c\\)</span>? Select one of the answers below, then justify your answer in the box provided.
 
-1.  Answer:
+<ol>
+<li markdown="1">
+Answer:
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1/2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(3/2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(4\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6 + \sqrt{41}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(27\\)</span></span></div>
-
-{: start="2"}
-2.  Justify your answer in the box below.
+</li>
+<li markdown="1">
+Justify your answer in the box below.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -473,6 +475,8 @@ $$
 </div>
 
 </details>
+</li>
+</ol>
 
 Recall from the previous page that <span class="math-inline">\\(\vec u = \begin{bmatrix} 3 \\\\ 3 \\\\ 6 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\vec v = \begin{bmatrix} 1 \\\\ 0 \\\\ c \end{bmatrix}\\)</span>, where <span class="math-inline">\\(c \in \mathbb{R}\\)</span> is some constant.
 
@@ -910,11 +914,13 @@ $$
 
 Select values of <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> so that <span class="math-inline">\\(f(k) = \lVert \vec U - k \vec V \rVert^2\\)</span>, for all possible non-negative values of <span class="math-inline">\\(C\\)</span>.
 
-1.  What is the value of <span class="math-inline">\\(a\\)</span>?
+<ol class="roman">
+<li markdown="1">
+What is the value of <span class="math-inline">\\(a\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
-
-{: start="2"}
-2.  What is the value of <span class="math-inline">\\(b\\)</span>?
+</li>
+<li markdown="1">
+What is the value of <span class="math-inline">\\(b\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(C^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\sqrt{C}\\)</span></span></div>
 
 <details markdown="1"><summary>Solution</summary>
@@ -968,6 +974,8 @@ $$
 
 So, the correct answers are <span class="math-inline">\\(\boxed{a=0}\\)</span> and <span class="math-inline">\\(\boxed{b=\sqrt{C}}\\)</span>.
 </details>
+</li>
+</ol>
 
 </div>
 </div>

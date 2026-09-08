@@ -219,9 +219,12 @@ P = \begin{bmatrix}
 $$
 </div>
 
-1.  What is the rank of <span class="math-inline">\\(Z\\)</span>? Give your answer as an integer. <span class="math-inline">\\(\text{rank}(Z) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
-
-2.  Which specific values of <span class="math-inline">\\(x&#95;1, x&#95;2, ..., x&#95;n\\)</span> result in <span class="math-inline">\\(P\\)</span> being the matrix above? Give your answer as a list of values, in the order <span class="math-inline">\\(x&#95;1\\)</span>, then <span class="math-inline">\\(x&#95;2\\)</span>, then <span class="math-inline">\\(x&#95;3\\)</span>, etc. (If there are multiple possible answers, just give one.)
+<ol class="roman">
+<li markdown="1">
+What is the rank of <span class="math-inline">\\(Z\\)</span>? Give your answer as an integer. <span class="math-inline">\\(\text{rank}(Z) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+</li>
+<li markdown="1">
+Which specific values of <span class="math-inline">\\(x&#95;1, x&#95;2, ..., x&#95;n\\)</span> result in <span class="math-inline">\\(P\\)</span> being the matrix above? Give your answer as a list of values, in the order <span class="math-inline">\\(x&#95;1\\)</span>, then <span class="math-inline">\\(x&#95;2\\)</span>, then <span class="math-inline">\\(x&#95;3\\)</span>, etc. (If there are multiple possible answers, just give one.)
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -278,6 +281,8 @@ This hypothesis function only returns one of two values:
 
 So, <span class="math-inline">\\(w&#95;0^{\ast}\\)</span> is the mean of the <span class="math-inline">\\(y\\)</span>'s when <span class="math-inline">\\(x&#95;i = 0\\)</span>, and <span class="math-inline">\\(w&#95;0^{\ast} + w&#95;1^{\ast}\\)</span> is the mean of the <span class="math-inline">\\(y\\)</span>'s when <span class="math-inline">\\(x&#95;i = 1\\)</span>. This is exactly what we see in the matrix <span class="math-inline">\\(P\\)</span>.
 </details>
+</li>
+</ol>
 
 Recall, <span class="math-inline">\\(Z = \begin{bmatrix} 1 &amp; x&#95;1 - \bar{x} &amp; (x&#95;1 - \bar{x})^2 \\\\ 1 &amp; x&#95;2 - \bar{x} &amp; (x&#95;2 - \bar{x})^2 \\\\ \vdots &amp; \vdots &amp; \vdots \\\\ 1 &amp; x&#95;n - \bar{x} &amp; (x&#95;n - \bar{x})^2 \end{bmatrix} = \begin{bmatrix} | &amp; | &amp; | \\\\ \vec z^{(0)} &amp; \vec z^{(1)} &amp; \vec z^{(2)} \\\\ | &amp; | &amp; | \end{bmatrix}\\)</span>.
 
@@ -595,17 +600,19 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> First, assume <span class="math-inline">\\(h(\vec x&#95;i)\\)</span> is the model at the top of the page.
 
-1.  What is the **largest possible** rank of the design matrix, <span class="math-inline">\\(X\\)</span>? (Note that we're asking about the full design matrix, not just its first two rows.)
+<ol class="roman">
+<li markdown="1">
+What is the **largest possible** rank of the design matrix, <span class="math-inline">\\(X\\)</span>? (Note that we're asking about the full design matrix, not just its first two rows.)
 
    <span class="math-inline">\\(\text{largest possible value of }\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
-
-{: start="2"}
-2.  True or False: The sum of the errors of the model's predictions is 0.
+</li>
+<li markdown="1">
+True or False: The sum of the errors of the model's predictions is 0.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
-
-{: start="3"}
-3.  True or False: The sum of the errors of the model's predictions **on just the rows of the dataset corresponding to night games** is 0.
+</li>
+<li markdown="1">
+True or False: The sum of the errors of the model's predictions **on just the rows of the dataset corresponding to night games** is 0.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -615,9 +622,12 @@ $$
 
 Let <span class="math-inline">\\(\vec e = \vec y - X \vec w^{\ast}\\)</span> be the error vector. Since <span class="math-inline">\\(\vec w^{\ast}\\)</span> satisfies the normal equation, <span class="math-inline">\\(\vec e\\)</span> is orthogonal to every column of <span class="math-inline">\\(X\\)</span>, and to every linear combination of those columns.
 
-**(i)** The largest possible rank of <span class="math-inline">\\(X\\)</span> is 3, which happens when the tempF, tempC, and night columns are linearly independent. When the day column is added, the columns become linearly dependent. (Equivalently, the tempF, night, and day columns are linearly independent, but linearly dependent with the tempC column.)
-
-**(ii)** This is true. Even though there is no explicit intercept term (and thus, no column of all ones), the all-ones vector is still in <span class="math-inline">\\(\text{colsp}(X)\\)</span>, because the night and day columns add up to 1 for each row.
+<ol class="roman">
+<li markdown="1">
+The largest possible rank of <span class="math-inline">\\(X\\)</span> is 3, which happens when the tempF, tempC, and night columns are linearly independent. When the day column is added, the columns become linearly dependent. (Equivalently, the tempF, night, and day columns are linearly independent, but linearly dependent with the tempC column.)
+</li>
+<li markdown="1">
+This is true. Even though there is no explicit intercept term (and thus, no column of all ones), the all-ones vector is still in <span class="math-inline">\\(\text{colsp}(X)\\)</span>, because the night and day columns add up to 1 for each row.
 
 <div class="math-display">
 $$
@@ -630,12 +640,13 @@ $$
 <div class="math-display">
 $$
 \begin{align*}
-\vec 1^T \vec e &= \sum_{i=1}^n e_i = 0
-\end{align*}
+    \vec 1^T \vec e &= \sum_{i=1}^n e_i = 0
+    \end{align*}
 $$
 </div>
-
-**(iii)** This is also true. The night indicator is itself a column of <span class="math-inline">\\(X\\)</span>, so
+</li>
+<li markdown="1">
+This is also true. The night indicator is itself a column of <span class="math-inline">\\(X\\)</span>, so
 
 <div class="math-display">
 $$
@@ -644,7 +655,12 @@ $$
 </div>
 
  But this dot product is exactly the sum of the errors for just the night games, because the night column has 1s on night rows and 0s elsewhere.
+</li>
+</ol>
+
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -660,17 +676,19 @@ h(\vec x_i) = w_1 \cdot \text{tempF}_i + w_2 \cdot \text{tempC}_i + w_3 \cdot \t
 $$
 </div>
 
-1.  After removing the day column, what is the **largest possible** rank of the **new** design matrix?
+<ol class="roman">
+<li markdown="1">
+After removing the day column, what is the **largest possible** rank of the **new** design matrix?
 
    <span class="math-inline">\\(\text{largest possible value of }\text{rank}(\text{new design matrix}) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
-
-{: start="2"}
-2.  True or False: The sum of the errors of the new model's predictions is 0.
+</li>
+<li markdown="1">
+True or False: The sum of the errors of the new model's predictions is 0.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
-
-{: start="3"}
-3.  True or False: The sum of the errors of the new model's predictions **on just the rows of the dataset corresponding to night games** is 0.
+</li>
+<li markdown="1">
+True or False: The sum of the errors of the new model's predictions **on just the rows of the dataset corresponding to night games** is 0.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -680,12 +698,21 @@ $$
 
 Let <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> be the error vector for the new model.
 
-**(i)** After removing the day column, the new design matrix has 3 columns, and there is no longer a forced linear dependence among them. So the largest possible rank is still 3. What's new now is that <span class="math-inline">\\(X\\)</span>'s columns are all linearly independent, meaning there is a unique solution to the normal equation.
+<ol class="roman">
+<li markdown="1">
+After removing the day column, the new design matrix has 3 columns, and there is no longer a forced linear dependence among them. So the largest possible rank is still 3. What's new now is that <span class="math-inline">\\(X\\)</span>'s columns are all linearly independent, meaning there is a unique solution to the normal equation.
+</li>
+<li markdown="1">
+This is false. The normal equations still tell us that <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to each column of the new design matrix, but there is no guarantee that the all-ones vector is in the column space anymore. So the errors are not guaranteed to sum to 0.
+</li>
+<li markdown="1">
+This is true. The night indicator column is still present in the new design matrix, so <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to that column. Therefore, the sum of the errors over the night-game rows is still 0.
+</li>
+</ol>
 
-**(ii)** This is false. The normal equations still tell us that <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to each column of the new design matrix, but there is no guarantee that the all-ones vector is in the column space anymore. So the errors are not guaranteed to sum to 0.
-
-**(iii)** This is true. The night indicator column is still present in the new design matrix, so <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to that column. Therefore, the sum of the errors over the night-game rows is still 0.
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -1027,9 +1054,14 @@ $$
 
 Now, the problem boils down to finding a design matrix <span class="math-inline">\\(X\\)</span> with the above column space, that also meets the other requirements. Here are the other relevant requirements:
 
-**(i)** Since the model has an intercept term, the first column of <span class="math-inline">\\(X\\)</span> should be <span class="math-inline">\\(\vec 1 = \begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 1 \\\\ 1 \end{bmatrix}\\)</span>.
-
-**(ii)** From part **c)**, we need <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix} \in \text{nullsp}(X)\\)</span>.
+<ol>
+<li markdown="1">
+Since the model has an intercept term, the first column of <span class="math-inline">\\(X\\)</span> should be <span class="math-inline">\\(\vec 1 = \begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 1 \\\\ 1 \end{bmatrix}\\)</span>.
+</li>
+<li markdown="1">
+From part **c)**, we need <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix} \in \text{nullsp}(X)\\)</span>.
+</li>
+</ol>
 
 If the columns of <span class="math-inline">\\(X\\)</span> are <span class="math-inline">\\(\vec x^{(0)}\\)</span>, <span class="math-inline">\\(\vec x^{(1)}\\)</span>, and <span class="math-inline">\\(\vec x^{(2)}\\)</span> (we're told <span class="math-inline">\\(X\\)</span> has 3 columns), the first requirement states
 
@@ -1177,47 +1209,55 @@ The coefficient <span class="math-inline">\\(w&#95;2\\)</span> is the change in 
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Once again, suppose the dataset has four rows. In each of the following subparts, we provide the number of hours parked in the dataset. Find the rank of the design matrix <span class="math-inline">\\(X\\)</span> in each case. Fill in each blank with an integer with no variables.
 
-1.  (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
-
-2.  (2 pts) <span class="math-inline">\\(2\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(2\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
-
-3.  (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(4\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(6\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+<ol class="roman">
+<li markdown="1">
+(2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+</li>
+<li markdown="1">
+(2 pts) <span class="math-inline">\\(2\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(2\\)</span>, and <span class="math-inline">\\(1\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+</li>
+<li markdown="1">
+(2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(4\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(6\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
 This feature engineering setup is an example of the multiple linear regression design matrices from [Chapter 7.2](https://notes.eecs245.org/regression-using-linear-algebra/multiple-linear-regression/).
 
-**(i)** The design matrix is
+<ol class="roman">
+<li markdown="1">
+The design matrix is
 
 <div class="math-display">
 $$
 \begin{bmatrix}
-    1&3&1\\\\
-    1&0&0\\\\
-    1&5&3\\\\
-    1&1&0
-    \end{bmatrix}
+        1&3&1\\\\
+        1&0&0\\\\
+        1&5&3\\\\
+        1&1&0
+        \end{bmatrix}
 $$
 </div>
 
  The three columns are linearly independent, so <span class="math-inline">\\(\text{rank}(X)=3\\)</span>.
-
-**(ii)** The design matrix is
+</li>
+<li markdown="1">
+The design matrix is
 
 <div class="math-display">
 $$
 \begin{bmatrix}
-    1&2&0\\\\
-    1&0&0\\\\
-    1&2&0\\\\
-    1&1&0
-    \end{bmatrix}
+        1&2&0\\\\
+        1&0&0\\\\
+        1&2&0\\\\
+        1&1&0
+        \end{bmatrix}
 $$
 </div>
 
  The third column is all zero, while the first two columns are linearly independent. So <span class="math-inline">\\(\text{rank}(X)=2\\)</span>.
-
-**(iii)** If all hour values are greater than <span class="math-inline">\\(2\\)</span>, then
+</li>
+<li markdown="1">
+If all hour values are greater than <span class="math-inline">\\(2\\)</span>, then
 
 <div class="math-display">
 $$
@@ -1234,7 +1274,12 @@ $$
 </div>
 
  So the rank is at most <span class="math-inline">\\(2\\)</span>. Since the hour values are not all the same, columns 1 and 3 are linearly independent, and <span class="math-inline">\\(\text{rank}(X)=2\\)</span>.
+</li>
+</ol>
+
 </details>
+</li>
+</ol>
 
 </div>
 </div>

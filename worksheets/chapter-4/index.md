@@ -419,22 +419,24 @@ If these vectors were linearly independent, they would span a 6-dimensional subs
 
 In each part below, a possible way to fill in the blank is given. Determine whether the statement that results from filling in the blank is **True** or **False**.
 
-1.  zero
+<ol class="roman">
+<li markdown="1">
+zero
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
-
-{: start="2"}
-2.  exactly one
-
-<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
-
-{: start="3"}
-3.  exactly two
+</li>
+<li markdown="1">
+exactly one
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+</li>
+<li markdown="1">
+exactly two
 
-{: start="4"}
-4.  infinite
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+</li>
+<li markdown="1">
+infinite
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -450,6 +452,8 @@ In each part below, a possible way to fill in the blank is given. Determine whet
 
 -   **(True) infinite ways**: For any vector <span class="math-inline">\\(\vec b \in S\\)</span>, there are infinitely many ways to write <span class="math-inline">\\(\vec b\\)</span> as a linear combination of <span class="math-inline">\\(\vec x&#95;1, \ldots, \vec x&#95;6\\)</span>.
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -793,11 +797,13 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">7 pts</span> Are <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> linearly independent?
 
-1.  Select an answer:
+<ol class="roman">
+<li markdown="1">
+Select an answer:
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Yes</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> No</span></div>
-
-{: start="2"}
-2.  Prove your answer using the formal definition of linear independence. <em>Hint: You did something similar in Homework 4, Problem 6.</em>
+</li>
+<li markdown="1">
+Prove your answer using the formal definition of linear independence. <em>Hint: You did something similar in Homework 4, Problem 6.</em>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -823,6 +829,8 @@ $$
 
  The coefficients <span class="math-inline">\\(1,-1,1,-1\\)</span> are not all zero, so this proves that <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> is linearly dependent.
 </details>
+</li>
+</ol>
 
 </div>
 </div>

@@ -188,11 +188,13 @@ So, the equation of the plane spanned by <span class="math-inline">\\(\vec u&#95
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> There is one value of <span class="math-inline">\\(k\\)</span> such that the projection of <span class="math-inline">\\(\vec x = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix}\\)</span> onto <span class="math-inline">\\(\vec u&#95;k\\)</span> is just <span class="math-inline">\\(\vec u&#95;k\\)</span> itself.
 
-1.  What is the value of <span class="math-inline">\\(k\\)</span>?
+<ol class="roman">
+<li markdown="1">
+What is the value of <span class="math-inline">\\(k\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 3</span></div>
-
-{: start="2"}
-2.  Show your work in the box below. English explanations are not enough.
+</li>
+<li markdown="1">
+Show your work in the box below. English explanations are not enough.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -210,24 +212,33 @@ $$
 
 So, we need to find the vector <span class="math-inline">\\(\vec u&#95;k\\)</span> such that the scalar <span class="math-inline">\\(\frac{\vec x \cdot \vec u&#95;k}{\vec u&#95;k \cdot \vec u&#95;k}\\)</span> is equal to 1, or equivalently, <span class="math-inline">\\(\vec x \cdot \vec u&#95;k = \vec u&#95;k \cdot \vec u&#95;k\\)</span>. We can check this equality for each of the three provided vectors.
 
-**(i)** <span class="math-inline">\\(x \cdot \vec u&#95;1 = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix} \cdot \begin{bmatrix} 13 \\\\ -3 \\\\ 2 \end{bmatrix} = 7 \cdot 13 + 3 \cdot (-3) + 1 \cdot 2 = 84\\)</span>
+<ol>
+<li markdown="1">
+<span class="math-inline">\\(x \cdot \vec u&#95;1 = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix} \cdot \begin{bmatrix} 13 \\\\ -3 \\\\ 2 \end{bmatrix} = 7 \cdot 13 + 3 \cdot (-3) + 1 \cdot 2 = 84\\)</span>
 
-<span class="math-inline">\\(\vec u&#95;1 \cdot \vec u&#95;1 = 13^2 + (-3)^2 + 2^2 = 180\\)</span>
+   <span class="math-inline">\\(\vec u&#95;1 \cdot \vec u&#95;1 = 13^2 + (-3)^2 + 2^2 = 180\\)</span>
 
-<span class="math-inline">\\(84 \neq 180\\)</span>, so <span class="math-inline">\\(\vec u&#95;1\\)</span> is not the vector we're looking for.
+   <span class="math-inline">\\(84 \neq 180\\)</span>, so <span class="math-inline">\\(\vec u&#95;1\\)</span> is not the vector we're looking for.
+</li>
+<li markdown="1">
+<span class="math-inline">\\(x \cdot \vec u&#95;2 = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix} \cdot \begin{bmatrix} 0 \\\\ 4 \\\\ 6 \end{bmatrix} = 7 \cdot 0 + 3 \cdot 4 + 1 \cdot 6 = 18\\)</span>
 
-**(ii)** <span class="math-inline">\\(x \cdot \vec u&#95;2 = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix} \cdot \begin{bmatrix} 0 \\\\ 4 \\\\ 6 \end{bmatrix} = 7 \cdot 0 + 3 \cdot 4 + 1 \cdot 6 = 18\\)</span>
+   <span class="math-inline">\\(\vec u&#95;2 \cdot \vec u&#95;2 = 0^2 + 4^2 + 6^2 = 52\\)</span>
 
-<span class="math-inline">\\(\vec u&#95;2 \cdot \vec u&#95;2 = 0^2 + 4^2 + 6^2 = 52\\)</span>
+   <span class="math-inline">\\(18 \neq 52\\)</span>, so <span class="math-inline">\\(\vec u&#95;2\\)</span> is not the vector we're looking for.
+</li>
+<li markdown="1">
+<span class="math-inline">\\(x \cdot \vec u&#95;3 = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix} \cdot \begin{bmatrix} 1 \\\\ 3 \\\\ -2 \end{bmatrix} = 7 \cdot 1 + 3 \cdot 3 + 1 \cdot (-2) = 14\\)</span>
 
-<span class="math-inline">\\(18 \neq 52\\)</span>, so <span class="math-inline">\\(\vec u&#95;2\\)</span> is not the vector we're looking for.
+   <span class="math-inline">\\(\vec u&#95;3 \cdot \vec u&#95;3 = 1^2 + 3^2 + (-2)^2 = 14\\)</span>
 
-**(iii)** <span class="math-inline">\\(x \cdot \vec u&#95;3 = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix} \cdot \begin{bmatrix} 1 \\\\ 3 \\\\ -2 \end{bmatrix} = 7 \cdot 1 + 3 \cdot 3 + 1 \cdot (-2) = 14\\)</span>
+   <span class="math-inline">\\(14 = 14\\)</span>, so <span class="math-inline">\\(\vec u&#95;3\\)</span> **is** the vector we're looking for.
+</li>
+</ol>
 
-<span class="math-inline">\\(\vec u&#95;3 \cdot \vec u&#95;3 = 1^2 + 3^2 + (-2)^2 = 14\\)</span>
-
-<span class="math-inline">\\(14 = 14\\)</span>, so <span class="math-inline">\\(\vec u&#95;3\\)</span> **is** the vector we're looking for.
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -521,18 +532,20 @@ $$
 
 There are a few possible techniques here.
 
-**(i)** We can find the intersection of the two planes by solving the system of equations:
+<ol>
+<li markdown="1">
+We can find the intersection of the two planes by solving the system of equations:
 
 <div class="math-display">
 $$
 \begin{align*}
-5x + 3y - z   &= 0 \\\\
-2x - 3y + 8z &= 0
-\end{align*}
+    5x + 3y - z   &= 0 \\\\
+    2x - 3y + 8z &= 0
+    \end{align*}
 $$
 </div>
 
-Adding both equations gives
+   Adding both equations gives
 
 <div class="math-display">
 $$
@@ -540,7 +553,7 @@ $$
 $$
 </div>
 
-We know that the system will have infinitely many solutions, so we can let our "parameter" be <span class="math-inline">\\(x\\)</span>. So far, we know two of the three components of the line: <span class="math-inline">\\(x\\)</span> is the free variable, and <span class="math-inline">\\(z = -x\\)</span>. Finally, let's solve for <span class="math-inline">\\(y\\)</span> in terms of <span class="math-inline">\\(x\\)</span>.
+   We know that the system will have infinitely many solutions, so we can let our "parameter" be <span class="math-inline">\\(x\\)</span>. So far, we know two of the three components of the line: <span class="math-inline">\\(x\\)</span> is the free variable, and <span class="math-inline">\\(z = -x\\)</span>. Finally, let's solve for <span class="math-inline">\\(y\\)</span> in terms of <span class="math-inline">\\(x\\)</span>.
 
 <div class="math-display">
 $$
@@ -548,15 +561,16 @@ $$
 $$
 </div>
 
-Therefore, the parametric equation of the line is
+   Therefore, the parametric equation of the line is
 
 <div class="math-display">
 $$
 L = \begin{bmatrix} x \\\\ -2x \\\\ -x \end{bmatrix} = x \begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}, \quad x \in \mathbb{R}
 $$
 </div>
-
-**(ii)** Another solution is to recognize that any point on the first plane can be written as a linear combination of the two vectors that span the plane, i.e.
+</li>
+<li markdown="1">
+Another solution is to recognize that any point on the first plane can be written as a linear combination of the two vectors that span the plane, i.e.
 
 <div class="math-display">
 $$
@@ -564,20 +578,20 @@ s \begin{bmatrix} 3 \\\\ 2 \\\\ 0 \end{bmatrix} + t \begin{bmatrix} 6 \\\\ -4 \\
 $$
 </div>
 
-Any vector on the first plane can be written in the form above. For a vector to be in both planes (i.e. in the intersection), it must be able to be written in the form above **and** satisfy the equation of the second plane, <span class="math-inline">\\(5x + 3y - z = 0\\)</span>.
+   Any vector on the first plane can be written in the form above. For a vector to be in both planes (i.e. in the intersection), it must be able to be written in the form above **and** satisfy the equation of the second plane, <span class="math-inline">\\(5x + 3y - z = 0\\)</span>.
 
 <div class="math-display">
 $$
 \begin{align*}
-5(3s + 6t) + 3(2s - 4t) - (-3t) &= 0 \\\\
-15s + 30t + 6s - 12t + 3t &= 0 \\\\
-21s + 21t &= 0 \\\\
-t &= -s
-\end{align*}
+    5(3s + 6t) + 3(2s - 4t) - (-3t) &= 0 \\\\
+    15s + 30t + 6s - 12t + 3t &= 0 \\\\
+    21s + 21t &= 0 \\\\
+    t &= -s
+    \end{align*}
 $$
 </div>
 
-So, as long as we pick <span class="math-inline">\\(s\\)</span> and <span class="math-inline">\\(t\\)</span> such that <span class="math-inline">\\(t = -s\\)</span>, the resulting vector, <span class="math-inline">\\(\begin{bmatrix} 3s + 6t \\\\ 2s - 4t \\\\ -3t \end{bmatrix}\\)</span>, will be in both planes. There are infinitely many pairs of such <span class="math-inline">\\(s\\)</span> and <span class="math-inline">\\(t\\)</span> -- <span class="math-inline">\\(1\\)</span> and <span class="math-inline">\\(-1\\)</span>, <span class="math-inline">\\(2\\)</span> and <span class="math-inline">\\(-2\\)</span>, etc. -- and these fill out the line of intersection. To find one of them, let <span class="math-inline">\\(s = 1\\)</span> and <span class="math-inline">\\(t = -1\\)</span>:
+   So, as long as we pick <span class="math-inline">\\(s\\)</span> and <span class="math-inline">\\(t\\)</span> such that <span class="math-inline">\\(t = -s\\)</span>, the resulting vector, <span class="math-inline">\\(\begin{bmatrix} 3s + 6t \\\\ 2s - 4t \\\\ -3t \end{bmatrix}\\)</span>, will be in both planes. There are infinitely many pairs of such <span class="math-inline">\\(s\\)</span> and <span class="math-inline">\\(t\\)</span> -- <span class="math-inline">\\(1\\)</span> and <span class="math-inline">\\(-1\\)</span>, <span class="math-inline">\\(2\\)</span> and <span class="math-inline">\\(-2\\)</span>, etc. -- and these fill out the line of intersection. To find one of them, let <span class="math-inline">\\(s = 1\\)</span> and <span class="math-inline">\\(t = -1\\)</span>:
 
 <div class="math-display">
 $$
@@ -585,7 +599,7 @@ $$
 $$
 </div>
 
-Therefore, the parametric equation of the line is
+   Therefore, the parametric equation of the line is
 
 <div class="math-display">
 $$
@@ -601,19 +615,23 @@ L = t \begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}, \quad t \in \mathbb{R}
 $$
 </div>
 
-This is the same line we found earlier, just with a scaled direction vector, which doesn't change the line.
-
-**(iii)** A final solution is to (1) find a vector that is perpendicular to each plane (i.e. a normal vector), and (2) take the cross product of those two vectors. This will give us a vector that is in both planes, and therefore spans the intersecting line, which we know must also pass through the origin.
+   This is the same line we found earlier, just with a scaled direction vector, which doesn't change the line.
+</li>
+<li markdown="1">
+A final solution is to (1) find a vector that is perpendicular to each plane (i.e. a normal vector), and (2) take the cross product of those two vectors. This will give us a vector that is in both planes, and therefore spans the intersecting line, which we know must also pass through the origin.
 
 <div class="math-display">
 $$
 \begin{align*}
-\begin{bmatrix} 5 \\\\ 3 \\\\ -1 \end{bmatrix} \times \begin{bmatrix} 2 \\\\ -3 \\\\ 8 \end{bmatrix} = \begin{bmatrix} 3 \cdot 8 - (-1) \cdot (-3) \\\\ (-1) \cdot 2 - 5 \cdot 8 \\\\ 5 \cdot (-3) - 3 \cdot 2 \end{bmatrix} = \begin{bmatrix} 21 \\\\ -42 \\\\ -21 \end{bmatrix} = 21 \begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}
-\end{align*}
+    \begin{bmatrix} 5 \\\\ 3 \\\\ -1 \end{bmatrix} \times \begin{bmatrix} 2 \\\\ -3 \\\\ 8 \end{bmatrix} = \begin{bmatrix} 3 \cdot 8 - (-1) \cdot (-3) \\\\ (-1) \cdot 2 - 5 \cdot 8 \\\\ 5 \cdot (-3) - 3 \cdot 2 \end{bmatrix} = \begin{bmatrix} 21 \\\\ -42 \\\\ -21 \end{bmatrix} = 21 \begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}
+    \end{align*}
 $$
 </div>
 
-So, once again, we find that <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}\\)</span> is a direction vector for the line of intersection.
+   So, once again, we find that <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}\\)</span> is a direction vector for the line of intersection.
+</li>
+</ol>
+
 </details>
 
 </div>
@@ -1240,12 +1258,14 @@ Also, recall that <span class="math-inline">\\(\text{rank}(X) = \text{rank}(X^T 
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> For each statement below, determine whether it is true or false.
 
-1.  The columns of <span class="math-inline">\\(X\\)</span> are all orthogonal to each other.
+<ol class="roman">
+<li markdown="1">
+The columns of <span class="math-inline">\\(X\\)</span> are all orthogonal to each other.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
-
-{: start="2"}
-2.  The columns of <span class="math-inline">\\(X\\)</span> are orthonormal.
+</li>
+<li markdown="1">
+The columns of <span class="math-inline">\\(X\\)</span> are orthonormal.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -1253,10 +1273,18 @@ Also, recall that <span class="math-inline">\\(\text{rank}(X) = \text{rank}(X^T 
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
 
-**(i)** This is true. The entries of <span class="math-inline">\\(X^TX\\)</span> are the dot products of the columns of <span class="math-inline">\\(X\\)</span> with each other. Since the off-diagonal entries are 0, the columns of <span class="math-inline">\\(X\\)</span> are orthogonal to each other.
+<ol class="roman">
+<li markdown="1">
+This is true. The entries of <span class="math-inline">\\(X^TX\\)</span> are the dot products of the columns of <span class="math-inline">\\(X\\)</span> with each other. Since the off-diagonal entries are 0, the columns of <span class="math-inline">\\(X\\)</span> are orthogonal to each other.
+</li>
+<li markdown="1">
+This is false. The diagonal entries of <span class="math-inline">\\(X^TX\\)</span> are the squared lengths of the columns of <span class="math-inline">\\(X\\)</span>. Since both diagonal entries are 4, both columns have length 2, not 1.
+</li>
+</ol>
 
-**(ii)** This is false. The diagonal entries of <span class="math-inline">\\(X^TX\\)</span> are the squared lengths of the columns of <span class="math-inline">\\(X\\)</span>. Since both diagonal entries are 4, both columns have length 2, not 1.
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -1399,20 +1427,25 @@ Finally, let <span class="math-inline">\\(Q\\)</span> be an <span class="math-in
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
-1.  (2 pts) What is <span class="math-inline">\\(\text{det}(P)\\)</span>?
+<ol class="roman">
+<li markdown="1">
+(2 pts) What is <span class="math-inline">\\(\text{det}(P)\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
-
-{: start="2"}
-2.  (2 pts) What is <span class="math-inline">\\(\text{det}(Q)\\)</span>?
+</li>
+<li markdown="1">
+(2 pts) What is <span class="math-inline">\\(\text{det}(Q)\\)</span>?
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(0\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
-**(i)** Since <span class="math-inline">\\(P\\)</span> projects onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> and <span class="math-inline">\\(d&lt;n\\)</span>, multiple vectors in <span class="math-inline">\\(\mathbb{R}^n\\)</span> will have the same projection onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>. So <span class="math-inline">\\(P\\)</span> is not invertible, and therefore <span class="math-inline">\\(\det(P)=0\\)</span>.
-
-**(ii)** Since <span class="math-inline">\\(Q\\)</span> is orthogonal, <span class="math-inline">\\(Q^TQ=I\\)</span>. Taking determinants gives
+<ol class="roman">
+<li markdown="1">
+Since <span class="math-inline">\\(P\\)</span> projects onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> and <span class="math-inline">\\(d&lt;n\\)</span>, multiple vectors in <span class="math-inline">\\(\mathbb{R}^n\\)</span> will have the same projection onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>. So <span class="math-inline">\\(P\\)</span> is not invertible, and therefore <span class="math-inline">\\(\det(P)=0\\)</span>.
+</li>
+<li markdown="1">
+Since <span class="math-inline">\\(Q\\)</span> is orthogonal, <span class="math-inline">\\(Q^TQ=I\\)</span>. Taking determinants gives
 
 <div class="math-display">
 $$
@@ -1429,7 +1462,12 @@ $$
 </div>
 
  and therefore <span class="math-inline">\\(\det(Q)\\)</span> is either <span class="math-inline">\\(-1\\)</span> or <span class="math-inline">\\(1\\)</span>.
+</li>
+</ol>
+
 </details>
+</li>
+</ol>
 
 </div>
 </div>
@@ -1506,9 +1544,14 @@ $$
 
 Why does this happen? Think of <span class="math-inline">\\(Q\\)</span> as a rotation matrix. This is saying that if we:
 
-**(i)** Rotate <span class="math-inline">\\(\vec y\\)</span> and rotate <span class="math-inline">\\(\text{colsp}(X)\\)</span>, and project the rotated <span class="math-inline">\\(\vec y\\)</span> onto the rotated <span class="math-inline">\\(\text{colsp}(X)\\)</span>, OR
-
-**(ii)** Project the original <span class="math-inline">\\(\vec y\\)</span> onto the original <span class="math-inline">\\(\text{colsp}(X)\\)</span>, and then rotate the projected vector,
+<ol>
+<li markdown="1">
+Rotate <span class="math-inline">\\(\vec y\\)</span> and rotate <span class="math-inline">\\(\text{colsp}(X)\\)</span>, and project the rotated <span class="math-inline">\\(\vec y\\)</span> onto the rotated <span class="math-inline">\\(\text{colsp}(X)\\)</span>, OR
+</li>
+<li markdown="1">
+Project the original <span class="math-inline">\\(\vec y\\)</span> onto the original <span class="math-inline">\\(\text{colsp}(X)\\)</span>, and then rotate the projected vector,
+</li>
+</ol>
 
 we end up with the same vector in either case.
 </details>
