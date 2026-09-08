@@ -21,9 +21,7 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 import compose  # noqa: E402
 from generate_exam_markdown import (  # noqa: E402
     EXAM_DISCLAIMER,
-    EXAM_NAV_SNIPPET,
-    HOMEWORK_STYLE_SNIPPET,
-    MATHJAX_SNIPPET,
+    EXAM_NAV_HTML,
     SECTION_SEPARATOR,
     escape_frontmatter,
     generate_toc,
@@ -74,7 +72,8 @@ def build_exam_page(exam: str) -> tuple[str, int]:
     title = compose.exam_title(meta)
     parts = [
         "---",
-        "layout: minimal",
+        "layout: exam",
+        "mathjax: true",
         f'title: "{escape_frontmatter(title)}"',
         f'description: "{escape_frontmatter(title)} problems."',
         "nav_exclude: true",
@@ -86,11 +85,7 @@ def build_exam_page(exam: str) -> tuple[str, int]:
             "",
             "{% raw %}",
             "",
-            MATHJAX_SNIPPET,
-            "",
-            HOMEWORK_STYLE_SNIPPET,
-            "",
-            EXAM_NAV_SNIPPET,
+            EXAM_NAV_HTML,
             "",
             f"# {title}",
             "",
