@@ -1,5 +1,6 @@
 ---
-layout: minimal
+layout: exam
+mathjax: true
 title: "Chapter 6: Linear Transformations and Projections"
 description: "Practice problems for Chapter 6: Linear Transformations and Projections."
 nav_exclude: true
@@ -8,124 +9,6 @@ hide_footer_hr: true
 
 {% raw %}
 
-<script>
-window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-<style>
-.main-content p {
-  margin-bottom: 1.15em;
-}
-.assignment-pdf-button {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.65rem;
-}
-.assignment-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0 0 1rem;
-}
-.math-display,
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.math-display {
-  padding-bottom: 0.2rem;
-}
-.math-display mjx-container[jax="CHTML"][display="true"] {
-  padding-bottom: 0.2rem;
-}
-.answer-blank {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  min-width: 8rem;
-  height: 1em;
-  vertical-align: baseline;
-}
-.assignment-parts {
-  margin: 1rem 0;
-}
-.assignment-part {
-  column-gap: 0.55rem;
-  display: grid;
-  grid-template-columns: 1.4rem minmax(0, 1fr);
-  margin-bottom: 1.05rem;
-}
-.assignment-part-label {
-  font-weight: 600;
-  text-align: right;
-}
-.assignment-part-content > :first-child {
-  margin-top: 0;
-}
-.mc-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.6rem;
-  margin: 0.9rem 0 1.1rem;
-}
-.mc-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-}
-.mc-bubble,
-.mc-square {
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 0.95em;
-  width: 0.95em;
-  vertical-align: -0.12em;
-}
-.mc-bubble {
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-.mc-square {
-  border: 1.5px solid currentColor;
-}
-.mc-correct {
-  background: currentColor;
-}
-.main-content table {
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
-}
-.main-content table th,
-.main-content table td {
-  padding: 0.35rem 0.5rem;
-  white-space: nowrap;
-}
-</style>
-
-<style>
-.worksheet-source { font-size: 0.8rem; color: #57606a; margin: -0.4rem 0 0.8rem; }
-.worksheet-source a { color: #0066cc; }
-</style>
-
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>
@@ -151,7 +34,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT1 · Problem 5: Back to Normal <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## FA25 MT1 · Problem 5: Back to Normal <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -161,7 +44,7 @@ Consider the orthogonal vectors <span class="math-inline">\\(\vec u&#95;1 = \beg
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find the equation of the plane spanned by <span class="math-inline">\\(\vec u&#95;2\\)</span> and <span class="math-inline">\\(\vec u&#95;3\\)</span> in standard form, i.e. <span class="math-inline">\\(ax + by + cz + d = 0\\)</span>. <span class="math-inline">\\(\boxed{\text{Circle}}\\)</span> your final answer.
+<span class="badge badge-points">4 pts</span> Find the equation of the plane spanned by <span class="math-inline">\\(\vec u&#95;2\\)</span> and <span class="math-inline">\\(\vec u&#95;3\\)</span> in standard form, i.e. <span class="math-inline">\\(ax + by + cz + d = 0\\)</span>. <span class="math-inline">\\(\boxed{\text{Circle}}\\)</span> your final answer.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -186,7 +69,7 @@ So, the equation of the plane spanned by <span class="math-inline">\\(\vec u&#95
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> There is one value of <span class="math-inline">\\(k\\)</span> such that the projection of <span class="math-inline">\\(\vec x = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix}\\)</span> onto <span class="math-inline">\\(\vec u&#95;k\\)</span> is just <span class="math-inline">\\(\vec u&#95;k\\)</span> itself.
+<span class="badge badge-points">8 pts</span> There is one value of <span class="math-inline">\\(k\\)</span> such that the projection of <span class="math-inline">\\(\vec x = \begin{bmatrix} 7 \\\\ 3 \\\\ 1 \end{bmatrix}\\)</span> onto <span class="math-inline">\\(\vec u&#95;k\\)</span> is just <span class="math-inline">\\(\vec u&#95;k\\)</span> itself.
 
 <ol class="roman">
 <li markdown="1">
@@ -247,7 +130,7 @@ So, we need to find the vector <span class="math-inline">\\(\vec u&#95;k\\)</spa
 
 ---
 
-## FA25 MT2 · Problem 5: Ortho\...dontist? <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## FA25 MT2 · Problem 5: Ortho\...dontist? <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
@@ -257,7 +140,7 @@ Let <span class="math-inline">\\(A = \begin{bmatrix} 1 &amp; 0 \\\\ 1 &amp; 4 \\
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find a matrix <span class="math-inline">\\(Q\\)</span> such that <span class="math-inline">\\(\text{colsp}(Q) = \text{colsp}(A)\\)</span> and <span class="math-inline">\\(Q^TQ = I\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a matrix with two columns and no variables. <em>Hint: One of the columns may involve square roots.</em>
+<span class="badge badge-points">6 pts</span> Find a matrix <span class="math-inline">\\(Q\\)</span> such that <span class="math-inline">\\(\text{colsp}(Q) = \text{colsp}(A)\\)</span> and <span class="math-inline">\\(Q^TQ = I\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a matrix with two columns and no variables. <em>Hint: One of the columns may involve square roots.</em>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -362,7 +245,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: The matrix <span class="math-inline">\\(Q\\)</span> you found above is an orthogonal matrix.
+<span class="badge badge-points">2 pts</span> True or False: The matrix <span class="math-inline">\\(Q\\)</span> you found above is an orthogonal matrix.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -381,7 +264,7 @@ For <span class="math-inline">\\(Q\\)</span> to be orthogonal, we'd need **both*
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Let <span class="math-inline">\\(R = \begin{bmatrix} r&#95;1 &amp; \boxed{r&#95;2} \\\\ \boxed{r&#95;3} &amp; r&#95;4 \end{bmatrix}\\)</span> be a <span class="math-inline">\\(2 \times 2\\)</span> matrix such that <span class="math-inline">\\(A = QR\\)</span>, where <span class="math-inline">\\(Q\\)</span> is the matrix you found above.
+<span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(R = \begin{bmatrix} r&#95;1 &amp; \boxed{r&#95;2} \\\\ \boxed{r&#95;3} &amp; r&#95;4 \end{bmatrix}\\)</span> be a <span class="math-inline">\\(2 \times 2\\)</span> matrix such that <span class="math-inline">\\(A = QR\\)</span>, where <span class="math-inline">\\(Q\\)</span> is the matrix you found above.
 
 Find <span class="math-inline">\\(r&#95;2\\)</span> and <span class="math-inline">\\(r&#95;3\\)</span>. Give your answers as scalars without variables.
 
@@ -474,7 +357,7 @@ $$
 
 ---
 
-## WN26 MT1 · Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## WN26 MT1 · Problem 3 <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
@@ -488,7 +371,7 @@ Consider the following two planes, <span class="math-inline">\\(P&#95;1\\)</span
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find the equation of <span class="math-inline">\\(P&#95;1\\)</span> in standard form, i.e. <span class="math-inline">\\(ax + by + cz + d = 0\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer.
+<span class="badge badge-points">6 pts</span> Find the equation of <span class="math-inline">\\(P&#95;1\\)</span> in standard form, i.e. <span class="math-inline">\\(ax + by + cz + d = 0\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -518,7 +401,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Planes <span class="math-inline">\\(P&#95;1\\)</span> and <span class="math-inline">\\(P&#95;2\\)</span> intersect at a line. Find the equation of this line in parametric form. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer. <em>Hint: This can be done without knowing the answer to the previous part.</em>
+<span class="badge badge-points">6 pts</span> Planes <span class="math-inline">\\(P&#95;1\\)</span> and <span class="math-inline">\\(P&#95;2\\)</span> intersect at a line. Find the equation of this line in parametric form. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer. <em>Hint: This can be done without knowing the answer to the previous part.</em>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -641,7 +524,7 @@ $$
 
 ---
 
-## WN26 MT1 · Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## WN26 MT1 · Problem 5 <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
@@ -657,7 +540,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find <span class="math-inline">\\(| \vec u \cdot \vec v |\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a number with no variables.
+<span class="badge badge-points">6 pts</span> Find <span class="math-inline">\\(| \vec u \cdot \vec v |\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a number with no variables.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -690,7 +573,7 @@ So, we know that <span class="math-inline">\\(\frac{\left| \vec u \cdot \vec v \
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> For each pair of vectors, determine whether they are orthogonal, linearly dependent, or neither. Make sure to select **one bubble per row**.
+<span class="badge badge-points">6 pts</span> For each pair of vectors, determine whether they are orthogonal, linearly dependent, or neither. Make sure to select **one bubble per row**.
 
 |  | pair of vectors | orthogonal | linearly dependent | neither |
 |:--:|:---|:--:|:--:|:--:|
@@ -721,7 +604,7 @@ The only possible "edge case" here is when <span class="math-inline">\\(\vec u\\
 
 ---
 
-## WN26 MT2 · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">13 pts</span>
+## WN26 MT2 · Problem 4 <span class="badge badge-points">13 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -737,7 +620,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Which of the following **could** be the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>?
+<span class="badge badge-points">5 pts</span> Which of the following **could** be the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>?
 
 Select an answer, then briefly justify your answer in the space provided using properties of projections. Correct answers without justification may not receive full credit.
 
@@ -788,7 +671,7 @@ In each of the remaining parts, identify whether the statement is True or False 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> If the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> is <span class="math-inline">\\(\vec y\\)</span> itself, then <span class="math-inline">\\(\text{rank}(X)\\)</span> must be 3.
+<span class="badge badge-points">4 pts</span> If the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> is <span class="math-inline">\\(\vec y\\)</span> itself, then <span class="math-inline">\\(\text{rank}(X)\\)</span> must be 3.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -807,7 +690,7 @@ But <span class="math-inline">\\(\text{colsp}(X)\\)</span> could still be a 1-di
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> If <span class="math-inline">\\(\text{rank}(X) = 3\\)</span>, then the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> must be <span class="math-inline">\\(\vec y\\)</span> itself.
+<span class="badge badge-points">4 pts</span> If <span class="math-inline">\\(\text{rank}(X) = 3\\)</span>, then the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> must be <span class="math-inline">\\(\vec y\\)</span> itself.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -827,7 +710,7 @@ But, this means every vector in <span class="math-inline">\\(\mathbb{R}^3\\)</sp
 
 ---
 
-## WN26 Final · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
+## WN26 Final · Problem 6 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -862,7 +745,7 @@ Lastly, suppose <span class="math-inline">\\(\vec y \in \mathbb{R}^n\\)</span> a
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Let <span class="math-inline">\\(\vec p\\)</span> be the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>. Write <span class="math-inline">\\(\vec p\\)</span> as a linear combination of the columns of <span class="math-inline">\\(X\\)</span>. Fill in each box with a number with no variables. If there are multiple correct answers, you only need to provide one.
+<span class="badge badge-points">6 pts</span> Let <span class="math-inline">\\(\vec p\\)</span> be the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>. Write <span class="math-inline">\\(\vec p\\)</span> as a linear combination of the columns of <span class="math-inline">\\(X\\)</span>. Fill in each box with a number with no variables. If there are multiple correct answers, you only need to provide one.
 
 <span class="math-inline">\\(\vec p = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec x^{(1)} + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec x^{(2)} + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec x^{(3)}\\)</span>
 
@@ -922,7 +805,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Let <span class="math-inline">\\(\vec w^{\ast}\\)</span> be a minimizer of
+<span class="badge badge-points">6 pts</span> Let <span class="math-inline">\\(\vec w^{\ast}\\)</span> be a minimizer of
 
 <div class="math-display">
 $$
@@ -983,7 +866,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
+## WN26 Final · Problem 5 <span class="badge badge-points">11 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -1007,7 +890,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find <span class="math-inline">\\(\text{rank}(A)\\)</span> and <span class="math-inline">\\(\dim(\text{nullsp}(A^T))\\)</span>. Give your answers as integers with no variables.
+<span class="badge badge-points">4 pts</span> Find <span class="math-inline">\\(\text{rank}(A)\\)</span> and <span class="math-inline">\\(\dim(\text{nullsp}(A^T))\\)</span>. Give your answers as integers with no variables.
 
 <span class="math-inline">\\(\text{rank}(A) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \dim(\text{nullsp}(A^T)) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -1046,7 +929,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Which of the following **could NOT** be the first row of <span class="math-inline">\\(A\\)</span>?
+<span class="badge badge-points">3 pts</span> Which of the following **could NOT** be the first row of <span class="math-inline">\\(A\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 2 &amp; -2 &amp; 3 &amp; -3 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 1 &amp; 1 &amp; -1 &amp; 4 &amp; -4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 0 &amp; -2 &amp; 5 &amp; -5 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 3 &amp; 3 &amp; -3 &amp; -2 &amp; 2 \end{bmatrix}\\)</span></span></div>
 
@@ -1120,7 +1003,7 @@ So the correct answer is the **third** option, <span class="math-inline">\\(\box
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Let <span class="math-inline">\\(\vec a^{(1)}, \vec a^{(2)}, \vec a^{(3)}, \vec a^{(4)}, \vec a^{(5)} \in \mathbb{R}^6\\)</span> be the columns of <span class="math-inline">\\(A\\)</span>.
+<span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(\vec a^{(1)}, \vec a^{(2)}, \vec a^{(3)}, \vec a^{(4)}, \vec a^{(5)} \in \mathbb{R}^6\\)</span> be the columns of <span class="math-inline">\\(A\\)</span>.
 
 Below, select **one possible set** of columns of <span class="math-inline">\\(A\\)</span> that form a basis for <span class="math-inline">\\(\text{colsp}(A)\\)</span>. You should select the fewest possible number of columns needed to span <span class="math-inline">\\(\text{colsp}(A)\\)</span>.
 
@@ -1209,7 +1092,7 @@ $$
 
 ---
 
-## SP26 MT2 · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
+## SP26 MT2 · Problem 4 <span class="badge badge-points">14 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
@@ -1237,7 +1120,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in each blank with an integer with no variables.
+<span class="badge badge-points">3 pts</span> Fill in each blank with an integer with no variables.
 
 X has \_\_\_\_\_\_ rows, \_\_\_\_\_\_ columns, and <span class="math-inline">\\(\text{rank}(X) =\\)</span> \_\_\_\_\_\_.
 
@@ -1256,7 +1139,7 @@ Also, recall that <span class="math-inline">\\(\text{rank}(X) = \text{rank}(X^T 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> For each statement below, determine whether it is true or false.
+<span class="badge badge-points">4 pts</span> For each statement below, determine whether it is true or false.
 
 <ol class="roman">
 <li markdown="1">
@@ -1292,7 +1175,7 @@ This is false. The diagonal entries of <span class="math-inline">\\(X^TX\\)</spa
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">7 pts</span> Suppose <span class="math-inline">\\(P\\)</span> is the matrix that projects onto the column space of <span class="math-inline">\\(X\\)</span>. In other words, for any <span class="math-inline">\\(\vec y\\)</span> of the appropriate shape, <span class="math-inline">\\(P \vec y\\)</span> is the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>. **Find <span class="math-inline">\\(P\\)</span>**. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a matrix with no variables.
+<span class="badge badge-points">7 pts</span> Suppose <span class="math-inline">\\(P\\)</span> is the matrix that projects onto the column space of <span class="math-inline">\\(X\\)</span>. In other words, for any <span class="math-inline">\\(\vec y\\)</span> of the appropriate shape, <span class="math-inline">\\(P \vec y\\)</span> is the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>. **Find <span class="math-inline">\\(P\\)</span>**. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a matrix with no variables.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1348,7 +1231,7 @@ Note that we're only able to answer this problem because <span class="math-inlin
 
 ---
 
-## SP26 Final · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
+## SP26 Final · Problem 6 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -1412,7 +1295,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
+## SP26 Final · Problem 7 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -1426,7 +1309,7 @@ Finally, let <span class="math-inline">\\(Q\\)</span> be an <span class="math-in
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
+<span class="badge badge-points">4 pts</span>
 <ol class="roman">
 <li markdown="1">
 (2 pts) What is <span class="math-inline">\\(\text{det}(P)\\)</span>?
@@ -1475,7 +1358,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Which of the following vectors is orthogonal to <span class="math-inline">\\(\text{colsp}(X)\\)</span>?
+<span class="badge badge-points">2 pts</span> Which of the following vectors is orthogonal to <span class="math-inline">\\(\text{colsp}(X)\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(P \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(Q \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\((I - P) \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\((I - Q) \vec y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 
@@ -1500,7 +1383,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Prove that the projection of <span class="math-inline">\\(Q \vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(QX)\\)</span> is <span class="math-inline">\\(Q \vec p\\)</span>. <em>Hint: Start by showing that the matrix that projects vectors in <span class="math-inline">\\(\mathbb{R}^n\\)</span> onto <span class="math-inline">\\(\text{colsp}(QX)\\)</span> is <span class="math-inline">\\(Q P Q^T\\)</span>.</em>
+<span class="badge badge-points">6 pts</span> Prove that the projection of <span class="math-inline">\\(Q \vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(QX)\\)</span> is <span class="math-inline">\\(Q \vec p\\)</span>. <em>Hint: Start by showing that the matrix that projects vectors in <span class="math-inline">\\(\mathbb{R}^n\\)</span> onto <span class="math-inline">\\(\text{colsp}(QX)\\)</span> is <span class="math-inline">\\(Q P Q^T\\)</span>.</em>
 
 <details markdown="1"><summary>Solution</summary>
 

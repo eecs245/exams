@@ -1,5 +1,6 @@
 ---
-layout: minimal
+layout: exam
+mathjax: true
 title: "Chapter 3: Vectors"
 description: "Practice problems for Chapter 3: Vectors."
 nav_exclude: true
@@ -8,124 +9,6 @@ hide_footer_hr: true
 
 {% raw %}
 
-<script>
-window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-<style>
-.main-content p {
-  margin-bottom: 1.15em;
-}
-.assignment-pdf-button {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.65rem;
-}
-.assignment-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0 0 1rem;
-}
-.math-display,
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.math-display {
-  padding-bottom: 0.2rem;
-}
-.math-display mjx-container[jax="CHTML"][display="true"] {
-  padding-bottom: 0.2rem;
-}
-.answer-blank {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  min-width: 8rem;
-  height: 1em;
-  vertical-align: baseline;
-}
-.assignment-parts {
-  margin: 1rem 0;
-}
-.assignment-part {
-  column-gap: 0.55rem;
-  display: grid;
-  grid-template-columns: 1.4rem minmax(0, 1fr);
-  margin-bottom: 1.05rem;
-}
-.assignment-part-label {
-  font-weight: 600;
-  text-align: right;
-}
-.assignment-part-content > :first-child {
-  margin-top: 0;
-}
-.mc-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.6rem;
-  margin: 0.9rem 0 1.1rem;
-}
-.mc-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-}
-.mc-bubble,
-.mc-square {
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 0.95em;
-  width: 0.95em;
-  vertical-align: -0.12em;
-}
-.mc-bubble {
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-.mc-square {
-  border: 1.5px solid currentColor;
-}
-.mc-correct {
-  background: currentColor;
-}
-.main-content table {
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
-}
-.main-content table th,
-.main-content table td {
-  padding: 0.35rem 0.5rem;
-  white-space: nowrap;
-}
-</style>
-
-<style>
-.worksheet-source { font-size: 0.8rem; color: #57606a; margin: -0.4rem 0 0.8rem; }
-.worksheet-source a { color: #0066cc; }
-</style>
-
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>
@@ -150,7 +33,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT1 · Problem 4: Mission Impossible <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## FA25 MT1 · Problem 4: Mission Impossible <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -158,7 +41,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose <span class="math-inline">\\(\vec u, \vec v \in \mathbb{R}^n\\)</span> are **non-zero** vectors, and suppose that
+<span class="badge badge-points">6 pts</span> Suppose <span class="math-inline">\\(\vec u, \vec v \in \mathbb{R}^n\\)</span> are **non-zero** vectors, and suppose that
 
 <div class="math-display">
 $$
@@ -204,7 +87,7 @@ tells us that <span class="math-inline">\\(\cos \theta = 1\\)</span> or <span cl
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose <span class="math-inline">\\(\vec w, \vec z \in \mathbb{R}^n\\)</span>. Given that <span class="math-inline">\\(\lVert \vec w \rVert = \lVert \vec z \rVert = \lVert \vec w - \vec z \rVert = 1\\)</span>, find <span class="math-inline">\\(\lVert \vec w + \vec z \rVert\\)</span>. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a number with no variables.
+<span class="badge badge-points">6 pts</span> Suppose <span class="math-inline">\\(\vec w, \vec z \in \mathbb{R}^n\\)</span>. Given that <span class="math-inline">\\(\lVert \vec w \rVert = \lVert \vec z \rVert = \lVert \vec w - \vec z \rVert = 1\\)</span>, find <span class="math-inline">\\(\lVert \vec w + \vec z \rVert\\)</span>. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a number with no variables.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -265,7 +148,7 @@ $$
 
 ---
 
-## FA25 MT1 · Problem 8: Worst-Case Scenario <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span>
+## FA25 MT1 · Problem 8: Worst-Case Scenario <span class="badge badge-points">8 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -332,7 +215,7 @@ This means that for any positive values of <span class="math-inline">\\(a, b, c,
 
 ---
 
-## FA25 Final · Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">16 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
+## FA25 Final · Problem 3 <span class="badge badge-points">16 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -344,7 +227,7 @@ In parts **a)** and **b)**, if there are multiple possible values of <span class
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> are orthogonal. Find <span class="math-inline">\\(c\\)</span>. Give your answer as a number with no variables.
+<span class="badge badge-points">3 pts</span> Suppose <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> are orthogonal. Find <span class="math-inline">\\(c\\)</span>. Give your answer as a number with no variables.
 
 <span class="math-inline">\\(c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -390,7 +273,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose <span class="math-inline">\\(\lVert \vec v \rVert = 4\\)</span>. Find <span class="math-inline">\\(c\\)</span>. Give your answer as a number with no variables.
+<span class="badge badge-points">3 pts</span> Suppose <span class="math-inline">\\(\lVert \vec v \rVert = 4\\)</span>. Find <span class="math-inline">\\(c\\)</span>. Give your answer as a number with no variables.
 
 <span class="math-inline">\\(c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -436,7 +319,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose the projection of <span class="math-inline">\\(\vec v\\)</span> onto <span class="math-inline">\\(\vec u\\)</span> is <span class="math-inline">\\(\begin{bmatrix} 1.5 \\\\ 1.5 \\\\ 3 \end{bmatrix}\\)</span>. What is the value of <span class="math-inline">\\(c\\)</span>? Select one of the answers below, then justify your answer in the box provided.
+<span class="badge badge-points">6 pts</span> Suppose the projection of <span class="math-inline">\\(\vec v\\)</span> onto <span class="math-inline">\\(\vec u\\)</span> is <span class="math-inline">\\(\begin{bmatrix} 1.5 \\\\ 1.5 \\\\ 3 \end{bmatrix}\\)</span>. What is the value of <span class="math-inline">\\(c\\)</span>? Select one of the answers below, then justify your answer in the box provided.
 
 <ol>
 <li markdown="1">
@@ -486,7 +369,7 @@ Recall from the previous page that <span class="math-inline">\\(\vec u = \begin{
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(\text{span}(\lbrace\vec u, \vec v\rbrace)\\)</span> is the plane <span class="math-inline">\\(2x + 4y - 3z = 0\\)</span>. Find <span class="math-inline">\\(c\\)</span>. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a number with no variables. <em>Hint: While you could compute the cross product, there is no need to --- there is a much quicker solution.</em>
+<span class="badge badge-points">4 pts</span> Suppose <span class="math-inline">\\(\text{span}(\lbrace\vec u, \vec v\rbrace)\\)</span> is the plane <span class="math-inline">\\(2x + 4y - 3z = 0\\)</span>. Find <span class="math-inline">\\(c\\)</span>. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a number with no variables. <em>Hint: While you could compute the cross product, there is no need to --- there is a much quicker solution.</em>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -511,7 +394,7 @@ $$
 
 ---
 
-## WN26 MT1 · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## WN26 MT1 · Problem 4 <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
@@ -523,7 +406,7 @@ For each statement below, identify whether it is **impossible**, **possible**, o
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
+<span class="badge badge-points">4 pts</span>
 <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> are orthogonal.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Possible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Guaranteed</span></div>
@@ -547,7 +430,7 @@ So, it is possible for <span class="math-inline">\\(\vec u\\)</span> and <span c
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> The set <span class="math-inline">\\(\lbrace\vec u, \vec v, \vec w\rbrace\\)</span> is linearly dependent.
+<span class="badge badge-points">4 pts</span> The set <span class="math-inline">\\(\lbrace\vec u, \vec v, \vec w\rbrace\\)</span> is linearly dependent.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Possible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Guaranteed</span></div>
 
@@ -588,7 +471,7 @@ This is a non-trivial linear combination of <span class="math-inline">\\(\vec u\
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
+<span class="badge badge-points">4 pts</span>
 <span class="math-inline">\\(\vec u\\)</span>, <span class="math-inline">\\(\vec v\\)</span>, and <span class="math-inline">\\(\vec w\\)</span> all have the same norm (length).
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Possible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Guaranteed</span></div>
@@ -625,7 +508,7 @@ This is a contradiction, so it is impossible for both <span class="math-inline">
 
 ---
 
-## WN26 Final · Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">9 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
+## WN26 Final · Problem 3 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -633,7 +516,7 @@ This is a contradiction, so it is impossible for both <span class="math-inline">
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Suppose <span class="math-inline">\\(\vec a = \begin{bmatrix} 0 \\\\ 3 \\\\ 6 \end{bmatrix}\\)</span> and that <span class="math-inline">\\(\vec b\\)</span> is another vector in <span class="math-inline">\\(\mathbb{R}^3\\)</span> such that:
+<span class="badge badge-points">5 pts</span> Suppose <span class="math-inline">\\(\vec a = \begin{bmatrix} 0 \\\\ 3 \\\\ 6 \end{bmatrix}\\)</span> and that <span class="math-inline">\\(\vec b\\)</span> is another vector in <span class="math-inline">\\(\mathbb{R}^3\\)</span> such that:
 
 -   <span class="math-inline">\\(\vec a\\)</span> and <span class="math-inline">\\(\vec b\\)</span> are orthogonal, and
 
@@ -708,7 +591,7 @@ Note that this is just <span class="math-inline">\\(-3\\)</span> times the vecto
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> This part is unrelated to the previous part. Suppose <span class="math-inline">\\(\vec u, \vec v \in \mathbb{R}^n\\)</span>, and that:
+<span class="badge badge-points">4 pts</span> This part is unrelated to the previous part. Suppose <span class="math-inline">\\(\vec u, \vec v \in \mathbb{R}^n\\)</span>, and that:
 
 -   <span class="math-inline">\\(\vec u\\)</span> is a unit vector,
 
@@ -765,7 +648,7 @@ So, <span class="math-inline">\\(\boxed{\lVert \vec v \rVert = 9}\\)</span>.
 
 ---
 
-## SP26 MT1 · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span>
+## SP26 MT1 · Problem 4 <span class="badge badge-points">8 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -823,7 +706,7 @@ $$
 
 ---
 
-## SP26 MT1 · Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">13 pts</span>
+## SP26 MT1 · Problem 5 <span class="badge badge-points">13 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -841,7 +724,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> In this part only, suppose <span class="math-inline">\\(C=0\\)</span>, <span class="math-inline">\\(\vec u = \begin{bmatrix} 1 \\\\ 2 \end{bmatrix}\\)</span>, and <span class="math-inline">\\(\vec v = \begin{bmatrix} 3 \\\\ 1 \end{bmatrix}\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span> that minimizes <span class="math-inline">\\(f(k)\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables.
+<span class="badge badge-points">6 pts</span> In this part only, suppose <span class="math-inline">\\(C=0\\)</span>, <span class="math-inline">\\(\vec u = \begin{bmatrix} 1 \\\\ 2 \end{bmatrix}\\)</span>, and <span class="math-inline">\\(\vec v = \begin{bmatrix} 3 \\\\ 1 \end{bmatrix}\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span> that minimizes <span class="math-inline">\\(f(k)\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables.
 
 <div class="math-display">
 $$
@@ -902,7 +785,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Note that <span class="math-inline">\\(f(k)\\)</span> *almost* looks like the squared norm of the vector <span class="math-inline">\\(\vec u - k \vec v\\)</span>, but with an extra term <span class="math-inline">\\(C k^2\\)</span>. Let's try and rewrite <span class="math-inline">\\(f(k)\\)</span> so that it *is* the squared norm of another related vector.
+<span class="badge badge-points">4 pts</span> Note that <span class="math-inline">\\(f(k)\\)</span> *almost* looks like the squared norm of the vector <span class="math-inline">\\(\vec u - k \vec v\\)</span>, but with an extra term <span class="math-inline">\\(C k^2\\)</span>. Let's try and rewrite <span class="math-inline">\\(f(k)\\)</span> so that it *is* the squared norm of another related vector.
 
 Define two new vectors, <span class="math-inline">\\(\vec U, \vec V \in \mathbb R^{n+1}\\)</span> by appending the scalar <span class="math-inline">\\(a\\)</span> to the end of <span class="math-inline">\\(\vec u\\)</span> and the scalar <span class="math-inline">\\(b\\)</span> to the end of <span class="math-inline">\\(\vec v\\)</span>.
 
@@ -983,7 +866,7 @@ So, the correct answers are <span class="math-inline">\\(\boxed{a=0}\\)</span> a
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> As <span class="math-inline">\\(C\\)</span> increases, what happens to the value of <span class="math-inline">\\(k\\)</span> that minimizes <span class="math-inline">\\(f(k)\\)</span>? Explain your reasoning.
+<span class="badge badge-points">3 pts</span> As <span class="math-inline">\\(C\\)</span> increases, what happens to the value of <span class="math-inline">\\(k\\)</span> that minimizes <span class="math-inline">\\(f(k)\\)</span>? Explain your reasoning.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1041,7 +924,7 @@ $$
 
 ---
 
-## SP26 MT1 · Problem 9 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+## SP26 MT1 · Problem 9 <span class="badge badge-points">10 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -1049,7 +932,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">7 pts</span> Suppose <span class="math-inline">\\(x\\)</span> and <span class="math-inline">\\(y\\)</span> are non-negative numbers. Using the Cauchy-Schwarz inequality, prove that
+<span class="badge badge-points">7 pts</span> Suppose <span class="math-inline">\\(x\\)</span> and <span class="math-inline">\\(y\\)</span> are non-negative numbers. Using the Cauchy-Schwarz inequality, prove that
 
 <div class="math-display">
 $$
@@ -1102,7 +985,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Now suppose <span class="math-inline">\\(x\\)</span>, <span class="math-inline">\\(y\\)</span>, and <span class="math-inline">\\(z\\)</span> are non-negative numbers. Which inequality is guaranteed to be true?
+<span class="badge badge-points">3 pts</span> Now suppose <span class="math-inline">\\(x\\)</span>, <span class="math-inline">\\(y\\)</span>, and <span class="math-inline">\\(z\\)</span> are non-negative numbers. Which inequality is guaranteed to be true?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^2}{2}\le x^2+y^2+z^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^2}{3}\le x^2+y^2+z^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^2}{2}\le x^3+y^3+z^3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^3}{3}\le x^3+y^3+z^3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of the above</span></div>
 
@@ -1135,7 +1018,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
+## SP26 Final · Problem 3 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -1147,7 +1030,7 @@ the projection of <span class="math-inline">\\(\vec x\\)</span> onto <span class
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find the projection of <span class="math-inline">\\(\vec z\\)</span> onto <span class="math-inline">\\(\vec x\\)</span>. Show your work, and write your final answer in the box provided. Give your answer as a vector with no variables.
+<span class="badge badge-points">4 pts</span> Find the projection of <span class="math-inline">\\(\vec z\\)</span> onto <span class="math-inline">\\(\vec x\\)</span>. Show your work, and write your final answer in the box provided. Give your answer as a vector with no variables.
 
 <div class="math-display">
 $$
@@ -1198,7 +1081,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Write <span class="math-inline">\\(\vec z\\)</span> as a linear combination of <span class="math-inline">\\(\vec x\\)</span> and <span class="math-inline">\\(\vec y\\)</span>. Show your work, and fill in each box with a number with no variables. <em>Hint: What is the relationship between <span class="math-inline">\\(\vec x\\)</span> and <span class="math-inline">\\(\vec y\\)</span>?</em>
+<span class="badge badge-points">6 pts</span> Write <span class="math-inline">\\(\vec z\\)</span> as a linear combination of <span class="math-inline">\\(\vec x\\)</span> and <span class="math-inline">\\(\vec y\\)</span>. Show your work, and fill in each box with a number with no variables. <em>Hint: What is the relationship between <span class="math-inline">\\(\vec x\\)</span> and <span class="math-inline">\\(\vec y\\)</span>?</em>
 
 <details markdown="1"><summary>Solution</summary>
 

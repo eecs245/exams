@@ -1,5 +1,6 @@
 ---
-layout: minimal
+layout: exam
+mathjax: true
 title: "Chapter 7: Regression Using Linear Algebra"
 description: "Practice problems for Chapter 7: Regression Using Linear Algebra."
 nav_exclude: true
@@ -8,124 +9,6 @@ hide_footer_hr: true
 
 {% raw %}
 
-<script>
-window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-<style>
-.main-content p {
-  margin-bottom: 1.15em;
-}
-.assignment-pdf-button {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.65rem;
-}
-.assignment-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0 0 1rem;
-}
-.math-display,
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.math-display {
-  padding-bottom: 0.2rem;
-}
-.math-display mjx-container[jax="CHTML"][display="true"] {
-  padding-bottom: 0.2rem;
-}
-.answer-blank {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  min-width: 8rem;
-  height: 1em;
-  vertical-align: baseline;
-}
-.assignment-parts {
-  margin: 1rem 0;
-}
-.assignment-part {
-  column-gap: 0.55rem;
-  display: grid;
-  grid-template-columns: 1.4rem minmax(0, 1fr);
-  margin-bottom: 1.05rem;
-}
-.assignment-part-label {
-  font-weight: 600;
-  text-align: right;
-}
-.assignment-part-content > :first-child {
-  margin-top: 0;
-}
-.mc-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.6rem;
-  margin: 0.9rem 0 1.1rem;
-}
-.mc-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-}
-.mc-bubble,
-.mc-square {
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 0.95em;
-  width: 0.95em;
-  vertical-align: -0.12em;
-}
-.mc-bubble {
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-.mc-square {
-  border: 1.5px solid currentColor;
-}
-.mc-correct {
-  background: currentColor;
-}
-.main-content table {
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
-}
-.main-content table th,
-.main-content table td {
-  padding: 0.35rem 0.5rem;
-  white-space: nowrap;
-}
-</style>
-
-<style>
-.worksheet-source { font-size: 0.8rem; color: #57606a; margin: -0.4rem 0 0.8rem; }
-.worksheet-source a { color: #0066cc; }
-</style>
-
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>
@@ -147,7 +30,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT2 · Problem 4: Poly Wants a Cracker <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">18 pts</span>
+## FA25 MT2 · Problem 4: Poly Wants a Cracker <span class="badge badge-points">18 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
@@ -171,7 +54,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> It turns out that <span class="math-inline">\\(\text{colsp}(Z) = \text{colsp}(X)\\)</span>. To show this, fill in the blanks below to express <span class="math-inline">\\(\vec z^{(2)}\\)</span> (the third column of <span class="math-inline">\\(Z\\)</span>) as a linear combination of <span class="math-inline">\\(X\\)</span>'s columns. Each box should be filled with an expression involving <span class="math-inline">\\(\bar{x}\\)</span>, <span class="math-inline">\\(n\\)</span>, and/or constants.
+<span class="badge badge-points">6 pts</span> It turns out that <span class="math-inline">\\(\text{colsp}(Z) = \text{colsp}(X)\\)</span>. To show this, fill in the blanks below to express <span class="math-inline">\\(\vec z^{(2)}\\)</span> (the third column of <span class="math-inline">\\(Z\\)</span>) as a linear combination of <span class="math-inline">\\(X\\)</span>'s columns. Each box should be filled with an expression involving <span class="math-inline">\\(\bar{x}\\)</span>, <span class="math-inline">\\(n\\)</span>, and/or constants.
 
 <div class="math-display">
 $$
@@ -292,7 +175,7 @@ Recall, <span class="math-inline">\\(Z = \begin{bmatrix} 1 &amp; x&#95;1 - \bar{
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Let <span class="math-inline">\\(\vec \beta^{\ast} = \begin{bmatrix} \beta&#95;0^{\ast} \\\\ \beta&#95;1^{\ast} \\\\ \beta&#95;2^{\ast} \end{bmatrix}\\)</span> be a solution to the normal equations for <span class="math-inline">\\(Z\\)</span> and <span class="math-inline">\\(\vec y\\)</span>. Show that
+<span class="badge badge-points">6 pts</span> Let <span class="math-inline">\\(\vec \beta^{\ast} = \begin{bmatrix} \beta&#95;0^{\ast} \\\\ \beta&#95;1^{\ast} \\\\ \beta&#95;2^{\ast} \end{bmatrix}\\)</span> be a solution to the normal equations for <span class="math-inline">\\(Z\\)</span> and <span class="math-inline">\\(\vec y\\)</span>. Show that
 
 <div class="math-display">
 $$
@@ -347,7 +230,7 @@ $$
 
 ---
 
-## FA25 Final · Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
+## FA25 Final · Problem 8 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -357,7 +240,7 @@ Suppose we fit a multiple linear regression model **with** an intercept term tha
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> If we one hot encode the color feature **without** dropping any categories, the design matrix <span class="math-inline">\\(X\\)</span> has 6 columns.
+<span class="badge badge-points">2 pts</span> If we one hot encode the color feature **without** dropping any categories, the design matrix <span class="math-inline">\\(X\\)</span> has 6 columns.
 
 How many unique `color`s are there? Give your answer as an integer with no variables.
 
@@ -389,7 +272,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Assume that not all wolverines in the dataset have the same `weight`, and that there is at least one wolverine with each color.
+<span class="badge badge-points">4 pts</span> Assume that not all wolverines in the dataset have the same `weight`, and that there is at least one wolverine with each color.
 
 What impact would dropping one of the color categories' columns from the design matrix <span class="math-inline">\\(X\\)</span> have? **Select all that apply.**
 
@@ -433,7 +316,7 @@ With that in mind, let's look at the options:
 
 ---
 
-## WN26 MT2 · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">20 pts</span>
+## WN26 MT2 · Problem 6 <span class="badge badge-points">20 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -471,7 +354,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> The first two rows of the dataset have the following information:
+<span class="badge badge-points">4 pts</span> The first two rows of the dataset have the following information:
 
 -   Game 1: 77 degrees Fahrenheit, 25 degrees Celsius, not night game, 102,111 fans
 
@@ -530,7 +413,7 @@ where <span class="math-inline">\\(\text{tempC}&#95;i = \frac{5}{9} (\text{tempF
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(\vec w'\\)</span> is one solution to the normal equation for this model. Which option describes the **complete set** of solutions to the normal equation?
+<span class="badge badge-points">4 pts</span> Suppose <span class="math-inline">\\(\vec w'\\)</span> is one solution to the normal equation for this model. Which option describes the **complete set** of solutions to the normal equation?
 
 | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace \vec w' + t\begin{bmatrix} 1 \\\\ -9/5 \\\\ 32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace \vec w' + t\begin{bmatrix} 1 \\\\ -9/5 \\\\ -32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace\\)</span> |
 |:---|:---|
@@ -598,7 +481,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> First, assume <span class="math-inline">\\(h(\vec x&#95;i)\\)</span> is the model at the top of the page.
+<span class="badge badge-points">6 pts</span> First, assume <span class="math-inline">\\(h(\vec x&#95;i)\\)</span> is the model at the top of the page.
 
 <ol class="roman">
 <li markdown="1">
@@ -668,7 +551,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Now, suppose we remove the <span class="math-inline">\\(\textbf{day}&#95;i\\)</span> feature from our model, meaning our model is
+<span class="badge badge-points">6 pts</span> Now, suppose we remove the <span class="math-inline">\\(\textbf{day}&#95;i\\)</span> feature from our model, meaning our model is
 
 <div class="math-display">
 $$
@@ -721,7 +604,7 @@ This is true. The night indicator column is still present in the new design matr
 
 ---
 
-## WN26 Final · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
+## WN26 Final · Problem 7 <span class="badge badge-points">8 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -848,7 +731,7 @@ $$
 
 ---
 
-## SP26 MT2 · Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">19 pts</span>
+## SP26 MT2 · Problem 5 <span class="badge badge-points">19 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
@@ -872,7 +755,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> **In parts a) and b) only**, suppose the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> is <span class="math-inline">\\(\vec p = \begin{bmatrix} 3 \\\\ 3 \\\\ 3 \\\\ 3 \\\\ 3 \end{bmatrix}\\)</span>. There are infinitely many such vectors <span class="math-inline">\\(\vec y\\)</span>. State one possible vector <span class="math-inline">\\(\vec y\\)</span> **whose five components are all different**. Give your answer as a vector with no variables.
+<span class="badge badge-points">4 pts</span> **In parts a) and b) only**, suppose the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> is <span class="math-inline">\\(\vec p = \begin{bmatrix} 3 \\\\ 3 \\\\ 3 \\\\ 3 \\\\ 3 \end{bmatrix}\\)</span>. There are infinitely many such vectors <span class="math-inline">\\(\vec y\\)</span>. State one possible vector <span class="math-inline">\\(\vec y\\)</span> **whose five components are all different**. Give your answer as a vector with no variables.
 
 one possible vector <span class="math-inline">\\(\vec y =\\)</span> \_\_\_\_\_\_
 
@@ -919,7 +802,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Let <span class="math-inline">\\(\vec y\\)</span> and <span class="math-inline">\\(\vec p \\)</span> be as defined in part (a). True or false: <span class="math-inline">\\(X^T (\vec p - \vec y) = \vec 0\\)</span>.
+<span class="badge badge-points">3 pts</span> Let <span class="math-inline">\\(\vec y\\)</span> and <span class="math-inline">\\(\vec p \\)</span> be as defined in part (a). True or false: <span class="math-inline">\\(X^T (\vec p - \vec y) = \vec 0\\)</span>.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -953,7 +836,7 @@ For the rest of the problem, suppose that both <span class="math-inline">\\(\vec
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Which of these vectors are in <span class="math-inline">\\(\text{nullsp}(X)\\)</span>? **Select all** that apply.
+<span class="badge badge-points">4 pts</span> Which of these vectors are in <span class="math-inline">\\(\text{nullsp}(X)\\)</span>? **Select all** that apply.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 \\\\ 3 \\\\ 1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ 4 \\\\ 1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 \\\\ 6 \\\\ 2 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -2 \\\\ 4 \\\\ 2 \end{bmatrix}\\)</span></span></div>
 
@@ -1032,7 +915,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> Find one possible design matrix <span class="math-inline">\\(X\\)</span>, consistent with all of the information above. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a matrix with no variables.
+<span class="badge badge-points">8 pts</span> Find one possible design matrix <span class="math-inline">\\(X\\)</span>, consistent with all of the information above. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a matrix with no variables.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1130,7 +1013,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
+## SP26 Final · Problem 8 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -1152,7 +1035,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose the dataset has four rows, and the number of hours parked in those rows is
+<span class="badge badge-points">4 pts</span> Suppose the dataset has four rows, and the number of hours parked in those rows is
 
 <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(0\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(1\\)</span>, respectively. Write the first four rows of the design matrix <span class="math-inline">\\(X\\)</span>. Your answer should be a matrix with four rows and no variables.
 
@@ -1194,7 +1077,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Give a one-sentence English explanation of the meaning of <span class="math-inline">\\(w&#95;2\\)</span>.
+<span class="badge badge-points">2 pts</span> Give a one-sentence English explanation of the meaning of <span class="math-inline">\\(w&#95;2\\)</span>.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1207,7 +1090,7 @@ The coefficient <span class="math-inline">\\(w&#95;2\\)</span> is the change in 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Once again, suppose the dataset has four rows. In each of the following subparts, we provide the number of hours parked in the dataset. Find the rank of the design matrix <span class="math-inline">\\(X\\)</span> in each case. Fill in each blank with an integer with no variables.
+<span class="badge badge-points">6 pts</span> Once again, suppose the dataset has four rows. In each of the following subparts, we provide the number of hours parked in the dataset. Find the rank of the design matrix <span class="math-inline">\\(X\\)</span> in each case. Fill in each blank with an integer with no variables.
 
 <ol class="roman">
 <li markdown="1">

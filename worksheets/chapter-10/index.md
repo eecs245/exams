@@ -1,5 +1,6 @@
 ---
-layout: minimal
+layout: exam
+mathjax: true
 title: "Chapter 10: Singular Value Decomposition"
 description: "Practice problems for Chapter 10: Singular Value Decomposition."
 nav_exclude: true
@@ -8,124 +9,6 @@ hide_footer_hr: true
 
 {% raw %}
 
-<script>
-window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-<style>
-.main-content p {
-  margin-bottom: 1.15em;
-}
-.assignment-pdf-button {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.65rem;
-}
-.assignment-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0 0 1rem;
-}
-.math-display,
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.math-display {
-  padding-bottom: 0.2rem;
-}
-.math-display mjx-container[jax="CHTML"][display="true"] {
-  padding-bottom: 0.2rem;
-}
-.answer-blank {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  min-width: 8rem;
-  height: 1em;
-  vertical-align: baseline;
-}
-.assignment-parts {
-  margin: 1rem 0;
-}
-.assignment-part {
-  column-gap: 0.55rem;
-  display: grid;
-  grid-template-columns: 1.4rem minmax(0, 1fr);
-  margin-bottom: 1.05rem;
-}
-.assignment-part-label {
-  font-weight: 600;
-  text-align: right;
-}
-.assignment-part-content > :first-child {
-  margin-top: 0;
-}
-.mc-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.6rem;
-  margin: 0.9rem 0 1.1rem;
-}
-.mc-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-}
-.mc-bubble,
-.mc-square {
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 0.95em;
-  width: 0.95em;
-  vertical-align: -0.12em;
-}
-.mc-bubble {
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-.mc-square {
-  border: 1.5px solid currentColor;
-}
-.mc-correct {
-  background: currentColor;
-}
-.main-content table {
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
-}
-.main-content table th,
-.main-content table td {
-  padding: 0.35rem 0.5rem;
-  white-space: nowrap;
-}
-</style>
-
-<style>
-.worksheet-source { font-size: 0.8rem; color: #57606a; margin: -0.4rem 0 0.8rem; }
-.worksheet-source a { color: #0066cc; }
-</style>
-
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>
@@ -144,7 +27,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 Final · Problem 12 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## FA25 Final · Problem 12 <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -160,7 +43,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Find <span class="math-inline">\\(\text{rank}(\tilde X)\\)</span>. Give your answer as an integer with no variables.
+<span class="badge badge-points">2 pts</span> Find <span class="math-inline">\\(\text{rank}(\tilde X)\\)</span>. Give your answer as an integer with no variables.
 
 <span class="math-inline">\\(\text{rank}(\tilde X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -182,7 +65,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> It is possible to find <span class="math-inline">\\(\vec v&#95;2^T\\)</span>, the second row of <span class="math-inline">\\(V^T\\)</span>, solely using the information provided (without knowing any of the values in <span class="math-inline">\\(\tilde X\\)</span>). In one English sentence, **explain how** to find it.
+<span class="badge badge-points">3 pts</span> It is possible to find <span class="math-inline">\\(\vec v&#95;2^T\\)</span>, the second row of <span class="math-inline">\\(V^T\\)</span>, solely using the information provided (without knowing any of the values in <span class="math-inline">\\(\tilde X\\)</span>). In one English sentence, **explain how** to find it.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -195,7 +78,7 @@ Since <span class="math-inline">\\(V\\)</span> is orthogonal, the rows of <span 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: There exists some vector <span class="math-inline">\\(\vec z \in \mathbb{R}^{24}\\)</span> such that <span class="math-inline">\\(\tilde X \tilde X^T \vec z = 2 \vec z\\)</span>.
+<span class="badge badge-points">2 pts</span> True or False: There exists some vector <span class="math-inline">\\(\vec z \in \mathbb{R}^{24}\\)</span> such that <span class="math-inline">\\(\tilde X \tilde X^T \vec z = 2 \vec z\\)</span>.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible to tell</span></div>
 
@@ -212,7 +95,7 @@ This is **False**. The eigenvalues of <span class="math-inline">\\(\tilde X \til
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> What is the largest possible variance of the components of <span class="math-inline">\\(\tilde X \vec w\\)</span>, where <span class="math-inline">\\(\vec w \in \mathbb{R}^3\\)</span> is a unit vector? Select one of the answers below, then justify your answer in the box provided.
+<span class="badge badge-points">5 pts</span> What is the largest possible variance of the components of <span class="math-inline">\\(\tilde X \vec w\\)</span>, where <span class="math-inline">\\(\vec w \in \mathbb{R}^3\\)</span> is a unit vector? Select one of the answers below, then justify your answer in the box provided.
 
 <ol>
 <li markdown="1">
@@ -254,7 +137,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 12 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## WN26 Final · Problem 12 <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -272,7 +155,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> What is <span class="math-inline">\\(\vec v&#95;1\\)</span>? Give your answer as a vector with no variables. If there are multiple correct answers, you only need to provide one.
+<span class="badge badge-points">4 pts</span> What is <span class="math-inline">\\(\vec v&#95;1\\)</span>? Give your answer as a vector with no variables. If there are multiple correct answers, you only need to provide one.
 
 <span class="math-inline">\\(\vec v&#95;1 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -323,7 +206,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose the variance of the **second** principal component is <span class="math-inline">\\(1/15\\)</span>. What is <span class="math-inline">\\(n\\)</span>, the number of rows in <span class="math-inline">\\(\tilde X\\)</span>? Give your answer as a number with no variables.
+<span class="badge badge-points">3 pts</span> Suppose the variance of the **second** principal component is <span class="math-inline">\\(1/15\\)</span>. What is <span class="math-inline">\\(n\\)</span>, the number of rows in <span class="math-inline">\\(\tilde X\\)</span>? Give your answer as a number with no variables.
 
 <span class="math-inline">\\(n = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -361,7 +244,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Suppose that <span class="math-inline">\\(\vec u&#95;2\\)</span> is the second column of <span class="math-inline">\\(U\\)</span>, corresponding to the singular value <span class="math-inline">\\(\sigma&#95;2\\)</span>, in the singular value decomposition of <span class="math-inline">\\(\tilde X\\)</span>.
+<span class="badge badge-points">5 pts</span> Suppose that <span class="math-inline">\\(\vec u&#95;2\\)</span> is the second column of <span class="math-inline">\\(U\\)</span>, corresponding to the singular value <span class="math-inline">\\(\sigma&#95;2\\)</span>, in the singular value decomposition of <span class="math-inline">\\(\tilde X\\)</span>.
 
 Prove that <span class="math-inline">\\(\tilde X \vec v&#95;1\\)</span> and <span class="math-inline">\\(\sigma&#95;2 \vec u&#95;2\\)</span> are orthogonal. You do not need to re-prove any facts about the singular value decomposition, but you should state any facts you use.
 
@@ -405,7 +288,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 13 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## SP26 Final · Problem 13 <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -423,7 +306,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> How many possible vectors are there for <span class="math-inline">\\(\vec v&#95;2\\)</span>, the second column of <span class="math-inline">\\(V\\)</span>?
+<span class="badge badge-points">3 pts</span> How many possible vectors are there for <span class="math-inline">\\(\vec v&#95;2\\)</span>, the second column of <span class="math-inline">\\(V\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> infinitely many <span class="math-inline">\\(\vec v&#95;2\\)</span>'s are possible</span></div>
 
@@ -440,7 +323,7 @@ Since <span class="math-inline">\\(V\\)</span> is an orthogonal matrix, its colu
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Write <span class="math-inline">\\(\vec u&#95;1\\)</span>, the first column of <span class="math-inline">\\(U\\)</span>, as a linear combination of the columns of <span class="math-inline">\\(\tilde X\\)</span>. Show your work, and fill in each box with a number with no variables.
+<span class="badge badge-points">5 pts</span> Write <span class="math-inline">\\(\vec u&#95;1\\)</span>, the first column of <span class="math-inline">\\(U\\)</span>, as a linear combination of the columns of <span class="math-inline">\\(\tilde X\\)</span>. Show your work, and fill in each box with a number with no variables.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -492,7 +375,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Given the information above, what is the maximum possible variance of principal component <span class="math-inline">\\(2\\)</span>? Give your answer as a number with no variables.
+<span class="badge badge-points">4 pts</span> Given the information above, what is the maximum possible variance of principal component <span class="math-inline">\\(2\\)</span>? Give your answer as a number with no variables.
 
 maximum possible variance of principal component <span class="math-inline">\\(2\\)</span> = \_\_\_\_\_\_
 

@@ -1,5 +1,6 @@
 ---
-layout: minimal
+layout: exam
+mathjax: true
 title: "Chapter 9: Eigenvalues and Eigenvectors"
 description: "Practice problems for Chapter 9: Eigenvalues and Eigenvectors."
 nav_exclude: true
@@ -8,124 +9,6 @@ hide_footer_hr: true
 
 {% raw %}
 
-<script>
-window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-<style>
-.main-content p {
-  margin-bottom: 1.15em;
-}
-.assignment-pdf-button {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.65rem;
-}
-.assignment-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0 0 1rem;
-}
-.math-display,
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.math-display {
-  padding-bottom: 0.2rem;
-}
-.math-display mjx-container[jax="CHTML"][display="true"] {
-  padding-bottom: 0.2rem;
-}
-.answer-blank {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  min-width: 8rem;
-  height: 1em;
-  vertical-align: baseline;
-}
-.assignment-parts {
-  margin: 1rem 0;
-}
-.assignment-part {
-  column-gap: 0.55rem;
-  display: grid;
-  grid-template-columns: 1.4rem minmax(0, 1fr);
-  margin-bottom: 1.05rem;
-}
-.assignment-part-label {
-  font-weight: 600;
-  text-align: right;
-}
-.assignment-part-content > :first-child {
-  margin-top: 0;
-}
-.mc-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.6rem;
-  margin: 0.9rem 0 1.1rem;
-}
-.mc-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-}
-.mc-bubble,
-.mc-square {
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 0.95em;
-  width: 0.95em;
-  vertical-align: -0.12em;
-}
-.mc-bubble {
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-.mc-square {
-  border: 1.5px solid currentColor;
-}
-.mc-correct {
-  background: currentColor;
-}
-.main-content table {
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
-}
-.main-content table th,
-.main-content table td {
-  padding: 0.35rem 0.5rem;
-  white-space: nowrap;
-}
-</style>
-
-<style>
-.worksheet-source { font-size: 0.8rem; color: #57606a; margin: -0.4rem 0 0.8rem; }
-.worksheet-source a { color: #0066cc; }
-</style>
-
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>
@@ -151,7 +34,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 Final · Problem 9 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">18 pts</span>
+## FA25 Final · Problem 9 <span class="badge badge-points">18 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -167,7 +50,7 @@ If <span class="math-inline">\\(A\\)</span> only has one unique eigenvalue, put 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span>
+<span class="badge badge-points">6 pts</span>
 <span class="math-inline">\\(A\\)</span> is **not** invertible.
 
 <span class="math-inline">\\(c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \lambda&#95;1 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \lambda&#95;2 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
@@ -214,7 +97,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span>
+<span class="badge badge-points">6 pts</span>
 <span class="math-inline">\\(A\\)</span>'s characteristic polynomial is <span class="math-inline">\\(p(\lambda) = \lambda^2 - 8\lambda + 7\\)</span>.
 
 <span class="math-inline">\\(c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \lambda&#95;1 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \lambda&#95;2 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
@@ -269,7 +152,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span>
+<span class="badge badge-points">6 pts</span>
 <span class="math-inline">\\(A\\)</span> is **not** diagonalizable.
 
 <span class="math-inline">\\(c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \lambda&#95;1 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \lambda&#95;2 = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
@@ -320,7 +203,7 @@ $$
 {: .yellow }
 > **Make sure to place the larger eigenvalue in <span class="math-inline">\\(\lambda&#95;1\\)</span> and the smaller eigenvalue in <span class="math-inline">\\(\lambda&#95;2\\)</span>!**
 
-## FA25 Final · Problem 10 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## FA25 Final · Problem 10 <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -330,7 +213,7 @@ Consider the adjacency matrix <span class="math-inline">\\(A = \begin{bmatrix} 0
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find <span class="math-inline">\\(a\\)</span>, <span class="math-inline">\\(b\\)</span>, and <span class="math-inline">\\(c\\)</span> such that <span class="math-inline">\\(A\\)</span> is a valid adjacency matrix. Give your answers as numbers with no variables.
+<span class="badge badge-points">6 pts</span> Find <span class="math-inline">\\(a\\)</span>, <span class="math-inline">\\(b\\)</span>, and <span class="math-inline">\\(c\\)</span> such that <span class="math-inline">\\(A\\)</span> is a valid adjacency matrix. Give your answers as numbers with no variables.
 
 <span class="math-inline">\\(a = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad b = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad c = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -364,7 +247,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose <span class="math-inline">\\(\vec x^{\ast} \in \mathbb{R}^3\\)</span> is a vector containing the long-run fraction of time spent in each state. Which of the following vectors is <span class="math-inline">\\(\vec x^{\ast}\\)</span> and why?
+<span class="badge badge-points">6 pts</span> Suppose <span class="math-inline">\\(\vec x^{\ast} \in \mathbb{R}^3\\)</span> is a vector containing the long-run fraction of time spent in each state. Which of the following vectors is <span class="math-inline">\\(\vec x^{\ast}\\)</span> and why?
 
 <ol>
 <li markdown="1">
@@ -429,7 +312,7 @@ $$
 
 ---
 
-## FA25 Final · Problem 11 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## FA25 Final · Problem 11 <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -439,7 +322,7 @@ Let <span class="math-inline">\\(A\\)</span> be a <span class="math-inline">\\(4
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Suppose <span class="math-inline">\\(\Lambda = \begin{bmatrix} 4 &amp; 0 &amp; 0 &amp; 0 \\\\ 0 &amp; 3 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 2 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}\\)</span>.
+<span class="badge badge-points">2 pts</span> Suppose <span class="math-inline">\\(\Lambda = \begin{bmatrix} 4 &amp; 0 &amp; 0 &amp; 0 \\\\ 0 &amp; 3 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 2 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}\\)</span>.
 
 True or False: <span class="math-inline">\\(V\\)</span> is guaranteed to be an orthogonal matrix.
 
@@ -458,7 +341,7 @@ This is true. Since <span class="math-inline">\\(A\\)</span> is symmetric, the s
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Suppose <span class="math-inline">\\(\Lambda = \begin{bmatrix} 4 &amp; 0 &amp; 0 &amp; 0 \\\\ 0 &amp; 2 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 2 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}\\)</span>.
+<span class="badge badge-points">2 pts</span> Suppose <span class="math-inline">\\(\Lambda = \begin{bmatrix} 4 &amp; 0 &amp; 0 &amp; 0 \\\\ 0 &amp; 2 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 2 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}\\)</span>.
 
 True or False: <span class="math-inline">\\(V\\)</span> is guaranteed to be an orthogonal matrix.
 
@@ -493,7 +376,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> What is the value of <span class="math-inline">\\(k\\)</span>? Select one of the answers below, then justify your answer in the box provided. <em>Hint: If <span class="math-inline">\\(A = V \Lambda V^{-1}\\)</span>, what is <span class="math-inline">\\(A^k\\)</span>?</em>
+<span class="badge badge-points">6 pts</span> What is the value of <span class="math-inline">\\(k\\)</span>? Select one of the answers below, then justify your answer in the box provided. <em>Hint: If <span class="math-inline">\\(A = V \Lambda V^{-1}\\)</span>, what is <span class="math-inline">\\(A^k\\)</span>?</em>
 
 <ol>
 <li markdown="1">
@@ -550,7 +433,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Fill in the blank: as <span class="math-inline">\\(k \to \infty\\)</span>, the direction of <span class="math-inline">\\(A^k \vec x\\)</span> approaches the direction of\...
+<span class="badge badge-points">2 pts</span> Fill in the blank: as <span class="math-inline">\\(k \to \infty\\)</span>, the direction of <span class="math-inline">\\(A^k \vec x\\)</span> approaches the direction of\...
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec v&#95;1\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec v&#95;2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec v&#95;3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\vec v&#95;4\\)</span></span></div>
 
@@ -568,7 +451,7 @@ From part **c)**, the relevant eigenvalues have magnitudes 2, 3, 0, and 4. As <s
 
 ---
 
-## WN26 MT2 · Problem 1 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## WN26 MT2 · Problem 1 <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -586,7 +469,7 @@ In each part, you are provided with information about <span class="math-inline">
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
+<span class="badge badge-points">4 pts</span>
 <span class="math-inline">\\(\text{rank}(A) = 1\\)</span>
 
 <div class="math-display">
@@ -617,7 +500,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
+<span class="badge badge-points">4 pts</span>
 <span class="math-inline">\\(\text{det}(A) = 2\\)</span>
 
 <div class="math-display">
@@ -658,7 +541,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
+<span class="badge badge-points">4 pts</span>
 <span class="math-inline">\\(A^{-1} = \begin{bmatrix} 1 &amp; -1/2 \\\\ -1 &amp; 3/4 \end{bmatrix}\\)</span>
 
 <div class="math-display">
@@ -709,7 +592,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 9 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## WN26 Final · Problem 9 <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -719,7 +602,7 @@ Consider the matrix <span class="math-inline">\\(A = \begin{bmatrix} 2 &amp; 3 \
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose <span class="math-inline">\\(\lambda&#95;1 = 0\\)</span> is an eigenvalue of <span class="math-inline">\\(A\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span>. Give your answer as a number with no variables.
+<span class="badge badge-points">3 pts</span> Suppose <span class="math-inline">\\(\lambda&#95;1 = 0\\)</span> is an eigenvalue of <span class="math-inline">\\(A\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span>. Give your answer as a number with no variables.
 
 <span class="math-inline">\\(k = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -749,7 +632,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ 1 \end{bmatrix}\\)</span> is an eigenvector of <span class="math-inline">\\(A\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span>. Give your answer as a number with no variables.
+<span class="badge badge-points">4 pts</span> Suppose <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ 1 \end{bmatrix}\\)</span> is an eigenvector of <span class="math-inline">\\(A\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span>. Give your answer as a number with no variables.
 
 <div class="math-display">
 $$
@@ -793,7 +676,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Suppose <span class="math-inline">\\(\lambda&#95;1 = 3\\)</span> is an eigenvalue of <span class="math-inline">\\(A\\)</span>. Find <span class="math-inline">\\(\lambda&#95;2\\)</span>, the **other eigenvalue** of <span class="math-inline">\\(A\\)</span>. Show your work, and write your final answer in the box provided. Give your answer as a number with no variables.
+<span class="badge badge-points">5 pts</span> Suppose <span class="math-inline">\\(\lambda&#95;1 = 3\\)</span> is an eigenvalue of <span class="math-inline">\\(A\\)</span>. Find <span class="math-inline">\\(\lambda&#95;2\\)</span>, the **other eigenvalue** of <span class="math-inline">\\(A\\)</span>. Show your work, and write your final answer in the box provided. Give your answer as a number with no variables.
 
 <div class="math-display">
 $$
@@ -846,7 +729,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 10 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
+## WN26 Final · Problem 10 <span class="badge badge-points">14 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -858,7 +741,7 @@ The state diagram below describes a Markov chain with four states.
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find the adjacency matrix <span class="math-inline">\\(A\\)</span> for this Markov chain.
+<span class="badge badge-points">4 pts</span> Find the adjacency matrix <span class="math-inline">\\(A\\)</span> for this Markov chain.
 
 <span class="math-inline">\\(A =\\)</span> \_\_\_\_\_\_
 
@@ -887,7 +770,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose the chain starts in **state <span class="math-inline">\\(\mathbf{1}\\)</span>**. Fill each box with the **long-run fraction** of time spent in each state. Your answers should be numbers with no variables, and should sum to <span class="math-inline">\\(1\\)</span>.
+<span class="badge badge-points">6 pts</span> Suppose the chain starts in **state <span class="math-inline">\\(\mathbf{1}\\)</span>**. Fill each box with the **long-run fraction** of time spent in each state. Your answers should be numbers with no variables, and should sum to <span class="math-inline">\\(1\\)</span>.
 
 State 1: \_\_\_\_\_\_ State 2: \_\_\_\_\_\_ State 3: \_\_\_\_\_\_ State 4: \_\_\_\_\_\_
 
@@ -965,7 +848,7 @@ Now, consider a **modified** version of the Markov chain. Changes have been emph
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Consider the statement: "'If we start in \_\_\_\_, the long-run fraction of time spent in each state is the same as in the original chain.''
+<span class="badge badge-points">4 pts</span> Consider the statement: "'If we start in \_\_\_\_, the long-run fraction of time spent in each state is the same as in the original chain.''
 
 Which of the following could be placed in the blank to make the statement true? **Select all** that apply.
 
@@ -996,7 +879,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 11 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+## WN26 Final · Problem 11 <span class="badge badge-points">10 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -1014,7 +897,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Write <span class="math-inline">\\(S^2 \vec x\\)</span> as a linear combination of <span class="math-inline">\\(\vec v&#95;1\\)</span>, <span class="math-inline">\\(\vec v&#95;2\\)</span>, and <span class="math-inline">\\(\vec v&#95;3\\)</span>. Fill in each box with a number with no variables.
+<span class="badge badge-points">6 pts</span> Write <span class="math-inline">\\(S^2 \vec x\\)</span> as a linear combination of <span class="math-inline">\\(\vec v&#95;1\\)</span>, <span class="math-inline">\\(\vec v&#95;2\\)</span>, and <span class="math-inline">\\(\vec v&#95;3\\)</span>. Fill in each box with a number with no variables.
 
 <span class="math-inline">\\(S^2 \vec x = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec v&#95;1 + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec v&#95;2 + \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;  \vec v&#95;3\\)</span>
 
@@ -1041,7 +924,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> What is the value of <span class="math-inline">\\(\lVert S\vec x \rVert^2\\)</span>?
+<span class="badge badge-points">4 pts</span> What is the value of <span class="math-inline">\\(\lVert S\vec x \rVert^2\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(24\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(26\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(218\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(290\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(5882\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Not enough information</span></div>
 
@@ -1112,7 +995,7 @@ In this solution, we used the fact that <span class="math-inline">\\(\vec x = 3 
 
 ---
 
-## SP26 Final · Problem 10 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## SP26 Final · Problem 10 <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -1122,7 +1005,7 @@ Let <span class="math-inline">\\(A=\begin{bmatrix}2&amp;4\\\\4&amp;2\end{bmatrix
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> Find all eigenvalues and eigenvectors of <span class="math-inline">\\(A\\)</span>. Show your work, and organize your answers as follows:
+<span class="badge badge-points">8 pts</span> Find all eigenvalues and eigenvectors of <span class="math-inline">\\(A\\)</span>. Show your work, and organize your answers as follows:
 
 -   Put the larger eigenvalue in <span class="math-inline">\\(\lambda&#95;1\\)</span>, and a corresponding eigenvector in <span class="math-inline">\\(\vec v&#95;1\\)</span>.
 
@@ -1241,7 +1124,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> True or false: for all integer values of <span class="math-inline">\\(k\\)</span>, the matrix <span class="math-inline">\\(B=\begin{bmatrix}2&amp;4&amp;0\\\\4&amp;2&amp;0\\\\0&amp;0&amp;k\end{bmatrix}\\)</span> is diagonalizable.
+<span class="badge badge-points">4 pts</span> True or false: for all integer values of <span class="math-inline">\\(k\\)</span>, the matrix <span class="math-inline">\\(B=\begin{bmatrix}2&amp;4&amp;0\\\\4&amp;2&amp;0\\\\0&amp;0&amp;k\end{bmatrix}\\)</span> is diagonalizable.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -1288,7 +1171,7 @@ Another way to think about this is that for any <span class="math-inline">\\(k\\
 
 ---
 
-## SP26 Final · Problem 11 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+## SP26 Final · Problem 11 <span class="badge badge-points">10 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -1398,7 +1281,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 12 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span>
+## SP26 Final · Problem 12 <span class="badge badge-points">11 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -1416,7 +1299,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Find <span class="math-inline">\\(\Lambda\\)</span>. Your answer should be a matrix with no variables.
+<span class="badge badge-points">3 pts</span> Find <span class="math-inline">\\(\Lambda\\)</span>. Your answer should be a matrix with no variables.
 
 <div class="math-display">
 $$
@@ -1449,7 +1332,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> Consider the vector
+<span class="badge badge-points">8 pts</span> Consider the vector
 
 <div class="math-display">
 $$

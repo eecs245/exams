@@ -1,5 +1,6 @@
 ---
-layout: minimal
+layout: exam
+mathjax: true
 title: "Chapter 8: Gradients"
 description: "Practice problems for Chapter 8: Gradients."
 nav_exclude: true
@@ -8,124 +9,6 @@ hide_footer_hr: true
 
 {% raw %}
 
-<script>
-window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-<style>
-.main-content p {
-  margin-bottom: 1.15em;
-}
-.assignment-pdf-button {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.65rem;
-}
-.assignment-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0 0 1rem;
-}
-.math-display,
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.math-display {
-  padding-bottom: 0.2rem;
-}
-.math-display mjx-container[jax="CHTML"][display="true"] {
-  padding-bottom: 0.2rem;
-}
-.answer-blank {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  min-width: 8rem;
-  height: 1em;
-  vertical-align: baseline;
-}
-.assignment-parts {
-  margin: 1rem 0;
-}
-.assignment-part {
-  column-gap: 0.55rem;
-  display: grid;
-  grid-template-columns: 1.4rem minmax(0, 1fr);
-  margin-bottom: 1.05rem;
-}
-.assignment-part-label {
-  font-weight: 600;
-  text-align: right;
-}
-.assignment-part-content > :first-child {
-  margin-top: 0;
-}
-.mc-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.6rem;
-  margin: 0.9rem 0 1.1rem;
-}
-.mc-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-}
-.mc-bubble,
-.mc-square {
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 0.95em;
-  width: 0.95em;
-  vertical-align: -0.12em;
-}
-.mc-bubble {
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-.mc-square {
-  border: 1.5px solid currentColor;
-}
-.mc-correct {
-  background: currentColor;
-}
-.main-content table {
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
-}
-.main-content table th,
-.main-content table td {
-  padding: 0.35rem 0.5rem;
-  white-space: nowrap;
-}
-</style>
-
-<style>
-.worksheet-source { font-size: 0.8rem; color: #57606a; margin: -0.4rem 0 0.8rem; }
-.worksheet-source a { color: #0066cc; }
-</style>
-
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>
@@ -151,7 +34,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT2 · Problem 6: Quadratus Formulus <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
+## FA25 MT2 · Problem 6: Quadratus Formulus <span class="badge badge-points">14 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
@@ -161,7 +44,7 @@ Let <span class="math-inline">\\(\displaystyle f(\vec x) = \frac{1}{2} \vec x^T 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find <span class="math-inline">\\(\nabla f(\vec x)\\)</span>, the gradient of <span class="math-inline">\\(f(\vec x)\\)</span>. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be an expression in terms of <span class="math-inline">\\(\vec x\\)</span>, <span class="math-inline">\\(S\\)</span>, <span class="math-inline">\\(\vec b\\)</span>, and/or constants. <em>Hint: There's no need to re-prove gradient rules from class.</em>
+<span class="badge badge-points">4 pts</span> Find <span class="math-inline">\\(\nabla f(\vec x)\\)</span>, the gradient of <span class="math-inline">\\(f(\vec x)\\)</span>. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be an expression in terms of <span class="math-inline">\\(\vec x\\)</span>, <span class="math-inline">\\(S\\)</span>, <span class="math-inline">\\(\vec b\\)</span>, and/or constants. <em>Hint: There's no need to re-prove gradient rules from class.</em>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -183,7 +66,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: As long as <span class="math-inline">\\(S\\)</span> is invertible, if <span class="math-inline">\\(\nabla f(\vec a) = \vec 0\\)</span>, then <span class="math-inline">\\(\vec a\\)</span> is a global minimum of <span class="math-inline">\\(f(\vec x)\\)</span>.
+<span class="badge badge-points">2 pts</span> True or False: As long as <span class="math-inline">\\(S\\)</span> is invertible, if <span class="math-inline">\\(\nabla f(\vec a) = \vec 0\\)</span>, then <span class="math-inline">\\(\vec a\\)</span> is a global minimum of <span class="math-inline">\\(f(\vec x)\\)</span>.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -210,7 +93,7 @@ but <span class="math-inline">\\(f(\vec x) = x^2 - y^2\\)</span> has no global m
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: As long as all of the components of <span class="math-inline">\\(S\\)</span> are positive real numbers, if
+<span class="badge badge-points">2 pts</span> True or False: As long as all of the components of <span class="math-inline">\\(S\\)</span> are positive real numbers, if
 
 <span class="math-inline">\\(\nabla f(\vec a) = \vec 0\\)</span>, then <span class="math-inline">\\(\vec a\\)</span> is a global minimum of <span class="math-inline">\\(f(\vec x)\\)</span>.
 
@@ -246,7 +129,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> We'd like to use gradient descent to minimize <span class="math-inline">\\(f(\vec x)\\)</span>. Suppose <span class="math-inline">\\(S = \begin{bmatrix} 2 &amp; 0 \\\\ 0 &amp; 6 \end{bmatrix}\\)</span>, <span class="math-inline">\\(\vec b = \begin{bmatrix} 1 \\\\ -4 \end{bmatrix}\\)</span>, and we use a learning rate of <span class="math-inline">\\(\alpha = 1\\)</span>. After one iteration of gradient descent, we have <span class="math-inline">\\(\vec x^{(1)} = \begin{bmatrix} - 2 \\\\ -4 \end{bmatrix}\\)</span>. What was our initial guess, <span class="math-inline">\\(\vec x^{(0)}\\)</span>? Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a vector with two entries and no variables.
+<span class="badge badge-points">6 pts</span> We'd like to use gradient descent to minimize <span class="math-inline">\\(f(\vec x)\\)</span>. Suppose <span class="math-inline">\\(S = \begin{bmatrix} 2 &amp; 0 \\\\ 0 &amp; 6 \end{bmatrix}\\)</span>, <span class="math-inline">\\(\vec b = \begin{bmatrix} 1 \\\\ -4 \end{bmatrix}\\)</span>, and we use a learning rate of <span class="math-inline">\\(\alpha = 1\\)</span>. After one iteration of gradient descent, we have <span class="math-inline">\\(\vec x^{(1)} = \begin{bmatrix} - 2 \\\\ -4 \end{bmatrix}\\)</span>. What was our initial guess, <span class="math-inline">\\(\vec x^{(0)}\\)</span>? Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a vector with two entries and no variables.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -292,7 +175,7 @@ $$
 
 ---
 
-## FA25 MT2 · Problem 7: Complexity <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+## FA25 MT2 · Problem 7: Complexity <span class="badge badge-points">10 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
@@ -302,7 +185,7 @@ Suppose <span class="math-inline">\\(f: \mathbb{R} \to \mathbb{R}\\)</span> is a
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find scalars <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> such that <span class="math-inline">\\(f(3) \leq a f(2) + b f(6)\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a pair of scalars.
+<span class="badge badge-points">4 pts</span> Find scalars <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> such that <span class="math-inline">\\(f(3) \leq a f(2) + b f(6)\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a pair of scalars.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -341,7 +224,7 @@ So, <span class="math-inline">\\(\boxed{a = \frac{3}{4}, b = \frac{1}{4}}\\)</sp
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Using the result from part **a)**, prove that <span class="math-inline">\\(f(3) + f(5) \leq f(2) + f(6)\\)</span>.
+<span class="badge badge-points">6 pts</span> Using the result from part **a)**, prove that <span class="math-inline">\\(f(3) + f(5) \leq f(2) + f(6)\\)</span>.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -387,7 +270,7 @@ as required!
 
 ---
 
-## FA25 Final · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
+## FA25 Final · Problem 6 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -433,7 +316,7 @@ $$
 
 ---
 
-## FA25 Final · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
+## FA25 Final · Problem 7 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -451,7 +334,7 @@ Suppose we want to minimize <span class="math-inline">\\(f(x)\\)</span> using gr
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: <span class="math-inline">\\(f(x)\\)</span> is convex on the domain <span class="math-inline">\\(x \in [-9, 9]\\)</span>.
+<span class="badge badge-points">2 pts</span> True or False: <span class="math-inline">\\(f(x)\\)</span> is convex on the domain <span class="math-inline">\\(x \in [-9, 9]\\)</span>.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -468,7 +351,7 @@ This is false. In order for a function to be convex, it must be the case that we
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose we choose a learning rate/step size of <span class="math-inline">\\(\alpha = 0.1\\)</span>.
+<span class="badge badge-points">4 pts</span> Suppose we choose a learning rate/step size of <span class="math-inline">\\(\alpha = 0.1\\)</span>.
 
 Among the options below, which value of <span class="math-inline">\\(x^{(0)}\\)</span> will allow gradient descent to **converge to the global minimum** of <span class="math-inline">\\(f(x)\\)</span> **without crashing**?
 
@@ -510,7 +393,7 @@ Therefore, the correct choice is <span class="math-inline">\\(\boxed{1.6}\\)</sp
 
 ---
 
-## WN26 MT2 · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+## WN26 MT2 · Problem 7 <span class="badge badge-points">10 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -518,7 +401,7 @@ Therefore, the correct choice is <span class="math-inline">\\(\boxed{1.6}\\)</sp
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(4 \times 4\\)</span> matrix and <span class="math-inline">\\(\vec x \in \mathbb{R}^4\\)</span>. Furthermore, suppose that the gradient of the function <span class="math-inline">\\(f(\vec x) = \vec x^T A \vec x\\)</span> is given by
+<span class="badge badge-points">6 pts</span> Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(4 \times 4\\)</span> matrix and <span class="math-inline">\\(\vec x \in \mathbb{R}^4\\)</span>. Furthermore, suppose that the gradient of the function <span class="math-inline">\\(f(\vec x) = \vec x^T A \vec x\\)</span> is given by
 
 <div class="math-display">
 $$
@@ -592,7 +475,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(A\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix, <span class="math-inline">\\(\vec b \in \mathbb{R}^n\\)</span>, and that <span class="math-inline">\\(g: \mathbb{R}^n \to \mathbb{R}\\)</span> is defined by
+<span class="badge badge-points">4 pts</span> Suppose <span class="math-inline">\\(A\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix, <span class="math-inline">\\(\vec b \in \mathbb{R}^n\\)</span>, and that <span class="math-inline">\\(g: \mathbb{R}^n \to \mathbb{R}\\)</span> is defined by
 
 <div class="math-display">
 $$
@@ -662,7 +545,7 @@ $$
 
 ---
 
-## WN26 MT2 · Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span>
+## WN26 MT2 · Problem 8 <span class="badge badge-points">11 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -678,7 +561,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in the blanks: The set of all vectors <span class="math-inline">\\(\vec x^{\ast}\\)</span> that minimize <span class="math-inline">\\(f(\vec x)\\)</span> form a \_\_(i)\_\_ in <span class="math-inline">\\(\mathbb{R}^2\\)</span>. This set \_\_(ii)\_\_ a subspace of <span class="math-inline">\\(\mathbb{R}^2\\)</span>.
+<span class="badge badge-points">3 pts</span> Fill in the blanks: The set of all vectors <span class="math-inline">\\(\vec x^{\ast}\\)</span> that minimize <span class="math-inline">\\(f(\vec x)\\)</span> form a \_\_(i)\_\_ in <span class="math-inline">\\(\mathbb{R}^2\\)</span>. This set \_\_(ii)\_\_ a subspace of <span class="math-inline">\\(\mathbb{R}^2\\)</span>.
 
 <ol class="roman">
 <li markdown="1">
@@ -738,7 +621,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> Suppose we use gradient descent to minimize <span class="math-inline">\\(f(\vec x)\\)</span> using an initial guess of <span class="math-inline">\\(\vec x^{(0)} = \begin{bmatrix} 1 \\\\ 1 \end{bmatrix}\\)</span>.
+<span class="badge badge-points">8 pts</span> Suppose we use gradient descent to minimize <span class="math-inline">\\(f(\vec x)\\)</span> using an initial guess of <span class="math-inline">\\(\vec x^{(0)} = \begin{bmatrix} 1 \\\\ 1 \end{bmatrix}\\)</span>.
 
 Find the learning rate/step size <span class="math-inline">\\(\alpha\\)</span> that will cause gradient descent to converge to a global minimum of <span class="math-inline">\\(f(\vec x)\\)</span> **in one iteration**, i.e. such that <span class="math-inline">\\(\vec x^{(1)}\\)</span> is a minimizer of <span class="math-inline">\\(f(\vec x)\\)</span>.
 
@@ -830,7 +713,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">9 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
+## WN26 Final · Problem 8 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -934,7 +817,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose
+<span class="badge badge-points">3 pts</span> Suppose
 
 <div class="math-display">
 $$
@@ -1045,7 +928,7 @@ $$
 
 ---
 
-## SP26 MT2 · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## SP26 MT2 · Problem 6 <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
@@ -1061,7 +944,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: <span class="math-inline">\\(f(\vec x)\\)</span> is a linear transformation.
+<span class="badge badge-points">2 pts</span> True or False: <span class="math-inline">\\(f(\vec x)\\)</span> is a linear transformation.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -1096,7 +979,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span> Find <span class="math-inline">\\(\nabla f(\vec x)\\)</span>. Assume that <span class="math-inline">\\(A \vec x \neq \vec 0\\)</span>. Show your work, and write your final answer in the bottom-right corner of the box. Your answer should be an expression in terms of <span class="math-inline">\\(A\\)</span>, <span class="math-inline">\\(\vec x\\)</span>, and/or constants. <em>Hint: Start by taking the gradient of <span class="math-inline">\\(\lVert A \vec x \rVert^2\\)</span>, then apply the chain rule.</em>
+<span class="badge badge-points">10 pts</span> Find <span class="math-inline">\\(\nabla f(\vec x)\\)</span>. Assume that <span class="math-inline">\\(A \vec x \neq \vec 0\\)</span>. Show your work, and write your final answer in the bottom-right corner of the box. Your answer should be an expression in terms of <span class="math-inline">\\(A\\)</span>, <span class="math-inline">\\(\vec x\\)</span>, and/or constants. <em>Hint: Start by taking the gradient of <span class="math-inline">\\(\lVert A \vec x \rVert^2\\)</span>, then apply the chain rule.</em>
 
 <div class="math-display">
 $$
@@ -1160,7 +1043,7 @@ $$
 
 ---
 
-## SP26 MT2 · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">15 pts</span>
+## SP26 MT2 · Problem 7 <span class="badge badge-points">15 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
@@ -1184,7 +1067,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Find the value of <span class="math-inline">\\(\alpha\\)</span>. Show your work, and write your final answer in the bottom-right corner of the box. Your answer should be a number with no variables.
+<span class="badge badge-points">5 pts</span> Find the value of <span class="math-inline">\\(\alpha\\)</span>. Show your work, and write your final answer in the bottom-right corner of the box. Your answer should be a number with no variables.
 
 <div class="math-display">
 $$
@@ -1237,7 +1120,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Find the value of <span class="math-inline">\\(d\\)</span> (**not** <span class="math-inline">\\(c\\)</span>). Show your work, and write your final answer in the bottom-right corner of the boxes. Your answer should be a number with no variables.
+<span class="badge badge-points">5 pts</span> Find the value of <span class="math-inline">\\(d\\)</span> (**not** <span class="math-inline">\\(c\\)</span>). Show your work, and write your final answer in the bottom-right corner of the boxes. Your answer should be a number with no variables.
 
 <div class="math-display">
 $$
@@ -1297,7 +1180,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Your friend claims that gradient descent always converges to a minimum because each iteration moves in the direction of steepest decrease. Based on the information in this problem, is your friend correct? State "yes" or "no", and briefly explain your reasoning.
+<span class="badge badge-points">5 pts</span> Your friend claims that gradient descent always converges to a minimum because each iteration moves in the direction of steepest decrease. Based on the information in this problem, is your friend correct? State "yes" or "no", and briefly explain your reasoning.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1318,7 +1201,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 9 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">9 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
+## SP26 Final · Problem 9 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -1344,7 +1227,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Which of the following could be <span class="math-inline">\\(\vec a\\)</span>? **Select all** that apply.
+<span class="badge badge-points">3 pts</span> Which of the following could be <span class="math-inline">\\(\vec a\\)</span>? **Select all** that apply.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}3\\\\1\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}1\\\\3\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}-1\\\\-3\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}1\\\\2\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}5\\\\3\end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix}2\\\\6\end{bmatrix}\\)</span></span></div>
 
@@ -1449,7 +1332,7 @@ Both equations say the same thing: <span class="math-inline">\\(a&#95;2 = 3a&#95
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose we use gradient descent to minimize <span class="math-inline">\\(f(\vec x)\\)</span> using an initial guess of <span class="math-inline">\\(\vec x^{(0)} = \begin{bmatrix} 2 \\\\ 1 \end{bmatrix}\\)</span> and a learning rate of <span class="math-inline">\\(\alpha = 1/2\\)</span>. Find <span class="math-inline">\\(\vec x^{(1)}\\)</span>. Show your work, and write your answer in the box provided. Your answer should be a vector with no variables.
+<span class="badge badge-points">4 pts</span> Suppose we use gradient descent to minimize <span class="math-inline">\\(f(\vec x)\\)</span> using an initial guess of <span class="math-inline">\\(\vec x^{(0)} = \begin{bmatrix} 2 \\\\ 1 \end{bmatrix}\\)</span> and a learning rate of <span class="math-inline">\\(\alpha = 1/2\\)</span>. Find <span class="math-inline">\\(\vec x^{(1)}\\)</span>. Show your work, and write your answer in the box provided. Your answer should be a vector with no variables.
 
 <div class="math-display">
 $$
@@ -1495,7 +1378,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> This part is unrelated to the previous parts.
+<span class="badge badge-points">2 pts</span> This part is unrelated to the previous parts.
 
 Suppose <span class="math-inline">\\(g: \mathbb{R} \to \mathbb{R}\\)</span>. True or false: if <span class="math-inline">\\(g\\)</span> has a global minimum and no local maxima, it must be convex.
 

@@ -1,5 +1,6 @@
 ---
-layout: minimal
+layout: exam
+mathjax: true
 title: "Chapter 2: Simple Linear Regression"
 description: "Practice problems for Chapter 2: Simple Linear Regression."
 nav_exclude: true
@@ -8,124 +9,6 @@ hide_footer_hr: true
 
 {% raw %}
 
-<script>
-window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-<style>
-.main-content p {
-  margin-bottom: 1.15em;
-}
-.assignment-pdf-button {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.65rem;
-}
-.assignment-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0 0 1rem;
-}
-.math-display,
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.math-display {
-  padding-bottom: 0.2rem;
-}
-.math-display mjx-container[jax="CHTML"][display="true"] {
-  padding-bottom: 0.2rem;
-}
-.answer-blank {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  min-width: 8rem;
-  height: 1em;
-  vertical-align: baseline;
-}
-.assignment-parts {
-  margin: 1rem 0;
-}
-.assignment-part {
-  column-gap: 0.55rem;
-  display: grid;
-  grid-template-columns: 1.4rem minmax(0, 1fr);
-  margin-bottom: 1.05rem;
-}
-.assignment-part-label {
-  font-weight: 600;
-  text-align: right;
-}
-.assignment-part-content > :first-child {
-  margin-top: 0;
-}
-.mc-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.6rem;
-  margin: 0.9rem 0 1.1rem;
-}
-.mc-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-}
-.mc-bubble,
-.mc-square {
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 0.95em;
-  width: 0.95em;
-  vertical-align: -0.12em;
-}
-.mc-bubble {
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-.mc-square {
-  border: 1.5px solid currentColor;
-}
-.mc-correct {
-  background: currentColor;
-}
-.main-content table {
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
-}
-.main-content table th,
-.main-content table td {
-  padding: 0.35rem 0.5rem;
-  white-space: nowrap;
-}
-</style>
-
-<style>
-.worksheet-source { font-size: 0.8rem; color: #57606a; margin: -0.4rem 0 0.8rem; }
-.worksheet-source a { color: #0066cc; }
-</style>
-
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>
@@ -147,7 +30,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT1 · Problem 3: Spreading Your Wings <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## FA25 MT1 · Problem 3: Spreading Your Wings <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -171,7 +54,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose we fit a simple linear regression line to the dataset <span class="math-inline">\\((x&#95;1, z&#95;1), (x&#95;2, z&#95;2), \ldots, (x&#95;n, z&#95;n)\\)</span> by minimizing mean squared error. Note that <span class="math-inline">\\(z\\)</span> is the variable being predicted, not <span class="math-inline">\\(y\\)</span>. Let <span class="math-inline">\\(h(x&#95;i)\\)</span> represent the corresponding line.
+<span class="badge badge-points">4 pts</span> Suppose we fit a simple linear regression line to the dataset <span class="math-inline">\\((x&#95;1, z&#95;1), (x&#95;2, z&#95;2), \ldots, (x&#95;n, z&#95;n)\\)</span> by minimizing mean squared error. Note that <span class="math-inline">\\(z\\)</span> is the variable being predicted, not <span class="math-inline">\\(y\\)</span>. Let <span class="math-inline">\\(h(x&#95;i)\\)</span> represent the corresponding line.
 
 What is the value of <span class="math-inline">\\(h(15)\\)</span>? Your answer should be a number with no variables.
 
@@ -207,7 +90,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span>
+<span class="badge badge-points">8 pts</span>
 <span class="math-inline">\\(\sigma&#95;z^2\\)</span>, the variance of <span class="math-inline">\\(z&#95;1, z&#95;2, \ldots, z&#95;n\\)</span>, can be written in the form <span class="math-inline">\\(\sigma&#95;z^2 = 9 \sigma&#95;x^2 + \sigma&#95;y^2 + C\\)</span>.
 
 <ol class="roman">
@@ -282,7 +165,7 @@ $$
 
 ---
 
-## FA25 Final · Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
+## FA25 Final · Problem 2 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -298,7 +181,7 @@ Note that the <span class="math-inline">\\(x\\)</span>-values are equally spaced
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find <span class="math-inline">\\(\bar{x}\\)</span> and <span class="math-inline">\\(\bar{y}\\)</span>, the means of the <span class="math-inline">\\(x\\)</span>- and <span class="math-inline">\\(y\\)</span>-values, respectively. Give your answers as expressions involving <span class="math-inline">\\(k\\)</span>, <span class="math-inline">\\(\alpha\\)</span>, and/or other constants.
+<span class="badge badge-points">4 pts</span> Find <span class="math-inline">\\(\bar{x}\\)</span> and <span class="math-inline">\\(\bar{y}\\)</span>, the means of the <span class="math-inline">\\(x\\)</span>- and <span class="math-inline">\\(y\\)</span>-values, respectively. Give your answers as expressions involving <span class="math-inline">\\(k\\)</span>, <span class="math-inline">\\(\alpha\\)</span>, and/or other constants.
 
 <span class="math-inline">\\(\bar{x} = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;, \qquad \bar{y} = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -317,7 +200,7 @@ Both sets of values average to 0: <span class="math-inline">\\(\bar{x} = 0\\)</s
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose we fit a simple linear regression model to the dataset by minimizing mean squared error. <span class="math-inline">\\(w&#95;1^{\ast}\\)</span>, the slope of the regression line, is of the form
+<span class="badge badge-points">6 pts</span> Suppose we fit a simple linear regression model to the dataset by minimizing mean squared error. <span class="math-inline">\\(w&#95;1^{\ast}\\)</span>, the slope of the regression line, is of the form
 
 <div class="math-display">
 $$
@@ -383,7 +266,7 @@ Therefore, <span class="math-inline">\\(v = \boxed{2k\alpha}\\)</span>.
 
 ---
 
-## WN26 MT1 · Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
+## WN26 MT1 · Problem 2 <span class="badge badge-points">14 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
@@ -405,7 +288,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Which of the following is the relationship between <span class="math-inline">\\(M\\)</span> and <span class="math-inline">\\(\sigma&#95;y^2\\)</span>? Select an answer and provide a brief explanation in the box provided.
+<span class="badge badge-points">5 pts</span> Which of the following is the relationship between <span class="math-inline">\\(M\\)</span> and <span class="math-inline">\\(\sigma&#95;y^2\\)</span>? Select an answer and provide a brief explanation in the box provided.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(M \leq \sigma&#95;y^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(M = \sigma&#95;y^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(M \geq \sigma&#95;y^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible to tell</span></div>
 
@@ -430,7 +313,7 @@ The constant model, <span class="math-inline">\\(h(x&#95;i) = w\\)</span>, can b
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Suppose that <span class="math-inline">\\(M = 0\\)</span>. What is the value of <span class="math-inline">\\(r\\)</span>, the correlation coefficient between the <span class="math-inline">\\(x\\)</span>-values and <span class="math-inline">\\(y\\)</span>-values in the dataset? <span class="math-inline">\\(\boxed{\text{Circle}}\\)</span> your final answer and provide a brief explanation. If there are multiple possible values, state them all.
+<span class="badge badge-points">5 pts</span> Suppose that <span class="math-inline">\\(M = 0\\)</span>. What is the value of <span class="math-inline">\\(r\\)</span>, the correlation coefficient between the <span class="math-inline">\\(x\\)</span>-values and <span class="math-inline">\\(y\\)</span>-values in the dataset? <span class="math-inline">\\(\boxed{\text{Circle}}\\)</span> your final answer and provide a brief explanation. If there are multiple possible values, state them all.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -445,7 +328,7 @@ The only case in which <span class="math-inline">\\(M = 0\\)</span> is when the 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: It is possible for there to be multiple pairs of <span class="math-inline">\\((\text{intercept}, \text{slope})\\)</span> with a mean squared error of <span class="math-inline">\\(M\\)</span>.
+<span class="badge badge-points">2 pts</span> True or False: It is possible for there to be multiple pairs of <span class="math-inline">\\((\text{intercept}, \text{slope})\\)</span> with a mean squared error of <span class="math-inline">\\(M\\)</span>.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -469,7 +352,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: It is possible for there to be multiple pairs of <span class="math-inline">\\((\text{intercept}, \text{slope})\\)</span> with a mean squared error of <span class="math-inline">\\(M + 1\\)</span>.
+<span class="badge badge-points">2 pts</span> True or False: It is possible for there to be multiple pairs of <span class="math-inline">\\((\text{intercept}, \text{slope})\\)</span> with a mean squared error of <span class="math-inline">\\(M + 1\\)</span>.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -493,7 +376,7 @@ So, yes, it is possible for there to be multiple pairs of <span class="math-inli
 
 ---
 
-## WN26 Final · Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">13 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
+## WN26 Final · Problem 2 <span class="badge badge-points">13 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -521,7 +404,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> What is <span class="math-inline">\\(\bar x\\)</span>, the mean of the <span class="math-inline">\\(x\\)</span>-values? Give your answer as a number with no variables.
+<span class="badge badge-points">3 pts</span> What is <span class="math-inline">\\(\bar x\\)</span>, the mean of the <span class="math-inline">\\(x\\)</span>-values? Give your answer as a number with no variables.
 
 <span class="math-inline">\\(\bar x = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -555,7 +438,7 @@ Let <span class="math-inline">\\(g(t&#95;i) = \beta&#95;0^{\ast} + \beta&#95;1^{
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find <span class="math-inline">\\(\beta&#95;0^{\ast}\\)</span>, the intercept of the best simple linear regression line for predicting <span class="math-inline">\\(z&#95;i\\)</span> from <span class="math-inline">\\(t&#95;i\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables.
+<span class="badge badge-points">6 pts</span> Find <span class="math-inline">\\(\beta&#95;0^{\ast}\\)</span>, the intercept of the best simple linear regression line for predicting <span class="math-inline">\\(z&#95;i\\)</span> from <span class="math-inline">\\(t&#95;i\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables.
 
 <div class="math-display">
 $$
@@ -638,7 +521,7 @@ Thus, <span class="math-inline">\\(\boxed{\beta&#95;0^{\ast} = 19}\\)</span>.
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Let <span class="math-inline">\\(M\\)</span> be the mean squared error of the model <span class="math-inline">\\(h(x&#95;i) = 15 - x&#95;i\\)</span>'s predictions on the dataset <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span>, and <span class="math-inline">\\(M'\\)</span> be the mean squared error of the model <span class="math-inline">\\(g(t&#95;i) = \beta&#95;0^{\ast} + \beta&#95;1^{\ast} t&#95;i\\)</span>'s predictions on the dataset <span class="math-inline">\\((t&#95;1, z&#95;1), (t&#95;2, z&#95;2), \ldots, (t&#95;n, z&#95;n)\\)</span>.
+<span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(M\\)</span> be the mean squared error of the model <span class="math-inline">\\(h(x&#95;i) = 15 - x&#95;i\\)</span>'s predictions on the dataset <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span>, and <span class="math-inline">\\(M'\\)</span> be the mean squared error of the model <span class="math-inline">\\(g(t&#95;i) = \beta&#95;0^{\ast} + \beta&#95;1^{\ast} t&#95;i\\)</span>'s predictions on the dataset <span class="math-inline">\\((t&#95;1, z&#95;1), (t&#95;2, z&#95;2), \ldots, (t&#95;n, z&#95;n)\\)</span>.
 
 What is the value of the fraction <span class="math-inline">\\(\frac{M}{M'}\\)</span>? *If it's not clear, <span class="math-inline">\\(M'\\)</span> is on the denominator.*
 
@@ -699,7 +582,7 @@ $$
 
 ---
 
-## SP26 MT1 · Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
+## SP26 MT1 · Problem 3 <span class="badge badge-points">14 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -713,7 +596,7 @@ Suppose we fit a simple linear regression model **with** an intercept term, <spa
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find <span class="math-inline">\\(\bar x\\)</span>, the mean of <span class="math-inline">\\(x&#95;1, x&#95;2, \ldots, x&#95;n\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables. <em>Hint: What property does the line <span class="math-inline">\\(h(x&#95;i)\\)</span> satisfy?</em>
+<span class="badge badge-points">6 pts</span> Find <span class="math-inline">\\(\bar x\\)</span>, the mean of <span class="math-inline">\\(x&#95;1, x&#95;2, \ldots, x&#95;n\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables. <em>Hint: What property does the line <span class="math-inline">\\(h(x&#95;i)\\)</span> satisfy?</em>
 
 <div class="math-display">
 $$
@@ -758,7 +641,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose the correlation coefficient between the <span class="math-inline">\\(x\\)</span>-values and <span class="math-inline">\\(y\\)</span>-values is <span class="math-inline">\\(r = 1/3\\)</span>.
+<span class="badge badge-points">4 pts</span> Suppose the correlation coefficient between the <span class="math-inline">\\(x\\)</span>-values and <span class="math-inline">\\(y\\)</span>-values is <span class="math-inline">\\(r = 1/3\\)</span>.
 
 The standard deviation of <span class="math-inline">\\(y\\)</span>, <span class="math-inline">\\(\sigma&#95;y\\)</span>, is <span class="math-inline">\\(c\\)</span> times the standard deviation of <span class="math-inline">\\(x\\)</span>, <span class="math-inline">\\(\sigma&#95;x\\)</span>. In other words,
 
@@ -801,7 +684,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Let <span class="math-inline">\\(e&#95;i=y&#95;i-h(x&#95;i)\\)</span> be the fit model's error for the <span class="math-inline">\\(i\\)</span>th point. Note that <span class="math-inline">\\(e&#95;i\\)</span> may either be positive or negative. Which of the following statements are **guaranteed** to be true? **Select all** that apply.
+<span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(e&#95;i=y&#95;i-h(x&#95;i)\\)</span> be the fit model's error for the <span class="math-inline">\\(i\\)</span>th point. Note that <span class="math-inline">\\(e&#95;i\\)</span> may either be positive or negative. Which of the following statements are **guaranteed** to be true? **Select all** that apply.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n x&#95;i e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n y&#95;i e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n e&#95;i (x&#95;i - \bar x)=0\\)</span></span></div>
 
@@ -911,7 +794,7 @@ Intentionally, I haven't provided the proof of this! I want you to piece the pro
 
 ---
 
-## SP26 Final · Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">9 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
+## SP26 Final · Problem 2 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -947,7 +830,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Prove that <span class="math-inline">\\(w&#95;1' = w&#95;1^{\ast}\\)</span>, i.e. that the new slope is the same as the old slope, no matter what <span class="math-inline">\\(c\\)</span> is. <em>Hint: Start with any of the formulas for the optimal slope that involve summations in the numerator and denominator, and separate the sums.</em>
+<span class="badge badge-points">6 pts</span> Prove that <span class="math-inline">\\(w&#95;1' = w&#95;1^{\ast}\\)</span>, i.e. that the new slope is the same as the old slope, no matter what <span class="math-inline">\\(c\\)</span> is. <em>Hint: Start with any of the formulas for the optimal slope that involve summations in the numerator and denominator, and separate the sums.</em>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1007,7 +890,7 @@ So the numerator and denominator in this formula are both unchanged, meaning <sp
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Which of the following expressions is equal to <span class="math-inline">\\(w&#95;0' - w&#95;0^{\ast}\\)</span>, the difference between the new intercept and the old intercept?
+<span class="badge badge-points">3 pts</span> Which of the following expressions is equal to <span class="math-inline">\\(w&#95;0' - w&#95;0^{\ast}\\)</span>, the difference between the new intercept and the old intercept?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{\bar{y} - c}{n}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{\bar{y} - c}{n+1}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{c - \bar{y}}{n}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{c - \bar{y}}{n+1}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of these</span></div>
 

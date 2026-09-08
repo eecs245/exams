@@ -1,5 +1,6 @@
 ---
-layout: minimal
+layout: exam
+mathjax: true
 title: "Chapter 4: Linear Independence"
 description: "Practice problems for Chapter 4: Linear Independence."
 nav_exclude: true
@@ -8,124 +9,6 @@ hide_footer_hr: true
 
 {% raw %}
 
-<script>
-window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-<style>
-.main-content p {
-  margin-bottom: 1.15em;
-}
-.assignment-pdf-button {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.65rem;
-}
-.assignment-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0 0 1rem;
-}
-.math-display,
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.math-display {
-  padding-bottom: 0.2rem;
-}
-.math-display mjx-container[jax="CHTML"][display="true"] {
-  padding-bottom: 0.2rem;
-}
-.answer-blank {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  min-width: 8rem;
-  height: 1em;
-  vertical-align: baseline;
-}
-.assignment-parts {
-  margin: 1rem 0;
-}
-.assignment-part {
-  column-gap: 0.55rem;
-  display: grid;
-  grid-template-columns: 1.4rem minmax(0, 1fr);
-  margin-bottom: 1.05rem;
-}
-.assignment-part-label {
-  font-weight: 600;
-  text-align: right;
-}
-.assignment-part-content > :first-child {
-  margin-top: 0;
-}
-.mc-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.6rem;
-  margin: 0.9rem 0 1.1rem;
-}
-.mc-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-}
-.mc-bubble,
-.mc-square {
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 0.95em;
-  width: 0.95em;
-  vertical-align: -0.12em;
-}
-.mc-bubble {
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-.mc-square {
-  border: 1.5px solid currentColor;
-}
-.mc-correct {
-  background: currentColor;
-}
-.main-content table {
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
-}
-.main-content table th,
-.main-content table td {
-  padding: 0.35rem 0.5rem;
-  white-space: nowrap;
-}
-</style>
-
-<style>
-.worksheet-source { font-size: 0.8rem; color: #57606a; margin: -0.4rem 0 0.8rem; }
-.worksheet-source a { color: #0066cc; }
-</style>
-
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>
@@ -150,7 +33,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT1 · Problem 6: Needed Me <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span>
+## FA25 MT1 · Problem 6: Needed Me <span class="badge badge-points">11 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -160,7 +43,7 @@ Suppose <span class="math-inline">\\(\vec x = \begin{bmatrix} c \\\\ 1 \\\\ 0 \e
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> Find a **positive value** of <span class="math-inline">\\(c\\)</span> such that <span class="math-inline">\\(\vec x\\)</span>, <span class="math-inline">\\(\vec y\\)</span>, and <span class="math-inline">\\(\vec z\\)</span> are linearly **dependent**. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a positive number with no variables.
+<span class="badge badge-points">8 pts</span> Find a **positive value** of <span class="math-inline">\\(c\\)</span> such that <span class="math-inline">\\(\vec x\\)</span>, <span class="math-inline">\\(\vec y\\)</span>, and <span class="math-inline">\\(\vec z\\)</span> are linearly **dependent**. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a positive number with no variables.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -213,7 +96,7 @@ This equation has three solutions for <span class="math-inline">\\(c\\)</span>: 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Provide one **other** value of <span class="math-inline">\\(c\\)</span> (that is, not your answer from the previous part) such that <span class="math-inline">\\(\vec x\\)</span>, <span class="math-inline">\\(\vec y\\)</span>, and <span class="math-inline">\\(\vec z\\)</span> are linearly **dependent**. Your answer should be a number with no variables.
+<span class="badge badge-points">3 pts</span> Provide one **other** value of <span class="math-inline">\\(c\\)</span> (that is, not your answer from the previous part) such that <span class="math-inline">\\(\vec x\\)</span>, <span class="math-inline">\\(\vec y\\)</span>, and <span class="math-inline">\\(\vec z\\)</span> are linearly **dependent**. Your answer should be a number with no variables.
 
 other value of <span class="math-inline">\\(c =\\)</span> \_\_\_\_\_\_
 
@@ -224,7 +107,7 @@ other value of <span class="math-inline">\\(c =\\)</span> \_\_\_\_\_\_
 
 ---
 
-## FA25 MT1 · Problem 7: High Definition <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## FA25 MT1 · Problem 7: High Definition <span class="badge badge-points">12 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -244,7 +127,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Let <span class="math-inline">\\(r\\)</span> be the dimension of the subspace of <span class="math-inline">\\(\mathbb{R}^{7}\\)</span> spanned by <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \ldots \vec x&#95;{12}\\)</span>. What are the smallest and largest possible values of <span class="math-inline">\\(r\\)</span>? Your answers should be integers with no variables.
+<span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(r\\)</span> be the dimension of the subspace of <span class="math-inline">\\(\mathbb{R}^{7}\\)</span> spanned by <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \ldots \vec x&#95;{12}\\)</span>. What are the smallest and largest possible values of <span class="math-inline">\\(r\\)</span>? Your answers should be integers with no variables.
 
 smallest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_\_ largest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_\_
 
@@ -254,7 +137,7 @@ smallest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Which of the following **could** form a basis for <span class="math-inline">\\(\mathbb{R}^{7}\\)</span>? Select all that apply. Blank answers will receive no credit.
+<span class="badge badge-points">4 pts</span> Which of the following **could** form a basis for <span class="math-inline">\\(\mathbb{R}^{7}\\)</span>? Select all that apply. Blank answers will receive no credit.
 
 <span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\lbrace\vec x&#95;7, \vec x&#95;8, \vec x&#95;9, \vec x&#95;{10}, \vec x&#95;{11}, \vec x&#95;{12}\rbrace\\)</span>
 
@@ -283,7 +166,7 @@ The other options all include 7 vectors that *could* be linearly independent, an
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose the intersection of <span class="math-inline">\\(\text{span}(\lbrace\vec x&#95;1, \vec x&#95;2\rbrace)\\)</span> and <span class="math-inline">\\(\text{span}(\lbrace \vec x&#95;4, \vec x&#95;5 \rbrace)\\)</span> is a line (i.e. a 1-dimensional subspace) in <span class="math-inline">\\(\mathbb{R}^{7}\\)</span>. Which of the following **must** be true? Select all that apply. Blank answers will receive no credit.
+<span class="badge badge-points">4 pts</span> Suppose the intersection of <span class="math-inline">\\(\text{span}(\lbrace\vec x&#95;1, \vec x&#95;2\rbrace)\\)</span> and <span class="math-inline">\\(\text{span}(\lbrace \vec x&#95;4, \vec x&#95;5 \rbrace)\\)</span> is a line (i.e. a 1-dimensional subspace) in <span class="math-inline">\\(\mathbb{R}^{7}\\)</span>. Which of the following **must** be true? Select all that apply. Blank answers will receive no credit.
 
 <em>Hint: Don't forget the assumptions introduced at the start of the problem.</em>
 
@@ -315,7 +198,7 @@ So, retroactively, we gave full credit to everyone for this part.
 
 ---
 
-## FA25 Final · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> <span class="badge" data-flag="mt2-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT2 Redemption</span>
+## FA25 Final · Problem 4 <span class="badge badge-points">8 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -325,7 +208,7 @@ Let <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose that for some value of <span class="math-inline">\\(c\\)</span>, <span class="math-inline">\\(P\\)</span> is the matrix that projects vectors in <span class="math-inline">\\(\mathbb{R}^3\\)</span> onto <span class="math-inline">\\(\text{span}(\lbrace\vec u, \vec v\rbrace)\\)</span>. **Select all** true statements below.
+<span class="badge badge-points">4 pts</span> Suppose that for some value of <span class="math-inline">\\(c\\)</span>, <span class="math-inline">\\(P\\)</span> is the matrix that projects vectors in <span class="math-inline">\\(\mathbb{R}^3\\)</span> onto <span class="math-inline">\\(\text{span}(\lbrace\vec u, \vec v\rbrace)\\)</span>. **Select all** true statements below.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(P^2 = P\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(P\\)</span> is invertible</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(P\\)</span> is orthogonal</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(P\\)</span> is symmetric</span></div>
 
@@ -358,7 +241,7 @@ With this in mind:
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Now, suppose <span class="math-inline">\\(\vec y \in \mathbb{R}^3\\)</span>. Let <span class="math-inline">\\(\vec p \\)</span> be the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{span}(\lbrace\vec u, \vec v\rbrace)\\)</span>, and let <span class="math-inline">\\(\vec e = \vec y - \vec p\\)</span>.
+<span class="badge badge-points">4 pts</span> Now, suppose <span class="math-inline">\\(\vec y \in \mathbb{R}^3\\)</span>. Let <span class="math-inline">\\(\vec p \\)</span> be the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{span}(\lbrace\vec u, \vec v\rbrace)\\)</span>, and let <span class="math-inline">\\(\vec e = \vec y - \vec p\\)</span>.
 
 There is no value of <span class="math-inline">\\(c\\)</span> that guarantees that the components of <span class="math-inline">\\(\vec e\\)</span> sum to 0, for every <span class="math-inline">\\(\vec y \in \mathbb{R}^3\\)</span>. That is, it is **not** guaranteed that <span class="math-inline">\\(e&#95;1 + e&#95;2 + e&#95;3 = 0\\)</span> for every <span class="math-inline">\\(\vec y \in \mathbb{R}^3\\)</span>.
 
@@ -376,7 +259,7 @@ For <span class="math-inline">\\(e&#95;1 + e&#95;2 + e&#95;3\\)</span> to always
 
 ---
 
-## WN26 MT1 · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
+## WN26 MT1 · Problem 6 <span class="badge badge-points">14 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
@@ -394,7 +277,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: The set <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;2, \vec x&#95;3, \vec x&#95;4, \vec x&#95;5, \vec x&#95;6\rbrace\\)</span> is linearly independent.
+<span class="badge badge-points">2 pts</span> True or False: The set <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;2, \vec x&#95;3, \vec x&#95;4, \vec x&#95;5, \vec x&#95;6\rbrace\\)</span> is linearly independent.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -413,7 +296,7 @@ If these vectors were linearly independent, they would span a 6-dimensional subs
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Consider the statement:
+<span class="badge badge-points">4 pts</span> Consider the statement:
 
 "There exists a vector <span class="math-inline">\\(\vec b \in \mathbb{R}^9\\)</span> such that the number of ways to write <span class="math-inline">\\(\vec b\\)</span> as a linear combination of <span class="math-inline">\\(\vec x&#95;1, \ldots, \vec x&#95;6\\)</span> is ."
 
@@ -461,7 +344,7 @@ infinite
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(\vec b\\)</span> is some vector in <span class="math-inline">\\(S\\)</span> such that both of the following equations are true:
+<span class="badge badge-points">4 pts</span> Suppose <span class="math-inline">\\(\vec b\\)</span> is some vector in <span class="math-inline">\\(S\\)</span> such that both of the following equations are true:
 
 <div class="math-display">
 $$
@@ -556,7 +439,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Let <span class="math-inline">\\(T = \text{span}(\lbrace \vec x&#95;1, \vec x&#95;2, \vec x&#95;3 \rbrace)\\)</span> and <span class="math-inline">\\(U = \text{span}(\lbrace \vec x&#95;4, \vec x&#95;5, \vec x&#95;6 \rbrace)\\)</span>. Suppose <span class="math-inline">\\(W\\)</span> is the **intersection** of <span class="math-inline">\\(T\\)</span> and <span class="math-inline">\\(U\\)</span>, i.e. <span class="math-inline">\\(W = T \cap U\\)</span>. <span class="math-inline">\\(W\\)</span> is also a subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>.
+<span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(T = \text{span}(\lbrace \vec x&#95;1, \vec x&#95;2, \vec x&#95;3 \rbrace)\\)</span> and <span class="math-inline">\\(U = \text{span}(\lbrace \vec x&#95;4, \vec x&#95;5, \vec x&#95;6 \rbrace)\\)</span>. Suppose <span class="math-inline">\\(W\\)</span> is the **intersection** of <span class="math-inline">\\(T\\)</span> and <span class="math-inline">\\(U\\)</span>, i.e. <span class="math-inline">\\(W = T \cap U\\)</span>. <span class="math-inline">\\(W\\)</span> is also a subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>.
 
 What are the smallest and largest possible values of <span class="math-inline">\\(\text{dim}(W)\\)</span>, the dimension of <span class="math-inline">\\(W\\)</span>? Give your answers as integers.
 
@@ -596,7 +479,7 @@ So, the smallest possible value of <span class="math-inline">\\(\text{dim}(W)\\)
 
 ---
 
-## WN26 Final · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
+## WN26 Final · Problem 4 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -671,7 +554,7 @@ So, <span class="math-inline">\\(S = \text{span}\left(\left\lbrace \begin{bmatri
 
 ---
 
-## SP26 MT1 · Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span>
+## SP26 MT1 · Problem 6 <span class="badge badge-points">11 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -689,7 +572,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Fill in the blanks to complete the sentence:
+<span class="badge badge-points">4 pts</span> Fill in the blanks to complete the sentence:
 
 For all values of <span class="math-inline">\\(c\\)</span>, <span class="math-inline">\\(\text{span}(\lbrace\vec u,\vec v\rbrace)\\)</span> is a \_\_(i)\_\_-dimensional subspace of \_\_(ii)\_\_.
 
@@ -708,7 +591,7 @@ Why <span class="math-inline">\\(\mathbb R^3\\)</span>? Because both <span class
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">7 pts</span> Suppose the plane spanned by <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> is
+<span class="badge badge-points">7 pts</span> Suppose the plane spanned by <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> is
 
 <div class="math-display">
 $$
@@ -776,7 +659,7 @@ But, notice that <span class="math-inline">\\(6c + 6 = 24 \implies c = 3\\)</spa
 
 ---
 
-## SP26 MT1 · Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+## SP26 MT1 · Problem 7 <span class="badge badge-points">10 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -795,7 +678,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">7 pts</span> Are <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> linearly independent?
+<span class="badge badge-points">7 pts</span> Are <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> linearly independent?
 
 <ol class="roman">
 <li markdown="1">
@@ -838,7 +721,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> What is the dimension of <span class="math-inline">\\(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)\\)</span>? Give your answer as a number with no variables.
+<span class="badge badge-points">3 pts</span> What is the dimension of <span class="math-inline">\\(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)\\)</span>? Give your answer as a number with no variables.
 
 <span class="math-inline">\\(\dim(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -889,7 +772,7 @@ $$
 
 ---
 
-## SP26 MT1 · Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span>
+## SP26 MT1 · Problem 8 <span class="badge badge-points">8 pts</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -947,7 +830,7 @@ So, only the first and third choices are bases for <span class="math-inline">\\(
 
 ---
 
-## SP26 Final · Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> <span class="badge" data-flag="mt1-redemption" style="background-color: #9A3324; color: #FFFFFF; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">MT1 Redemption</span>
+## SP26 Final · Problem 4 <span class="badge badge-points">5 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
