@@ -30,9 +30,7 @@ sys.path.insert(0, str(REPO_ROOT / "scripts"))
 import compose  # noqa: E402
 import miniyaml  # noqa: E402
 from generate_exam_markdown import (  # noqa: E402
-    EXAM_NAV_SNIPPET,
-    HOMEWORK_STYLE_SNIPPET,
-    MATHJAX_SNIPPET,
+    EXAM_NAV_HTML,
     replace_inline_math_spans_with_dollars,
 )
 
@@ -115,7 +113,8 @@ def build_chapter_page(chapter: dict) -> str:
 
     parts = [
         "---",
-        "layout: minimal",
+        "layout: exam",
+        "mathjax: true",
         f'title: "{title}"',
         f'description: "Practice problems for {title}."',
         "nav_exclude: true",
@@ -124,13 +123,7 @@ def build_chapter_page(chapter: dict) -> str:
         "",
         "{% raw %}",
         "",
-        MATHJAX_SNIPPET,
-        "",
-        HOMEWORK_STYLE_SNIPPET,
-        "",
-        WORKSHEET_STYLE_SNIPPET,
-        "",
-        EXAM_NAV_SNIPPET,
+        EXAM_NAV_HTML,
         "",
         f"# {title}",
         "",
@@ -151,13 +144,6 @@ def build_chapter_page(chapter: dict) -> str:
     parts.extend(sections)
     parts.extend(["{% endraw %}", ""])
     return "\n".join(parts)
-
-
-WORKSHEET_STYLE_SNIPPET = """<style>
-.worksheet-source { font-size: 0.8rem; color: #57606a; margin: -0.4rem 0 0.8rem; }
-.worksheet-source a { color: #0066cc; }
-</style>"""
-
 
 
 def main() -> int:
