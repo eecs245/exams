@@ -1,5 +1,6 @@
 ---
-layout: minimal
+layout: exam
+mathjax: true
 title: "Winter 2026 Midterm 2"
 description: "Winter 2026 Midterm 2 problems."
 nav_exclude: true
@@ -8,119 +9,6 @@ hide_footer_hr: true
 
 {% raw %}
 
-<script>
-window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-<style>
-.main-content p {
-  margin-bottom: 1.15em;
-}
-.assignment-pdf-button {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.65rem;
-}
-.assignment-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0 0 1rem;
-}
-.math-display,
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.math-display {
-  padding-bottom: 0.2rem;
-}
-.math-display mjx-container[jax="CHTML"][display="true"] {
-  padding-bottom: 0.2rem;
-}
-.answer-blank {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  min-width: 8rem;
-  height: 1em;
-  vertical-align: baseline;
-}
-.assignment-parts {
-  margin: 1rem 0;
-}
-.assignment-part {
-  column-gap: 0.55rem;
-  display: grid;
-  grid-template-columns: 1.4rem minmax(0, 1fr);
-  margin-bottom: 1.05rem;
-}
-.assignment-part-label {
-  font-weight: 600;
-  text-align: right;
-}
-.assignment-part-content > :first-child {
-  margin-top: 0;
-}
-.mc-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.6rem;
-  margin: 0.9rem 0 1.1rem;
-}
-.mc-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-}
-.mc-bubble,
-.mc-square {
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 0.95em;
-  width: 0.95em;
-  vertical-align: -0.12em;
-}
-.mc-bubble {
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-.mc-square {
-  border: 1.5px solid currentColor;
-}
-.mc-correct {
-  background: currentColor;
-}
-.main-content table {
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
-}
-.main-content table th,
-.main-content table td {
-  padding: 0.35rem 0.5rem;
-  white-space: nowrap;
-}
-</style>
-
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>
@@ -149,7 +37,7 @@ body { padding-top: 0 !important; }
 
 ---
 
-## Problem 1 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## Problem 1 <span class="badge badge-points">12 pts</span>
 
 Suppose <span class="math-inline">\\(k\\)</span> is a real number. Let
 
@@ -165,7 +53,7 @@ In each part, you are provided with information about <span class="math-inline">
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
+<span class="badge badge-points">4 pts</span>
 <span class="math-inline">\\(\text{rank}(A) = 1\\)</span>
 
 <div class="math-display">
@@ -196,7 +84,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
+<span class="badge badge-points">4 pts</span>
 <span class="math-inline">\\(\text{det}(A) = 2\\)</span>
 
 <div class="math-display">
@@ -237,7 +125,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
+<span class="badge badge-points">4 pts</span>
 <span class="math-inline">\\(A^{-1} = \begin{bmatrix} 1 &amp; -1/2 \\\\ -1 &amp; 3/4 \end{bmatrix}\\)</span>
 
 <div class="math-display">
@@ -288,7 +176,7 @@ $$
 
 ---
 
-## Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+## Problem 2 <span class="badge badge-points">10 pts</span>
 
 Suppose <span class="math-inline">\\(A\\)</span> is a matrix such that <span class="math-inline">\\(A \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 6 \\\\ 0 \\\\ 1 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\left\lbrace \begin{bmatrix} 1 \\\\ 4 \\\\ -2 \\\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\\ 1 \\\\ 1 \\\\ 0\end{bmatrix} \right\rbrace\\)</span> is a basis for <span class="math-inline">\\(\text{nullsp}(A)\\)</span>.
 
@@ -393,7 +281,7 @@ $$
 
 ---
 
-## Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span>
+## Problem 3 <span class="badge badge-points">11 pts</span>
 
 Suppose <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both **non-zero** <span class="math-inline">\\(6 \times 6\\)</span> matrices, such that <span class="math-inline">\\(\text{rank}(A) = 4\\)</span> and that every column of <span class="math-inline">\\(B\\)</span> is in <span class="math-inline">\\(\text{nullsp}(A)\\)</span>.
 
@@ -401,7 +289,7 @@ Suppose <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in the blanks: The third \_\_(i)\_\_ of <span class="math-inline">\\(A\\)</span> is \_\_(ii)\_\_ to the fourth \_\_(iii)\_\_ of <span class="math-inline">\\(B\\)</span>.
+<span class="badge badge-points">3 pts</span> Fill in the blanks: The third \_\_(i)\_\_ of <span class="math-inline">\\(A\\)</span> is \_\_(ii)\_\_ to the fourth \_\_(iii)\_\_ of <span class="math-inline">\\(B\\)</span>.
 
 <ol class="roman">
 <li markdown="1">
@@ -433,7 +321,7 @@ So, the third **row** of <span class="math-inline">\\(A\\)</span> is **orthogona
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> **Select all** possible values of <span class="math-inline">\\(\text{rank}(AB)\\)</span>.
+<span class="badge badge-points">4 pts</span> **Select all** possible values of <span class="math-inline">\\(\text{rank}(AB)\\)</span>.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 6</span></div>
 
@@ -467,7 +355,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> **Select all** possible values of <span class="math-inline">\\(\text{rank}(B)\\)</span>.
+<span class="badge badge-points">4 pts</span> **Select all** possible values of <span class="math-inline">\\(\text{rank}(B)\\)</span>.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 0</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> 6</span></div>
 
@@ -513,7 +401,7 @@ Both are achievable: all columns of <span class="math-inline">\\(B\\)</span> cou
 
 ---
 
-## Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">13 pts</span>
+## Problem 4 <span class="badge badge-points">13 pts</span>
 
 Suppose <span class="math-inline">\\(X\\)</span> is some <span class="math-inline">\\(3 \times d\\)</span> matrix, for some integer <span class="math-inline">\\(d\\)</span>. Let
 
@@ -527,7 +415,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Which of the following **could** be the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>?
+<span class="badge badge-points">5 pts</span> Which of the following **could** be the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>?
 
 Select an answer, then briefly justify your answer in the space provided using properties of projections. Correct answers without justification may not receive full credit.
 
@@ -578,7 +466,7 @@ In each of the remaining parts, identify whether the statement is True or False 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> If the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> is <span class="math-inline">\\(\vec y\\)</span> itself, then <span class="math-inline">\\(\text{rank}(X)\\)</span> must be 3.
+<span class="badge badge-points">4 pts</span> If the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> is <span class="math-inline">\\(\vec y\\)</span> itself, then <span class="math-inline">\\(\text{rank}(X)\\)</span> must be 3.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -597,7 +485,7 @@ But <span class="math-inline">\\(\text{colsp}(X)\\)</span> could still be a 1-di
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> If <span class="math-inline">\\(\text{rank}(X) = 3\\)</span>, then the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> must be <span class="math-inline">\\(\vec y\\)</span> itself.
+<span class="badge badge-points">4 pts</span> If <span class="math-inline">\\(\text{rank}(X) = 3\\)</span>, then the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> must be <span class="math-inline">\\(\vec y\\)</span> itself.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -617,7 +505,7 @@ But, this means every vector in <span class="math-inline">\\(\mathbb{R}^3\\)</sp
 
 ---
 
-## Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">13 pts</span>
+## Problem 5 <span class="badge badge-points">13 pts</span>
 
 Let
 
@@ -631,7 +519,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Recall, a CR decomposition of an <span class="math-inline">\\(n \times d\\)</span> matrix <span class="math-inline">\\(A\\)</span> is a product <span class="math-inline">\\(A = CR\\)</span>, where <span class="math-inline">\\(C\\)</span> is an <span class="math-inline">\\(n \times r\\)</span> matrix with linearly independent columns and <span class="math-inline">\\(R\\)</span> is an <span class="math-inline">\\(r \times d\\)</span> matrix with linearly independent rows, and <span class="math-inline">\\(r = \text{rank}(A)\\)</span>.
+<span class="badge badge-points">5 pts</span> Recall, a CR decomposition of an <span class="math-inline">\\(n \times d\\)</span> matrix <span class="math-inline">\\(A\\)</span> is a product <span class="math-inline">\\(A = CR\\)</span>, where <span class="math-inline">\\(C\\)</span> is an <span class="math-inline">\\(n \times r\\)</span> matrix with linearly independent columns and <span class="math-inline">\\(R\\)</span> is an <span class="math-inline">\\(r \times d\\)</span> matrix with linearly independent rows, and <span class="math-inline">\\(r = \text{rank}(A)\\)</span>.
 
 Provide a CR decomposition of <span class="math-inline">\\(A\\)</span>. Your answers should be matrices with no variables.
 
@@ -720,7 +608,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Find <span class="math-inline">\\(\text{dim}(\text{nullsp}(A^T))\\)</span>. Give your answer as an integer with no variables.
+<span class="badge badge-points">3 pts</span> Find <span class="math-inline">\\(\text{dim}(\text{nullsp}(A^T))\\)</span>. Give your answer as an integer with no variables.
 
 <span class="math-inline">\\(\text{dim}(\text{nullsp}(A^T)) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -805,7 +693,7 @@ $$
 
 ---
 
-## Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">20 pts</span>
+## Problem 6 <span class="badge badge-points">20 pts</span>
 
 Suppose we'd like to fit a multiple linear regression model **without** an intercept term to **predict the number of fans in attendance at a Michigan football home game** given various features.
 
@@ -841,7 +729,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> The first two rows of the dataset have the following information:
+<span class="badge badge-points">4 pts</span> The first two rows of the dataset have the following information:
 
 -   Game 1: 77 degrees Fahrenheit, 25 degrees Celsius, not night game, 102,111 fans
 
@@ -900,7 +788,7 @@ where <span class="math-inline">\\(\text{tempC}&#95;i = \frac{5}{9} (\text{tempF
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(\vec w'\\)</span> is one solution to the normal equation for this model. Which option describes the **complete set** of solutions to the normal equation?
+<span class="badge badge-points">4 pts</span> Suppose <span class="math-inline">\\(\vec w'\\)</span> is one solution to the normal equation for this model. Which option describes the **complete set** of solutions to the normal equation?
 
 | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace \vec w' + t\begin{bmatrix} 1 \\\\ -9/5 \\\\ 32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace \vec w' + t\begin{bmatrix} 1 \\\\ -9/5 \\\\ -32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace\\)</span> |
 |:---|:---|
@@ -968,7 +856,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> First, assume <span class="math-inline">\\(h(\vec x&#95;i)\\)</span> is the model at the top of the page.
+<span class="badge badge-points">6 pts</span> First, assume <span class="math-inline">\\(h(\vec x&#95;i)\\)</span> is the model at the top of the page.
 
 <ol class="roman">
 <li markdown="1">
@@ -1038,7 +926,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Now, suppose we remove the <span class="math-inline">\\(\textbf{day}&#95;i\\)</span> feature from our model, meaning our model is
+<span class="badge badge-points">6 pts</span> Now, suppose we remove the <span class="math-inline">\\(\textbf{day}&#95;i\\)</span> feature from our model, meaning our model is
 
 <div class="math-display">
 $$
@@ -1091,13 +979,13 @@ This is true. The night indicator column is still present in the new design matr
 
 ---
 
-## Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+## Problem 7 <span class="badge badge-points">10 pts</span>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(4 \times 4\\)</span> matrix and <span class="math-inline">\\(\vec x \in \mathbb{R}^4\\)</span>. Furthermore, suppose that the gradient of the function <span class="math-inline">\\(f(\vec x) = \vec x^T A \vec x\\)</span> is given by
+<span class="badge badge-points">6 pts</span> Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(4 \times 4\\)</span> matrix and <span class="math-inline">\\(\vec x \in \mathbb{R}^4\\)</span>. Furthermore, suppose that the gradient of the function <span class="math-inline">\\(f(\vec x) = \vec x^T A \vec x\\)</span> is given by
 
 <div class="math-display">
 $$
@@ -1171,7 +1059,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(A\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix, <span class="math-inline">\\(\vec b \in \mathbb{R}^n\\)</span>, and that <span class="math-inline">\\(g: \mathbb{R}^n \to \mathbb{R}\\)</span> is defined by
+<span class="badge badge-points">4 pts</span> Suppose <span class="math-inline">\\(A\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix, <span class="math-inline">\\(\vec b \in \mathbb{R}^n\\)</span>, and that <span class="math-inline">\\(g: \mathbb{R}^n \to \mathbb{R}\\)</span> is defined by
 
 <div class="math-display">
 $$
@@ -1241,7 +1129,7 @@ $$
 
 ---
 
-## Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span>
+## Problem 8 <span class="badge badge-points">11 pts</span>
 
 Let <span class="math-inline">\\(\vec x = \begin{bmatrix} x&#95;1 \\\\ x&#95;2 \end{bmatrix}\\)</span>. Consider the function
 
@@ -1255,7 +1143,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Fill in the blanks: The set of all vectors <span class="math-inline">\\(\vec x^{\ast}\\)</span> that minimize <span class="math-inline">\\(f(\vec x)\\)</span> form a \_\_(i)\_\_ in <span class="math-inline">\\(\mathbb{R}^2\\)</span>. This set \_\_(ii)\_\_ a subspace of <span class="math-inline">\\(\mathbb{R}^2\\)</span>.
+<span class="badge badge-points">3 pts</span> Fill in the blanks: The set of all vectors <span class="math-inline">\\(\vec x^{\ast}\\)</span> that minimize <span class="math-inline">\\(f(\vec x)\\)</span> form a \_\_(i)\_\_ in <span class="math-inline">\\(\mathbb{R}^2\\)</span>. This set \_\_(ii)\_\_ a subspace of <span class="math-inline">\\(\mathbb{R}^2\\)</span>.
 
 <ol class="roman">
 <li markdown="1">
@@ -1315,7 +1203,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span> Suppose we use gradient descent to minimize <span class="math-inline">\\(f(\vec x)\\)</span> using an initial guess of <span class="math-inline">\\(\vec x^{(0)} = \begin{bmatrix} 1 \\\\ 1 \end{bmatrix}\\)</span>.
+<span class="badge badge-points">8 pts</span> Suppose we use gradient descent to minimize <span class="math-inline">\\(f(\vec x)\\)</span> using an initial guess of <span class="math-inline">\\(\vec x^{(0)} = \begin{bmatrix} 1 \\\\ 1 \end{bmatrix}\\)</span>.
 
 Find the learning rate/step size <span class="math-inline">\\(\alpha\\)</span> that will cause gradient descent to converge to a global minimum of <span class="math-inline">\\(f(\vec x)\\)</span> **in one iteration**, i.e. such that <span class="math-inline">\\(\vec x^{(1)}\\)</span> is a minimizer of <span class="math-inline">\\(f(\vec x)\\)</span>.
 

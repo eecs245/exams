@@ -1,5 +1,6 @@
 ---
-layout: minimal
+layout: exam
+mathjax: true
 title: "Spring 2026 Midterm 1"
 description: "Spring 2026 Midterm 1 problems."
 nav_exclude: true
@@ -8,119 +9,6 @@ hide_footer_hr: true
 
 {% raw %}
 
-<script>
-window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-<style>
-.main-content p {
-  margin-bottom: 1.15em;
-}
-.assignment-pdf-button {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.65rem;
-}
-.assignment-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0 0 1rem;
-}
-.math-display,
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.math-display {
-  padding-bottom: 0.2rem;
-}
-.math-display mjx-container[jax="CHTML"][display="true"] {
-  padding-bottom: 0.2rem;
-}
-.answer-blank {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  min-width: 8rem;
-  height: 1em;
-  vertical-align: baseline;
-}
-.assignment-parts {
-  margin: 1rem 0;
-}
-.assignment-part {
-  column-gap: 0.55rem;
-  display: grid;
-  grid-template-columns: 1.4rem minmax(0, 1fr);
-  margin-bottom: 1.05rem;
-}
-.assignment-part-label {
-  font-weight: 600;
-  text-align: right;
-}
-.assignment-part-content > :first-child {
-  margin-top: 0;
-}
-.mc-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.6rem;
-  margin: 0.9rem 0 1.1rem;
-}
-.mc-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-}
-.mc-bubble,
-.mc-square {
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 0.95em;
-  width: 0.95em;
-  vertical-align: -0.12em;
-}
-.mc-bubble {
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-.mc-square {
-  border: 1.5px solid currentColor;
-}
-.mc-correct {
-  background: currentColor;
-}
-.main-content table {
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
-}
-.main-content table th,
-.main-content table td {
-  padding: 0.35rem 0.5rem;
-  white-space: nowrap;
-}
-</style>
-
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>
@@ -150,7 +38,7 @@ body { padding-top: 0 !important; }
 
 ---
 
-## Problem 1 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">16 pts</span>
+## Problem 1 <span class="badge badge-points">16 pts</span>
 
 Suppose we'd like to find the optimal parameter, <span class="math-inline">\\(w^{\ast}\\)</span>, for the constant model <span class="math-inline">\\(h(x&#95;i)=w\\)</span>, using the following dataset of <span class="math-inline">\\(n = 4\\)</span> values, <span class="math-inline">\\(y&#95;1, y&#95;2, y&#95;3, y&#95;4\\)</span>:
 
@@ -164,7 +52,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> First, suppose we find the optimal parameter by minimizing mean squared error, <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span>. Which value of <span class="math-inline">\\(w\\)</span> minimizes <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span>? Give your answer as a number with no variables.
+<span class="badge badge-points">3 pts</span> First, suppose we find the optimal parameter by minimizing mean squared error, <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span>. Which value of <span class="math-inline">\\(w\\)</span> minimizes <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span>? Give your answer as a number with no variables.
 
 <span class="math-inline">\\(\text{minimizer of } R&#95;\text{sq}(w) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -198,7 +86,7 @@ Let <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span> be the average c
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> State one value of <span class="math-inline">\\(w\\)</span> where the derivative of <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span> is not defined.
+<span class="badge badge-points">3 pts</span> State one value of <span class="math-inline">\\(w\\)</span> where the derivative of <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span> is not defined.
 
 <span class="math-inline">\\(\text{one value of } w \text{ where the derivative of } R&#95;\text{clip}(w) \text{ is not defined} =\\)</span> \_\_\_\_\_\_
 
@@ -227,7 +115,7 @@ For context, here's what average clipped loss looks like for this dataset:
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Suppose we restrict <span class="math-inline">\\(w\\)</span> to the interval <span class="math-inline">\\(1 \leq w \leq 3\\)</span>. Among all values of <span class="math-inline">\\(w\\)</span> in this interval, which value minimizes <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span>? Give your answer as a number with no variables.
+<span class="badge badge-points">3 pts</span> Suppose we restrict <span class="math-inline">\\(w\\)</span> to the interval <span class="math-inline">\\(1 \leq w \leq 3\\)</span>. Among all values of <span class="math-inline">\\(w\\)</span> in this interval, which value minimizes <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span>? Give your answer as a number with no variables.
 
 <span class="math-inline">\\(\text{minimizer of } R&#95;\text{clip}(w) \text{ within the interval } [1, 3] = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -266,7 +154,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Now suppose there are no restrictions on <span class="math-inline">\\(w\\)</span>. Among all possible values of <span class="math-inline">\\(w\\)</span>, which value minimizes <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span>? Give your answer as a number with no variables.
+<span class="badge badge-points">3 pts</span> Now suppose there are no restrictions on <span class="math-inline">\\(w\\)</span>. Among all possible values of <span class="math-inline">\\(w\\)</span>, which value minimizes <span class="math-inline">\\(R&#95;\text{clip}(w)\\)</span>? Give your answer as a number with no variables.
 
 <span class="math-inline">\\(\text{minimizer of } R&#95;\text{clip}(w) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -307,7 +195,7 @@ The question, then, is whether <span class="math-inline">\\(w=2\\)</span> is the
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">e)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> State one pro and one con of using clipped loss instead of squared loss to find optimal model parameters.
+<span class="badge badge-points">4 pts</span> State one pro and one con of using clipped loss instead of squared loss to find optimal model parameters.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -321,7 +209,7 @@ One pro is that clipped loss is less sensitive to outliers, since very large err
 
 ---
 
-## Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+## Problem 2 <span class="badge badge-points">10 pts</span>
 
 We will continue to use the constant model, <span class="math-inline">\\(h(x&#95;i)=w\\)</span>, and the same dataset of <span class="math-inline">\\(n=4\\)</span> values as in Problem 1:
 
@@ -357,7 +245,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(\beta = 1\\)</span>. Which value of <span class="math-inline">\\(w\\)</span> minimizes <span class="math-inline">\\(R&#95;\text{WA}(w)\\)</span>? Show your work, and write your final answer in the box provided. Your answer should be a number with no variables. If there are multiple possible answers, state just one.
+<span class="badge badge-points">4 pts</span> Suppose <span class="math-inline">\\(\beta = 1\\)</span>. Which value of <span class="math-inline">\\(w\\)</span> minimizes <span class="math-inline">\\(R&#95;\text{WA}(w)\\)</span>? Show your work, and write your final answer in the box provided. Your answer should be a number with no variables. If there are multiple possible answers, state just one.
 
 <div class="math-display">
 $$
@@ -378,7 +266,7 @@ This dataset has an even number of values, so any <span class="math-inline">\\(w
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Now suppose <span class="math-inline">\\(\beta = 2\\)</span>. Which value of <span class="math-inline">\\(w\\)</span> minimizes <span class="math-inline">\\(R&#95;\text{WA}(w)\\)</span>? Show your work, and write your final answer in the box provided. Your answer should be a number with no variables. If there are multiple possible answers, state just one.
+<span class="badge badge-points">6 pts</span> Now suppose <span class="math-inline">\\(\beta = 2\\)</span>. Which value of <span class="math-inline">\\(w\\)</span> minimizes <span class="math-inline">\\(R&#95;\text{WA}(w)\\)</span>? Show your work, and write your final answer in the box provided. Your answer should be a number with no variables. If there are multiple possible answers, state just one.
 
 <div class="math-display">
 $$
@@ -408,7 +296,7 @@ Conceptually, the fact that the errors in the case where <span class="math-inlin
 
 ---
 
-## Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
+## Problem 3 <span class="badge badge-points">14 pts</span>
 
 Suppose we fit a simple linear regression model **with** an intercept term, <span class="math-inline">\\(h(x&#95;i)=w&#95;0+w&#95;1x&#95;i\\)</span>, to a dataset of <span class="math-inline">\\(n\\)</span> points <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span> by minimizing mean squared error. You are given the following information:
 
@@ -420,7 +308,7 @@ Suppose we fit a simple linear regression model **with** an intercept term, <spa
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find <span class="math-inline">\\(\bar x\\)</span>, the mean of <span class="math-inline">\\(x&#95;1, x&#95;2, \ldots, x&#95;n\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables. <em>Hint: What property does the line <span class="math-inline">\\(h(x&#95;i)\\)</span> satisfy?</em>
+<span class="badge badge-points">6 pts</span> Find <span class="math-inline">\\(\bar x\\)</span>, the mean of <span class="math-inline">\\(x&#95;1, x&#95;2, \ldots, x&#95;n\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables. <em>Hint: What property does the line <span class="math-inline">\\(h(x&#95;i)\\)</span> satisfy?</em>
 
 <div class="math-display">
 $$
@@ -465,7 +353,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose the correlation coefficient between the <span class="math-inline">\\(x\\)</span>-values and <span class="math-inline">\\(y\\)</span>-values is <span class="math-inline">\\(r = 1/3\\)</span>.
+<span class="badge badge-points">4 pts</span> Suppose the correlation coefficient between the <span class="math-inline">\\(x\\)</span>-values and <span class="math-inline">\\(y\\)</span>-values is <span class="math-inline">\\(r = 1/3\\)</span>.
 
 The standard deviation of <span class="math-inline">\\(y\\)</span>, <span class="math-inline">\\(\sigma&#95;y\\)</span>, is <span class="math-inline">\\(c\\)</span> times the standard deviation of <span class="math-inline">\\(x\\)</span>, <span class="math-inline">\\(\sigma&#95;x\\)</span>. In other words,
 
@@ -508,7 +396,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Let <span class="math-inline">\\(e&#95;i=y&#95;i-h(x&#95;i)\\)</span> be the fit model's error for the <span class="math-inline">\\(i\\)</span>th point. Note that <span class="math-inline">\\(e&#95;i\\)</span> may either be positive or negative. Which of the following statements are **guaranteed** to be true? **Select all** that apply.
+<span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(e&#95;i=y&#95;i-h(x&#95;i)\\)</span> be the fit model's error for the <span class="math-inline">\\(i\\)</span>th point. Note that <span class="math-inline">\\(e&#95;i\\)</span> may either be positive or negative. Which of the following statements are **guaranteed** to be true? **Select all** that apply.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n x&#95;i e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n y&#95;i e&#95;i=0\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle\sum&#95;{i=1}^n e&#95;i (x&#95;i - \bar x)=0\\)</span></span></div>
 
@@ -618,7 +506,7 @@ Intentionally, I haven't provided the proof of this! I want you to piece the pro
 
 ---
 
-## Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span>
+## Problem 4 <span class="badge badge-points">8 pts</span>
 
 Let <span class="math-inline">\\(\vec u,\vec v\in\mathbb R^n\\)</span> be vectors satisfying
 
@@ -674,7 +562,7 @@ $$
 
 ---
 
-## Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">13 pts</span>
+## Problem 5 <span class="badge badge-points">13 pts</span>
 
 Suppose <span class="math-inline">\\(\vec u,\vec v\in\mathbb R^n\\)</span> are non-zero vectors and <span class="math-inline">\\(k\\)</span> is a scalar. Let
 
@@ -690,7 +578,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> In this part only, suppose <span class="math-inline">\\(C=0\\)</span>, <span class="math-inline">\\(\vec u = \begin{bmatrix} 1 \\\\ 2 \end{bmatrix}\\)</span>, and <span class="math-inline">\\(\vec v = \begin{bmatrix} 3 \\\\ 1 \end{bmatrix}\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span> that minimizes <span class="math-inline">\\(f(k)\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables.
+<span class="badge badge-points">6 pts</span> In this part only, suppose <span class="math-inline">\\(C=0\\)</span>, <span class="math-inline">\\(\vec u = \begin{bmatrix} 1 \\\\ 2 \end{bmatrix}\\)</span>, and <span class="math-inline">\\(\vec v = \begin{bmatrix} 3 \\\\ 1 \end{bmatrix}\\)</span>. Find the value of <span class="math-inline">\\(k\\)</span> that minimizes <span class="math-inline">\\(f(k)\\)</span>. Show your work, and write your final answer in the box provided. Your answer should be a number with no variables.
 
 <div class="math-display">
 $$
@@ -751,7 +639,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Note that <span class="math-inline">\\(f(k)\\)</span> *almost* looks like the squared norm of the vector <span class="math-inline">\\(\vec u - k \vec v\\)</span>, but with an extra term <span class="math-inline">\\(C k^2\\)</span>. Let's try and rewrite <span class="math-inline">\\(f(k)\\)</span> so that it *is* the squared norm of another related vector.
+<span class="badge badge-points">4 pts</span> Note that <span class="math-inline">\\(f(k)\\)</span> *almost* looks like the squared norm of the vector <span class="math-inline">\\(\vec u - k \vec v\\)</span>, but with an extra term <span class="math-inline">\\(C k^2\\)</span>. Let's try and rewrite <span class="math-inline">\\(f(k)\\)</span> so that it *is* the squared norm of another related vector.
 
 Define two new vectors, <span class="math-inline">\\(\vec U, \vec V \in \mathbb R^{n+1}\\)</span> by appending the scalar <span class="math-inline">\\(a\\)</span> to the end of <span class="math-inline">\\(\vec u\\)</span> and the scalar <span class="math-inline">\\(b\\)</span> to the end of <span class="math-inline">\\(\vec v\\)</span>.
 
@@ -832,7 +720,7 @@ So, the correct answers are <span class="math-inline">\\(\boxed{a=0}\\)</span> a
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> As <span class="math-inline">\\(C\\)</span> increases, what happens to the value of <span class="math-inline">\\(k\\)</span> that minimizes <span class="math-inline">\\(f(k)\\)</span>? Explain your reasoning.
+<span class="badge badge-points">3 pts</span> As <span class="math-inline">\\(C\\)</span> increases, what happens to the value of <span class="math-inline">\\(k\\)</span> that minimizes <span class="math-inline">\\(f(k)\\)</span>? Explain your reasoning.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -890,7 +778,7 @@ $$
 
 ---
 
-## Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">11 pts</span>
+## Problem 6 <span class="badge badge-points">11 pts</span>
 
 Suppose <span class="math-inline">\\(c \in \mathbb R\\)</span> is a constant and
 
@@ -906,7 +794,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Fill in the blanks to complete the sentence:
+<span class="badge badge-points">4 pts</span> Fill in the blanks to complete the sentence:
 
 For all values of <span class="math-inline">\\(c\\)</span>, <span class="math-inline">\\(\text{span}(\lbrace\vec u,\vec v\rbrace)\\)</span> is a \_\_(i)\_\_-dimensional subspace of \_\_(ii)\_\_.
 
@@ -925,7 +813,7 @@ Why <span class="math-inline">\\(\mathbb R^3\\)</span>? Because both <span class
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">7 pts</span> Suppose the plane spanned by <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> is
+<span class="badge badge-points">7 pts</span> Suppose the plane spanned by <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> is
 
 <div class="math-display">
 $$
@@ -993,7 +881,7 @@ But, notice that <span class="math-inline">\\(6c + 6 = 24 \implies c = 3\\)</spa
 
 ---
 
-## Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+## Problem 7 <span class="badge badge-points">10 pts</span>
 
 Suppose <span class="math-inline">\\(\vec v&#95;1,\vec v&#95;2,\vec v&#95;3,\vec v&#95;4\in\mathbb R^n\\)</span> are a **linearly independent** collection of vectors. Define
 
@@ -1010,7 +898,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">7 pts</span> Are <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> linearly independent?
+<span class="badge badge-points">7 pts</span> Are <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> linearly independent?
 
 <ol class="roman">
 <li markdown="1">
@@ -1053,7 +941,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> What is the dimension of <span class="math-inline">\\(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)\\)</span>? Give your answer as a number with no variables.
+<span class="badge badge-points">3 pts</span> What is the dimension of <span class="math-inline">\\(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)\\)</span>? Give your answer as a number with no variables.
 
 <span class="math-inline">\\(\dim(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -1104,7 +992,7 @@ $$
 
 ---
 
-## Problem 8 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">8 pts</span>
+## Problem 8 <span class="badge badge-points">8 pts</span>
 
 Suppose <span class="math-inline">\\(S\\)</span> is the subspace of <span class="math-inline">\\(\mathbb R^4\\)</span> defined by
 
@@ -1160,13 +1048,13 @@ So, only the first and third choices are bases for <span class="math-inline">\\(
 
 ---
 
-## Problem 9 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+## Problem 9 <span class="badge badge-points">10 pts</span>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">7 pts</span> Suppose <span class="math-inline">\\(x\\)</span> and <span class="math-inline">\\(y\\)</span> are non-negative numbers. Using the Cauchy-Schwarz inequality, prove that
+<span class="badge badge-points">7 pts</span> Suppose <span class="math-inline">\\(x\\)</span> and <span class="math-inline">\\(y\\)</span> are non-negative numbers. Using the Cauchy-Schwarz inequality, prove that
 
 <div class="math-display">
 $$
@@ -1219,7 +1107,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Now suppose <span class="math-inline">\\(x\\)</span>, <span class="math-inline">\\(y\\)</span>, and <span class="math-inline">\\(z\\)</span> are non-negative numbers. Which inequality is guaranteed to be true?
+<span class="badge badge-points">3 pts</span> Now suppose <span class="math-inline">\\(x\\)</span>, <span class="math-inline">\\(y\\)</span>, and <span class="math-inline">\\(z\\)</span> are non-negative numbers. Which inequality is guaranteed to be true?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^2}{2}\le x^2+y^2+z^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^2}{3}\le x^2+y^2+z^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^2}{2}\le x^3+y^3+z^3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{(x+y+z)^3}{3}\le x^3+y^3+z^3\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of the above</span></div>
 

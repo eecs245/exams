@@ -1,5 +1,6 @@
 ---
-layout: minimal
+layout: exam
+mathjax: true
 title: "Winter 2026 Midterm 1"
 description: "Winter 2026 Midterm 1 problems."
 nav_exclude: true
@@ -8,119 +9,6 @@ hide_footer_hr: true
 
 {% raw %}
 
-<script>
-window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-<style>
-.main-content p {
-  margin-bottom: 1.15em;
-}
-.assignment-pdf-button {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.65rem;
-}
-.assignment-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0 0 1rem;
-}
-.math-display,
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.math-display {
-  padding-bottom: 0.2rem;
-}
-.math-display mjx-container[jax="CHTML"][display="true"] {
-  padding-bottom: 0.2rem;
-}
-.answer-blank {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  min-width: 8rem;
-  height: 1em;
-  vertical-align: baseline;
-}
-.assignment-parts {
-  margin: 1rem 0;
-}
-.assignment-part {
-  column-gap: 0.55rem;
-  display: grid;
-  grid-template-columns: 1.4rem minmax(0, 1fr);
-  margin-bottom: 1.05rem;
-}
-.assignment-part-label {
-  font-weight: 600;
-  text-align: right;
-}
-.assignment-part-content > :first-child {
-  margin-top: 0;
-}
-.mc-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.6rem;
-  margin: 0.9rem 0 1.1rem;
-}
-.mc-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-}
-.mc-bubble,
-.mc-square {
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 0.95em;
-  width: 0.95em;
-  vertical-align: -0.12em;
-}
-.mc-bubble {
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-.mc-square {
-  border: 1.5px solid currentColor;
-}
-.mc-correct {
-  background: currentColor;
-}
-.main-content table {
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
-}
-.main-content table th,
-.main-content table td {
-  padding: 0.35rem 0.5rem;
-  white-space: nowrap;
-}
-</style>
-
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>
@@ -149,7 +37,7 @@ body { padding-top: 0 !important; }
 
 ---
 
-## Problem 1 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">16 pts</span>
+## Problem 1 <span class="badge badge-points">16 pts</span>
 
 Consider a dataset of <span class="math-inline">\\(n\\)</span> values, <span class="math-inline">\\(y&#95;1, y&#95;2, \ldots, y&#95;n\\)</span>, with:
 
@@ -163,7 +51,7 @@ Consider a dataset of <span class="math-inline">\\(n\\)</span> values, <span cla
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> In the space provided, sketch the graph of <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span>, the mean squared error of a constant prediction <span class="math-inline">\\(w\\)</span> on the dataset. For full credit:
+<span class="badge badge-points">4 pts</span> In the space provided, sketch the graph of <span class="math-inline">\\(R&#95;\text{sq}(w)\\)</span>, the mean squared error of a constant prediction <span class="math-inline">\\(w\\)</span> on the dataset. For full credit:
 
 -   The shape of the graph must be correct.
 
@@ -204,7 +92,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Which of the following quantities is **guaranteed** to be equal to 0? Select all that apply.
+<span class="badge badge-points">6 pts</span> Which of the following quantities is **guaranteed** to be equal to 0? Select all that apply.
 
 <span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\displaystyle \frac{1}{n} \sum&#95;{i=1}^n (y&#95;i - 15)\\)</span>
 
@@ -273,7 +161,7 @@ With this in mind, let's look at the options:
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Recall that <span class="math-inline">\\(R&#95;\text{abs}(w)\\)</span> is the mean absolute error of a constant prediction <span class="math-inline">\\(w\\)</span> on the dataset. A snippet of the graph of <span class="math-inline">\\(R&#95;\text{abs}(w)\\)</span> is shown below.
+<span class="badge badge-points">6 pts</span> Recall that <span class="math-inline">\\(R&#95;\text{abs}(w)\\)</span> is the mean absolute error of a constant prediction <span class="math-inline">\\(w\\)</span> on the dataset. A snippet of the graph of <span class="math-inline">\\(R&#95;\text{abs}(w)\\)</span> is shown below.
 
 <div style="text-align: center;">
 <img src="imgs/line_graph_gray.png" alt="image" style="width: 50%; max-width: 100%;">
@@ -379,7 +267,7 @@ Therefore, there are 6 values in the dataset that are equal to 18.
 
 ---
 
-## Problem 2 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
+## Problem 2 <span class="badge badge-points">14 pts</span>
 
 Suppose we'd like to fit a simple linear regression model to a dataset of <span class="math-inline">\\(n\\)</span> points,
 
@@ -399,7 +287,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Which of the following is the relationship between <span class="math-inline">\\(M\\)</span> and <span class="math-inline">\\(\sigma&#95;y^2\\)</span>? Select an answer and provide a brief explanation in the box provided.
+<span class="badge badge-points">5 pts</span> Which of the following is the relationship between <span class="math-inline">\\(M\\)</span> and <span class="math-inline">\\(\sigma&#95;y^2\\)</span>? Select an answer and provide a brief explanation in the box provided.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(M \leq \sigma&#95;y^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(M = \sigma&#95;y^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(M \geq \sigma&#95;y^2\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible to tell</span></div>
 
@@ -424,7 +312,7 @@ The constant model, <span class="math-inline">\\(h(x&#95;i) = w\\)</span>, can b
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">5 pts</span> Suppose that <span class="math-inline">\\(M = 0\\)</span>. What is the value of <span class="math-inline">\\(r\\)</span>, the correlation coefficient between the <span class="math-inline">\\(x\\)</span>-values and <span class="math-inline">\\(y\\)</span>-values in the dataset? <span class="math-inline">\\(\boxed{\text{Circle}}\\)</span> your final answer and provide a brief explanation. If there are multiple possible values, state them all.
+<span class="badge badge-points">5 pts</span> Suppose that <span class="math-inline">\\(M = 0\\)</span>. What is the value of <span class="math-inline">\\(r\\)</span>, the correlation coefficient between the <span class="math-inline">\\(x\\)</span>-values and <span class="math-inline">\\(y\\)</span>-values in the dataset? <span class="math-inline">\\(\boxed{\text{Circle}}\\)</span> your final answer and provide a brief explanation. If there are multiple possible values, state them all.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -439,7 +327,7 @@ The only case in which <span class="math-inline">\\(M = 0\\)</span> is when the 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: It is possible for there to be multiple pairs of <span class="math-inline">\\((\text{intercept}, \text{slope})\\)</span> with a mean squared error of <span class="math-inline">\\(M\\)</span>.
+<span class="badge badge-points">2 pts</span> True or False: It is possible for there to be multiple pairs of <span class="math-inline">\\((\text{intercept}, \text{slope})\\)</span> with a mean squared error of <span class="math-inline">\\(M\\)</span>.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -463,7 +351,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: It is possible for there to be multiple pairs of <span class="math-inline">\\((\text{intercept}, \text{slope})\\)</span> with a mean squared error of <span class="math-inline">\\(M + 1\\)</span>.
+<span class="badge badge-points">2 pts</span> True or False: It is possible for there to be multiple pairs of <span class="math-inline">\\((\text{intercept}, \text{slope})\\)</span> with a mean squared error of <span class="math-inline">\\(M + 1\\)</span>.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -487,7 +375,7 @@ So, yes, it is possible for there to be multiple pairs of <span class="math-inli
 
 ---
 
-## Problem 3 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## Problem 3 <span class="badge badge-points">12 pts</span>
 
 Consider the following two planes, <span class="math-inline">\\(P&#95;1\\)</span> and <span class="math-inline">\\(P&#95;2\\)</span>, in <span class="math-inline">\\(\mathbb{R}^3\\)</span>.
 
@@ -499,7 +387,7 @@ Consider the following two planes, <span class="math-inline">\\(P&#95;1\\)</span
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find the equation of <span class="math-inline">\\(P&#95;1\\)</span> in standard form, i.e. <span class="math-inline">\\(ax + by + cz + d = 0\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer.
+<span class="badge badge-points">6 pts</span> Find the equation of <span class="math-inline">\\(P&#95;1\\)</span> in standard form, i.e. <span class="math-inline">\\(ax + by + cz + d = 0\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -529,7 +417,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Planes <span class="math-inline">\\(P&#95;1\\)</span> and <span class="math-inline">\\(P&#95;2\\)</span> intersect at a line. Find the equation of this line in parametric form. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer. <em>Hint: This can be done without knowing the answer to the previous part.</em>
+<span class="badge badge-points">6 pts</span> Planes <span class="math-inline">\\(P&#95;1\\)</span> and <span class="math-inline">\\(P&#95;2\\)</span> intersect at a line. Find the equation of this line in parametric form. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer. <em>Hint: This can be done without knowing the answer to the previous part.</em>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -652,7 +540,7 @@ $$
 
 ---
 
-## Problem 4 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## Problem 4 <span class="badge badge-points">12 pts</span>
 
 Suppose <span class="math-inline">\\(\vec u = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\vec u + \vec v + \vec w = \begin{bmatrix} 4 \\\\ 0 \\\\ 0 \end{bmatrix}\\)</span>. Assume that none of <span class="math-inline">\\(\vec u\\)</span>, <span class="math-inline">\\(\vec v\\)</span>, or <span class="math-inline">\\(\vec w\\)</span> are the zero vector, <span class="math-inline">\\(\vec 0\\)</span>.
 
@@ -662,7 +550,7 @@ For each statement below, identify whether it is **impossible**, **possible**, o
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
+<span class="badge badge-points">4 pts</span>
 <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> are orthogonal.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Possible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Guaranteed</span></div>
@@ -686,7 +574,7 @@ So, it is possible for <span class="math-inline">\\(\vec u\\)</span> and <span c
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> The set <span class="math-inline">\\(\lbrace\vec u, \vec v, \vec w\rbrace\\)</span> is linearly dependent.
+<span class="badge badge-points">4 pts</span> The set <span class="math-inline">\\(\lbrace\vec u, \vec v, \vec w\rbrace\\)</span> is linearly dependent.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Possible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Guaranteed</span></div>
 
@@ -727,7 +615,7 @@ This is a non-trivial linear combination of <span class="math-inline">\\(\vec u\
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span>
+<span class="badge badge-points">4 pts</span>
 <span class="math-inline">\\(\vec u\\)</span>, <span class="math-inline">\\(\vec v\\)</span>, and <span class="math-inline">\\(\vec w\\)</span> all have the same norm (length).
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Possible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Guaranteed</span></div>
@@ -764,7 +652,7 @@ This is a contradiction, so it is impossible for both <span class="math-inline">
 
 ---
 
-## Problem 5 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## Problem 5 <span class="badge badge-points">12 pts</span>
 
 Suppose <span class="math-inline">\\(\vec u, \vec v \in \mathbb{R}^n\\)</span>. Let <span class="math-inline">\\(\vec p\\)</span> be the projection of <span class="math-inline">\\(\vec u\\)</span> onto <span class="math-inline">\\(\vec v\\)</span>. Furthermore, we know that:
 
@@ -778,7 +666,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find <span class="math-inline">\\(| \vec u \cdot \vec v |\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a number with no variables.
+<span class="badge badge-points">6 pts</span> Find <span class="math-inline">\\(| \vec u \cdot \vec v |\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a number with no variables.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -811,7 +699,7 @@ So, we know that <span class="math-inline">\\(\frac{\left| \vec u \cdot \vec v \
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> For each pair of vectors, determine whether they are orthogonal, linearly dependent, or neither. Make sure to select **one bubble per row**.
+<span class="badge badge-points">6 pts</span> For each pair of vectors, determine whether they are orthogonal, linearly dependent, or neither. Make sure to select **one bubble per row**.
 
 |  | pair of vectors | orthogonal | linearly dependent | neither |
 |:--:|:---|:--:|:--:|:--:|
@@ -842,7 +730,7 @@ The only possible "edge case" here is when <span class="math-inline">\\(\vec u\\
 
 ---
 
-## Problem 6 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
+## Problem 6 <span class="badge badge-points">14 pts</span>
 
 Suppose <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \vec x&#95;3, \vec x&#95;4, \vec x&#95;5, \vec x&#95;6\\)</span> are 6 vectors in <span class="math-inline">\\(\mathbb{R}^9\\)</span> such that
 
@@ -858,7 +746,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: The set <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;2, \vec x&#95;3, \vec x&#95;4, \vec x&#95;5, \vec x&#95;6\rbrace\\)</span> is linearly independent.
+<span class="badge badge-points">2 pts</span> True or False: The set <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;2, \vec x&#95;3, \vec x&#95;4, \vec x&#95;5, \vec x&#95;6\rbrace\\)</span> is linearly independent.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -877,7 +765,7 @@ If these vectors were linearly independent, they would span a 6-dimensional subs
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Consider the statement:
+<span class="badge badge-points">4 pts</span> Consider the statement:
 
 "There exists a vector <span class="math-inline">\\(\vec b \in \mathbb{R}^9\\)</span> such that the number of ways to write <span class="math-inline">\\(\vec b\\)</span> as a linear combination of <span class="math-inline">\\(\vec x&#95;1, \ldots, \vec x&#95;6\\)</span> is ."
 
@@ -925,7 +813,7 @@ infinite
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Suppose <span class="math-inline">\\(\vec b\\)</span> is some vector in <span class="math-inline">\\(S\\)</span> such that both of the following equations are true:
+<span class="badge badge-points">4 pts</span> Suppose <span class="math-inline">\\(\vec b\\)</span> is some vector in <span class="math-inline">\\(S\\)</span> such that both of the following equations are true:
 
 <div class="math-display">
 $$
@@ -1020,7 +908,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Let <span class="math-inline">\\(T = \text{span}(\lbrace \vec x&#95;1, \vec x&#95;2, \vec x&#95;3 \rbrace)\\)</span> and <span class="math-inline">\\(U = \text{span}(\lbrace \vec x&#95;4, \vec x&#95;5, \vec x&#95;6 \rbrace)\\)</span>. Suppose <span class="math-inline">\\(W\\)</span> is the **intersection** of <span class="math-inline">\\(T\\)</span> and <span class="math-inline">\\(U\\)</span>, i.e. <span class="math-inline">\\(W = T \cap U\\)</span>. <span class="math-inline">\\(W\\)</span> is also a subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>.
+<span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(T = \text{span}(\lbrace \vec x&#95;1, \vec x&#95;2, \vec x&#95;3 \rbrace)\\)</span> and <span class="math-inline">\\(U = \text{span}(\lbrace \vec x&#95;4, \vec x&#95;5, \vec x&#95;6 \rbrace)\\)</span>. Suppose <span class="math-inline">\\(W\\)</span> is the **intersection** of <span class="math-inline">\\(T\\)</span> and <span class="math-inline">\\(U\\)</span>, i.e. <span class="math-inline">\\(W = T \cap U\\)</span>. <span class="math-inline">\\(W\\)</span> is also a subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>.
 
 What are the smallest and largest possible values of <span class="math-inline">\\(\text{dim}(W)\\)</span>, the dimension of <span class="math-inline">\\(W\\)</span>? Give your answers as integers.
 
@@ -1060,7 +948,7 @@ So, the smallest possible value of <span class="math-inline">\\(\text{dim}(W)\\)
 
 ---
 
-## Problem 7 <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">20 pts</span>
+## Problem 7 <span class="badge badge-points">20 pts</span>
 
 Suppose we'd like to find the optimal constant parameter, <span class="math-inline">\\(w^{\ast}\\)</span>, for the constant model <span class="math-inline">\\(h(x&#95;i) = w\\)</span>, given a dataset of <span class="math-inline">\\(n\\)</span> points <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span>. To do so, we use the **sub-squared** loss function, <span class="math-inline">\\(L&#95;\text{ss}\\)</span>, defined below.
 
@@ -1076,7 +964,7 @@ This requires us to assume that all <span class="math-inline">\\(y&#95;i \ge 0\\
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find <span class="math-inline">\\(\frac{\text{d}}{\text{d}w} R&#95;\text{ss}(w)\\)</span>, the derivative of **average** sub-squared loss (i.e. the empirical risk) with respect to <span class="math-inline">\\(w\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be an expression in terms of the <span class="math-inline">\\(y&#95;i\\)</span>'s, <span class="math-inline">\\(n\\)</span>, and/or any constants. <em>Hint: The derivative of <span class="math-inline">\\(f(x) = \sqrt{x}\\)</span> is <span class="math-inline">\\(\frac{\text{d}}{\text{d}x} \sqrt{x} = \frac{1}{2\sqrt{x}}\\)</span>.</em>
+<span class="badge badge-points">6 pts</span> Find <span class="math-inline">\\(\frac{\text{d}}{\text{d}w} R&#95;\text{ss}(w)\\)</span>, the derivative of **average** sub-squared loss (i.e. the empirical risk) with respect to <span class="math-inline">\\(w\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be an expression in terms of the <span class="math-inline">\\(y&#95;i\\)</span>'s, <span class="math-inline">\\(n\\)</span>, and/or any constants. <em>Hint: The derivative of <span class="math-inline">\\(f(x) = \sqrt{x}\\)</span> is <span class="math-inline">\\(\frac{\text{d}}{\text{d}x} \sqrt{x} = \frac{1}{2\sqrt{x}}\\)</span>.</em>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1111,7 +999,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Show that the value of <span class="math-inline">\\(w^{\ast}\\)</span> that minimizes average sub-squared loss is
+<span class="badge badge-points">6 pts</span> Show that the value of <span class="math-inline">\\(w^{\ast}\\)</span> that minimizes average sub-squared loss is
 
 <div class="math-display">
 $$
@@ -1160,7 +1048,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Using the Cauchy-Schwarz inequality, prove that
+<span class="badge badge-points">6 pts</span> Using the Cauchy-Schwarz inequality, prove that
 
 <div class="math-display">
 $$
@@ -1244,7 +1132,7 @@ This is exactly the inequality we're trying to prove, so we're done!
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> What is the value of <span class="math-inline">\\(w\\)</span> that minimizes the following function:
+<span class="badge badge-points">2 pts</span> What is the value of <span class="math-inline">\\(w\\)</span> that minimizes the following function:
 
 <div class="math-display">
 $$

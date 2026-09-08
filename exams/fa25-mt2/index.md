@@ -1,5 +1,6 @@
 ---
-layout: minimal
+layout: exam
+mathjax: true
 title: "Fall 2025 Midterm 2"
 description: "Fall 2025 Midterm 2 problems."
 nav_exclude: true
@@ -8,119 +9,6 @@ hide_footer_hr: true
 
 {% raw %}
 
-<script>
-window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-};
-</script>
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-
-<style>
-.main-content p {
-  margin-bottom: 1.15em;
-}
-.assignment-pdf-button {
-  font-size: 0.95rem;
-  padding: 0.35rem 0.65rem;
-}
-.assignment-actions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  margin: 0 0 1rem;
-}
-.math-display,
-mjx-container[jax="CHTML"][display="true"] {
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-}
-.math-display {
-  padding-bottom: 0.2rem;
-}
-.math-display mjx-container[jax="CHTML"][display="true"] {
-  padding-bottom: 0.2rem;
-}
-.answer-blank {
-  border-bottom: 1px solid currentColor;
-  display: inline-block;
-  min-width: 8rem;
-  height: 1em;
-  vertical-align: baseline;
-}
-.assignment-parts {
-  margin: 1rem 0;
-}
-.assignment-part {
-  column-gap: 0.55rem;
-  display: grid;
-  grid-template-columns: 1.4rem minmax(0, 1fr);
-  margin-bottom: 1.05rem;
-}
-.assignment-part-label {
-  font-weight: 600;
-  text-align: right;
-}
-.assignment-part-content > :first-child {
-  margin-top: 0;
-}
-.mc-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.9rem 1.6rem;
-  margin: 0.9rem 0 1.1rem;
-}
-.mc-option {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  white-space: nowrap;
-}
-.mc-bubble,
-.mc-square {
-  display: inline-block;
-  flex: 0 0 auto;
-  height: 0.95em;
-  width: 0.95em;
-  vertical-align: -0.12em;
-}
-.mc-bubble {
-  border: 1.5px solid currentColor;
-  border-radius: 50%;
-}
-.mc-square {
-  border: 1.5px solid currentColor;
-}
-.mc-correct {
-  background: currentColor;
-}
-.main-content table {
-  font-size: 0.9rem;
-  width: auto;
-  max-width: 100%;
-}
-.main-content table th,
-.main-content table td {
-  padding: 0.35rem 0.5rem;
-  white-space: nowrap;
-}
-</style>
-
-<style>
-#main-header,
-.site-header,
-.aux-nav,
-.main-header,
-.side-bar {
-  display: none !important;
-}
-body { padding-top: 0 !important; }
-.main-content-wrap { margin-top: 0 !important; }
-.exam-breadcrumb { font-size: 0.85rem; margin-bottom: 0.75rem; }
-.exam-breadcrumb a { color: #0066cc; text-decoration: none; }
-.exam-breadcrumb a:hover { text-decoration: underline; }
-</style>
 <nav class="exam-breadcrumb" aria-label="Breadcrumb">
 <a href="/">← Back</a>
 </nav>
@@ -148,13 +36,13 @@ body { padding-top: 0 !important; }
 
 ---
 
-## Problem 1: Getting Started <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## Problem 1: Getting Started <span class="badge badge-points">12 pts</span>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Let <span class="math-inline">\\(A = \begin{bmatrix} 2 &amp; 4 \\\\ -3 &amp; -7 \end{bmatrix}\\)</span>. Find <span class="math-inline">\\(\text{det}(A)\\)</span>, the determinant of <span class="math-inline">\\(A\\)</span>. Give your answer as an integer.
+<span class="badge badge-points">3 pts</span> Let <span class="math-inline">\\(A = \begin{bmatrix} 2 &amp; 4 \\\\ -3 &amp; -7 \end{bmatrix}\\)</span>. Find <span class="math-inline">\\(\text{det}(A)\\)</span>, the determinant of <span class="math-inline">\\(A\\)</span>. Give your answer as an integer.
 
 <span class="math-inline">\\(\text{det}(A) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -176,7 +64,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">3 pts</span> Using <span class="math-inline">\\(A\\)</span> from part **a)**, find <span class="math-inline">\\(A^{-1}\\)</span>, the inverse of <span class="math-inline">\\(A\\)</span>. Fully simplify your answer, i.e. don't leave any constants out front.
+<span class="badge badge-points">3 pts</span> Using <span class="math-inline">\\(A\\)</span> from part **a)**, find <span class="math-inline">\\(A^{-1}\\)</span>, the inverse of <span class="math-inline">\\(A\\)</span>. Fully simplify your answer, i.e. don't leave any constants out front.
 
 <span class="math-inline">\\(A^{-1} = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
@@ -198,7 +86,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> Let <span class="math-inline">\\(B = \begin{bmatrix} -1 &amp; 2 &amp; -1 \\\\ 3 &amp; 3 &amp; 2 \\\\ 0 &amp; 0 &amp; 1 \end{bmatrix}\\)</span>. What is the **first column** of <span class="math-inline">\\(B^{-1}\\)</span>, the inverse of <span class="math-inline">\\(B\\)</span>?
+<span class="badge badge-points">2 pts</span> Let <span class="math-inline">\\(B = \begin{bmatrix} -1 &amp; 2 &amp; -1 \\\\ 3 &amp; 3 &amp; 2 \\\\ 0 &amp; 0 &amp; 1 \end{bmatrix}\\)</span>. What is the **first column** of <span class="math-inline">\\(B^{-1}\\)</span>, the inverse of <span class="math-inline">\\(B\\)</span>?
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -1 \\\\ 0 \\\\ 0 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -1 \\\\ 1/2 \\\\ -1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -1 \\\\1/3 \\\\ 1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -1/3 \\\\ 1/3 \\\\ 0 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 1/3 \\\\ -1/3 \\\\ 0 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(B\\)</span> is not invertible</span></div>
 
@@ -241,7 +129,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> This part is independent of the previous parts (i.e. don't use the specific <span class="math-inline">\\(A\\)</span> or <span class="math-inline">\\(B\\)</span> from above).
+<span class="badge badge-points">4 pts</span> This part is independent of the previous parts (i.e. don't use the specific <span class="math-inline">\\(A\\)</span> or <span class="math-inline">\\(B\\)</span> from above).
 
 **Select all** true statements below.
 
@@ -307,7 +195,7 @@ $$
 
 ---
 
-## Problem 2: Space Jam <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">20 pts</span>
+## Problem 2: Space Jam <span class="badge badge-points">20 pts</span>
 
 Let <span class="math-inline">\\(X = \begin{bmatrix} 1 &amp; -4 &amp; 2 &amp; 2 &amp; 0 \\\\ 0 &amp; 0 &amp; -3 &amp; 3 &amp; 0 \\\\ 1 &amp; -4 &amp; 4 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}\\)</span>.
 
@@ -378,7 +266,7 @@ When solving <span class="math-inline">\\(X \vec v = \vec y\\)</span> for <span 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> For some <span class="math-inline">\\(\vec y \in \mathbb{R}^4\\)</span>, the vector <span class="math-inline">\\(\vec w' = \begin{bmatrix} 8 \\\\ 0 \\\\ 0 \\\\ 3 \\\\ 11 \end{bmatrix}\\)</span> is such that <span class="math-inline">\\(X \vec w'\\)</span> is the vector in <span class="math-inline">\\(\text{colsp}(X)\\)</span> that is closest to <span class="math-inline">\\(\vec y\\)</span>. State **one other** vector <span class="math-inline">\\(\vec \beta\\)</span> such that <span class="math-inline">\\(X \vec \beta = X \vec w'\\)</span>. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a vector with five entries and no variables.
+<span class="badge badge-points">6 pts</span> For some <span class="math-inline">\\(\vec y \in \mathbb{R}^4\\)</span>, the vector <span class="math-inline">\\(\vec w' = \begin{bmatrix} 8 \\\\ 0 \\\\ 0 \\\\ 3 \\\\ 11 \end{bmatrix}\\)</span> is such that <span class="math-inline">\\(X \vec w'\\)</span> is the vector in <span class="math-inline">\\(\text{colsp}(X)\\)</span> that is closest to <span class="math-inline">\\(\vec y\\)</span>. State **one other** vector <span class="math-inline">\\(\vec \beta\\)</span> such that <span class="math-inline">\\(X \vec \beta = X \vec w'\\)</span>. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a vector with five entries and no variables.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -426,7 +314,7 @@ Recall, <span class="math-inline">\\(X = \begin{bmatrix} 1 &amp; -4 &amp; 2 &amp
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find a basis for <span class="math-inline">\\(\text{nullsp}(X^T)\\)</span> (**not** <span class="math-inline">\\(\text{nullsp}(X)\\)</span>). Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a list of vectors.
+<span class="badge badge-points">6 pts</span> Find a basis for <span class="math-inline">\\(\text{nullsp}(X^T)\\)</span> (**not** <span class="math-inline">\\(\text{nullsp}(X)\\)</span>). Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a list of vectors.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -455,7 +343,7 @@ $$
 
 ---
 
-## Problem 3: Nilpotence <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## Problem 3: Nilpotence <span class="badge badge-points">12 pts</span>
 
 Suppose <span class="math-inline">\\(A\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix such that <span class="math-inline">\\(A^2 = 0&#95;{n \times n}\\)</span>, where <span class="math-inline">\\(0&#95;{n \times n}\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix of all zeros.
 
@@ -463,7 +351,7 @@ Suppose <span class="math-inline">\\(A\\)</span> is an <span class="math-inline"
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Prove that if <span class="math-inline">\\(\vec x \in \text{colsp}(A)\\)</span>, then <span class="math-inline">\\(\vec x \in \text{nullsp}(A)\\)</span>.
+<span class="badge badge-points">6 pts</span> Prove that if <span class="math-inline">\\(\vec x \in \text{colsp}(A)\\)</span>, then <span class="math-inline">\\(\vec x \in \text{nullsp}(A)\\)</span>.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -484,7 +372,7 @@ Since <span class="math-inline">\\(\vec x = A \vec v \implies A \vec x = \vec 0\
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> In part **a)**, you showed that <span class="math-inline">\\(\text{colsp}(A)\\)</span> is a subset of <span class="math-inline">\\(\text{nullsp}(A)\\)</span>. Using this fact, find the **maximum** possible value of <span class="math-inline">\\(\text{rank}(A)\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be an expression involving <span class="math-inline">\\(n\\)</span> and/or constants.
+<span class="badge badge-points">6 pts</span> In part **a)**, you showed that <span class="math-inline">\\(\text{colsp}(A)\\)</span> is a subset of <span class="math-inline">\\(\text{nullsp}(A)\\)</span>. Using this fact, find the **maximum** possible value of <span class="math-inline">\\(\text{rank}(A)\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be an expression involving <span class="math-inline">\\(n\\)</span> and/or constants.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -524,7 +412,7 @@ This tells us that <span class="math-inline">\\(2\text{rank}(A) \leq n\\)</span>
 
 ---
 
-## Problem 4: Poly Wants a Cracker <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">18 pts</span>
+## Problem 4: Poly Wants a Cracker <span class="badge badge-points">18 pts</span>
 
 Suppose we'd like to fit the model <span class="math-inline">\\(\boxed{h(x&#95;i) = w&#95;0 + w&#95;1 x&#95;i + w&#95;2 x&#95;i^2}\\)</span> by minimizing mean squared error. We use an observation vector <span class="math-inline">\\(\vec y \in \mathbb{R}^n\\)</span>, but instead of using the regular design matrix <span class="math-inline">\\(X\\)</span>,
 
@@ -546,7 +434,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> It turns out that <span class="math-inline">\\(\text{colsp}(Z) = \text{colsp}(X)\\)</span>. To show this, fill in the blanks below to express <span class="math-inline">\\(\vec z^{(2)}\\)</span> (the third column of <span class="math-inline">\\(Z\\)</span>) as a linear combination of <span class="math-inline">\\(X\\)</span>'s columns. Each box should be filled with an expression involving <span class="math-inline">\\(\bar{x}\\)</span>, <span class="math-inline">\\(n\\)</span>, and/or constants.
+<span class="badge badge-points">6 pts</span> It turns out that <span class="math-inline">\\(\text{colsp}(Z) = \text{colsp}(X)\\)</span>. To show this, fill in the blanks below to express <span class="math-inline">\\(\vec z^{(2)}\\)</span> (the third column of <span class="math-inline">\\(Z\\)</span>) as a linear combination of <span class="math-inline">\\(X\\)</span>'s columns. Each box should be filled with an expression involving <span class="math-inline">\\(\bar{x}\\)</span>, <span class="math-inline">\\(n\\)</span>, and/or constants.
 
 <div class="math-display">
 $$
@@ -667,7 +555,7 @@ Recall, <span class="math-inline">\\(Z = \begin{bmatrix} 1 &amp; x&#95;1 - \bar{
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Let <span class="math-inline">\\(\vec \beta^{\ast} = \begin{bmatrix} \beta&#95;0^{\ast} \\\\ \beta&#95;1^{\ast} \\\\ \beta&#95;2^{\ast} \end{bmatrix}\\)</span> be a solution to the normal equations for <span class="math-inline">\\(Z\\)</span> and <span class="math-inline">\\(\vec y\\)</span>. Show that
+<span class="badge badge-points">6 pts</span> Let <span class="math-inline">\\(\vec \beta^{\ast} = \begin{bmatrix} \beta&#95;0^{\ast} \\\\ \beta&#95;1^{\ast} \\\\ \beta&#95;2^{\ast} \end{bmatrix}\\)</span> be a solution to the normal equations for <span class="math-inline">\\(Z\\)</span> and <span class="math-inline">\\(\vec y\\)</span>. Show that
 
 <div class="math-display">
 $$
@@ -722,7 +610,7 @@ $$
 
 ---
 
-## Problem 5: Ortho\...dontist? <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">12 pts</span>
+## Problem 5: Ortho\...dontist? <span class="badge badge-points">12 pts</span>
 
 Let <span class="math-inline">\\(A = \begin{bmatrix} 1 &amp; 0 \\\\ 1 &amp; 4 \\\\ 1 &amp; 4 \\\\ 1 &amp; 4 \end{bmatrix}\\)</span>.
 
@@ -730,7 +618,7 @@ Let <span class="math-inline">\\(A = \begin{bmatrix} 1 &amp; 0 \\\\ 1 &amp; 4 \\
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Find a matrix <span class="math-inline">\\(Q\\)</span> such that <span class="math-inline">\\(\text{colsp}(Q) = \text{colsp}(A)\\)</span> and <span class="math-inline">\\(Q^TQ = I\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a matrix with two columns and no variables. <em>Hint: One of the columns may involve square roots.</em>
+<span class="badge badge-points">6 pts</span> Find a matrix <span class="math-inline">\\(Q\\)</span> such that <span class="math-inline">\\(\text{colsp}(Q) = \text{colsp}(A)\\)</span> and <span class="math-inline">\\(Q^TQ = I\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a matrix with two columns and no variables. <em>Hint: One of the columns may involve square roots.</em>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -835,7 +723,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: The matrix <span class="math-inline">\\(Q\\)</span> you found above is an orthogonal matrix.
+<span class="badge badge-points">2 pts</span> True or False: The matrix <span class="math-inline">\\(Q\\)</span> you found above is an orthogonal matrix.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -854,7 +742,7 @@ For <span class="math-inline">\\(Q\\)</span> to be orthogonal, we'd need **both*
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Let <span class="math-inline">\\(R = \begin{bmatrix} r&#95;1 &amp; \boxed{r&#95;2} \\\\ \boxed{r&#95;3} &amp; r&#95;4 \end{bmatrix}\\)</span> be a <span class="math-inline">\\(2 \times 2\\)</span> matrix such that <span class="math-inline">\\(A = QR\\)</span>, where <span class="math-inline">\\(Q\\)</span> is the matrix you found above.
+<span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(R = \begin{bmatrix} r&#95;1 &amp; \boxed{r&#95;2} \\\\ \boxed{r&#95;3} &amp; r&#95;4 \end{bmatrix}\\)</span> be a <span class="math-inline">\\(2 \times 2\\)</span> matrix such that <span class="math-inline">\\(A = QR\\)</span>, where <span class="math-inline">\\(Q\\)</span> is the matrix you found above.
 
 Find <span class="math-inline">\\(r&#95;2\\)</span> and <span class="math-inline">\\(r&#95;3\\)</span>. Give your answers as scalars without variables.
 
@@ -947,7 +835,7 @@ $$
 
 ---
 
-## Problem 6: Quadratus Formulus <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">14 pts</span>
+## Problem 6: Quadratus Formulus <span class="badge badge-points">14 pts</span>
 
 Let <span class="math-inline">\\(\displaystyle f(\vec x) = \frac{1}{2} \vec x^T S \vec x - \vec b^T \vec x\\)</span>, where <span class="math-inline">\\(S\\)</span> is a symmetric <span class="math-inline">\\(n \times n\\)</span> matrix and <span class="math-inline">\\(\vec b \in \mathbb{R}^n\\)</span>.
 
@@ -955,7 +843,7 @@ Let <span class="math-inline">\\(\displaystyle f(\vec x) = \frac{1}{2} \vec x^T 
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find <span class="math-inline">\\(\nabla f(\vec x)\\)</span>, the gradient of <span class="math-inline">\\(f(\vec x)\\)</span>. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be an expression in terms of <span class="math-inline">\\(\vec x\\)</span>, <span class="math-inline">\\(S\\)</span>, <span class="math-inline">\\(\vec b\\)</span>, and/or constants. <em>Hint: There's no need to re-prove gradient rules from class.</em>
+<span class="badge badge-points">4 pts</span> Find <span class="math-inline">\\(\nabla f(\vec x)\\)</span>, the gradient of <span class="math-inline">\\(f(\vec x)\\)</span>. Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be an expression in terms of <span class="math-inline">\\(\vec x\\)</span>, <span class="math-inline">\\(S\\)</span>, <span class="math-inline">\\(\vec b\\)</span>, and/or constants. <em>Hint: There's no need to re-prove gradient rules from class.</em>
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -977,7 +865,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: As long as <span class="math-inline">\\(S\\)</span> is invertible, if <span class="math-inline">\\(\nabla f(\vec a) = \vec 0\\)</span>, then <span class="math-inline">\\(\vec a\\)</span> is a global minimum of <span class="math-inline">\\(f(\vec x)\\)</span>.
+<span class="badge badge-points">2 pts</span> True or False: As long as <span class="math-inline">\\(S\\)</span> is invertible, if <span class="math-inline">\\(\nabla f(\vec a) = \vec 0\\)</span>, then <span class="math-inline">\\(\vec a\\)</span> is a global minimum of <span class="math-inline">\\(f(\vec x)\\)</span>.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -1004,7 +892,7 @@ but <span class="math-inline">\\(f(\vec x) = x^2 - y^2\\)</span> has no global m
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">c)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">2 pts</span> True or False: As long as all of the components of <span class="math-inline">\\(S\\)</span> are positive real numbers, if
+<span class="badge badge-points">2 pts</span> True or False: As long as all of the components of <span class="math-inline">\\(S\\)</span> are positive real numbers, if
 
 <span class="math-inline">\\(\nabla f(\vec a) = \vec 0\\)</span>, then <span class="math-inline">\\(\vec a\\)</span> is a global minimum of <span class="math-inline">\\(f(\vec x)\\)</span>.
 
@@ -1040,7 +928,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> We'd like to use gradient descent to minimize <span class="math-inline">\\(f(\vec x)\\)</span>. Suppose <span class="math-inline">\\(S = \begin{bmatrix} 2 &amp; 0 \\\\ 0 &amp; 6 \end{bmatrix}\\)</span>, <span class="math-inline">\\(\vec b = \begin{bmatrix} 1 \\\\ -4 \end{bmatrix}\\)</span>, and we use a learning rate of <span class="math-inline">\\(\alpha = 1\\)</span>. After one iteration of gradient descent, we have <span class="math-inline">\\(\vec x^{(1)} = \begin{bmatrix} - 2 \\\\ -4 \end{bmatrix}\\)</span>. What was our initial guess, <span class="math-inline">\\(\vec x^{(0)}\\)</span>? Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a vector with two entries and no variables.
+<span class="badge badge-points">6 pts</span> We'd like to use gradient descent to minimize <span class="math-inline">\\(f(\vec x)\\)</span>. Suppose <span class="math-inline">\\(S = \begin{bmatrix} 2 &amp; 0 \\\\ 0 &amp; 6 \end{bmatrix}\\)</span>, <span class="math-inline">\\(\vec b = \begin{bmatrix} 1 \\\\ -4 \end{bmatrix}\\)</span>, and we use a learning rate of <span class="math-inline">\\(\alpha = 1\\)</span>. After one iteration of gradient descent, we have <span class="math-inline">\\(\vec x^{(1)} = \begin{bmatrix} - 2 \\\\ -4 \end{bmatrix}\\)</span>. What was our initial guess, <span class="math-inline">\\(\vec x^{(0)}\\)</span>? Show your work, and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a vector with two entries and no variables.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1086,7 +974,7 @@ $$
 
 ---
 
-## Problem 7: Complexity <span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">10 pts</span>
+## Problem 7: Complexity <span class="badge badge-points">10 pts</span>
 
 Suppose <span class="math-inline">\\(f: \mathbb{R} \to \mathbb{R}\\)</span> is a convex function.
 
@@ -1094,7 +982,7 @@ Suppose <span class="math-inline">\\(f: \mathbb{R} \to \mathbb{R}\\)</span> is a
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">4 pts</span> Find scalars <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> such that <span class="math-inline">\\(f(3) \leq a f(2) + b f(6)\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a pair of scalars.
+<span class="badge badge-points">4 pts</span> Find scalars <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> such that <span class="math-inline">\\(f(3) \leq a f(2) + b f(6)\\)</span>. Show your work and <span class="math-inline">\\(\boxed{\text{circle}}\\)</span> your final answer, which should be a pair of scalars.
 
 <details markdown="1"><summary>Solution</summary>
 
@@ -1133,7 +1021,7 @@ So, <span class="math-inline">\\(\boxed{a = \frac{3}{4}, b = \frac{1}{4}}\\)</sp
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge" style="background-color: #00274C; color: #FFCB05; padding: 4px 10px; border-radius: 4px; font-size: 14px; font-weight: 500; margin-left: 8px;">6 pts</span> Using the result from part **a)**, prove that <span class="math-inline">\\(f(3) + f(5) \leq f(2) + f(6)\\)</span>.
+<span class="badge badge-points">6 pts</span> Using the result from part **a)**, prove that <span class="math-inline">\\(f(3) + f(5) \leq f(2) + f(6)\\)</span>.
 
 <details markdown="1"><summary>Solution</summary>
 
