@@ -737,6 +737,7 @@ def transform_assignment_tex(
     text = add_solution_choice_summaries(text) if include_solutions else text
     text = replace_choice_markers(text, include_solutions=include_solutions)
     text = wrap_bare_alignment_environments(text)
+    text = mark_roman_enumerates(text)
     text = replace_prob_markers(text)
     text = replace_activity_markers(text)
     text = replace_subitem_markers(text)
@@ -846,6 +847,25 @@ def replace_answerbox_markers(text: str) -> str:
     )
     return text
 
+
+
+ROMAN_LIST_MARKER = "ROMANLISTMARKER"
+
+
+def mark_roman_enumerates(text: str) -> str:
+    r"""Flag \begin{enumerate}[label=(\roman*)] so the web list can match it.
+
+    Pandoc drops enumerate's label option and emits every list as "1.", so by
+    the time lists are rendered nothing says which ones the printed exam
+    numbered (i), (ii), (iii). A bare token paragraph placed before the list
+    survives pandoc untouched; ordered_lists_as_html consumes it and emits
+    <ol class="roman"> instead of <ol>.
+    """
+    return re.sub(
+        r"\\begin\{enumerate\}\[[^\]]*\\roman\*?[^\]]*\]",
+        f"\n\n{ROMAN_LIST_MARKER}\n\n\\\\begin{{enumerate}}",
+        text,
+    )
 
 def strip_false_blocks(text: str) -> str:
     return re.sub(r"(?s)\\iffalse\b.*?\\fi\b", "", text)
@@ -1497,10 +1517,9 @@ def cleanup_markdown(text: str, use_point_badges: bool = True) -> str:
     text = fix_accidental_indented_prose(text)
     text = fence_indented_code_blocks(text)
     text = dedent_block_html_markers(text)
-    text = flatten_solution_ordered_lists(text)
     text = keep_ordered_list_display_math_items(text)
     # After every block-HTML pass, so it sees where the raw divs finally sit.
-    text = restart_broken_ordered_lists(text)
+    text = ordered_lists_as_html(text)
     text = remove_pandoc_layout_fences(text)
     text = render_youtube_embeds(text)
     text = re.sub(r"(</div>)\n---", r"\1\n\n---", text)
@@ -1667,60 +1686,179 @@ def indent_ordered_list_display_math(text: str) -> str:
     return "\n".join(fixed)
 
 
-ORDERED_ITEM_PATTERN = re.compile(r"^(\d+)\.\s")
+# "1." alone on a line counts too: pandoc emits that when an item's only
+# content is a block (answer bubbles on the next line). Markdown itself does
+# not accept a bare marker, so those lists used to render as literal "1.".
+ORDERED_ITEM_PATTERN = re.compile(r"^(\d+)\.(?:\s+|$)")
+
+# Block HTML this pipeline itself emits at column 0. When one of these follows
+# a numbered item it belongs to that item (its answer bubbles, its solution),
+# even though Markdown would read a column-0 block as the end of the list.
+ATTACHED_BLOCK_OPENERS = (
+    '<details',
+    '<div class="math-display">',
+    '<div style="text-align: center;">',
+)
+ATTACHED_SINGLE_LINES = ('<div class="mc-options"', '<img ')
+LIST_CONTINUATION_INDENT = 4
 
 
-def restart_broken_ordered_lists(text: str) -> str:
-    r"""Carry numbering across ordered-list items split apart by block HTML.
+def ordered_lists_as_html(text: str) -> str:
+    r"""Emit top-level numbered lists as literal <ol>/<li> HTML.
 
     A numbered question whose parts each carry answer bubbles or a solution
-    dropdown ends up as:
+    dropdown ends up, after the earlier passes, as:
 
         1.  part one
         <div class="mc-options">...</div>
+        <details>...</details>
         2.  part two
 
-    The raw div sits at column 0, which terminates the list, so Kramdown emits
-    a fresh <ol> per item and every one renders as "1." -- four parts numbered
-    1, 1, 1, 1. Kramdown honours a start attribute set through an inline
-    attribute list, so each restarted fragment is told where to resume.
+    Markdown reads a column-0 block as the end of the list, so Kramdown made a
+    fresh <ol> per item and every part rendered as "1.". Numbering was first
+    patched with a start attribute per fragment; that kept the parts numbered
+    but left each one's bubbles and solution outside its list item, and it
+    leaned on an inline-attribute quirk. Writing the list as HTML removes the
+    guesswork: one <ol>, one <li markdown="1"> per item with everything that
+    belongs to the item inside it. Kramdown still renders the Markdown within.
 
-    Only items that genuinely begin a new list are annotated: an item whose
-    previous non-blank line is indented is still inside the original list and
-    numbers itself correctly.
+    This is also the only fix that shows: just-the-docs numbers lists with a
+    CSS counter that resets on every <ol> and ignores the start attribute,
+    so separate <ol start="N"> fragments still displayed 1, 1, 1, 1.
+
+    Solution dropdowns get the same treatment, replacing the old flattening of
+    their lists into bold "(i)" labels -- which showed roman numerals for
+    every list even though most are plain 1., 2., 3. in the printed exam.
+    Lists the LaTeX labels (\roman*) get class="roman", styled in
+    _sass/custom/custom.scss.
+
+    What belongs to an item: blank lines, indented text, bullets, fenced code,
+    and the blocks this pipeline emits at column 0 (ATTACHED_*). Anything else
+    at column 0 -- prose, a heading, a rule, a part boundary, a callout -- ends
+    the list. A new list starts when an item's number is not the previous
+    number plus one, so two lists that each count from 1 stay separate.
+
+    Kramdown treats a line indented four or more spaces inside <li markdown="1">
+    as a code block, so item bodies are dedented by the marker width, except
+    inside display math (whitespace there is MathJax's, not Markdown's).
     """
+    # Lists inside solution dropdowns first, so that when the outer pass copies
+    # a <details> block into an item it is already HTML and needs no care.
+    text = re.sub(
+        r'(?s)(<details markdown="1"><summary>Solution</summary>\n)(.*?)(\n</details>)',
+        lambda m: m.group(1) + convert_ordered_lists(m.group(2)) + m.group(3),
+        text,
+    )
+    return convert_ordered_lists(text)
+
+
+def convert_ordered_lists(text: str) -> str:
     lines = text.splitlines()
     output: list[str] = []
+    index = 0
 
-    for index, line in enumerate(lines):
-        match = ORDERED_ITEM_PATTERN.match(line)
-        if match and int(match.group(1)) > 1 and starts_new_list(lines, index):
-            output.append(f'{{: start="{match.group(1)}"}}')
-        output.append(line)
+    while index < len(lines):
+        match = ORDERED_ITEM_PATTERN.match(lines[index])
+        if not match:
+            output.append(lines[index])
+            index += 1
+            continue
+
+        roman = False
+        # A roman marker directly above the list: either its own paragraph, or
+        # glued to the end of a part's badge line by convert_part_headings_to_lists.
+        back = len(output) - 1
+        while back >= 0 and not output[back].strip():
+            back -= 1
+        if back >= 0 and output[back].rstrip().endswith(ROMAN_LIST_MARKER):
+            roman = True
+            kept = output[back].rstrip()[: -len(ROMAN_LIST_MARKER)].rstrip()
+            del output[back:]
+            if kept:
+                output.append(kept)
+
+        items: list[tuple[int, list[str]]] = []
+        previous_number = None
+        while index < len(lines):
+            match = ORDERED_ITEM_PATTERN.match(lines[index])
+            if not match:
+                break
+            number = int(match.group(1))
+            if previous_number is not None and number != previous_number + 1:
+                break  # a list that restarts its count is a different list
+            body = [lines[index][match.end():]]
+            index += 1
+            index = collect_item_body(lines, index, body)
+            items.append((number, body))
+            previous_number = number
+
+        first = items[0][0]
+        attrs = (' class="roman"' if roman else "") + (f' start="{first}"' if first != 1 else "")
+        output.append(f"<ol{attrs}>")
+        for _, body in items:
+            while body and not body[-1].strip():
+                body.pop()
+            output.append('<li markdown="1">')
+            output.extend(dedent_item_body(body))
+            output.append("</li>")
+        output.append("</ol>")
+        output.append("")
 
     return "\n".join(output)
 
 
-# Continuation content under a "N.  " marker sits at column 4. Anything less
-# deep -- three spaces, say, which fix_accidental_indented_prose emits -- does
-# not read as continuation, so the list ends there even though it looks nested.
-LIST_CONTINUATION_INDENT = 4
+def collect_item_body(lines: list[str], index: int, body: list[str]) -> int:
+    """Append the lines belonging to the current item; return the next index."""
+    while index < len(lines):
+        line = lines[index]
+        if ORDERED_ITEM_PATTERN.match(line):
+            return index
+        stripped = line.strip()
+        if not stripped or line[0] in " \t" or stripped.startswith(("-   ", "- ", "* ")):
+            body.append(line)
+            index += 1
+        elif line.startswith("```"):
+            index = copy_until(lines, index, body, lambda l: l.startswith("```"), inclusive_first=True)
+        elif line.startswith("<details"):
+            index = copy_until(lines, index, body, lambda l: l.startswith("</details>"))
+        elif line.startswith(ATTACHED_BLOCK_OPENERS):
+            index = copy_until(lines, index, body, lambda l: l.startswith("</div>"))
+        elif line.startswith(ATTACHED_SINGLE_LINES):
+            body.append(line)
+            index += 1
+        else:
+            return index  # column-0 prose, heading, rule, part boundary, callout
+    return index
 
 
-def starts_new_list(lines: list[str], index: int) -> bool:
-    """True when the ordered item at `index` was cut off from its list."""
-    for previous in reversed(lines[:index]):
-        if not previous.strip():
+def copy_until(lines, index, body, is_close, inclusive_first=False) -> int:
+    """Copy a block from lines[index] through its closing line into body."""
+    body.append(lines[index])
+    index += 1
+    while index < len(lines):
+        body.append(lines[index])
+        index += 1
+        if is_close(lines[index - 1]):
+            break
+    return index
+
+
+def dedent_item_body(body: list[str]) -> list[str]:
+    result: list[str] = []
+    in_math = in_fence = False
+    for line in body:
+        if line.startswith("```"):
+            in_fence = not in_fence
+        elif line.startswith('<div class="math-display">'):
+            in_math = True
+        elif in_math and line.startswith("</div>"):
+            in_math = False
+        if in_math or in_fence:
+            result.append(line)
             continue
-        indent = len(previous) - len(previous.lstrip(" \t"))
-        if indent >= LIST_CONTINUATION_INDENT:
-            # Deep enough to belong to the preceding item: the list survived.
-            return False
-        if indent == 0 and ORDERED_ITEM_PATTERN.match(previous):
-            # Another item at column 0 means the list is intact.
-            return False
-        return True
-    return False
+        indent = len(line) - len(line.lstrip(" "))
+        result.append(line[min(indent, LIST_CONTINUATION_INDENT):] if indent >= LIST_CONTINUATION_INDENT else line)
+    return result
 
 
 def keep_ordered_list_display_math_items(text: str) -> str:
@@ -2327,92 +2465,6 @@ def looks_like_accidental_indented_prose(content: str) -> bool:
         or re.fullmatch(r"[A-Z][A-Za-z0-9 ,.'\"()/-]+", normalized)
         or normalized in {"then"}
     )
-
-
-def flatten_solution_ordered_lists(text: str) -> str:
-    """Keep solution dropdown lists from rendering as reset lists/code blocks.
-
-    Pandoc emits LaTeX enumerate environments as Markdown ordered lists. Inside
-    `<details markdown="1">`, Kramdown can split those lists around raw HTML
-    math blocks and treat indented continuation prose as literal code. Explicit
-    labels preserve the intended part structure without relying on nested
-    Markdown-list continuation rules.
-    """
-
-    solution_pattern = re.compile(
-        r'(?ms)(<details markdown="1"><summary>Solution</summary>\n\n)(.*?)(\n</details>)'
-    )
-
-    def replace_solution(match: re.Match[str]) -> str:
-        return (
-            match.group(1)
-            + flatten_top_level_ordered_list(match.group(2))
-            + match.group(3)
-        )
-
-    return solution_pattern.sub(replace_solution, text)
-
-
-def flatten_top_level_ordered_list(text: str) -> str:
-    lines = text.splitlines()
-    flattened: list[str] = []
-    saw_top_level_ordered_item = False
-    in_fenced_code = False
-    item_pattern = re.compile(r"^(\d+)\.\s+(.*)$")
-
-    for line in lines:
-        if line.startswith("```"):
-            in_fenced_code = not in_fenced_code
-            flattened.append(line)
-            continue
-        if in_fenced_code:
-            flattened.append(line)
-            continue
-
-        item_match = item_pattern.match(line)
-        if item_match:
-            saw_top_level_ordered_item = True
-            number = int(item_match.group(1))
-            flattened.append(
-                f"**({to_lower_roman(number)})** {item_match.group(2).strip()}"
-            )
-            continue
-
-        if saw_top_level_ordered_item and line.startswith(("    ", "   ")):
-            flattened.append(re.sub(r"^ {1,4}", "", line))
-            continue
-
-        flattened.append(line)
-
-    return "\n".join(flattened)
-
-
-def to_lower_roman(number: int) -> str:
-    if number <= 0:
-        return str(number)
-
-    values = [
-        (1000, "m"),
-        (900, "cm"),
-        (500, "d"),
-        (400, "cd"),
-        (100, "c"),
-        (90, "xc"),
-        (50, "l"),
-        (40, "xl"),
-        (10, "x"),
-        (9, "ix"),
-        (5, "v"),
-        (4, "iv"),
-        (1, "i"),
-    ]
-    parts: list[str] = []
-    remaining = number
-    for value, symbol in values:
-        count, remaining = divmod(remaining, value)
-        if count:
-            parts.append(symbol * count)
-    return "".join(parts)
 
 
 def split_text_and_math(content: str) -> str:
