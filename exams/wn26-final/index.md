@@ -42,7 +42,7 @@ hide_footer_hr: true
 
 ---
 
-## Problem 1 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="problem-1-12-pts-mt1-redemption" markdown="span">Problem 1 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 Suppose we'd like to find the optimal constant prediction, <span class="math-inline">\\(w^{\ast}\\)</span>, for the constant model <span class="math-inline">\\(h(x&#95;i) = w\\)</span>, given the following dataset of <span class="math-inline">\\(n = 4\\)</span> values.
 
@@ -163,7 +163,7 @@ $$
 
 ---
 
-## Problem 2 <span class="badge badge-points">13 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="problem-2-13-pts-mt1-redemption" markdown="span">Problem 2 <span class="badge badge-points">13 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 Suppose a dataset of <span class="math-inline">\\(n\\)</span> points, <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span>, has the following properties:
 
@@ -367,7 +367,7 @@ $$
 
 ---
 
-## Problem 3 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="problem-3-9-pts-mt1-redemption" markdown="span">Problem 3 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -505,7 +505,7 @@ So, <span class="math-inline">\\(\boxed{\lVert \vec v \rVert = 9}\\)</span>.
 
 ---
 
-## Problem 4 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="problem-4-4-pts-mt1-redemption" markdown="span">Problem 4 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 Let
 
@@ -578,7 +578,7 @@ So, <span class="math-inline">\\(S = \text{span}\left(\left\lbrace \begin{bmatri
 
 ---
 
-## Problem 5 <span class="badge badge-points">11 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-5-11-pts-mt2-redemption" markdown="span">Problem 5 <span class="badge badge-points">11 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(6 \times 5\\)</span> matrix such that
 
@@ -802,7 +802,7 @@ $$
 
 ---
 
-## Problem 6 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-6-12-pts-mt2-redemption" markdown="span">Problem 6 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Suppose <span class="math-inline">\\(X\\)</span> is an <span class="math-inline">\\(n \times 3\\)</span> matrix, where <span class="math-inline">\\(n &gt; 2\\)</span>, with columns <span class="math-inline">\\(\vec x^{(1)}\\)</span>, <span class="math-inline">\\(\vec x^{(2)}\\)</span>, and <span class="math-inline">\\(\vec x^{(3)}\\)</span>. Furthermore, suppose that <span class="math-inline">\\(X = QR\\)</span>, where
 
@@ -956,7 +956,7 @@ $$
 
 ---
 
-## Problem 7 <span class="badge badge-points">8 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-7-8-pts-mt2-redemption" markdown="span">Problem 7 <span class="badge badge-points">8 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Suppose we'd like to fit a multiple linear regression model **without an intercept term** to predict an apartment's monthly rent (in hundreds of dollars) using various features.
 
@@ -1081,7 +1081,7 @@ $$
 
 ---
 
-## Problem 8 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-8-9-pts-mt2-redemption" markdown="span">Problem 8 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Consider the function <span class="math-inline">\\(g: \mathbb{R}^3 \to \mathbb{R}\\)</span>. We'd like to minimize <span class="math-inline">\\(g\\)</span> using gradient descent.
 
@@ -1294,7 +1294,7 @@ $$
 
 ---
 
-## Problem 9 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-9-12-pts" markdown="span">Problem 9 <span class="badge badge-points">12 pts</span></h2>
 
 Consider the matrix <span class="math-inline">\\(A = \begin{bmatrix} 2 &amp; 3 \\\\ -4 &amp; k \end{bmatrix}\\)</span> where <span class="math-inline">\\(k \in \mathbb{R}\\)</span> is some unknown constant.
 
@@ -1429,7 +1429,7 @@ $$
 
 ---
 
-## Problem 10 <span class="badge badge-points">14 pts</span>
+<h2 id="problem-10-14-pts" markdown="span">Problem 10 <span class="badge badge-points">14 pts</span></h2>
 
 The state diagram below describes a Markov chain with four states.
 
@@ -1577,7 +1577,7 @@ $$
 
 ---
 
-## Problem 11 <span class="badge badge-points">10 pts</span>
+<h2 id="problem-11-10-pts" markdown="span">Problem 11 <span class="badge badge-points">10 pts</span></h2>
 
 Let <span class="math-inline">\\(S\\)</span> be a <span class="math-inline">\\(3 \times 3\\)</span> **symmetric** matrix with eigenvectors <span class="math-inline">\\(\vec v&#95;1\\)</span>, <span class="math-inline">\\(\vec v&#95;2\\)</span>, and <span class="math-inline">\\(\vec v&#95;3\\)</span> corresponding to eigenvalues <span class="math-inline">\\(5\\)</span>, <span class="math-inline">\\(2\\)</span>, and <span class="math-inline">\\(-1\\)</span>, respectively. Assume that each <span class="math-inline">\\(\vec v&#95;i\\)</span> is a unit vector.
 
@@ -1691,7 +1691,7 @@ In this solution, we used the fact that <span class="math-inline">\\(\vec x = 3 
 
 ---
 
-## Problem 12 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-12-12-pts" markdown="span">Problem 12 <span class="badge badge-points">12 pts</span></h2>
 
 Suppose <span class="math-inline">\\(\tilde X\\)</span> is an <span class="math-inline">\\(n \times 2\\)</span> matrix whose columns are mean-centered (i.e. have a mean of 0). Furthermore, suppose
 
@@ -1840,7 +1840,7 @@ $$
 
 ---
 
-## Problem 13 <span class="badge badge-points">4 pts</span>
+<h2 id="problem-13-4-pts" markdown="span">Problem 13 <span class="badge badge-points">4 pts</span></h2>
 
 What is one topic you studied a lot for that wasn't on the Final Exam? **Blank answers will receive no credit!**
 

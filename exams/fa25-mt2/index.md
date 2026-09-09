@@ -36,7 +36,7 @@ hide_footer_hr: true
 
 ---
 
-## Problem 1: Getting Started <span class="badge badge-points">12 pts</span>
+<h2 id="problem-1-getting-started-12-pts" markdown="span">Problem 1: Getting Started <span class="badge badge-points">12 pts</span></h2>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -195,7 +195,7 @@ $$
 
 ---
 
-## Problem 2: Space Jam <span class="badge badge-points">20 pts</span>
+<h2 id="problem-2-space-jam-20-pts" markdown="span">Problem 2: Space Jam <span class="badge badge-points">20 pts</span></h2>
 
 Let <span class="math-inline">\\(X = \begin{bmatrix} 1 &amp; -4 &amp; 2 &amp; 2 &amp; 0 \\\\ 0 &amp; 0 &amp; -3 &amp; 3 &amp; 0 \\\\ 1 &amp; -4 &amp; 4 &amp; 0 &amp; 0 \\\\ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \end{bmatrix}\\)</span>.
 
@@ -343,7 +343,7 @@ $$
 
 ---
 
-## Problem 3: Nilpotence <span class="badge badge-points">12 pts</span>
+<h2 id="problem-3-nilpotence-12-pts" markdown="span">Problem 3: Nilpotence <span class="badge badge-points">12 pts</span></h2>
 
 Suppose <span class="math-inline">\\(A\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix such that <span class="math-inline">\\(A^2 = 0&#95;{n \times n}\\)</span>, where <span class="math-inline">\\(0&#95;{n \times n}\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix of all zeros.
 
@@ -412,7 +412,7 @@ This tells us that <span class="math-inline">\\(2\text{rank}(A) \leq n\\)</span>
 
 ---
 
-## Problem 4: Poly Wants a Cracker <span class="badge badge-points">18 pts</span>
+<h2 id="problem-4-poly-wants-a-cracker-18-pts" markdown="span">Problem 4: Poly Wants a Cracker <span class="badge badge-points">18 pts</span></h2>
 
 Suppose we'd like to fit the model <span class="math-inline">\\(\boxed{h(x&#95;i) = w&#95;0 + w&#95;1 x&#95;i + w&#95;2 x&#95;i^2}\\)</span> by minimizing mean squared error. We use an observation vector <span class="math-inline">\\(\vec y \in \mathbb{R}^n\\)</span>, but instead of using the regular design matrix <span class="math-inline">\\(X\\)</span>,
 
@@ -610,7 +610,7 @@ $$
 
 ---
 
-## Problem 5: Ortho\...dontist? <span class="badge badge-points">12 pts</span>
+<h2 id="problem-5-orthodontist-12-pts" markdown="span">Problem 5: Ortho\...dontist? <span class="badge badge-points">12 pts</span></h2>
 
 Let <span class="math-inline">\\(A = \begin{bmatrix} 1 &amp; 0 \\\\ 1 &amp; 4 \\\\ 1 &amp; 4 \\\\ 1 &amp; 4 \end{bmatrix}\\)</span>.
 
@@ -835,7 +835,7 @@ $$
 
 ---
 
-## Problem 6: Quadratus Formulus <span class="badge badge-points">14 pts</span>
+<h2 id="problem-6-quadratus-formulus-14-pts" markdown="span">Problem 6: Quadratus Formulus <span class="badge badge-points">14 pts</span></h2>
 
 Let <span class="math-inline">\\(\displaystyle f(\vec x) = \frac{1}{2} \vec x^T S \vec x - \vec b^T \vec x\\)</span>, where <span class="math-inline">\\(S\\)</span> is a symmetric <span class="math-inline">\\(n \times n\\)</span> matrix and <span class="math-inline">\\(\vec b \in \mathbb{R}^n\\)</span>.
 
@@ -974,7 +974,7 @@ $$
 
 ---
 
-## Problem 7: Complexity <span class="badge badge-points">10 pts</span>
+<h2 id="problem-7-complexity-10-pts" markdown="span">Problem 7: Complexity <span class="badge badge-points">10 pts</span></h2>
 
 Suppose <span class="math-inline">\\(f: \mathbb{R} \to \mathbb{R}\\)</span> is a convex function.
 

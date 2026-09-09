@@ -36,7 +36,7 @@ hide_footer_hr: true
 
 ---
 
-## Problem 1 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-1-12-pts" markdown="span">Problem 1 <span class="badge badge-points">12 pts</span></h2>
 
 Suppose <span class="math-inline">\\(k\\)</span> is a real number. Let
 
@@ -197,7 +197,7 @@ $$
 
 ---
 
-## Problem 2 <span class="badge badge-points">16 pts</span>
+<h2 id="problem-2-16-pts" markdown="span">Problem 2 <span class="badge badge-points">16 pts</span></h2>
 
 Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(3 \times 3\\)</span> matrix whose null space is the plane
 
@@ -399,7 +399,7 @@ $$
 
 ---
 
-## Problem 3 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-3-12-pts" markdown="span">Problem 3 <span class="badge badge-points">12 pts</span></h2>
 
 Suppose <span class="math-inline">\\(A\\)</span> is an <span class="math-inline">\\(n \times n\\)</span> matrix.
 
@@ -509,7 +509,7 @@ $$
 
 ---
 
-## Problem 4 <span class="badge badge-points">14 pts</span>
+<h2 id="problem-4-14-pts" markdown="span">Problem 4 <span class="badge badge-points">14 pts</span></h2>
 
 Suppose <span class="math-inline">\\(X\\)</span> is a matrix such that
 
@@ -646,7 +646,7 @@ Note that we're only able to answer this problem because <span class="math-inlin
 
 ---
 
-## Problem 5 <span class="badge badge-points">19 pts</span>
+<h2 id="problem-5-19-pts" markdown="span">Problem 5 <span class="badge badge-points">19 pts</span></h2>
 
 Suppose we're given a dataset with <span class="math-inline">\\(n = 5\\)</span> rows, and we use it to fit a multiple linear regression model with two features and an intercept term.
 
@@ -926,7 +926,7 @@ $$
 
 ---
 
-## Problem 6 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-6-12-pts" markdown="span">Problem 6 <span class="badge badge-points">12 pts</span></h2>
 
 Suppose <span class="math-inline">\\(A\\)</span> is an <span class="math-inline">\\(n \times d\\)</span> matrix and <span class="math-inline">\\(\vec x \in \mathbb{R}^d\\)</span>. Consider the function <span class="math-inline">\\(f: \mathbb{R}^d \to \mathbb{R}\\)</span> given by
 
@@ -1039,7 +1039,7 @@ $$
 
 ---
 
-## Problem 7 <span class="badge badge-points">15 pts</span>
+<h2 id="problem-7-15-pts" markdown="span">Problem 7 <span class="badge badge-points">15 pts</span></h2>
 
 Let <span class="math-inline">\\(\vec x = \begin{bmatrix} x&#95;1 \\\\ x&#95;2 \end{bmatrix}\\)</span>. Consider the function <span class="math-inline">\\(f: \mathbb{R}^2 \to \mathbb{R}\\)</span> given by
 

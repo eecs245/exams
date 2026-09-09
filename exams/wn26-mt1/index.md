@@ -37,7 +37,7 @@ hide_footer_hr: true
 
 ---
 
-## Problem 1 <span class="badge badge-points">16 pts</span>
+<h2 id="problem-1-16-pts" markdown="span">Problem 1 <span class="badge badge-points">16 pts</span> <a class="badge badge-video" href="https://youtu.be/4qk_4dNKtD4" target="_blank" rel="noopener">🎥 Part c</a></h2>
 
 Consider a dataset of <span class="math-inline">\\(n\\)</span> values, <span class="math-inline">\\(y&#95;1, y&#95;2, \ldots, y&#95;n\\)</span>, with:
 
@@ -267,7 +267,7 @@ Therefore, there are 6 values in the dataset that are equal to 18.
 
 ---
 
-## Problem 2 <span class="badge badge-points">14 pts</span>
+<h2 id="problem-2-14-pts" markdown="span">Problem 2 <span class="badge badge-points">14 pts</span> <a class="badge badge-video" href="https://youtu.be/7E1WH2p-MoU" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 Suppose we'd like to fit a simple linear regression model to a dataset of <span class="math-inline">\\(n\\)</span> points,
 
@@ -375,7 +375,7 @@ So, yes, it is possible for there to be multiple pairs of <span class="math-inli
 
 ---
 
-## Problem 3 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-3-12-pts" markdown="span">Problem 3 <span class="badge badge-points">12 pts</span></h2>
 
 Consider the following two planes, <span class="math-inline">\\(P&#95;1\\)</span> and <span class="math-inline">\\(P&#95;2\\)</span>, in <span class="math-inline">\\(\mathbb{R}^3\\)</span>.
 
@@ -540,7 +540,7 @@ $$
 
 ---
 
-## Problem 4 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-4-12-pts" markdown="span">Problem 4 <span class="badge badge-points">12 pts</span></h2>
 
 Suppose <span class="math-inline">\\(\vec u = \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\vec u + \vec v + \vec w = \begin{bmatrix} 4 \\\\ 0 \\\\ 0 \end{bmatrix}\\)</span>. Assume that none of <span class="math-inline">\\(\vec u\\)</span>, <span class="math-inline">\\(\vec v\\)</span>, or <span class="math-inline">\\(\vec w\\)</span> are the zero vector, <span class="math-inline">\\(\vec 0\\)</span>.
 
@@ -652,7 +652,7 @@ This is a contradiction, so it is impossible for both <span class="math-inline">
 
 ---
 
-## Problem 5 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-5-12-pts" markdown="span">Problem 5 <span class="badge badge-points">12 pts</span></h2>
 
 Suppose <span class="math-inline">\\(\vec u, \vec v \in \mathbb{R}^n\\)</span>. Let <span class="math-inline">\\(\vec p\\)</span> be the projection of <span class="math-inline">\\(\vec u\\)</span> onto <span class="math-inline">\\(\vec v\\)</span>. Furthermore, we know that:
 
@@ -730,7 +730,7 @@ The only possible "edge case" here is when <span class="math-inline">\\(\vec u\\
 
 ---
 
-## Problem 6 <span class="badge badge-points">14 pts</span>
+<h2 id="problem-6-14-pts" markdown="span">Problem 6 <span class="badge badge-points">14 pts</span> <a class="badge badge-video" href="https://youtu.be/RB8aUyHpMQM" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 Suppose <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \vec x&#95;3, \vec x&#95;4, \vec x&#95;5, \vec x&#95;6\\)</span> are 6 vectors in <span class="math-inline">\\(\mathbb{R}^9\\)</span> such that
 
@@ -948,7 +948,7 @@ So, the smallest possible value of <span class="math-inline">\\(\text{dim}(W)\\)
 
 ---
 
-## Problem 7 <span class="badge badge-points">20 pts</span>
+<h2 id="problem-7-20-pts" markdown="span">Problem 7 <span class="badge badge-points">20 pts</span> <a class="badge badge-video" href="https://youtu.be/a8qc8mvGaNM" target="_blank" rel="noopener">🎥 Part c</a></h2>
 
 Suppose we'd like to find the optimal constant parameter, <span class="math-inline">\\(w^{\ast}\\)</span>, for the constant model <span class="math-inline">\\(h(x&#95;i) = w\\)</span>, given a dataset of <span class="math-inline">\\(n\\)</span> points <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span>. To do so, we use the **sub-squared** loss function, <span class="math-inline">\\(L&#95;\text{ss}\\)</span>, defined below.
 

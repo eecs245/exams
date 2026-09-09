@@ -38,7 +38,7 @@ hide_footer_hr: true
 
 ---
 
-## Problem 1: Consider the Following\... <span class="badge badge-points">15 pts</span>
+<h2 id="problem-1-consider-the-following-15-pts" markdown="span">Problem 1: Consider the Following\... <span class="badge badge-points">15 pts</span></h2>
 
 Consider the following dataset of <span class="math-inline">\\(n = 9\\)</span> values.
 
@@ -125,7 +125,7 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 
 ---
 
-## Problem 2: Absolute Madness <span class="badge badge-points">17 pts</span>
+<h2 id="problem-2-absolute-madness-17-pts" markdown="span">Problem 2: Absolute Madness <span class="badge badge-points">17 pts</span></h2>
 
 Consider a dataset of <span class="math-inline">\\(n = 8\\)</span> values, where
 
@@ -263,7 +263,7 @@ $$
 
 ---
 
-## Problem 3: Spreading Your Wings <span class="badge badge-points">12 pts</span>
+<h2 id="problem-3-spreading-your-wings-12-pts" markdown="span">Problem 3: Spreading Your Wings <span class="badge badge-points">12 pts</span></h2>
 
 Consider a dataset of <span class="math-inline">\\(n\\)</span> points, <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span>, where
 
@@ -396,7 +396,7 @@ $$
 
 ---
 
-## Problem 4: Mission Impossible <span class="badge badge-points">12 pts</span>
+<h2 id="problem-4-mission-impossible-12-pts" markdown="span">Problem 4: Mission Impossible <span class="badge badge-points">12 pts</span> <a class="badge badge-video" href="https://youtu.be/qp0Pof1bQq8" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -509,7 +509,7 @@ $$
 
 ---
 
-## Problem 5: Back to Normal <span class="badge badge-points">12 pts</span>
+<h2 id="problem-5-back-to-normal-12-pts" markdown="span">Problem 5: Back to Normal <span class="badge badge-points">12 pts</span> <a class="badge badge-video" href="https://youtu.be/dewIDcz5mXo" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 Consider the orthogonal vectors <span class="math-inline">\\(\vec u&#95;1 = \begin{bmatrix} 13 \\\\ -3 \\\\ 2 \end{bmatrix}\\)</span>, <span class="math-inline">\\(\vec u&#95;2 = \begin{bmatrix} 0 \\\\ 4 \\\\ 6 \end{bmatrix}\\)</span>, and <span class="math-inline">\\(\vec u&#95;3 = \begin{bmatrix} 1 \\\\ 3 \\\\ -2 \end{bmatrix}\\)</span>.
 
@@ -603,7 +603,7 @@ So, we need to find the vector <span class="math-inline">\\(\vec u&#95;k\\)</spa
 
 ---
 
-## Problem 6: Needed Me <span class="badge badge-points">11 pts</span>
+<h2 id="problem-6-needed-me-11-pts" markdown="span">Problem 6: Needed Me <span class="badge badge-points">11 pts</span> <a class="badge badge-video" href="https://youtu.be/0fbQmyQP6oE" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 Suppose <span class="math-inline">\\(\vec x = \begin{bmatrix} c \\\\ 1 \\\\ 0 \end{bmatrix}\\)</span>, <span class="math-inline">\\(\vec y = \begin{bmatrix} 1 \\\\ c \\\\ 1 \end{bmatrix}\\)</span>, and <span class="math-inline">\\(\vec z = \begin{bmatrix} 0 \\\\ 1 \\\\ c \end{bmatrix}\\)</span>, where <span class="math-inline">\\(c \in \mathbb{R}\\)</span> is a constant.
 
@@ -675,7 +675,7 @@ other value of <span class="math-inline">\\(c =\\)</span> \_\_\_\_\_\_
 
 ---
 
-## Problem 7: High Definition <span class="badge badge-points">12 pts</span>
+<h2 id="problem-7-high-definition-12-pts" markdown="span">Problem 7: High Definition <span class="badge badge-points">12 pts</span></h2>
 
 Suppose <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \ldots \vec x&#95;{12}\\)</span> are 12 non-zero vectors in <span class="math-inline">\\(\mathbb{R}^{7}\\)</span>. Furthermore, suppose:
 
@@ -764,7 +764,7 @@ So, retroactively, we gave full credit to everyone for this part.
 
 ---
 
-## Problem 8: Worst-Case Scenario <span class="badge badge-points">8 pts</span>
+<h2 id="problem-8-worst-case-scenario-8-pts" markdown="span">Problem 8: Worst-Case Scenario <span class="badge badge-points">8 pts</span> <a class="badge badge-video" href="https://youtu.be/7qSMx-3ac-Y" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 Suppose <span class="math-inline">\\(a, b, c, d, e\\)</span> are positive real numbers. Find the **largest** real number <span class="math-inline">\\(T\\)</span> such that it's guaranteed that
 

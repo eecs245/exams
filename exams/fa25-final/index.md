@@ -43,7 +43,7 @@ hide_footer_hr: true
 
 ---
 
-## Problem 1 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="problem-1-10-pts-mt1-redemption" markdown="span">Problem 1 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -137,7 +137,7 @@ The minimizer of mean absolute error is the median of the dataset. When the numb
 
 ---
 
-## Problem 2 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="problem-2-10-pts-mt1-redemption" markdown="span">Problem 2 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 Let <span class="math-inline">\\(k\\)</span> be a positive integer and let <span class="math-inline">\\(\alpha\\)</span> be a positive real number. Consider the dataset of <span class="math-inline">\\(n = 2k+1\\)</span> points, <span class="math-inline">\\(\underbrace{(-k, -\alpha), (-k+1, 0), (-k+2, 0), \ldots, (-1, 0)}&#95;{k \text{ points}}, (0, 0), \underbrace{(1, 0), \ldots, (k-2, 0), (k-1, 0), (k, \alpha)}&#95;{k \text{ points}}\\)</span>.
 
@@ -236,7 +236,7 @@ Therefore, <span class="math-inline">\\(v = \boxed{2k\alpha}\\)</span>.
 
 ---
 
-## Problem 3 <span class="badge badge-points">16 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="problem-3-16-pts-mt1-redemption" markdown="span">Problem 3 <span class="badge badge-points">16 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 Consider the vectors <span class="math-inline">\\(\vec u = \begin{bmatrix} 3 \\\\ 3 \\\\ 6 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\vec v = \begin{bmatrix} 1 \\\\ 0 \\\\ c \end{bmatrix}\\)</span>, where <span class="math-inline">\\(c \in \mathbb{R}\\)</span> is some constant.
 
@@ -413,7 +413,7 @@ $$
 
 ---
 
-## Problem 4 <span class="badge badge-points">8 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-4-8-pts-mt2-redemption" markdown="span">Problem 4 <span class="badge badge-points">8 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Let <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span> be as in the previous problem.
 
@@ -472,7 +472,7 @@ For <span class="math-inline">\\(e&#95;1 + e&#95;2 + e&#95;3\\)</span> to always
 
 ---
 
-## Problem 5 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-5-12-pts-mt2-redemption" markdown="span">Problem 5 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Consider the <span class="math-inline">\\(n \times 5\\)</span> matrix <span class="math-inline">\\(A\\)</span>, along with a CR decomposition of it, given below.
 
@@ -632,7 +632,7 @@ $$
 
 ---
 
-## Problem 6 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-6-4-pts-mt2-redemption" markdown="span">Problem 6 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Suppose <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both (not necessarily symmetric!) <span class="math-inline">\\(n \times n\\)</span> matrices. Which of the following is <span class="math-inline">\\(\nabla f(\vec x)\\)</span>, the gradient of
 
@@ -676,7 +676,7 @@ $$
 
 ---
 
-## Problem 7 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-7-6-pts-mt2-redemption" markdown="span">Problem 7 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Consider the function <span class="math-inline">\\(f: \mathbb{R} \to \mathbb{R}\\)</span> graphed below.
 
@@ -751,7 +751,7 @@ Therefore, the correct choice is <span class="math-inline">\\(\boxed{1.6}\\)</sp
 
 ---
 
-## Problem 8 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-8-6-pts-mt2-redemption" markdown="span">Problem 8 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Suppose we fit a multiple linear regression model **with** an intercept term that predicts the `height` of a wolverine given its `weight` and `color`. The model is fit by minimizing mean squared error.
 
@@ -835,7 +835,7 @@ With that in mind, let's look at the options:
 
 ---
 
-## Problem 9 <span class="badge badge-points">18 pts</span>
+<h2 id="problem-9-18-pts" markdown="span">Problem 9 <span class="badge badge-points">18 pts</span> <a class="badge badge-video" href="https://youtu.be/bz3ECJ7WlKU" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 Consider the matrix <span class="math-inline">\\(A = \begin{bmatrix} 2 &amp; 1 \\\\ c &amp; 6 \end{bmatrix}\\)</span>, where <span class="math-inline">\\(c \in \mathbb{R}\\)</span> is some constant.
 
@@ -1002,7 +1002,7 @@ $$
 {: .yellow }
 > **Make sure to place the larger eigenvalue in <span class="math-inline">\\(\lambda&#95;1\\)</span> and the smaller eigenvalue in <span class="math-inline">\\(\lambda&#95;2\\)</span>!**
 
-## Problem 10 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-10-12-pts" markdown="span">Problem 10 <span class="badge badge-points">12 pts</span> <a class="badge badge-video" href="https://youtu.be/k1SPbaVhmSU" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 Consider the adjacency matrix <span class="math-inline">\\(A = \begin{bmatrix} 0.4 &amp; 0 &amp; 0.5 \\\\ 0.4 &amp; 0 &amp; 0.5 \\\\ a &amp; b &amp; c \end{bmatrix}\\)</span> for a Markov chain with three states, where <span class="math-inline">\\(a, b, c \in \mathbb{R}\\)</span> are some constants.
 
@@ -1109,7 +1109,7 @@ $$
 
 ---
 
-## Problem 11 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-11-12-pts" markdown="span">Problem 11 <span class="badge badge-points">12 pts</span> <a class="badge badge-video" href="https://youtu.be/_C_TuJnqeX8" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 Let <span class="math-inline">\\(A\\)</span> be a <span class="math-inline">\\(4 \times 4\\)</span> **symmetric** matrix with eigenvalue decomposition <span class="math-inline">\\(A = V \Lambda V^{-1}\\)</span>. Suppose the columns of <span class="math-inline">\\(V\\)</span> are <span class="math-inline">\\(\vec v&#95;1\\)</span>, <span class="math-inline">\\(\vec v&#95;2\\)</span>, <span class="math-inline">\\(\vec v&#95;3\\)</span>, and <span class="math-inline">\\(\vec v&#95;4\\)</span>, in that order, and that the columns of <span class="math-inline">\\(V\\)</span> are unit vectors.
 
@@ -1246,7 +1246,7 @@ From part **c)**, the relevant eigenvalues have magnitudes 2, 3, 0, and 4. As <s
 
 ---
 
-## Problem 12 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-12-12-pts" markdown="span">Problem 12 <span class="badge badge-points">12 pts</span> <a class="badge badge-video" href="https://youtu.be/zPiSa1ySV0s" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 Suppose <span class="math-inline">\\(\tilde X\\)</span> is a <span class="math-inline">\\(24 \times 3\\)</span> matrix whose columns are mean-centered (i.e. have a mean of 0). Let <span class="math-inline">\\(\tilde X = U \Sigma V^T\\)</span> be the singular value decomposition of <span class="math-inline">\\(\tilde X\\)</span>, where
 
@@ -1354,7 +1354,7 @@ $$
 
 ---
 
-## Problem 13 <span class="badge badge-points">4 pts</span>
+<h2 id="problem-13-4-pts" markdown="span">Problem 13 <span class="badge badge-points">4 pts</span></h2>
 
 What is one topic you studied a lot for that wasn't on the Final Exam? **Blank answers will receive no credit!**
 

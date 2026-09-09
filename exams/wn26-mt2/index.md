@@ -37,7 +37,7 @@ hide_footer_hr: true
 
 ---
 
-## Problem 1 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-1-12-pts" markdown="span">Problem 1 <span class="badge badge-points">12 pts</span></h2>
 
 Suppose <span class="math-inline">\\(k\\)</span> is a real number. Let
 
@@ -176,7 +176,7 @@ $$
 
 ---
 
-## Problem 2 <span class="badge badge-points">10 pts</span>
+<h2 id="problem-2-10-pts" markdown="span">Problem 2 <span class="badge badge-points">10 pts</span></h2>
 
 Suppose <span class="math-inline">\\(A\\)</span> is a matrix such that <span class="math-inline">\\(A \begin{bmatrix} 1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix} = \begin{bmatrix} 6 \\\\ 0 \\\\ 1 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\left\lbrace \begin{bmatrix} 1 \\\\ 4 \\\\ -2 \\\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\\ 1 \\\\ 1 \\\\ 0\end{bmatrix} \right\rbrace\\)</span> is a basis for <span class="math-inline">\\(\text{nullsp}(A)\\)</span>.
 
@@ -281,7 +281,7 @@ $$
 
 ---
 
-## Problem 3 <span class="badge badge-points">11 pts</span>
+<h2 id="problem-3-11-pts" markdown="span">Problem 3 <span class="badge badge-points">11 pts</span></h2>
 
 Suppose <span class="math-inline">\\(A\\)</span> and <span class="math-inline">\\(B\\)</span> are both **non-zero** <span class="math-inline">\\(6 \times 6\\)</span> matrices, such that <span class="math-inline">\\(\text{rank}(A) = 4\\)</span> and that every column of <span class="math-inline">\\(B\\)</span> is in <span class="math-inline">\\(\text{nullsp}(A)\\)</span>.
 
@@ -401,7 +401,7 @@ Both are achievable: all columns of <span class="math-inline">\\(B\\)</span> cou
 
 ---
 
-## Problem 4 <span class="badge badge-points">13 pts</span>
+<h2 id="problem-4-13-pts" markdown="span">Problem 4 <span class="badge badge-points">13 pts</span></h2>
 
 Suppose <span class="math-inline">\\(X\\)</span> is some <span class="math-inline">\\(3 \times d\\)</span> matrix, for some integer <span class="math-inline">\\(d\\)</span>. Let
 
@@ -505,7 +505,7 @@ But, this means every vector in <span class="math-inline">\\(\mathbb{R}^3\\)</sp
 
 ---
 
-## Problem 5 <span class="badge badge-points">13 pts</span>
+<h2 id="problem-5-13-pts" markdown="span">Problem 5 <span class="badge badge-points">13 pts</span></h2>
 
 Let
 
@@ -693,7 +693,7 @@ $$
 
 ---
 
-## Problem 6 <span class="badge badge-points">20 pts</span>
+<h2 id="problem-6-20-pts" markdown="span">Problem 6 <span class="badge badge-points">20 pts</span></h2>
 
 Suppose we'd like to fit a multiple linear regression model **without** an intercept term to **predict the number of fans in attendance at a Michigan football home game** given various features.
 
@@ -979,7 +979,7 @@ This is true. The night indicator column is still present in the new design matr
 
 ---
 
-## Problem 7 <span class="badge badge-points">10 pts</span>
+<h2 id="problem-7-10-pts" markdown="span">Problem 7 <span class="badge badge-points">10 pts</span></h2>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -1129,7 +1129,7 @@ $$
 
 ---
 
-## Problem 8 <span class="badge badge-points">11 pts</span>
+<h2 id="problem-8-11-pts" markdown="span">Problem 8 <span class="badge badge-points">11 pts</span></h2>
 
 Let <span class="math-inline">\\(\vec x = \begin{bmatrix} x&#95;1 \\\\ x&#95;2 \end{bmatrix}\\)</span>. Consider the function
 

@@ -43,7 +43,7 @@ hide_footer_hr: true
 
 ---
 
-## Problem 1 <span class="badge badge-points">14 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="problem-1-14-pts-mt1-redemption" markdown="span">Problem 1 <span class="badge badge-points">14 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 Suppose we'd like to find the optimal constant parameter, <span class="math-inline">\\(w^{\ast}\\)</span>, for the constant model <span class="math-inline">\\(h(x&#95;i)=w\\)</span>, using the following dataset of <span class="math-inline">\\(n=5\\)</span> values:
 
@@ -198,7 +198,7 @@ That is exactly the objective from part **a)**, so the answer is the answer from
 
 ---
 
-## Problem 2 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="problem-2-9-pts-mt1-redemption" markdown="span">Problem 2 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 Suppose we fit a simple linear regression model to a dataset of <span class="math-inline">\\(n\\)</span> points, <span class="math-inline">\\((x&#95;1,y&#95;1),(x&#95;2,y&#95;2),\ldots,(x&#95;n,y&#95;n)\\)</span>, by minimizing mean squared error. Let <span class="math-inline">\\(\bar x\\)</span> and <span class="math-inline">\\(\bar y\\)</span> be the means of the <span class="math-inline">\\(x\\)</span>-values and <span class="math-inline">\\(y\\)</span>-values, respectively, and suppose the standard deviations <span class="math-inline">\\(\sigma&#95;x\\)</span> and <span class="math-inline">\\(\sigma&#95;y\\)</span> are both positive. Let
 
@@ -340,7 +340,7 @@ $$
 
 ---
 
-## Problem 3 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="problem-3-10-pts-mt1-redemption" markdown="span">Problem 3 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 Let <span class="math-inline">\\(\vec x = \begin{bmatrix} 2 \\\\ 1 \\\\ 1 \end{bmatrix}\\)</span> and <span class="math-inline">\\(\vec z = \begin{bmatrix} 3 \\\\ 9 \\\\ 3 \end{bmatrix}\\)</span>, and suppose <span class="math-inline">\\(\vec y \in \mathbb{R}^3\\)</span> is such that
 
@@ -466,7 +466,7 @@ $$
 
 ---
 
-## Problem 4 <span class="badge badge-points">5 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="problem-4-5-pts-mt1-redemption" markdown="span">Problem 4 <span class="badge badge-points">5 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 Suppose <span class="math-inline">\\(S = \left\lbrace \begin{bmatrix} x&#95;1 \\\\ x&#95;2 \\\\ x&#95;3 \\\\ x&#95;4 \end{bmatrix} : x&#95;1 + x&#95;2 + 2x&#95;3 = 0 \text{ and } x&#95;3 = x&#95;4 \right\rbrace\\)</span>. State one basis for <span class="math-inline">\\(S\\)</span>. Your answer should be a list of vectors with no variables.
 
@@ -523,7 +523,7 @@ $$
 
 ---
 
-## Problem 5 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-5-4-pts-mt2-redemption" markdown="span">Problem 5 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(7 \times 12\\)</span> matrix. Fill in each blank with an integer with no variables.
 
@@ -559,7 +559,7 @@ $$
 
 ---
 
-## Problem 6 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-6-6-pts-mt2-redemption" markdown="span">Problem 6 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Find the area enclosed by the polygon with vertices <span class="math-inline">\\((0, 0)\\)</span>, <span class="math-inline">\\((4, 6)\\)</span>, <span class="math-inline">\\((1, 8)\\)</span>, and <span class="math-inline">\\((-3, 2)\\)</span>. Show your work, and write your answer in the box provided.
 
@@ -621,7 +621,7 @@ $$
 
 ---
 
-## Problem 7 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-7-12-pts-mt2-redemption" markdown="span">Problem 7 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Suppose <span class="math-inline">\\(X\\)</span> is an <span class="math-inline">\\(n \times d\\)</span> matrix with linearly independent columns, <span class="math-inline">\\(d&lt;n\\)</span>, and <span class="math-inline">\\(\vec y \in \mathbb{R}^n\\)</span>.
 
@@ -770,7 +770,7 @@ we end up with the same vector in either case.
 
 ---
 
-## Problem 8 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-8-12-pts-mt2-redemption" markdown="span">Problem 8 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Suppose we'd like to fit a multiple linear regression model to predict <span class="math-inline">\\(\texttt{cost}&#95;i\\)</span>, the cost in dollars of parking in an Ann Arbor parking garage, using <span class="math-inline">\\(\texttt{hours}&#95;i\\)</span>, the number of hours parked.
 
@@ -926,7 +926,7 @@ $$
 
 ---
 
-## Problem 9 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="problem-9-9-pts-mt2-redemption" markdown="span">Problem 9 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 Let <span class="math-inline">\\(\vec a \in \mathbb{R}^2\\)</span> and let
 
@@ -1149,7 +1149,7 @@ $$
 
 ---
 
-## Problem 10 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-10-12-pts" markdown="span">Problem 10 <span class="badge badge-points">12 pts</span></h2>
 
 Let <span class="math-inline">\\(A=\begin{bmatrix}2&amp;4\\\\4&amp;2\end{bmatrix}\\)</span>.
 
@@ -1323,7 +1323,7 @@ Another way to think about this is that for any <span class="math-inline">\\(k\\
 
 ---
 
-## Problem 11 <span class="badge badge-points">10 pts</span>
+<h2 id="problem-11-10-pts" markdown="span">Problem 11 <span class="badge badge-points">10 pts</span></h2>
 
 The state diagram below describes a Markov chain with three states. <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span> are both constants between 0 and 1.
 
@@ -1431,7 +1431,7 @@ $$
 
 ---
 
-## Problem 12 <span class="badge badge-points">11 pts</span>
+<h2 id="problem-12-11-pts" markdown="span">Problem 12 <span class="badge badge-points">11 pts</span></h2>
 
 Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">\\(3 \times 3\\)</span> symmetric matrix with rank <span class="math-inline">\\(2\\)</span>. The eigenspace corresponding to <span class="math-inline">\\(\lambda=9\\)</span> is the plane
 
@@ -1543,7 +1543,7 @@ $$
 
 ---
 
-## Problem 13 <span class="badge badge-points">12 pts</span>
+<h2 id="problem-13-12-pts" markdown="span">Problem 13 <span class="badge badge-points">12 pts</span></h2>
 
 Let <span class="math-inline">\\(\tilde X\\)</span> be a <span class="math-inline">\\(4 \times 2\\)</span> centered matrix (i.e. in which each column has a mean of 0) with columns <span class="math-inline">\\(\vec a\\)</span> and <span class="math-inline">\\(\vec b\\)</span>:
 
@@ -1661,7 +1661,7 @@ $$
 
 ---
 
-## Problem 14 <span class="badge badge-points">4 pts</span>
+<h2 id="problem-14-4-pts" markdown="span">Problem 14 <span class="badge badge-points">4 pts</span></h2>
 
 What is one topic you studied a lot for that was not on the Final Exam? **Blank answers will receive no credit!**
 

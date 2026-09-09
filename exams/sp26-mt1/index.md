@@ -38,7 +38,7 @@ hide_footer_hr: true
 
 ---
 
-## Problem 1 <span class="badge badge-points">16 pts</span>
+<h2 id="problem-1-16-pts" markdown="span">Problem 1 <span class="badge badge-points">16 pts</span></h2>
 
 Suppose we'd like to find the optimal parameter, <span class="math-inline">\\(w^{\ast}\\)</span>, for the constant model <span class="math-inline">\\(h(x&#95;i)=w\\)</span>, using the following dataset of <span class="math-inline">\\(n = 4\\)</span> values, <span class="math-inline">\\(y&#95;1, y&#95;2, y&#95;3, y&#95;4\\)</span>:
 
@@ -209,7 +209,7 @@ One pro is that clipped loss is less sensitive to outliers, since very large err
 
 ---
 
-## Problem 2 <span class="badge badge-points">10 pts</span>
+<h2 id="problem-2-10-pts" markdown="span">Problem 2 <span class="badge badge-points">10 pts</span></h2>
 
 We will continue to use the constant model, <span class="math-inline">\\(h(x&#95;i)=w\\)</span>, and the same dataset of <span class="math-inline">\\(n=4\\)</span> values as in Problem 1:
 
@@ -296,7 +296,7 @@ Conceptually, the fact that the errors in the case where <span class="math-inlin
 
 ---
 
-## Problem 3 <span class="badge badge-points">14 pts</span>
+<h2 id="problem-3-14-pts" markdown="span">Problem 3 <span class="badge badge-points">14 pts</span></h2>
 
 Suppose we fit a simple linear regression model **with** an intercept term, <span class="math-inline">\\(h(x&#95;i)=w&#95;0+w&#95;1x&#95;i\\)</span>, to a dataset of <span class="math-inline">\\(n\\)</span> points <span class="math-inline">\\((x&#95;1, y&#95;1), (x&#95;2, y&#95;2), \ldots, (x&#95;n, y&#95;n)\\)</span> by minimizing mean squared error. You are given the following information:
 
@@ -506,7 +506,7 @@ Intentionally, I haven't provided the proof of this! I want you to piece the pro
 
 ---
 
-## Problem 4 <span class="badge badge-points">8 pts</span>
+<h2 id="problem-4-8-pts" markdown="span">Problem 4 <span class="badge badge-points">8 pts</span></h2>
 
 Let <span class="math-inline">\\(\vec u,\vec v\in\mathbb R^n\\)</span> be vectors satisfying
 
@@ -562,7 +562,7 @@ $$
 
 ---
 
-## Problem 5 <span class="badge badge-points">13 pts</span>
+<h2 id="problem-5-13-pts" markdown="span">Problem 5 <span class="badge badge-points">13 pts</span></h2>
 
 Suppose <span class="math-inline">\\(\vec u,\vec v\in\mathbb R^n\\)</span> are non-zero vectors and <span class="math-inline">\\(k\\)</span> is a scalar. Let
 
@@ -778,7 +778,7 @@ $$
 
 ---
 
-## Problem 6 <span class="badge badge-points">11 pts</span>
+<h2 id="problem-6-11-pts" markdown="span">Problem 6 <span class="badge badge-points">11 pts</span></h2>
 
 Suppose <span class="math-inline">\\(c \in \mathbb R\\)</span> is a constant and
 
@@ -881,7 +881,7 @@ But, notice that <span class="math-inline">\\(6c + 6 = 24 \implies c = 3\\)</spa
 
 ---
 
-## Problem 7 <span class="badge badge-points">10 pts</span>
+<h2 id="problem-7-10-pts" markdown="span">Problem 7 <span class="badge badge-points">10 pts</span></h2>
 
 Suppose <span class="math-inline">\\(\vec v&#95;1,\vec v&#95;2,\vec v&#95;3,\vec v&#95;4\in\mathbb R^n\\)</span> are a **linearly independent** collection of vectors. Define
 
@@ -992,7 +992,7 @@ $$
 
 ---
 
-## Problem 8 <span class="badge badge-points">8 pts</span>
+<h2 id="problem-8-8-pts" markdown="span">Problem 8 <span class="badge badge-points">8 pts</span></h2>
 
 Suppose <span class="math-inline">\\(S\\)</span> is the subspace of <span class="math-inline">\\(\mathbb R^4\\)</span> defined by
 
@@ -1048,7 +1048,7 @@ So, only the first and third choices are bases for <span class="math-inline">\\(
 
 ---
 
-## Problem 9 <span class="badge badge-points">10 pts</span>
+<h2 id="problem-9-10-pts" markdown="span">Problem 9 <span class="badge badge-points">10 pts</span></h2>
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
