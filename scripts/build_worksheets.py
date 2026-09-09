@@ -19,7 +19,6 @@ is parsed directly, so CI needs nothing but Python.
 """
 from __future__ import annotations
 
-import html
 import re
 import sys
 from pathlib import Path
@@ -31,7 +30,6 @@ import compose  # noqa: E402
 import miniyaml  # noqa: E402
 from generate_exam_markdown import (  # noqa: E402
     EXAM_NAV_HTML,
-    replace_inline_math_spans_with_dollars,
 )
 
 TOPICS_YML = REPO_ROOT / "_data" / "worksheet_topics.yml"
@@ -73,20 +71,6 @@ def exam_label_for(exam_dir: str) -> str:
 
 # ===> Page assembly <=== #
 
-def heading_anchor(heading_text: str) -> str:
-    """Kramdown-compatible ID for a rendered heading line.
-
-    Kramdown maps each whitespace character to a dash WITHOUT collapsing
-    runs, so "FA25 MT1 · Problem 4" (middle dot removed, leaving two
-    spaces) becomes fa25-mt1--problem-4 with a double dash.
-    """
-    text = replace_inline_math_spans_with_dollars(heading_text)
-    text = re.sub(r"<[^>]+>", "", text)
-    text = html.unescape(text)
-    anchor = re.sub(r"[^\w\s-]", "", text.lower())
-    return re.sub(r"\s", "-", anchor.strip())
-
-
 def build_chapter_page(chapter: dict) -> str:
     title = f"Chapter {chapter['chapter']}: {chapter['name']}"
     sections: list[str] = []
@@ -98,8 +82,7 @@ def build_chapter_page(chapter: dict) -> str:
         question = compose.read_question(entry)
         label = exam_label_for(question.exam)
         number = question.number
-        heading_line = f"## {label} · Problem {number}{question.heading_suffix}"
-        anchor = heading_anchor(heading_line[3:])
+        heading_line, anchor = compose.render_heading(question, f"{label} · Problem {number}")
         toc_lines.append(f"- [{label} · Problem {number}](#{anchor})")
         source_note = (
             f'<p class="worksheet-source">From '
