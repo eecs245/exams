@@ -27,7 +27,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 Final · Problem 12 <span class="badge badge-points">12 pts</span>
+<h2 id="fa25-final--problem-12-12-pts" markdown="span">FA25 Final · Problem 12 <span class="badge badge-points">12 pts</span> <a class="badge badge-video" href="https://youtu.be/zPiSa1ySV0s" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -137,7 +137,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 12 <span class="badge badge-points">12 pts</span>
+<h2 id="wn26-final--problem-12-12-pts" markdown="span">WN26 Final · Problem 12 <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -288,7 +288,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 13 <span class="badge badge-points">12 pts</span>
+<h2 id="sp26-final--problem-13-12-pts" markdown="span">SP26 Final · Problem 13 <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 

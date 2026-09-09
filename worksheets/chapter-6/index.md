@@ -34,7 +34,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT1 · Problem 5: Back to Normal <span class="badge badge-points">12 pts</span>
+<h2 id="fa25-mt1--problem-5-back-to-normal-12-pts" markdown="span">FA25 MT1 · Problem 5: Back to Normal <span class="badge badge-points">12 pts</span> <a class="badge badge-video" href="https://youtu.be/dewIDcz5mXo" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -130,7 +130,7 @@ So, we need to find the vector <span class="math-inline">\\(\vec u&#95;k\\)</spa
 
 ---
 
-## FA25 MT2 · Problem 5: Ortho\...dontist? <span class="badge badge-points">12 pts</span>
+<h2 id="fa25-mt2--problem-5-orthodontist-12-pts" markdown="span">FA25 MT2 · Problem 5: Ortho\...dontist? <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
@@ -357,7 +357,7 @@ $$
 
 ---
 
-## WN26 MT1 · Problem 3 <span class="badge badge-points">12 pts</span>
+<h2 id="wn26-mt1--problem-3-12-pts" markdown="span">WN26 MT1 · Problem 3 <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
@@ -524,7 +524,7 @@ $$
 
 ---
 
-## WN26 MT1 · Problem 5 <span class="badge badge-points">12 pts</span>
+<h2 id="wn26-mt1--problem-5-12-pts" markdown="span">WN26 MT1 · Problem 5 <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
@@ -604,7 +604,7 @@ The only possible "edge case" here is when <span class="math-inline">\\(\vec u\\
 
 ---
 
-## WN26 MT2 · Problem 4 <span class="badge badge-points">13 pts</span>
+<h2 id="wn26-mt2--problem-4-13-pts" markdown="span">WN26 MT2 · Problem 4 <span class="badge badge-points">13 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -710,7 +710,7 @@ But, this means every vector in <span class="math-inline">\\(\mathbb{R}^3\\)</sp
 
 ---
 
-## WN26 Final · Problem 6 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="wn26-final--problem-6-12-pts-mt2-redemption" markdown="span">WN26 Final · Problem 6 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -866,7 +866,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 5 <span class="badge badge-points">11 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="wn26-final--problem-5-11-pts-mt2-redemption" markdown="span">WN26 Final · Problem 5 <span class="badge badge-points">11 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -1092,7 +1092,7 @@ $$
 
 ---
 
-## SP26 MT2 · Problem 4 <span class="badge badge-points">14 pts</span>
+<h2 id="sp26-mt2--problem-4-14-pts" markdown="span">SP26 MT2 · Problem 4 <span class="badge badge-points">14 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
@@ -1231,7 +1231,7 @@ Note that we're only able to answer this problem because <span class="math-inlin
 
 ---
 
-## SP26 Final · Problem 6 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="sp26-final--problem-6-6-pts-mt2-redemption" markdown="span">SP26 Final · Problem 6 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -1295,7 +1295,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 7 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="sp26-final--problem-7-12-pts-mt2-redemption" markdown="span">SP26 Final · Problem 7 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 

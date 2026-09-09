@@ -34,7 +34,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 Final · Problem 9 <span class="badge badge-points">18 pts</span>
+<h2 id="fa25-final--problem-9-18-pts" markdown="span">FA25 Final · Problem 9 <span class="badge badge-points">18 pts</span> <a class="badge badge-video" href="https://youtu.be/bz3ECJ7WlKU" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -203,7 +203,7 @@ $$
 {: .yellow }
 > **Make sure to place the larger eigenvalue in <span class="math-inline">\\(\lambda&#95;1\\)</span> and the smaller eigenvalue in <span class="math-inline">\\(\lambda&#95;2\\)</span>!**
 
-## FA25 Final · Problem 10 <span class="badge badge-points">12 pts</span>
+<h2 id="fa25-final--problem-10-12-pts" markdown="span">FA25 Final · Problem 10 <span class="badge badge-points">12 pts</span> <a class="badge badge-video" href="https://youtu.be/k1SPbaVhmSU" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -312,7 +312,7 @@ $$
 
 ---
 
-## FA25 Final · Problem 11 <span class="badge badge-points">12 pts</span>
+<h2 id="fa25-final--problem-11-12-pts" markdown="span">FA25 Final · Problem 11 <span class="badge badge-points">12 pts</span> <a class="badge badge-video" href="https://youtu.be/_C_TuJnqeX8" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -451,7 +451,7 @@ From part **c)**, the relevant eigenvalues have magnitudes 2, 3, 0, and 4. As <s
 
 ---
 
-## WN26 MT2 · Problem 1 <span class="badge badge-points">12 pts</span>
+<h2 id="wn26-mt2--problem-1-12-pts" markdown="span">WN26 MT2 · Problem 1 <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -592,7 +592,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 9 <span class="badge badge-points">12 pts</span>
+<h2 id="wn26-final--problem-9-12-pts" markdown="span">WN26 Final · Problem 9 <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -729,7 +729,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 10 <span class="badge badge-points">14 pts</span>
+<h2 id="wn26-final--problem-10-14-pts" markdown="span">WN26 Final · Problem 10 <span class="badge badge-points">14 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -879,7 +879,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 11 <span class="badge badge-points">10 pts</span>
+<h2 id="wn26-final--problem-11-10-pts" markdown="span">WN26 Final · Problem 11 <span class="badge badge-points">10 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -995,7 +995,7 @@ In this solution, we used the fact that <span class="math-inline">\\(\vec x = 3 
 
 ---
 
-## SP26 Final · Problem 10 <span class="badge badge-points">12 pts</span>
+<h2 id="sp26-final--problem-10-12-pts" markdown="span">SP26 Final · Problem 10 <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -1171,7 +1171,7 @@ Another way to think about this is that for any <span class="math-inline">\\(k\\
 
 ---
 
-## SP26 Final · Problem 11 <span class="badge badge-points">10 pts</span>
+<h2 id="sp26-final--problem-11-10-pts" markdown="span">SP26 Final · Problem 11 <span class="badge badge-points">10 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
@@ -1281,7 +1281,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 12 <span class="badge badge-points">11 pts</span>
+<h2 id="sp26-final--problem-12-11-pts" markdown="span">SP26 Final · Problem 12 <span class="badge badge-points">11 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 

@@ -30,7 +30,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT1 · Problem 3: Spreading Your Wings <span class="badge badge-points">12 pts</span>
+<h2 id="fa25-mt1--problem-3-spreading-your-wings-12-pts" markdown="span">FA25 MT1 · Problem 3: Spreading Your Wings <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -165,7 +165,7 @@ $$
 
 ---
 
-## FA25 Final · Problem 2 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="fa25-final--problem-2-10-pts-mt1-redemption" markdown="span">FA25 Final · Problem 2 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -266,7 +266,7 @@ Therefore, <span class="math-inline">\\(v = \boxed{2k\alpha}\\)</span>.
 
 ---
 
-## WN26 MT1 · Problem 2 <span class="badge badge-points">14 pts</span>
+<h2 id="wn26-mt1--problem-2-14-pts" markdown="span">WN26 MT1 · Problem 2 <span class="badge badge-points">14 pts</span> <a class="badge badge-video" href="https://youtu.be/7E1WH2p-MoU" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
@@ -376,7 +376,7 @@ So, yes, it is possible for there to be multiple pairs of <span class="math-inli
 
 ---
 
-## WN26 Final · Problem 2 <span class="badge badge-points">13 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="wn26-final--problem-2-13-pts-mt1-redemption" markdown="span">WN26 Final · Problem 2 <span class="badge badge-points">13 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -582,7 +582,7 @@ $$
 
 ---
 
-## SP26 MT1 · Problem 3 <span class="badge badge-points">14 pts</span>
+<h2 id="sp26-mt1--problem-3-14-pts" markdown="span">SP26 MT1 · Problem 3 <span class="badge badge-points">14 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -794,7 +794,7 @@ Intentionally, I haven't provided the proof of this! I want you to piece the pro
 
 ---
 
-## SP26 Final · Problem 2 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="sp26-final--problem-2-9-pts-mt1-redemption" markdown="span">SP26 Final · Problem 2 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 

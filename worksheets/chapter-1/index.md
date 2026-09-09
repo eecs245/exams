@@ -33,7 +33,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT1 · Problem 1: Consider the Following\... <span class="badge badge-points">15 pts</span>
+<h2 id="fa25-mt1--problem-1-consider-the-following-15-pts" markdown="span">FA25 MT1 · Problem 1: Consider the Following\... <span class="badge badge-points">15 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -122,7 +122,7 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 
 ---
 
-## FA25 MT1 · Problem 2: Absolute Madness <span class="badge badge-points">17 pts</span>
+<h2 id="fa25-mt1--problem-2-absolute-madness-17-pts" markdown="span">FA25 MT1 · Problem 2: Absolute Madness <span class="badge badge-points">17 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -262,7 +262,7 @@ $$
 
 ---
 
-## FA25 Final · Problem 1 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="fa25-final--problem-1-10-pts-mt1-redemption" markdown="span">FA25 Final · Problem 1 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -358,7 +358,7 @@ The minimizer of mean absolute error is the median of the dataset. When the numb
 
 ---
 
-## WN26 MT1 · Problem 1 <span class="badge badge-points">16 pts</span>
+<h2 id="wn26-mt1--problem-1-16-pts" markdown="span">WN26 MT1 · Problem 1 <span class="badge badge-points">16 pts</span> <a class="badge badge-video" href="https://youtu.be/4qk_4dNKtD4" target="_blank" rel="noopener">🎥 Part c</a></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
@@ -590,7 +590,7 @@ Therefore, there are 6 values in the dataset that are equal to 18.
 
 ---
 
-## WN26 MT1 · Problem 7 <span class="badge badge-points">20 pts</span>
+<h2 id="wn26-mt1--problem-7-20-pts" markdown="span">WN26 MT1 · Problem 7 <span class="badge badge-points">20 pts</span> <a class="badge badge-video" href="https://youtu.be/a8qc8mvGaNM" target="_blank" rel="noopener">🎥 Part c</a></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
@@ -827,7 +827,7 @@ Notice how this relates to parts **a)** and **b)** --- those could have been sol
 
 ---
 
-## WN26 Final · Problem 1 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="wn26-final--problem-1-12-pts-mt1-redemption" markdown="span">WN26 Final · Problem 1 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -950,7 +950,7 @@ $$
 
 ---
 
-## SP26 MT1 · Problem 1 <span class="badge badge-points">16 pts</span>
+<h2 id="sp26-mt1--problem-1-16-pts" markdown="span">SP26 MT1 · Problem 1 <span class="badge badge-points">16 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -1123,7 +1123,7 @@ One pro is that clipped loss is less sensitive to outliers, since very large err
 
 ---
 
-## SP26 MT1 · Problem 2 <span class="badge badge-points">10 pts</span>
+<h2 id="sp26-mt1--problem-2-10-pts" markdown="span">SP26 MT1 · Problem 2 <span class="badge badge-points">10 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -1212,7 +1212,7 @@ Conceptually, the fact that the errors in the case where <span class="math-inlin
 
 ---
 
-## SP26 Final · Problem 1 <span class="badge badge-points">14 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="sp26-final--problem-1-14-pts-mt1-redemption" markdown="span">SP26 Final · Problem 1 <span class="badge badge-points">14 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 

@@ -30,7 +30,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT2 · Problem 4: Poly Wants a Cracker <span class="badge badge-points">18 pts</span>
+<h2 id="fa25-mt2--problem-4-poly-wants-a-cracker-18-pts" markdown="span">FA25 MT2 · Problem 4: Poly Wants a Cracker <span class="badge badge-points">18 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
@@ -230,7 +230,7 @@ $$
 
 ---
 
-## FA25 Final · Problem 8 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="fa25-final--problem-8-6-pts-mt2-redemption" markdown="span">FA25 Final · Problem 8 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -316,7 +316,7 @@ With that in mind, let's look at the options:
 
 ---
 
-## WN26 MT2 · Problem 6 <span class="badge badge-points">20 pts</span>
+<h2 id="wn26-mt2--problem-6-20-pts" markdown="span">WN26 MT2 · Problem 6 <span class="badge badge-points">20 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -604,7 +604,7 @@ This is true. The night indicator column is still present in the new design matr
 
 ---
 
-## WN26 Final · Problem 7 <span class="badge badge-points">8 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="wn26-final--problem-7-8-pts-mt2-redemption" markdown="span">WN26 Final · Problem 7 <span class="badge badge-points">8 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -731,7 +731,7 @@ $$
 
 ---
 
-## SP26 MT2 · Problem 5 <span class="badge badge-points">19 pts</span>
+<h2 id="sp26-mt2--problem-5-19-pts" markdown="span">SP26 MT2 · Problem 5 <span class="badge badge-points">19 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
@@ -1013,7 +1013,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 8 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="sp26-final--problem-8-12-pts-mt2-redemption" markdown="span">SP26 Final · Problem 8 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 

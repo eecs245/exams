@@ -33,7 +33,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT1 · Problem 4: Mission Impossible <span class="badge badge-points">12 pts</span>
+<h2 id="fa25-mt1--problem-4-mission-impossible-12-pts" markdown="span">FA25 MT1 · Problem 4: Mission Impossible <span class="badge badge-points">12 pts</span> <a class="badge badge-video" href="https://youtu.be/qp0Pof1bQq8" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -148,7 +148,7 @@ $$
 
 ---
 
-## FA25 MT1 · Problem 8: Worst-Case Scenario <span class="badge badge-points">8 pts</span>
+<h2 id="fa25-mt1--problem-8-worst-case-scenario-8-pts" markdown="span">FA25 MT1 · Problem 8: Worst-Case Scenario <span class="badge badge-points">8 pts</span> <a class="badge badge-video" href="https://youtu.be/7qSMx-3ac-Y" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -215,7 +215,7 @@ This means that for any positive values of <span class="math-inline">\\(a, b, c,
 
 ---
 
-## FA25 Final · Problem 3 <span class="badge badge-points">16 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="fa25-final--problem-3-16-pts-mt1-redemption" markdown="span">FA25 Final · Problem 3 <span class="badge badge-points">16 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -394,7 +394,7 @@ $$
 
 ---
 
-## WN26 MT1 · Problem 4 <span class="badge badge-points">12 pts</span>
+<h2 id="wn26-mt1--problem-4-12-pts" markdown="span">WN26 MT1 · Problem 4 <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
@@ -508,7 +508,7 @@ This is a contradiction, so it is impossible for both <span class="math-inline">
 
 ---
 
-## WN26 Final · Problem 3 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="wn26-final--problem-3-9-pts-mt1-redemption" markdown="span">WN26 Final · Problem 3 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -648,7 +648,7 @@ So, <span class="math-inline">\\(\boxed{\lVert \vec v \rVert = 9}\\)</span>.
 
 ---
 
-## SP26 MT1 · Problem 4 <span class="badge badge-points">8 pts</span>
+<h2 id="sp26-mt1--problem-4-8-pts" markdown="span">SP26 MT1 · Problem 4 <span class="badge badge-points">8 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -706,7 +706,7 @@ $$
 
 ---
 
-## SP26 MT1 · Problem 5 <span class="badge badge-points">13 pts</span>
+<h2 id="sp26-mt1--problem-5-13-pts" markdown="span">SP26 MT1 · Problem 5 <span class="badge badge-points">13 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -924,7 +924,7 @@ $$
 
 ---
 
-## SP26 MT1 · Problem 9 <span class="badge badge-points">10 pts</span>
+<h2 id="sp26-mt1--problem-9-10-pts" markdown="span">SP26 MT1 · Problem 9 <span class="badge badge-points">10 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -1018,7 +1018,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 3 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="sp26-final--problem-3-10-pts-mt1-redemption" markdown="span">SP26 Final · Problem 3 <span class="badge badge-points">10 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 

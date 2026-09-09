@@ -36,7 +36,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT2 · Problem 1: Getting Started <span class="badge badge-points">12 pts</span>
+<h2 id="fa25-mt2--problem-1-getting-started-12-pts" markdown="span">FA25 MT2 · Problem 1: Getting Started <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
@@ -197,7 +197,7 @@ $$
 
 ---
 
-## FA25 MT2 · Problem 2: Space Jam <span class="badge badge-points">20 pts</span>
+<h2 id="fa25-mt2--problem-2-space-jam-20-pts" markdown="span">FA25 MT2 · Problem 2: Space Jam <span class="badge badge-points">20 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
@@ -347,7 +347,7 @@ $$
 
 ---
 
-## FA25 MT2 · Problem 3: Nilpotence <span class="badge badge-points">12 pts</span>
+<h2 id="fa25-mt2--problem-3-nilpotence-12-pts" markdown="span">FA25 MT2 · Problem 3: Nilpotence <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
@@ -418,7 +418,7 @@ This tells us that <span class="math-inline">\\(2\text{rank}(A) \leq n\\)</span>
 
 ---
 
-## FA25 Final · Problem 5 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="fa25-final--problem-5-12-pts-mt2-redemption" markdown="span">FA25 Final · Problem 5 <span class="badge badge-points">12 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -580,7 +580,7 @@ $$
 
 ---
 
-## WN26 MT2 · Problem 2 <span class="badge badge-points">10 pts</span>
+<h2 id="wn26-mt2--problem-2-10-pts" markdown="span">WN26 MT2 · Problem 2 <span class="badge badge-points">10 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -687,7 +687,7 @@ $$
 
 ---
 
-## WN26 MT2 · Problem 3 <span class="badge badge-points">11 pts</span>
+<h2 id="wn26-mt2--problem-3-11-pts" markdown="span">WN26 MT2 · Problem 3 <span class="badge badge-points">11 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -809,7 +809,7 @@ Both are achievable: all columns of <span class="math-inline">\\(B\\)</span> cou
 
 ---
 
-## WN26 MT2 · Problem 5 <span class="badge badge-points">13 pts</span>
+<h2 id="wn26-mt2--problem-5-13-pts" markdown="span">WN26 MT2 · Problem 5 <span class="badge badge-points">13 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -999,7 +999,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 5 <span class="badge badge-points">11 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="wn26-final--problem-5-11-pts-mt2-redemption" markdown="span">WN26 Final · Problem 5 <span class="badge badge-points">11 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -1225,7 +1225,7 @@ $$
 
 ---
 
-## SP26 MT2 · Problem 1 <span class="badge badge-points">12 pts</span>
+<h2 id="sp26-mt2--problem-1-12-pts" markdown="span">SP26 MT2 · Problem 1 <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
@@ -1388,7 +1388,7 @@ $$
 
 ---
 
-## SP26 MT2 · Problem 2 <span class="badge badge-points">16 pts</span>
+<h2 id="sp26-mt2--problem-2-16-pts" markdown="span">SP26 MT2 · Problem 2 <span class="badge badge-points">16 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
@@ -1592,7 +1592,7 @@ $$
 
 ---
 
-## SP26 MT2 · Problem 3 <span class="badge badge-points">12 pts</span>
+<h2 id="sp26-mt2--problem-3-12-pts" markdown="span">SP26 MT2 · Problem 3 <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
@@ -1704,7 +1704,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 5 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="sp26-final--problem-5-4-pts-mt2-redemption" markdown="span">SP26 Final · Problem 5 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 

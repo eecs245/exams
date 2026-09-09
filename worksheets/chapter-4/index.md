@@ -33,7 +33,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT1 · Problem 6: Needed Me <span class="badge badge-points">11 pts</span>
+<h2 id="fa25-mt1--problem-6-needed-me-11-pts" markdown="span">FA25 MT1 · Problem 6: Needed Me <span class="badge badge-points">11 pts</span> <a class="badge badge-video" href="https://youtu.be/0fbQmyQP6oE" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -107,7 +107,7 @@ other value of <span class="math-inline">\\(c =\\)</span> \_\_\_\_\_\_
 
 ---
 
-## FA25 MT1 · Problem 7: High Definition <span class="badge badge-points">12 pts</span>
+<h2 id="fa25-mt1--problem-7-high-definition-12-pts" markdown="span">FA25 MT1 · Problem 7: High Definition <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt1/">FA25 MT1</a></p>
 
@@ -198,7 +198,7 @@ So, retroactively, we gave full credit to everyone for this part.
 
 ---
 
-## FA25 Final · Problem 4 <span class="badge badge-points">8 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="fa25-final--problem-4-8-pts-mt2-redemption" markdown="span">FA25 Final · Problem 4 <span class="badge badge-points">8 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -259,7 +259,7 @@ For <span class="math-inline">\\(e&#95;1 + e&#95;2 + e&#95;3\\)</span> to always
 
 ---
 
-## WN26 MT1 · Problem 6 <span class="badge badge-points">14 pts</span>
+<h2 id="wn26-mt1--problem-6-14-pts" markdown="span">WN26 MT1 · Problem 6 <span class="badge badge-points">14 pts</span> <a class="badge badge-video" href="https://youtu.be/RB8aUyHpMQM" target="_blank" rel="noopener">🎥 Walkthrough</a></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt1/">WN26 MT1</a></p>
 
@@ -479,7 +479,7 @@ So, the smallest possible value of <span class="math-inline">\\(\text{dim}(W)\\)
 
 ---
 
-## WN26 Final · Problem 4 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="wn26-final--problem-4-4-pts-mt1-redemption" markdown="span">WN26 Final · Problem 4 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -554,7 +554,7 @@ So, <span class="math-inline">\\(S = \text{span}\left(\left\lbrace \begin{bmatri
 
 ---
 
-## SP26 MT1 · Problem 6 <span class="badge badge-points">11 pts</span>
+<h2 id="sp26-mt1--problem-6-11-pts" markdown="span">SP26 MT1 · Problem 6 <span class="badge badge-points">11 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -659,7 +659,7 @@ But, notice that <span class="math-inline">\\(6c + 6 = 24 \implies c = 3\\)</spa
 
 ---
 
-## SP26 MT1 · Problem 7 <span class="badge badge-points">10 pts</span>
+<h2 id="sp26-mt1--problem-7-10-pts" markdown="span">SP26 MT1 · Problem 7 <span class="badge badge-points">10 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -772,7 +772,7 @@ $$
 
 ---
 
-## SP26 MT1 · Problem 8 <span class="badge badge-points">8 pts</span>
+<h2 id="sp26-mt1--problem-8-8-pts" markdown="span">SP26 MT1 · Problem 8 <span class="badge badge-points">8 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt1/">SP26 MT1</a></p>
 
@@ -830,7 +830,7 @@ So, only the first and third choices are bases for <span class="math-inline">\\(
 
 ---
 
-## SP26 Final · Problem 4 <span class="badge badge-points">5 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span>
+<h2 id="sp26-final--problem-4-5-pts-mt1-redemption" markdown="span">SP26 Final · Problem 4 <span class="badge badge-points">5 pts</span> <span class="badge badge-flag" data-flag="mt1-redemption">MT1 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 

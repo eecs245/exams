@@ -34,7 +34,7 @@ Problems below are collected from past exams; each links back to its full exam. 
 
 ---
 
-## FA25 MT2 · Problem 6: Quadratus Formulus <span class="badge badge-points">14 pts</span>
+<h2 id="fa25-mt2--problem-6-quadratus-formulus-14-pts" markdown="span">FA25 MT2 · Problem 6: Quadratus Formulus <span class="badge badge-points">14 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
@@ -175,7 +175,7 @@ $$
 
 ---
 
-## FA25 MT2 · Problem 7: Complexity <span class="badge badge-points">10 pts</span>
+<h2 id="fa25-mt2--problem-7-complexity-10-pts" markdown="span">FA25 MT2 · Problem 7: Complexity <span class="badge badge-points">10 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-mt2/">FA25 MT2</a></p>
 
@@ -270,7 +270,7 @@ as required!
 
 ---
 
-## FA25 Final · Problem 6 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="fa25-final--problem-6-4-pts-mt2-redemption" markdown="span">FA25 Final · Problem 6 <span class="badge badge-points">4 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -316,7 +316,7 @@ $$
 
 ---
 
-## FA25 Final · Problem 7 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="fa25-final--problem-7-6-pts-mt2-redemption" markdown="span">FA25 Final · Problem 7 <span class="badge badge-points">6 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/fa25-final/">FA25 Final</a></p>
 
@@ -393,7 +393,7 @@ Therefore, the correct choice is <span class="math-inline">\\(\boxed{1.6}\\)</sp
 
 ---
 
-## WN26 MT2 · Problem 7 <span class="badge badge-points">10 pts</span>
+<h2 id="wn26-mt2--problem-7-10-pts" markdown="span">WN26 MT2 · Problem 7 <span class="badge badge-points">10 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -545,7 +545,7 @@ $$
 
 ---
 
-## WN26 MT2 · Problem 8 <span class="badge badge-points">11 pts</span>
+<h2 id="wn26-mt2--problem-8-11-pts" markdown="span">WN26 MT2 · Problem 8 <span class="badge badge-points">11 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-mt2/">WN26 MT2</a></p>
 
@@ -713,7 +713,7 @@ $$
 
 ---
 
-## WN26 Final · Problem 8 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="wn26-final--problem-8-9-pts-mt2-redemption" markdown="span">WN26 Final · Problem 8 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/wn26-final/">WN26 Final</a></p>
 
@@ -928,7 +928,7 @@ $$
 
 ---
 
-## SP26 MT2 · Problem 6 <span class="badge badge-points">12 pts</span>
+<h2 id="sp26-mt2--problem-6-12-pts" markdown="span">SP26 MT2 · Problem 6 <span class="badge badge-points">12 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
@@ -1043,7 +1043,7 @@ $$
 
 ---
 
-## SP26 MT2 · Problem 7 <span class="badge badge-points">15 pts</span>
+<h2 id="sp26-mt2--problem-7-15-pts" markdown="span">SP26 MT2 · Problem 7 <span class="badge badge-points">15 pts</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-mt2/">SP26 MT2</a></p>
 
@@ -1201,7 +1201,7 @@ $$
 
 ---
 
-## SP26 Final · Problem 9 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span>
+<h2 id="sp26-final--problem-9-9-pts-mt2-redemption" markdown="span">SP26 Final · Problem 9 <span class="badge badge-points">9 pts</span> <span class="badge badge-flag" data-flag="mt2-redemption">MT2 Redemption</span></h2>
 
 <p class="worksheet-source">From <a href="/exams/sp26-final/">SP26 Final</a></p>
 
