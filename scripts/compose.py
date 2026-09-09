@@ -5,6 +5,9 @@ One exam is one folder. It holds that exam's questions, their images, its
 metadata, and -- once composed -- its own generated page:
 
     exams/<term>-<exam>/q<NN>.md            question: metadata header + body
+                                            (video links are typed into this
+                                            header by hand and survive
+                                            re-extraction -- see PRESERVED_KEY_PREFIX)
     exams/<term>-<exam>/q<NN>-preamble.md   optional note above that heading
     exams/<term>-<exam>/imgs/*              images the questions reference
     exams/<term>-<exam>/.extracted          fingerprint of the source extracted
@@ -31,6 +34,7 @@ and this module with scripts/miniyaml.py, since CI has no PyYAML.
 from __future__ import annotations
 
 import hashlib
+import html
 import re
 import shutil
 import sys
@@ -122,6 +126,35 @@ def read_header(text: str, source: Path) -> tuple[dict[str, str], str]:
     return fields, text[end + len(HEADER_DELIMITER) + 2 :].lstrip("\n")
 
 
+# Header keys maintained BY HAND in a question file. Everything else in the
+# header is regenerated from LaTeX on every extraction; keys with this prefix
+# are read back first and written into the new header, so typing
+#     video: https://youtu.be/...          (a walkthrough of the whole problem)
+#     video_c: https://youtu.be/...        (a walkthrough of part (c) only)
+# into exams/<id>/qNN.md is permanent. Values are matched to the question by
+# file name, so renumbering an exam's problems moves them with the number.
+PRESERVED_KEY_PREFIX = "video"
+
+
+def preserved_header_fields(path: Path) -> dict[str, str]:
+    """Hand-maintained header keys of an existing question file, if any."""
+    if not path.exists():
+        return {}
+    fields, _ = read_header(path.read_text(), path)
+    return {k: v for k, v in fields.items() if k.startswith(PRESERVED_KEY_PREFIX) and v.strip()}
+
+
+def parse_videos(fields: dict[str, str]) -> list[tuple[str, str]]:
+    """(part, url) pairs from video / video_<part> keys; part is "" for whole-problem."""
+    videos: list[tuple[str, str]] = []
+    for key, value in fields.items():
+        if key == "video":
+            videos.append(("", value.strip()))
+        elif key.startswith("video_") and key[len("video_"):]:
+            videos.append((key[len("video_"):], value.strip()))
+    return [(part, url) for part, url in videos if url]
+
+
 def parse_list(value: str) -> list[str]:
     inner = value.strip().removeprefix("[").removesuffix("]").strip()
     return [item.strip() for item in inner.split(",") if item.strip()]
@@ -140,6 +173,7 @@ class Question:
     points: str = ""
     flags: list[str] = field(default_factory=list)
     images: list[str] = field(default_factory=list)
+    videos: list[tuple[str, str]] = field(default_factory=list)  # (part, url)
 
     @property
     def id(self) -> str:
@@ -185,6 +219,7 @@ def read_question(question_id: str) -> Question:
         points=fields.get("points", ""),
         flags=parse_list(fields.get("flags", "[]")),
         images=parse_list(fields.get("images", "[]")),
+        videos=parse_videos(fields),
     )
 
 
@@ -290,6 +325,48 @@ def source_fingerprint(source_dir: Path, scripts_dir: Path = SCRIPTS_DIR) -> str
 def read_extracted_fingerprint(exam: str) -> str | None:
     stamp = EXAMS_DIR / exam / EXTRACTED_STAMP
     return stamp.read_text().strip() if stamp.exists() else None
+
+
+# ===> Headings <=== #
+
+def heading_anchor(heading_html: str) -> str:
+    """The id Kramdown would have generated for this heading's text.
+
+    Headings are emitted as HTML (so a video badge can sit in them without
+    changing their anchor), which means Kramdown no longer assigns ids -- so
+    this reproduces its algorithm exactly: take the text content, drop
+    leading non-letters, keep only ASCII letters, digits, spaces and hyphens,
+    turn each space into a hyphen WITHOUT collapsing runs (which is why a
+    removed middle dot leaves a double hyphen), lowercase.
+    """
+    text = html.unescape(re.sub(r"<[^>]+>", "", heading_html))
+    text = re.sub(r"^[^A-Za-z]+", "", text)
+    text = re.sub(r"[^A-Za-z0-9 -]", "", text)
+    return text.replace(" ", "-").lower()
+
+
+def video_badges(question: Question) -> str:
+    return "".join(
+        f' <a class="badge badge-video" href="{url}" target="_blank" rel="noopener">'
+        f'🎥 {("Part " + part) if part else "Walkthrough"}</a>'
+        for part, url in question.videos
+    )
+
+
+def render_heading(question: Question, label: str) -> tuple[str, str]:
+    """(html, anchor) for a question heading.
+
+    `label` is the page's name for the question ("Problem 4" on its exam page,
+    "FA25 MT1 · Problem 4" on a worksheet); heading_suffix holds the points and
+    flag badges. The anchor is computed BEFORE the video badge is appended, so
+    adding or removing a video never changes a link into the page.
+    """
+    core = f"{label}{question.heading_suffix}"
+    anchor = heading_anchor(core)
+    # markdown="span": Kramdown still renders the heading's inner text as inline
+    # Markdown (pandoc's "\..." escapes, "\\(" math delimiters), exactly as it
+    # did when the heading was "## ...", while the id attribute is ours.
+    return f'<h2 id="{anchor}" markdown="span">{core}{video_badges(question)}</h2>', anchor
 
 
 # ===> Rendering into a page <=== #
