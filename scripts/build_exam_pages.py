@@ -12,6 +12,7 @@ single definition of how an exam looks.
 """
 from __future__ import annotations
 
+import re
 import sys
 from pathlib import Path
 
@@ -24,7 +25,7 @@ from generate_exam_markdown import (  # noqa: E402
     EXAM_NAV_HTML,
     SECTION_SEPARATOR,
     escape_frontmatter,
-    generate_toc,
+    format_heading_for_toc,
 )
 
 
@@ -50,6 +51,12 @@ def action_buttons(meta: dict) -> str:
     return '<div class="assignment-actions">\n' + "\n".join(rendered) + "\n</div>"
 
 
+def toc_label(question) -> str:
+    """'Problem 4' or 'Problem 4: Title' -- the heading minus its badges."""
+    without_badges = re.sub(r'\s*<span class="badge[^"]*"[^<]*</span>', "", question.heading_suffix)
+    return format_heading_for_toc(f"Problem {question.number}{without_badges}".rstrip())
+
+
 def build_exam_page(exam: str) -> tuple[str, int]:
     meta = compose.registry_entry(exam)
     questions = compose.read_exam_questions(exam)
@@ -60,14 +67,13 @@ def build_exam_page(exam: str) -> tuple[str, int]:
     # their imgs/ references need no copying or rewriting.
     page_dir = compose.EXAMS_DIR / exam
 
-    body = f"\n\n{SECTION_SEPARATOR}\n\n".join(
-        compose.emit_question(
-            question,
-            page_dir,
-            f"## Problem {question.number}{question.heading_suffix}",
-        ).rstrip()
-        for question in questions
-    )
+    sections: list[str] = []
+    toc_lines = ["## Problems", ""]
+    for question in questions:
+        heading, anchor = compose.render_heading(question, f"Problem {question.number}")
+        sections.append(compose.emit_question(question, page_dir, heading).rstrip())
+        toc_lines.append(f"- [{toc_label(question)}](#{anchor})")
+    body = f"\n\n{SECTION_SEPARATOR}\n\n".join(sections)
 
     title = compose.exam_title(meta)
     parts = [
@@ -100,7 +106,7 @@ def build_exam_page(exam: str) -> tuple[str, int]:
             "",
             SECTION_SEPARATOR,
             "",
-            generate_toc(body, toc_title="Problems"),
+            "\n".join(toc_lines),
             "",
             SECTION_SEPARATOR,
             "",
