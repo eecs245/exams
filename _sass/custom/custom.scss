@@ -225,6 +225,16 @@ body {
     background-color: #9A3324;
     color: #FFFFFF;
   }
+  // Link to a walkthrough video, typed into the question's header by hand.
+  .badge-video {
+    background-color: #FFCB05;
+    color: #00274C;
+    text-decoration: none;
+  }
+  a.badge-video:hover {
+    background-color: #e6b800;
+    text-decoration: none;
+  }
 
   .math-display,
   mjx-container[jax="CHTML"][display="true"] {
