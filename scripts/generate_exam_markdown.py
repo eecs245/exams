@@ -2741,6 +2741,14 @@ def write_question_tree(
     # renumbers a problem must not leave stale files for the composers to find.
     # index.md is generated output and is rewritten by build_exam_pages.py.
     questions_dir.mkdir(parents=True, exist_ok=True)
+    # Hand-typed header keys (video links) are read back before the files are
+    # regenerated, then written into the new headers. Without this, every
+    # re-extraction -- which any script change triggers -- would erase them.
+    preserved = {
+        path.stem: compose.preserved_header_fields(path)
+        for path in questions_dir.glob("q*.md")
+        if compose.QUESTION_FILE_PATTERN.match(path.name)   # not qNN-preamble.md
+    }
     for stale in list(questions_dir.glob("q*.md")):
         stale.unlink()
     if (questions_dir / "imgs").exists():
@@ -2765,6 +2773,7 @@ def write_question_tree(
                 "flags": question.flags,
                 "has_solution": "<summary>Solution</summary>" in body,
                 "images": images,
+                **preserved.get(stem, {}),
             }
         )
         # Trailing whitespace is stripped here, at the source, so every consumer
