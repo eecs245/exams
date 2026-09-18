@@ -344,7 +344,7 @@ def generate_question_tree(
     source_tex: Path,
     questions_dir: Path,
 ) -> int:
-    """Convert one exam into exams/<term>-<exam>/{q*.md,imgs/,.extracted}."""
+    """Convert one exam into src/<term>-<exam>/{qNN/{src.md,config.yml,imgs/},.extracted}."""
     warn_on_homework_metadata(metadata, source_tex)
     with tempfile.TemporaryDirectory() as tmp_dir_str:
         tmp_dir = Path(tmp_dir_str)
@@ -446,7 +446,7 @@ def seed_tikz_cache(questions_dir: Path, staging_imgs: Path) -> None:
     installation still succeeds as long as no figure actually changed.
     """
     staging_imgs.mkdir(parents=True, exist_ok=True)
-    for cached in questions_dir.glob("imgs/tikz-*.svg"):
+    for cached in questions_dir.glob("q*/imgs/tikz-*.svg"):
         shutil.copy2(cached, staging_imgs / cached.name)
 
 
@@ -2783,7 +2783,7 @@ def escape_underscores(match: re.Match[str]) -> str:
 
 # ===> Splitting a converted exam into per-question source files <=== #
 # The question, not the page, is this repo's unit of source. Exam mode writes
-# exams/<term>-<exam>/q<NN>.md and every page is composed from those; see
+# src/<term>-<exam>/q<NN>/ and every page is composed from those; see
 # scripts/compose.py.
 #
 # The split runs on the CLEANED markdown, not on the LaTeX and not on the
@@ -2897,55 +2897,56 @@ def write_question_tree(
     questions_dir: Path,
     asset_search_dirs: list[Path],
 ) -> None:
-    # Clear existing questions and their images first: an exam that loses or
-    # renumbers a problem must not leave stale files for the composers to find.
-    # index.md is generated output and is rewritten by build_exam_pages.py.
+    """Write src/<exam>/qNN/ for each question.
+
+    src.md, preamble.md and imgs/ are generated and replaced every time.
+    config.yml is written only if it does not exist: it holds what people edit
+    (title, points, flags, video links), so a re-conversion compares against it
+    and warns about differences instead of overwriting them.
+    """
     questions_dir.mkdir(parents=True, exist_ok=True)
-    # Hand-typed header keys (video links) are read back before the files are
-    # regenerated, then written into the new headers. Without this, every
-    # re-extraction -- which any script change triggers -- would erase them.
-    preserved = {
-        path.stem: compose.preserved_header_fields(path)
-        for path in questions_dir.glob("q*.md")
-        if compose.QUESTION_FILE_PATTERN.match(path.name)   # not qNN-preamble.md
-    }
-    for stale in list(questions_dir.glob("q*.md")):
-        stale.unlink()
-    if (questions_dir / "imgs").exists():
-        shutil.rmtree(questions_dir / "imgs")
+    current = {compose.question_filename(q.number) for q in questions}
+    for folder in sorted(questions_dir.iterdir()):
+        if folder.is_dir() and compose.QUESTION_DIR_PATTERN.match(folder.name) and folder.name not in current:
+            # The LaTeX no longer has this problem. Remove what conversion owns;
+            # leave config.yml, which may hold hand-typed links, and say so.
+            for generated in (folder / compose.BODY_FILE, folder / compose.PREAMBLE_FILE):
+                generated.unlink(missing_ok=True)
+            shutil.rmtree(folder / "imgs", ignore_errors=True)
+            print(
+                f"WARNING: {folder.relative_to(compose.REPO_ROOT)} has no matching problem in the "
+                "LaTeX any more; its src.md was removed. Delete the folder if that is intended.",
+                file=sys.stderr,
+            )
 
     for question in questions:
-        body, images = relocate_assets(question.body, asset_search_dirs, questions_dir)
+        folder = questions_dir / compose.question_filename(question.number)
+        folder.mkdir(parents=True, exist_ok=True)
+        shutil.rmtree(folder / "imgs", ignore_errors=True)
+        body, _ = relocate_assets(question.body, asset_search_dirs, folder)
         preamble = ""
         if question.preamble:
-            preamble, preamble_images = relocate_assets(
-                question.preamble, asset_search_dirs, questions_dir
-            )
-            images = sorted(set(images) | set(preamble_images))
-        question.images = images
-        stem = compose.question_filename(question.number)
-        header = compose.format_header(
-            {
-                "number": question.number,
-                "title": question.title,
-                "heading_suffix": question.heading_suffix,
-                "points": question.points,
-                "flags": question.flags,
-                "has_solution": "<summary>Solution</summary>" in body,
-                "images": images,
-                **preserved.get(stem, {}),
-            }
-        )
+            preamble, _ = relocate_assets(question.preamble, asset_search_dirs, folder)
+
         # Trailing whitespace is stripped here, at the source, so every consumer
-        # gets the same clean text. Pages used to strip it on write, which meant
-        # worksheets only inherited clean content by way of the exam page.
-        (questions_dir / f"{stem}.md").write_text(
-            f"{header}\n\n{strip_line_endings(body)}\n"
-        )
+        # gets the same clean text.
+        compose.write_if_changed(folder / compose.BODY_FILE, strip_line_endings(body) + "\n")
         if preamble:
-            (questions_dir / f"{stem}-preamble.md").write_text(
-                strip_line_endings(preamble) + "\n"
-            )
+            compose.write_if_changed(folder / compose.PREAMBLE_FILE, strip_line_endings(preamble) + "\n")
+        else:
+            (folder / compose.PREAMBLE_FILE).unlink(missing_ok=True)
+
+        title = compose.unescape_title(question.title)
+        config_path = folder / compose.CONFIG_FILE
+        if not config_path.exists():
+            compose.seed_config(config_path, title, question.points, question.flags)
+        else:
+            for difference in compose.config_drift(config_path, title, question.points, question.flags):
+                print(
+                    f"WARNING: {config_path.relative_to(compose.REPO_ROOT)} says {difference}. "
+                    "Edit config.yml if the change is intended.",
+                    file=sys.stderr,
+                )
 
 
 def strip_line_endings(text: str) -> str:
