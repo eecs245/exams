@@ -4,13 +4,13 @@
 Reads _data/worksheet_topics.yml and, for each chapter, assembles
 worksheets/chapter-<n>/index.md from the questions it lists. There is no
 worksheets/ landing page -- the site links each chapter directly. Questions come
-straight out of exams/ via scripts/compose.py -- the same route
+straight out of src/ via scripts/compose.py -- the same route
 scripts/build_exam_pages.py takes -- so a worksheet and an exam page render an
 identical question identically, and no generated page is ever parsed to recover
 its contents.
 
 Problem IDs are <term>-<exam>/q<NN>, e.g. sp26-mt1/q02, which is also that
-question's path: exams/sp26-mt1/q02.md. Every entry must be such an id; the
+question's path: src/sp26-mt1/q02/. Every entry must be such an id; the
 old {id, pdf} form for PDF-only mock problems is gone, and is rejected rather
 than silently skipped.
 
