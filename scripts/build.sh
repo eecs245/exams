@@ -15,7 +15,8 @@
 #   _sources/exams/<id>/<id>.tex                  source you drop in
 #   src/<id>/qNN/{src.md,imgs/}                   extracted from it; regenerated freely
 #   src/<id>/qNN/config.yml                       title, points, flags, videos; written once, then yours
-#   exams/<id>/index.md, worksheets/chapter-*/    composed from the questions
+#   .build/{exams,worksheets}/                    composed from the questions; gitignored,
+#                                                 published only into _site by the plugin
 #   _data/exams.yml                               registry: title, PDFs, playlist
 #
 # "Changed" means the content hash of the source folder plus these scripts
