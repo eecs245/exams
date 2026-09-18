@@ -730,6 +730,9 @@ def transform_assignment_tex(
     if figure_assets_dir is not None and source_dir is not None:
         text = render_tikz_figures(text, figure_assets_dir, source_dir)
     text = strip_layout_commands(text)
+    if include_solutions:
+        # Before replace_answerbox_markers, which erases every blank's answer.
+        text = synthesize_missing_solutions(text)
     text = replace_answerbox_markers(text)  # NOTE: 07/23/26 3:18PM fix to \minibox and \labeledanswerbox rendering
     text = replace_youtube_embed_markers(text)
     text = expand_labcodelinks(text)
@@ -867,6 +870,161 @@ def mark_roman_enumerates(text: str) -> str:
         text,
     )
 
+# ===> Solutions for parts that only mark an answer <=== #
+SYNTHESIZED_MARK = "% synthesized-solution"   # a TeX comment: pandoc drops it
+
+ANSWER_BOX_PATTERN = re.compile(r"\\(minibox|labeledanswerbox)(?![A-Za-z])\s*\{")
+UNIT_PATTERN = re.compile(
+    r"(?s)\\begin\{(subprob|subactivity)\}.*?\\end\{\1\}"
+)
+PROBLEM_PATTERN = re.compile(r"(?s)\\begin\{(prob|activity)\}.*?\\end\{\1\}")
+
+
+def synthesize_missing_solutions(text: str) -> str:
+    r"""Give every answer-only part a Solution dropdown.
+
+    Some parts carry their whole answer in the question markup -- a
+    \correctbubble, or a \minibox with the answer typed in -- and no solution
+    environment. The web view deliberately hides both (bubbles render empty,
+    blanks render blank), so without this pass those parts had no solution at
+    all: fa25-mt1 Problem 1 showed six multiple-choice parts and nothing to
+    check them against.
+
+    For each part (a subprob, or a whole prob that has none) with a marked
+    answer and no \begin{solution}, a solution environment is appended holding:
+      - every answer choice in the part, in source order and line structure,
+        with the correct one(s) filled -- all of them, not just the last row;
+      - every line that holds a filled blank, with the blank replaced by the
+        boxed answer.
+    Parts with a written solution are left exactly as they are. Each synthesis
+    is reported on stderr so it is never silent.
+    """
+    def per_problem(problem: re.Match[str]) -> str:
+        block = problem.group(0)
+        number = per_problem.count = per_problem.count + 1
+        if UNIT_PATTERN.search(block):
+            letters = iter("abcdefghijklmnopqrstuvwxyz")
+            return UNIT_PATTERN.sub(lambda u: synthesize_unit(u.group(0), f"{number}{next(letters)}"), block)
+        return synthesize_unit(block, str(number))
+
+    per_problem.count = 0
+    return PROBLEM_PATTERN.sub(per_problem, text)
+
+
+def synthesize_unit(unit: str, label: str) -> str:
+    if "\\begin{solution}" in unit:
+        return unit
+    lines_out: list[str] = []
+    kinds: list[str] = []
+    for line in re.split(r"\n", unit):
+        has_bubbles = bool(ANY_BUBBLE_PATTERN.search(line))
+        if has_bubbles:
+            if re.search(r"\\begin\{(?:array|tabular)", unit):
+                print(f"WARNING: Problem {label}: answer-only grid; no solution synthesized.", file=sys.stderr)
+                return unit
+            lines_out.append(bubbles_as_solution(line))
+        elif filled_answer_boxes(line):
+            lines_out.append(reveal_answer_boxes(strip_trailing_linebreaks(line)))
+    marked = any("correct" in l for l in lines_out) or any("\\boxed" in l for l in lines_out)
+    if not lines_out or not marked:
+        return unit
+    if any(ANY_BUBBLE_PATTERN.search(l) for l in lines_out):
+        kinds.append("multiple choice")
+    if any("\\boxed" in l for l in lines_out):
+        kinds.append("fill-in-the-blank")
+    print(f"SYNTHESIZED solution for Problem {label} ({' + '.join(kinds)})", file=sys.stderr)
+
+    body = "\n\n".join(lines_out)
+    solution = f"\n\\begin{{solution}}\n{SYNTHESIZED_MARK}\n{body}\n\\end{{solution}}\n"
+    closing = re.search(r"\\end\{(?:subprob|subactivity|prob|activity)\}\s*$", unit)
+    return unit[: closing.start()] + solution + unit[closing.start():]
+
+
+def strip_trailing_linebreaks(line: str) -> str:
+    return re.sub(r"(?:\s*\\\\)+\s*$", "", line).strip()
+
+
+def bubbles_as_solution(line: str) -> str:
+    """The line's answer choices as \\solution* bubbles, blanks inside them revealed."""
+    out: list[str] = []
+    cursor = 0
+    while (match := ANY_BUBBLE_PATTERN.search(line, cursor)) is not None:
+        name = match.group(1)
+        try:
+            content, end = extract_braced(line, match.end() - 1)
+        except ValueError:
+            break
+        correct = name.startswith(("correct", "filled"))
+        command = "solution" + ("correct" if correct else "") + ("squarebubble" if "square" in name else "bubble")
+        out.append(f"\\{command}{{{reveal_answer_boxes(content)}}}")
+        cursor = end
+    return " ".join(out)
+
+
+def iter_answer_boxes(text: str):
+    """Yield (start, end, command, args) for each \\minibox / \\labeledanswerbox."""
+    cursor = 0
+    while (match := ANY_BOX(text, cursor)) is not None:
+        command = match.group(1)
+        index = match.end() - 1
+        args: list[str] = []
+        try:
+            for _ in range(2):
+                while index < len(text) and text[index] in " \t\n":
+                    index += 1
+                content, index = extract_braced(text, index)
+                args.append(content)
+        except (ValueError, IndexError):
+            cursor = match.end()
+            continue
+        # optional [..] size arguments
+        while True:
+            probe = index
+            while probe < len(text) and text[probe] in " \t":
+                probe += 1
+            if probe < len(text) and text[probe] == "[" and "]" in text[probe:]:
+                index = text.index("]", probe) + 1
+            else:
+                break
+        yield match.start(), index, command, args
+        cursor = index
+
+
+def ANY_BOX(text: str, cursor: int):
+    return ANSWER_BOX_PATTERN.search(text, cursor)
+
+
+def filled_answer_boxes(text: str) -> bool:
+    return any(args[1].strip() for _, _, _, args in iter_answer_boxes(text))
+
+
+def reveal_answer_boxes(text: str) -> str:
+    r"""Replace each answer box with its boxed answer (or a blank if it has none).
+
+    A box can sit in text ("c = $ \minibox{3cm}{0 or $-\sqrt{2}$}") or inside
+    math ("$\text{rank}(A) = \minibox{3cm}{2}$"); \boxed needs math mode, so
+    the replacement opens its own $...$ only when it is not already in one.
+    Answers mixing prose and math go through split_text_and_math.
+    """
+    out: list[str] = []
+    cursor = 0
+    for start, end, command, args in iter_answer_boxes(text):
+        out.append(text[cursor:start])
+        answer = args[1].strip()
+        in_math = len(re.findall(r"(?<!\\)\$", text[:start])) % 2 == 1
+        if not answer:
+            rendered = ANSWER_BLANK
+        else:
+            boxed = f"\\boxed{{{split_text_and_math(answer)}}}"
+            if command == "labeledanswerbox":
+                boxed = f"{args[0].strip()} = {boxed}"
+            rendered = boxed if in_math else f"${boxed}$"
+        out.append(rendered)
+        cursor = end
+    out.append(text[cursor:])
+    return "".join(out)
+
+
 def strip_false_blocks(text: str) -> str:
     return re.sub(r"(?s)\\iffalse\b.*?\\fi\b", "", text)
 
@@ -986,6 +1144,8 @@ def add_solution_choice_summaries(text: str) -> str:
         parts.append(before_solution)
         options = extract_last_choice_group(before_solution)
         solution_body = match.group(1)
+        if SYNTHESIZED_MARK in solution_body:
+            options = []  # already carries every option of its part
         if options:
             summary = render_solution_choice_summary(options)
             solution_body = f"\n{summary}\n\n{solution_body.lstrip()}"
