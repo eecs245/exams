@@ -100,6 +100,11 @@ This equation has three solutions for <span class="math-inline">\\(c\\)</span>: 
 
 other value of <span class="math-inline">\\(c =\\)</span> \_\_\_\_\_\_
 
+<details markdown="1"><summary>Solution</summary>
+
+other value of <span class="math-inline">\\(c =\\)</span> <span class="math-inline">\\(\boxed{\text{0 or }-\sqrt{2}}\\)</span>
+</details>
+
 </div>
 </div>
 
@@ -130,6 +135,13 @@ $$
 <span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(r\\)</span> be the dimension of the subspace of <span class="math-inline">\\(\mathbb{R}^{7}\\)</span> spanned by <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \ldots \vec x&#95;{12}\\)</span>. What are the smallest and largest possible values of <span class="math-inline">\\(r\\)</span>? Your answers should be integers with no variables.
 
 smallest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_\_ largest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_\_
+
+<details markdown="1"><summary>Solution</summary>
+
+smallest possible value of <span class="math-inline">\\(r =\\)</span> <span class="math-inline">\\(\boxed{2}\\)</span>
+
+largest possible value of <span class="math-inline">\\(r =\\)</span> <span class="math-inline">\\(\boxed{7}\\)</span>
+</details>
 
 </div>
 </div>
