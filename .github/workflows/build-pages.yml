@@ -13,7 +13,7 @@ name: Build exam pages and worksheets
 #   2. Preview locally with `jekyll serve` -- the _plugins/ hook runs
 #      scripts/build.sh, which extracts the questions (needs pandoc; also
 #      pdflatex and pdftocairo for a TikZ figure not already rendered).
-#      Commit the new exams/<id>/ folder.
+#      Commit the new src/<id>/ folder.
 #   3. Append the new problems to _data/worksheet_topics.yml under their
 #      chapters and push.
 
@@ -21,7 +21,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "exams/*/q*.md"
+      - "src/**"
       - "_data/exams.yml"
       - "_data/worksheet_topics.yml"
       - "scripts/build.sh"
