@@ -1,0 +1,5 @@
+# Hand-editable; conversion never overwrites this file.
+# Keys: title, points, flags (list), video (whole problem), video_<part> (e.g. video_c).
+title: "Quadratus Formulus"
+points: 14
+flags:
