@@ -27,7 +27,7 @@ page and the composed pages agree by construction. See load_registry.
 Both consumers -- scripts/build_exam_pages.py and scripts/build_worksheets.py --
 go through this module, so an exam page and a topic worksheet render the same
 question identically. Nothing here parses a generated page; pages are output
-only. src/ is excluded from the Jekyll build in _config.yml. Both YAML files are
+only, written to .build/ and published by _plugins/composed_pages.rb. src/ is excluded from the Jekyll build in _config.yml. Both YAML files are
 read with scripts/miniyaml.py, since CI has no PyYAML.
 """
 from __future__ import annotations
@@ -46,7 +46,14 @@ import miniyaml  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 QUESTIONS_DIR = REPO_ROOT / "src"      # the only content tree
-EXAMS_DIR = REPO_ROOT / "exams"        # composed exam pages (output)
+# Everything composed lands here, never in the source tree: it is rebuilt on
+# every build, so a copy at the repo root would only invite edits that get
+# overwritten. _plugins/composed_pages.rb publishes it; the pages exist only
+# in _site. Gitignored, and excluded in _config.yml so Jekyll neither reads
+# nor watches it.
+BUILD_DIR = REPO_ROOT / ".build"
+EXAMS_DIR = BUILD_DIR / "exams"            # composed exam pages
+WORKSHEETS_DIR = BUILD_DIR / "worksheets"  # composed topic worksheets
 SOURCES_DIR = REPO_ROOT / "_sources" / "exams"
 SCRIPTS_DIR = REPO_ROOT / "scripts"
 REGISTRY_PATH = REPO_ROOT / "_data" / "exams.yml"
