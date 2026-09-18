@@ -13,18 +13,19 @@
 # drop its folder into _sources/exams/, then preview.
 #
 #   _sources/exams/<id>/<id>.tex                  source you drop in
-#   exams/<id>/{q*.md,imgs/,.extracted}           extracted from it; hand-editable headers
+#   src/<id>/qNN/{src.md,imgs/}                   extracted from it; regenerated freely
+#   src/<id>/qNN/config.yml                       title, points, flags, videos; written once, then yours
 #   exams/<id>/index.md, worksheets/chapter-*/    composed from the questions
 #   _data/exams.yml                               registry: title, PDFs, playlist
 #
 # "Changed" means the content hash of the source folder plus these scripts
-# differs from exams/<id>/.extracted -- not mtimes, which git does not keep.
+# differs from src/<id>/.extracted -- not mtimes, which git does not keep.
 #
 # Extraction needs pandoc (and pdflatex + pdftocairo only for a TikZ figure not
 # already rendered). Without pandoc, a stale exam is reported and its committed
 # questions are used; an exam with NO committed questions is an error. CI passes
-# --compose-only: it must never re-extract, because question headers carry
-# hand-typed data (video links) that a fresh extraction would not know about.
+# --compose-only: CI has no pandoc and no reason to convert; it composes from
+# the committed questions.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -51,7 +52,7 @@ if [ "$mode" != none ]; then
     name="$(basename "$tex" .tex)"
     [ -n "$only" ] && [ "$name" != "$only" ] && continue
     matched=1
-    questions_dir="$REPO_ROOT/exams/${name}"
+    questions_dir="$REPO_ROOT/src/${name}"
 
     if [ "$mode" = changed ] && \
        python3 "$SCRIPT_DIR/generate_exam_markdown.py" --check-extracted "$tex" "$questions_dir"; then
