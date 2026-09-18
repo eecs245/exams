@@ -4,6 +4,8 @@
 # which reliably makes iCloud fork duplicates. No real file here has a space.
 * [0-9].*
 _site/
+# Composed exam pages and worksheets: build output, published only into _site.
+.build/
 .jekyll-cache/
 CURSOR.md
 .leccap_cookie
