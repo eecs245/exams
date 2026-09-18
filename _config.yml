@@ -18,6 +18,7 @@ exclude:
   - vendor/gems
   - vendor/ruby
   - scripts
+  - README.md
   # The question tree: build input, never served. Excluded by GLOB on purpose:
   # jekyll-watch stops watching any exclude entry that exists on disk, so a
   # literal "src" would mean editing a config.yml under `jekyll serve` rebuilt
