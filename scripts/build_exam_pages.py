@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Compose exam web views from the question tree.
 
-Writes exams/<term>-<exam>/index.md from the questions in that same folder.
+Writes exams/<term>-<exam>/index.md from the questions in src/<term>-<exam>/.
 The page is nothing but its questions plus chrome -- it is never the source of
 anything, and nothing reads it back. scripts/build_worksheets.py assembles the
 topic worksheets from the same questions by the same route.
@@ -61,18 +61,22 @@ def build_exam_page(exam: str) -> tuple[str, int]:
     meta = compose.registry_entry(exam)
     questions = compose.read_exam_questions(exam)
     if not questions:
-        raise SystemExit(f"exams/{exam} contains no questions")
+        raise SystemExit(f"src/{exam} contains no questions")
 
-    # The page is composed into the folder its questions already live in, so
-    # their imgs/ references need no copying or rewriting.
     page_dir = compose.EXAMS_DIR / exam
+    copied: set[Path] = set()
 
     sections: list[str] = []
     toc_lines = ["## Problems", ""]
     for question in questions:
         heading, anchor = compose.render_heading(question, f"Problem {question.number}")
-        sections.append(compose.emit_question(question, page_dir, heading).rstrip())
+        sections.append(
+            compose.emit_question(
+                question, page_dir, heading, copied_to=copied, namespace_images=False
+            ).rstrip()
+        )
         toc_lines.append(f"- [{toc_label(question)}](#{anchor})")
+    compose.prune_images(page_dir, copied)
     body = f"\n\n{SECTION_SEPARATOR}\n\n".join(sections)
 
     title = compose.exam_title(meta)
