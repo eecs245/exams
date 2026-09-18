@@ -1,35 +1,34 @@
 #!/usr/bin/env python3
-"""Read questions from exams/ and render them into composed pages.
+"""Read questions from src/ and render them into composed pages.
 
-One exam is one folder. It holds that exam's questions, their images, its
-metadata, and -- once composed -- its own generated page:
+One question is one folder, and the folder separates what conversion owns from
+what people own:
 
-    exams/<term>-<exam>/q<NN>.md            question: metadata header + body
-                                            (video links are typed into this
-                                            header by hand and survive
-                                            re-extraction -- see PRESERVED_KEY_PREFIX)
-    exams/<term>-<exam>/q<NN>-preamble.md   optional note above that heading
-    exams/<term>-<exam>/imgs/*              images the questions reference
-    exams/<term>-<exam>/.extracted          fingerprint of the source extracted
-    exams/<term>-<exam>/index.md            GENERATED -- never hand-edited
+    src/<term>-<exam>/q<NN>/src.md        the question body. GENERATED from the
+                                          LaTeX; rewritten on every conversion.
+    src/<term>-<exam>/q<NN>/config.yml    title, points, flags, video links.
+                                          Written ONCE, when the question is
+                                          first converted, then never touched
+                                          again -- it is yours to edit. If the
+                                          LaTeX later disagrees, conversion
+                                          warns; it does not overwrite.
+    src/<term>-<exam>/q<NN>/preamble.md   optional note rendered above the heading
+    src/<term>-<exam>/q<NN>/imgs/*        the question's images
+    src/<term>-<exam>/.extracted          fingerprint of the source extracted
 
-Exam-level metadata (title, PDFs, playlist) is not in the folder at all: it is
-one entry in _data/exams.yml, the registry, keyed by the folder name. Jekyll
-reads that file too, so the front page and the composed pages agree by
-construction. See load_registry.
+Nothing about a question is stored twice. Its heading -- title, points badge,
+flag badges, video badges -- is rendered from config.yml every time; its image
+list is whatever is in imgs/.
+
+Exam-level metadata (title, PDFs, playlist) is one entry in _data/exams.yml,
+the registry, keyed by the folder name. Jekyll reads that file too, so the front
+page and the composed pages agree by construction. See load_registry.
 
 Both consumers -- scripts/build_exam_pages.py and scripts/build_worksheets.py --
 go through this module, so an exam page and a topic worksheet render the same
 question identically. Nothing here parses a generated page; pages are output
-only.
-
-Question sources sit in a published directory but are not themselves served:
-_config.yml excludes exams/*/q*.md from the Jekyll build. That exclusion is
-load-bearing -- the question header below is NOT valid YAML (values are taken
-verbatim from the first ": " onward so heading_suffix can hold raw badge HTML
-full of colons and quotes), so Jekyll would fail parsing it as front matter.
-The registry, by contrast, is real YAML: Jekyll parses it with a full parser
-and this module with scripts/miniyaml.py, since CI has no PyYAML.
+only. src/ is excluded from the Jekyll build in _config.yml. Both YAML files are
+read with scripts/miniyaml.py, since CI has no PyYAML.
 """
 from __future__ import annotations
 
@@ -46,7 +45,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import miniyaml  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-EXAMS_DIR = REPO_ROOT / "exams"
+QUESTIONS_DIR = REPO_ROOT / "src"      # the only content tree
+EXAMS_DIR = REPO_ROOT / "exams"        # composed exam pages (output)
 SOURCES_DIR = REPO_ROOT / "_sources" / "exams"
 SCRIPTS_DIR = REPO_ROOT / "scripts"
 REGISTRY_PATH = REPO_ROOT / "_data" / "exams.yml"
@@ -54,9 +54,6 @@ REGISTRY_PATH = REPO_ROOT / "_data" / "exams.yml"
 # Per-exam record of what the questions were extracted from; see
 # source_fingerprint. A dotfile so Jekyll never serves it.
 EXTRACTED_STAMP = ".extracted"
-
-HEADER_DELIMITER = "---"
-
 
 def question_filename(number: int) -> str:
     """q1 -> q01. Zero-padded so a directory listing sorts in exam order."""
@@ -88,91 +85,23 @@ def copy_if_changed(source: Path, destination: Path) -> bool:
     return True
 
 
-# ===> Header format <=== #
-
-def format_header(fields: dict[str, object]) -> str:
-    lines = [HEADER_DELIMITER]
-    for key, value in fields.items():
-        if isinstance(value, (list, tuple)):
-            rendered = "[" + ", ".join(str(item) for item in value) + "]"
-        elif isinstance(value, bool):
-            rendered = "true" if value else "false"
-        else:
-            rendered = str(value)
-        lines.append(f"{key}: {rendered}")
-    lines.append(HEADER_DELIMITER)
-    return "\n".join(lines)
-
-
-def read_header(text: str, source: Path) -> tuple[dict[str, str], str]:
-    """Split a question/exam file into its header fields and its body."""
-    if not text.startswith(HEADER_DELIMITER + "\n"):
-        raise SystemExit(f"{source}: missing header block")
-    end = text.find(f"\n{HEADER_DELIMITER}\n", len(HEADER_DELIMITER))
-    if end == -1:
-        raise SystemExit(f"{source}: unterminated header block")
-
-    fields: dict[str, str] = {}
-    for line in text[len(HEADER_DELIMITER) + 1 : end].splitlines():
-        if not line.strip():
-            continue
-        key, separator, value = line.partition(":")
-        if not separator:
-            raise SystemExit(f"{source}: unrecognized header line: {line!r}")
-        # Only the first colon separates key from value; everything after it is
-        # verbatim, which is what lets heading_suffix carry raw badge HTML.
-        fields[key.strip()] = value[1:] if value.startswith(" ") else value
-
-    return fields, text[end + len(HEADER_DELIMITER) + 2 :].lstrip("\n")
-
-
-# Header keys maintained BY HAND in a question file. Everything else in the
-# header is regenerated from LaTeX on every extraction; keys with this prefix
-# are read back first and written into the new header, so typing
-#     video: https://youtu.be/...          (a walkthrough of the whole problem)
-#     video_c: https://youtu.be/...        (a walkthrough of part (c) only)
-# into exams/<id>/qNN.md is permanent. Values are matched to the question by
-# file name, so renumbering an exam's problems moves them with the number.
-PRESERVED_KEY_PREFIX = "video"
-
-
-def preserved_header_fields(path: Path) -> dict[str, str]:
-    """Hand-maintained header keys of an existing question file, if any."""
-    if not path.exists():
-        return {}
-    fields, _ = read_header(path.read_text(), path)
-    return {k: v for k, v in fields.items() if k.startswith(PRESERVED_KEY_PREFIX) and v.strip()}
-
-
-def parse_videos(fields: dict[str, str]) -> list[tuple[str, str]]:
-    """(part, url) pairs from video / video_<part> keys; part is "" for whole-problem."""
-    videos: list[tuple[str, str]] = []
-    for key, value in fields.items():
-        if key == "video":
-            videos.append(("", value.strip()))
-        elif key.startswith("video_") and key[len("video_"):]:
-            videos.append((key[len("video_"):], value.strip()))
-    return [(part, url) for part, url in videos if url]
-
-
-def parse_list(value: str) -> list[str]:
-    inner = value.strip().removeprefix("[").removesuffix("]").strip()
-    return [item.strip() for item in inner.split(",") if item.strip()]
-
-
 # ===> Questions <=== #
+
+CONFIG_FILE = "config.yml"
+BODY_FILE = "src.md"
+PREAMBLE_FILE = "preamble.md"
+QUESTION_DIR_PATTERN = re.compile(r"^q(\d+)$")
+
 
 @dataclass
 class Question:
     exam: str
     number: int
-    heading_suffix: str
     body: str
     preamble: str = ""
-    title: str = ""
+    title: str = ""                    # plain text, as typed in config.yml
     points: str = ""
     flags: list[str] = field(default_factory=list)
-    images: list[str] = field(default_factory=list)
     videos: list[tuple[str, str]] = field(default_factory=list)  # (part, url)
 
     @property
@@ -186,7 +115,46 @@ class Question:
 
     @property
     def directory(self) -> Path:
-        return EXAMS_DIR / self.exam
+        return QUESTIONS_DIR / self.exam / question_filename(self.number)
+
+    @property
+    def images(self) -> list[str]:
+        folder = self.directory / "imgs"
+        return sorted(p.name for p in folder.iterdir() if p.is_file()) if folder.is_dir() else []
+
+    @property
+    def heading_suffix(self) -> str:
+        """': Title <points badge> <flag badges>' -- rendered, never stored."""
+        suffix = f": {escape_title(self.title)}" if self.title else ""
+        if self.points:
+            unit = "pt" if str(self.points) == "1" else "pts"
+            suffix += f' <span class="badge badge-points">{self.points} {unit}</span>'
+        for flag in self.flags:
+            suffix += f' <span class="badge badge-flag" data-flag="{flag}">{flag_label(flag)}</span>'
+        return suffix
+
+
+def escape_title(title: str) -> str:
+    """Markdown-escape a plain title for a heading rendered with markdown="span".
+
+    Without this Kramdown would turn "..." into an ellipsis character and read
+    * or _ as emphasis. unescape_title is the inverse, used when a title is
+    first seeded from pandoc's already-escaped output.
+    """
+    title = re.sub(r"([\\*_`])", r"\\\1", title)
+    return title.replace("...", "\\...")
+
+
+def unescape_title(markdown_title: str) -> str:
+    return re.sub(r"\\([\\.*_`!#\[\]~-])", r"\1", markdown_title)
+
+
+def flag_label(flag_id: str) -> str:
+    """Badge text for a flag id: mt1-redemption -> 'MT1 Redemption'."""
+    match = re.fullmatch(r"mt(\d+)-redemption", flag_id)
+    if match:
+        return f"MT{match.group(1)} Redemption"
+    return flag_id.replace("-", " ").title()
 
 
 def question_id_parts(question_id: str) -> tuple[str, int]:
@@ -199,40 +167,100 @@ def question_id_parts(question_id: str) -> tuple[str, int]:
     return exam, int(number)
 
 
+def read_config(path: Path) -> dict:
+    config = miniyaml.load_file(path) if path.exists() else None
+    if config is None:
+        return {}
+    if not isinstance(config, dict):
+        raise SystemExit(f"{path.relative_to(REPO_ROOT)}: expected key: value pairs")
+    return config
+
+
+def videos_from_config(config: dict) -> list[tuple[str, str]]:
+    """(part, url) pairs from video / video_<part> keys; part is "" for whole-problem."""
+    videos: list[tuple[str, str]] = []
+    for key, value in config.items():
+        if not value:
+            continue
+        if key == "video":
+            videos.append(("", str(value).strip()))
+        elif key.startswith("video_") and key[len("video_"):]:
+            videos.append((key[len("video_"):], str(value).strip()))
+    return videos
+
+
 def read_question(question_id: str) -> Question:
     exam, number = question_id_parts(question_id)
-    path = EXAMS_DIR / exam / f"{question_filename(number)}.md"
-    if not path.exists():
+    folder = QUESTIONS_DIR / exam / question_filename(number)
+    body_path = folder / BODY_FILE
+    if not body_path.exists():
         raise SystemExit(
-            f"No question at {path.relative_to(REPO_ROOT)} "
+            f"No question at {body_path.relative_to(REPO_ROOT)} "
             "(run scripts/build.sh first)"
         )
-    fields, body = read_header(path.read_text(), path)
-    preamble_path = path.with_name(f"{path.stem}-preamble.md")
+    config = read_config(folder / CONFIG_FILE)
+    flags = config.get("flags") or []
+    if not isinstance(flags, list):
+        raise SystemExit(f"{(folder / CONFIG_FILE).relative_to(REPO_ROOT)}: flags must be a list")
+    preamble_path = folder / PREAMBLE_FILE
+    points = config.get("points")
     return Question(
         exam=exam,
         number=number,
-        heading_suffix=fields.get("heading_suffix", ""),
-        body=body.rstrip(),
+        body=body_path.read_text().rstrip(),
         preamble=preamble_path.read_text().strip() if preamble_path.exists() else "",
-        title=fields.get("title", ""),
-        points=fields.get("points", ""),
-        flags=parse_list(fields.get("flags", "[]")),
-        images=parse_list(fields.get("images", "[]")),
-        videos=parse_videos(fields),
+        title=str(config.get("title") or ""),
+        points="" if points in (None, "") else str(points),
+        flags=[str(flag) for flag in flags],
+        videos=videos_from_config(config),
     )
-
-
-QUESTION_FILE_PATTERN = re.compile(r"^q(\d+)\.md$")
 
 
 def read_exam_questions(exam: str) -> list[Question]:
     numbers = sorted(
         int(match.group(1))
-        for path in (EXAMS_DIR / exam).glob("q*.md")
-        if (match := QUESTION_FILE_PATTERN.match(path.name))
+        for path in (QUESTIONS_DIR / exam).iterdir()
+        if path.is_dir() and (match := QUESTION_DIR_PATTERN.match(path.name))
+        and (path / BODY_FILE).exists()
     )
     return [read_question(f"{exam}/{question_filename(n)}") for n in numbers]
+
+
+# config.yml is written exactly once per question. After that, conversion only
+# ever compares against it.
+CONFIG_COMMENT = (
+    "# Hand-editable; conversion never overwrites this file.\n"
+    "# Keys: title, points, flags (list), video (whole problem), video_<part> (e.g. video_c).\n"
+)
+
+
+def yaml_scalar(value: str) -> str:
+    if value == "":
+        return ""
+    if '"' not in value:
+        return f'"{value}"'
+    return f"'{value}'"
+
+
+def seed_config(path: Path, title: str, points: str, flags: list[str]) -> None:
+    lines = [CONFIG_COMMENT.rstrip("\n"), f"title: {yaml_scalar(title)}".rstrip(), f"points: {points}".rstrip()]
+    if flags:
+        lines.append("flags:")
+        lines.extend(f"  - {flag}" for flag in flags)
+    else:
+        lines.append("flags:")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(lines) + "\n")
+
+
+def config_drift(path: Path, title: str, points: str, flags: list[str]) -> list[str]:
+    """Human-readable differences between config.yml and what the LaTeX now says."""
+    config = read_config(path)
+    have = {"title": str(config.get("title") or ""),
+            "points": "" if config.get("points") in (None, "") else str(config.get("points")),
+            "flags": [str(f) for f in (config.get("flags") or [])]}
+    want = {"title": title, "points": points, "flags": flags}
+    return [f"{key}: {have[key]!r} but the LaTeX now says {want[key]!r}" for key in want if have[key] != want[key]]
 
 
 # ===> The exam registry: _data/exams.yml <=== #
@@ -243,7 +271,7 @@ REQUIRED_REGISTRY_KEYS = ("id", "term", "exam", "pdf")
 
 
 def load_registry() -> list[dict]:
-    """Every exam, in front-page order, checked against exams/ both ways.
+    """Every exam, in front-page order, checked against src/ both ways.
 
     An exam folder with no entry, or an entry with no folder, is an error: the
     first would silently drop an exam from the site, the second would promise a
@@ -268,18 +296,18 @@ def load_registry() -> list[dict]:
         if exam_id in seen:
             raise SystemExit(f"{REGISTRY_PATH.name}: duplicate id {exam_id!r}")
         seen.add(exam_id)
-        if not (EXAMS_DIR / exam_id).is_dir():
+        if not (QUESTIONS_DIR / exam_id).is_dir():
             raise SystemExit(
-                f"{REGISTRY_PATH.name} lists {exam_id!r} but exams/{exam_id}/ does not exist "
+                f"{REGISTRY_PATH.name} lists {exam_id!r} but src/{exam_id}/ does not exist "
                 f"(drop the source into _sources/exams/{exam_id}/ and run the build)"
             )
 
     unregistered = sorted(
-        path.name for path in EXAMS_DIR.iterdir() if path.is_dir() and path.name not in seen
+        path.name for path in QUESTIONS_DIR.iterdir() if path.is_dir() and path.name not in seen
     )
     if unregistered:
         raise SystemExit(
-            "exams/ has folders with no entry in _data/exams.yml: "
+            "src/ has folders with no entry in _data/exams.yml: "
             + ", ".join(unregistered)
             + " -- add each one to the registry (id, term, exam, pdf)."
         )
@@ -323,7 +351,7 @@ def source_fingerprint(source_dir: Path, scripts_dir: Path = SCRIPTS_DIR) -> str
 
 
 def read_extracted_fingerprint(exam: str) -> str | None:
-    stamp = EXAMS_DIR / exam / EXTRACTED_STAMP
+    stamp = QUESTIONS_DIR / exam / EXTRACTED_STAMP
     return stamp.read_text().strip() if stamp.exists() else None
 
 
@@ -357,8 +385,8 @@ def render_heading(question: Question, label: str) -> tuple[str, str]:
     """(html, anchor) for a question heading.
 
     `label` is the page's name for the question ("Problem 4" on its exam page,
-    "FA25 MT1 · Problem 4" on a worksheet); heading_suffix holds the points and
-    flag badges. The anchor is computed BEFORE the video badge is appended, so
+    "FA25 MT1 · Problem 4" on a worksheet); heading_suffix is the title, points
+    and flag badges rendered from config.yml. The anchor is computed BEFORE the video badge is appended, so
     adding or removing a video never changes a link into the page.
     """
     core = f"{label}{question.heading_suffix}"
@@ -377,6 +405,7 @@ def emit_question(
     heading: str,
     note: str = "",
     copied_to: set[Path] | None = None,
+    namespace_images: bool = True,
 ) -> str:
     """Render one question for a page, copying the images it needs.
 
@@ -385,28 +414,24 @@ def emit_question(
     if given, collects the image paths written under page_dir so the caller
     can prune whatever else is left there (see prune_images).
 
-    Images are copied into <page_dir>/imgs/<slug>/ rather than a flat imgs/.
-    Within a single exam a flat directory would be safe -- those images already
-    share one today -- but a worksheet chapter gathers questions from several
-    exams, and two terms reusing a figure name would otherwise overwrite each
-    other.
+    With namespace_images (worksheets) images go to <page_dir>/imgs/<slug>/: a
+    chapter gathers questions from several exams, and two terms reusing a
+    figure name would otherwise overwrite each other. An exam page holds one
+    exam's questions, whose figure names are already unique, so it copies flat
+    into <page_dir>/imgs/ and its references need no rewriting.
     """
     body = question.body
     preamble = question.preamble
-    # An exam page is composed into the very folder its questions live in, so
-    # its imgs/ references already resolve -- only a page somewhere else (a
-    # worksheet) needs its own copy.
-    if question.images and page_dir.resolve() != question.directory.resolve():
-        destination = page_dir / "imgs" / question.slug
+    if question.images:
+        destination = page_dir / "imgs" / question.slug if namespace_images else page_dir / "imgs"
         for image in question.images:
             source = question.directory / "imgs" / image
-            if not source.exists():
-                raise SystemExit(f"{question.id}: missing image {source}")
             copy_if_changed(source, destination / image)
             if copied_to is not None:
                 copied_to.add((destination / image).resolve())
-        body = rewrite_image_paths(body, question.slug)
-        preamble = rewrite_image_paths(preamble, question.slug)
+        if namespace_images:
+            body = rewrite_image_paths(body, question.slug)
+            preamble = rewrite_image_paths(preamble, question.slug)
 
     blocks = []
     if preamble:
@@ -433,10 +458,10 @@ def prune_images(page_dir: Path, keep: set[Path]) -> None:
 
     Replaces wiping imgs/ before every build: a wipe-and-recopy rewrites every
     image each run, which is exactly the kind of write `jekyll serve --watch`
-    would rebuild on. Only for pages that own copies (worksheets); an exam
-    folder's imgs/ holds the source images, never copies, so refuse it.
+    would rebuild on. Composed pages only -- never the question tree, whose
+    imgs/ folders are the originals.
     """
-    if EXAMS_DIR in page_dir.resolve().parents or page_dir.resolve() == EXAMS_DIR:
+    if QUESTIONS_DIR in page_dir.resolve().parents or page_dir.resolve() == QUESTIONS_DIR:
         raise SystemExit(f"Refusing to prune source images in {page_dir}")
     images = page_dir / "imgs"
     if not images.exists():
