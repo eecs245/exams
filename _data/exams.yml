@@ -1,6 +1,6 @@
 # The exam registry: one entry per exam, in the order the front page lists them.
 #
-#   id         the exam's folder name -- _sources/exams/<id>/<id>.tex, exams/<id>/,
+#   id         the exam's folder name -- _sources/exams/<id>/<id>.tex, src/<id>/,
 #              worksheet ids <id>/qNN, resources/exams/<id>.pdf, and /exams/<id>/
 #              are all this same string. Dropping a folder in fixes the id.
 #   term       display term, e.g. "Fall 2025"   } page title is "<term> <exam>"; the
@@ -10,9 +10,9 @@
 #   solutions  solutions PDF, relative to the site root (optional)
 #   playlist   YouTube playlist of walkthroughs (optional). Per-question video
 #              links are NOT kept here: they go in the header of the question's
-#              own exams/<id>/qNN.md, by hand.
+#              own src/<id>/qNN/config.yml, by hand.
 #
-# Every entry must have an exams/<id>/ folder and every folder an entry; the
+# Every entry must have a src/<id>/ folder and every folder an entry; the
 # build fails naming whichever is missing.
 
 - id: sp26-mt1
