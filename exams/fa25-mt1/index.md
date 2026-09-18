@@ -68,6 +68,11 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
 
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+</details>
+
 </div>
 </div>
 
@@ -77,6 +82,11 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 (2.5 pts) **11** is the value of <span class="math-inline">\\(w\\)</span> that minimizes\...
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+</details>
 
 </div>
 </div>
@@ -88,6 +98,11 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
 
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> N/A</span></div>
+</details>
+
 </div>
 </div>
 
@@ -97,6 +112,11 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 (2.5 pts) **13** is the value of <span class="math-inline">\\(w\\)</span> that minimizes\...
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+</details>
 
 </div>
 </div>
@@ -108,6 +128,11 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
 
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+</details>
+
 </div>
 </div>
 
@@ -117,6 +142,11 @@ In parts **a)** through **f)**, choose the empirical risk function <span class="
 (2.5 pts) **27** is the value of <span class="math-inline">\\(w\\)</span> that minimizes\...
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+
+<details markdown="1"><summary>Solution</summary>
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 1</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> Option 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 4</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Option 5</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> N/A</span></div>
+</details>
 
 </div>
 </div>
@@ -148,6 +178,13 @@ As usual, let <span class="math-inline">\\(R&#95;\text{abs}(w)\\)</span> represe
 <span class="mc-bubble" aria-hidden="true"></span> The value of <span class="math-inline">\\(w^{\ast}\\)</span> is unique, and is equal to \_\_\_\_\_\_.
 
 <span class="mc-bubble" aria-hidden="true"></span> The value of <span class="math-inline">\\(w^{\ast}\\)</span> is not unique; any value between \_\_\_\_\_\_ and \_\_\_\_\_\_ is a minimizer.
+
+<details markdown="1"><summary>Solution</summary>
+
+<span class="mc-bubble mc-correct" aria-hidden="true"></span> The value of <span class="math-inline">\\(w^{\ast}\\)</span> is unique, and is equal to <span class="math-inline">\\(\boxed{\alpha}\\)</span>.
+
+<span class="mc-bubble" aria-hidden="true"></span> The value of <span class="math-inline">\\(w^{\ast}\\)</span> is not unique; any value between \_\_\_\_\_\_ and \_\_\_\_\_\_ is a minimizer.
+</details>
 
 </div>
 </div>
@@ -668,6 +705,11 @@ This equation has three solutions for <span class="math-inline">\\(c\\)</span>: 
 
 other value of <span class="math-inline">\\(c =\\)</span> \_\_\_\_\_\_
 
+<details markdown="1"><summary>Solution</summary>
+
+other value of <span class="math-inline">\\(c =\\)</span> <span class="math-inline">\\(\boxed{\text{0 or }-\sqrt{2}}\\)</span>
+</details>
+
 </div>
 </div>
 
@@ -696,6 +738,13 @@ $$
 <span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(r\\)</span> be the dimension of the subspace of <span class="math-inline">\\(\mathbb{R}^{7}\\)</span> spanned by <span class="math-inline">\\(\vec x&#95;1, \vec x&#95;2, \ldots \vec x&#95;{12}\\)</span>. What are the smallest and largest possible values of <span class="math-inline">\\(r\\)</span>? Your answers should be integers with no variables.
 
 smallest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_\_ largest possible value of <span class="math-inline">\\(r =\\)</span> \_\_\_\_\_\_
+
+<details markdown="1"><summary>Solution</summary>
+
+smallest possible value of <span class="math-inline">\\(r =\\)</span> <span class="math-inline">\\(\boxed{2}\\)</span>
+
+largest possible value of <span class="math-inline">\\(r =\\)</span> <span class="math-inline">\\(\boxed{7}\\)</span>
+</details>
 
 </div>
 </div>
