@@ -18,13 +18,16 @@ exclude:
   - vendor/gems
   - vendor/ruby
   - scripts
-  - _sources
-  # The question tree: build input, never served.
-  - src
-  # iCloud conflict copies ("w_r_axes 2.png"). .gitignore keeps them out of git,
-  # but Jekyll does not read .gitignore, so they would otherwise be served.
-  - "exams/*/imgs/* [0-9].*"
-  - "worksheets/*/imgs/*/* [0-9].*"
+  # The question tree: build input, never served. Excluded by GLOB on purpose:
+  # jekyll-watch stops watching any exclude entry that exists on disk, so a
+  # literal "src" would mean editing a config.yml under `jekyll serve` rebuilt
+  # nothing. A glob matches no literal path, so src/ is not read, not
+  # published, and still watched. (_sources needs no entry at all: Jekyll never
+  # reads _-prefixed directories, and leaving it out keeps .tex edits watched.)
+  - "src/*"
+  # Composed exam pages and worksheets. Published by _plugins/composed_pages.rb;
+  # excluded so Jekyll neither reads it as source nor rebuilds when it changes.
+  - .build
 
 theme: just-the-docs
 color_scheme: um
