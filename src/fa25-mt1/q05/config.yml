@@ -1,0 +1,6 @@
+# Hand-editable; conversion never overwrites this file.
+# Keys: title, points, flags (list), video (whole problem), video_<part> (e.g. video_c).
+title: "Back to Normal"
+points: 12
+flags:
+video: https://youtu.be/dewIDcz5mXo
