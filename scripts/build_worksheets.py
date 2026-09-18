@@ -2,7 +2,8 @@
 """Build topic-specific worksheet pages from the question tree.
 
 Reads _data/worksheet_topics.yml and, for each chapter, assembles
-worksheets/chapter-<n>/index.md from the questions it lists. There is no
+.build/worksheets/chapter-<n>/index.md from the questions it lists (published
+at /worksheets/chapter-<n>/; see compose.BUILD_DIR). There is no
 worksheets/ landing page -- the site links each chapter directly. Questions come
 straight out of src/ via scripts/compose.py -- the same route
 scripts/build_exam_pages.py takes -- so a worksheet and an exam page render an
@@ -33,7 +34,7 @@ from generate_exam_markdown import (  # noqa: E402
 )
 
 TOPICS_YML = REPO_ROOT / "_data" / "worksheet_topics.yml"
-WORKSHEETS_DIR = REPO_ROOT / "worksheets"
+WORKSHEETS_DIR = compose.WORKSHEETS_DIR
 
 
 # ===> Topic file <=== #
