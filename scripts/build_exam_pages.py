@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Compose exam web views from the question tree.
 
-Writes exams/<term>-<exam>/index.md from the questions in src/<term>-<exam>/.
+Writes .build/exams/<term>-<exam>/index.md from the questions in
+src/<term>-<exam>/ (published at /exams/<term>-<exam>/; see compose.BUILD_DIR).
 The page is nothing but its questions plus chrome -- it is never the source of
 anything, and nothing reads it back. scripts/build_worksheets.py assembles the
 topic worksheets from the same questions by the same route.
