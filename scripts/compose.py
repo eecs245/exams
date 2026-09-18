@@ -303,6 +303,16 @@ def load_registry() -> list[dict]:
         if exam_id in seen:
             raise SystemExit(f"{REGISTRY_PATH.name}: duplicate id {exam_id!r}")
         seen.add(exam_id)
+        for key in ("pdf", "solutions"):
+            # A path that does not exist still renders a button -- one that 404s,
+            # which nobody notices until a student clicks it.
+            target = str(entry.get(key) or "")
+            if target and not target.startswith(("http://", "https://")):
+                if not (REPO_ROOT / target.lstrip("/")).is_file():
+                    raise SystemExit(
+                        f"{REGISTRY_PATH.name}: {exam_id!r} has {key}: {target} but that file does "
+                        f"not exist. Paths are relative to the repo root, e.g. resources/exams/{exam_id}.pdf"
+                    )
         if not (QUESTIONS_DIR / exam_id).is_dir():
             raise SystemExit(
                 f"{REGISTRY_PATH.name} lists {exam_id!r} but src/{exam_id}/ does not exist "
