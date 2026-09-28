@@ -7,6 +7,15 @@ _sass/custom/custom.scss (.exam-content ...) apply to it and not to the front
 page. The wrapper is added after Kramdown has rendered the content, so it
 cannot change how the Markdown is parsed.
 {%- endcomment -%}
+{% assign exam_id = page.path | split: '/' | slice: 1 | first %}
+{% assign exam_meta = site.data.exams | where: "id", exam_id | first %}
 <div class="exam-content">
+{% if exam_meta.practice_notice %}
+{% capture practice_alert %}
+{: .red }
+> **{{ exam_meta.practice_notice }}**
+{% endcapture %}
+{{ practice_alert | markdownify }}
+{% endif %}
 {{ content }}
 </div>

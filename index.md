@@ -24,7 +24,7 @@ kramdown start a table instead of continuing the paragraph.
 {% assign terms = site.data.exams | group_by: "term" %}
 | --- | --- | --- | --- |
 {% for term in terms -%}
-| {{ term.name }} |{% for exam in term.items %} [{{ exam.label | default: exam.exam }}](exams/{{ exam.id }}/) |{% endfor %}
+| {{ term.name }} |{% for exam in term.items %} [{{ exam.label | default: exam.exam }}](exams/{{ exam.id }}/){% if exam.practice_notice %}<br><small class="practice-notice-inline">{{ exam.practice_notice | escape }}</small>{% endif %} |{% endfor %}
 {% endfor %}
 
 ## Problems by Topic

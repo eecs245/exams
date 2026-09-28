@@ -61,8 +61,10 @@ liquid:
   error_mode: strict
   strict_filters: true
 
-# Callout used by generated exam pages for the instructions box
+# Theme callouts for exam instructions and live practice notices
 callouts:
+  red:
+    color: red
   yellow:
     color: yellow
 

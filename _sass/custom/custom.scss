@@ -314,3 +314,13 @@ body {
     color: #0066cc;
   }
 }
+
+// Practice notices live in _data/exams.yml, independent of generated Markdown.
+.practice-notice-inline {
+  display: inline-block;
+  margin-top: 0.35rem;
+  color: #00274C;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.45;
+}

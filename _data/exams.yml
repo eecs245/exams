@@ -6,6 +6,8 @@
 #   term       display term, e.g. "Fall 2025"   } page title is "<term> <exam>"; the
 #   exam       display name, e.g. "Midterm 1"   } build warns if the .tex disagrees
 #   label      link text on the front page when shorter than `exam` (optional)
+#   practice_notice  optional notice on the homepage and above the exam content;
+#              kept here so regenerating exam Markdown preserves it.
 #   pdf        exam PDF, relative to the site root
 #   solutions  solutions PDF, relative to the site root (optional)
 #   playlist   YouTube playlist of walkthroughs (optional). Per-question video
@@ -20,12 +22,14 @@
   exam: Midterm 1
   pdf: resources/exams/sp26-mt1.pdf
   solutions: resources/exams/sp26-mt1-solutions.pdf
+  practice_notice: "We will use this exam for a live practice exam on Friday, October 2nd; if you plan on attending, don't look at this exam until after then."
 
 - id: sp26-mt2
   term: Spring 2026
   exam: Midterm 2
   pdf: resources/exams/sp26-mt2.pdf
   solutions: resources/exams/sp26-mt2-solutions.pdf
+  practice_notice: "We will use this exam for a live practice exam on Friday, November 13th; if you plan on attending, don't look at this exam until after then."
 
 - id: sp26-final
   term: Spring 2026
