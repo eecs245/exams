@@ -22,7 +22,7 @@
   exam: Midterm 1
   pdf: resources/exams/sp26-mt1.pdf
   solutions: resources/exams/sp26-mt1-solutions.pdf
-  practice_notice: "We will use this exam for a live practice exam on Friday, October 2nd; if you plan on attending, don't look at this exam until after then."
+  practice_notice: "See the [course website](https://eecs245.org/#week-5-linear-independence-and-subspaces) for a recording of the Midterm 1 Review Session, in which we took up some of these problems."
 
 - id: sp26-mt2
   term: Spring 2026
