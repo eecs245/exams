@@ -83,19 +83,10 @@ infinite
 
 <div class="math-display">
 $$
-
-$$
-</div>
-
 \begin{aligned}
-\vec b &= 4 \vec x_1 - 2 \vec x_2 + 6 \vec x_3
-
+\vec b &= 4 \vec x_1 - 2 \vec x_2 + 6 \vec x_3 \\\\
 \vec b &= 3 \vec x_1 + 3 \vec x_3 - \vec x_5
 \end{aligned}
-
-<div class="math-display">
-$$
-
 $$
 </div>
 
@@ -111,21 +102,11 @@ Let's try adding the two representation of <span class="math-inline">\\(\vec b\\
 
 <div class="math-display">
 $$
-
-$$
-</div>
-
 \begin{aligned}
-\vec b &= 4 \vec x_1 - 2 \vec x_2 + 6 \vec x_3
-
-\vec b &= 3 \vec x_1 + 3 \vec x_3 - \vec x_5
-
+\vec b &= 4 \vec x_1 - 2 \vec x_2 + 6 \vec x_3 \\\\
+\vec b &= 3 \vec x_1 + 3 \vec x_3 - \vec x_5 \\\\
 \implies 2 \vec b &= 7 \vec x_1 - 2 \vec x_2 + 9 \vec x_3 - \vec x_5
 \end{aligned}
-
-<div class="math-display">
-$$
-
 $$
 </div>
 
@@ -178,7 +159,7 @@ $$
 
 What are the smallest and largest possible values of <span class="math-inline">\\(\text{dim}(W)\\)</span>, the dimension of <span class="math-inline">\\(W\\)</span>? Give your answers as integers.
 
-<span class="math-inline">\\(=\\)</span> \_\_\_\_\_\_ <span class="math-inline">\\(=\\)</span> \_\_\_\_\_\_
+smallest possible value <span class="math-inline">\\(=\\)</span> \_\_\_\_\_\_ largest possible value <span class="math-inline">\\(=\\)</span> \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
