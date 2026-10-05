@@ -159,7 +159,9 @@ $$
 
 What are the smallest and largest possible values of <span class="math-inline">\\(\text{dim}(W)\\)</span>, the dimension of <span class="math-inline">\\(W\\)</span>? Give your answers as integers.
 
-smallest possible value <span class="math-inline">\\(=\\)</span> \_\_\_\_\_\_ largest possible value <span class="math-inline">\\(=\\)</span> \_\_\_\_\_\_
+smallest possible value <span class="math-inline">\\(=\\)</span> \_\_\_\_\_\_
+
+largest possible value <span class="math-inline">\\(=\\)</span> \_\_\_\_\_\_
 
 <details markdown="1"><summary>Solution</summary>
 
