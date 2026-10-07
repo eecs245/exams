@@ -251,7 +251,7 @@ def main() -> int:
         return 0 if recorded == current else 1
 
     source_text = source_tex.read_text()
-    metadata = extract_metadata(source_text)
+    metadata = extract_metadata(source_text, exam=args.exam)
     expanded_tex = expand_inputs_from_text(strip_latex_comments(source_text), source_tex.parent)
     if not args.include_solutions:
         assert_solutions_disabled(expanded_tex, source_tex)
@@ -468,9 +468,10 @@ def resolve_source_tex(repo_root: Path, requested_path: Path) -> Path:
     )
 
 
-def extract_metadata(text: str) -> Metadata:
+def extract_metadata(text: str, *, exam: bool = False) -> Metadata:
     assignment = extract_newcommand(text, "assignment")
-    due_date = extract_newcommand(text, "duedate")
+    # Exams need no due-date command; homework metadata still requires it.
+    due_date = "" if exam and r"\newcommand{\duedate}" not in text else extract_newcommand(text, "duedate")
     submission_instructions = extract_newcommand(text, "submissioninstructions")
     try:
         # e.g. "Fall 2025 at the University of Michigan" -> "Fall 2025"
@@ -1080,9 +1081,8 @@ def replace_choice_markers(text: str, include_solutions: bool = False) -> str:
     from the page with nothing in the logs. That is how sp26-mt1 Problem 8
     came to render with no choices at all.
 
-    Correctness is never revealed outside a solution: only the \solution*
-    variants render a filled marker, so the question body always shows empty
-    ones regardless of which option is flagged in the source.
+    Correct answers are revealed only by the \solution* variants. Explicit
+    \filledbubble examples stay filled, as they do in the student PDF.
     """
     result: list[str] = []
     cursor = 0
@@ -1099,7 +1099,7 @@ def replace_choice_markers(text: str, include_solutions: bool = False) -> str:
 
         is_square = "square" in name
         is_correct = "correct" in name or name.startswith("filled")
-        filled = is_correct and name.startswith("solution")
+        filled = name.startswith("filled") or (is_correct and name.startswith("solution"))
         if is_square:
             marker = r"\eecsfilledsquare" if filled else r"\square"
         else:
@@ -1230,7 +1230,8 @@ def wrap_bare_alignment_environments(text: str) -> str:
         end_tag = match.group(4)
         cleaned_content = clean_align_content(content)
         result = f"{begin_tag}\n{cleaned_content}\n{end_tag}"
-        if "$$" in before.split('\n')[-1] or "$$" in after.split('\n')[0]:
+        if (before.rstrip().endswith(("$$", r"\["))
+                and after.lstrip().startswith(("$$", r"\]"))):
             return result
         return f"\n$$\n{result}\n$$\n"
 
@@ -2234,8 +2235,8 @@ def escape_inline_math_content(content: str) -> str:
     content = normalize_xcolor_for_mathjax(content)
     content = strip_inline_math_spacing_commands(content)
     content = protect_markdown_sensitive_math(content)
-    content = content.replace(r"\{", r"\lbrace")
-    content = content.replace(r"\}", r"\rbrace")
+    content = content.replace(r"\{", r"\lbrace ")
+    content = content.replace(r"\}", r"\rbrace ")
     content = html.escape(content, quote=False)
     return content.replace("_", "&#95;")
 
@@ -2650,7 +2651,7 @@ def fix_latex_for_mathjax(text: str) -> str:
             # downstream regex passes. Instead of stripping $ (which strands
             # math macros like \vec/\lVert in text mode where MathJax has no
             # definition for them), split into alternating \text{}/math parts.
-            inner = match.group(1)
+            inner = match.group(1).replace(r"\#", "#")
             if "$" not in inner or inner.count("$") % 2 != 0:
                 return rf"\text{{{inner.replace('$', '')}}}"
             return split_text_and_math(inner)

@@ -17,6 +17,8 @@
     - sp26-mt1/q01
     - sp26-mt1/q02
     - sp26-final/q01
+    - fa26-mt1/q01
+    - fa26-mt1/q02
 - chapter: 2
   name: "Simple Linear Regression"
   summary: "partial derivatives, finding optimal parameters, correlation"
@@ -27,6 +29,7 @@
     - wn26-final/q02
     - sp26-mt1/q03
     - sp26-final/q02
+    - fa26-mt1/q03
 - chapter: 3
   name: "Vectors"
   summary: "vectors and linear combinations, norms, dot product, projecting onto a single vector"
@@ -40,6 +43,8 @@
     - sp26-mt1/q05
     - sp26-mt1/q09
     - sp26-final/q03
+    - fa26-mt1/q04
+    - fa26-mt1/q05
 - chapter: 4
   name: "Linear Independence"
   summary: "span, linear independence, lines/planes/hyperplanes, vector spaces/basis/dimension"
@@ -53,6 +58,9 @@
     - sp26-mt1/q07
     - sp26-mt1/q08
     - sp26-final/q04
+    - fa26-mt1/q06
+    - fa26-mt1/q07
+    - fa26-mt1/q08
 - chapter: 5
   name: "Matrices"
   summary: "matrix operations, special matrices, rank and column space, null space and rank-nullity"

@@ -17,6 +17,12 @@
 # Every entry must have a src/<id>/ folder and every folder an entry; the
 # build fails naming whichever is missing.
 
+- id: fa26-mt1
+  term: Fall 2026
+  exam: Midterm 1
+  pdf: resources/exams/fa26-mt1.pdf
+  solutions: resources/exams/fa26-mt1-solutions.pdf
+
 - id: sp26-mt1
   term: Spring 2026
   exam: Midterm 1
