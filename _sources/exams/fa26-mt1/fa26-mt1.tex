@@ -213,11 +213,9 @@ For any value of $w$ that is not equal to a $y_i$, the slope of mean absolute er
 =\frac{\text{\# of points left of }w-\text{\# of points right of }w}{7}
 \]
 For $59<w<60$, there are three values to the left and four to the right, so the slope is $-1/7$. For $60<w<65$, there are five to the left and two to the right, so the slope is $3/7$. Both copies of $60$ count.
-\begin{align*}
-f(60)&=30+(60-59)\left(-\frac17\right)=\frac{209}{7}\\
-f(65)&=f(60)+(65-60)\left(\frac37\right)
-=\frac{209}{7}+\frac{15}{7}=\boxed{32}
-\end{align*}
+\[
+f(65)=30+1\left(-\frac17\right)+5\left(\frac37\right)=\boxed{32}.
+\]
 \begin{center}
 \begin{tikzpicture}[x=0.95cm,y=1cm,>=stealth,font=\small]
 \draw[->] (-1,0)--(7,0) node[right] {$w$};

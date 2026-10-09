@@ -99,11 +99,7 @@ $$
 
 <div class="math-display">
 $$
-\begin{align*}
-f(60)&=30+(60-59)\left(-\frac17\right)=\frac{209}{7}\\\\
-f(65)&=f(60)+(65-60)\left(\frac37\right)
-=\frac{209}{7}+\frac{15}{7}=\boxed{32}
-\end{align*}
+f(65)=30+1\left(-\frac17\right)+5\left(\frac37\right)=\boxed{32}.
 $$
 </div>
 
