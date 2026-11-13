@@ -8,6 +8,7 @@
 @import 'staffer';
 
 @import 'mixins';
+@import 'reading-settings';
 
 
 // Overrides
@@ -59,8 +60,6 @@ iframe {
 //     }
 //   }
 // }
-
-$link-color: #0066cc;
 
 .aux-nav-list-item a[href*="github.com"]::before {
   content: '';
@@ -190,7 +189,7 @@ body {
     margin-bottom: 0.75rem;
   }
   .exam-breadcrumb a {
-    color: #0066cc;
+    color: $link-color;
     text-decoration: none;
   }
   .exam-breadcrumb a:hover {
@@ -307,11 +306,11 @@ body {
   // Worksheets: the "From <exam>" line under each problem heading.
   .worksheet-source {
     font-size: 0.8rem;
-    color: #57606a;
+    color: var(--reading-muted);
     margin: -0.4rem 0 0.8rem;
   }
   .worksheet-source a {
-    color: #0066cc;
+    color: $link-color;
   }
 }
 
@@ -319,8 +318,13 @@ body {
 .practice-notice-inline {
   display: inline-block;
   margin-top: 0.35rem;
-  color: #00274C;
+  color: var(--reading-ink);
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 1.45;
+}
+
+// The exam figures include transparent artwork drawn with dark ink.
+html[data-reading-appearance="dark"] .exam-content img {
+  background: #fff;
 }

@@ -1,7 +1,10 @@
+<script src="{{ '/assets/js/font-preference.js' | relative_url }}"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&amp;display=swap">
+
 {%- comment -%}
 Loaded by the theme into <head> on every page. MathJax only where a page asks
 for it (mathjax: true in front matter -- the composed exam pages and
-worksheets); the front page has no math and stays script-free.
+worksheets).
 {%- endcomment -%}
 {%- if page.mathjax %}
 <script>
