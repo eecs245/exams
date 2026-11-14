@@ -629,9 +629,9 @@ $$h(\vec x_i) = w_1 \cdot \text{tempF}_i + w_2 \cdot \text{tempC}_i + w_3 \cdot 
 Let $\vec e_{\text{new}}$ be the error vector for the new model.
 
 \begin{enumerate}[label=(\roman*)]
-    \item After removing the day column, the new design matrix has 3 columns, and there is no longer a forced linear dependence among them. So the largest possible rank is still 3. What's new now is that $X$'s columns are all linearly independent, meaning there is a unique solution to the normal equation.
+    \item After removing the day column, the new design matrix has 3 columns, and there is no longer a forced linear dependence among them. So the largest possible rank is still \textbf{3}. What's new now is that $X$'s columns are all linearly independent, meaning there is a unique solution to the normal equation.
 
-    \item This is true. Rearranging the temperature conversion gives $\text{tempF}_i - \frac{9}{5}\text{tempC}_i = 32$ for every game. So we can create the intercept column by combining the three remaining columns:
+    \item \textbf{True.} Rearranging the temperature conversion gives $\text{tempF}_i - \frac{9}{5}\text{tempC}_i = 32$ for every game. So we can create the intercept column by combining the three remaining columns:
     \[
     \vec 1 = \frac{1}{32}(\text{tempF column}) - \frac{9}{160}(\text{tempC column}) + 0(\text{night column})
     \]
@@ -643,7 +643,7 @@ Let $\vec e_{\text{new}}$ be the error vector for the new model.
     \]
     so the sum of the errors is still guaranteed to be 0.
 
-    \item This is true. The night indicator column is still present in the new design matrix, so $\vec e_{\text{new}}$ is orthogonal to that column. Therefore, the sum of the errors over the night-game rows is still 0.
+    \item \textbf{True.} The night indicator column is still present in the new design matrix, so $\vec e_{\text{new}}$ is orthogonal to that column. Therefore, the sum of the errors over the night-game rows is still 0.
 \end{enumerate}
 \end{solution}
 \end{subprob}

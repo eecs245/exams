@@ -138,11 +138,14 @@ h1, h2, h3, h4, h5, h6 {
   scroll-margin-top: 80px; /* Adjust based on the height of your sticky toolbar */
 }
 
-// Ordered lists that the printed exam labels (i), (ii), (iii). The theme
-// numbers every <ol> with a CSS counter (which is also why it ignores the
-// start attribute); this keeps that counter and only changes how it prints.
+// Keep Roman numbering independent of the theme's counters for nested lists.
+.main-content ol.roman {
+  counter-reset: roman-item;
+}
+
 .main-content ol.roman > li::before {
-  content: "(" counter(step-counter, lower-roman) ")";
+  counter-increment: roman-item;
+  content: "(" counter(roman-item, lower-roman) ")";
 }
 
 // ---------------------------------------------------------------------------

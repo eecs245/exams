@@ -261,10 +261,10 @@ Let <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> be the error 
 
 <ol class="roman">
 <li markdown="1">
-After removing the day column, the new design matrix has 3 columns, and there is no longer a forced linear dependence among them. So the largest possible rank is still 3. What's new now is that <span class="math-inline">\\(X\\)</span>'s columns are all linearly independent, meaning there is a unique solution to the normal equation.
+After removing the day column, the new design matrix has 3 columns, and there is no longer a forced linear dependence among them. So the largest possible rank is still **3**. What's new now is that <span class="math-inline">\\(X\\)</span>'s columns are all linearly independent, meaning there is a unique solution to the normal equation.
 </li>
 <li markdown="1">
-This is true. Rearranging the temperature conversion gives <span class="math-inline">\\(\text{tempF}&#95;i - \frac{9}{5}\text{tempC}&#95;i = 32\\)</span> for every game. So we can create the intercept column by combining the three remaining columns:
+**True.** Rearranging the temperature conversion gives <span class="math-inline">\\(\text{tempF}&#95;i - \frac{9}{5}\text{tempC}&#95;i = 32\\)</span> for every game. So we can create the intercept column by combining the three remaining columns:
 
 <div class="math-display">
 $$
@@ -285,7 +285,7 @@ $$
  so the sum of the errors is still guaranteed to be 0.
 </li>
 <li markdown="1">
-This is true. The night indicator column is still present in the new design matrix, so <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to that column. Therefore, the sum of the errors over the night-game rows is still 0.
+**True.** The night indicator column is still present in the new design matrix, so <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to that column. Therefore, the sum of the errors over the night-game rows is still 0.
 </li>
 </ol>
 
