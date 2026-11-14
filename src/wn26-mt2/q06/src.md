@@ -264,7 +264,25 @@ Let <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> be the error 
 After removing the day column, the new design matrix has 3 columns, and there is no longer a forced linear dependence among them. So the largest possible rank is still 3. What's new now is that <span class="math-inline">\\(X\\)</span>'s columns are all linearly independent, meaning there is a unique solution to the normal equation.
 </li>
 <li markdown="1">
-This is false. The normal equations still tell us that <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to each column of the new design matrix, but there is no guarantee that the all-ones vector is in the column space anymore. So the errors are not guaranteed to sum to 0.
+This is true. Rearranging the temperature conversion gives <span class="math-inline">\\(\text{tempF}&#95;i - \frac{9}{5}\text{tempC}&#95;i = 32\\)</span> for every game. So we can create the intercept column by combining the three remaining columns:
+
+<div class="math-display">
+$$
+\vec 1 = \frac{1}{32}(\text{tempF column}) - \frac{9}{160}(\text{tempC column}) + 0(\text{night column})
+$$
+</div>
+
+ Since <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to every linear combination of the columns of the new design matrix, it is still orthogonal to the all-ones vector. Thus,
+
+<div class="math-display">
+$$
+\begin{bmatrix} 1 \\\\ 1 \\\\ \vdots \\\\ 1 \end{bmatrix} \cdot
+        \begin{bmatrix} e_1 \\\\ e_2 \\\\ \vdots \\\\ e_n \end{bmatrix}
+        = \sum_{i=1}^n e_i = 0
+$$
+</div>
+
+ so the sum of the errors is still guaranteed to be 0.
 </li>
 <li markdown="1">
 This is true. The night indicator column is still present in the new design matrix, so <span class="math-inline">\\(\vec e&#95;{\text{new}}\\)</span> is orthogonal to that column. Therefore, the sum of the errors over the night-game rows is still 0.

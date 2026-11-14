@@ -618,7 +618,7 @@ $$h(\vec x_i) = w_1 \cdot \text{tempF}_i + w_2 \cdot \text{tempC}_i + w_3 \cdot 
     
     \item True or False: The sum of the errors of the new model's predictions is 0.
     
-    \bubble{True} \correctbubble{False}
+    \correctbubble{True} \bubble{False}
 
     \item True or False: The sum of the errors of the new model's predictions \textbf{on just the rows of the dataset corresponding to night games} is 0.
     
@@ -631,7 +631,17 @@ Let $\vec e_{\text{new}}$ be the error vector for the new model.
 \begin{enumerate}[label=(\roman*)]
     \item After removing the day column, the new design matrix has 3 columns, and there is no longer a forced linear dependence among them. So the largest possible rank is still 3. What's new now is that $X$'s columns are all linearly independent, meaning there is a unique solution to the normal equation.
 
-    \item This is false. The normal equations still tell us that $\vec e_{\text{new}}$ is orthogonal to each column of the new design matrix, but there is no guarantee that the all-ones vector is in the column space anymore. So the errors are not guaranteed to sum to 0.
+    \item This is true. Rearranging the temperature conversion gives $\text{tempF}_i - \frac{9}{5}\text{tempC}_i = 32$ for every game. So we can create the intercept column by combining the three remaining columns:
+    \[
+    \vec 1 = \frac{1}{32}(\text{tempF column}) - \frac{9}{160}(\text{tempC column}) + 0(\text{night column})
+    \]
+    Since $\vec e_{\text{new}}$ is orthogonal to every linear combination of the columns of the new design matrix, it is still orthogonal to the all-ones vector. Thus,
+    \[
+    \begin{bmatrix} 1 \\ 1 \\ \vdots \\ 1 \end{bmatrix} \cdot
+    \begin{bmatrix} e_1 \\ e_2 \\ \vdots \\ e_n \end{bmatrix}
+    = \sum_{i=1}^n e_i = 0
+    \]
+    so the sum of the errors is still guaranteed to be 0.
 
     \item This is true. The night indicator column is still present in the new design matrix, so $\vec e_{\text{new}}$ is orthogonal to that column. Therefore, the sum of the errors over the night-game rows is still 0.
 \end{enumerate}
