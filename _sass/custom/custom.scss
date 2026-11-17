@@ -371,7 +371,16 @@ body {
   .score-toggle {
     display: inline-flex;
     align-items: center;
-    flex: 0 0 28px;
+    // An explicit width also participates in Safari's shrink-to-fit sizing
+    // of the inline-flex points pill; flex-basis alone can leave the icon
+    // outside its background and overlapping the following question text.
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    width: 28px;
+    min-width: 28px;
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
     justify-content: center;
     padding: 0;
     border: 0;
