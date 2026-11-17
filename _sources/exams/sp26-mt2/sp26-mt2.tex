@@ -339,6 +339,26 @@ For each statement below, determine whether it is true or false. If true, prove 
   \end{bmatrix}
   \]
   which is symmetric.
+
+  To see how to come up with more counterexamples, write
+  \[
+  A = \begin{bmatrix} a & b \\ c & d \end{bmatrix},
+  \qquad
+  A^2 = \begin{bmatrix}
+  a^2 + bc & b(a+d) \\
+  c(a+d) & bc + d^2
+  \end{bmatrix}
+  \]
+  The off-diagonal entries of $A^2$ agree exactly when $(b-c)(a+d)=0$.
+  Choose $b \ne c$ so that $A$ is not symmetric, and set $d=-a$ so that both off-diagonal entries of $A^2$ are zero. For example,
+  \[
+  \begin{aligned}
+  \begin{bmatrix} -2 & 6 \\ 11 & 2 \end{bmatrix}^2
+  &= \begin{bmatrix} 70 & 0 \\ 0 & 70 \end{bmatrix} \\[6pt]
+  \begin{bmatrix} 1 & 1 \\ 0 & -1 \end{bmatrix}^2
+  &= \begin{bmatrix} 1 & 0 \\ 0 & 1 \end{bmatrix}
+  \end{aligned}
+  \]
   \end{solution}
 \end{subprob}
 

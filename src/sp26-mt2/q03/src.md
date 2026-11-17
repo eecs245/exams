@@ -64,6 +64,33 @@ $$
 </div>
 
  which is symmetric.
+
+To see how to come up with more counterexamples, write
+
+<div class="math-display">
+$$
+A = \begin{bmatrix} a & b \\\\ c & d \end{bmatrix},
+  \qquad
+  A^2 = \begin{bmatrix}
+  a^2 + bc & b(a+d) \\\\
+  c(a+d) & bc + d^2
+  \end{bmatrix}
+$$
+</div>
+
+ The off-diagonal entries of <span class="math-inline">\\(A^2\\)</span> agree exactly when <span class="math-inline">\\((b-c)(a+d)=0\\)</span>. Choose <span class="math-inline">\\(b \ne c\\)</span> so that <span class="math-inline">\\(A\\)</span> is not symmetric, and set <span class="math-inline">\\(d=-a\\)</span> so that both off-diagonal entries of <span class="math-inline">\\(A^2\\)</span> are zero. For example,
+
+<div class="math-display">
+$$
+\begin{aligned}
+\begin{bmatrix} -2 & 6 \\\\ 11 & 2 \end{bmatrix}^2
+&= \begin{bmatrix} 70 & 0 \\\\ 0 & 70 \end{bmatrix} \\\\[6pt]
+\begin{bmatrix} 1 & 1 \\\\ 0 & -1 \end{bmatrix}^2
+&= \begin{bmatrix} 1 & 0 \\\\ 0 & 1 \end{bmatrix}
+\end{aligned}
+$$
+</div>
+
 </details>
 
 </div>
