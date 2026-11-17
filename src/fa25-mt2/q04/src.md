@@ -72,8 +72,10 @@ What is the rank of <span class="math-inline">\\(Z\\)</span>? Give your answer a
 </li>
 <li markdown="1">
 Which specific values of <span class="math-inline">\\(x&#95;1, x&#95;2, ..., x&#95;n\\)</span> result in <span class="math-inline">\\(P\\)</span> being the matrix above? Give your answer as a list of values, in the order <span class="math-inline">\\(x&#95;1\\)</span>, then <span class="math-inline">\\(x&#95;2\\)</span>, then <span class="math-inline">\\(x&#95;3\\)</span>, etc. (If there are multiple possible answers, just give one.)
+</li>
+</ol>
 
-<details markdown="1"><summary>Solution</summary>
+<details class="group-solution" markdown="1"><summary>Solution for parts (i) and (ii)</summary>
 
 First, <span class="math-inline">\\(\text{rank}(Z) = 2\\)</span>. We're told in part **a)** that <span class="math-inline">\\(\text{colsp}(Z) = \text{colsp}(X)\\)</span>, so <span class="math-inline">\\(\text{rank}(Z) = \text{rank}(X)\\)</span>. I find it easier to think in terms of <span class="math-inline">\\(X\\)</span> since the numbers are more straightforward.
 
@@ -128,8 +130,6 @@ This hypothesis function only returns one of two values:
 
 So, <span class="math-inline">\\(w&#95;0^{\ast}\\)</span> is the mean of the <span class="math-inline">\\(y\\)</span>'s when <span class="math-inline">\\(x&#95;i = 0\\)</span>, and <span class="math-inline">\\(w&#95;0^{\ast} + w&#95;1^{\ast}\\)</span> is the mean of the <span class="math-inline">\\(y\\)</span>'s when <span class="math-inline">\\(x&#95;i = 1\\)</span>. This is exactly what we see in the matrix <span class="math-inline">\\(P\\)</span>.
 </details>
-</li>
-</ol>
 
 Recall, <span class="math-inline">\\(Z = \begin{bmatrix} 1 &amp; x&#95;1 - \bar{x} &amp; (x&#95;1 - \bar{x})^2 \\\\ 1 &amp; x&#95;2 - \bar{x} &amp; (x&#95;2 - \bar{x})^2 \\\\ \vdots &amp; \vdots &amp; \vdots \\\\ 1 &amp; x&#95;n - \bar{x} &amp; (x&#95;n - \bar{x})^2 \end{bmatrix} = \begin{bmatrix} | &amp; | &amp; | \\\\ \vec z^{(0)} &amp; \vec z^{(1)} &amp; \vec z^{(2)} \\\\ | &amp; | &amp; | \end{bmatrix}\\)</span>.
 

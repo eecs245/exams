@@ -54,7 +54,7 @@ What impact would dropping one of the color categories' columns from the design 
 
 <details markdown="1"><summary>Solution</summary>
 
-<span class="mc-square" aria-hidden="true"></span> It would change <span class="math-inline">\\(\text{colsp}(X)\\)</span>.
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> It would decrease the rank of <span class="math-inline">\\(X\\)</span>.</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> It would guarantee that <span class="math-inline">\\(X\\)</span> invertible.</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> It would guarantee that <span class="math-inline">\\(X^TX\\)</span> invertible.</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> It would guarantee the existence of a unique optimal parameter vector <span class="math-inline">\\(\vec w^{\ast}\\)</span>.</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> It would change <span class="math-inline">\\(\text{nullsp}(X)\\)</span>.</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> It would change <span class="math-inline">\\(\text{colsp}(X)\\)</span>.</span></div>
 
 By dropping one of the color categories' columns from the design matrix <span class="math-inline">\\(X\\)</span>, we guarantee that the columns of <span class="math-inline">\\(X\\)</span> are linearly independent. As discussed in the course notes, when one hot encoding, the sum of all 4 color columns is equal to the intercept column (of all ones); by dropping one of the 4 color columns, we don't lose any information but remove the linear dependence. (The other assumptions in the problem help guarantee this, too --- for instance, if all of the wolverines in the dataset have the same `weight`, then the `weight` column is a scalar multiple of the intercept column.)
 
@@ -68,7 +68,7 @@ With that in mind, let's look at the options:
 
 -   It would gaurantee the existence of a unique optimal parameter vector <span class="math-inline">\\(\vec w^{\ast}\\)</span>. **True**: If <span class="math-inline">\\(X\\)</span>'s columns are linearly independent, there is a unique <span class="math-inline">\\(\vec w^{\ast}\\)</span>.
 
--   It would change <span class="math-inline">\\(\text{nullsp}(X)\\)</span>: **True**. With the redundant column, <span class="math-inline">\\(X\\)</span> has a non-trivial null space, but without it, <span class="math-inline">\\(X\\)</span>'s null space is <span class="math-inline">\\(\lbrace \vec 0 \rbrace\\)</span>.
+-   It would change <span class="math-inline">\\(\text{nullsp}(X)\\)</span>: **True**. With the redundant column, <span class="math-inline">\\(X\\)</span> has a non-trivial null space, but without it, <span class="math-inline">\\(X\\)</span>'s null space is <span class="math-inline">\\(\lbrace  \vec 0 \rbrace \\)</span>.
 
 -   It would change <span class="math-inline">\\(\text{colsp}(X)\\)</span>: **False**, as discussed above.
 </details>

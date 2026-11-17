@@ -547,7 +547,7 @@ In each part below, a possible way to fill in the blank is given. Determine whet
     \item infinite \\ \correctbubble{True} \bubble{False}
 \end{enumerate}
 
-\begin{solution}
+\begin{solution}[parts (i)-(iv)]
 \begin{itemize}
     \item \textbf{(True) zero ways}: $S$, the set of all linear combinations of $\vec x_1, \ldots, \vec x_6$, is a 4-dimensional subspace of $\mathbb{R}^9$. Since $S$ isn't all of $\mathbb{R}^9$, there are plenty of vectors $\vec b \in \mathbb{R}^9$ that are not in $S$, and therefore can't be written as a linear combination of $\vec x_1, \ldots, \vec x_6$. So, it's true that there are some $\vec b$'s such that there are zero ways to write $\vec b$ as a linear combination of $\vec x_1, \ldots, \vec x_6$.
     \item \textbf{(False) exactly one way}: Linear combinations are only unique if the spanning vectors are linearly independent. Since $\vec x_1, \ldots, \vec x_6$ are linearly dependent, there is a non-trivial linear combination of them that equals the zero vector, which could be added to any other existing linear combination that sums to $\vec b$ to ``invent'' a new, different-looking linear combination that sums to $\vec b$. So, it's false that there is exactly one way to write $\vec b$ as a linear combination of $\vec x_1, \ldots, \vec x_6$ --- if there is one way, there are infinitely many.

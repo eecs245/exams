@@ -105,7 +105,7 @@ For the rest of the problem, suppose that both <span class="math-inline">\\(\vec
 
 <details markdown="1"><summary>Solution</summary>
 
-<span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -2 \\\\ 4 \\\\ 2 \end{bmatrix}\\)</span>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 \\\\ 3 \\\\ 1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ 4 \\\\ 1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ -2 \\\\ -1 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 \\\\ 6 \\\\ 2 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} -2 \\\\ 4 \\\\ 2 \end{bmatrix}\\)</span></span></div>
 
 If two parameter vectors are both solutions to the normal equation, their difference is in <span class="math-inline">\\(\text{nullsp}(X)\\)</span>. So,
 
@@ -258,7 +258,7 @@ X =
 $$
 </div>
 
-This design matrix has a column space of <span class="math-inline">\\(\text{span} \left( \left\lbrace \begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 1 \\\\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 1 \\\\ 0 \end{bmatrix}\right\rbrace \right)\\)</span>, which is the same as the column space of <span class="math-inline">\\(P\\)</span>. It also has the required null space, which is why it would be wrong to just pick, say,
+This design matrix has a column space of <span class="math-inline">\\(\text{span} \left( \left\lbrace  \begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 1 \\\\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\\\ 1 \\\\ 1 \\\\ 1 \\\\ 0 \end{bmatrix}\right\rbrace  \right)\\)</span>, which is the same as the column space of <span class="math-inline">\\(P\\)</span>. It also has the required null space, which is why it would be wrong to just pick, say,
 
 <div class="math-display">
 $$

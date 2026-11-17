@@ -64,5 +64,5 @@ $$
 $$
 </div>
 
-So, <span class="math-inline">\\(S = \text{span}\left(\left\lbrace \begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\\ 1 \\\\ -1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\\\ 1 \\\\ 1 \\\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\\\ 0 \\\\ 0 \\\\ 1 \end{bmatrix} \right\rbrace\right)\\)</span>. This is a 4-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^6\\)</span>, so <span class="math-inline">\\(\dim(S) = 4\\)</span>.
+So, <span class="math-inline">\\(S = \text{span}\left(\left\lbrace  \begin{bmatrix} 1 \\\\ 0 \\\\ -1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\\ 1 \\\\ -1 \\\\ 0 \\\\ 0 \\\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\\\ 1 \\\\ 1 \\\\ 0 \end{bmatrix}, \begin{bmatrix} 0 \\\\ 0 \\\\ 0 \\\\ 0 \\\\ 0 \\\\ 1 \end{bmatrix} \right\rbrace \right)\\)</span>. This is a 4-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^6\\)</span>, so <span class="math-inline">\\(\dim(S) = 4\\)</span>.
 </details>

@@ -215,7 +215,7 @@ Fill in the blanks: The third \_\_(i)\_\_ of $A$ is \_\_(ii)\_\_ to the fourth \
     \item \correctbubble{column} \bubble{row}
 \end{enumerate}
 
-\begin{solution}
+\begin{solution}[parts (i)-(iii)]
 Every column of $B$ is in $\text{nullsp}(A)$. From \href{https://notes.eecs245.org/matrices/null-space-rank-nullity/\#example-orthogonal-complements}{Chapter 5.4 in the notes}, the row space of $A$ and the null space of $A$ are orthogonal complements. That means every row of $A$ is orthogonal to every vector in $\text{nullsp}(A)$, and hence orthogonal to every column of $B$.
 
 So, the third \textbf{row} of $A$ is \textbf{orthogonal} to the fourth \textbf{column} of $B$.
@@ -225,7 +225,7 @@ So, the third \textbf{row} of $A$ is \textbf{orthogonal} to the fourth \textbf{c
 \begin{subprob}(4 pts)
 \textbf{Select all} possible values of $\text{rank}(AB)$.
 
-\squarebubble{0}
+\correctsquarebubble{0}
 \squarebubble{1}
 \squarebubble{2}
 \squarebubble{3}
@@ -251,8 +251,8 @@ AB = 0_{6 \times 6} \implies \text{rank}(AB) = 0_{6 \times 6}
 \textbf{Select all} possible values of $\text{rank}(B)$.
 
 \squarebubble{0}
-\squarebubble{1}
-\squarebubble{2}
+\correctsquarebubble{1}
+\correctsquarebubble{2}
 \squarebubble{3}
 \squarebubble{4}
 \squarebubble{5}
@@ -582,7 +582,7 @@ Therefore, if $\vec w'$ is one solution, the complete set of solutions is
     \correctbubble{True} \bubble{False}
 
 \end{enumerate}
-\begin{solution}
+\begin{solution}[parts (i)-(iii)]
 Let $\vec e = \vec y - X \vec w^*$ be the error vector. Since $\vec w^*$ satisfies the normal equation, $\vec e$ is orthogonal to every column of $X$, and to every linear combination of those columns.
 
 \begin{enumerate}[label=(\roman*)]
@@ -625,7 +625,7 @@ $$h(\vec x_i) = w_1 \cdot \text{tempF}_i + w_2 \cdot \text{tempC}_i + w_3 \cdot 
     \correctbubble{True} \bubble{False}
 
 \end{enumerate}
-\begin{solution}
+\begin{solution}[parts (i)-(iii)]
 Let $\vec e_{\text{new}}$ be the error vector for the new model.
 
 \begin{enumerate}[label=(\roman*)]
@@ -754,7 +754,7 @@ Fill in the blanks: The set of all vectors $\vec x^*$ that minimize $f(\vec x)$ 
     \item \correctbubble{is not} \bubble{is}
 \end{enumerate}
 
-\begin{solution}
+\begin{solution}[parts (i) and (ii)]
 We have
 \[
 f(\vec x) = (x_1 + x_2 - 4)^2

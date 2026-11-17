@@ -53,8 +53,16 @@ The columns of <span class="math-inline">\\(X\\)</span> are all orthogonal to ea
 The columns of <span class="math-inline">\\(X\\)</span> are orthonormal.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+</li>
+</ol>
 
-<details markdown="1"><summary>Solution</summary>
+<details class="group-solution" markdown="1"><summary>Solution for parts (i) and (ii)</summary>
+
+**(i)**
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+**(ii)**
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
 
@@ -68,8 +76,6 @@ This is false. The diagonal entries of <span class="math-inline">\\(X^TX\\)</spa
 </ol>
 
 </details>
-</li>
-</ol>
 
 </div>
 </div>

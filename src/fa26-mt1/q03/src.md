@@ -69,8 +69,10 @@ $$
 (3 pts) What is <span class="math-inline">\\(w&#95;1^{\ast}\\)</span>, the optimal slope for the **regular** simple linear regression model?
 
    <span class="math-inline">\\(w&#95;1^{\ast}=\&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+</li>
+</ol>
 
-<details markdown="1"><summary>Solution</summary>
+<details class="group-solution" markdown="1"><summary>Solution for parts (i) and (ii)</summary>
 
 **(i)** <span class="math-inline">\\(\boxed{\text{N/A}}\\)</span>. Moving the data changes which modified line fits best, even if its shape, correlation, and standard deviations stay the same. Every modified line <span class="math-inline">\\(y=w+wx\\)</span> passes through <span class="math-inline">\\((-1,0)\\)</span>, so it cannot simply move along with the data.
 
@@ -90,8 +92,6 @@ $$
 </div>
 
 </details>
-</li>
-</ol>
 
 </div>
 </div>

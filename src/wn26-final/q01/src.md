@@ -99,7 +99,7 @@ $$
 
 <div class="math-display">
 $$
-\frac{\text{\# left of } w - \text{\# right of } w}{n}
+\frac{\text{# left of } w - \text{# right of } w}{n}
 $$
 </div>
 

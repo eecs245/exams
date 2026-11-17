@@ -59,7 +59,7 @@ $$
 
 <details markdown="1"><summary>Solution</summary>
 
-<span class="mc-bubble" aria-hidden="true"></span> An entire plane of points.
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> There are no points in the intersection.</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> A single point.</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> An entire line of points.</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> An entire plane of points.</span></div>
 
 **A single point.** A point on <span class="math-inline">\\(L\\)</span> has coordinates <span class="math-inline">\\(x=6+3t\\)</span>, <span class="math-inline">\\(y=2+t\\)</span>, and <span class="math-inline">\\(z=-4-2t\\)</span>. Substituting into the two plane equations gives
 

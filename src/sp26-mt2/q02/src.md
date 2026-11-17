@@ -6,7 +6,7 @@ $$
 $$
 </div>
 
-In other words, <span class="math-inline">\\(\text{nullsp}(A) = \left\lbrace \begin{bmatrix} x \\\\ y \\\\ z \end{bmatrix} \mid   5x - y + 3z = 0 \right\rbrace\\)</span>.
+In other words, <span class="math-inline">\\(\text{nullsp}(A) = \left\lbrace  \begin{bmatrix} x \\\\ y \\\\ z \end{bmatrix} \mid   5x - y + 3z = 0 \right\rbrace \\)</span>.
 
 <div class="assignment-parts" markdown="1">
 <div class="assignment-part" markdown="1">
@@ -86,7 +86,7 @@ though there are infinitely many possible answers.
 
 A key fact to remember here is that the row space and null space of a matrix are orthogonal complements, as discussed in [Chapter 5.4](https://notes.eecs245.org/matrices/null-space-rank-nullity/#example-orthogonal-complements). This means that every element in the row space must be orthogonal to every element in the null space.
 
-We're given that the null space consists of all vectors <span class="math-inline">\\(\vec x = \begin{bmatrix} x \\\\ y \\\\ z \end{bmatrix}\\)</span> such that <span class="math-inline">\\(5x-y+3z = 0\\)</span>. Equivalently, this means that <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix} \cdot \vec x = 0\\)</span>. So, this means that every element in the null space is orthogonal to <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix}\\)</span>, so <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix}\\)</span> must be in the row space. The row space is <span class="math-inline">\\(1\\)</span>-dimensional, since <span class="math-inline">\\(\text{rank}(A)=1\\)</span>. So, one basis is <span class="math-inline">\\(\left\lbrace \begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix} \right\rbrace\\)</span>.
+We're given that the null space consists of all vectors <span class="math-inline">\\(\vec x = \begin{bmatrix} x \\\\ y \\\\ z \end{bmatrix}\\)</span> such that <span class="math-inline">\\(5x-y+3z = 0\\)</span>. Equivalently, this means that <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix} \cdot \vec x = 0\\)</span>. So, this means that every element in the null space is orthogonal to <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix}\\)</span>, so <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix}\\)</span> must be in the row space. The row space is <span class="math-inline">\\(1\\)</span>-dimensional, since <span class="math-inline">\\(\text{rank}(A)=1\\)</span>. So, one basis is <span class="math-inline">\\(\left\lbrace  \begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix} \right\rbrace \\)</span>.
 
 If you didn't remember this key fact, no problem --- you could have arrived at this conclusion from scratch on the exam. We know <span class="math-inline">\\(A\\)</span> is <span class="math-inline">\\(3 \times 3\\)</span>, so suppose it looks like
 
@@ -104,7 +104,7 @@ A \vec x = \begin{bmatrix} a_{11} & a_{12} & a_{13} \\\\ a_{21} & a_{22} & a_{23
 $$
 </div>
 
-From here, you see that the dot product of each row of <span class="math-inline">\\(A\\)</span> with <span class="math-inline">\\(\vec x\\)</span> must be 0, so each row of <span class="math-inline">\\(A\\)</span> must be orthogonal to <span class="math-inline">\\(\vec x\\)</span>. The plane form of the null space, <span class="math-inline">\\(5x-y+3z=0\\)</span>, tells you that <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix}\\)</span> is orthogonal to every vector in the null space, so putting these facts together gives us that <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix}\\)</span> is in the row space. Together with the fact that the row space is <span class="math-inline">\\(1\\)</span>-dimensional, since <span class="math-inline">\\(\text{rank}(A)=1\\)</span>, we have that a basis is <span class="math-inline">\\(\left\lbrace \begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix} \right\rbrace\\)</span>.
+From here, you see that the dot product of each row of <span class="math-inline">\\(A\\)</span> with <span class="math-inline">\\(\vec x\\)</span> must be 0, so each row of <span class="math-inline">\\(A\\)</span> must be orthogonal to <span class="math-inline">\\(\vec x\\)</span>. The plane form of the null space, <span class="math-inline">\\(5x-y+3z=0\\)</span>, tells you that <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix}\\)</span> is orthogonal to every vector in the null space, so putting these facts together gives us that <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix}\\)</span> is in the row space. Together with the fact that the row space is <span class="math-inline">\\(1\\)</span>-dimensional, since <span class="math-inline">\\(\text{rank}(A)=1\\)</span>, we have that a basis is <span class="math-inline">\\(\left\lbrace  \begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix} \right\rbrace \\)</span>.
 
 All other possible answers involve (non-zero) scalar multiples of <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -1 \\\\ 3 \end{bmatrix}\\)</span>.
 </details>

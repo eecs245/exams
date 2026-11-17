@@ -65,8 +65,12 @@ What is the value of <span class="math-inline">\\(C\\)</span>?
 </li>
 <li markdown="1">
 Show your work in the box below. English explanations are not enough.
+</li>
+</ol>
 
-<details markdown="1"><summary>Solution</summary>
+<details class="group-solution" markdown="1"><summary>Solution for parts (i) and (ii)</summary>
+
+**(i)**
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6 \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(-6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6r \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(-6nr \sigma&#95;x \sigma&#95;y\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(6nr \sigma&#95;x \sigma&#95;y\\)</span></span></div>
 
@@ -119,8 +123,6 @@ $$
 </div>
 
 </details>
-</li>
-</ol>
 
 </div>
 </div>

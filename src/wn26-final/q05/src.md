@@ -135,22 +135,11 @@ So the correct answer is the **third** option, <span class="math-inline">\\(\box
 
 Below, select **one possible set** of columns of <span class="math-inline">\\(A\\)</span> that form a basis for <span class="math-inline">\\(\text{colsp}(A)\\)</span>. You should select the fewest possible number of columns needed to span <span class="math-inline">\\(\text{colsp}(A)\\)</span>.
 
-<div class="math-display">
-$$
-\begin{array}{c|c}
-\text{Column} & \text{Include in your basis?} \\\\ \hline
-\vec a^{(1)} & \square  \quad  \\\\
-\vec a^{(2)} & \square  \quad  \\\\
-\vec a^{(3)} & \square  \quad  \\\\
-\vec a^{(4)} & \square  \quad  \\\\
-\vec a^{(5)} & \square  \quad
-\end{array}
-$$
-</div>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\vec a^{(1)}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\vec a^{(2)}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\vec a^{(3)}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\vec a^{(4)}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\vec a^{(5)}\\)</span></span></div>
 
 <details markdown="1"><summary>Solution</summary>
 
-<span class="mc-square" aria-hidden="true"></span>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\vec a^{(1)}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\vec a^{(2)}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\vec a^{(3)}\\)</span></span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\vec a^{(4)}\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(\vec a^{(5)}\\)</span></span></div>
 
 The vector
 
@@ -203,7 +192,7 @@ $$
 $$
 </div>
 
- Since <span class="math-inline">\\(\text{rank}(A)=2\\)</span>, the column space is 2-dimensional. A basis for the column space comes from picking one of <span class="math-inline">\\(\lbrace \vec a^{(1)}, \vec a^{(2)}, \vec a^{(3)} \rbrace\\)</span> and one of <span class="math-inline">\\(\lbrace \vec a^{(4)}, \vec a^{(5)} \rbrace\\)</span>. There are therefore 6 possible options; one of them is
+ Since <span class="math-inline">\\(\text{rank}(A)=2\\)</span>, the column space is 2-dimensional. A basis for the column space comes from picking one of <span class="math-inline">\\(\lbrace  \vec a^{(1)}, \vec a^{(2)}, \vec a^{(3)} \rbrace \\)</span> and one of <span class="math-inline">\\(\lbrace  \vec a^{(4)}, \vec a^{(5)} \rbrace \\)</span>. There are therefore 6 possible options; one of them is
 
 <div class="math-display">
 $$

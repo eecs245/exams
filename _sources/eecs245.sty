@@ -267,7 +267,7 @@
 \setlist[enumerate]{topsep=0.25em, itemsep=0.25em}
 
 % Solution environment (conditionally displayed based on flag)
-\newenvironment{solution}{
+\newenvironment{solution}[1][]{
   \ifshowsolutions
     \begin{tcolorbox}[
       colback=lightgray, 
@@ -287,7 +287,7 @@
       toptitle=0pt,
       bottomtitle=0pt
     ]
-    \textbf{Solution: }
+    \textbf{Solution\if\relax\detokenize{#1}\relax\else\ for #1\fi: }
   \else
     \setbox0=\vbox\bgroup
   \fi

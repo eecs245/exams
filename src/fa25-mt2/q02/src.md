@@ -134,7 +134,7 @@ $$
 
  From the rank-nullity theorem, we know that our basis will have exactly one vector, so our goal is to find a non-zero vector where <span class="math-inline">\\(X^T \vec n = \vec 0\\)</span>.
 
-<span class="math-inline">\\(\text{Column 3}=\text{Column 1} - \frac{2}{3}\cdot \text{Column 2}\\)</span>, so one possible basis is <span class="math-inline">\\(\left\lbrace \begin{bmatrix} 1 \\\\ -\frac{2}{3} \\\\ -1 \\\\ 0\end{bmatrix}\right\rbrace\\)</span>.
+<span class="math-inline">\\(\text{Column 3}=\text{Column 1} - \frac{2}{3}\cdot \text{Column 2}\\)</span>, so one possible basis is <span class="math-inline">\\(\left\lbrace  \begin{bmatrix} 1 \\\\ -\frac{2}{3} \\\\ -1 \\\\ 0\end{bmatrix}\right\rbrace \\)</span>.
 </details>
 
 </div>

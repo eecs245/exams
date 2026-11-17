@@ -37,17 +37,43 @@ class ExamConversionTests(unittest.TestCase):
         self.assertIn(r"\text{# of points}", rendered)
         self.assertNotIn(r"\#", rendered)
 
-    def test_matrix_row_break_does_not_split_choice_group(self):
+    def test_solution_copies_all_choices_across_print_rows(self):
         source = (
-            r"\bubble{earlier group}\\"
+            r"\bubble{incorrect choice}\\[0.2em]"
             "\n"
             r"\correctbubble{$\begin{bmatrix}6\\-7\\4\end{bmatrix}$}"
             "\n"
             r"\bubble{$\begin{bmatrix}6\\-7\\3\end{bmatrix}$}"
         )
-        options = converter.extract_last_choice_group(source)
-        self.assertEqual([option.is_correct for option in options], [True, False])
-        self.assertIn(r"6\\-7\\4", options[0].content)
+        summary = converter.solution_choice_summary(source, None)
+        self.assertEqual(summary.count(r"\solutionbubble"), 2)
+        self.assertIn(r"\solutioncorrectbubble{$\begin{bmatrix}6\\-7\\4\end{bmatrix}$}", summary)
+
+    def test_shared_solution_copies_and_labels_each_answer_set(self):
+        source = r"""
+\begin{subprob}
+\begin{enumerate}[label=(\roman*)]
+\item \correctbubble{True} \bubble{False}
+\item Explain.
+\item \bubble{True} \correctbubble{False}
+\end{enumerate}
+"""
+        summary = converter.solution_choice_summary(source, "parts (i)-(iii)")
+        self.assertIn("\\textbf{(i)}\n\n\\solutioncorrectbubble{True}", summary)
+        self.assertIn("\\textbf{(iii)}\n\n\\solutionbubble{True}\n\\solutioncorrectbubble{False}", summary)
+        self.assertNotIn(r"\textbf{(ii)}", summary)
+
+    def test_shared_solution_sits_after_the_whole_list(self):
+        source = "1. First\n2. Second\n\n" + converter.replace_solution_markers(
+            "\\begin{solution}[both parts]\nExplanation\n\\end{solution}",
+            include_solutions=True,
+        )
+        rendered = converter.ordered_lists_as_html(source)
+        self.assertIn('</ol>\n\n<details class="group-solution"', rendered)
+        self.assertIn("<summary>Solution for both parts</summary>", rendered)
+
+    def test_unmarked_choices_are_not_copied_into_solutions(self):
+        self.assertEqual(converter.solution_choice_summary(r"\squarebubble{First} \squarebubble{Second}", None), "")
 
 
 if __name__ == "__main__":

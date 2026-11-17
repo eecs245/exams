@@ -14,7 +14,7 @@ $$
 <div class="assignment-part-content" markdown="1">
 <span class="badge badge-points">4 pts</span> Fill in the blanks to complete the sentence:
 
-For all values of <span class="math-inline">\\(c\\)</span>, <span class="math-inline">\\(\text{span}(\lbrace\vec u,\vec v\rbrace)\\)</span> is a \_\_(i)\_\_-dimensional subspace of \_\_(ii)\_\_.
+For all values of <span class="math-inline">\\(c\\)</span>, <span class="math-inline">\\(\text{span}(\lbrace \vec u,\vec v\rbrace )\\)</span> is a \_\_(i)\_\_-dimensional subspace of \_\_(ii)\_\_.
 
 (i): \_\_\_\_\_\_ (ii): \_\_\_\_\_\_
 

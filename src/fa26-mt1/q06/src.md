@@ -136,7 +136,7 @@ For part **d)**, suppose that <span class="math-inline">\\(\vec x&#95;3,\vec x&#
 
 <details markdown="1"><summary>Solution</summary>
 
-<span class="mc-square" aria-hidden="true"></span> Every subset containing exactly three of the four vectors is a basis for <span class="math-inline">\\(\mathbb R^3\\)</span>.
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\vec x&#95;3\\)</span> and <span class="math-inline">\\(\vec x&#95;4\\)</span> are on <span class="math-inline">\\(P\\)</span>.</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> The vectors <span class="math-inline">\\(\vec x&#95;3,\vec x&#95;4\\)</span> are linearly independent.</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> The vectors <span class="math-inline">\\(\vec x&#95;1,\vec x&#95;2,\vec x&#95;3,\vec x&#95;4\\)</span> are linearly independent.</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> There is a nonzero vector orthogonal to all four vectors.</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> Every subset containing exactly three of the four vectors is a basis for <span class="math-inline">\\(\mathbb R^3\\)</span>.</span></div>
 
 Select **options 1, 3, and 4**.
 

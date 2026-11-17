@@ -82,8 +82,10 @@ The coefficient <span class="math-inline">\\(w&#95;2\\)</span> is the change in 
 </li>
 <li markdown="1">
 (2 pts) <span class="math-inline">\\(3\\)</span>, <span class="math-inline">\\(4\\)</span>, <span class="math-inline">\\(5\\)</span>, and <span class="math-inline">\\(6\\)</span> <span class="math-inline">\\(\text{rank}(X) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+</li>
+</ol>
 
-<details markdown="1"><summary>Solution</summary>
+<details class="group-solution" markdown="1"><summary>Solution for parts (i)-(iii)</summary>
 
 This feature engineering setup is an example of the multiple linear regression design matrices from [Chapter 7.2](https://notes.eecs245.org/regression-using-linear-algebra/multiple-linear-regression/).
 
@@ -142,8 +144,6 @@ $$
 </ol>
 
 </details>
-</li>
-</ol>
 
 </div>
 </div>

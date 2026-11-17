@@ -4,7 +4,7 @@ Let <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge badge-points">4 pts</span> Suppose that for some value of <span class="math-inline">\\(c\\)</span>, <span class="math-inline">\\(P\\)</span> is the matrix that projects vectors in <span class="math-inline">\\(\mathbb{R}^3\\)</span> onto <span class="math-inline">\\(\text{span}(\lbrace\vec u, \vec v\rbrace)\\)</span>. **Select all** true statements below.
+<span class="badge badge-points">4 pts</span> Suppose that for some value of <span class="math-inline">\\(c\\)</span>, <span class="math-inline">\\(P\\)</span> is the matrix that projects vectors in <span class="math-inline">\\(\mathbb{R}^3\\)</span> onto <span class="math-inline">\\(\text{span}(\lbrace \vec u, \vec v\rbrace )\\)</span>. **Select all** true statements below.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(P^2 = P\\)</span></span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(P\\)</span> is invertible</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(P\\)</span> is orthogonal</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> <span class="math-inline">\\(P\\)</span> is symmetric</span></div>
 
@@ -37,7 +37,7 @@ With this in mind:
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge badge-points">4 pts</span> Now, suppose <span class="math-inline">\\(\vec y \in \mathbb{R}^3\\)</span>. Let <span class="math-inline">\\(\vec p \\)</span> be the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{span}(\lbrace\vec u, \vec v\rbrace)\\)</span>, and let <span class="math-inline">\\(\vec e = \vec y - \vec p\\)</span>.
+<span class="badge badge-points">4 pts</span> Now, suppose <span class="math-inline">\\(\vec y \in \mathbb{R}^3\\)</span>. Let <span class="math-inline">\\(\vec p \\)</span> be the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{span}(\lbrace \vec u, \vec v\rbrace )\\)</span>, and let <span class="math-inline">\\(\vec e = \vec y - \vec p\\)</span>.
 
 There is no value of <span class="math-inline">\\(c\\)</span> that guarantees that the components of <span class="math-inline">\\(\vec e\\)</span> sum to 0, for every <span class="math-inline">\\(\vec y \in \mathbb{R}^3\\)</span>. That is, it is **not** guaranteed that <span class="math-inline">\\(e&#95;1 + e&#95;2 + e&#95;3 = 0\\)</span> for every <span class="math-inline">\\(\vec y \in \mathbb{R}^3\\)</span>.
 
@@ -45,7 +45,7 @@ Give a 1-2 sentence English explanation for why it is **not** guaranteed that <s
 
 <details markdown="1"><summary>Solution</summary>
 
-For <span class="math-inline">\\(e&#95;1 + e&#95;2 + e&#95;3\\)</span> to always equal 0, every error vector <span class="math-inline">\\(\vec e\\)</span> would have to be orthogonal to <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \end{bmatrix}\\)</span>. Since every error vector is orthogonal to <span class="math-inline">\\(\text{span}(\lbrace\vec u, \vec v\rbrace)\\)</span>, this would require <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \end{bmatrix}\\)</span> to lie in <span class="math-inline">\\(\text{span}(\lbrace\vec u, \vec v\rbrace)\\)</span>, but no value of <span class="math-inline">\\(c\\)</span> makes that happen.
+For <span class="math-inline">\\(e&#95;1 + e&#95;2 + e&#95;3\\)</span> to always equal 0, every error vector <span class="math-inline">\\(\vec e\\)</span> would have to be orthogonal to <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \end{bmatrix}\\)</span>. Since every error vector is orthogonal to <span class="math-inline">\\(\text{span}(\lbrace \vec u, \vec v\rbrace )\\)</span>, this would require <span class="math-inline">\\(\begin{bmatrix} 1 \\\\ 1 \\\\ 1 \end{bmatrix}\\)</span> to lie in <span class="math-inline">\\(\text{span}(\lbrace \vec u, \vec v\rbrace )\\)</span>, but no value of <span class="math-inline">\\(c\\)</span> makes that happen.
 </details>
 
 </div>

@@ -100,7 +100,7 @@ Which of the following is <span class="math-inline">\\(\nabla g(\vec x)\\)</span
 
 <details markdown="1"><summary>Solution</summary>
 
-<span class="mc-bubble" aria-hidden="true"></span> None of the above
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2 A^T \vec b\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\((\vec b^T A \vec x) A^T \vec b\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2 (\vec b^T A \vec x) \vec b\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(2 (\vec b^T A \vec x) A^T \vec b\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(2 (\vec b^T A \vec x) A^T \vec x\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> None of the above</span></div>
 
 Let
 

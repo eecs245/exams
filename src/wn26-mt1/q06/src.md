@@ -12,7 +12,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge badge-points">2 pts</span> True or False: The set <span class="math-inline">\\(\lbrace\vec x&#95;1, \vec x&#95;2, \vec x&#95;3, \vec x&#95;4, \vec x&#95;5, \vec x&#95;6\rbrace\\)</span> is linearly independent.
+<span class="badge badge-points">2 pts</span> True or False: The set <span class="math-inline">\\(\lbrace \vec x&#95;1, \vec x&#95;2, \vec x&#95;3, \vec x&#95;4, \vec x&#95;5, \vec x&#95;6\rbrace \\)</span> is linearly independent.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -57,8 +57,24 @@ exactly two
 infinite
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+</li>
+</ol>
 
-<details markdown="1"><summary>Solution</summary>
+<details class="group-solution" markdown="1"><summary>Solution for parts (i)-(iv)</summary>
+
+**(i)**
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+**(ii)**
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
+
+**(iii)**
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
+
+**(iv)**
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -70,8 +86,6 @@ infinite
 
 -   **(True) infinite ways**: For any vector <span class="math-inline">\\(\vec b \in S\\)</span>, there are infinitely many ways to write <span class="math-inline">\\(\vec b\\)</span> as a linear combination of <span class="math-inline">\\(\vec x&#95;1, \ldots, \vec x&#95;6\\)</span>.
 </details>
-</li>
-</ol>
 
 </div>
 </div>
@@ -155,7 +169,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">d)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(T = \text{span}(\lbrace \vec x&#95;1, \vec x&#95;2, \vec x&#95;3 \rbrace)\\)</span> and <span class="math-inline">\\(U = \text{span}(\lbrace \vec x&#95;4, \vec x&#95;5, \vec x&#95;6 \rbrace)\\)</span>. Suppose <span class="math-inline">\\(W\\)</span> is the **intersection** of <span class="math-inline">\\(T\\)</span> and <span class="math-inline">\\(U\\)</span>, i.e. <span class="math-inline">\\(W = T \cap U\\)</span>. <span class="math-inline">\\(W\\)</span> is also a subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>.
+<span class="badge badge-points">4 pts</span> Let <span class="math-inline">\\(T = \text{span}(\lbrace  \vec x&#95;1, \vec x&#95;2, \vec x&#95;3 \rbrace )\\)</span> and <span class="math-inline">\\(U = \text{span}(\lbrace  \vec x&#95;4, \vec x&#95;5, \vec x&#95;6 \rbrace )\\)</span>. Suppose <span class="math-inline">\\(W\\)</span> is the **intersection** of <span class="math-inline">\\(T\\)</span> and <span class="math-inline">\\(U\\)</span>, i.e. <span class="math-inline">\\(W = T \cap U\\)</span>. <span class="math-inline">\\(W\\)</span> is also a subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>.
 
 What are the smallest and largest possible values of <span class="math-inline">\\(\text{dim}(W)\\)</span>, the dimension of <span class="math-inline">\\(W\\)</span>? Give your answers as integers.
 
@@ -175,17 +189,17 @@ $$
 $$
 </div>
 
--   Could <span class="math-inline">\\(\text{dim}(W) = 3\\)</span>? **No**. If <span class="math-inline">\\(\text{dim}(W) = 3\\)</span>, it would mean that <span class="math-inline">\\(T\\)</span> and <span class="math-inline">\\(U\\)</span> are both **the same** 3-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>, and intersect everywhere. But if that were the case, then <span class="math-inline">\\(S = \text{span}(\lbrace \vec x&#95;1, \vec x&#95;2, \vec x&#95;3, \vec x&#95;4, \vec x&#95;5, \vec x&#95;6 \rbrace)\\)</span> would be a 3-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>, which contradicts the problem statement that <span class="math-inline">\\(S\\)</span> is a 4-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>. So, <span class="math-inline">\\(\text{dim}(W) &lt; 3\\)</span>, and the maximum possible value is something less than 3.
+-   Could <span class="math-inline">\\(\text{dim}(W) = 3\\)</span>? **No**. If <span class="math-inline">\\(\text{dim}(W) = 3\\)</span>, it would mean that <span class="math-inline">\\(T\\)</span> and <span class="math-inline">\\(U\\)</span> are both **the same** 3-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>, and intersect everywhere. But if that were the case, then <span class="math-inline">\\(S = \text{span}(\lbrace  \vec x&#95;1, \vec x&#95;2, \vec x&#95;3, \vec x&#95;4, \vec x&#95;5, \vec x&#95;6 \rbrace )\\)</span> would be a 3-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>, which contradicts the problem statement that <span class="math-inline">\\(S\\)</span> is a 4-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>. So, <span class="math-inline">\\(\text{dim}(W) &lt; 3\\)</span>, and the maximum possible value is something less than 3.
 
 -   Could <span class="math-inline">\\(\text{dim}(W) = 2\\)</span>? **Yes**, and all smaller values are also possible. <span class="math-inline">\\(T\\)</span> and <span class="math-inline">\\(U\\)</span> could overlap in a 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>, while each containing a direction that the other doesn't.
 
-   For example, <span class="math-inline">\\(T\\)</span> could be the span of <span class="math-inline">\\(\lbrace\vec e&#95;1, \vec e&#95;2, \vec e&#95;3\rbrace\\)</span> and <span class="math-inline">\\(U\\)</span> could be the span of <span class="math-inline">\\(\lbrace\vec e&#95;2, \vec e&#95;3, \vec e&#95;4\rbrace\\)</span>. In this case, <span class="math-inline">\\(W\\)</span> would be the span of <span class="math-inline">\\(\lbrace\vec e&#95;2, \vec e&#95;3\rbrace\\)</span>, which is a 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>.
+   For example, <span class="math-inline">\\(T\\)</span> could be the span of <span class="math-inline">\\(\lbrace \vec e&#95;1, \vec e&#95;2, \vec e&#95;3\rbrace \\)</span> and <span class="math-inline">\\(U\\)</span> could be the span of <span class="math-inline">\\(\lbrace \vec e&#95;2, \vec e&#95;3, \vec e&#95;4\rbrace \\)</span>. In this case, <span class="math-inline">\\(W\\)</span> would be the span of <span class="math-inline">\\(\lbrace \vec e&#95;2, \vec e&#95;3\rbrace \\)</span>, which is a 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>.
 
--   Could <span class="math-inline">\\(\text{dim}(W) = 1\\)</span>? **Yes**. For example, <span class="math-inline">\\(T\\)</span> could be the span of <span class="math-inline">\\(\lbrace\vec e&#95;1, \vec e&#95;2\rbrace\\)</span> and <span class="math-inline">\\(U\\)</span> could be the span of <span class="math-inline">\\(\lbrace\vec e&#95;2, \vec e&#95;3, \vec e&#95;4 \rbrace\\)</span>. In this case, <span class="math-inline">\\(W\\)</span> would be the span of <span class="math-inline">\\(\lbrace\vec e&#95;2\rbrace\\)</span>, which is 1-dimensional, while <span class="math-inline">\\(S\\)</span> would still be 4-dimensional. (In this example, we said that <span class="math-inline">\\(T\\)</span> is the span of <span class="math-inline">\\(\vec e&#95;1\\)</span> and <span class="math-inline">\\(\vec e&#95;2\\)</span> though we defined it in the problem statement to be the span of three vectors. No problem --- just pick the third vector to be a linear combination of <span class="math-inline">\\(\vec e&#95;1\\)</span> and <span class="math-inline">\\(\vec e&#95;2\\)</span>. That is, <span class="math-inline">\\(\vec x&#95;1 = \vec e&#95;1\\)</span>, <span class="math-inline">\\(\vec x&#95;2 = \vec e&#95;2\\)</span>, and <span class="math-inline">\\(\vec x&#95;3 = \vec e&#95;1 + \vec e&#95;2\\)</span> would work as an example.)
+-   Could <span class="math-inline">\\(\text{dim}(W) = 1\\)</span>? **Yes**. For example, <span class="math-inline">\\(T\\)</span> could be the span of <span class="math-inline">\\(\lbrace \vec e&#95;1, \vec e&#95;2\rbrace \\)</span> and <span class="math-inline">\\(U\\)</span> could be the span of <span class="math-inline">\\(\lbrace \vec e&#95;2, \vec e&#95;3, \vec e&#95;4 \rbrace \\)</span>. In this case, <span class="math-inline">\\(W\\)</span> would be the span of <span class="math-inline">\\(\lbrace \vec e&#95;2\rbrace \\)</span>, which is 1-dimensional, while <span class="math-inline">\\(S\\)</span> would still be 4-dimensional. (In this example, we said that <span class="math-inline">\\(T\\)</span> is the span of <span class="math-inline">\\(\vec e&#95;1\\)</span> and <span class="math-inline">\\(\vec e&#95;2\\)</span> though we defined it in the problem statement to be the span of three vectors. No problem --- just pick the third vector to be a linear combination of <span class="math-inline">\\(\vec e&#95;1\\)</span> and <span class="math-inline">\\(\vec e&#95;2\\)</span>. That is, <span class="math-inline">\\(\vec x&#95;1 = \vec e&#95;1\\)</span>, <span class="math-inline">\\(\vec x&#95;2 = \vec e&#95;2\\)</span>, and <span class="math-inline">\\(\vec x&#95;3 = \vec e&#95;1 + \vec e&#95;2\\)</span> would work as an example.)
 
 -   Could <span class="math-inline">\\(\text{dim}(W) = 0\\)</span>? **Yes**. <span class="math-inline">\\(T\\)</span> and <span class="math-inline">\\(U\\)</span> could be two completely disjoint subspaces, except for <span class="math-inline">\\(\vec 0\\)</span>, which is in every subspace.
 
-   For example, let <span class="math-inline">\\(\vec x&#95;1 = \vec e&#95;1\\)</span>, <span class="math-inline">\\(\vec x&#95;2 = \vec e&#95;2\\)</span>, <span class="math-inline">\\(\vec x&#95;3 = \vec e&#95;1 + \vec e&#95;2\\)</span>, which makes <span class="math-inline">\\(T\\)</span> a 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>, and <span class="math-inline">\\(\vec x&#95;4 = \vec e&#95;3\\)</span>, <span class="math-inline">\\(\vec x&#95;5 = \vec e&#95;4\\)</span>, <span class="math-inline">\\(\vec x&#95;6 = \vec e&#95;3 + \vec e&#95;4\\)</span>, which makes <span class="math-inline">\\(U\\)</span> a 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>. In this case, <span class="math-inline">\\(W\\)</span> would be the set <span class="math-inline">\\(\lbrace\vec 0\rbrace\\)</span>, while <span class="math-inline">\\(S\\)</span> would still be 4-dimensional.
+   For example, let <span class="math-inline">\\(\vec x&#95;1 = \vec e&#95;1\\)</span>, <span class="math-inline">\\(\vec x&#95;2 = \vec e&#95;2\\)</span>, <span class="math-inline">\\(\vec x&#95;3 = \vec e&#95;1 + \vec e&#95;2\\)</span>, which makes <span class="math-inline">\\(T\\)</span> a 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>, and <span class="math-inline">\\(\vec x&#95;4 = \vec e&#95;3\\)</span>, <span class="math-inline">\\(\vec x&#95;5 = \vec e&#95;4\\)</span>, <span class="math-inline">\\(\vec x&#95;6 = \vec e&#95;3 + \vec e&#95;4\\)</span>, which makes <span class="math-inline">\\(U\\)</span> a 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^9\\)</span>. In this case, <span class="math-inline">\\(W\\)</span> would be the set <span class="math-inline">\\(\lbrace \vec 0\rbrace \\)</span>, while <span class="math-inline">\\(S\\)</span> would still be 4-dimensional.
 
 So, the smallest possible value of <span class="math-inline">\\(\text{dim}(W)\\)</span> is <span class="math-inline">\\(\boxed{0}\\)</span>, and the largest possible value is <span class="math-inline">\\(\boxed{2}\\)</span>.
 </details>

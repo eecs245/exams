@@ -122,6 +122,13 @@ on save. `src.md` is regenerated; `config.yml` is never overwritten. If the LaTe
 now disagrees with it — say the points changed — you get a warning naming the
 question and both values, and you decide which is right.
 
+**Mark multiple-choice answers in the LaTeX.** Use `\correctbubble` or
+`\correctsquarebubble` on the question's choices. The solutions PDF fills
+those choices in place, and the web solution repeats the marked answer set.
+For one solution covering a numbered list, put
+`\begin{solution}[parts (i) and (ii)]` after the list. The PDF and the web
+use that scope in the solution heading.
+
 **Do not edit** `src.md`, or anything under `.build/` or `_site/`. The next build
 replaces them.
 

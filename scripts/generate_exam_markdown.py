@@ -1116,6 +1116,11 @@ def replace_choice_markers(text: str, include_solutions: bool = False) -> str:
 CHOICE_COMMAND_PATTERN = re.compile(
     r"\\(?P<command>(?:correct|filled)?(?:square)?bubble)\{",
 )
+SOLUTION_ENV_PATTERN = re.compile(
+    r"(?ms)^[ \t]*\\begin\{solution\}(?:\[(?P<scope>[^\]\r\n]*)\])?[ \t]*\n?"
+    r"(?P<body>.*?)^[ \t]*\\end\{solution\}[ \t]*"
+)
+SOLUTION_DETAILS = r'<details(?: class="group-solution")? markdown="1"><summary>[^<]*</summary>'
 
 
 @dataclass
@@ -1133,57 +1138,61 @@ class ChoiceOption:
 
 
 def add_solution_choice_summaries(text: str) -> str:
-    solution_env_pattern = re.compile(
-        r"(?ms)^[ \t]*\\begin\{solution\}[ \t]*\n?(.*?)[ \t]*^[ \t]*\\end\{solution\}[ \t]*"
-    )
     parts: list[str] = []
     cursor = 0
 
-    for match in solution_env_pattern.finditer(text):
+    for match in SOLUTION_ENV_PATTERN.finditer(text):
         before_solution = text[cursor : match.start()]
         parts.append(before_solution)
-        options = extract_last_choice_group(before_solution)
-        solution_body = match.group(1)
-        if SYNTHESIZED_MARK in solution_body:
-            options = []  # already carries every option of its part
-        if options:
-            summary = render_solution_choice_summary(options)
+        scope = match["scope"]
+        solution_body = match["body"]
+        # A synthesized solution already carries its part's complete choices.
+        summary = "" if SYNTHESIZED_MARK in solution_body else solution_choice_summary(before_solution, scope)
+        if summary:
             solution_body = f"\n{summary}\n\n{solution_body.lstrip()}"
-        parts.append(f"\\begin{{solution}}\n{solution_body.rstrip()}\n\\end{{solution}}\n")
+        scope_option = f"[{scope}]" if scope else ""
+        parts.append(f"\\begin{{solution}}{scope_option}\n{solution_body.strip()}\n\\end{{solution}}\n")
         cursor = match.end()
 
     parts.append(text[cursor:])
     return "".join(parts)
 
 
-def extract_last_choice_group(text: str) -> list[ChoiceOption]:
-    boundary_markers = [
-        "\\begin{prob}",
-        "\\begin{subprob}",
-        "\\begin{activity}",
-        "\\begin{subactivity}",
-        "\\end{solution}",
-    ]
-    boundary = max(text.rfind(marker) for marker in boundary_markers)
-    search_region = text[boundary + 1 :] if boundary >= 0 else text
+def solution_choice_summary(text: str, scope: str | None) -> str:
+    """Copy complete answer sets from the LaTeX that supplies the PDF marks."""
+    region = re.split(r"\\(?:begin\{(?:prob|subprob|activity|subactivity)\}|end\{solution\})", text)[-1]
+    if scope:
+        lists = list(re.finditer(
+            r"(?s)\\begin\{enumerate\}(?:\[([^\]]*)\])?(.*?)\\end\{enumerate\}", region
+        ))
+        if lists:
+            layout, body = lists[-1].groups()
+            use_roman = layout and r"\roman" in layout
+            summaries = []
+            for index, item in enumerate(re.split(r"\\item\b", body)[1:]):
+                summary = render_solution_choice_summary(extract_choices(item))
+                if summary:
+                    label = compose.ROMAN_LABELS[index] if use_roman else str(index + 1)
+                    summaries.append(f"\\textbf{{({label})}}\n\n{summary}")
+            return "\n\n".join(summaries)
+    return render_solution_choice_summary(extract_choices(region))
+
+
+def extract_choices(text: str) -> list[ChoiceOption]:
     options: list[ChoiceOption] = []
     cursor = 0
-    while True:
-        match = CHOICE_COMMAND_PATTERN.search(search_region, cursor)
-        if not match:
-            break
-        # Only separators between choices start a new group. Matrix row
-        # breaks inside a choice are part of its answer.
-        gap = search_region[cursor : match.start()]
-        if any(separator in gap for separator in ("\n\n", "\\\\", "\\item")):
-            options.clear()
-        content, end = extract_braced(search_region, match.end() - 1)
+    while match := CHOICE_COMMAND_PATTERN.search(text, cursor):
+        content, end = extract_braced(text, match.end() - 1)
         options.append(ChoiceOption(match.group("command"), content.strip()))
         cursor = end
     return options
 
 
 def render_solution_choice_summary(options: list[ChoiceOption]) -> str:
+    # Blank checkbox cells have meaning only beside the rest of their table.
+    # A question without a marked answer can have a prose-only explanation.
+    if not any(option.is_correct for option in options) or any(not option.content for option in options):
+        return ""
     rendered_options = []
     for option in options:
         if option.is_square:
@@ -1396,20 +1405,20 @@ def replace_labeled_items(text: str) -> str:
 
 
 def replace_solution_markers(text: str, include_solutions: bool = False) -> str:
-    solution_env_pattern = r"(?ms)^[ \t]*\\begin\{solution\}[ \t]*\n?(.*?)[ \t]*^[ \t]*\\end\{solution\}[ \t]*"
-
     if not include_solutions:
-        return re.sub(solution_env_pattern, "", text)
+        return SOLUTION_ENV_PATTERN.sub("", text)
 
     def replace(match: re.Match[str]) -> str:
-        solution_body = match.group(1).strip()
+        scope = match["scope"]
+        title = f"Solution for {html.escape(scope)}" if scope else "Solution"
+        classes = ' class="group-solution"' if scope else ""
         return (
-            "\n<details markdown=\"1\"><summary>Solution</summary>\n\n"
-            f"{solution_body}\n\n"
+            f'\n<details{classes} markdown="1"><summary>{title}</summary>\n\n'
+            f'{match["body"].strip()}\n\n'
             "</details>\n"
         )
 
-    return re.sub(solution_env_pattern, replace, text)
+    return SOLUTION_ENV_PATTERN.sub(replace, text)
 
 
 def expand_labcodelinks(text: str) -> str:
@@ -1882,7 +1891,7 @@ def ordered_lists_as_html(text: str) -> str:
     # Lists inside solution dropdowns first, so that when the outer pass copies
     # a <details> block into an item it is already HTML and needs no care.
     text = re.sub(
-        r'(?s)(<details markdown="1"><summary>Solution</summary>\n)(.*?)(\n</details>)',
+        rf'(?s)({SOLUTION_DETAILS}\n)(.*?)(\n</details>)',
         lambda m: m.group(1) + convert_ordered_lists(m.group(2)) + m.group(3),
         text,
     )
@@ -1948,7 +1957,7 @@ def collect_item_body(lines: list[str], index: int, body: list[str]) -> int:
     """Append the lines belonging to the current item; return the next index."""
     while index < len(lines):
         line = lines[index]
-        if ORDERED_ITEM_PATTERN.match(line):
+        if ORDERED_ITEM_PATTERN.match(line) or line.startswith('<details class="group-solution"'):
             return index
         stripped = line.strip()
         if not stripped or line[0] in " \t" or stripped.startswith(("-   ", "- ", "* ")):
@@ -2996,7 +3005,7 @@ def validate_generated_markdown_structure(markdown: str, output_md: Path) -> Non
 
 def find_accidental_solution_code_block(markdown: str) -> str | None:
     solution_pattern = re.compile(
-        r'(?ms)<details markdown="1"><summary>Solution</summary>\n\n(.*?)\n</details>'
+        rf'(?ms){SOLUTION_DETAILS}\n\n(.*?)\n</details>'
     )
     for match in solution_pattern.finditer(markdown):
         for line in match.group(1).splitlines():

@@ -13,7 +13,7 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">a)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge badge-points">7 pts</span> Are <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> linearly independent?
+<span class="badge badge-points">7 pts</span> Are <span class="math-inline">\\(\lbrace \vec p,\vec q,\vec r,\vec s\rbrace \\)</span> linearly independent?
 
 <ol class="roman">
 <li markdown="1">
@@ -22,8 +22,12 @@ Select an answer:
 </li>
 <li markdown="1">
 Prove your answer using the formal definition of linear independence. <em>Hint: You did something similar in Homework 4, Problem 6.</em>
+</li>
+</ol>
 
-<details markdown="1"><summary>Solution</summary>
+<details class="group-solution" markdown="1"><summary>Solution for parts (i) and (ii)</summary>
+
+**(i)**
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Yes</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> No</span></div>
 
@@ -45,10 +49,8 @@ $$
 $$
 </div>
 
- The coefficients <span class="math-inline">\\(1,-1,1,-1\\)</span> are not all zero, so this proves that <span class="math-inline">\\(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace\\)</span> is linearly dependent.
+ The coefficients <span class="math-inline">\\(1,-1,1,-1\\)</span> are not all zero, so this proves that <span class="math-inline">\\(\lbrace \vec p,\vec q,\vec r,\vec s\rbrace \\)</span> is linearly dependent.
 </details>
-</li>
-</ol>
 
 </div>
 </div>
@@ -56,15 +58,15 @@ $$
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge badge-points">3 pts</span> What is the dimension of <span class="math-inline">\\(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)\\)</span>? Give your answer as a number with no variables.
+<span class="badge badge-points">3 pts</span> What is the dimension of <span class="math-inline">\\(\text{span}(\lbrace \vec p,\vec q,\vec r,\vec s\rbrace )\\)</span>? Give your answer as a number with no variables.
 
-<span class="math-inline">\\(\dim(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
+<span class="math-inline">\\(\dim(\text{span}(\lbrace \vec p,\vec q,\vec r,\vec s\rbrace )) = \&#95;\&#95;\&#95;\&#95;\&#95;\&#95;\\)</span>
 
 <details markdown="1"><summary>Solution</summary>
 
-Part **a)** shows that the four vectors are linearly **dependent**, so the dimension of <span class="math-inline">\\(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)\\)</span> is **at most** <span class="math-inline">\\(3\\)</span>. (For the dimension to be 4, which is the number of vectors in question, they would need to be linearly independent. There's no way to have a span of 5 or more dimensions using just 4 vectors.)
+Part **a)** shows that the four vectors are linearly **dependent**, so the dimension of <span class="math-inline">\\(\text{span}(\lbrace \vec p,\vec q,\vec r,\vec s\rbrace )\\)</span> is **at most** <span class="math-inline">\\(3\\)</span>. (For the dimension to be 4, which is the number of vectors in question, they would need to be linearly independent. There's no way to have a span of 5 or more dimensions using just 4 vectors.)
 
-But just because the dimension of <span class="math-inline">\\(\text{span}(\lbrace\vec p,\vec q,\vec r,\vec s\rbrace)\\)</span> is at most <span class="math-inline">\\(3\\)</span> doesn't mean that the dimension is actually <span class="math-inline">\\(3\\)</span> --- for this span to be 3-dimensional, it needs to be the span of 3 linearly independent vectors.
+But just because the dimension of <span class="math-inline">\\(\text{span}(\lbrace \vec p,\vec q,\vec r,\vec s\rbrace )\\)</span> is at most <span class="math-inline">\\(3\\)</span> doesn't mean that the dimension is actually <span class="math-inline">\\(3\\)</span> --- for this span to be 3-dimensional, it needs to be the span of 3 linearly independent vectors.
 
 Fortunately, <span class="math-inline">\\(\vec p,\vec q,\vec r\\)</span> are linearly independent. If
 
@@ -90,7 +92,7 @@ a=0,\qquad a+b=0,\qquad b+c=0,\qquad c=0
 $$
 </div>
 
- This gives <span class="math-inline">\\(a=b=c=0\\)</span>, so <span class="math-inline">\\(\vec p,\vec q,\vec r\\)</span> are linearly independent. Therefore, among <span class="math-inline">\\(\left\lbrace \vec p,\vec q,\vec r,\vec s \right\rbrace\\)</span>, there are 3 linearly independent vectors, and thus
+ This gives <span class="math-inline">\\(a=b=c=0\\)</span>, so <span class="math-inline">\\(\vec p,\vec q,\vec r\\)</span> are linearly independent. Therefore, among <span class="math-inline">\\(\left\lbrace  \vec p,\vec q,\vec r,\vec s \right\rbrace \\)</span>, there are 3 linearly independent vectors, and thus
 
 <div class="math-display">
 $$

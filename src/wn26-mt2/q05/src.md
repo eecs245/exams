@@ -126,7 +126,7 @@ $$
 $$
 </div>
 
-This means that <span class="math-inline">\\(A^T\\)</span>'s null space is <span class="math-inline">\\(\left\lbrace \vec 0 \right\rbrace\\)</span>.
+This means that <span class="math-inline">\\(A^T\\)</span>'s null space is <span class="math-inline">\\(\left\lbrace  \vec 0 \right\rbrace \\)</span>.
 </details>
 
 </div>

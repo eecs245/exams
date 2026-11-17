@@ -329,7 +329,7 @@ Suppose $A$ is a $7 \times 12$ matrix. Fill in each blank with an integer with n
     \item (2 pts) What is the maximum possible value of $\text{dim}(\text{nullsp}(A))$? \minibox{3cm}{$12$}[1cm]
 \end{enumerate}
 
-\begin{solution}
+\begin{solution}[parts (i) and (ii)]
 By the rank-nullity theorem from \href{https://notes.eecs245.org/matrices/null-space-rank-nullity/}{Chapter 5.4},
 \[
 \text{rank}(A)+\text{dim}(\text{nullsp}(A))=12
@@ -398,7 +398,7 @@ Finally, let $Q$ be an $n \times n$ orthogonal matrix.
     \item (2 pts) What is $\text{det}(P)$? \quad \bubble{$-1$} \correctbubble{$0$} \bubble{$1$} \bubble{$-1$ or $1$} \bubble{None of these}
     \item (2 pts) What is $\text{det}(Q)$? \quad \bubble{$-1$} \bubble{$0$} \bubble{$1$} \correctbubble{$-1$ or $1$} \bubble{None of these}
 \end{enumerate}
-\begin{solution}
+\begin{solution}[parts (i) and (ii)]
 \begin{enumerate}[label=(\roman*)]
     \item Since $P$ projects onto $\text{colsp}(X)$ and $d<n$, multiple vectors in $\mathbb{R}^n$ will have the same projection onto $\text{colsp}(X)$. So $P$ is not invertible, and therefore $\det(P)=0$.
     \item Since $Q$ is orthogonal, $Q^TQ=I$. Taking determinants gives
@@ -525,7 +525,7 @@ Once again, suppose the dataset has four rows. In each of the following subparts
     \item (2 pts) $2$, $0$, $2$, and $1$ \qquad \quad $\text{rank}(X) = \minibox{3cm}{$2$}[1cm]$
     \item (2 pts) $3$, $4$, $5$, and $6$ \qquad \quad $\text{rank}(X) = \minibox{3cm}{$2$}[1cm]$
 \end{enumerate}
-\begin{solution}
+\begin{solution}[parts (i)-(iii)]
 This feature engineering setup is an example of the multiple linear regression design matrices from \href{https://notes.eecs245.org/regression-using-linear-algebra/multiple-linear-regression/}{Chapter 7.2}.
 \begin{enumerate}[label=(\roman*)]
     \item The design matrix is

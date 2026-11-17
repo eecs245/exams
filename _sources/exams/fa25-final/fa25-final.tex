@@ -430,11 +430,11 @@ tells us that $\begin{bmatrix} 1/2 \\ 0 \\ -1 \\ 0 \\ 1/2 \end{bmatrix}$ and $\b
 
 \begin{subprob}(3 pts) Fill in the blanks: $\text{nullsp}(A^T)$ is a \_\_(i)\_\_-dimensional subspace of \_\_(ii)\_\_. \\
 
-\begin{tabular}{lllllllll}
-    (i) & \bubble{$2$} & \bubble{$3$} & \bubble{$4$} & \bubble{$5$} & \correctbubble{$n-2$} & \bubble{$n-1$} & \bubble{$n$} \\ \\
-    (ii) & \bubble{$\mathbb{R}^2$} & \bubble{$\mathbb{R}^3$} & \bubble{$\mathbb{R}^4$} & \bubble{$\mathbb{R}^5$} & \bubble{$\mathbb{R}^{n-2}$} & \bubble{$\mathbb{R}^{n-1}$} & \correctbubble{$\mathbb{R}^n$}
-\end{tabular}
-\begin{solution}
+\begin{enumerate}[label=(\roman*)]
+    \item \bubble{$2$} \bubble{$3$} \bubble{$4$} \bubble{$5$} \correctbubble{$n-2$} \bubble{$n-1$} \bubble{$n$}
+    \item \bubble{$\mathbb{R}^2$} \bubble{$\mathbb{R}^3$} \bubble{$\mathbb{R}^4$} \bubble{$\mathbb{R}^5$} \bubble{$\mathbb{R}^{n-2}$} \bubble{$\mathbb{R}^{n-1}$} \correctbubble{$\mathbb{R}^n$}
+\end{enumerate}
+\begin{solution}[both blanks]
 Since $\text{rank}(A)=2$ and $\text{rank}(A) = \text{rank}(A^T)$, we also have $\text{rank}(A^T)=2$. The matrix $A^T$ has $n$ columns, so rank-nullity gives
 \[
 \dim(\text{nullsp}(A^T)) = \text{\# columns in $A^T$} - \text{rank}(A^T) = n - 2
@@ -739,7 +739,7 @@ Therefore,
     \end{enumerate}
 
 % \emptybox{12.5cm}
-\begin{solution}
+\begin{solution}[items 1 and 2]
 The long-run fraction of time spent in each state is the stationary distribution, so it must satisfy
 \[
 A\vec x^* = \vec x^*

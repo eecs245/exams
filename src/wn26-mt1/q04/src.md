@@ -30,7 +30,7 @@ So, it is possible for <span class="math-inline">\\(\vec u\\)</span> and <span c
 <div class="assignment-part" markdown="1">
 <div class="assignment-part-label">b)</div>
 <div class="assignment-part-content" markdown="1">
-<span class="badge badge-points">4 pts</span> The set <span class="math-inline">\\(\lbrace\vec u, \vec v, \vec w\rbrace\\)</span> is linearly dependent.
+<span class="badge badge-points">4 pts</span> The set <span class="math-inline">\\(\lbrace \vec u, \vec v, \vec w\rbrace \\)</span> is linearly dependent.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Impossible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Possible</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> Guaranteed</span></div>
 
@@ -62,7 +62,7 @@ $$
 $$
 </div>
 
-This is a non-trivial linear combination of <span class="math-inline">\\(\vec u\\)</span>, <span class="math-inline">\\(\vec v\\)</span>, and <span class="math-inline">\\(\vec w\\)</span> that equals the zero vector, so the set <span class="math-inline">\\(\lbrace\vec u, \vec v, \vec w\rbrace\\)</span> is linearly dependent. Equivalently, we could say <span class="math-inline">\\(\vec w = 3 \vec u - \vec v\\)</span>, which means <span class="math-inline">\\(\vec w\\)</span> is a linear combination of <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span>, which also means the set is linearly dependent.
+This is a non-trivial linear combination of <span class="math-inline">\\(\vec u\\)</span>, <span class="math-inline">\\(\vec v\\)</span>, and <span class="math-inline">\\(\vec w\\)</span> that equals the zero vector, so the set <span class="math-inline">\\(\lbrace \vec u, \vec v, \vec w\rbrace \\)</span> is linearly dependent. Equivalently, we could say <span class="math-inline">\\(\vec w = 3 \vec u - \vec v\\)</span>, which means <span class="math-inline">\\(\vec w\\)</span> is a linear combination of <span class="math-inline">\\(\vec u\\)</span> and <span class="math-inline">\\(\vec v\\)</span>, which also means the set is linearly dependent.
 </details>
 
 </div>

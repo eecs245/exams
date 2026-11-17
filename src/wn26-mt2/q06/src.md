@@ -93,13 +93,13 @@ where <span class="math-inline">\\(\text{tempC}&#95;i = \frac{5}{9} (\text{tempF
 <div class="assignment-part-content" markdown="1">
 <span class="badge badge-points">4 pts</span> Suppose <span class="math-inline">\\(\vec w'\\)</span> is one solution to the normal equation for this model. Which option describes the **complete set** of solutions to the normal equation?
 
-| <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace \vec w' + t\begin{bmatrix} 1 \\\\ -9/5 \\\\ 32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace \vec w' + t\begin{bmatrix} 1 \\\\ -9/5 \\\\ -32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace\\)</span> |
+| <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace  \vec w' + t\begin{bmatrix} 1 \\\\ -9/5 \\\\ 32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace \\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace  \vec w' + t\begin{bmatrix} 1 \\\\ -9/5 \\\\ -32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace \\)</span> |
 |:---|:---|
-| <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace \vec w' + t\begin{bmatrix} 1 \\\\ 9/5 \\\\ 32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace\\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace \vec w' + t\begin{bmatrix} 1 \\\\ 9/5 \\\\ 32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace\\)</span> |
+| <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace  \vec w' + t\begin{bmatrix} 1 \\\\ 9/5 \\\\ 32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace \\)</span> | <span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace  \vec w' + t\begin{bmatrix} 1 \\\\ 9/5 \\\\ 32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace \\)</span> |
 
 <details markdown="1"><summary>Solution</summary>
 
-<span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace \vec w' + t\begin{bmatrix} 1 \\\\ 9/5 \\\\ 32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace\\)</span>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace  \vec w' + t\begin{bmatrix} 1 \\\\ -9/5 \\\\ 32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace \\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace  \vec w' + t\begin{bmatrix} 1 \\\\ -9/5 \\\\ -32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace \\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace  \vec w' + t\begin{bmatrix} 1 \\\\ 9/5 \\\\ 32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace \\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\left \lbrace  \vec w' + t\begin{bmatrix} 1 \\\\ 9/5 \\\\ 32 \\\\ -32 \end{bmatrix},  t \in \mathbb{R} \right\rbrace \\)</span></span></div>
 
 If we add any vector in <span class="math-inline">\\(\text{nullsp}(X)\\)</span> to one solution of the normal equation, we get another solution. So we just need to find a non-zero vector in <span class="math-inline">\\(\text{nullsp}(X)\\)</span>.
 
@@ -176,8 +176,16 @@ True or False: The sum of the errors of the model's predictions is 0.
 True or False: The sum of the errors of the model's predictions **on just the rows of the dataset corresponding to night games** is 0.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+</li>
+</ol>
 
-<details markdown="1"><summary>Solution</summary>
+<details class="group-solution" markdown="1"><summary>Solution for parts (i)-(iii)</summary>
+
+**(ii)**
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+**(iii)**
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -220,8 +228,6 @@ $$
 </ol>
 
 </details>
-</li>
-</ol>
 
 </div>
 </div>
@@ -252,8 +258,16 @@ True or False: The sum of the errors of the new model's predictions is 0.
 True or False: The sum of the errors of the new model's predictions **on just the rows of the dataset corresponding to night games** is 0.
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+</li>
+</ol>
 
-<details markdown="1"><summary>Solution</summary>
+<details class="group-solution" markdown="1"><summary>Solution for parts (i)-(iii)</summary>
+
+**(ii)**
+
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
+
+**(iii)**
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> False</span></div>
 
@@ -290,8 +304,6 @@ $$
 </ol>
 
 </details>
-</li>
-</ol>
 
 </div>
 </div>

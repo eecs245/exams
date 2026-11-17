@@ -6,8 +6,10 @@ Suppose <span class="math-inline">\\(A\\)</span> is a <span class="math-inline">
 </li>
 <li markdown="1">
 (2 pts) What is the maximum possible value of <span class="math-inline">\\(\text{dim}(\text{nullsp}(A))\\)</span>? \_\_\_\_\_\_
+</li>
+</ol>
 
-<details markdown="1"><summary>Solution</summary>
+<details class="group-solution" markdown="1"><summary>Solution for parts (i) and (ii)</summary>
 
 By the rank-nullity theorem from [Chapter 5.4](https://notes.eecs245.org/matrices/null-space-rank-nullity/),
 
@@ -27,5 +29,3 @@ $$
 
  This is as small as possible when <span class="math-inline">\\(\text{rank}(A)=7\\)</span>, giving minimum <span class="math-inline">\\(\text{dim}(\text{nullsp}(A)) = 5\\)</span>, and as large as possible when <span class="math-inline">\\(\text{rank}(A)=0\\)</span>, giving maximum <span class="math-inline">\\(\text{dim}(\text{nullsp}(A)) = 12\\)</span>.
 </details>
-</li>
-</ol>

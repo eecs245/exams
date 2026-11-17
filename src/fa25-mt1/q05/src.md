@@ -38,8 +38,12 @@ What is the value of <span class="math-inline">\\(k\\)</span>?
 </li>
 <li markdown="1">
 Show your work in the box below. English explanations are not enough.
+</li>
+</ol>
 
-<details markdown="1"><summary>Solution</summary>
+<details class="group-solution" markdown="1"><summary>Solution for parts (i) and (ii)</summary>
+
+**(i)**
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 1</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> 3</span></div>
 
@@ -80,8 +84,6 @@ So, we need to find the vector <span class="math-inline">\\(\vec u&#95;k\\)</spa
 </ol>
 
 </details>
-</li>
-</ol>
 
 </div>
 </div>

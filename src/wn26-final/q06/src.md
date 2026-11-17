@@ -99,7 +99,7 @@ $$
 
  Fill in the blanks to describe the set of all possible values of <span class="math-inline">\\(\vec w^{\ast}\\)</span>. Each blank should contain a vector with no variables.
 
-<span class="math-inline">\\(\text{set of all possible } \vec w^{\ast} = \left\lbrace \&#95;\&#95;\&#95;\&#95;\&#95;\&#95; + t  \&#95;\&#95;\&#95;\&#95;\&#95;\&#95; : t \in \mathbb{R} \right\rbrace\\)</span>.
+<span class="math-inline">\\(\text{set of all possible } \vec w^{\ast} = \left\lbrace  \&#95;\&#95;\&#95;\&#95;\&#95;\&#95; + t  \&#95;\&#95;\&#95;\&#95;\&#95;\&#95; : t \in \mathbb{R} \right\rbrace \\)</span>.
 
 <details markdown="1"><summary>Solution</summary>
 

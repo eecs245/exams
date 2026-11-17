@@ -119,7 +119,7 @@ for some <span class="math-inline">\\(2 \times 3\\)</span> matrix <span class="m
 
 <details markdown="1"><summary>Solution</summary>
 
-<span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 4 &amp; -12 \\\\ 2 &amp; 6 &amp; -12 \end{bmatrix}\\)</span>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 2 &amp; 2 &amp; -6 \\\\ 2 &amp; 5 &amp; -12 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 2 &amp; -12 \\\\ 2 &amp; 10 &amp; -24 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 4 &amp; -12 \\\\ 4 &amp; 10 &amp; -24 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 4 &amp; 12 \\\\ 4 &amp; 10 &amp; 24 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 4 &amp; 4 &amp; -12 \\\\ 2 &amp; 6 &amp; -12 \end{bmatrix}\\)</span></span></div>
 
 We have
 

@@ -71,7 +71,7 @@ In each of the remaining parts, identify whether the statement is True or False 
 
 This is false. If the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span> is <span class="math-inline">\\(\vec y\\)</span> itself, that only tells us that <span class="math-inline">\\(\vec y \in \text{colsp}(X)\\)</span>.
 
-But <span class="math-inline">\\(\text{colsp}(X)\\)</span> could still be a 1-dimensional or 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^3\\)</span> that happens to contain <span class="math-inline">\\(\vec y\\)</span>. For example, if <span class="math-inline">\\(\text{colsp}(X) = \text{span}\left(\left\lbrace \vec y \right\rbrace\right)\\)</span>, then the projection of <span class="math-inline">\\(\vec y\\)</span> is still <span class="math-inline">\\(\vec y\\)</span>, but <span class="math-inline">\\(\text{rank}(X)=1\\)</span>, not 3.
+But <span class="math-inline">\\(\text{colsp}(X)\\)</span> could still be a 1-dimensional or 2-dimensional subspace of <span class="math-inline">\\(\mathbb{R}^3\\)</span> that happens to contain <span class="math-inline">\\(\vec y\\)</span>. For example, if <span class="math-inline">\\(\text{colsp}(X) = \text{span}\left(\left\lbrace  \vec y \right\rbrace \right)\\)</span>, then the projection of <span class="math-inline">\\(\vec y\\)</span> is still <span class="math-inline">\\(\vec y\\)</span>, but <span class="math-inline">\\(\text{rank}(X)=1\\)</span>, not 3.
 </details>
 
 </div>
