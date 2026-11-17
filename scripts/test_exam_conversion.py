@@ -37,6 +37,18 @@ class ExamConversionTests(unittest.TestCase):
         self.assertIn(r"\text{# of points}", rendered)
         self.assertNotIn(r"\#", rendered)
 
+    def test_matrix_row_break_does_not_split_choice_group(self):
+        source = (
+            r"\bubble{earlier group}\\"
+            "\n"
+            r"\correctbubble{$\begin{bmatrix}6\\-7\\4\end{bmatrix}$}"
+            "\n"
+            r"\bubble{$\begin{bmatrix}6\\-7\\3\end{bmatrix}$}"
+        )
+        options = converter.extract_last_choice_group(source)
+        self.assertEqual([option.is_correct for option in options], [True, False])
+        self.assertIn(r"6\\-7\\4", options[0].content)
+
 
 if __name__ == "__main__":
     unittest.main()

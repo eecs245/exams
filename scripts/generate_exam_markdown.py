@@ -1166,28 +1166,18 @@ def extract_last_choice_group(text: str) -> list[ChoiceOption]:
     ]
     boundary = max(text.rfind(marker) for marker in boundary_markers)
     search_region = text[boundary + 1 :] if boundary >= 0 else text
-    options = parse_choice_options(search_region)
-    if not options:
-        return []
-
-    last_option_start = search_region.rfind("\\" + options[-1].command + "{")
-    group_start = max(
-        search_region.rfind("\n\n", 0, last_option_start),
-        search_region.rfind("\\\\", 0, last_option_start),
-        search_region.rfind("\\item", 0, last_option_start),
-    )
-    group_region = search_region[group_start + 1 :] if group_start >= 0 else search_region
-    return parse_choice_options(group_region)
-
-
-def parse_choice_options(text: str) -> list[ChoiceOption]:
     options: list[ChoiceOption] = []
     cursor = 0
     while True:
-        match = CHOICE_COMMAND_PATTERN.search(text, cursor)
+        match = CHOICE_COMMAND_PATTERN.search(search_region, cursor)
         if not match:
             break
-        content, end = extract_braced(text, match.end() - 1)
+        # Only separators between choices start a new group. Matrix row
+        # breaks inside a choice are part of its answer.
+        gap = search_region[cursor : match.start()]
+        if any(separator in gap for separator in ("\n\n", "\\\\", "\\item")):
+            options.clear()
+        content, end = extract_braced(search_region, match.end() - 1)
         options.append(ChoiceOption(match.group("command"), content.strip()))
         cursor = end
     return options

@@ -18,7 +18,7 @@ Select an answer, then briefly justify your answer in the space provided using p
 
 <details markdown="1"><summary>Solution</summary>
 
-<span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 6 \\\\ -7 \\\\ 3 \end{bmatrix}\\)</span>
+<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 5 \\\\ -7 \\\\ 4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 7 \\\\ -7 \\\\ 4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 6 \\\\ -7 \\\\ 4 \end{bmatrix}\\)</span></span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> <span class="math-inline">\\(\begin{bmatrix} 6 \\\\ -7 \\\\ 3 \end{bmatrix}\\)</span></span></div>
 
 If <span class="math-inline">\\(\vec p\\)</span> is the projection of <span class="math-inline">\\(\vec y\\)</span> onto <span class="math-inline">\\(\text{colsp}(X)\\)</span>, then the error
 
