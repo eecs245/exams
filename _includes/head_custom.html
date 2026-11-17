@@ -9,7 +9,13 @@ worksheets).
 {%- if page.mathjax %}
 <script>
 window.MathJax = {
-  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+  tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+  startup: {
+    pageReady: () => MathJax.startup.defaultPageReady().then(() => {
+      /* Typesetting the problems above the target can move the heading. */
+      document.querySelector(".problem-review-anchor:target")?.scrollIntoView();
+    })
+  }
 };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>

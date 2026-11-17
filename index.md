@@ -11,6 +11,13 @@ A repository of past exams and solutions for EECS 245: Mathematics for Machine L
 {: .yellow }
 > If there are formatting issues or ambiguities with any of the questions, please let Suraj know at rampure@umich.edu!
 
+<section id="flagged-problems" aria-labelledby="flagged-problems-heading"
+  data-exams-url="{{ '/exams/' | relative_url }}" hidden>
+  <h2 id="flagged-problems-heading">Flagged Problems</h2>
+  <p class="problem-review-message">Flag a problem on any exam or worksheet to find it here.</p>
+  <ul class="problem-review-list" hidden></ul>
+</section>
+
 ## Past Exams
 
 All exams in EECS 245 are designed to be completed in 2 hours.

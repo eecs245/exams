@@ -72,7 +72,7 @@ def exam_label_for(exam_dir: str) -> str:
 
 # ===> Page assembly <=== #
 
-def build_chapter_page(chapter: dict) -> str:
+def build_chapter_page(chapter: dict, exam_titles: dict[str, str]) -> str:
     title = f"Chapter {chapter['chapter']}: {chapter['name']}"
     sections: list[str] = []
     toc_lines: list[str] = ["## Problems", ""]
@@ -83,7 +83,9 @@ def build_chapter_page(chapter: dict) -> str:
         question = compose.read_question(entry)
         label = exam_label_for(question.exam)
         number = question.number
-        heading_line, anchor = compose.render_heading(question, f"{label} · Problem {number}")
+        heading_line, anchor = compose.render_heading(
+            question, f"{label} · Problem {number}", exam_titles[question.exam]
+        )
         toc_lines.append(f"- [{label} · Problem {number}](#{anchor})")
         source_note = (
             f'<p class="worksheet-source">From '
@@ -134,9 +136,10 @@ def main() -> int:
     chapters = load_topics()
     if not chapters:
         raise SystemExit("worksheet_topics.yml defines no chapters")
+    exam_titles = {entry["id"]: compose.exam_title(entry) for entry in compose.load_registry()}
     for chapter in chapters:
         out = WORKSHEETS_DIR / f"chapter-{chapter['chapter']}" / "index.md"
-        compose.write_if_changed(out, build_chapter_page(chapter))
+        compose.write_if_changed(out, build_chapter_page(chapter, exam_titles))
         print(f"chapter-{chapter['chapter']}: {len(chapter['problems'])} problems")
     print(f"Wrote {len(chapters)} worksheets to {WORKSHEETS_DIR.relative_to(REPO_ROOT)}/")
     return 0

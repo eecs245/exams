@@ -63,12 +63,13 @@ def build_exam_page(exam: str) -> tuple[str, int]:
         raise SystemExit(f"src/{exam} contains no questions")
 
     page_dir = compose.EXAMS_DIR / exam
+    title = compose.exam_title(meta)
     copied: set[Path] = set()
 
     sections: list[str] = []
     toc_lines = ["## Problems", ""]
     for question in questions:
-        heading, anchor = compose.render_heading(question, f"Problem {question.number}")
+        heading, anchor = compose.render_heading(question, f"Problem {question.number}", title)
         sections.append(
             compose.emit_question(
                 question, page_dir, heading, copied_to=copied, namespace_images=False
@@ -78,7 +79,6 @@ def build_exam_page(exam: str) -> tuple[str, int]:
     compose.prune_images(page_dir, copied)
     body = f"\n\n{SECTION_SEPARATOR}\n\n".join(sections)
 
-    title = compose.exam_title(meta)
     parts = [
         "---",
         "layout: exam",

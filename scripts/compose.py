@@ -507,12 +507,13 @@ def average_score_controls(average: Decimal, points: str, score_id: str, label: 
     return button + score
 
 
-def render_heading(question: Question, label: str) -> tuple[str, str]:
+def render_heading(question: Question, label: str, source_title: str) -> tuple[str, str]:
     """(html, anchor) for a question heading.
 
     `label` is the page's name for the question ("Problem 4" on its exam page,
-    "FA25 MT1 · Problem 4" on a worksheet). The anchor is computed with plain
-    points and flag badges before rendering the video and average controls.
+    "FA25 MT1 · Problem 4" on a worksheet). `source_title` supplies the same
+    review label on both pages. The review anchor stays stable when the title
+    or badges change, while existing links keep their original heading anchor.
     """
     title = f"{label}{question.title_suffix}"
     points = f" {points_badge(question.points)}" if question.points else ""
@@ -527,7 +528,16 @@ def render_heading(question: Question, label: str) -> tuple[str, str]:
     # markdown="span": Kramdown still renders the heading's inner text as inline
     # Markdown (pandoc's "\..." escapes, "\\(" math delimiters), exactly as it
     # did when the heading was "## ...", while the id attribute is ours.
-    return f'<h2 id="{anchor}" markdown="span">{title}{points}{flags}{video_badges(question)}</h2>', anchor
+    review_label = f"{source_title} · Problem {question.number}"
+    if question.title:
+        review_label += f": {question.title}"
+    return (
+        f'<h2 id="{anchor}" data-review-id="{html.escape(question.id)}" '
+        f'data-review-label="{html.escape(review_label)}" markdown="span">'
+        f'<span class="problem-review-anchor" id="review-{html.escape(question.slug)}" '
+        f'aria-hidden="true"></span>{title}{points}{flags}{video_badges(question)}</h2>',
+        anchor,
+    )
 
 
 # ===> Rendering into a page <=== #
