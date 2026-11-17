@@ -238,56 +238,49 @@ body {
     text-decoration: none;
   }
 
-  h2 > .badge-points,
-  .score-toggle {
+  h2 > .badge,
+  h2 > .score-toggle {
     display: inline-flex;
     align-items: center;
+    box-sizing: border-box;
     height: 24px;
+    line-height: 1;
+    margin-inline-start: 6px;
     vertical-align: middle;
+    white-space: nowrap;
   }
-  h2 > .badge-points {
+  h2 > .badge {
     padding-block: 0;
   }
   .score-toggle {
     justify-content: center;
     width: 28px;
     padding: 0;
-    margin-left: 4px;
     border: 1px solid transparent;
     border-radius: 4px;
-    background-color: #FFCB05;
+    background-color: #A5CC9F;
     color: #00274C;
     cursor: pointer;
   }
   .score-toggle:hover,
   .score-toggle[aria-expanded="true"] {
-    background-color: #e6b800;
+    background-color: #90BB87;
   }
   .score-toggle:focus-visible {
     outline: 2px solid var(--reading-ink);
     outline-offset: 2px;
   }
   .score-icon {
-    display: inline-flex;
-    align-items: flex-end;
-    gap: 2px;
     pointer-events: none;
   }
-  .score-icon span {
-    border-left: 3px solid currentColor;
-  }
-  .score-icon span:nth-child(1) {
-    height: 5px;
-  }
-  .score-icon span:nth-child(2) {
-    height: 9px;
-  }
-  .score-icon span:nth-child(3) {
-    height: 13px;
+  @media (forced-colors: active) {
+    .score-toggle {
+      border-color: ButtonText;
+    }
   }
   .score-value {
     padding: 4px 8px;
-    margin-left: 4px;
+    margin-inline-start: 6px;
     border: 1px solid rgba(96, 116, 138, 0.55);
     border-radius: 4px;
     background: rgba(126, 148, 174, 0.12);

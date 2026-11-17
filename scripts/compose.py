@@ -427,7 +427,9 @@ def average_score_badge(question: Question, anchor: str) -> str:
     return (
         f' <button class="score-toggle" type="button" aria-label="Class average for Problem {question.number}"'
         f' aria-expanded="false" aria-controls="{score_id}" title="Class average">'
-        '<span class="score-icon" aria-hidden="true"><span></span><span></span><span></span></span>'
+        '<svg class="score-icon" viewBox="0 0 16 16" width="14" height="14" '
+        'fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">'
+        '<path d="M3 15v-5m5 5V6m5 9V2"/></svg>'
         '</button>'
         f' <span class="score-value" id="{score_id}" hidden>'
         f'Class average <strong>{average:.2f} / {question.points} pts ({percentage:.0f}%)</strong></span>'
