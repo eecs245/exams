@@ -227,17 +227,6 @@ body {
     background-color: #9A3324;
     color: #FFFFFF;
   }
-  // Link to a walkthrough video, typed into the question's header by hand.
-  .badge-video {
-    background-color: #FFCB05;
-    color: #00274C;
-    text-decoration: none;
-  }
-  a.badge-video:hover {
-    background-color: #e6b800;
-    text-decoration: none;
-  }
-
   h2 > .badge,
   h2 > .score-toggle {
     display: inline-flex;
@@ -252,28 +241,45 @@ body {
   h2 > .badge {
     padding-block: 0;
   }
+  h2 > .badge-points {
+    border: 1px solid var(--reading-border);
+    background-color: $base-button-color;
+    color: var(--reading-muted);
+  }
+  .badge-video,
+  .score-toggle {
+    border: 1px solid var(--reading-border);
+    border-radius: 4px;
+    background-color: $base-button-color;
+    color: $link-color;
+    text-decoration: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  }
   .score-toggle {
     justify-content: center;
     width: 28px;
     padding: 0;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    background-color: #A5CC9F;
-    color: #00274C;
     cursor: pointer;
   }
+  a.badge-video:hover,
   .score-toggle:hover,
   .score-toggle[aria-expanded="true"] {
-    background-color: #90BB87;
+    border-color: var(--reading-muted);
+    background-color: var(--reading-hover);
+    text-decoration: none;
   }
+  .badge-video:focus-visible,
   .score-toggle:focus-visible {
-    outline: 2px solid var(--reading-ink);
+    outline: 2px solid var(--reading-accent);
     outline-offset: 2px;
   }
   .score-icon {
     pointer-events: none;
   }
   @media (forced-colors: active) {
+    .badge-video {
+      border-color: LinkText;
+    }
     .score-toggle {
       border-color: ButtonText;
     }
