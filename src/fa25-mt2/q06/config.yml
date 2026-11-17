@@ -3,4 +3,8 @@
 title: "Quadratus Formulus"
 points: 14
 flags:
-average_points: 8.538462
+part_averages:
+  a: 3.230769
+  b: 0.961538
+  c: 0.923077
+  d: 3.423077

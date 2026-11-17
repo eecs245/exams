@@ -13,7 +13,6 @@ single definition of how an exam looks.
 """
 from __future__ import annotations
 
-import re
 import sys
 from pathlib import Path
 
@@ -54,8 +53,7 @@ def action_buttons(meta: dict) -> str:
 
 def toc_label(question) -> str:
     """'Problem 4' or 'Problem 4: Title' -- the heading minus its badges."""
-    without_badges = re.sub(r'\s*<span class="badge[^"]*"[^<]*</span>', "", question.heading_suffix)
-    return format_heading_for_toc(f"Problem {question.number}{without_badges}".rstrip())
+    return format_heading_for_toc(f"Problem {question.number}{question.title_suffix}".rstrip())
 
 
 def build_exam_page(exam: str) -> tuple[str, int]:

@@ -3,4 +3,6 @@
 title: "Spreading Your Wings"
 points: 12
 flags:
-average_points: 4.768519
+part_averages:
+  a: 2.222222
+  b: 2.546296

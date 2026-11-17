@@ -3,4 +3,8 @@
 title: "Space Jam"
 points: 20
 flags:
-average_points: 13.274038
+part_averages:
+  a: 3.418269
+  b: 2.201923
+  c: 3.884615
+  d: 3.769231

@@ -3,4 +3,6 @@
 title:
 points: 10
 flags:
-average_points: 5.171429
+part_averages:
+  a: 3.342857
+  b: 1.828571

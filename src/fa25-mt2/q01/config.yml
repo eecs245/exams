@@ -3,4 +3,8 @@
 title: "Getting Started"
 points: 12
 flags:
-average_points: 9.048077
+part_averages:
+  a: 2.942308
+  b: 2.740385
+  c: 0.846154
+  d: 2.519231

@@ -152,10 +152,20 @@ the first time the question is converted and never written again. The one flag
 the LaTeX produces today is `mtN-redemption`, from a title annotated "Counts
 towards Midterm N redemption score".
 
-Set `average_points` to the class mean in points for the whole problem to show
-the bar chart button on the exam page and topic worksheets. Compute it outside the
-repository from graded submissions by summing each problem's parts before
-averaging. Keep grade exports outside the repository.
+Set `part_averages` to the class means in points to show a bar chart button by
+each scored part on the exam page and topic worksheets.
+
+```yaml
+part_averages:
+  a: 2.33
+  b: 4.75
+```
+
+Use `i`, `ii`, and so on when the problem uses Roman numerals for its scored
+parts. Use `average_points` for a problem with a single score and no parts.
+Compute averages outside the repository from graded submissions, adding any
+score columns that belong to the same part. Keep grade exports outside the
+repository.
 
 ### `scripts/build.sh`
 

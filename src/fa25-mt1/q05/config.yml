@@ -4,4 +4,6 @@ title: "Back to Normal"
 points: 12
 flags:
 video: https://youtu.be/dewIDcz5mXo
-average_points: 8.101852
+part_averages:
+  a: 2.916667
+  b: 5.185185

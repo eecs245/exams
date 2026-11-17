@@ -3,4 +3,6 @@
 title: "Complexity"
 points: 10
 flags:
-average_points: 5.346154
+part_averages:
+  a: 2.942308
+  b: 2.403846

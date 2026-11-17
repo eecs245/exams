@@ -4,4 +4,8 @@ title:
 points: 12
 flags:
 video: https://youtu.be/_C_TuJnqeX8
-average_points: 8.745098
+part_averages:
+  a: 1.882353
+  b: 1.490196
+  c: 4.235294
+  d: 1.137255

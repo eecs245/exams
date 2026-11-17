@@ -220,8 +220,26 @@ body {
     margin-left: 8px;
   }
   .badge-points {
-    background-color: #00274C;
-    color: #FFCB05;
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 24px;
+    gap: 0.25em;
+    padding: 0 9px;
+    border: 1px solid var(--reading-border);
+    border-radius: 999px;
+    background-color: $base-button-color;
+    color: var(--reading-muted);
+    font-size: 12px;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .badge-points strong {
+    color: var(--reading-ink);
+    font-size: 14px;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
   }
   .badge-flag {
     background-color: #9A3324;
@@ -241,11 +259,6 @@ body {
   h2 > .badge {
     padding-block: 0;
   }
-  h2 > .badge-points {
-    border: 1px solid var(--reading-border);
-    background-color: $base-button-color;
-    color: var(--reading-muted);
-  }
   .badge-video,
   .score-toggle {
     border: 1px solid var(--reading-border);
@@ -256,10 +269,26 @@ body {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   }
   .score-toggle {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
     width: 28px;
+    height: 24px;
     padding: 0;
     cursor: pointer;
+  }
+  .part-controls {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-inline-end: 4px;
+    vertical-align: middle;
+  }
+  .part-controls > .badge-points {
+    margin-inline-start: 0;
+  }
+  ol.roman > li > p > .badge-points:first-child {
+    margin-inline: 0 4px;
   }
   a.badge-video:hover,
   .score-toggle:hover,
@@ -287,13 +316,13 @@ body {
   .score-value {
     padding: 4px 8px;
     margin-inline-start: 6px;
+    max-width: 100%;
     border: 1px solid rgba(96, 116, 138, 0.55);
     border-radius: 4px;
     background: rgba(126, 148, 174, 0.12);
     font-size: 0.8125rem;
     font-weight: 400;
     vertical-align: middle;
-    white-space: nowrap;
   }
   .score-value:not([hidden]) {
     display: inline-block;

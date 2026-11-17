@@ -4,4 +4,6 @@ title: "Needed Me"
 points: 11
 flags:
 video: https://youtu.be/0fbQmyQP6oE
-average_points: 7.240741
+part_averages:
+  a: 5.962963
+  b: 1.277778

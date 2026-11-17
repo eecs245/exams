@@ -3,4 +3,10 @@
 title: "Consider the Following..."
 points: 15
 flags:
-average_points: 10.601852
+part_averages:
+  a: 1.944444
+  b: 2.407407
+  c: 1.712963
+  d: 2.175926
+  e: 1.250000
+  f: 1.111111

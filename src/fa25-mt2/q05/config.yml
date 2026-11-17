@@ -3,4 +3,7 @@
 title: "Ortho...dontist?"
 points: 12
 flags:
-average_points: 7.057692
+part_averages:
+  a: 2.480769
+  b: 0.576923
+  c: 4.000000

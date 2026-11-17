@@ -4,4 +4,6 @@ title:
 points: 4
 flags:
   - mt2-redemption
-average_points: 1.600000
+part_averages:
+  i: 0.800000
+  ii: 0.800000

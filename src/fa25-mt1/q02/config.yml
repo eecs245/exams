@@ -3,4 +3,7 @@
 title: "Absolute Madness"
 points: 17
 flags:
-average_points: 11.962963
+part_averages:
+  a: 2.222222
+  b: 4.444444
+  c: 5.296296

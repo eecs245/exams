@@ -4,4 +4,6 @@ title:
 points: 10
 flags:
   - mt1-redemption
-average_points: 7.882353
+part_averages:
+  a: 4.117647
+  b: 3.764706

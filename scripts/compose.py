@@ -99,6 +99,51 @@ CONFIG_FILE = "config.yml"
 BODY_FILE = "src.md"
 PREAMBLE_FILE = "preamble.md"
 QUESTION_DIR_PATTERN = re.compile(r"^q(\d+)$")
+POINTS_NUMBER = r"\d+(?:\.\d+)?"
+POINTS_MARKUP = (
+    rf'(?P<points_markup><span class="badge badge-points">(?P<badge>{POINTS_NUMBER}) pts?</span>'
+    rf'|\((?P<plain>{POINTS_NUMBER}) pts?\))'
+)
+LETTERED_PART = re.compile(
+    r'^<div class="assignment-part-label">(?P<part>[a-z])\)</div>\n'
+    r'<div class="assignment-part-content" markdown="1">\n[ \t]*'
+    + POINTS_MARKUP, re.M
+)
+ROMAN_LIST = re.compile(r'^<ol class="roman">\n.*?^</ol>', re.M | re.S)
+ROMAN_ITEM = re.compile(r'^<li markdown="1">\n[ \t]*(?:' + POINTS_MARKUP + r')?', re.M)
+ROMAN_LABELS = ("i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x")
+
+
+@dataclass(frozen=True)
+class Part:
+    label: str
+    points: str
+    start: int
+    end: int
+
+
+def graded_parts(body: str, points: str) -> list[Part]:
+    """Locate scored lettered parts, or a scored Roman list in an unlettered problem."""
+    def part_at(label: str, match: re.Match[str]) -> Part:
+        return Part(label, match["badge"] or match["plain"], *match.span("points_markup"))
+
+    lettered = [part_at(match["part"], match) for match in LETTERED_PART.finditer(body)]
+    if lettered:
+        return lettered
+
+    for group in ROMAN_LIST.finditer(body):
+        items = list(ROMAN_ITEM.finditer(body, group.start(), group.end()))
+        if not items or len(items) > len(ROMAN_LABELS) or not all(m["points_markup"] for m in items):
+            continue
+        parts = [part_at(label, match) for label, match in zip(ROMAN_LABELS, items)]
+        if re.fullmatch(POINTS_NUMBER, points) and sum(Decimal(p.points) for p in parts) == Decimal(points):
+            return parts
+    return []
+
+
+def points_badge(points: str) -> str:
+    unit = "pt" if points == "1" else "pts"
+    return f'<span class="badge badge-points"><strong>{points}</strong> {unit}</span>'
 
 
 @dataclass
@@ -112,6 +157,8 @@ class Question:
     flags: list[str] = field(default_factory=list)
     videos: list[tuple[str, str]] = field(default_factory=list)  # (part, url)
     average_points: Decimal | None = None
+    parts: list[Part] = field(default_factory=list)
+    part_averages: dict[str, Decimal] = field(default_factory=dict)
 
     @property
     def id(self) -> str:
@@ -132,12 +179,15 @@ class Question:
         return sorted(p.name for p in folder.iterdir() if p.is_file()) if folder.is_dir() else []
 
     @property
+    def title_suffix(self) -> str:
+        return f": {escape_title(self.title)}" if self.title else ""
+
+    @property
     def heading_suffix(self) -> str:
         """': Title <points badge> <flag badges>' -- rendered, never stored."""
-        suffix = f": {escape_title(self.title)}" if self.title else ""
+        suffix = self.title_suffix
         if self.points:
-            unit = "pt" if str(self.points) == "1" else "pts"
-            suffix += f' <span class="badge badge-points">{self.points} {unit}</span>'
+            suffix += f" {points_badge(self.points)}"
         for flag in self.flags:
             suffix += f' <span class="badge badge-flag" data-flag="{flag}">{flag_label(flag)}</span>'
         return suffix
@@ -198,6 +248,17 @@ def videos_from_config(config: dict) -> list[tuple[str, str]]:
     return videos
 
 
+def checked_average(value: object, points: str, location: str) -> Decimal:
+    try:
+        average = Decimal(str(value))
+        maximum = Decimal(points)
+        if average.is_finite() and maximum.is_finite() and maximum > 0 and 0 <= average <= maximum:
+            return average
+    except InvalidOperation:
+        pass
+    raise SystemExit(f"{location}: expected an average between zero and the available points")
+
+
 def read_question(question_id: str) -> Question:
     exam, number = question_id_parts(question_id)
     folder = QUESTIONS_DIR / exam / question_filename(number)
@@ -213,33 +274,40 @@ def read_question(question_id: str) -> Question:
     if not isinstance(flags, list):
         raise SystemExit(f"{(folder / CONFIG_FILE).relative_to(REPO_ROOT)}: flags must be a list")
     preamble_path = folder / PREAMBLE_FILE
-    points = config.get("points")
+    raw_points = config.get("points")
+    points = "" if raw_points in (None, "") else str(raw_points)
+    body = body_path.read_text().rstrip()
+    parts = graded_parts(body, points)
+    points_by_part = {part.label: part.points for part in parts}
+    raw_part_averages = config.get("part_averages")
+    location = config_path.relative_to(REPO_ROOT)
+    part_averages = {}
+    if raw_part_averages is not None:
+        if not isinstance(raw_part_averages, dict):
+            raise SystemExit(f"{location}: part_averages must map part labels to average points")
+        for label, value in raw_part_averages.items():
+            if label not in points_by_part:
+                raise SystemExit(f"{location}: no scored part ({label}) for part_averages")
+            part_averages[label] = checked_average(
+                value, points_by_part[label], f"{location}: part_averages.{label}"
+            )
     average = config.get("average_points")
-    average_points = None
-    if average is not None:
-        try:
-            average_points = Decimal(str(average))
-            max_points = Decimal(str(points))
-            if not (
-                average_points.is_finite() and max_points.is_finite()
-                and max_points > 0 and 0 <= average_points <= max_points
-            ):
-                raise InvalidOperation
-        except InvalidOperation:
-            raise SystemExit(
-                f"{config_path.relative_to(REPO_ROOT)}: average_points must be "
-                "a number between zero and the problem's point value"
-            ) from None
+    average_points = (
+        checked_average(average, points, f"{location}: average_points")
+        if average is not None and not parts else None
+    )
     return Question(
         exam=exam,
         number=number,
-        body=body_path.read_text().rstrip(),
+        body=body,
         preamble=preamble_path.read_text().strip() if preamble_path.exists() else "",
         title=str(config.get("title") or ""),
-        points="" if points in (None, "") else str(points),
+        points=points,
         flags=[str(flag) for flag in flags],
         videos=videos_from_config(config),
         average_points=average_points,
+        parts=parts,
+        part_averages=part_averages,
     )
 
 
@@ -418,22 +486,22 @@ def video_badges(question: Question) -> str:
     )
 
 
-def average_score_badge(question: Question, anchor: str) -> str:
-    average = question.average_points
-    if average is None:
-        return ""
-    score_id = f"{anchor}-average-score"
-    percentage = 100 * average / Decimal(question.points)
-    return (
-        f' <button class="score-toggle" type="button" aria-label="Class average for Problem {question.number}"'
+def average_score_controls(average: Decimal, points: str, score_id: str, label: str) -> tuple[str, str]:
+    percentage = 100 * average / Decimal(points)
+    button = (
+        f'<button class="score-toggle" type="button" aria-label="Class average for {label}"'
         f' aria-expanded="false" aria-controls="{score_id}" title="Class average">'
         '<svg class="score-icon" viewBox="0 0 16 16" width="14" height="14" '
         'fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">'
         '<path d="M3 15v-5m5 5V6m5 9V2"/></svg>'
         '</button>'
-        f' <span class="score-value" id="{score_id}" hidden>'
-        f'Class average <strong>{average:.2f} / {question.points} pts ({percentage:.0f}%)</strong></span>'
     )
+    unit = "pt" if points == "1" else "pts"
+    score = (
+        f'<span class="score-value" id="{score_id}" hidden>'
+        f'Class average <strong>{average:.2f} / {points} {unit} ({percentage:.0f}%)</strong></span>'
+    )
+    return button, score
 
 
 def render_heading(question: Question, label: str) -> tuple[str, str]:
@@ -449,11 +517,45 @@ def render_heading(question: Question, label: str) -> tuple[str, str]:
     # markdown="span": Kramdown still renders the heading's inner text as inline
     # Markdown (pandoc's "\..." escapes, "\\(" math delimiters), exactly as it
     # did when the heading was "## ...", while the id attribute is ours.
-    badges = video_badges(question) + average_score_badge(question, anchor)
+    badges = video_badges(question)
+    if question.average_points is not None:
+        button, score = average_score_controls(
+            question.average_points, question.points, f"{anchor}-average-score",
+            f"Problem {question.number}"
+        )
+        badges += f" {button} {score}"
     return f'<h2 id="{anchor}" markdown="span">{core}{badges}</h2>', anchor
 
 
 # ===> Rendering into a page <=== #
+
+def render_part_scores(question: Question) -> str:
+    body = question.body
+    for part in reversed(question.parts):
+        badge = points_badge(part.points)
+        if part.label in question.part_averages:
+            button, score = average_score_controls(
+                question.part_averages[part.label], part.points,
+                f"{question.slug}-part-{part.label}-average-score",
+                f"Problem {question.number}, part ({part.label})"
+            )
+            badge = f'<span class="part-controls">{badge} {button}</span> {score}'
+        body = body[:part.start] + badge + body[part.end:]
+
+    def style_roman_points(group: re.Match[str]) -> str:
+        def replace(match: re.Match[str]) -> str:
+            points = match["badge"] or match["plain"]
+            if not points:
+                return match[0]
+            prefix = match[0][:match.start("points_markup") - match.start()]
+            return prefix + points_badge(points)
+
+        # Keep the printed point values on nested Roman items in the same
+        # style. Their average, when available, is already on the parent part.
+        return ROMAN_ITEM.sub(replace, group[0])
+
+    return ROMAN_LIST.sub(style_roman_points, body)
+
 
 def emit_question(
     question: Question,
@@ -476,7 +578,7 @@ def emit_question(
     exam's questions, whose figure names are already unique, so it copies flat
     into <page_dir>/imgs/ and its references need no rewriting.
     """
-    body = question.body
+    body = render_part_scores(question)
     preamble = question.preamble
     if question.images:
         destination = page_dir / "imgs" / question.slug if namespace_images else page_dir / "imgs"

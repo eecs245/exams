@@ -3,4 +3,7 @@
 title: "Poly Wants a Cracker"
 points: 18
 flags:
-average_points: 10.240385
+part_averages:
+  a: 4.038462
+  b: 3.375000
+  c: 2.826923
