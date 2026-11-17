@@ -152,6 +152,11 @@ the first time the question is converted and never written again. The one flag
 the LaTeX produces today is `mtN-redemption`, from a title annotated "Counts
 towards Midterm N redemption score".
 
+Set `average_points` to the class mean in points for the whole problem to show
+the bar chart button on the exam page and topic worksheets. Compute it outside the
+repository from graded submissions by summing each problem's parts before
+averaging. Keep grade exports outside the repository.
+
 ### `scripts/build.sh`
 
 `jekyll serve` and `jekyll build` run this for you. By hand:

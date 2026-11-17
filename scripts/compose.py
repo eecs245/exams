@@ -38,6 +38,7 @@ import re
 import shutil
 import sys
 from dataclasses import dataclass, field
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -110,6 +111,7 @@ class Question:
     points: str = ""
     flags: list[str] = field(default_factory=list)
     videos: list[tuple[str, str]] = field(default_factory=list)  # (part, url)
+    average_points: Decimal | None = None
 
     @property
     def id(self) -> str:
@@ -205,12 +207,29 @@ def read_question(question_id: str) -> Question:
             f"No question at {body_path.relative_to(REPO_ROOT)} "
             "(run scripts/build.sh first)"
         )
-    config = read_config(folder / CONFIG_FILE)
+    config_path = folder / CONFIG_FILE
+    config = read_config(config_path)
     flags = config.get("flags") or []
     if not isinstance(flags, list):
         raise SystemExit(f"{(folder / CONFIG_FILE).relative_to(REPO_ROOT)}: flags must be a list")
     preamble_path = folder / PREAMBLE_FILE
     points = config.get("points")
+    average = config.get("average_points")
+    average_points = None
+    if average is not None:
+        try:
+            average_points = Decimal(str(average))
+            max_points = Decimal(str(points))
+            if not (
+                average_points.is_finite() and max_points.is_finite()
+                and max_points > 0 and 0 <= average_points <= max_points
+            ):
+                raise InvalidOperation
+        except InvalidOperation:
+            raise SystemExit(
+                f"{config_path.relative_to(REPO_ROOT)}: average_points must be "
+                "a number between zero and the problem's point value"
+            ) from None
     return Question(
         exam=exam,
         number=number,
@@ -220,6 +239,7 @@ def read_question(question_id: str) -> Question:
         points="" if points in (None, "") else str(points),
         flags=[str(flag) for flag in flags],
         videos=videos_from_config(config),
+        average_points=average_points,
     )
 
 
@@ -398,20 +418,37 @@ def video_badges(question: Question) -> str:
     )
 
 
+def average_score_badge(question: Question, anchor: str) -> str:
+    average = question.average_points
+    if average is None:
+        return ""
+    score_id = f"{anchor}-average-score"
+    percentage = 100 * average / Decimal(question.points)
+    return (
+        f' <button class="score-toggle" type="button" aria-label="Class average for Problem {question.number}"'
+        f' aria-expanded="false" aria-controls="{score_id}" title="Class average">'
+        '<span class="score-icon" aria-hidden="true"><span></span><span></span><span></span></span>'
+        '</button>'
+        f' <span class="score-value" id="{score_id}" hidden>'
+        f'Class average <strong>{average:.2f} / {question.points} pts ({percentage:.0f}%)</strong></span>'
+    )
+
+
 def render_heading(question: Question, label: str) -> tuple[str, str]:
     """(html, anchor) for a question heading.
 
     `label` is the page's name for the question ("Problem 4" on its exam page,
     "FA25 MT1 · Problem 4" on a worksheet); heading_suffix is the title, points
-    and flag badges rendered from config.yml. The anchor is computed BEFORE the video badge is appended, so
-    adding or removing a video never changes a link into the page.
+    and flag badges rendered from config.yml. The anchor is computed before the
+    video and average score controls are appended, preserving links into the page.
     """
     core = f"{label}{question.heading_suffix}"
     anchor = heading_anchor(core)
     # markdown="span": Kramdown still renders the heading's inner text as inline
     # Markdown (pandoc's "\..." escapes, "\\(" math delimiters), exactly as it
     # did when the heading was "## ...", while the id attribute is ours.
-    return f'<h2 id="{anchor}" markdown="span">{core}{video_badges(question)}</h2>', anchor
+    badges = video_badges(question) + average_score_badge(question, anchor)
+    return f'<h2 id="{anchor}" markdown="span">{core}{badges}</h2>', anchor
 
 
 # ===> Rendering into a page <=== #

@@ -238,6 +238,68 @@ body {
     text-decoration: none;
   }
 
+  h2 > .badge-points,
+  .score-toggle {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    vertical-align: middle;
+  }
+  h2 > .badge-points {
+    padding-block: 0;
+  }
+  .score-toggle {
+    justify-content: center;
+    width: 28px;
+    padding: 0;
+    margin-left: 4px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: #FFCB05;
+    color: #00274C;
+    cursor: pointer;
+  }
+  .score-toggle:hover,
+  .score-toggle[aria-expanded="true"] {
+    background-color: #e6b800;
+  }
+  .score-toggle:focus-visible {
+    outline: 2px solid var(--reading-ink);
+    outline-offset: 2px;
+  }
+  .score-icon {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 2px;
+    pointer-events: none;
+  }
+  .score-icon span {
+    border-left: 3px solid currentColor;
+  }
+  .score-icon span:nth-child(1) {
+    height: 5px;
+  }
+  .score-icon span:nth-child(2) {
+    height: 9px;
+  }
+  .score-icon span:nth-child(3) {
+    height: 13px;
+  }
+  .score-value {
+    padding: 4px 8px;
+    margin-left: 4px;
+    border: 1px solid rgba(96, 116, 138, 0.55);
+    border-radius: 4px;
+    background: rgba(126, 148, 174, 0.12);
+    font-size: 0.8125rem;
+    font-weight: 400;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .score-value:not([hidden]) {
+    display: inline-block;
+  }
+
   .math-display,
   mjx-container[jax="CHTML"][display="true"] {
     max-width: 100%;

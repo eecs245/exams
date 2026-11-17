@@ -19,3 +19,6 @@ cannot change how the Markdown is parsed.
 {% endif %}
 {{ content }}
 </div>
+{% if content contains 'class="score-toggle"' %}
+<script src="{{ '/assets/js/problem-scores.js' | relative_url }}" defer></script>
+{% endif %}
