@@ -141,9 +141,15 @@ def graded_parts(body: str, points: str) -> list[Part]:
     return []
 
 
-def points_badge(points: str) -> str:
+def points_badge(points: str, average_controls: str = "") -> str:
     unit = "pt" if points == "1" else "pts"
-    return f'<span class="badge badge-points"><strong>{points}</strong> {unit}</span>'
+    value = f"<strong>{points}</strong> {unit}"
+    if average_controls:
+        return (
+            f'<span class="badge badge-points badge-with-average">'
+            f'<span class="points-value">{value}</span>{average_controls}</span>'
+        )
+    return f'<span class="badge badge-points">{value}</span>'
 
 
 @dataclass
@@ -183,14 +189,11 @@ class Question:
         return f": {escape_title(self.title)}" if self.title else ""
 
     @property
-    def heading_suffix(self) -> str:
-        """': Title <points badge> <flag badges>' -- rendered, never stored."""
-        suffix = self.title_suffix
-        if self.points:
-            suffix += f" {points_badge(self.points)}"
-        for flag in self.flags:
-            suffix += f' <span class="badge badge-flag" data-flag="{flag}">{flag_label(flag)}</span>'
-        return suffix
+    def flag_badges(self) -> str:
+        return "".join(
+            f' <span class="badge badge-flag" data-flag="{flag}">{flag_label(flag)}</span>'
+            for flag in self.flags
+        )
 
 
 def escape_title(title: str) -> str:
@@ -486,7 +489,7 @@ def video_badges(question: Question) -> str:
     )
 
 
-def average_score_controls(average: Decimal, points: str, score_id: str, label: str) -> tuple[str, str]:
+def average_score_controls(average: Decimal, points: str, score_id: str, label: str) -> str:
     percentage = 100 * average / Decimal(points)
     button = (
         f'<button class="score-toggle" type="button" aria-label="Class average for {label}"'
@@ -501,30 +504,30 @@ def average_score_controls(average: Decimal, points: str, score_id: str, label: 
         f'<span class="score-value" id="{score_id}" hidden>'
         f'Class average <strong>{average:.2f} / {points} {unit} ({percentage:.0f}%)</strong></span>'
     )
-    return button, score
+    return button + score
 
 
 def render_heading(question: Question, label: str) -> tuple[str, str]:
     """(html, anchor) for a question heading.
 
     `label` is the page's name for the question ("Problem 4" on its exam page,
-    "FA25 MT1 · Problem 4" on a worksheet); heading_suffix is the title, points
-    and flag badges rendered from config.yml. The anchor is computed before the
-    video and average score controls are appended, preserving links into the page.
+    "FA25 MT1 · Problem 4" on a worksheet). The anchor is computed with plain
+    points and flag badges before rendering the video and average controls.
     """
-    core = f"{label}{question.heading_suffix}"
-    anchor = heading_anchor(core)
-    # markdown="span": Kramdown still renders the heading's inner text as inline
-    # Markdown (pandoc's "\..." escapes, "\\(" math delimiters), exactly as it
-    # did when the heading was "## ...", while the id attribute is ours.
-    badges = video_badges(question)
+    title = f"{label}{question.title_suffix}"
+    points = f" {points_badge(question.points)}" if question.points else ""
+    flags = question.flag_badges
+    anchor = heading_anchor(f"{title}{points}{flags}")
     if question.average_points is not None:
-        button, score = average_score_controls(
+        controls = average_score_controls(
             question.average_points, question.points, f"{anchor}-average-score",
             f"Problem {question.number}"
         )
-        badges += f" {button} {score}"
-    return f'<h2 id="{anchor}" markdown="span">{core}{badges}</h2>', anchor
+        points = f" {points_badge(question.points, controls)}"
+    # markdown="span": Kramdown still renders the heading's inner text as inline
+    # Markdown (pandoc's "\..." escapes, "\\(" math delimiters), exactly as it
+    # did when the heading was "## ...", while the id attribute is ours.
+    return f'<h2 id="{anchor}" markdown="span">{title}{points}{flags}{video_badges(question)}</h2>', anchor
 
 
 # ===> Rendering into a page <=== #
@@ -532,14 +535,14 @@ def render_heading(question: Question, label: str) -> tuple[str, str]:
 def render_part_scores(question: Question) -> str:
     body = question.body
     for part in reversed(question.parts):
-        badge = points_badge(part.points)
+        controls = ""
         if part.label in question.part_averages:
-            button, score = average_score_controls(
+            controls = average_score_controls(
                 question.part_averages[part.label], part.points,
                 f"{question.slug}-part-{part.label}-average-score",
                 f"Problem {question.number}, part ({part.label})"
             )
-            badge = f'<span class="part-controls">{badge} {button}</span> {score}'
+        badge = points_badge(part.points, controls)
         body = body[:part.start] + badge + body[part.end:]
 
     def style_roman_points(group: re.Match[str]) -> str:
