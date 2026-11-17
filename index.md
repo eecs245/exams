@@ -14,8 +14,10 @@ A repository of past exams and solutions for EECS 245: Mathematics for Machine L
 <section id="flagged-problems" aria-labelledby="flagged-problems-heading"
   data-exams-url="{{ '/exams/' | relative_url }}" hidden>
   <h2 id="flagged-problems-heading">Flagged Problems</h2>
-  <p class="problem-review-message">Flag a problem on any exam or worksheet to find it here.</p>
+  <p class="problem-review-message" tabindex="-1">Flag a problem on any exam or worksheet to find it here.</p>
   <ul class="problem-review-list" hidden></ul>
+  <button type="button" class="btn-reset problem-review-clear" hidden>Clear all flags</button>
+  <p class="problem-review-error" role="alert"></p>
 </section>
 
 ## Past Exams

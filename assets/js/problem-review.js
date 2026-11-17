@@ -6,6 +6,8 @@
   const prefix = "eecs245:review:";
   const idPattern = /^([\p{L}\p{N}_-]+)\/(q[0-9]+)$/u;
   const homepage = document.getElementById("flagged-problems");
+  const clearButton = homepage?.querySelector(".problem-review-clear");
+  const motion = window.matchMedia("(prefers-reduced-motion: no-preference)");
   const controls = [...document.querySelectorAll("h2[data-review-id]")].map(addControl);
 
   function addControl(heading) {
@@ -43,8 +45,10 @@
       try {
         if (localStorage.getItem(key) === null) {
           localStorage.setItem(key, JSON.stringify({ label: reviewLabel, time: Date.now() }));
+          if (motion.matches) button.classList.add("is-planting-flag");
         } else {
           localStorage.removeItem(key);
+          button.classList.remove("is-planting-flag");
         }
         error.textContent = "";
       } catch {
@@ -52,14 +56,26 @@
       }
       refresh();
     });
+    button.addEventListener("animationend", (event) => {
+      if (event.animationName === "problem-review-ripple") {
+        button.classList.remove("is-planting-flag");
+      }
+    });
     return updateButton;
+  }
+
+  function getFlagKeys() {
+    const keys = [];
+    for (let index = 0; index < localStorage.length; index++) {
+      const key = localStorage.key(index);
+      if (key?.startsWith(prefix)) keys.push(key);
+    }
+    return keys;
   }
 
   function getFlags() {
     const flags = [];
-    for (let index = 0; index < localStorage.length; index++) {
-      const key = localStorage.key(index);
-      if (!key?.startsWith(prefix)) continue;
+    for (const key of getFlagKeys()) {
       const problem = idPattern.exec(key.slice(prefix.length));
       if (!problem) continue;
 
@@ -100,7 +116,22 @@
 
     list.hidden = list.childElementCount === 0;
     message.hidden = !list.hidden;
+    if (clearButton) clearButton.hidden = list.hidden;
     homepage.hidden = false;
+  }
+
+  function clearFlags() {
+    if (!window.confirm("Clear all flagged problems in this browser?")) return;
+
+    const error = homepage.querySelector(".problem-review-error");
+    try {
+      for (const key of getFlagKeys()) localStorage.removeItem(key);
+      error.textContent = "";
+    } catch {
+      error.textContent = "Couldn’t clear all flags. Check your browser’s site storage settings.";
+    }
+    refresh();
+    if (clearButton.hidden) homepage.querySelector(".problem-review-message").focus();
   }
 
   function refresh() {
@@ -109,6 +140,7 @@
   }
 
   refresh();
+  clearButton?.addEventListener("click", clearFlags);
   window.addEventListener("pageshow", (event) => {
     if (event.persisted) refresh();
   });

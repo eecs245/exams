@@ -142,9 +142,9 @@ h1, h2, h3, h4, h5, h6, .problem-review-anchor {
   display: inline-flex;
   align-items: center;
   gap: 0.35em;
-  min-height: 30px;
+  min-height: 27px;
   margin-inline-start: 0.4rem;
-  padding: 0 0.55rem;
+  padding: 0 0.45rem;
   border: 1px solid var(--reading-border);
   border-radius: 4px;
   background: $base-button-color;
@@ -171,7 +171,44 @@ h1, h2, h3, h4, h5, h6, .problem-review-anchor {
   }
 
   @media (pointer: coarse) {
-    min-height: 44px;
+    min-height: 42px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    &.is-planting-flag {
+      animation: problem-review-ripple 440ms ease-out;
+    }
+
+    &.is-planting-flag > [aria-hidden="true"] {
+      transform-origin: 25% 85%;
+      animation: problem-review-plant 360ms ease-out;
+    }
+  }
+}
+
+@keyframes problem-review-plant {
+  0% { transform: translateY(0.2em) rotate(-28deg) scale(0.75); }
+  45% { transform: translateY(-0.3em) rotate(14deg) scale(1.35); }
+  72% { transform: translateY(0.06em) rotate(-6deg); }
+  100% { transform: none; }
+}
+
+@keyframes problem-review-ripple {
+  from { box-shadow: 0 0 0 0 color-mix(in srgb, currentColor 45%, transparent); }
+  to { box-shadow: 0 0 0 0.4rem transparent; }
+}
+
+.problem-review-clear {
+  padding: 0.25em 0;
+  color: var(--reading-accent);
+  font-size: 0.875rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid var(--reading-accent);
+    outline-offset: 2px;
   }
 }
 
