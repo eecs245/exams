@@ -171,7 +171,17 @@ h1, h2, h3, h4, h5, h6, .problem-review-anchor {
   }
 
   @media (pointer: coarse) {
-    min-height: 42px;
+    // Keep the visible flag compact without shrinking its touch target.
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset-inline: 0;
+      top: 50%;
+      height: 44px;
+      transform: translateY(-50%);
+    }
   }
 
   @media (prefers-reduced-motion: no-preference) {
