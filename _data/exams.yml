@@ -23,6 +23,12 @@
   pdf: resources/exams/fa26-mt1.pdf
   solutions: resources/exams/fa26-mt1-solutions.pdf
 
+- id: fa26-mt2
+  term: Fall 2026
+  exam: Midterm 2
+  pdf: resources/exams/fa26-mt2.pdf
+  solutions: resources/exams/fa26-mt2-solutions.pdf
+
 - id: sp26-mt1
   term: Spring 2026
   exam: Midterm 1

@@ -1,0 +1,574 @@
+% Worked solutions explicitly requested by the user.
+\documentclass[11pt]{article}
+\usepackage{../../eecs245}
+\enablesolutions
+\enablestudentinfo
+\enableexam
+\usepackage{amsmath,amsfonts,amssymb,multicol}
+\DeclareSymbolFont{operators}{OT1}{cmr}{m}{n}
+\DeclareSymbolFont{letters}{OML}{cmm}{m}{it}
+\DeclareSymbolFont{symbols}{OMS}{cmsy}{m}{n}
+\raggedbottom
+\newcommand{\coursename}{EECS 245}
+\newcommand{\term}{Fall 2026 at the University of Michigan}
+\newcommand{\assignment}{Midterm 2}
+\newcommand{\submissioninstructions}{%
+\textbf{Instructions}
+\begin{itemize}
+\item The student exam consists of 7 problems, worth a total of 100 points, spread across 14 pages (7 sheets of paper).
+\item You have 120 minutes to complete this exam, unless you have extended-time accommodations through SSD.
+\item Write your uniqname in the top right corner of each page.
+\item For free response problems, \textbf{you must show all of your work}, and write your final answer in the space provided. We will not grade work that appears elsewhere, and you may lose points if your work is not shown.
+\item For multiple choice problems, completely fill in bubbles and square boxes; if we cannot tell which option(s) you selected, you may lose points.\\
+\bubble{A bubble means that you should only select one choice.}\\
+\squarebubble{A square box means you should select all that apply.}
+\item You may refer to \textbf{two double-sided 8.5x11" handwritten notes sheets}. Other than that, you may not refer to any other resources or technology during the exam (no phones, watches, or calculators).
+\end{itemize}}
+\newcommand{\pairanswerbox}[4][1cm]{%
+  \noindent\begin{tikzpicture}[baseline=(ansbox.south)]
+    \node[draw, inner sep=0pt, minimum width=\dimexpr\linewidth-0.8pt\relax, minimum height=#4, anchor=north west] (ansbox) at (0,0) {};
+    \node[anchor=south east, xshift=-6pt, yshift=6pt] at (ansbox.south east) {$#2=\minibox{2.3cm}{}[#1]\qquad #3=\minibox{2.3cm}{}[#1]$};
+  \end{tikzpicture}%
+}
+\newcommand{\setanswerbox}[4]{%
+  \noindent\begin{tikzpicture}[baseline=(ansbox.south)]
+    \node[draw, inner sep=0pt, minimum width=\dimexpr\linewidth-0.8pt\relax, minimum height=#2, anchor=north west] (ansbox) at (0,0) {};
+    \node[anchor=south east, xshift=-6pt, yshift=6pt] at (ansbox.south east) {$#1=\left\{\minibox{#3}{}[#4]\right\}$};
+  \end{tikzpicture}%
+}
+\newcommand{\workbox}[1]{\par\noindent\emptybox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax]{#1}\par}
+\newcommand{\projectionoptionstrut}{\rule[-0.45cm]{0pt}{1.15cm}}
+\begin{document}
+\makemytitle{\coursename}{\term}{\assignment}{}{\submissioninstructions}{\bubble{1013 DOW} \bubble{1014 DOW} \bubble{4721 BBB} \bubble{Other}}
+\vspace{1em}
+You are to abide by the University of Michigan/Engineering Honor Code. To receive a grade, please sign below to signify that you have kept the Honor Code pledge.
+
+\textit{I have neither given nor received aid on this exam, nor have I concealed any violations of the Honor Code.}
+
+\emptybox{1.5cm}
+\newpage
+\begin{center}
+\null\vspace{9cm}
+This page has been intentionally left blank.
+\end{center}
+\newpage
+
+\textbf{Tip: Skim through the entire exam before starting to work on it.}
+
+\begin{prob}[(10 pts)]
+Let
+\[
+A=\begin{bmatrix}6&\alpha\\8&12\end{bmatrix}
+\]
+Each part below is independent. Find the value of $\alpha$ that satisfies the given condition.
+\begin{subprob}(3 pts)
+$\det(A)=40$.\par\vspace{0.2em}
+
+\begin{solution}
+For this $2\times2$ matrix,
+\[
+\det(A)=6(12)-8\alpha=72-8\alpha
+\]
+Thus,
+\[
+72-8\alpha=40\quad\Longrightarrow\quad\boxed{\alpha=4}
+\]
+\end{solution}
+\end{subprob}
+\begin{subprob}(3 pts)
+$\text{rank}(A)=1$.\par\vspace{0.2em}
+
+\begin{solution}
+Since $A$ is a nonzero $2\times2$ matrix, it has rank $1$ exactly when its determinant is $0$. Therefore,
+\[
+72-8\alpha=0\quad\Longrightarrow\quad\boxed{\alpha=9}
+\]
+For this value, the second column is $3/2$ times the first column.
+\end{solution}
+\end{subprob}
+\begin{subprob}(4 pts)
+$A^{-1}=\begin{bmatrix}3/2&-1\\-1&3/4\end{bmatrix}$.\par\vspace{0.2em}
+
+\begin{solution}
+The inverse formula gives
+\[
+A^{-1}=\frac{1}{72-8\alpha}\begin{bmatrix}12&-\alpha\\-8&6\end{bmatrix}
+\]
+Matching the top-left entry gives
+\[
+\frac{12}{72-8\alpha}=\frac32
+\quad\Longrightarrow\quad72-8\alpha=8
+\quad\Longrightarrow\quad\boxed{\alpha=8}
+\]
+Substituting $\alpha=8$ gives all four entries of the specified inverse.
+\end{solution}
+\end{subprob}
+\end{prob}
+\newpage
+
+\begin{prob}[(10 pts)]
+Let
+\[
+B=\begin{bmatrix}2&2&2\\3&-3&0\\1&1&-2\end{bmatrix}
+\]
+\begin{subprob}(4 pts)
+Find $BB^T$. \\
+
+\begin{solution}
+The entries of $BB^T$ are the dot products of the rows of $B$. The three rows are mutually orthogonal, and their squared lengths are
+\[
+2^2+2^2+2^2=12,\qquad 3^2+(-3)^2=18,\qquad 1^2+1^2+(-2)^2=6
+\]
+Hence,
+\[
+\boxed{BB^T=\begin{bmatrix}12&0&0\\0&18&0\\0&0&6\end{bmatrix}}
+\]
+\end{solution}
+\end{subprob}
+\begin{subprob}(6 pts)
+Find $B^{-1}$. Fully simplify each entry. \textit{Hint: Use part (a), not $\det(B)$ or a $3\times3$ inverse formula. If $BB^T=C$, what is $B^{-1}$?}\par\vspace{0.2em}
+
+\begin{solution}
+Let $C=BB^T$. Since $C$ is invertible,
+\[
+B(B^TC^{-1})=(BB^T)C^{-1}=CC^{-1}=I
+\]
+Thus, $B^{-1}=B^TC^{-1}$. Using part (a),
+\[
+B^{-1}
+=\begin{bmatrix}2&3&1\\2&-3&1\\2&0&-2\end{bmatrix}
+\begin{bmatrix}1/12&0&0\\0&1/18&0\\0&0&1/6\end{bmatrix}
+=\boxed{\begin{bmatrix}1/6&1/6&1/6\\1/6&-1/6&1/6\\1/6&0&-1/3\end{bmatrix}}
+\]
+\end{solution}
+\end{subprob}
+\end{prob}
+\newpage
+
+\begin{prob}[(16 pts)]
+Let $X=CR$, where $a,b$ are unknown scalars. Furthermore, suppose that
+\[
+C=\begin{bmatrix}4&0\\-2&5\\3&-1\\0&6\end{bmatrix},\qquad
+R=\begin{bmatrix}1&3&a&-2&5\\0&4&8&b&0\end{bmatrix},\qquad
+\begin{bmatrix}-5\\0\\1\\-2\\1\end{bmatrix}\in\text{nullsp}(X)
+\]
+\begin{subprob}(4 pts)
+Determine the following values. \\
+
+$\text{rank}(X)=$ \minibox{3cm}{$2$}[1.2cm]
+
+$\dim(\text{nullsp}(X))=$ \minibox{3cm}{$3$}[1.2cm]
+
+\begin{solution}
+The columns of $C$ are independent, and the rows of $R$ are independent. This CR factorization therefore has $\text{rank}(X)=2$. Since $X$ has five columns, rank-nullity gives $\dim(\text{nullsp}(X))=5-2=3$.
+\end{solution}
+\end{subprob}
+\begin{subprob}(8 pts)
+Find $a$ and $b$. \\
+
+\begin{solution}
+Let $\vec v$ be the given vector in $\text{nullsp}(X)$. Then $CR\vec v=\vec0$. Since the columns of $C$ are linearly independent, this requires $R\vec v=\vec0$. Therefore,
+\[
+R\vec v=\begin{bmatrix}-5+a+4+5\\8-2b\end{bmatrix}
+=\begin{bmatrix}a+4\\8-2b\end{bmatrix}=\vec0
+\]
+It follows that $\boxed{a=-4,\ b=4}$.
+\end{solution}
+\end{subprob}
+\begin{subprob}(4 pts)
+Which of the following choices of columns of $X$ form a basis for $\text{colsp}(X)$? \textbf{Select all that apply.} \\
+
+\correctsquarebubble{Columns 1 and 2}
+
+\squarebubble{Columns 1 and 5}
+
+\correctsquarebubble{Columns 2 and 3}
+
+\squarebubble{Columns 3 and 4}
+
+\correctsquarebubble{Columns 4 and 5}
+
+\squarebubble{Columns 1, 2, and 3}
+
+\begin{solution}
+Because $C$ has linearly independent columns, we can check independence using the corresponding columns of $R$, with $a=-4$ and $b=4$. Columns $1$ and $5$ are scalar multiples, as are columns $3$ and $4$. Each remaining listed pair is independent.
+
+Since $\text{rank}(X)=2$, the valid bases are \textbf{columns 1 and 2, columns 2 and 3, and columns 4 and 5}. Three columns cannot form a basis for this two-dimensional space.
+\end{solution}
+\end{subprob}
+\end{prob}
+\newpage
+
+\begin{prob}[(16 pts)]
+Let
+\[
+A=\begin{bmatrix}
+0&0&1&0\\
+1&0&0&0\\
+0&1&0&0\\
+0&0&0&-1
+\end{bmatrix},\qquad
+\vec v=\begin{bmatrix}1\\2\\3\\4\end{bmatrix}
+\]
+\begin{subprob}(2 pts)
+Find $A\vec v$.\par\vspace{0.2em}
+
+\begin{solution}
+Multiplying by $A$ cycles the first three components and negates the fourth:
+\[
+A\begin{bmatrix}v_1\\v_2\\v_3\\v_4\end{bmatrix}
+=\begin{bmatrix}v_3\\v_1\\v_2\\-v_4\end{bmatrix}
+\quad\Longrightarrow\quad
+\boxed{A\vec v=\begin{bmatrix}3\\1\\2\\-4\end{bmatrix}}
+\]
+\end{solution}
+\end{subprob}
+\begin{subprob}(2 pts)
+What is the smallest positive integer $k$ such that $A^k=I$?
+
+\bubble{2}\bubble{3}\bubble{4}\correctbubble{6}\bubble{8}\bubble{12}
+
+\begin{solution}
+The first three components return to their original positions after a multiple of $3$ applications of $A$. The fourth returns to its original sign after an even number of applications. The smallest positive integer divisible by both $3$ and $2$ is $\boxed{k=6}$.
+\end{solution}
+\end{subprob}
+\begin{subprob}(6 pts)
+Give one basis for $\text{nullsp}(A-I)$.\par\vspace{0.2em}
+
+\begin{solution}
+A vector is in $\text{nullsp}(A-I)$ exactly when $A\vec x=\vec x$. Componentwise,
+\[
+x_3=x_1,\qquad x_1=x_2,\qquad x_2=x_3,\qquad -x_4=x_4
+\]
+Thus, $x_1=x_2=x_3$ and $x_4=0$. Every vector in the null space is a multiple of $\begin{bmatrix}1\\1\\1\\0\end{bmatrix}$, so one basis is
+\[
+\boxed{\left\{\begin{bmatrix}1\\1\\1\\0\end{bmatrix}\right\}}
+\]
+\end{solution}
+\end{subprob}
+\newpage
+
+Recall,
+\[
+A=\begin{bmatrix}
+0&0&1&0\\
+1&0&0&0\\
+0&1&0&0\\
+0&0&0&-1
+\end{bmatrix}
+\]
+\begin{subprob}(6 pts)
+Applying $A$ to a vector $\vec x$ changes its components by the amounts shown below:
+\[
+A\vec x-\vec x=\begin{bmatrix}m\\-3\\5\\2\end{bmatrix}
+\]
+\begin{enumerate}[label=(\roman*)]
+\item (4 pts) Find $m$. Your answer should be a number with no variables.\par\vspace{0.2em}
+
+\vspace{0.7cm}
+\begin{solution}
+Applying $A$ rearranges the first three components, so their sum does not change. Their changes must therefore sum to zero:
+\[
+m+(-3)+5=0\quad\Longrightarrow\quad\boxed{m=-2}
+\]
+\end{solution}
+\item (2 pts) For this value of $m$, how many vectors $\vec x$ satisfy $A\vec x-\vec x=\begin{bmatrix}m\\-3\\5\\2\end{bmatrix}$?\par\vspace{0.2em}
+\bubble{0}\bubble{1}\bubble{2}\bubble{3}\bubble{4}\correctbubble{Infinitely many}
+
+\begin{solution}
+There are \textbf{infinitely many} solutions. One particular solution is $\begin{bmatrix}0\\3\\-2\\-1\end{bmatrix}$. Adding any vector in $\text{nullsp}(A-I)$ preserves the product with $A-I$, giving
+\[
+\vec x=\begin{bmatrix}0\\3\\-2\\-1\end{bmatrix}
++t\begin{bmatrix}1\\1\\1\\0\end{bmatrix},\qquad t\in\mathbb R
+\]
+\end{solution}
+\end{enumerate}
+\end{subprob}
+\end{prob}
+\newpage
+
+\begin{prob}[(16 pts)]
+Let
+\[
+X=\begin{bmatrix}1&4\\2&3\\2&4\\0&2\end{bmatrix},\qquad
+\vec q_1=\frac13\begin{bmatrix}1\\2\\2\\0\end{bmatrix}
+\]
+We would like to find \textbf{orthogonal} unit vectors $\vec q_1,\vec q_2\in\mathbb R^4$ such that
+{\setlength{\belowdisplayskip}{0pt}\setlength{\belowdisplayshortskip}{0pt}
+\[
+\text{span}(\{\vec q_1,\vec q_2\})=\text{colsp}(X)
+\]}
+\vspace{-0.6em}
+\begin{subprob}(6 pts)
+Find one possible $\vec q_2$.\par\vspace{0.2em}
+
+\begin{solution}
+Let $\vec x_2$ be the second column of $X$. Remove its component in the direction of $\vec q_1$:
+\[
+\vec q_1\cdot\vec x_2=\frac{4+6+8}{3}=6
+\]
+\[
+\vec u_2=\vec x_2-6\vec q_1
+=\begin{bmatrix}4\\3\\4\\2\end{bmatrix}
+-\begin{bmatrix}2\\4\\4\\0\end{bmatrix}
+=\begin{bmatrix}2\\-1\\0\\2\end{bmatrix}
+\]
+Since $\|\vec u_2\|=\sqrt{4+1+4}=3$, one answer is
+\[
+\boxed{\vec q_2=\frac13\begin{bmatrix}2\\-1\\0\\2\end{bmatrix}}
+\]
+This is a unit vector orthogonal to $\vec q_1$. The first column of $X$ is $3\vec q_1$, and its second column is $6\vec q_1+3\vec q_2$, so the two unit vectors span $\text{colsp}(X)$. The negative of this $\vec q_2$ is also valid.
+\end{solution}
+\end{subprob}
+\newpage
+
+
+For the remaining parts, suppose $Q$ has orthonormal columns $\vec q_1,\vec q_2\in\mathbb R^4$. You do not need your answer to part (a). Let
+\[
+Q=\begin{bmatrix}|&|\\\vec q_1&\vec q_2\\|&|\end{bmatrix},\qquad
+Z=\begin{bmatrix}|&|\\\vec q_1+\vec q_2&\vec q_1-\vec q_2\\|&|\end{bmatrix}
+\]
+and suppose $\vec y\in\mathbb R^4$ satisfies
+\[
+Q^T\vec y=\begin{bmatrix}3\\1\end{bmatrix}
+\]
+\begin{subprob}(2 pts)
+Is $\vec y\in\text{colsp}(Q)$?\par\vspace{0.2em}
+\bubble{Yes}\bubble{No}\correctbubble{Impossible to tell}
+
+\begin{solution}
+\textbf{Impossible to tell.} The vector $\vec y_0=3\vec q_1+\vec q_2$ is in $\text{colsp}(Q)$ and has the specified product with $Q^T$.
+
+There are also nonzero vectors $\vec r$ orthogonal to $\text{colsp}(Q)$, since this is a two-dimensional subspace of $\mathbb R^4$. Then $\vec y_0+\vec r$ is outside $\text{colsp}(Q)$ but has the same product with $Q^T$, because $Q^T\vec r=\vec0$. Both possibilities are consistent with the information given.
+\end{solution}
+\end{subprob}
+\vspace{0.4cm}
+\newpage
+Recall that $Q$ has orthonormal columns, and
+\[
+Z=\begin{bmatrix}|&|\\\vec q_1+\vec q_2&\vec q_1-\vec q_2\\|&|\end{bmatrix},\qquad
+Q^T\vec y=\begin{bmatrix}3\\1\end{bmatrix}
+\]
+\begin{subprob}(4 pts)
+Which choice gives both the vector $\vec w^\ast$ that minimizes $\|\vec y-Z\vec w\|^2$ and the resulting projection, $\vec p=Z\vec w^\ast$?\par\vspace{0.2cm}
+
+\bubble{A. $\vec w^\ast=\begin{bmatrix}3\\1\end{bmatrix},\quad \vec p=3\vec q_1+\vec q_2$}
+
+\correctbubble{B. $\vec w^\ast=\begin{bmatrix}2\\1\end{bmatrix},\quad \vec p=3\vec q_1+\vec q_2$}
+
+\bubble{C. $\vec w^\ast=\begin{bmatrix}3\\1\end{bmatrix},\quad \vec p=4\vec q_1+2\vec q_2$}
+
+\bubble{D. $\vec w^\ast=\begin{bmatrix}2\\1\end{bmatrix},\quad \vec p=2\vec q_1+\vec q_2$}
+
+\bubble{E. $\vec w^\ast=\begin{bmatrix}1\\2\end{bmatrix},\quad \vec p=3\vec q_1+\vec q_2$}
+
+\begin{solution}
+\textbf{B.} Adding and subtracting the columns of $Z$ recovers $2\vec q_1$ and $2\vec q_2$, so $Z$ and $Q$ have the same column space. Hence,
+\[
+\boxed{\vec p=QQ^T\vec y=3\vec q_1+\vec q_2}
+\]
+But $Z\vec w=(w_1+w_2)\vec q_1+(w_1-w_2)\vec q_2$. Independence of $\vec q_1,\vec q_2$ therefore requires
+\[
+w_1^\ast+w_2^\ast=3,\qquad w_1^\ast-w_2^\ast=1
+\quad\Longrightarrow\quad
+\boxed{\vec w^\ast=\begin{bmatrix}2\\1\end{bmatrix}}
+\]
+$Q^T\vec y$ gives coefficients in $Q$'s columns, while $\vec w^\ast$ gives coefficients in $Z$'s columns.
+\end{solution}
+\end{subprob}
+\vspace{0.2cm}
+\vspace{0.3em}
+\begin{subprob}(4 pts)
+Identify whether each statement is true or false. \\
+
+\begin{enumerate}[label=(\roman*)]
+\item (2 pts) For every $\vec x\in\mathbb R^2$, $Q^TQ\vec x=\vec x$.
+\correctbubble{True} \bubble{False}
+
+\begin{solution}
+\textbf{True.} Orthonormal columns give $Q^TQ=I_2$, so $Q^TQ\vec x=\vec x$ for every $\vec x\in\mathbb R^2$.
+\end{solution}
+\item (2 pts) $QQ^T$ is invertible.
+\bubble{True} \correctbubble{False}
+
+\begin{solution}
+\textbf{False.} $QQ^T$ is $4\times4$, and its columns lie in the two-dimensional space $\text{colsp}(Q)$. Its rank is at most $2$, so it is not invertible.
+\end{solution}
+\end{enumerate}
+\end{subprob}
+\end{prob}
+\newpage
+
+\begin{prob}[(14 pts)]
+Suppose we'd like to fit a multiple linear regression model to predict the daily electricity use of household $i$, $y_i$, in kilowatt-hours.
+
+For each household $i$, the feature vector is $\vec x_i=\begin{bmatrix}x_i^{(1)}\\x_i^{(2)}\end{bmatrix}$, where:
+\begin{itemize}[topsep=0.2em,itemsep=0.2em]
+\item $x_i^{(1)}$ is the number of residents.
+\item $x_i^{(2)}$ is $2$ if the household uses a heat pump and $0$ if it uses gas heating.
+\end{itemize}
+Our model is
+\[
+h(\vec x_i)=w_0+w_1x_i^{(1)}+w_2x_i^{(2)}
+\]
+The dataset below has two unknown values, $a$ and $b$.
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{@{\hspace{0.25cm}}c@{\hspace{0.25cm}}|c|c|c}
+$i$ & Residents ($x_i^{(1)}$) & Heating source ($x_i^{(2)}$) & Electricity use ($y_i$)\\\hline
+1 & 2 & $a$ & 12\\
+2 & 5 & 2 & 30\\
+3 & 2 & 2 & 16\\
+4 & 4 & 0 & $b$\\
+5 & 3 & 0 & 16
+\end{tabular}
+\end{center}
+\begin{subprob}(4 pts)
+Write the design matrix $X$. Your answer should be a matrix in terms of $a$ and constants.\par\vspace{0.3cm}
+
+\begin{solution}
+The intercept contributes a column of ones, followed by the residents and heating-source features:
+\[
+\boxed{X=\begin{bmatrix}1&2&a\\1&5&2\\1&2&2\\1&4&0\\1&3&0\end{bmatrix}}
+\]
+\end{solution}
+\end{subprob}
+\newpage
+
+Recall, our model is $h(\vec x_i)=w_0+w_1x_i^{(1)}+w_2x_i^{(2)}$, where $x_i^{(1)}$ is the number of residents and $x_i^{(2)}$ is $2$ for a heat pump and $0$ for gas heating.
+\begin{center}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabular}{@{\hspace{0.25cm}}c@{\hspace{0.25cm}}|c|c|c}
+$i$ & Residents ($x_i^{(1)}$) & Heating source ($x_i^{(2)}$) & Electricity use ($y_i$)\\\hline
+1 & 2 & $a$ & 12\\
+2 & 5 & 2 & 30\\
+3 & 2 & 2 & 16\\
+4 & 4 & 0 & $b$\\
+5 & 3 & 0 & 16
+\end{tabular}
+\end{center}
+\begin{subprob}(10 pts)
+The parameter vector that minimizes mean squared error is $\vec w^\ast=\begin{bmatrix}3\\4\\3\end{bmatrix}$.
+
+Find $a$ and $b$. Your answers should be numbers with no variables.
+
+\textit{Hint: What properties must the error vector satisfy?}\par\vspace{0.2em}
+
+\begin{solution}
+The predictions and errors are
+\[
+X\vec w^\ast=\begin{bmatrix}11+3a\\29\\17\\19\\15\end{bmatrix},\qquad
+\vec e=\vec y-X\vec w^\ast=\begin{bmatrix}1-3a\\1\\-1\\b-19\\1\end{bmatrix}
+\]
+At a least-squares solution, $\vec e$ is orthogonal to every column of $X$. Orthogonality to the intercept column gives
+\[
+(1-3a)+1-1+(b-19)+1=0\quad\Longrightarrow\quad b-17-3a=0
+\]
+Orthogonality to the residents column gives
+\[
+2(1-3a)+5-2+4(b-19)+3=0\quad\Longrightarrow\quad4b-68-6a=0
+\]
+Substituting $b=17+3a$ into the second equation gives $6a=0$. Thus,
+\[
+\boxed{a=0,\qquad b=17}
+\]
+These values give $\vec e=\begin{bmatrix}1\\1\\-1\\-2\\1\end{bmatrix}$, which is also orthogonal to the heating-source column: $2(1)+2(-1)=0$. All the normal equations are satisfied.
+\end{solution}
+\end{subprob}
+\end{prob}
+\newpage
+
+\begin{prob}[(18 pts)]
+Let $\vec x\in\mathbb R^2$, and consider
+\[
+A=\begin{bmatrix}2&1\\1&2\end{bmatrix},\qquad
+f(\vec x)=\left(\vec x^TA\vec x-1\right)^2
+\]
+\begin{subprob}(6 pts)
+\begin{enumerate}[label=(\roman*)]
+\item (2 pts) Which of the following is the fully simplified expression for $\nabla f(\vec x)$?\par\vspace{0.2em}
+\noindent\bubble{$2(\vec x^TA\vec x-1)A\vec x$}\unskip\hfill
+\bubble{$4(\vec x^TA\vec x-1)\vec x$}\unskip\hfill
+\correctbubble{$4(\vec x^TA\vec x-1)A\vec x$}\unskip\hfill
+\bubble{$4(\vec x^TA\vec x)A\vec x$}\unskip
+\par\vspace{0.3cm}
+\begin{solution}
+The \textbf{third expression} is correct.
+\end{solution}
+\item (4 pts) Justify your answer.\par\vspace{0.2em}
+
+\begin{solution}
+Let $g(\vec x)=\vec x^TA\vec x-1$, so $f(\vec x)=g(\vec x)^2$. Since $A$ is symmetric,
+\[
+\nabla g(\vec x)=(A+A^T)\vec x=2A\vec x
+\]
+The chain rule gives
+\[
+\boxed{\nabla f(\vec x)=2g(\vec x)\nabla g(\vec x)=4(\vec x^TA\vec x-1)A\vec x}
+\]
+\end{solution}
+\end{enumerate}
+\end{subprob}
+\vspace{0.3cm}
+\begin{subprob}(4 pts)
+Identify whether each statement is true or false. \textit{Hint: There is no need to think about second partial derivatives.}\par\vspace{0.3cm}
+\begin{enumerate}[label=(\roman*)]
+\item (2 pts) $f$ is convex.
+\bubble{True} \correctbubble{False}
+
+\begin{solution}
+\textbf{False.} Consider
+\[
+\vec u=\begin{bmatrix}1/\sqrt2\\0\end{bmatrix},\qquad
+\vec v=\begin{bmatrix}-1/\sqrt2\\0\end{bmatrix}
+\]
+Both satisfy $\vec x^TA\vec x=1$, so $f(\vec u)=f(\vec v)=0$.
+
+Their midpoint is $\vec0$, but
+\[
+f\left(\frac{\vec u+\vec v}{2}\right)=f(\vec0)=1>
+\frac{f(\vec u)+f(\vec v)}{2}=0
+\]
+This violates the defining inequality for a convex function.
+\end{solution}
+\item (2 pts) $f$ attains its global minimum at exactly one vector.
+\bubble{True} \correctbubble{False}
+
+\begin{solution}
+\textbf{False.} Since $f$ is a square, it is always nonnegative. The two vectors from part (i) both attain $0$, so the global minimizer is not unique.
+\end{solution}
+\end{enumerate}
+\end{subprob}\newpage
+
+Recall, $\vec x\in\mathbb R^2$ and
+\[
+A=\begin{bmatrix}2&1\\1&2\end{bmatrix},\qquad
+f(\vec x)=\left(\vec x^TA\vec x-1\right)^2
+\]
+\begin{subprob}(8 pts)
+We run gradient descent on $f$ twice, starting from the \textbf{same} unknown vector $\vec x^{(0)}$.
+\begin{itemize}[itemsep=0.6em]
+\item With step size $\alpha=\frac14$, the first iteration gives $\vec x^{(1)}=\frac14\begin{bmatrix}-14\\1\end{bmatrix}$.
+\item With step size $\alpha=\frac34$, the first iteration gives $\vec x^{(1)}=\frac14\begin{bmatrix}-54\\11\end{bmatrix}$.
+\end{itemize}
+Find $\vec x^{(0)}$. Your answer should be a vector with no variables. You can answer this part without using your answer to part (a).\par\vspace{0.2em}
+
+\begin{solution}
+Let $\vec g=\nabla f(\vec x^{(0)})$. Both runs have the same gradient at their starting point. The update rule gives
+\[
+\vec x^{(0)}-\frac14\vec g=\frac14\begin{bmatrix}-14\\1\end{bmatrix},\qquad
+\vec x^{(0)}-\frac34\vec g=\frac14\begin{bmatrix}-54\\11\end{bmatrix}
+\]
+Multiply the first equation by $3$ and subtract the second to eliminate $\vec g$:
+\[
+2\vec x^{(0)}=\frac14\left(3\begin{bmatrix}-14\\1\end{bmatrix}-\begin{bmatrix}-54\\11\end{bmatrix}\right)
+=\begin{bmatrix}3\\-2\end{bmatrix}
+\]
+Therefore,
+\[
+\boxed{\vec x^{(0)}=\begin{bmatrix}3/2\\-1\end{bmatrix}}
+\]
+\end{solution}
+\end{subprob}
+\end{prob}
+\end{document}
