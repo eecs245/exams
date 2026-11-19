@@ -3,3 +3,8 @@
 title:
 points: 10
 flags:
+# Estimated from the question-averages chart.
+part_averages:
+  a: 2.873
+  b: 2.663
+  c: 3.677

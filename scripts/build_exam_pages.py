@@ -103,6 +103,8 @@ def build_exam_page(exam: str) -> tuple[str, int]:
     buttons = action_buttons(meta)
     if buttons:
         parts.extend([buttons, ""])
+    if averages_note := meta.get("averages_note"):
+        parts.extend([str(averages_note), ""])
     parts.extend(
         [
             EXAM_DISCLAIMER,
