@@ -14,7 +14,7 @@ $$
 
 <details markdown="1"><summary>Solution</summary>
 
-The entries of <span class="math-inline">\\(BB^T\\)</span> are the dot products of the rows of <span class="math-inline">\\(B\\)</span>. The three rows are mutually orthogonal, and their squared lengths are
+The entries of <span class="math-inline">\\(BB^T\\)</span> are the dot products of the rows of <span class="math-inline">\\(B\\)</span>. The three rows are all orthogonal to each other, and their squared lengths are
 
 <div class="math-display">
 $$

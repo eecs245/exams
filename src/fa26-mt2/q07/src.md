@@ -67,27 +67,22 @@ $$
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
 
-**False.** Consider
+**False.** From part (a), <span class="math-inline">\\(\nabla f(\vec x)=4(\vec x^TA\vec x-1)A\vec x\\)</span>. Since <span class="math-inline">\\(A\\)</span> is invertible, <span class="math-inline">\\(A\vec x=\vec 0\\)</span> only when <span class="math-inline">\\(\vec x=\vec 0\\)</span>. The gradient is zero in two cases:
+
+-   Since <span class="math-inline">\\(f(\vec x)=(\vec x^TA\vec x-1)^2\\)</span> is a square and can equal zero, its minimum value is <span class="math-inline">\\(0\\)</span>. Every <span class="math-inline">\\(\vec x\\)</span> satisfying <span class="math-inline">\\(\vec x^TA\vec x=1\\)</span> is a global minimizer, and there are infinitely many such vectors. This also explains why (ii) is false.
+
+-   When <span class="math-inline">\\(\vec x=\vec 0\\)</span>, the gradient is also zero, but <span class="math-inline">\\(f(\vec 0)=1\\)</span>. To classify this point, try a small step away from the origin, such as <span class="math-inline">\\(\vec x=\begin{bmatrix}0\\\\0.1\end{bmatrix}\\)</span>. Then <span class="math-inline">\\(\vec x^TA\vec x=2(0.1)^2=0.02\\)</span>, so <span class="math-inline">\\(f(\vec x)=(0.02-1)^2=0.9604&lt;1\\)</span>. In fact, <span class="math-inline">\\(\vec x^TA\vec x=x&#95;1^2+x&#95;2^2+(x&#95;1+x&#95;2)^2\\)</span> is positive for every nonzero <span class="math-inline">\\(\vec x\\)</span> and tends to zero near the origin. Hence <span class="math-inline">\\(0&lt;\vec x^TA\vec x&lt;1\\)</span> for every sufficiently small nonzero <span class="math-inline">\\(\vec x\\)</span>, and <span class="math-inline">\\(f(\vec x)&lt;f(\vec 0)\\)</span>. The origin is a strict local maximum, which rules out convexity.
+
+   To see the contradiction directly, convexity would require
 
 <div class="math-display">
 $$
-\vec u=\begin{bmatrix}1/\sqrt2\\\\0\end{bmatrix},\qquad
-    \vec v=\begin{bmatrix}-1/\sqrt2\\\\0\end{bmatrix}
+f((1-t)\vec x+t\vec y)\leq (1-t)f(\vec x)+tf(\vec y)
+    \qquad\text{for every }t\in[0,1].
 $$
 </div>
 
- Both satisfy <span class="math-inline">\\(\vec x^TA\vec x=1\\)</span>, so <span class="math-inline">\\(f(\vec u)=f(\vec v)=0\\)</span>.
-
-   Their midpoint is <span class="math-inline">\\(\vec0\\)</span>, but
-
-<div class="math-display">
-$$
-f\left(\frac{\vec u+\vec v}{2}\right)=f(\vec0)=1>
-    \frac{f(\vec u)+f(\vec v)}{2}=0
-$$
-</div>
-
- This violates the defining inequality for a convex function.
+ Take a sufficiently small nonzero <span class="math-inline">\\(\vec x\\)</span>, set <span class="math-inline">\\(\vec y=-\vec x\\)</span>, and take <span class="math-inline">\\(t=1/2\\)</span>. The left side is <span class="math-inline">\\(f(\vec 0)=1\\)</span>, while the right side is the average of two values strictly below <span class="math-inline">\\(1\\)</span>.
 </details>
 </li>
 <li markdown="1">
@@ -98,7 +93,19 @@ $$
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> True</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> False</span></div>
 
-**False.** Since <span class="math-inline">\\(f\\)</span> is a square, it is always nonnegative. The two vectors from part (i) both attain <span class="math-inline">\\(0\\)</span>, so the global minimizer is not unique.
+**False.** As discussed in (i), <span class="math-inline">\\(f(\vec x)\\)</span> is minimized when <span class="math-inline">\\(\vec x^TA\vec x-1=0\\)</span>. Expanding with the given matrix gives
+
+<div class="math-display">
+$$
+\vec x^TA\vec x=2x_1^2+2x_1x_2+2x_2^2.
+$$
+</div>
+
+ For example, <span class="math-inline">\\(\begin{bmatrix}1/\sqrt{2}\\\\0\end{bmatrix}\\)</span> and <span class="math-inline">\\(\begin{bmatrix}-1/\sqrt{2}\\\\0\end{bmatrix}\\)</span> both make this expression equal to <span class="math-inline">\\(1\\)</span>. In fact, for any nonzero direction <span class="math-inline">\\(\vec u\\)</span>, the vector <span class="math-inline">\\(\vec u/\sqrt{\vec u^TA\vec u}\\)</span> does too. There are infinitely many global minimizers.
+
+   To see the shape in retrospect, you can [view the graph in Desmos](https://www.desmos.com/3d/8uyka4tjla).
+
+<iframe src="https://www.desmos.com/3d/8uyka4tjla?embed" title="Interactive 3D graph in Desmos" width="720" height="440" style="max-width:100%;border:0" loading="lazy" allowfullscreen></iframe>
 </details>
 </li>
 </ol>

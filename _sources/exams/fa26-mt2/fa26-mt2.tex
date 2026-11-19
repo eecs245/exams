@@ -38,6 +38,7 @@
 }
 \newcommand{\workbox}[1]{\par\noindent\emptybox[\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax]{#1}\par}
 \newcommand{\projectionoptionstrut}{\rule[-0.45cm]{0pt}{1.15cm}}
+\providecommand{\desmosembed}[1]{}
 \begin{document}
 \makemytitle{\coursename}{\term}{\assignment}{}{\submissioninstructions}{\bubble{1013 DOW} \bubble{1014 DOW} \bubble{4721 BBB} \bubble{Other}}
 \vspace{1em}
@@ -115,7 +116,7 @@ B=\begin{bmatrix}2&2&2\\3&-3&0\\1&1&-2\end{bmatrix}
 Find $BB^T$. \\
 
 \begin{solution}
-The entries of $BB^T$ are the dot products of the rows of $B$. The three rows are mutually orthogonal, and their squared lengths are
+The entries of $BB^T$ are the dot products of the rows of $B$. The three rows are all orthogonal to each other, and their squared lengths are
 \[
 2^2+2^2+2^2=12,\qquad 3^2+(-3)^2=18,\qquad 1^2+1^2+(-2)^2=6
 \]
@@ -193,6 +194,21 @@ Which of the following choices of columns of $X$ form a basis for $\text{colsp}(
 \begin{solution}
 Because $C$ has linearly independent columns, we can check independence using the corresponding columns of $R$, with $a=-4$ and $b=4$. Columns $1$ and $5$ are scalar multiples, as are columns $3$ and $4$. Each remaining listed pair is independent.
 
+To make this more explicit, let's write out $X$ using $X=CR$ and the values of $a$ and $b$.
+\[
+X=
+\begin{bmatrix}4&0\\-2&5\\3&-1\\0&6\end{bmatrix}
+\begin{bmatrix}1&3&-4&-2&5\\0&4&8&4&0\end{bmatrix}
+=
+\begin{bmatrix}
+4&12&-16&-8&20\\
+-2&14&48&24&-10\\
+3&5&-20&-10&15\\
+0&24&48&24&0
+\end{bmatrix}
+\]
+Column 5 is five times column 1, and column 4 is half of column 3. In each of the other listed pairs, the two columns are nonzero and neither is a scalar multiple of the other.
+
 Since $\text{rank}(X)=2$, the valid bases are \textbf{columns 1 and 2, columns 2 and 3, and columns 4 and 5}. Three columns cannot form a basis for this two-dimensional space.
 \end{solution}
 \end{subprob}
@@ -229,7 +245,7 @@ What is the smallest positive integer $k$ such that $A^k=I$?
 \bubble{2}\bubble{3}\bubble{4}\correctbubble{6}\bubble{8}\bubble{12}
 
 \begin{solution}
-The first three components return to their original positions after a multiple of $3$ applications of $A$. The fourth returns to its original sign after an even number of applications. The smallest positive integer divisible by both $3$ and $2$ is $\boxed{k=6}$.
+Each application of $A$ cycles the first three components. After three applications they are back in their original positions, so the same is true after $6,9,12,15,\ldots$ applications. In general, the first three components of $A^{3m}\vec v$ agree with those of $\vec v$ for every nonnegative integer $m$. For the given $\vec v$, those components are distinct, so no other powers return all three to their original positions. The fourth returns to its original sign after an even number of applications. The smallest positive integer divisible by both $3$ and $2$ is $\boxed{k=6}$.
 \end{solution}
 \end{subprob}
 \begin{subprob}(6 pts)
@@ -244,6 +260,17 @@ Thus, $x_1=x_2=x_3$ and $x_4=0$. Every vector in the null space is a multiple of
 \[
 \boxed{\left\{\begin{bmatrix}1\\1\\1\\0\end{bmatrix}\right\}}
 \]
+
+If you did not spot the pattern, you could write out $A-I$ and look for a vector in its null space.
+\[
+A-I=\begin{bmatrix}
+-1&0&1&0\\
+1&-1&0&0\\
+0&1&-1&0\\
+0&0&0&-2
+\end{bmatrix}
+\]
+The first three columns sum to zero, so $\begin{bmatrix}1\\1\\1\\0\end{bmatrix}$ is in the null space. The first, second, and fourth columns are linearly independent, and the third column is the negative sum of the first two. Thus $\text{rank}(A-I)=3$, and rank-nullity gives $\dim(\text{nullsp}(A-I))=4-3=1$.
 \end{solution}
 \end{subprob}
 \newpage
@@ -271,6 +298,14 @@ Applying $A$ rearranges the first three components, so their sum does not change
 \[
 m+(-3)+5=0\quad\Longrightarrow\quad\boxed{m=-2}
 \]
+
+The argument above is the intended, efficient technique. The longer way is to multiply out $ (A-I)\vec x $ and match entries:
+\[
+\begin{bmatrix}x_3-x_1\\x_1-x_2\\x_2-x_3\\-2x_4\end{bmatrix}
+=
+\begin{bmatrix}m\\-3\\5\\2\end{bmatrix}
+\]
+The second equation gives $x_2=x_1+3$, and the third gives $x_3=x_2-5=x_1-2$. Substituting into the first equation gives $m=x_3-x_1=-2$.
 \end{solution}
 \item (2 pts) For this value of $m$, how many vectors $\vec x$ satisfy $A\vec x-\vec x=\begin{bmatrix}m\\-3\\5\\2\end{bmatrix}$?\par\vspace{0.2em}
 \bubble{0}\bubble{1}\bubble{2}\bubble{3}\bubble{4}\correctbubble{Infinitely many}
@@ -337,9 +372,28 @@ Is $\vec y\in\text{colsp}(Q)$?\par\vspace{0.2em}
 \bubble{Yes}\bubble{No}\correctbubble{Impossible to tell}
 
 \begin{solution}
-\textbf{Impossible to tell.} The vector $\vec y_0=3\vec q_1+\vec q_2$ is in $\text{colsp}(Q)$ and has the specified product with $Q^T$.
+\textbf{Impossible to tell.} Let $P$ be the projection matrix onto $\text{colsp}(Q)$. Since the columns of $Q$ are orthonormal, $Q^TQ=I_2$. The projection of $\vec y$ is
+\[
+\begin{aligned}
+\vec p &= P\vec y \\
+&= Q(Q^TQ)^{-1}Q^T\vec y \\
+&= QQ^T\vec y \\
+&= Q\begin{bmatrix}3\\1\end{bmatrix} \\
+&= 3\vec q_1+\vec q_2.
+\end{aligned}
+\]
+The entries of $Q^T\vec y$ are the coefficients of the projection onto $\text{colsp}(Q)$ in the orthonormal basis $\vec q_1,\vec q_2$. Whether $\vec y$ equals that projection depends on its component orthogonal to $\text{colsp}(Q)$.
 
-There are also nonzero vectors $\vec r$ orthogonal to $\text{colsp}(Q)$, since this is a two-dimensional subspace of $\mathbb R^4$. Then $\vec y_0+\vec r$ is outside $\text{colsp}(Q)$ but has the same product with $Q^T$, because $Q^T\vec r=\vec0$. Both possibilities are consistent with the information given.
+To see both possibilities, choose any nonzero vector $\vec r$ orthogonal to $\text{colsp}(Q)$. Such a vector exists because $\text{colsp}(Q)$ is a two-dimensional subspace of $\mathbb R^4$. Compare
+\[
+\vec y_1=3\vec q_1+\vec q_2,\qquad
+\vec y_2=3\vec q_1+\vec q_2+\vec r.
+\]
+The vector $\vec y_1$ is in $\text{colsp}(Q)$, while $\vec y_2$ is outside it because $\vec r$ is nonzero and orthogonal to it. Yet $Q^T\vec r=\vec 0$, so $Q^T\vec y_1=Q^T\vec y_2=\begin{bmatrix}3\\1\end{bmatrix}$. Both vectors project to $3\vec q_1+\vec q_2$.
+
+Here is a schematic of the two vectors. The dashed arrow is the orthogonal component $\vec r$.
+
+\includegraphics[width=0.58\linewidth]{imgs/projection.png}
 \end{solution}
 \end{subprob}
 \vspace{0.4cm}
@@ -363,11 +417,9 @@ Which choice gives both the vector $\vec w^\ast$ that minimizes $\|\vec y-Z\vec 
 \bubble{E. $\vec w^\ast=\begin{bmatrix}1\\2\end{bmatrix},\quad \vec p=3\vec q_1+\vec q_2$}
 
 \begin{solution}
-\textbf{B.} Adding and subtracting the columns of $Z$ recovers $2\vec q_1$ and $2\vec q_2$, so $Z$ and $Q$ have the same column space. Hence,
-\[
-\boxed{\vec p=QQ^T\vec y=3\vec q_1+\vec q_2}
-\]
-But $Z\vec w=(w_1+w_2)\vec q_1+(w_1-w_2)\vec q_2$. Independence of $\vec q_1,\vec q_2$ therefore requires
+\textbf{B.} Adding and subtracting the columns of $Z$ recovers $2\vec q_1$ and $2\vec q_2$, so $Z$ and $Q$ have the same column space. By part (b), the projection onto this space is $\vec p=3\vec q_1+\vec q_2$.
+
+To express this projection in the columns of $Z$, note that $Z\vec w=(w_1+w_2)\vec q_1+(w_1-w_2)\vec q_2$. Independence of $\vec q_1,\vec q_2$ therefore requires
 \[
 w_1^\ast+w_2^\ast=3,\qquad w_1^\ast-w_2^\ast=1
 \quad\Longrightarrow\quad
@@ -517,25 +569,33 @@ Identify whether each statement is true or false. \textit{Hint: There is no need
 \bubble{True} \correctbubble{False}
 
 \begin{solution}
-\textbf{False.} Consider
-\[
-\vec u=\begin{bmatrix}1/\sqrt2\\0\end{bmatrix},\qquad
-\vec v=\begin{bmatrix}-1/\sqrt2\\0\end{bmatrix}
-\]
-Both satisfy $\vec x^TA\vec x=1$, so $f(\vec u)=f(\vec v)=0$.
+\textbf{False.} From part (a), $\nabla f(\vec x)=4(\vec x^TA\vec x-1)A\vec x$. Since $A$ is invertible, $A\vec x=\vec 0$ only when $\vec x=\vec 0$. The gradient is zero in two cases:
 
-Their midpoint is $\vec0$, but
+\begin{itemize}
+\item Since $f(\vec x)=(\vec x^TA\vec x-1)^2$ is a square and can equal zero, its minimum value is $0$. Every $\vec x$ satisfying $\vec x^TA\vec x=1$ is a global minimizer, and there are infinitely many such vectors. This also explains why (ii) is false.
+\item When $\vec x=\vec 0$, the gradient is also zero, but $f(\vec 0)=1$. To classify this point, try a small step away from the origin, such as $\vec x=\begin{bmatrix}0\\0.1\end{bmatrix}$. Then $\vec x^TA\vec x=2(0.1)^2=0.02$, so $f(\vec x)=(0.02-1)^2=0.9604<1$. In fact, $\vec x^TA\vec x=x_1^2+x_2^2+(x_1+x_2)^2$ is positive for every nonzero $\vec x$ and tends to zero near the origin. Hence $0<\vec x^TA\vec x<1$ for every sufficiently small nonzero $\vec x$, and $f(\vec x)<f(\vec 0)$. The origin is a strict local maximum, which rules out convexity.
+\end{itemize}
+
+To see the contradiction directly, convexity would require
 \[
-f\left(\frac{\vec u+\vec v}{2}\right)=f(\vec0)=1>
-\frac{f(\vec u)+f(\vec v)}{2}=0
+f((1-t)\vec x+t\vec y)\leq (1-t)f(\vec x)+tf(\vec y)
+\qquad\text{for every }t\in[0,1].
 \]
-This violates the defining inequality for a convex function.
+Take a sufficiently small nonzero $\vec x$, set $\vec y=-\vec x$, and take $t=1/2$. The left side is $f(\vec 0)=1$, while the right side is the average of two values strictly below $1$.
 \end{solution}
 \item (2 pts) $f$ attains its global minimum at exactly one vector.
 \bubble{True} \correctbubble{False}
 
 \begin{solution}
-\textbf{False.} Since $f$ is a square, it is always nonnegative. The two vectors from part (i) both attain $0$, so the global minimizer is not unique.
+\textbf{False.} As discussed in (i), $f(\vec x)$ is minimized when $\vec x^TA\vec x-1=0$. Expanding with the given matrix gives
+\[
+\vec x^TA\vec x=2x_1^2+2x_1x_2+2x_2^2.
+\]
+For example, $\begin{bmatrix}1/\sqrt{2}\\0\end{bmatrix}$ and $\begin{bmatrix}-1/\sqrt{2}\\0\end{bmatrix}$ both make this expression equal to $1$. In fact, for any nonzero direction $\vec u$, the vector $\vec u/\sqrt{\vec u^TA\vec u}$ does too. There are infinitely many global minimizers.
+
+To see the shape in retrospect, you can \href{https://www.desmos.com/3d/8uyka4tjla}{view the graph in Desmos}.
+
+\desmosembed{8uyka4tjla}
 \end{solution}
 \end{enumerate}
 \end{subprob}\newpage

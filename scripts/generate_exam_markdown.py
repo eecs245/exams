@@ -736,6 +736,11 @@ def transform_assignment_tex(
         text = synthesize_missing_solutions(text)
     text = replace_answerbox_markers(text)  # NOTE: 07/23/26 3:18PM fix to \minibox and \labeledanswerbox rendering
     text = replace_youtube_embed_markers(text)
+    text = re.sub(
+        r"\\desmosembed\{([A-Za-z0-9]+)\}",
+        r"\n\nDESMOS_EMBED:\1\n\n",
+        text,
+    )
     text = expand_labcodelinks(text)
     text = replace_fbox_markers(text)
     text = add_solution_choice_summaries(text) if include_solutions else text
@@ -1175,7 +1180,12 @@ def solution_choice_summary(text: str, scope: str | None) -> str:
                     label = compose.ROMAN_LABELS[index] if use_roman else str(index + 1)
                     summaries.append(f"\\textbf{{({label})}}\n\n{summary}")
             return "\n\n".join(summaries)
-    return render_solution_choice_summary(extract_choices(region))
+    options = extract_choices(region)
+    # Preserve a vertical choice list when the source puts each option in its own paragraph.
+    paragraphs = re.split(r"\n\s*\n", region.strip())
+    choice_lines = [f"\\{option.command}{{{option.content}}}" for option in options]
+    separator = "\n\n" if paragraphs[-len(options):] == choice_lines else "\n"
+    return render_solution_choice_summary(options, separator=separator)
 
 
 def extract_choices(text: str) -> list[ChoiceOption]:
@@ -1188,7 +1198,7 @@ def extract_choices(text: str) -> list[ChoiceOption]:
     return options
 
 
-def render_solution_choice_summary(options: list[ChoiceOption]) -> str:
+def render_solution_choice_summary(options: list[ChoiceOption], *, separator: str = "\n") -> str:
     # Blank checkbox cells have meaning only beside the rest of their table.
     # A question without a marked answer can have a prose-only explanation.
     if not any(option.is_correct for option in options) or any(not option.content for option in options):
@@ -1200,7 +1210,7 @@ def render_solution_choice_summary(options: list[ChoiceOption]) -> str:
         else:
             command = "solutioncorrectbubble" if option.is_correct else "solutionbubble"
         rendered_options.append(f"\\{command}{{{option.content}}}")
-    return "\n".join(rendered_options)
+    return separator.join(rendered_options)
 
 
 def clean_align_content(content: str) -> str:
@@ -1668,6 +1678,15 @@ def cleanup_markdown(text: str, use_point_badges: bool = True) -> str:
     text = ordered_lists_as_html(text)
     text = remove_pandoc_layout_fences(text)
     text = render_youtube_embeds(text)
+    text = re.sub(
+        r"(?m)^[ \t]*DESMOS_EMBED:([A-Za-z0-9]+)$",
+        lambda match: (
+            f'<iframe src="https://www.desmos.com/3d/{match.group(1)}?embed" '
+            'title="Interactive 3D graph in Desmos" width="720" height="440" '
+            'style="max-width:100%;border:0" loading="lazy" allowfullscreen></iframe>'
+        ),
+        text,
+    )
     text = re.sub(r"(</div>)\n---", r"\1\n\n---", text)
     text = collapse_repeated_section_separators(text)
     text = re.sub(r"\n{3,}", "\n\n", text)

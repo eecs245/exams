@@ -67,9 +67,38 @@ $$
 
 <details markdown="1"><summary>Solution</summary>
 
-<div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> Columns 1 and 2</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> Columns 1 and 5</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> Columns 2 and 3</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> Columns 3 and 4</span><span class="mc-option"><span class="mc-square mc-correct" aria-hidden="true"></span> Columns 4 and 5</span><span class="mc-option"><span class="mc-square" aria-hidden="true"></span> Columns 1, 2, and 3</span></div>
+<span class="mc-square mc-correct" aria-hidden="true"></span> Columns 1 and 2
+
+<span class="mc-square" aria-hidden="true"></span> Columns 1 and 5
+
+<span class="mc-square mc-correct" aria-hidden="true"></span> Columns 2 and 3
+
+<span class="mc-square" aria-hidden="true"></span> Columns 3 and 4
+
+<span class="mc-square mc-correct" aria-hidden="true"></span> Columns 4 and 5
+
+<span class="mc-square" aria-hidden="true"></span> Columns 1, 2, and 3
 
 Because <span class="math-inline">\\(C\\)</span> has linearly independent columns, we can check independence using the corresponding columns of <span class="math-inline">\\(R\\)</span>, with <span class="math-inline">\\(a=-4\\)</span> and <span class="math-inline">\\(b=4\\)</span>. Columns <span class="math-inline">\\(1\\)</span> and <span class="math-inline">\\(5\\)</span> are scalar multiples, as are columns <span class="math-inline">\\(3\\)</span> and <span class="math-inline">\\(4\\)</span>. Each remaining listed pair is independent.
+
+To make this more explicit, let's write out <span class="math-inline">\\(X\\)</span> using <span class="math-inline">\\(X=CR\\)</span> and the values of <span class="math-inline">\\(a\\)</span> and <span class="math-inline">\\(b\\)</span>.
+
+<div class="math-display">
+$$
+X=
+\begin{bmatrix}4&0\\\\-2&5\\\\3&-1\\\\0&6\end{bmatrix}
+\begin{bmatrix}1&3&-4&-2&5\\\\0&4&8&4&0\end{bmatrix}
+=
+\begin{bmatrix}
+4&12&-16&-8&20\\\\
+-2&14&48&24&-10\\\\
+3&5&-20&-10&15\\\\
+0&24&48&24&0
+\end{bmatrix}
+$$
+</div>
+
+ Column 5 is five times column 1, and column 4 is half of column 3. In each of the other listed pairs, the two columns are nonzero and neither is a scalar multiple of the other.
 
 Since <span class="math-inline">\\(\text{rank}(X)=2\\)</span>, the valid bases are **columns 1 and 2, columns 2 and 3, and columns 4 and 5**. Three columns cannot form a basis for this two-dimensional space.
 </details>

@@ -47,7 +47,7 @@ $$
 
 <div class="mc-options" markdown="span"><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 2</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 3</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 4</span><span class="mc-option"><span class="mc-bubble mc-correct" aria-hidden="true"></span> 6</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 8</span><span class="mc-option"><span class="mc-bubble" aria-hidden="true"></span> 12</span></div>
 
-The first three components return to their original positions after a multiple of <span class="math-inline">\\(3\\)</span> applications of <span class="math-inline">\\(A\\)</span>. The fourth returns to its original sign after an even number of applications. The smallest positive integer divisible by both <span class="math-inline">\\(3\\)</span> and <span class="math-inline">\\(2\\)</span> is <span class="math-inline">\\(\boxed{k=6}\\)</span>.
+Each application of <span class="math-inline">\\(A\\)</span> cycles the first three components. After three applications they are back in their original positions, so the same is true after <span class="math-inline">\\(6,9,12,15,\ldots\\)</span> applications. In general, the first three components of <span class="math-inline">\\(A^{3m}\vec v\\)</span> agree with those of <span class="math-inline">\\(\vec v\\)</span> for every nonnegative integer <span class="math-inline">\\(m\\)</span>. For the given <span class="math-inline">\\(\vec v\\)</span>, those components are distinct, so no other powers return all three to their original positions. The fourth returns to its original sign after an even number of applications. The smallest positive integer divisible by both <span class="math-inline">\\(3\\)</span> and <span class="math-inline">\\(2\\)</span> is <span class="math-inline">\\(\boxed{k=6}\\)</span>.
 </details>
 
 </div>
@@ -76,6 +76,20 @@ $$
 $$
 </div>
 
+If you did not spot the pattern, you could write out <span class="math-inline">\\(A-I\\)</span> and look for a vector in its null space.
+
+<div class="math-display">
+$$
+A-I=\begin{bmatrix}
+-1&0&1&0\\\\
+1&-1&0&0\\\\
+0&1&-1&0\\\\
+0&0&0&-2
+\end{bmatrix}
+$$
+</div>
+
+ The first three columns sum to zero, so <span class="math-inline">\\(\begin{bmatrix}1\\\\1\\\\1\\\\0\end{bmatrix}\\)</span> is in the null space. The first, second, and fourth columns are linearly independent, and the third column is the negative sum of the first two. Thus <span class="math-inline">\\(\text{rank}(A-I)=3\\)</span>, and rank-nullity gives <span class="math-inline">\\(\dim(\text{nullsp}(A-I))=4-3=1\\)</span>.
 </details>
 
 Recall,
@@ -119,6 +133,17 @@ m+(-3)+5=0\quad\Longrightarrow\quad\boxed{m=-2}
 $$
 </div>
 
+   The argument above is the intended, efficient technique. The longer way is to multiply out <span class="math-inline">\\((A-I)\vec x\\)</span> and match entries:
+
+<div class="math-display">
+$$
+\begin{bmatrix}x_3-x_1\\\\x_1-x_2\\\\x_2-x_3\\\\-2x_4\end{bmatrix}
+    =
+    \begin{bmatrix}m\\\\-3\\\\5\\\\2\end{bmatrix}
+$$
+</div>
+
+ The second equation gives <span class="math-inline">\\(x&#95;2=x&#95;1+3\\)</span>, and the third gives <span class="math-inline">\\(x&#95;3=x&#95;2-5=x&#95;1-2\\)</span>. Substituting into the first equation gives <span class="math-inline">\\(m=x&#95;3-x&#95;1=-2\\)</span>.
 </details>
 </li>
 <li markdown="1">
